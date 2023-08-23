@@ -1,8 +1,0 @@
-.SongPage__container {
-  margin: 0 auto;
-  max-width: var(--main-content-width);
-}
-.SongPage__content {
-  word-break: break-word;
-  padding: 20px 20px 40px 20px;
-}
