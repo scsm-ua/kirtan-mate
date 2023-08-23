@@ -1,0 +1,21 @@
+//@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.SongPage {
+  &__main {
+    
+    h1 {
+      //@extend .display-1;
+      //color: grey;
+    }
+  }
+  
+  &__container {
+    margin: 0 auto;
+    max-width: var(--main-content-width);
+  }
+  
+  &__content {
+    word-break: break-word;
+    padding: 20px 20px 40px 20px;
+  }
+}

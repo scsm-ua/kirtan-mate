@@ -1,0 +1,33 @@
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+@mixin breakpoint($point) {
+  $query-direction: '';
+  $query-point: '';
+  $query-size: '';
+  
+  @if str-index($point, '-up') {
+    $query-direction: 'min-width';
+    $query-point: str-slice($point, 0, str-length($point) - str-length('-up'));
+    $query-size: map-get($breakpoints, $query-point);
+  } @else {
+    @if str-index($point, '-down') {
+      $query-point: str-slice(
+                      $point,
+                      0,
+                      str-length($point) - str-length('-down')
+      );
+    } @else {
+      $query-point: $point;
+    }
+    
+    $query-direction: 'max-width';
+    $query-size: map-get($breakpoints, $query-point) - 1px;
+  }
+  
+  @media screen and (#{$query-direction}: #{$query-size}) {
+    @content;
+  }
+}

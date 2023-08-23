@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/song-page.css">
+<!--    <script src="lib/script.js"></script>-->
+</head>
+
+<body>
+    <div class="Layout SongPage">
+        <header class="Header SongPage__header">
+            <div class="Header__container">
+                <div class="Header__content">
+                    <h3>Kirtan Mate</h3>
+                </div>
+            </div>
+        </header>
+
+        <main class="Main SongPage__main">
+
+            <div class="Main__container SongPage__container">
+                <div class="SongPage__content">
+                    <%- content %>
+                </div>
+            </div>
+        </main>
+
+        <footer class="SongPage__footer">
+
+        </footer>
+    </div>
+</body>
+</html>
