@@ -73,22 +73,6 @@ p {
   overflow: hidden;
 }
 
-.Header {
-  background-color: var(--header-bg);
-  height: var(--header-height);
-  overflow: hidden;
-  
-  &__container {
-    max-width: var(--main-content-width);
-    margin: 0 auto;
-  }
-  
-  &__content {
-    padding: 10px 20px;
-    color: white;
-  }
-}
-
 .Main {
   height: calc(100% - var(--header-height));
   flex: 1;

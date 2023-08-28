@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kirtan Mate</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="<%= paths.toCss %>/index.css">
+  <link rel="stylesheet" href="<%= paths.toCss %>/song-page.css">
+</head>
+<body>
+  <div class="Layout SongPage">
+    <%- include(paths.toPartials + '/header.ejs'); %>
+
+    <main class="Main SongPage__main">
+      <div class="Main__container SongPage__container">
+        <div class="SongPage__content">
+            <ul class="Content__categories">
+                <% categories.forEach((category) => { %>
+                    <li class="Content__category">
+                        <h3 class="Content__category-name">
+                            <%= category.name %>
+                        </h3>
+                        <ul class="Content__items">
+                            <% category.items.forEach((item) => { %>
+                                <a href="html/<%= item.fileName %>" class="Content__item">
+                                    <h4 class="Content__item-name">
+                                        <%= item.name %>
+                                    </h4>
+                                    <span class="Content__item-alias">
+                                        <%= item.aliasName %>
+                                    </span>
+                                </a>
+                            <% }) %>
+                        </ul>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+      </div>
+    </main>
+
+    <!--        <footer class="SongPage__footer"></footer>-->
+  </div>
+</body>
+</html>

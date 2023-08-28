@@ -1,0 +1,42 @@
+@import "../variables";
+
+.Header {
+  background-color: var(--header-bg);
+  height: var(--header-height);
+  overflow: hidden;
+  
+  &__container {
+    max-width: var(--main-content-width);
+    margin: 0 auto;
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    //padding: 10px 20px;
+    color: white;
+  }
+  
+  &__home {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none !important;
+  }
+  
+  &__logo img {
+    height: var(--header-height);
+    height: calc(var(--header-height) - 8px);
+    margin: 4px 0;
+  }
+  
+  &__title {
+    font-style: italic;
+    padding: 5px 0 0 6px;
+    margin: 0;
+    width: 70px;
+    line-height: 1.1;
+    color: white;
+    text-decoration: none !important;
+  }
+}

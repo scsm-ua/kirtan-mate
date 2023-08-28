@@ -4,14 +4,25 @@ const PATHS = {
   BUILD: {
     CSS_FILES: OUTPUT_DIR + '/css',
     HTML_FILES: OUTPUT_DIR + '/html',
+    ICON_FILES: OUTPUT_DIR + '/icons',
     ROOT: OUTPUT_DIR
+  },
+  FILES: {
+    EJS: {
+      INDEX: 'index.ejs',
+      SONG_PAGE: 'song-page.ejs'
+    },
+    HTML: {
+      INDEX: 'index.html'
+    }
   },
   SRC: {
     CSS_FILES: 'src/styles',
     EJS_FILES: 'src/templates',
+    EJS_PARTIALS_FILES: 'src/templates/partials',
     HTML_FILES: 'src/html',
-    MD_FILES: 'src/md',
-    SONG_TEMPLATE_FILE: 'src/templates/song-page.ejs'
+    ICON_FILES: 'src/icons',
+    MD_FILES: 'src/md'
   }
 };
 

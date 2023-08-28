@@ -1,77 +1,94 @@
-const del = require('del');
+const ejs = require('gulp-ejs');
 const gulp = require('gulp');
+const path = require('path');
+const rename = require('gulp-rename');
 const runSequence = require('gulp4-run-sequence');
 const sass = require('gulp-sass')(require('sass'));
+const shell = require('gulp-shell')
 
 /**/
-const { MdConverter } = require('./scripts/MdConverter');
+const contentItems = require('./src/data/contentItems.json');
 const { PATHS } = require('./scripts/constants');
+const { songConvertor } = require('./scripts/songConvertor');
+const { readFile } = require('./scripts/ioHelpers');
+const { BUILD, FILES, SRC } = PATHS;
 
 /**
  *
  */
 gulp.task('sass', () => {
-  return gulp.src(PATHS.SRC.CSS_FILES + '/**/*.scss')
+  return gulp.src(SRC.CSS_FILES + '/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(PATHS.BUILD.CSS_FILES));
+    .pipe(gulp.dest(BUILD.CSS_FILES));
 });
 
 /**
  *
  */
-gulp.task('html-folder', () => {
-  return gulp.src('*.*', { read: false })
-    .pipe(gulp.dest(PATHS.BUILD.HTML_FILES));
+gulp.task('copy-icons', () => {
+  return gulp.src(SRC.ICON_FILES + '/**/*')
+    .pipe(gulp.dest(BUILD.ICON_FILES))
 });
 
 /**
  *
  */
-gulp.task('html', () => {
-  new MdConverter({
-    inputDir: PATHS.SRC.MD_FILES,
-    outputDir: PATHS.BUILD.HTML_FILES,
-    templateFile: PATHS.SRC.SONG_TEMPLATE_FILE
-  });
+gulp.task('html-folder', shell.task('mkdir -p ' + BUILD.HTML_FILES));
+
+/**
+ *
+ */
+gulp.task('html', async () => {
+  const templatePromise = await readFile(SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE);
   
-  return gulp.src('.', { allowEmpty: true });
+  return gulp.src(SRC.MD_FILES + '/**/*.md')
+    .pipe(songConvertor(templatePromise))
+    .pipe(rename({
+      extname: '.html'
+    }))
+    .pipe(gulp.dest(BUILD.HTML_FILES));
 });
 
 /**
  *
  */
-gulp.task('clean', () => {
-  return del(PATHS.BUILD.ROOT);
+gulp.task('index', () => {
+  const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${FILES.HTML.INDEX}`;
+  
+  const paths = {
+    toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
+    toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
+    toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES)
+  };
+  
+  return gulp.src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX)
+    .pipe(ejs({
+      categories: contentItems,
+      paths: paths
+    }).on('error', console.error))
+    .pipe(gulp.dest(BUILD.ROOT))
+    .pipe(shell([extChangeCmd]));
 });
+
+/**
+ *
+ */
+gulp.task('clean', shell.task('rm -rf docs'));
 
 /**
  *
  */
 gulp.task('build', (done) => {
-  runSequence('clean', 'html-folder', ['sass', 'html'], done);
+  runSequence('clean', ['html-folder', 'copy-icons'], ['sass', 'html', 'index'], done);
 });
 
 /**
  *
  */
-// gulp.task('browser-sync', () => {
-//   browserSync.init({
-//     server: {
-//       baseDir: PATHS.BUILD.ROOT
-//     },
-//     port: PORT,
-//     open: false,
-//     notify: false
-//   });
-// })
-
-/**
- *
- */
 gulp.task('watch', () => {
-  gulp.watch(PATHS.SRC.CSS_FILES + '/**/*.scss', gulp.series(['sass']));
+  gulp.watch(SRC.CSS_FILES + '/**/*.scss', gulp.series(['sass']));
   gulp.watch(
-    [PATHS.SRC.MD_FILES + '/**/*.md', PATHS.SRC.EJS_FILES + '/**/*.ejs'],
-    gulp.series(['html'])
+    [SRC.MD_FILES + '/**/*.md', SRC.EJS_FILES + '/**/*.ejs'],
+    gulp.series(['html', 'index'])
   );
 });
