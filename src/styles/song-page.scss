@@ -2,14 +2,24 @@
 
 .SongPage {
   &__main {
-    // The author name
-    h2 {
-      font-size: 16px;
-      margin-bottom: 24px;
-      color: var(--heading-color);
-      font-weight: 200;
-      font-style: italic;
+    // The title
+    h1 {
+      color: white;
+      margin-bottom: 16px;
+      font-size: 40px;
+      //font-style: normal;
+      font-weight: 400;
+      //line-height: normal;
     }
+    
+    // The author name
+    //h2 {
+    //  font-size: 16px;
+    //  margin-bottom: 24px;
+    //  color: var(--heading-color);
+    //  font-weight: 200;
+    //  font-style: italic;
+    //}
     
     // The verse number
     h4 {
@@ -43,6 +53,25 @@
     //}
   }
   
+  &__author {
+    color: #C0C0C0;
+    margin-bottom: 40px;
+    position: relative;
+    
+    &::after {
+      position: absolute;
+      content: '';
+      background: white;
+      //background: red;
+      top: 40px;
+      height: 10000px;
+      left: -100px;
+      right: -100px;
+      z-index: -1;
+      border-radius: 40px;
+    }
+  }
+  
   &__container {
     margin: 0 auto;
     max-width: var(--main-content-width);
@@ -50,7 +79,7 @@
   
   &__content {
     word-break: break-word;
-    padding: 20px 20px 40px 20px;
+    padding: 120px 100px 40px 100px;
   }
   
   &__verse {

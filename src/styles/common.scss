@@ -13,7 +13,8 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: var(--text-color);
-  background-color: #FFF;
+  background-color: var(--body-bg);
+  
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {

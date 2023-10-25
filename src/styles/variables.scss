@@ -7,10 +7,15 @@
   --heading-color: var(--bs-gray-600);
   --verse-number-bg: var(--bs-gray-200);
   
-  --header-bg: #438c73;
+  --body-bg: #F6F6F8;
   
-  --main-content-width: 700px;
-  --header-height: 50px;
+  --header-bg: #438c73;
+  --header-fill: #013710;
+  --header-top: #00160E;
+  
+  --main-content-padding: 32px;
+  --main-content-width: calc(1200px - 2 * var(--main-content-padding));
+  --header-height: 60px;
   
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

@@ -1,42 +1,95 @@
 @import "../variables";
 
+
 .Header {
-  background-color: var(--header-bg);
+  --header-content-width: 2400px;
+  --header-top-height: 420px;
+  
+  
+  //background-color: var(--header-bg);
   height: var(--header-height);
-  overflow: hidden;
+  position: relative;
+  
+  &__top {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-top-height);
+  }
+  
+  &__fill {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--header-fill);
+  }
+  
+  &__ribbon {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--header-top);
+    opacity: 0.8;
+  }
+  
+  &__background {
+    position: relative;
+    //top: 0;
+    height: 100%;
+    //width: 100%;
+    max-width: var(--header-content-width);
+    margin: 0 auto;
+    overflow: hidden;
+    background: center / cover no-repeat url("../../icons/background.jpg");
+    
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
   
   &__container {
+    height: 100%;
     max-width: var(--main-content-width);
+    padding: 0 var(--main-content-padding);
     margin: 0 auto;
+    overflow: hidden;
   }
   
   &__content {
-    display: flex;
-    flex-direction: row;
-    padding: 0 20px;
-    //padding: 10px 20px;
-    color: white;
+    //padding: 0 16px;
+    height: 100%;
   }
   
   &__home {
     display: flex;
+    align-items: center;
     flex-direction: row;
-    text-decoration: none !important;
+    height: 100%;
+  }
+  
+  &__logo {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    overflow: hidden;
   }
   
   &__logo img {
-    height: var(--header-height);
-    height: calc(var(--header-height) - 8px);
-    margin: 4px 0;
+    width: 100%;
+    filter: brightness(1.5);
   }
   
   &__title {
-    font-style: italic;
-    padding: 5px 0 0 6px;
-    margin: 0;
-    width: 70px;
-    line-height: 1.1;
-    color: white;
-    text-decoration: none !important;
+    margin-left: 8px;
+    margin-top: 5px;
   }
 }
