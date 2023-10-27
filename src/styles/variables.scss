@@ -1,16 +1,19 @@
 :root {
-  --font-main: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-main: 'Helvetica', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: 'Helvetica', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --font-size: 16px;
   
   --text-color: var(--bs-gray-800);
+  --author-text: #c0c0c0;
   --heading-color: var(--bs-gray-600);
-  --verse-number-bg: var(--bs-gray-200);
+  --verse-number-color: #737373;
+  --translation-color: #555;
+  --icon-color: #FF70A4;
   
   --body-bg: #F6F6F8;
   
   --header-bg: #438c73;
-  --header-fill: #013710;
+  --header-fill: #000f07;
   --header-top: #00160E;
   
   --main-content-padding: 32px;

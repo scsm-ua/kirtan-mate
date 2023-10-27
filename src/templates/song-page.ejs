@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="<%= paths.toCss %>/index.css">
     <link rel="stylesheet" href="<%= paths.toCss %>/song-page.css">
+    <link rel="stylesheet" href="<%= paths.toCss %>/partials/song.css">
 <!--    <script src="lib/script.js"></script>-->
 </head>
 
@@ -17,6 +18,12 @@
 
         <main class="Main SongPage__main">
             <div class="Main__container SongPage__container">
+                <header class="SongPage__header">
+                    <div class="SongPage__back">
+                        <%- include(paths.toPartials + '/returnHome.ejs'); %>
+                    </div>
+                </header>
+
                 <div class="SongPage__content">
                     <%- content %>
                 </div>

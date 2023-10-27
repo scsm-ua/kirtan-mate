@@ -5,20 +5,20 @@ const renderer = {
   /**/
   code(text) {
     const lines = text
-      .replaceAll('    ', '<span class="SongPage__space">    </span>')
+      .replaceAll('    ', '<span class="Song__space">    </span>')
       .split(/\n/)
-      .map((line) => `<div class="SongPage__line">${line}</div>\n`)
+      .map((line) => `<div class="Song__line">${line}</div>\n`)
       .join('');
     
-    return `<section class="SongPage__verse">\n${lines}</section>`;
+    return `<section class="Song__verse">\n${lines}</section>`;
   },
   
   /**/
   heading(text, level) {
     switch(level) {
-      case 2: return `\n<div class="SongPage__author">${text}</div>`;
+      case 2: return `\n<div class="Song__author">${text}</div>`;
       case 4: return `
-                <h5 class="SongPage__verse-number">
+                <h5 class="Song__number">
                   <span>${text}</span>
                 </h5>
               `;

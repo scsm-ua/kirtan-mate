@@ -4,6 +4,7 @@ const path = require('path');
 const { Transform } = require('stream');
 
 /**/
+const { auxTransform } = require('./auxTransform');
 const { htmlRenderer } = require('./htmlRenderer');
 const { PATHS } = require('../scripts/constants');
 const { BUILD, SRC } = PATHS;
@@ -15,15 +16,7 @@ marked.use({ renderer: htmlRenderer });
  */
 function convert(content, template) {
   const htmlString = marked.parse(content);
-  return fillTemplate(template, removeDraftMark(htmlString));
-}
-
-/**
- *
- */
-function removeDraftMark(htmlString) {
-  const headingPosition = htmlString.indexOf('<h1>');
-  return htmlString.substr(headingPosition);
+  return fillTemplate(template, auxTransform(htmlString));
 }
 
 /**

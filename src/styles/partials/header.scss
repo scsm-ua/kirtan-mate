@@ -44,7 +44,21 @@
     max-width: var(--header-content-width);
     margin: 0 auto;
     overflow: hidden;
+    //background: linear-gradient(0deg, rgba(6, 2, 36, 0.50) 0%, rgba(6, 2, 36, 0.50) 100%), url("../../icons/background.jpg"), lightgray 50% / cover no-repeat;
     background: center / cover no-repeat url("../../icons/background.jpg");
+    
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background-image: radial-gradient(
+                      farthest-corner at 25% 15%,
+                      rgb(0, 0, 0, 0.3) 0%,
+                      transparent 70%
+      );
+    }
     
     &::after {
       position: absolute;
@@ -53,6 +67,7 @@
       bottom: 0;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.6);
+      background-color: #06022480;
     }
   }
   

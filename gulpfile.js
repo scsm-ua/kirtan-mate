@@ -25,6 +25,15 @@ gulp.task('sass', () => {
 /**
  *
  */
+gulp.task('copy-font', () => {
+  return gulp.src(SRC.CSS_FILES + '/**/*.woff')
+    .pipe(gulp.dest(BUILD.CSS_FILES))
+});
+
+
+/**
+ *
+ */
 gulp.task('copy-icons', () => {
   return gulp.src(SRC.ICON_FILES + '/**/*')
     .pipe(gulp.dest(BUILD.ICON_FILES))
