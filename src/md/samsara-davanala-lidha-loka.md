@@ -86,13 +86,3 @@
 Хто регулярно та від усього серця співає ці вісім молитв Духовному Вчителю на протязі *Брахма-мухурти*, той неодмінно досягне духовної зрілості та зможе напряму служити Владиці Вріндавана.
 
 ***Примітка:*** Брахма-мухурта - девʼяносто шість хвилин перед сходом сонця.
-
-~~Слухати онлайн:~~
-###### Бгакті Лаліта
-
-<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/185650069&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/huron" title="huron" target="_blank" style="color: #cccccc; text-decoration: none;">huron</a> · <a href="https://soundcloud.com/huron/samsara" title="Bhakti Lalita Devi Dasi - Sri Sri Gurvvastaka (samsara-davanala)" target="_blank" style="color: #cccccc; text-decoration: none;">Bhakti Lalita Devi Dasi - Sri Sri Gurvvastaka (samsara-davanala)</a></div>
-
-
-###### Шріла Ачарʼя Махарадж
-<audio controls src="https://www.scsmathinternational.com/guidance/kirtan/SAchM-JayaJayaGurudeverAratiUjjvala.mp3">
-</audio>

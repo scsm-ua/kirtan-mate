@@ -33,9 +33,9 @@ const renderer = {
   // },
   
   /**/
-  del(text) {
-    return `<h5 class="SongPage__listen">${text}</h5>`;
-  }
+  // del(text) {
+  //   return `<h5 class="SongPage__listen">${text}</h5>`;
+  // }
   
   // strong(text) {
   //   return `<span class="SongPage__foreign">${text}</span>`;
