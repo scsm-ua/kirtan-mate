@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="<%= paths.toCss %>/index.css">
+    <link rel="stylesheet" href="<%= paths.toCss %>/song-page.css">
+    <link rel="stylesheet" href="<%= paths.toCss %>/partials/song.css">
+<!--    <script src="lib/script.js"></script>-->
+</head>
+
+<body>
+    <div class="Layout SongPage">
+        <%- include(paths.toPartials + '/header.ejs'); %>
+
+        <main class="Main SongPage__main">
+            <div class="Main__container SongPage__container">
+                <header class="SongPage__header">
+                    <div class="SongPage__back">
+                        <%- include(paths.toPartials + '/return-home.ejs'); %>
+                    </div>
+                </header>
+
+                <div class="SongPage__content">
+                    <%- content %>
+                </div>
+
+                <%- include(paths.toPartials + '/song-share.ejs'); %>
+                <%- include(paths.toPartials + '/prev-next.ejs'); %>
+            </div>
+        </main>
+
+<!--        <footer class="SongPage__footer"></footer>-->
+    </div>
+</body>
+</html>

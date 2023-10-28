@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kirtan Mate</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="<%= paths.toCss %>/index.css">
+  <link rel="stylesheet" href="<%= paths.toCss %>/home-page.css">
+</head>
+<body>
+  <div class="Layout HomePage">
+    <%- include(paths.toPartials + '/header.ejs'); %>
+
+    <main class="Main HomePage__main">
+      <div class="Main__container HomePage__container">
+        <div class="HomePage__content">
+            <ul class="HomePage__categories">
+                <% categories.forEach((category) => { %>
+                    <%- include(
+                        paths.toPartials + '/category-item.ejs',
+                        { 'category': category }
+                    ); %>
+                <% }) %>
+            </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

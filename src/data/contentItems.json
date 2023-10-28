@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Ранкові пісні",
+    "icon": "brightness",
+    "items": [
+      {
+        "name": "Прабга̄ті Ґīті",
+        "aliasName": "калі-куккура-кадана джаді ча̄о хе",
+        "fileName": "kali-kukkura-kadana-jadi-chhao-he-kaliyuga-pavana-kali-bhaya-nashiana.html"
+      },
+      {
+        "name": "Шрī Шрī Ґурва̄штака",
+        "aliasName": "самса̄ра-да̄ва̄нала-лīдга-лока",
+        "fileName": "samsara-davanala-lidha-loka.html"
+      }
+    ]
+  },
+  {
+    "name": "Вечірні пісні",
+    "icon": "nightlight",
+    "items": [
+      {
+        "name": "Шрī Ґуру-вайшнава Ма̄ха̄тмʼя-ґīті",
+        "aliasName": "шрī ґуру чарана-падма",
+        "fileName": "shri-guru-chharana-padma.html"
+      }
+    ]
+  },
+  {
+    "name": "Пісні, присвячені Господу Нітьянанді",
+    "icon": "diamond",
+    "items": [
+      {
+        "name": "А̄джня-Тахал",
+        "aliasName": "надīя-ґодруме нітьянанда маха̄джана",
+        "fileName": "nadiya-godrume-nityananda-mahajana.html"
+      }
+    ]
+  }
+]

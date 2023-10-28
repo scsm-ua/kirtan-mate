@@ -1,0 +1,21 @@
+.ButtonRound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  width: 56px;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.4s;
+  cursor: pointer;
+  color: white;
+  
+  &--green {
+    background-color: #008353;
+    
+    &:hover {
+      background-color: rgba(#008353, 0.8);
+    }
+  }
+}
