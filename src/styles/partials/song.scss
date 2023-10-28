@@ -2,7 +2,7 @@
 
 .Song {
   &__header {
-    padding: 20px 100px 40px;
+    padding: 20px var(--song-content-padding) 40px;
     
     // The title
     h1 {
@@ -25,7 +25,7 @@
     padding-bottom: 24px;
     padding-left: 30px;
     margin-bottom: 24px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--delimiter-border-color);
     
     &::before {
       content: '\e922';
@@ -45,9 +45,9 @@
   }
   
   &__body {
-    padding: 60px 100px;
+    padding: 20px var(--song-content-padding);
     border-radius: 40px 40px 0 0;
-    background-color: white;
+    background-color: var(--song-bg-color);
     
     /* Translation */
     p {
@@ -58,20 +58,24 @@
       letter-spacing: 0.72px;
       max-width: 792px;
       margin-bottom: 60px;
+      
+      /*  */
+      em {
+        font-weight: 400;
+      }
     }
   }
   
   &__verse {
     margin-bottom: 16px;
+  }
+  
+  &__line {
     color: #000;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.56;
     letter-spacing: 0.72px;
-  }
-  
-  &__line {
-    margin-bottom: 12px;
   }
   
   &__space {

@@ -1,3 +1,5 @@
+@import "mixins";
+
 :root {
   --font-main: 'Helvetica', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: 'Helvetica', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -9,6 +11,7 @@
   --verse-number-color: #737373;
   --translation-color: #555;
   --icon-color: #FF70A4;
+  --delimiter-border-color: #f0f0f0;
   
   --body-bg: #F6F6F8;
   
@@ -19,6 +22,13 @@
   --main-content-padding: 32px;
   --main-content-width: calc(1200px - 2 * var(--main-content-padding));
   --header-height: 60px;
+  --song-content-padding: 20px;
+  --song-bg-color: #fff;
+  
+  
+  @include breakpoint(md-up) {
+    --song-content-padding: 100px;
+  }
   
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -137,13 +147,3 @@
   --bs-form-invalid-color: #dc3545;
   --bs-form-invalid-border-color: #dc3545;
 }
-
-/**/
-$breakpoints: (
-  /* Extra small screen middle / phone */ 'xs': 480px,
-  /* Small screen / phone */ 'sm': 576px,
-  /* Medium screen / tablet */ 'md': 768px,
-  /* Large screen / desktop */ 'lg': 992px,
-  /* Large / Extra large screen */ 'xl': 1024px,
-  /* Extra large screen / wide desktop */ 'xxl': 1200px
-) !default;

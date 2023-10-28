@@ -1,0 +1,53 @@
+<div class="SongShare">
+    <link rel="stylesheet" href="<%= paths.toCss %>/partials/song-share.css">
+
+    <div class="SongShare__container">
+        <h4 class="SongShare__share">Поділитися</h4>
+
+        <div class="SongShare__content">
+            <div class="SongShare__qr" id="qrcode"></div>
+
+            <div class="SongShare__copy">
+                <label for="" class="SongShare__label">Копіювати посилання на сторінку</label>
+
+                <div class="SongShare__form">
+                    <input
+                        class="SongShare__input"
+                        id="href"
+                        readonly
+                        type="text"
+                    >
+
+                    <button class="ButtonRound ButtonRound--green SongShare__button" id="button">
+                        <span class="SongShare__icon icon-content_copy"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            const href = window.location.href;
+            const button = document.getElementById('button');
+            const input = document.getElementById('href');
+
+            /**/
+            input.value = href;
+            button.addEventListener('click', () => copyTextToClipboard(href));
+
+            /**/
+            const qr = document.getElementById('qrcode');
+            new QRCode(qr, {
+              text: href,
+              width: 256,
+              height: 256
+            });
+
+            /**/
+            function copyTextToClipboard(text) {
+              navigator.clipboard.writeText(text).catch(window.console.error);
+            }
+        </script>
+    </div>
+</div>

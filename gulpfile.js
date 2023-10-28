@@ -88,7 +88,7 @@ gulp.task('clean', shell.task('rm -rf docs'));
  *
  */
 gulp.task('build', (done) => {
-  runSequence('clean', ['html-folder', 'copy-icons'], ['sass', 'html', 'index'], done);
+  runSequence('clean', ['html-folder', 'copy-icons', 'copy-font'], ['sass', 'html', 'index'], done);
 });
 
 /**

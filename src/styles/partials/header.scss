@@ -1,9 +1,15 @@
+@import "../mixins";
 @import "../variables";
 
 
 .Header {
-  --header-content-width: 2400px;
-  --header-top-height: 420px;
+  --header-content-width: 100%;
+  --header-top-height: 180px;
+  
+  @include breakpoint(md-up) {
+    --header-content-width: 2400px;
+    --header-top-height: 420px;
+  }
   
   
   //background-color: var(--header-bg);
@@ -45,7 +51,11 @@
     margin: 0 auto;
     overflow: hidden;
     //background: linear-gradient(0deg, rgba(6, 2, 36, 0.50) 0%, rgba(6, 2, 36, 0.50) 100%), url("../../icons/background.jpg"), lightgray 50% / cover no-repeat;
-    background: center / cover no-repeat url("../../icons/background.jpg");
+    background: top / cover no-repeat url("../../icons/background.jpg");
+  
+    @include breakpoint(md-up) {
+      background-position: center;
+    }
     
     &::before {
       position: absolute;
@@ -89,6 +99,7 @@
     align-items: center;
     flex-direction: row;
     height: 100%;
+    width: fit-content;
   }
   
   &__logo {

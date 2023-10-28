@@ -1,0 +1,29 @@
+<li class="CategoryItem">
+    <link rel="stylesheet" href="<%= paths.toCss %>/partials/category-item.css">
+
+    <header class="CategoryItem__header">
+        <span class="CategoryItem__icon icon-<%= category.icon %>"></span>
+
+        <h3 class="CategoryItem__title">
+            <%= category.name %>
+        </h3>
+    </header>
+
+    <ul class="CategoryItem__list">
+        <% category.items.forEach((item) => { %>
+            <a href="html/<%= item.fileName %>" class="CategoryItem__item">
+                <div class="CategoryItem__marker icon-summarize"></div>
+
+                <div class="CategoryItem__box">
+                    <h6 class="CategoryItem__name">
+                        <%= item.name %>
+                    </h6>
+
+                    <div class="CategoryItem__alias">
+                        <%= item.aliasName %>
+                    </div>
+                </div>
+            </a>
+        <% }) %>
+    </ul>
+</li>

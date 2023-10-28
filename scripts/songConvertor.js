@@ -5,6 +5,7 @@ const { Transform } = require('stream');
 
 /**/
 const { auxTransform } = require('./auxTransform');
+const contentItems = require('../src/data/contentItems.json');
 const { htmlRenderer } = require('./htmlRenderer');
 const { PATHS } = require('../scripts/constants');
 const { BUILD, SRC } = PATHS;
@@ -33,6 +34,7 @@ function fillTemplate(template, content) {
   
   return ejs.render(template, {
     content: content,
+    contentItems: JSON.stringify(contentItems),
     paths: paths,
     title: title
   });
