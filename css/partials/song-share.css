@@ -1,0 +1,55 @@
+.SongShare {
+  background-color: var(--song-bg-color);
+  padding: 0 var(--song-content-padding) 60px;
+}
+.SongShare__container {
+  border-top: 1px solid var(--delimiter-border-color);
+  padding-top: 40px;
+}
+.SongShare__share {
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+  margin-bottom: 16px;
+}
+.SongShare__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.SongShare__qr {
+  margin-right: 40px;
+}
+.SongShare__copy {
+  flex: 1;
+  max-width: 500px;
+}
+.SongShare__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 72px;
+  padding: 16px 8px 16px 24px;
+  border-radius: 100px;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+}
+.SongShare__label {
+  display: block;
+  color: #6A6A6A;
+  letter-spacing: 0.64px;
+  margin-bottom: 16px;
+}
+.SongShare__input {
+  flex: 1;
+  font-size: 16px;
+  margin-right: 10px;
+  border: none !important;
+  outline: none !important;
+}
+.SongShare__button {
+  box-shadow: -35px 0 15px 0px var(--song-bg-color);
+}
+.SongShare__icon {
+  font-size: 24px;
+}
