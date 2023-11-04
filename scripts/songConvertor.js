@@ -6,6 +6,7 @@ const { Transform } = require('stream');
 /**/
 const { auxTransform } = require('./auxTransform');
 const contentItems = require('../src/data/contentItems.json');
+const { convertMDToJSON } = require('../scripts/indexGenerator');
 const { htmlRenderer } = require('./htmlRenderer');
 const { PATHS } = require('../scripts/constants');
 const { BUILD, SRC } = PATHS;
@@ -62,8 +63,34 @@ function convertor(templatePromise) {
   });
 }
 
+/****************************/
+/* Markdown to JSON section */
+/****************************/
+
+/**
+ *
+ */
+function md2json() {
+  return new Transform({
+    objectMode: true,
+    
+    transform(file, encoding, callback) {
+      try {
+        const jsonString = JSON.stringify(convertMDToJSON(file.contents.toString()), null, 2);
+        file.contents = Buffer.from(jsonString, 'utf8');
+        
+        this.push(file);
+        callback();
+        
+      } catch (error) {
+        callback(error);
+      }
+    }
+  });
+}
 
 /**/
 module.exports = {
+  md2jsonConvertor: md2json,
   songConvertor: convertor
 }

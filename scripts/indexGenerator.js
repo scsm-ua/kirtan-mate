@@ -99,4 +99,12 @@ function getLineInfo(line) {
     };
 }
 
+/**
+ *
+ */
 readSongs();
+
+/**/
+module.exports = {
+  convertMDToJSON: convertSongToJSON
+};

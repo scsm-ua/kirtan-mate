@@ -8,8 +8,8 @@ const shell = require('gulp-shell')
 
 /**/
 const contentItems = require('./src/data/contentItems.json');
+const { md2jsonConvertor, songConvertor } = require('./scripts/songConvertor');
 const { PATHS } = require('./scripts/constants');
-const { songConvertor } = require('./scripts/songConvertor');
 const { readFile } = require('./scripts/ioHelpers');
 const { BUILD, FILES, SRC } = PATHS;
 
@@ -56,6 +56,20 @@ gulp.task('html', async () => {
       extname: '.html'
     }))
     .pipe(gulp.dest(BUILD.HTML_FILES));
+});
+
+/**
+ *
+ */
+gulp.task('md2json', async () => {
+  const templatePromise = await readFile(SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE);
+  
+  return gulp.src(SRC.MD_FILES + '/**/*.md')
+    .pipe(md2jsonConvertor(templatePromise))
+    .pipe(rename({
+      extname: '.json'
+    }))
+    .pipe(gulp.dest(BUILD.JSON_FILES));
 });
 
 /**

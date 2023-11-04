@@ -5,6 +5,7 @@ const PATHS = {
     CSS_FILES: OUTPUT_DIR + '/css',
     HTML_FILES: OUTPUT_DIR + '/html',
     ICON_FILES: OUTPUT_DIR + '/icons',
+    JSON_FILES: OUTPUT_DIR + '/json',
     ROOT: OUTPUT_DIR
   },
   FILES: {

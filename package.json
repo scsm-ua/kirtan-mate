@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "build": "gulp build",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "tojson": "node ./scripts/indexGenerator.js"
   },
   "dependencies": {
     "bootstrap": "^5.3.1",
