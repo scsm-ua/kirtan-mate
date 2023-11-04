@@ -2,20 +2,20 @@
 
 .ReturnHome {
   display: flex;
-  
+
   &__anchor {
     display: flex;
   }
-  
+
   &__icon {
     font-size: 22px;
     color: white;
     margin-right: 8px;
-    @include icomoon('\e901');
+    @include icomoon("\e901");
   }
-  
+
   &__text {
-    color: #FFF;
+    color: #fff;
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: 0.64px;

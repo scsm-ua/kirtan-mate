@@ -4,29 +4,29 @@ Breakpoints mixin
 add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
 */
 @mixin breakpoint($point) {
-  $query-direction: '';
-  $query-point: '';
-  $query-size: '';
-  
-  @if str-index($point, '-up') {
-    $query-direction: 'min-width';
-    $query-point: str-slice($point, 0, str-length($point) - str-length('-up'));
+  $query-direction: "";
+  $query-point: "";
+  $query-size: "";
+
+  @if str-index($point, "-up") {
+    $query-direction: "min-width";
+    $query-point: str-slice($point, 0, str-length($point) - str-length("-up"));
     $query-size: map-get($breakpoints, $query-point);
   } @else {
-    @if str-index($point, '-down') {
+    @if str-index($point, "-down") {
       $query-point: str-slice(
-                      $point,
-                      0,
-                      str-length($point) - str-length('-down')
+        $point,
+        0,
+        str-length($point) - str-length("-down")
       );
     } @else {
       $query-point: $point;
     }
-    
-    $query-direction: 'max-width';
+
+    $query-direction: "max-width";
     $query-size: map-get($breakpoints, $query-point) - 1px;
   }
-  
+
   @media screen and (#{$query-direction}: #{$query-size}) {
     @content;
   }
@@ -36,32 +36,31 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
  *
  */
 $breakpoints: (
-  /* Extra small screen middle / phone */ 'xs': 480px,
-  /* Small screen / phone */ 'sm': 576px,
-  /* Medium screen / tablet */ 'md': 768px,
-  /* Large screen / desktop */ 'lg': 992px,
-  /* Large / Extra large screen */ 'xl': 1024px,
-  /* Extra large screen / wide desktop */ 'xxl': 1200px
+  /* Extra small screen middle / phone */ "xs": 480px,
+  /* Small screen / phone */ "sm": 576px,
+  /* Medium screen / tablet */ "md": 768px,
+  /* Large screen / desktop */ "lg": 992px,
+  /* Large / Extra large screen */ "xl": 1024px,
+  /* Extra large screen / wide desktop */ "xxl": 1200px
 ) !default;
-
 
 /**
  *
  */
 @mixin icomoon($iconCode) {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  
+
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
   &:before {
     content: $iconCode;
   }

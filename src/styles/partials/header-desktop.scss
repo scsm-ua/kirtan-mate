@@ -1,21 +1,19 @@
 @import "../mixins";
 @import "../variables";
 
+.HeaderDesktop {
+  display: none;
 
-.Header {
-  --header-content-width: 100%;
-  --header-top-height: 180px;
-  
   @include breakpoint(md-up) {
+    display: block;
     --header-content-width: 2400px;
     --header-top-height: 420px;
   }
-  
-  
+
   //background-color: var(--header-bg);
   height: var(--header-height);
   position: relative;
-  
+
   &__top {
     position: absolute;
     z-index: -2;
@@ -24,7 +22,7 @@
     right: 0;
     height: var(--header-top-height);
   }
-  
+
   &__fill {
     position: absolute;
     top: 0;
@@ -32,16 +30,16 @@
     width: 100%;
     background-color: var(--header-fill);
   }
-  
+
   &__ribbon {
     position: absolute;
     top: 0;
     width: 100%;
     height: var(--header-height);
-    background-color: var(--header-top);
+    background-color: var(--header-top-color);
     opacity: 0.8;
   }
-  
+
   &__background {
     position: relative;
     //top: 0;
@@ -51,28 +49,24 @@
     margin: 0 auto;
     overflow: hidden;
     //background: linear-gradient(0deg, rgba(6, 2, 36, 0.50) 0%, rgba(6, 2, 36, 0.50) 100%), url("../../icons/background.jpg"), lightgray 50% / cover no-repeat;
-    background: top / cover no-repeat url("../../icons/background.jpg");
-  
-    @include breakpoint(md-up) {
-      background-position: center;
-    }
-    
+    background: center / cover no-repeat url("../../icons/background.jpg");
+
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       top: 0;
       bottom: 0;
       width: 100%;
       background-image: radial-gradient(
-                      farthest-corner at 25% 15%,
-                      rgb(0, 0, 0, 0.3) 0%,
-                      transparent 70%
+        farthest-corner at 25% 15%,
+        rgb(0, 0, 0, 0.3) 0%,
+        transparent 70%
       );
     }
-    
+
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       top: 0;
       bottom: 0;
       width: 100%;
@@ -80,7 +74,7 @@
       background-color: #06022480;
     }
   }
-  
+
   &__container {
     height: 100%;
     max-width: var(--main-content-width);
@@ -88,12 +82,12 @@
     margin: 0 auto;
     overflow: hidden;
   }
-  
+
   &__content {
     //padding: 0 16px;
     height: 100%;
   }
-  
+
   &__home {
     display: flex;
     align-items: center;
@@ -101,19 +95,19 @@
     height: 100%;
     width: fit-content;
   }
-  
+
   &__logo {
     height: 36px;
     width: 36px;
     border-radius: 50%;
     overflow: hidden;
   }
-  
+
   &__logo img {
     width: 100%;
     filter: brightness(1.5);
   }
-  
+
   &__title {
     margin-left: 8px;
     margin-top: 5px;
