@@ -41,20 +41,23 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
  *
  */
 :root {
-  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --font-size: 16px;
   --text-color: var(--bs-gray-800);
   --author-text: #c0c0c0;
   --heading-color: var(--bs-gray-600);
   --verse-number-color: #737373;
   --translation-color: #555;
-  --icon-color: #FF70A4;
+  --icon-color: #ff70a4;
   --delimiter-border-color: #f0f0f0;
-  --body-bg: #F6F6F8;
+  --body-bg: #f6f6f8;
   --header-bg: #438c73;
   --header-fill: #000f07;
-  --header-top: #00160E;
+  --header-top-color: #00160e;
   --main-content-padding: 32px;
   --main-content-width: calc(1200px - 2 * var(--main-content-padding));
   --header-height: 60px;
@@ -125,9 +128,16 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -198,7 +208,18 @@ body {
   background-color: var(--body-bg);
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
   margin-top: 0;
   margin-bottom: 0.5em;
   font-weight: 700;
@@ -206,27 +227,33 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   color: var(--bs-heading-color);
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 38px;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 30px;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 24px;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 20px;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 18px;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 16px;
 }
 
@@ -256,9 +283,14 @@ p {
 }
 
 .Main {
-  height: calc(100% - var(--header-height));
   flex: 1;
+  height: 100%;
   overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .Main {
+    height: calc(100% - var(--header-height));
+  }
 }
 .Main__container {
   padding: 0;
@@ -276,7 +308,8 @@ p {
   font-style: normal;
   font-display: block;
 }
-[class^=icon-], [class*=" icon-"] {
+[class^=icon-],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: never;
@@ -465,20 +498,23 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
  *
  */
 :root {
-  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --font-size: 16px;
   --text-color: var(--bs-gray-800);
   --author-text: #c0c0c0;
   --heading-color: var(--bs-gray-600);
   --verse-number-color: #737373;
   --translation-color: #555;
-  --icon-color: #FF70A4;
+  --icon-color: #ff70a4;
   --delimiter-border-color: #f0f0f0;
-  --body-bg: #F6F6F8;
+  --body-bg: #f6f6f8;
   --header-bg: #438c73;
   --header-fill: #000f07;
-  --header-top: #00160E;
+  --header-top-color: #00160e;
   --main-content-padding: 32px;
   --main-content-width: calc(1200px - 2 * var(--main-content-padding));
   --header-height: 60px;
@@ -549,9 +585,16 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;

@@ -1,6 +1,6 @@
 .PrevNext {
   background-color: var(--song-bg-color);
-  padding: 0 var(--song-content-padding) 60px;
+  padding: 0 var(--song-content-padding);
   border-radius: 0 0 40px 40px;
 }
 .PrevNext__container {

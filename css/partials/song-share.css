@@ -1,6 +1,6 @@
 .SongShare {
   background-color: var(--song-bg-color);
-  padding: 0 var(--song-content-padding) 60px;
+  padding: 0 var(--song-content-padding);
 }
 .SongShare__container {
   border-top: 1px solid var(--delimiter-border-color);
@@ -19,10 +19,12 @@
 }
 .SongShare__qr {
   margin-right: 40px;
+  margin-bottom: 60px;
 }
 .SongShare__copy {
   flex: 1;
   max-width: 500px;
+  margin-bottom: 60px;
 }
 .SongShare__form {
   display: flex;
@@ -31,12 +33,12 @@
   max-height: 72px;
   padding: 16px 8px 16px 24px;
   border-radius: 100px;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
   box-sizing: border-box;
 }
 .SongShare__label {
   display: block;
-  color: #6A6A6A;
+  color: #6a6a6a;
   letter-spacing: 0.64px;
   margin-bottom: 16px;
 }

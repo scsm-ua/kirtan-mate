@@ -21,20 +21,23 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
  *
  */
 :root {
-  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --font-size: 16px;
   --text-color: var(--bs-gray-800);
   --author-text: #c0c0c0;
   --heading-color: var(--bs-gray-600);
   --verse-number-color: #737373;
   --translation-color: #555;
-  --icon-color: #FF70A4;
+  --icon-color: #ff70a4;
   --delimiter-border-color: #f0f0f0;
-  --body-bg: #F6F6F8;
+  --body-bg: #f6f6f8;
   --header-bg: #438c73;
   --header-fill: #000f07;
-  --header-top: #00160E;
+  --header-top-color: #00160e;
   --main-content-padding: 32px;
   --main-content-width: calc(1200px - 2 * var(--main-content-padding));
   --header-height: 60px;
@@ -105,9 +108,16 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -174,6 +184,8 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   }
 }
 .CategoryItem__header {
+  display: flex;
+  align-items: flex-start;
   padding: 20px var(--song-content-padding);
   border-bottom: 1px solid var(--delimiter-border-color);
 }
@@ -182,11 +194,11 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
     padding: 40px var(--song-content-padding);
   }
 }
+.CategoryItem__prefix {
+  padding-right: 12px;
+}
 .CategoryItem__icon {
-  position: relative;
-  top: 5px;
   font-size: 32px;
-  margin-right: 12px;
   color: var(--icon-color);
 }
 .CategoryItem__title {
@@ -195,6 +207,7 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   font-weight: 400;
   letter-spacing: 0.96px;
   margin: 0;
+  padding-top: 0.3rem;
 }
 @media screen and (min-width: 768px) {
   .CategoryItem__title {

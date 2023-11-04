@@ -21,20 +21,23 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
  *
  */
 :root {
-  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --font-size: 16px;
   --text-color: var(--bs-gray-800);
   --author-text: #c0c0c0;
   --heading-color: var(--bs-gray-600);
   --verse-number-color: #737373;
   --translation-color: #555;
-  --icon-color: #FF70A4;
+  --icon-color: #ff70a4;
   --delimiter-border-color: #f0f0f0;
-  --body-bg: #F6F6F8;
+  --body-bg: #f6f6f8;
   --header-bg: #438c73;
   --header-fill: #000f07;
-  --header-top: #00160E;
+  --header-top-color: #00160e;
   --main-content-padding: 32px;
   --main-content-width: calc(1200px - 2 * var(--main-content-padding));
   --header-height: 60px;
@@ -105,9 +108,16 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -163,99 +173,46 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   }
 }
 
-.Header {
-  --header-content-width: 100%;
-  --header-top-height: 180px;
-  height: var(--header-height);
-  position: relative;
-}
 @media screen and (min-width: 768px) {
-  .Header {
-    --header-content-width: 2400px;
-    --header-top-height: 420px;
+  .HeaderMobile {
+    display: none;
   }
 }
-.Header__top {
-  position: absolute;
-  z-index: -2;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--header-top-height);
-}
-.Header__fill {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--header-fill);
-}
-.Header__ribbon {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: var(--header-height);
-  background-color: var(--header-top);
-  opacity: 0.8;
-}
-.Header__background {
+.HeaderMobile__container {
+  height: 180px;
   position: relative;
-  height: 100%;
-  max-width: var(--header-content-width);
-  margin: 0 auto;
-  overflow: hidden;
   background: top/cover no-repeat url("../../icons/background.jpg");
 }
-@media screen and (min-width: 768px) {
-  .Header__background {
-    background-position: center;
-  }
-}
-.Header__background::before {
+.HeaderMobile__ribbon {
   position: absolute;
-  content: "";
   top: 0;
-  bottom: 0;
   width: 100%;
-  background-image: radial-gradient(farthest-corner at 25% 15%, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+  height: var(--header-height);
+  background-color: var(--header-top-color);
+  opacity: 0.8;
 }
-.Header__background::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  background-color: rgba(6, 2, 36, 0.5019607843);
-}
-.Header__container {
+.HeaderMobile__content {
   height: 100%;
-  max-width: var(--main-content-width);
-  padding: 0 var(--main-content-padding);
-  margin: 0 auto;
-  overflow: hidden;
+  padding: 0 16px;
 }
-.Header__content {
-  height: 100%;
-}
-.Header__home {
+.HeaderMobile__home {
   display: flex;
   align-items: center;
   flex-direction: row;
   height: 100%;
   width: fit-content;
 }
-.Header__logo {
+.HeaderMobile__logo {
   height: 36px;
   width: 36px;
   border-radius: 50%;
   overflow: hidden;
 }
-.Header__logo img {
+.HeaderMobile__logo img {
   width: 100%;
   filter: brightness(1.5);
 }
-.Header__title {
+.HeaderMobile__title {
   margin-left: 8px;
   margin-top: 5px;
 }

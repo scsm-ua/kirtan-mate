@@ -173,110 +173,94 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   }
 }
 
-body,
-html {
+.HeaderDesktop {
+  display: none;
+  height: var(--header-height);
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .HeaderDesktop {
+    display: block;
+    --header-content-width: 2400px;
+    --header-top-height: 420px;
+  }
+}
+.HeaderDesktop__top {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-top-height);
+}
+.HeaderDesktop__fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--header-fill);
+}
+.HeaderDesktop__ribbon {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--header-top-color);
+  opacity: 0.8;
+}
+.HeaderDesktop__background {
+  position: relative;
+  height: 100%;
+  max-width: var(--header-content-width);
+  margin: 0 auto;
+  overflow: hidden;
+  background: center/cover no-repeat url("../../icons/background.jpg");
+}
+.HeaderDesktop__background::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: radial-gradient(farthest-corner at 25% 15%, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
+}
+.HeaderDesktop__background::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(6, 2, 36, 0.5019607843);
+}
+.HeaderDesktop__container {
+  height: 100%;
+  max-width: var(--main-content-width);
+  padding: 0 var(--main-content-padding);
+  margin: 0 auto;
+  overflow: hidden;
+}
+.HeaderDesktop__content {
   height: 100%;
 }
-
-body {
-  margin: 0;
-  font-family: var(--font-main);
-  font-size: var(--font-size);
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--text-color);
-  background-color: var(--body-bg);
-}
-
-h6,
-.h6,
-h5,
-.h5,
-h4,
-.h4,
-h3,
-.h3,
-h2,
-.h2,
-h1,
-.h1 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--bs-heading-color);
-}
-
-h1,
-.h1 {
-  font-size: 38px;
-}
-
-h2,
-.h2 {
-  font-size: 30px;
-}
-
-h3,
-.h3 {
-  font-size: 24px;
-}
-
-h4,
-.h4 {
-  font-size: 20px;
-}
-
-h5,
-.h5 {
-  font-size: 18px;
-}
-
-h6,
-.h6 {
-  font-size: 16px;
-}
-
-a,
-a:link,
-a:visited,
-a:active {
-  text-decoration: none;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.Layout {
+.HeaderDesktop__home {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   height: 100%;
+  width: fit-content;
+}
+.HeaderDesktop__logo {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
   overflow: hidden;
 }
-
-.Main {
-  flex: 1;
-  height: 100%;
-  overflow: auto;
+.HeaderDesktop__logo img {
+  width: 100%;
+  filter: brightness(1.5);
 }
-@media screen and (min-width: 768px) {
-  .Main {
-    height: calc(100% - var(--header-height));
-  }
-}
-.Main__container {
-  padding: 0;
-}
-@media screen and (min-width: 768px) {
-  .Main__container {
-    padding: 0 var(--main-content-padding);
-  }
+.HeaderDesktop__title {
+  margin-left: 8px;
+  margin-top: 5px;
 }

@@ -35,7 +35,7 @@
   letter-spacing: 0.64px;
 }
 .Song__body {
-  padding: 20px var(--song-content-padding);
+  padding: 60px var(--song-content-padding) 20px;
   border-radius: 40px 40px 0 0;
   background-color: var(--song-bg-color);
   /* Translation */
