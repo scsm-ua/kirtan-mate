@@ -23,7 +23,9 @@ const PATHS = {
     EJS_PARTIALS_FILES: 'src/templates/partials',
     HTML_FILES: 'src/html',
     ICON_FILES: 'src/icons',
-    MD_FILES: 'src/md'
+    MD_FILES: 'src/md',
+    MD_INDEX_FILE: 'src/meta/index.md',
+    JSON_CATEGORIES_FILE: 'src/meta/categories.json'
   }
 };
 
