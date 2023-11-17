@@ -2,12 +2,12 @@
 @import "../variables";
 
 .HeaderDesktop {
-  display: none;
+  --header-content-width: 2400px;
+  --header-top-height: 420px;
+  //display: none;
 
   @include breakpoint(md-up) {
-    display: block;
-    --header-content-width: 2400px;
-    --header-top-height: 420px;
+    //display: block;
   }
 
   //background-color: var(--header-bg);

@@ -25,7 +25,7 @@
   --main-content-padding: 32px;
   --main-content-width: calc(1200px - 2 * var(--main-content-padding));
   --header-height: 60px;
-  --song-content-padding: 20px;
+  --song-content-padding: 16px;
   --song-bg-color: #fff;
 
   @include breakpoint(md-up) {

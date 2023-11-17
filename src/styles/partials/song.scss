@@ -1,25 +1,40 @@
-//@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../mixins";
+@import "../variables";
+
 
 .Song {
   &__header {
-    padding: 20px var(--song-content-padding) 40px;
+    padding: 20px var(--song-content-padding) 80px;
+  
+    @include breakpoint(md) {
+      padding: 16px var(--song-content-padding) 60px;
+    }
 
     // The title
     h1 {
-      color: white;
+      //color: white;
       margin-bottom: 12px;
       font-size: 40px;
       font-weight: 400;
+  
+      @include breakpoint(md) {
+        font-size: 28px;
+      }
     }
   }
 
   &__author {
-    color: var(--author-text);
+    //color: var(--author-text);
+    color: var(--translation-color);
     position: relative;
     font-size: 18px;
     font-weight: 300;
+  
+    @include breakpoint(md) {
+      font-size: 16px;
+    }
   }
-
+  
   &__number {
     position: relative;
     padding-bottom: 24px;
@@ -45,10 +60,6 @@
   }
 
   &__body {
-    padding: 60px var(--song-content-padding) 20px;
-    border-radius: 40px 40px 0 0;
-    background-color: var(--song-bg-color);
-
     /* Translation */
     p {
       color: var(--translation-color);

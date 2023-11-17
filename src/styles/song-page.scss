@@ -3,7 +3,7 @@
 
 .SongPage {
   &__header {
-    padding: 24px var(--song-content-padding) 20px;
+    padding: 20px var(--song-content-padding);
   }
 
   &__text {
@@ -20,5 +20,12 @@
 
   &__content {
     word-break: break-word;
+    padding: 60px var(--song-content-padding) 20px;
+    border-radius: 40px 40px 0 0;
+    background-color: var(--song-bg-color);
+  
+    @include breakpoint(md) {
+      padding: 20px var(--song-content-padding);
+    }
   }
 }
