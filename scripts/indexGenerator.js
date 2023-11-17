@@ -105,11 +105,12 @@ function getSongLineInfo(line) {
 
 // Index.
 
-function readIndex() {
+function getIndexJSON() {
     var data = fs.readFileSync(PATHS.SRC.MD_INDEX_FILE);
     var text = data.toString();
     var categories = convertIndexToJSON(text);
-    console.log(JSON.stringify(categories, null, 4));
+    //console.log(JSON.stringify(categories, null, 4));
+    return categories;
 }
 
 function convertIndexToJSON(text) {
@@ -238,9 +239,10 @@ function getSongFirstLine(filename) {
  * Debug.
  */
 //readSongs();
-readIndex();
+//getIndexJSON();
 
 /**/
 module.exports = {
-  convertMDToJSON: convertSongToJSON
+  convertMDToJSON: convertSongToJSON,
+  getIndexJSON: getIndexJSON
 };
