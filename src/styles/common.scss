@@ -14,10 +14,20 @@ body {
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--body-bg);
-  
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1 {
   margin-top: 0;
   margin-bottom: 0.5em;
   font-weight: 700;
@@ -25,37 +35,43 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   color: var(--bs-heading-color);
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 38px;
   //@include breakpoint(sm) {
   //  font-size: 30px;
   //}
 }
-h2, .h2 {
+h2,
+.h2 {
   font-size: 30px;
   //@include breakpoint(sm) {
   //  font-size: 26px;
   //}
 }
-h3, .h3 {
+h3,
+.h3 {
   font-size: 24px;
   //@include breakpoint(sm) {
   //  font-size: 22px;
   //}
 }
-h4, .h4 {
+h4,
+.h4 {
   font-size: 20px;
   //@include breakpoint(sm) {
   //  font-size: 18px;
   //}
 }
-h5, .h5 {
+h5,
+.h5 {
   font-size: 18px;
   //@include breakpoint(sm) {
   //  font-size: 16px;
   //}
 }
-h6, .h6 {
+h6,
+.h6 {
   font-size: 16px;
   //@include breakpoint(sm) {
   //  font-size: 14px;
@@ -88,13 +104,17 @@ p {
 }
 
 .Main {
-  height: calc(100% - var(--header-height));
   flex: 1;
+  height: 100%;
   overflow: auto;
-  
+
+  @include breakpoint(md-up) {
+    height: calc(100% - var(--header-height));
+  }
+
   &__container {
     padding: 0;
-  
+
     @include breakpoint(md-up) {
       padding: 0 var(--main-content-padding);
     }

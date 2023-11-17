@@ -11,7 +11,7 @@ function auxTransform(htmlString) {
  *
  */
 function removeDraftMark(htmlString) {
-  const headingPosition = htmlString.indexOf('<h1>');
+  const headingPosition = htmlString.indexOf("<h1>");
   return htmlString.substr(headingPosition);
 }
 
@@ -22,7 +22,7 @@ function wrapText(htmlString) {
   const index = htmlString.indexOf('<h5 class="Song__number">');
   const top = htmlString.slice(0, index);
   const wrapped = htmlString.slice(index);
-  
+
   return `
     <div class="Song__header">${top}</div>
     <div class="Song__body">${wrapped}</div>

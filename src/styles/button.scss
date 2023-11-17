@@ -10,10 +10,10 @@
   transition: all 0.4s;
   cursor: pointer;
   color: white;
-  
+
   &--green {
     background-color: #008353;
-    
+
     &:hover {
       background-color: rgba(#008353, 0.8);
     }

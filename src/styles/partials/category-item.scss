@@ -1,78 +1,81 @@
 @import "../mixins";
 @import "../variables";
 
-
 .CategoryItem {
   border-radius: 40px;
   background-color: var(--song-bg-color);
   margin-bottom: 16px;
-  
+
   @include breakpoint(md-up) {
     margin-bottom: 24px;
   }
-  
+
   &__header {
+    display: flex;
+    align-items: flex-start;
     padding: 20px var(--song-content-padding);
     border-bottom: 1px solid var(--delimiter-border-color);
-  
+
     @include breakpoint(md-up) {
       padding: 40px var(--song-content-padding);
     }
   }
-  
+
+  &__prefix {
+    padding-right: 12px;
+  }
+
   &__icon {
-    position: relative;
-    top: 5px;
     font-size: 32px;
-    margin-right: 12px;
     color: var(--icon-color);
   }
-  
+
   &__title {
     display: inline-block;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.96px;
     margin: 0;
-  
+    padding-top: 0.3rem;
+
     @include breakpoint(md-up) {
       font-size: 24px;
     }
   }
-  
+
   &__list {
     list-style-type: none;
     padding: 17px var(--song-content-padding) 26px;
-  
+
     @include breakpoint(md-up) {
       padding: 40px var(--song-content-padding) 52px;
     }
   }
-  
+
   &__item {
     display: flex;
     margin-bottom: 24px;
   }
-  
+
   &__marker {
     font-size: 24px;
     margin-right: 12px;
     color: var(--author-text);
   }
-  
+
   &__box {
     flex: 1;
     line-height: 1.75;
     letter-spacing: 0.64px;
   }
-  
+
   &__name {
     color: #000;
     line-height: 1.75;
     letter-spacing: 0.64px;
     margin-bottom: 0;
   }
-  
+
   &__alias {
     color: var(--verse-number-color);
     line-height: 1.75;
