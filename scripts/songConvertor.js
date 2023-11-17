@@ -2,13 +2,15 @@ const ejs = require("ejs");
 const { marked } = require("marked");
 const path = require("path");
 const { Transform } = require("stream");
+const VinylStream = require("vinyl-source-stream")
 
 /**/
 const { auxTransform } = require("./auxTransform");
-const contentItems = require("../src/data/contentItems.json");
+const { convertMDToJSON, getIndexJSON } = require("../scripts/indexGenerator");
 const { htmlRenderer } = require("./htmlRenderer");
 const { PATHS } = require("../scripts/constants");
-const { BUILD, SRC } = PATHS;
+const { BUILD, SRC, FILES } = PATHS;
+
 
 marked.use({ renderer: htmlRenderer });
 
@@ -34,7 +36,7 @@ function fillTemplate(template, content) {
 
   return ejs.render(template, {
     content: content,
-    contentItems: JSON.stringify(contentItems),
+    contentItems: JSON.stringify(require(BUILD.INDEX_FILE)),
     paths: paths,
     title: title,
   });
@@ -61,7 +63,48 @@ function convertor(templatePromise) {
   });
 }
 
+/****************************/
+/* Markdown to JSON section */
+/****************************/
+
+/**
+ *
+ */
+function md2json() {
+  return new Transform({
+    objectMode: true,
+    
+    transform(file, encoding, callback) {
+      try {
+        const jsonString = JSON.stringify(convertMDToJSON(file.contents.toString()), null, 2);
+        file.contents = Buffer.from(jsonString, 'utf8');
+        
+        this.push(file);
+        callback();
+        
+      } catch (error) {
+        callback(error);
+      }
+    }
+  });
+}
+
+/****************************/
+/* Generate JSON index      */
+/****************************/
+
+/**
+ *
+ */
+function getJSONIndexStream() {
+  const stream = VinylStream(FILES.JSON.INDEX);
+  stream.end(JSON.stringify(getIndexJSON(), null, 2));
+  return stream;
+}
+
 /**/
 module.exports = {
+  md2jsonConvertor: md2json,
   songConvertor: convertor,
-};
+  getJSONIndexStream: getJSONIndexStream
+}

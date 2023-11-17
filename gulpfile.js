@@ -7,9 +7,8 @@ const sass = require("gulp-sass")(require("sass"));
 const shell = require("gulp-shell");
 
 /**/
-const contentItems = require("./src/data/contentItems.json");
+const { md2jsonConvertor, songConvertor, getJSONIndexStream } = require("./scripts/songConvertor");
 const { PATHS } = require("./scripts/constants");
-const { songConvertor } = require("./scripts/songConvertor");
 const { readFile } = require("./scripts/ioHelpers");
 const { BUILD, FILES, SRC } = PATHS;
 
@@ -66,6 +65,29 @@ gulp.task("html", async () => {
 /**
  *
  */
+gulp.task("md2json", (done) => {
+  // TODO: had to use 'fs' to provide 'done' callback without async.
+  var fs = require("fs");
+  const templatePromise = fs.readFileSync(SRC.EJS_FILES + "/" + FILES.EJS.SONG_PAGE);
+  
+  return gulp.src(SRC.MD_FILES + "/**/*.md")
+    .pipe(md2jsonConvertor(templatePromise))
+    .pipe(rename({
+      extname: ".json"
+    }))
+    .pipe(gulp.dest(BUILD.JSON_FILES), done);
+});
+
+/**
+ *
+ */
+gulp.task("generate-index", (done) => {
+  return getJSONIndexStream().pipe(gulp.dest(BUILD.JSON_FILES), done);
+});
+
+/**
+ *
+ */
 gulp.task("index", () => {
   const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${FILES.HTML.INDEX}`;
 
@@ -74,15 +96,12 @@ gulp.task("index", () => {
     toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
     toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
   };
-
-  return gulp
-    .src(SRC.EJS_FILES + "/" + FILES.EJS.INDEX)
-    .pipe(
-      ejs({
-        categories: contentItems,
-        paths: paths,
-      }).on("error", console.error),
-    )
+  
+  return gulp.src(SRC.EJS_FILES + "/" + FILES.EJS.INDEX)
+    .pipe(ejs({
+      categories: require(BUILD.INDEX_FILE),
+      paths: paths
+    }).on('error', console.error))
     .pipe(gulp.dest(BUILD.ROOT))
     .pipe(shell([extChangeCmd]));
 });
@@ -97,11 +116,12 @@ gulp.task("clean", shell.task("rm -rf docs"));
  */
 gulp.task("build", (done) => {
   runSequence(
-    "clean",
-    ["html-folder", "copy-icons", "copy-font"],
-    ["sass", "html", "index"],
-    done,
-  );
+    "clean", 
+    "md2json", 
+    "generate-index", 
+    ["html-folder", "copy-icons", "copy-font"], 
+    ["sass", "html", "index"], 
+    done);
 });
 
 /**

@@ -14,7 +14,8 @@
     "gulp-shell": "^0.8.0",
     "gulp4-run-sequence": "^1.0.2",
     "marked": "^7.0.4",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
