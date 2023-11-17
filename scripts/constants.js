@@ -1,6 +1,7 @@
 const path = require('path');
 
 const OUTPUT_DIR = 'docs';
+const contentItems = 'contentItems.json'
 
 const PATHS = {
   BUILD: {
@@ -9,7 +10,7 @@ const PATHS = {
     ICON_FILES: OUTPUT_DIR + '/icons',
     JSON_FILES: OUTPUT_DIR + '/json',
     // `resolve` to use with `require`.
-    INDEX_FILE: path.resolve(OUTPUT_DIR + '/json/contentItems.json'),
+    INDEX_FILE: path.resolve(OUTPUT_DIR + '/json/' + contentItems),
     ROOT: OUTPUT_DIR
   },
   FILES: {
@@ -19,6 +20,9 @@ const PATHS = {
     },
     HTML: {
       INDEX: 'index.html'
+    },
+    JSON: {
+      INDEX: contentItems
     }
   },
   SRC: {
