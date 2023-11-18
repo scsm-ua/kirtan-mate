@@ -34,9 +34,19 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 .ReturnHome__icon:before {
   content: "\e901";
 }
+@media screen and (max-width: 767px) {
+  .ReturnHome__icon {
+    color: initial;
+  }
+}
 .ReturnHome__text {
   color: #fff;
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.64px;
+}
+@media screen and (max-width: 767px) {
+  .ReturnHome__text {
+    color: initial;
+  }
 }
