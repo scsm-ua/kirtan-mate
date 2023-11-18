@@ -44,7 +44,6 @@
 
     <script>
         try {
-            const prefix = '/docs/html/';
             const contentItems = JSON.parse('<%- contentItems %>');
 
             const prevBtn = document.getElementById('prev-btn');
@@ -66,14 +65,14 @@
             prevBtn.addEventListener(
                 'click',
                 () =>
-                    (window.location.pathname =
-                        prefix + items[prevIndex].fileName)
+                    (window.location =
+                        items[prevIndex].fileName)
             );
             nextBtn.addEventListener(
                 'click',
                 () =>
-                    (window.location.pathname =
-                        prefix + items[nextIndex].fileName)
+                    (window.location =
+                        items[nextIndex].fileName)
             );
         } catch (e) {
             window.console.error(e);
