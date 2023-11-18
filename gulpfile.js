@@ -7,7 +7,7 @@ const sass = require('gulp-sass')(require('sass'));
 const shell = require('gulp-shell');
 
 // Load local env.
-require('dotenv').config();
+//require('dotenv').config();
 
 /**/
 const {
