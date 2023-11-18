@@ -3,6 +3,8 @@ on:
     push:
         branches:
             - main
+env:
+   HOME_URL: https://scsm-ua.github.io/kirtan-mate
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
@@ -16,7 +18,7 @@ jobs:
             - name: Install and Build 🔧
               run: |
                   npm i
-                  HOME_URL="${{ env.HOME_URL }}" npm run build
+                  HOME_URL="$HOME_URL" npm run build
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
               with:
