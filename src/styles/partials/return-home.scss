@@ -12,6 +12,9 @@
         color: white;
         margin-right: 8px;
         @include icomoon('\e901');
+        @include breakpoint(md) {
+            color: initial;
+        }
     }
 
     &__text {
@@ -19,5 +22,8 @@
         font-weight: 300;
         line-height: 1.5;
         letter-spacing: 0.64px;
+        @include breakpoint(md) {
+            color: initial;
+        }
     }
 }
