@@ -110,6 +110,10 @@ function getIndexJSON() {
   var data = fs.readFileSync(PATHS.SRC.MD_INDEX_FILE);
   var text = data.toString();
   var categories = convertIndexToJSON(text);
+
+  // Filter empty categories.
+  categories = categories.filter(category => category.items.length > 0);
+
   //console.log(JSON.stringify(categories, null, 4));
   return categories;
 }
