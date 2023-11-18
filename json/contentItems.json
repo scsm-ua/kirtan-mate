@@ -50,11 +50,6 @@
     ]
   },
   {
-    "name": "Обіднє Араті",
-    "icon": "",
-    "items": []
-  },
-  {
     "name": "Вечірнє Араті",
     "icon": "nightlight",
     "items": [
@@ -122,16 +117,6 @@
         "fileName": "gay-gora-madhur-svare.html"
       }
     ]
-  },
-  {
-    "name": "Вайшнавам",
-    "icon": "",
-    "items": []
-  },
-  {
-    "name": "Екадаші та святкові дні",
-    "icon": "",
-    "items": []
   },
   {
     "name": "Інші бгаджани",
