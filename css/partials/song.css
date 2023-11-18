@@ -1,3 +1,14 @@
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
 .Song__header {
   padding: 20px var(--song-content-padding) 40px;
 }
@@ -7,11 +18,21 @@
   font-size: 40px;
   font-weight: 400;
 }
+@media screen and (max-width: 767px) {
+  .Song__header h1 {
+    color: initial;
+  }
+}
 .Song__author {
   color: var(--author-text);
   position: relative;
   font-size: 18px;
   font-weight: 300;
+}
+@media screen and (max-width: 767px) {
+  .Song__author {
+    color: initial;
+  }
 }
 .Song__number {
   position: relative;
