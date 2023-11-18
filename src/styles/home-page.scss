@@ -1,26 +1,26 @@
-@import "mixins";
-@import "variables";
+@import 'mixins';
+@import 'variables';
 
 .HomePage {
-  padding-top: 85px;
+    padding-top: 85px;
 
-  @include breakpoint(md-up) {
-    padding-top: 150px;
-  }
+    @include breakpoint(md-up) {
+        padding-top: 150px;
+    }
 
-  &__container {
-    margin: 0 auto;
-    max-width: var(--main-content-width);
-    padding-bottom: 20px;
-  }
+    &__container {
+        margin: 0 auto;
+        max-width: var(--main-content-width);
+        padding-bottom: 20px;
+    }
 
-  &__content {
-    word-break: break-word;
-  }
+    &__content {
+        word-break: break-word;
+    }
 
-  &__categories {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+    &__categories {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 }

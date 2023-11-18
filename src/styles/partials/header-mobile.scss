@@ -1,53 +1,53 @@
-@import "../mixins";
-@import "../variables";
+@import '../mixins';
+@import '../variables';
 
 .HeaderMobile {
-  @include breakpoint(md-up) {
-    display: none;
-  }
+    @include breakpoint(md-up) {
+        display: none;
+    }
 
-  &__container {
-    height: 180px;
-    position: relative;
-    background: top / cover no-repeat url("../../icons/background.jpg");
-  }
+    &__container {
+        height: 180px;
+        position: relative;
+        background: top / cover no-repeat url('../../icons/background.jpg');
+    }
 
-  &__ribbon {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: var(--header-height);
-    background-color: var(--header-top-color);
-    opacity: 0.8;
-  }
+    &__ribbon {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: var(--header-height);
+        background-color: var(--header-top-color);
+        opacity: 0.8;
+    }
 
-  &__content {
-    height: 100%;
-    padding: 0 16px;
-  }
+    &__content {
+        height: 100%;
+        padding: 0 16px;
+    }
 
-  &__home {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    height: 100%;
-    width: fit-content;
-  }
+    &__home {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+        width: fit-content;
+    }
 
-  &__logo {
-    height: 36px;
-    width: 36px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
+    &__logo {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
 
-  &__logo img {
-    width: 100%;
-    filter: brightness(1.5);
-  }
+    &__logo img {
+        width: 100%;
+        filter: brightness(1.5);
+    }
 
-  &__title {
-    margin-left: 8px;
-    margin-top: 5px;
-  }
+    &__title {
+        margin-left: 8px;
+        margin-top: 5px;
+    }
 }

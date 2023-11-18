@@ -1,76 +1,82 @@
 <div class="PrevNext">
-  <link rel="stylesheet" href="<%= paths.toCss %>/partials/prev-next.css" />
+    <link rel="stylesheet" href="<%= paths.toCss %>/partials/prev-next.css" />
 
-  <div class="PrevNext__container">
-    <div class="PrevNext__content">
-      <div class="PrevNext__item PrevNext__item--prev" id="prev-block">
-        <button
-          class="ButtonRound ButtonRound--green PrevNext__button"
-          id="prev-btn"
-        >
-          <span
-            class="PrevNext__icon PrevNext__icon--prev icon-arrow_back"
-          ></span>
-        </button>
+    <div class="PrevNext__container">
+        <div class="PrevNext__content">
+            <div class="PrevNext__item PrevNext__item--prev" id="prev-block">
+                <button
+                    class="ButtonRound ButtonRound--green PrevNext__button"
+                    id="prev-btn"
+                >
+                    <span
+                        class="PrevNext__icon PrevNext__icon--prev icon-arrow_back"
+                    ></span>
+                </button>
 
-        <div class="PrevNext__text">
-          <h6 class="PrevNext__description">Попередня пісня</h6>
-          <div class="ellipsis PrevNext__title" id="prev-title">--</div>
+                <div class="PrevNext__text">
+                    <h6 class="PrevNext__description">Попередня пісня</h6>
+                    <div class="ellipsis PrevNext__title" id="prev-title">
+                        --
+                    </div>
+                </div>
+            </div>
+
+            <div class="PrevNext__item PrevNext__item--next" id="next-block">
+                <div class="PrevNext__text PrevNext__text--next">
+                    <h6 class="PrevNext__description">Наступна пісня</h6>
+                    <div class="ellipsis PrevNext__title" id="next-title">
+                        Ш́́рīмад‑Бгāґаватам Ш́́рīмад‑Бгāґаватам Ш́́рīмад‑Бгāґаватам
+                        Ш́́рīмад‑Бгāґаватам
+                    </div>
+                </div>
+
+                <button
+                    class="ButtonRound ButtonRound--green PrevNext__button"
+                    id="next-btn"
+                >
+                    <span
+                        class="PrevNext__icon PrevNext__icon--next icon-arrow_back"
+                    ></span>
+                </button>
+            </div>
         </div>
-      </div>
-
-      <div class="PrevNext__item PrevNext__item--next" id="next-block">
-        <div class="PrevNext__text PrevNext__text--next">
-          <h6 class="PrevNext__description">Наступна пісня</h6>
-          <div class="ellipsis PrevNext__title" id="next-title">
-            Ш́́рīмад‑Бгāґаватам Ш́́рīмад‑Бгāґаватам Ш́́рīмад‑Бгāґаватам
-            Ш́́рīмад‑Бгāґаватам
-          </div>
-        </div>
-
-        <button
-          class="ButtonRound ButtonRound--green PrevNext__button"
-          id="next-btn"
-        >
-          <span
-            class="PrevNext__icon PrevNext__icon--next icon-arrow_back"
-          ></span>
-        </button>
-      </div>
     </div>
-  </div>
 
-  <script>
-    try {
-      const prefix = "/docs/html/";
-      const contentItems = JSON.parse("<%- contentItems %>");
+    <script>
+        try {
+            const prefix = '/docs/html/';
+            const contentItems = JSON.parse('<%- contentItems %>');
 
-      const prevBtn = document.getElementById("prev-btn");
-      const nextBtn = document.getElementById("next-btn");
-      const prevTitle = document.getElementById("prev-title");
-      const nextTitle = document.getElementById("next-title");
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const prevTitle = document.getElementById('prev-title');
+            const nextTitle = document.getElementById('next-title');
 
-      const items = contentItems.flatMap((cat) => cat.items);
-      const index = items.findIndex((item) =>
-        window.location.pathname.includes(item.fileName),
-      );
+            const items = contentItems.flatMap((cat) => cat.items);
+            const index = items.findIndex((item) =>
+                window.location.pathname.includes(item.fileName)
+            );
 
-      const prevIndex = index === 0 ? items.length - 1 : index - 1;
-      const nextIndex = index === items.length - 1 ? 0 : index + 1;
+            const prevIndex = index === 0 ? items.length - 1 : index - 1;
+            const nextIndex = index === items.length - 1 ? 0 : index + 1;
 
-      prevTitle.innerText = items[prevIndex].name;
-      nextTitle.innerText = items[nextIndex].name;
+            prevTitle.innerText = items[prevIndex].name;
+            nextTitle.innerText = items[nextIndex].name;
 
-      prevBtn.addEventListener(
-        "click",
-        () => (window.location.pathname = prefix + items[prevIndex].fileName),
-      );
-      nextBtn.addEventListener(
-        "click",
-        () => (window.location.pathname = prefix + items[nextIndex].fileName),
-      );
-    } catch (e) {
-      window.console.error(e);
-    }
-  </script>
+            prevBtn.addEventListener(
+                'click',
+                () =>
+                    (window.location.pathname =
+                        prefix + items[prevIndex].fileName)
+            );
+            nextBtn.addEventListener(
+                'click',
+                () =>
+                    (window.location.pathname =
+                        prefix + items[nextIndex].fileName)
+            );
+        } catch (e) {
+            window.console.error(e);
+        }
+    </script>
 </div>

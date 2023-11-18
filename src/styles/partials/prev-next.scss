@@ -1,52 +1,52 @@
 .PrevNext {
-  background-color: var(--song-bg-color);
-  padding: 0 var(--song-content-padding);
-  border-radius: 0 0 40px 40px;
+    background-color: var(--song-bg-color);
+    padding: 0 var(--song-content-padding);
+    border-radius: 0 0 40px 40px;
 
-  &__container {
-    border-top: 1px solid var(--delimiter-border-color);
-    padding-top: 40px;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    &--next {
-      margin-left: auto;
+    &__container {
+        border-top: 1px solid var(--delimiter-border-color);
+        padding-top: 40px;
     }
-  }
 
-  &__icon {
-    font-size: 24px;
-    &--next {
-      transform: rotate(180deg);
+    &__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
-  }
 
-  &__text {
-    margin: 12px 24px;
-    &--next {
-      text-align: right;
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        &--next {
+            margin-left: auto;
+        }
     }
-  }
 
-  &__description {
-    letter-spacing: 0.64px;
-  }
+    &__icon {
+        font-size: 24px;
+        &--next {
+            transform: rotate(180deg);
+        }
+    }
 
-  &__title {
-    font-size: 14px;
-    letter-spacing: 0.56px;
-    max-width: 300px;
-  }
+    &__text {
+        margin: 12px 24px;
+        &--next {
+            text-align: right;
+        }
+    }
+
+    &__description {
+        letter-spacing: 0.64px;
+    }
+
+    &__title {
+        font-size: 14px;
+        letter-spacing: 0.56px;
+        max-width: 300px;
+    }
 }
