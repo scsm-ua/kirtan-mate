@@ -30,7 +30,8 @@ function fillTemplate(template, content) {
     const paths = {
         toCss: path.relative(BUILD.HTML_FILES, BUILD.CSS_FILES),
         toIcons: path.relative(BUILD.HTML_FILES, BUILD.ICON_FILES),
-        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES)
+        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
+        index: process.env.HOME_URL || '/'
     };
 
     return ejs.render(template, {

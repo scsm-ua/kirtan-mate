@@ -6,6 +6,9 @@ const runSequence = require('gulp4-run-sequence');
 const sass = require('gulp-sass')(require('sass'));
 const shell = require('gulp-shell');
 
+// Load local env.
+require('dotenv').config();
+
 /**/
 const {
     md2jsonConvertor,
@@ -103,7 +106,8 @@ gulp.task('index', () => {
     const paths = {
         toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
         toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
-        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES)
+        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
+        index: process.env.HOME_URL || '/'
     };
 
     return gulp
