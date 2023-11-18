@@ -2,7 +2,7 @@ const ejs = require("ejs");
 const { marked } = require("marked");
 const path = require("path");
 const { Transform } = require("stream");
-const VinylStream = require("vinyl-source-stream")
+const VinylStream = require("vinyl-source-stream");
 
 /**/
 const { auxTransform } = require("./auxTransform");
@@ -10,7 +10,6 @@ const { convertMDToJSON, getIndexJSON } = require("../scripts/indexGenerator");
 const { htmlRenderer } = require("./htmlRenderer");
 const { PATHS } = require("../scripts/constants");
 const { BUILD, SRC, FILES } = PATHS;
-
 
 marked.use({ renderer: htmlRenderer });
 
@@ -73,19 +72,22 @@ function convertor(templatePromise) {
 function md2json() {
   return new Transform({
     objectMode: true,
-    
+
     transform(file, encoding, callback) {
       try {
-        const jsonString = JSON.stringify(convertMDToJSON(file.contents.toString()), null, 2);
-        file.contents = Buffer.from(jsonString, 'utf8');
-        
+        const jsonString = JSON.stringify(
+          convertMDToJSON(file.contents.toString()),
+          null,
+          2,
+        );
+        file.contents = Buffer.from(jsonString, "utf8");
+
         this.push(file);
         callback();
-        
       } catch (error) {
         callback(error);
       }
-    }
+    },
   });
 }
 
@@ -106,5 +108,5 @@ function getJSONIndexStream() {
 module.exports = {
   md2jsonConvertor: md2json,
   songConvertor: convertor,
-  getJSONIndexStream: getJSONIndexStream
-}
+  getJSONIndexStream: getJSONIndexStream,
+};

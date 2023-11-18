@@ -10,8 +10,8 @@ const PATHS = {
     ICON_FILES: OUTPUT_DIR + "/icons",
     JSON_FILES: OUTPUT_DIR + "/json",
     // `resolve` to use with `require`.
-    INDEX_FILE: path.resolve(OUTPUT_DIR + '/json/' + contentItems),
-    ROOT: OUTPUT_DIR
+    INDEX_FILE: path.resolve(OUTPUT_DIR + "/json/" + contentItems),
+    ROOT: OUTPUT_DIR,
   },
   FILES: {
     EJS: {
@@ -19,11 +19,11 @@ const PATHS = {
       SONG_PAGE: "song-page.ejs",
     },
     HTML: {
-      INDEX: "index.html"
+      INDEX: "index.html",
     },
     JSON: {
-      INDEX: contentItems
-    }
+      INDEX: contentItems,
+    },
   },
   SRC: {
     CSS_FILES: "src/styles",
@@ -33,9 +33,8 @@ const PATHS = {
     ICON_FILES: "src/icons",
     MD_FILES: "src/md",
     MD_INDEX_FILE: "src/meta/index.md",
-    JSON_CATEGORIES_FILE: "src/meta/categories.json"
-  }
-
+    JSON_CATEGORIES_FILE: "src/meta/categories.json",
+  },
 };
 
 /**/

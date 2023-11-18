@@ -1,0 +1,1 @@
+prettier --plugin=prettier-plugin-ejs --write .

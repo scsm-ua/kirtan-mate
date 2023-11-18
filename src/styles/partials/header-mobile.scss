@@ -20,12 +20,12 @@
     background-color: var(--header-top-color);
     opacity: 0.8;
   }
-  
+
   &__content {
     height: 100%;
     padding: 0 16px;
   }
-  
+
   &__home {
     display: flex;
     align-items: center;
@@ -33,19 +33,19 @@
     height: 100%;
     width: fit-content;
   }
-  
+
   &__logo {
     height: 36px;
     width: 36px;
     border-radius: 50%;
     overflow: hidden;
   }
-  
+
   &__logo img {
     width: 100%;
     filter: brightness(1.5);
   }
-  
+
   &__title {
     margin-left: 8px;
     margin-top: 5px;
