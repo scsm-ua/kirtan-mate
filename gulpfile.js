@@ -102,7 +102,7 @@ gulp.task('generate-index', (done) => {
  */
 gulp.task('index', () => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${FILES.HTML.INDEX}`;
-
+console.log("--Debug ENV", process.env.HOME_URL, process.env)
     const paths = {
         toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
         toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
