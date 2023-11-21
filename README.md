@@ -16,7 +16,7 @@ Used deploy script: [.github/workflows/build_and_deploy.yml](.github/workflows/b
 
 Setup `HOME_URL`: 
 
-`Repository Settings` > `Secrets and variables` > `Actions` > `Variables` > `New repository variable`:
+`Repository` > `Settings` > `Secrets and variables` > `Actions` > `Variables` > `New repository variable`:
 
 `HOME_URL` = `https://scsm-ua.github.io/kirtan-mate`
 
@@ -26,11 +26,21 @@ Setup `secrets.GH_TOKEN`:
 
 `User icon` > `Settings` > `Developer Settings` > `Personal Access Tokens` > `Fine-grained tokens` > `Generate new token`.
 
-Resource owner: `current repositiry`.
+**Resource owner**: `current repositiry`.
 
-Repository access: `Only select repositories` = `current repositiry`.
+**Repository access**: `Only select repositories` = `current repositiry`.
 
-Permissions: `Repository permissions` > `Contents` = `Read and write`.
+**Permissions**: `Repository permissions` > `Contents` = `Read and write`.
+
+### Pages setup
+
+Setup github pages for repository.
+
+`Repository` > `Settings` > `Pages` > `Build and deployment`:
+
+**Source**: `Deploy from a branch`.
+
+**Branch**: `gh-pages` `/root` > Click `Save`.
 
 ## Local deploy
 
