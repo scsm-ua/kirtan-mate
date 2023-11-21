@@ -8,15 +8,30 @@ Preview: https://scsm-ua.github.io/kirtan-mate/
 
     gulp watch
 
-## Pages deploy setup
+## GH Pages deploy setup
 
-Index page specified in [.github/workflows/build_and_deploy.yml](.github/workflows/build_and_deploy.yml):
+Used deploy script: [.github/workflows/build_and_deploy.yml](.github/workflows/build_and_deploy.yml):
 
-```
-env:
-   HOME_URL: https://scsm-ua.github.io/kirtan-mate
-```
+### HOME_URL
+
+Setup `HOME_URL`: 
+
+`Repository Settings` > `Secrets and variables` > `Actions` > `Variables` > `New repository variable`:
+
+`HOME_URL` = `https://scsm-ua.github.io/kirtan-mate`
+
+### GH_TOKEN
+
+Setup `secrets.GH_TOKEN`: 
+
+`User icon` > `Settings` > `Developer Settings` > `Personal Access Tokens` > `Fine-grained tokens` > `Generate new token`.
+
+Resource owner: `current repositiry`.
+
+Repository access: `Only select repositories` = `current repositiry`.
+
+Permissions: `Repository permissions` > `Contents` = `Read and write`.
 
 ## Local deploy
 
-Copy `.env.sample` to `.env` with your local root path.
+Copy `.env.sample` to `.env` with your local root path for `HOME_URL`.
