@@ -1,0 +1,35 @@
+<div class="Navigation">
+    <link
+        rel="stylesheet"
+        href="<%= paths.toCss %>/partials/navigation.css"
+    />
+
+    <div class="Navigation__container">
+        <div class="Navigation__content">
+            <a href="<%= paths.toPages.index %>" class="Navigation__link">
+<!--            <a href="/md-parser-test/docs/index.html" class="Navigation__link">-->
+                <div class="Navigation__text">
+                    Зміст
+                </div>
+            </a>
+
+            <a href="<%= paths.toPages.index_list %>" class="Navigation__link">
+                <div class="Navigation__text">
+                    Індекс
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        Array.from(
+            document.getElementsByClassName('Navigation__link')
+        ).forEach((el) => {
+            console.log(el.href, location.pathname)
+            if (el.href.endsWith(location.pathname)) {
+                el.classList.add('Navigation__link--active');
+            }
+        });
+
+    </script>
+</div>

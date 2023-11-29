@@ -1,0 +1,32 @@
+//@import '../variables';
+
+.Header {
+    background-color: var(--header-bg-color);
+    height: var(--header-height);
+
+    &__container {
+        height: 100%;
+        margin: 0 auto;
+        max-width: var(--page-max-width);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--side-padding);
+        height: 100%;
+    }
+
+    &__home {
+        //display: flex;
+        //align-items: center;
+        //height: 50%;
+        width: 110px;
+        overflow: hidden;
+    }
+
+    &__logo {
+        max-width: 100%;
+    }
+}

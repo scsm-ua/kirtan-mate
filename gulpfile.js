@@ -17,7 +17,7 @@ const {
 } = require('./scripts/songConvertor');
 const { PATHS } = require('./scripts/constants');
 const { readFile } = require('./scripts/ioHelpers');
-const { BUILD, FILES, SRC } = PATHS;
+const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
  *
@@ -107,6 +107,11 @@ gulp.task('index', () => {
         toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
         toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
         toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
+        toPages: {
+            index: process.env.HOME_URL || PAGES.INDEX,
+            index_list: PAGES.INDEX_LIST
+        },
+        // Remove in favour of 'toPages'
         index: process.env.HOME_URL || '/'
     };
 

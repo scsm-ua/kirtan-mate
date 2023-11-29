@@ -1,0 +1,42 @@
+@import '../mixins';
+@import '../variables';
+
+.Navigation {
+    background-color: var(--index-bg-color);
+
+    &__container {
+        margin: 0 auto;
+        max-width: var(--content-max-width);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 24px var(--side-padding);
+    }
+
+    &__link {
+        height: 36px;
+        width: 152px;
+        border-radius: 100px;
+        color: #000;
+        font-weight: 300;
+        background-color: white;
+        box-shadow: 0px 4px 20px 0px rgba(56, 55, 142, 0.15);
+
+        &--active {
+            cursor: default;
+            color: white;
+            font-weight: 700;
+            box-shadow: none;
+            background-color: var(--header-bg-color);
+        }
+    }
+
+    &__text {
+        line-height: 39px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

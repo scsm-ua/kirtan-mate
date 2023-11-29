@@ -13,26 +13,28 @@
 
     <body>
         <div class="Layout">
-            <%- include(paths.toPartials + '/header-desktop.ejs'); %>
+            <div class="Layout__content">
+                <%- include(paths.toPartials + '/header.ejs'); %>
 
-            <main class="Main SongPage">
-                <div class="Main__container SongPage__container">
-                    <header class="SongPage__header">
-                        <div class="SongPage__back">
-                            <%- include(paths.toPartials + '/return-home.ejs'); %>
+                <main class="Main SongPage">
+                    <div class="Main__container SongPage__container">
+                        <header class="SongPage__header">
+                            <div class="SongPage__back">
+                                <%- include(paths.toPartials + '/return-home.ejs'); %>
+                            </div>
+                        </header>
+
+                        <div class="SongPage__content">
+                            <%- content %>
                         </div>
-                    </header>
 
-                    <div class="SongPage__content">
-                        <%- content %>
+                        <%- include(paths.toPartials + '/song-share.ejs'); %>
+                        <%- include(paths.toPartials + '/prev-next.ejs'); %>
                     </div>
+                </main>
 
-                    <%- include(paths.toPartials + '/song-share.ejs'); %>
-                    <%- include(paths.toPartials + '/prev-next.ejs'); %>
-                </div>
-            </main>
-
-            <!--        <footer class="SongPage__footer"></footer>-->
+                <!--        <footer class="SongPage__footer"></footer>-->
+            </div>
         </div>
     </body>
 </html>

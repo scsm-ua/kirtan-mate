@@ -10,22 +10,25 @@
     </head>
     <body>
         <div class="Layout">
-            <%- include(paths.toPartials + '/header-desktop.ejs'); %>
+            <div class="Layout__content">
+                <%- include(paths.toPartials + '/header.ejs'); %>
+                <%- include(paths.toPartials + '/navigation.ejs'); %>
 
-            <main class="Main HomePage">
-                <div class="Main__container HomePage__container">
-                    <div class="HomePage__content">
-                        <ul class="HomePage__categories">
-                            <% categories.forEach((category) => { %>
-                            <%- include(
-                        paths.toPartials + '/category-item.ejs',
-                        { 'category': category }
-                    ); %>
-                            <% }) %>
-                        </ul>
+                <main class="Main HomePage">
+                    <div class="Main__container HomePage__container">
+                        <div class="HomePage__content">
+                            <ul class="HomePage__categories">
+                                <% categories.forEach((category) => { %>
+                                <%- include(
+                            paths.toPartials + '/category-item.ejs',
+                            { 'category': category }
+                        ); %>
+                                <% }) %>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </main>
+                </main>
+            </div>
         </div>
     </body>
 </html>

@@ -1,6 +1,10 @@
 @import 'mixins';
 @import 'variables';
 
+* {
+    box-sizing: border-box;
+}
+
 body,
 html {
     height: 100%;
@@ -12,6 +16,7 @@ body {
     font-size: var(--font-size);
     font-weight: 400;
     line-height: 1.5;
+    letter-spacing: 0.64px;
     color: var(--text-color);
     background-color: var(--body-bg);
 }
@@ -97,10 +102,16 @@ p {
 }
 
 .Layout {
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
     height: 100%;
     overflow: hidden;
+
+    &__content {
+        //flex: 1;
+        height: 100%;
+        overflow: auto;
+    }
 }
 
 .Main {

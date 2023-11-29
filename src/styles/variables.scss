@@ -9,7 +9,35 @@
         'Liberation Mono', 'Courier New', monospace;
     --font-size: 16px;
 
-    --text-color: var(--bs-gray-800);
+
+
+
+    /**/
+    --content-max-width: 568px;
+    --header-height: 60px;
+    --page-max-width: 768px;
+    --side-padding: 20px;
+
+    /**/
+    --accent-color: var(--orange);
+    --border-color: var(--grey);
+    --header-bg-color: var(--brown);
+    --index-bg-color: var(--beige);
+    --text-color: var(--dark-grey);
+    --title-color: var(--dark);
+
+    /**/
+    --beige: #FFFAED;
+    --brown: #26231B;
+    --dark: #000;
+    --dark-grey: #515151;
+    --grey: #A4A4A4;
+    --orange: #F5C149;
+
+
+    /* Outdated below */
+
+    //--text-color: var(--bs-gray-800);
     --author-text: #c0c0c0;
     --heading-color: var(--bs-gray-600);
     --verse-number-color: #737373;
@@ -25,7 +53,6 @@
 
     --main-content-padding: 32px;
     --main-content-width: calc(1200px - 2 * var(--main-content-padding));
-    --header-height: 60px;
     --song-content-padding: 16px;
     --song-bg-color: #fff;
 

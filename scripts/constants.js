@@ -34,6 +34,10 @@ const PATHS = {
         MD_FILES: 'src/md',
         MD_INDEX_FILE: 'src/meta/index.md',
         JSON_CATEGORIES_FILE: 'src/meta/categories.json'
+    },
+    PAGES: {
+        INDEX: '/',
+        INDEX_LIST: 'docs/index_list.html'
     }
 };
 
