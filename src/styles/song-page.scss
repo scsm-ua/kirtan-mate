@@ -1,31 +1,31 @@
-@import "mixins";
-@import "variables";
+@import 'mixins';
+@import 'variables';
 
 .SongPage {
-  &__header {
-    padding: 20px var(--song-content-padding);
-  }
-
-  &__text {
-    padding: 60px var(--song-content-padding);
-    border-radius: 40px 40px 0 0;
-    background-color: var(--song-bg-color);
-  }
-
-  &__container {
-    margin: 0 auto;
-    max-width: var(--main-content-width);
-    padding-bottom: 40px;
-  }
-
-  &__content {
-    word-break: break-word;
-    padding: 60px var(--song-content-padding) 20px;
-    border-radius: 40px 40px 0 0;
-    background-color: var(--song-bg-color);
-  
-    @include breakpoint(md) {
-      padding: 20px var(--song-content-padding);
+    &__header {
+        padding: 20px var(--song-content-padding);
     }
-  }
+
+    &__text {
+        padding: 60px var(--song-content-padding);
+        border-radius: 40px 40px 0 0;
+        background-color: var(--song-bg-color);
+    }
+
+    &__container {
+        margin: 0 auto;
+        max-width: var(--main-content-width);
+        padding-bottom: 40px;
+    }
+
+    &__content {
+        word-break: break-word;
+        padding: 60px var(--song-content-padding) 20px;
+        border-radius: 40px 40px 0 0;
+        background-color: var(--song-bg-color);
+
+        @include breakpoint(md) {
+            padding: 20px var(--song-content-padding);
+        }
+    }
 }

@@ -64,15 +64,11 @@
 
             prevBtn.addEventListener(
                 'click',
-                () =>
-                    (window.location =
-                        items[prevIndex].fileName)
+                () => (window.location = items[prevIndex].fileName)
             );
             nextBtn.addEventListener(
                 'click',
-                () =>
-                    (window.location =
-                        items[nextIndex].fileName)
+                () => (window.location = items[nextIndex].fileName)
             );
         } catch (e) {
             window.console.error(e);

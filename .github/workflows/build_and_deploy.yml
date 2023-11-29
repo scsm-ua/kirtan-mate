@@ -4,7 +4,7 @@ on:
         branches:
             - main
 env:
-   HOME_URL: https://scsm-ua.github.io/kirtan-mate
+    HOME_URL: https://scsm-ua.github.io/kirtan-mate
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
