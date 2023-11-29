@@ -139,7 +139,7 @@ gulp.task('build', (done) => {
     runSequence(
         'clean',
         'md2json',
-        'generate-index',
+        // 'generate-index',
         ['html-folder', 'copy-icons', 'copy-font'],
         ['sass', 'html', 'index'],
         done

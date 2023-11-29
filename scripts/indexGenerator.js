@@ -105,6 +105,17 @@ function getSongLineInfo(line) {
 }
 
 // Index.
+/**
+ * type TCategory = {
+ *     icon: string; // !!! Obsolete.
+ *     name: string; // Category name.
+ *     items: {
+ *         aliasName: sting; // The First line.
+ *         fileName: string;
+ *         name: string;
+ *     }
+ * };
+ */
 
 function getIndexJSON() {
     var data = fs.readFileSync(PATHS.SRC.MD_INDEX_FILE);
