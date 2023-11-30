@@ -130,6 +130,36 @@ gulp.task('index', () => {
 /**
  *
  */
+gulp.task('index-list', () => {
+    const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_LIST} ${BUILD.ROOT}/${FILES.HTML.INDEX_LIST}`;
+
+    const paths = {
+        toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
+        toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
+        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
+        toPages: {
+            index: process.env.HOME_URL || PAGES.INDEX,
+            index_list: PAGES.INDEX_LIST
+        },
+        // Remove in favour of 'toPages'
+        index: process.env.HOME_URL || '/'
+    };
+
+    return gulp
+        .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
+        .pipe(
+            ejs({
+                items: require(path.join(process.cwd(), SRC.JSON_INDEX_LIST_FILE)),
+                paths: paths
+            }).on('error', console.error)
+        )
+        .pipe(gulp.dest(BUILD.ROOT))
+        .pipe(shell([extChangeCmd]));
+});
+
+/**
+ *
+ */
 gulp.task('clean', shell.task('rm -rf docs'));
 
 /**

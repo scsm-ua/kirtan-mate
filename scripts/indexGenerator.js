@@ -245,7 +245,7 @@ function getSongFirstLine(filename) {
         console.error('Song first line not found', filename);
         return;
     }
-    return first_line;
+    return first_line.trim();
 }
 
 /**

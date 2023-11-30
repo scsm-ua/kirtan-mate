@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Kirtan Mate - Index</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
+    <link rel="stylesheet" href="<%= paths.toCss %>/index-list-page.css" />
+</head>
+<body>
+<div class="Layout">
+    <div class="Layout__content">
+        <%- include(paths.toPartials + '/header.ejs'); %>
+        <%- include(paths.toPartials + '/navigation.ejs'); %>
+
+        <main class="Main IndexListPage">
+            <div class="Main__container IndexListPage__container">
+                <div class="Main__content IndexListPage__content">
+                    <ul class="IndexListPage__list">
+                        <% items.forEach((item) => { %>
+                            <%- include(
+                                paths.toPartials + '/index-list-item.ejs',
+                                { 'item': item }
+                            ); %>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>

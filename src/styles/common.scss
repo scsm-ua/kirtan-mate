@@ -115,19 +115,33 @@ p {
 }
 
 .Main {
-    flex: 1;
-    height: 100%;
-    overflow: auto;
-
-    @include breakpoint(md-up) {
-        height: calc(100% - var(--header-height));
-    }
 
     &__container {
-        padding: 0;
-
-        @include breakpoint(md-up) {
-            padding: 0 var(--main-content-padding);
-        }
+        margin: 0 auto;
+        max-width: var(--content-max-width);
     }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 24px var(--side-padding);
+    }
+
+
+    //flex: 1;
+    //height: 100%;
+    //overflow: auto;
+    //
+    //@include breakpoint(md-up) {
+    //    height: calc(100% - var(--header-height));
+    //}
+    //
+    //&__container {
+    //    padding: 0;
+    //
+    //    @include breakpoint(md-up) {
+    //        padding: 0 var(--main-content-padding);
+    //    }
+    //}
 }
