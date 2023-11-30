@@ -12,13 +12,17 @@
     &__content {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 24px var(--side-padding);
+
+        @include breakpoint(xs-up) {
+            justify-content: space-around;
+        }
     }
 
     &__link {
         height: 36px;
-        width: 140px;
+        width: 150px;
         border-radius: 100px;
         color: #000;
         font-weight: 300;
