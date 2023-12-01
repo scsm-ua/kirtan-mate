@@ -15,6 +15,7 @@ const {
     makeSongHTML,
     md2jsonConvertor
 } = require('./scripts/songConvertor');
+const { makeIndexList } = require('./scripts/makeIndexList');
 const { PATHS } = require('./scripts/constants');
 const { readFile } = require('./scripts/ioHelpers');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
@@ -140,16 +141,14 @@ gulp.task('index-list', () => {
         toPages: {
             index: process.env.HOME_URL || PAGES.INDEX,
             index_list: PAGES.INDEX_LIST
-        },
-        // Remove in favour of 'toPages'
-        index: process.env.HOME_URL || '/'
+        }
     };
 
     return gulp
         .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
         .pipe(
             ejs({
-                items: require(path.join(process.cwd(), SRC.JSON_INDEX_LIST_FILE)),
+                items: makeIndexList(require(BUILD.INDEX_FILE)),
                 paths: paths
             }).on('error', console.error)
         )
@@ -170,6 +169,7 @@ gulp.task('build', (done) => {
         'clean',
         'md2json',
         'generate-index',
+        'index-list',
         ['html-folder', 'copy-icons', 'copy-font'],
         ['sass', 'html', 'index'],
         done

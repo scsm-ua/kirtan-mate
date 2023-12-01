@@ -15,12 +15,6 @@ type TCategoryItem = {
 };
 
 
-type TIndexItem = [
-    string, // Index letter А--я
-    TCategoryItem[]
-];
-
-
 type TSongJSONVerse = {
     number: string;
     text: string[];

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
-    <link rel="stylesheet" href="<%= paths.toCss %>/index-list-page.css" />
+    <link rel="stylesheet" href="<%= paths.toCss %>/index-page.css" />
 </head>
 <body>
 <div class="Layout">
@@ -14,10 +14,10 @@
         <%- include(paths.toPartials + '/header.ejs'); %>
         <%- include(paths.toPartials + '/navigation.ejs'); %>
 
-        <main class="Main IndexListPage">
-            <div class="Main__container IndexListPage__container">
-                <div class="Main__content IndexListPage__content">
-                    <ul class="IndexListPage__list">
+        <main class="Main IndexPage">
+            <div class="Main__container IndexPage__container">
+                <div class="Main__content IndexPage__content">
+                    <ul class="IndexPage__list">
                         <% items.forEach((item) => { %>
                             <%- include(
                                 paths.toPartials + '/index-list-item.ejs',

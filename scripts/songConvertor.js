@@ -56,7 +56,7 @@ function fillTemplate(template, content) {
 
     return ejs.render(template, {
         author: author,
-        // contentItems: JSON.stringify(require(BUILD.INDEX_FILE)),
+        contentItems: JSON.stringify(require(BUILD.INDEX_FILE)),
         functions: {
             transformLine: transformLine
         },

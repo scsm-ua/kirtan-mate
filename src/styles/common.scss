@@ -95,25 +95,25 @@ p {
     margin-bottom: 1rem;
 }
 
+/**/
 .ellipsis {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+/**/
 .Layout {
-    //display: flex;
-    //flex-direction: column;
     height: 100%;
     overflow: hidden;
 
     &__content {
-        //flex: 1;
         height: 100%;
         overflow: auto;
     }
 }
 
+/**/
 .Main {
     min-height: 100%;
 
@@ -127,23 +127,6 @@ p {
         align-items: center;
         flex-direction: column;
         justify-content: space-around;
-        padding: 24px var(--side-padding);
+        padding: 0px var(--side-padding) 24px;
     }
-
-
-    //flex: 1;
-    //height: 100%;
-    //overflow: auto;
-    //
-    //@include breakpoint(md-up) {
-    //    height: calc(100% - var(--header-height));
-    //}
-    //
-    //&__container {
-    //    padding: 0;
-    //
-    //    @include breakpoint(md-up) {
-    //        padding: 0 var(--main-content-padding);
-    //    }
-    //}
 }

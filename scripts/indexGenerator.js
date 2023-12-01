@@ -114,6 +114,7 @@ function getIndexJSON() {
     var data = fs.readFileSync(PATHS.SRC.MD_INDEX_FILE);
     var text = data.toString();
     var categories = convertIndexToJSON(text);
+
     // Filter empty categories.
     categories = categories.filter((category) => category.items.length > 0);
 
@@ -123,23 +124,20 @@ function getIndexJSON() {
 
 function convertIndexToJSON(text) {
     var lines = text.split(/\n/);
-
     var categories = [];
+    var last_line_id;
 
     function getLastCategory(options) {
         if ((options && options.create_new) || !categories.length) {
             // Category template.
             categories.push({
                 name: null,
-                icon: null,
                 items: []
             });
         }
 
         return categories[categories.length - 1];
     }
-
-    var last_line_id;
 
     lines.forEach((line) => {
         var { line_id, name } = getIndexLineInfo(line);
@@ -170,7 +168,7 @@ function convertIndexToJSON(text) {
 const index_line_types = {
     name: /^### (.+)/,
     // Extract only filename without extension.
-    song: /^\s?- \[[^\]]+\]\(songs\/([^\)]+)\.md\)$/
+    song: /^\s?- \[[^\]]+\]\(songs\/([^\)]+)\.md\)/
 };
 
 function getIndexLineInfo(line) {
