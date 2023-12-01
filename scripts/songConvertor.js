@@ -72,7 +72,7 @@ function fillTemplate(template, content) {
  */
 function transformLine(text) {
     return text
-        .replaceAll('    ', '<span class="SongVerse__space">    </span>')
+        .replaceAll('    ', '<span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>')
 }
 
 
