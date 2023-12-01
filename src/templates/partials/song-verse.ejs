@@ -15,7 +15,7 @@
     <ul class="SongVerse__text">
         <% item.text.forEach((line) => { %>
             <li class="SongVerse__line">
-                <%= line %>
+                <%- functions.transformLine(line) %>
             </li>
         <% }) %>
     </ul>

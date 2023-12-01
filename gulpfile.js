@@ -54,25 +54,13 @@ gulp.task('html-folder', shell.task('mkdir -p ' + BUILD.HTML_FILES));
  *
  */
 gulp.task('html', async () => {
-    let templatePromise;
-
-    try {
-        templatePromise = await readFile(
-            SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
-        );
-    } catch(e) {
-        console.error(
-            'Template reading error ',
-            SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE,
-            e
-        );
-    }
+    const templatePromise = await readFile(
+        SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
+    );
 
     return gulp
         .src(BUILD.JSON_FILES + '/**/*.json')
-        // .src(SRC.MD_FILES + '/**/*.md')
         .pipe(makeSongHTML(templatePromise))
-        // .pipe(songConvertor(templatePromise))
         .pipe(
             rename({
                 extname: '.html'

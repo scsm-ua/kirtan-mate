@@ -141,27 +141,6 @@ const categories = [
 ];
 
 /**
-
- type TCategoryItem = {
-    aliasName: sting; // The First line.
-    fileName: string;
-    name: string;
- };
-
- type TCategory = {
-    icon: string; // !!! Obsolete.
-    name: string; // Category name.
-    items: TCategoryItem[];
- };
-
- type TIndexItem = [
-    string; // Index letter А--я
-    TCategoryItem[];
- ];
-
- **/
-
-/**
  * Converts the list of categories into the index list. The primary letters
  * and the alias names are sorted alphabetically.
  * @param categories: TCategory[]

@@ -22,20 +22,6 @@ function processSong(filename) {
     return convertSongToJSON(text);
 }
 
-/*
-    type TSongJSONVerse = {
-        number: string;
-        text: string[];
-        translation: string[];
-    };
-
-    type TSongJSON = {
-        author?: string;
-        title?: string;
-        verses: TSongJSONVerse[];
-    };
-*/
-
 /**
  *
  * @param text
@@ -124,17 +110,6 @@ function getSongLineInfo(line) {
 }
 
 // Index.
-/**
- * type TCategory = {
- *     name: string; // Category name.
- *     items: {
- *         aliasName: sting; // The First line.
- *         fileName: string;
- *         name: string;
- *     }
- * };
- */
-
 function getIndexJSON() {
     var data = fs.readFileSync(PATHS.SRC.MD_INDEX_FILE);
     var text = data.toString();

@@ -1,17 +1,13 @@
 const ejs = require('ejs');
-const { marked } = require('marked');
 const path = require('path');
 const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
 
 /**/
-const { auxTransform } = require('./auxTransform');
 const { convertMDToJSON, getIndexJSON } = require('../scripts/indexGenerator');
-const { htmlRenderer } = require('./htmlRenderer');
 const { PATHS } = require('../scripts/constants');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
-marked.use({ renderer: htmlRenderer });
 
 /*** JSON to HTML song conversion. ***/
 
@@ -55,18 +51,28 @@ function fillTemplate(template, content) {
         toPages: {
             index: process.env.HOME_URL || PAGES.INDEX,
             index_list: PAGES.INDEX_LIST
-        },
-        // Remove in favour of 'toPages'
-        // index: process.env.HOME_URL || '/'
+        }
     };
 
     return ejs.render(template, {
         author: author,
         // contentItems: JSON.stringify(require(BUILD.INDEX_FILE)),
+        functions: {
+            transformLine: transformLine
+        },
         paths: paths,
         title: title,
         verses: verses
     });
+}
+
+/**
+ * EJS trims lines even despite 'rmWhitespace: false'.
+ * But we want some verse lines have extra space in the beginning.
+ */
+function transformLine(text) {
+    return text
+        .replaceAll('    ', '<span class="SongVerse__space">    </span>')
 }
 
 
