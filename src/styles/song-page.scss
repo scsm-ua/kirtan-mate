@@ -2,9 +2,11 @@
 @import 'variables';
 
 .SongPage {
-    &__header {
-        padding: 20px var(--song-content-padding);
-    }
+    background-color: var(--index-bg-color);
+
+    //&__header {
+    //    padding: 20px var(--song-content-padding);
+    //}
 
     &__text {
         padding: 60px var(--song-content-padding);
@@ -12,20 +14,41 @@
         background-color: var(--song-bg-color);
     }
 
-    &__container {
-        margin: 0 auto;
-        max-width: var(--main-content-width);
-        padding-bottom: 40px;
-    }
+    &__container {}
 
     &__content {
-        word-break: break-word;
-        padding: 60px var(--song-content-padding) 20px;
-        border-radius: 40px 40px 0 0;
-        background-color: var(--song-bg-color);
+        background-color: white;
+        border-radius: 24px;
+        box-shadow: 0px 4px 20px 0px rgba(56, 55, 142, 0.15);
+    }
 
-        @include breakpoint(md) {
-            padding: 20px var(--song-content-padding);
-        }
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__box {
+        margin-right: 16px;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 140%;
+        color: var(--title-color);
+        margin: 0 0 16px 0;
+    }
+
+    &__author {
+        color: var(--text-color);
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &__verses {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
     }
 }

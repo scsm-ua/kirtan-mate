@@ -11,9 +11,9 @@ require('dotenv').config();
 
 /**/
 const {
-    md2jsonConvertor,
-    songConvertor,
-    getJSONIndexStream
+    getJSONIndexStream,
+    makeSongHTML,
+    md2jsonConvertor
 } = require('./scripts/songConvertor');
 const { PATHS } = require('./scripts/constants');
 const { readFile } = require('./scripts/ioHelpers');
@@ -54,13 +54,25 @@ gulp.task('html-folder', shell.task('mkdir -p ' + BUILD.HTML_FILES));
  *
  */
 gulp.task('html', async () => {
-    const templatePromise = await readFile(
-        SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
-    );
+    let templatePromise;
+
+    try {
+        templatePromise = await readFile(
+            SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
+        );
+    } catch(e) {
+        console.error(
+            'Template reading error ',
+            SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE,
+            e
+        );
+    }
 
     return gulp
-        .src(SRC.MD_FILES + '/**/*.md')
-        .pipe(songConvertor(templatePromise))
+        .src(BUILD.JSON_FILES + '/**/*.json')
+        // .src(SRC.MD_FILES + '/**/*.md')
+        .pipe(makeSongHTML(templatePromise))
+        // .pipe(songConvertor(templatePromise))
         .pipe(
             rename({
                 extname: '.html'
@@ -169,7 +181,7 @@ gulp.task('build', (done) => {
     runSequence(
         'clean',
         'md2json',
-        // 'generate-index',
+        'generate-index',
         ['html-folder', 'copy-icons', 'copy-font'],
         ['sass', 'html', 'index'],
         done

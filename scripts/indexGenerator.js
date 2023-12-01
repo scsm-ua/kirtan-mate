@@ -22,6 +22,25 @@ function processSong(filename) {
     return convertSongToJSON(text);
 }
 
+/*
+    type TSongJSONVerse = {
+        number: string;
+        text: string[];
+        translation: string[];
+    };
+
+    type TSongJSON = {
+        author?: string;
+        title?: string;
+        verses: TSongJSONVerse[];
+    };
+*/
+
+/**
+ *
+ * @param text
+ * @return {TSongJSON}
+ */
 function convertSongToJSON(text) {
     var lines = text.split(/\n/);
     // Filter empty lines.
@@ -107,7 +126,6 @@ function getSongLineInfo(line) {
 // Index.
 /**
  * type TCategory = {
- *     icon: string; // !!! Obsolete.
  *     name: string; // Category name.
  *     items: {
  *         aliasName: sting; // The First line.
@@ -154,7 +172,6 @@ function convertIndexToJSON(text) {
             case 'name':
                 var cateogory = getLastCategory({ create_new: true });
                 cateogory.name = name;
-                cateogory.icon = getCategoryIcon(name);
                 break;
             case 'song':
                 getLastCategory().items.push({
@@ -197,15 +214,6 @@ function getIndexLineInfo(line) {
     };
 }
 
-function getCategoryIcon(name) {
-    var caterory_meta_info = categories_meta.find((i) => i.name === name);
-    var icon = caterory_meta_info?.icon || '';
-    if (!icon) {
-        // TODO: better errors processing.
-        console.error('No category icon for', name);
-    }
-    return icon;
-}
 
 var songs_cache = {};
 

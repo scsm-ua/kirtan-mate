@@ -13,19 +13,40 @@ const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 marked.use({ renderer: htmlRenderer });
 
-/**
- *
- */
-function convert(content, template) {
-    const htmlString = marked.parse(content);
-    return fillTemplate(template, auxTransform(htmlString));
-}
+/*** JSON to HTML song conversion. ***/
 
 /**
  *
  */
+function makeSongHTML(templatePromise) {
+    return new Transform({
+        objectMode: true,
+
+        transform(file, encoding, callback) {
+            try {
+                const htmlString = fillTemplate(
+                    templatePromise,
+                    JSON.parse(file.contents.toString())
+                );
+
+                file.contents = Buffer.from(htmlString, 'utf8');
+                this.push(file);
+                callback();
+
+            } catch (error) {
+                callback(error);
+            }
+        }
+    });
+}
+
+/**
+ * @param template: string;
+ * @param content: TSongJSON;
+ * @return {string}
+ */
 function fillTemplate(template, content) {
-    const title = content.match(/<h1[^>]*>([^<]+)<\/h1>/)[1];
+    const { author, title, verses } = content;
 
     const paths = {
         toCss: path.relative(BUILD.HTML_FILES, BUILD.CSS_FILES),
@@ -36,40 +57,18 @@ function fillTemplate(template, content) {
             index_list: PAGES.INDEX_LIST
         },
         // Remove in favour of 'toPages'
-        index: process.env.HOME_URL || '/'
+        // index: process.env.HOME_URL || '/'
     };
 
     return ejs.render(template, {
-        content: content,
-        contentItems: JSON.stringify(require(BUILD.INDEX_FILE)),
+        author: author,
+        // contentItems: JSON.stringify(require(BUILD.INDEX_FILE)),
         paths: paths,
-        title: title
+        title: title,
+        verses: verses
     });
 }
 
-/**
- *
- */
-function convertor(templatePromise) {
-    return new Transform({
-        objectMode: true,
-
-        transform(file, encoding, callback) {
-            try {
-                const htmlString = convert(
-                    file.contents.toString(),
-                    templatePromise
-                );
-                file.contents = Buffer.from(htmlString, 'utf8');
-
-                this.push(file);
-                callback();
-            } catch (error) {
-                callback(error);
-            }
-        }
-    });
-}
 
 /****************************/
 /* Markdown to JSON section */
@@ -115,7 +114,7 @@ function getJSONIndexStream() {
 
 /**/
 module.exports = {
+    getJSONIndexStream: getJSONIndexStream,
+    makeSongHTML,
     md2jsonConvertor: md2json,
-    songConvertor: convertor,
-    getJSONIndexStream: getJSONIndexStream
 };

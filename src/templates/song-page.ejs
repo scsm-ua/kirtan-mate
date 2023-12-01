@@ -18,18 +18,47 @@
 
                 <main class="Main SongPage">
                     <div class="Main__container SongPage__container">
-                        <header class="SongPage__header">
-                            <div class="SongPage__back">
-                                <%- include(paths.toPartials + '/return-home.ejs'); %>
-                            </div>
-                        </header>
+                        <div class="Main__content SongPage__content">
+                            <header class="SongPage__header">
+                                <div class="SongPage__box">
+                                    <% if (title) { %>
+                                        <h1 class="SongPage__title">
+                                            <%= title %>
+                                        </h1>
+                                    <% } %>
 
-                        <div class="SongPage__content">
-                            <%- content %>
+
+                                    <% if (author) { %>
+                                        <div class="SongPage__author">
+                                            <%= author %>
+                                        </div>
+                                    <% } %>
+                                </div>
+
+                                <button
+                                    class="AppButton RoundButton RoundButton--L RoundButton--dark"
+                                    title="Поділитися піснею"
+                                >
+                                    <span class="AppIcon icon-share"></span>
+                                </button>
+                            </header>
+
+                            <main class="SongPage__main">
+                                <% if (verses && verses.length) { %>
+                                    <ul class="SongPage__verses">
+                                        <% verses.forEach((item, idx, arr) => { %>
+                                            <%- include(
+                                                paths.toPartials + '/song-verse.ejs',
+                                                { 'item': item, 'verses': arr }
+                                            ); %>
+                                        <% }) %>
+                                    </ul>
+                                <% } %>
+                            </main>
                         </div>
 
-                        <%- include(paths.toPartials + '/song-share.ejs'); %>
-                        <%- include(paths.toPartials + '/prev-next.ejs'); %>
+                            <%- include(paths.toPartials + '/song-share.ejs'); %>
+                            <!-- %- include(paths.toPartials + '/prev-next.ejs'); % -->
                     </div>
                 </main>
 

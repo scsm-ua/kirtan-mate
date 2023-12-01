@@ -1,0 +1,57 @@
+.SongVerse {
+    margin-top: 24px;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 11px;
+            left: 0;
+            right: 0;
+            border-bottom: 0.5px solid var(--border-color);
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        margin-bottom: 16px;
+        padding: 0 16px;
+        background-color: white;
+    }
+
+    &__text {
+        list-style-type: none;
+        margin: 0 0 16px 0;
+        padding: 0;
+    }
+
+    &__line {
+        font-weight: 700;
+        line-height: 24px;
+        color: var(--title-color);
+    }
+
+    &__translation {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__paragraph {
+        p {
+            color: var(--text-color);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+    }
+}

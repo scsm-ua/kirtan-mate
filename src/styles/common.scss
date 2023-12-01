@@ -115,6 +115,7 @@ p {
 }
 
 .Main {
+    min-height: 100%;
 
     &__container {
         margin: 0 auto;
@@ -124,6 +125,7 @@ p {
     &__content {
         display: flex;
         align-items: center;
+        flex-direction: column;
         justify-content: space-around;
         padding: 24px var(--side-padding);
     }
