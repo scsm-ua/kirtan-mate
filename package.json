@@ -6,7 +6,6 @@
         "watch": "gulp watch"
     },
     "dependencies": {
-        "bootstrap": "^5.3.1",
         "dotenv": "^16.3.1",
         "ejs": "^3.1.9",
         "gulp-ejs": "^5.1.0",
@@ -20,7 +19,6 @@
     },
     "devDependencies": {
         "gulp": "^4.0.2",
-        "prettier": "3.0.3",
-        "prettier-plugin-ejs": "^0.0.18"
+        "prettier": "3.0.3"
     }
 }

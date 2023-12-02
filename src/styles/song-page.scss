@@ -6,14 +6,6 @@
     background-color: var(--index-bg-color);
     position: relative;
 
-    &__text {
-        padding: 60px var(--song-content-padding);
-        border-radius: 40px 40px 0 0;
-        background-color: var(--song-bg-color);
-    }
-
-    &__container {}
-
     &__content {
         background-color: var(--song-bg-color);
         border-radius: 24px;
