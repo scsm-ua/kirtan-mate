@@ -1,5 +1,3 @@
-//@import '../variables';
-
 .Header {
     background-color: var(--header-bg-color);
     height: var(--header-height);
@@ -19,9 +17,6 @@
     }
 
     &__home {
-        //display: flex;
-        //align-items: center;
-        //height: 50%;
         width: 110px;
         overflow: hidden;
     }
