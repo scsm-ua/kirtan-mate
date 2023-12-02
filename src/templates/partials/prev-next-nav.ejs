@@ -19,6 +19,8 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.9/swiped-events.min.js" integrity="sha512-Km1M9MRIhy+uzmSn7MU2G0fQawFMpfpScHpf0UUvcpkGJCJhwlTRF/mbTUimo1N9woYZ5RLES7iL+kp65Q1d0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
         (function() {
             try {
@@ -54,6 +56,19 @@
                             el.title = items[index + 1].name;
                         }
                     })
+
+                /**
+                 * Swipe events.
+                 */
+                document.addEventListener('swiped-left', () => {
+                    if (index !== items.length - 1)
+                        window.location.href = items[index + 1].fileName
+                });
+
+                document.addEventListener('swiped-right', () => {
+                    if (index !== 0)
+                        window.location.href = items[index - 1].fileName
+                });
 
             } catch (e) {
                 window.console.error(e);
