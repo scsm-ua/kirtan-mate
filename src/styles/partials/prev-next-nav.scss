@@ -1,0 +1,35 @@
+@import '../mixins';
+
+
+.PrevNextNav {
+    background-color: var(--index-bg-color);
+
+    .Navigation__link {
+        @include breakpoint(xs) {
+            width: 90px;
+        }
+    }
+
+    &__container {
+        margin: 0 auto;
+        max-width: var(--content-max-width);
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px calc(var(--side-padding) / 2);
+    }
+
+    &__link {
+        max-width: 36px;
+    }
+
+    &__icon {
+        font-size: 24px;
+        &--prev {
+            transform: rotate(180deg);
+        }
+    }
+}

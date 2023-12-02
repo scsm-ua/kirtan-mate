@@ -1,35 +1,23 @@
-@import '../mixins';
-@import '../variables';
-
 .Navigation {
-    flex: 1;
-    background-color: var(--index-bg-color);
-
-    &__container {
-        margin: 0 auto;
-        max-width: var(--content-max-width);
-    }
-
-    &__content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 24px calc(var(--side-padding) / 2);
-
-        @include breakpoint(xs-up) {
-            justify-content: space-around;
-        }
-    }
-
     &__link {
         height: 36px;
         width: 150px;
+        padding: 5px 12px;
         margin: 0 calc(var(--side-padding) / 2);
+
+        border: none;
         border-radius: 100px;
-        color: #000;
-        font-weight: 300;
         background-color: white;
         box-shadow: 0px 4px 20px 0px rgba(56, 55, 142, 0.15);
+
+        color: #000;
+        font-weight: 300;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        &:hover {
+            color: var(--accent-color);
+        }
 
         &--active {
             cursor: default;
@@ -38,11 +26,5 @@
             box-shadow: none;
             background-color: var(--header-bg-color);
         }
-    }
-
-    &__text {
-        line-height: 36px;
-        text-align: center;
-        text-transform: uppercase;
     }
 }

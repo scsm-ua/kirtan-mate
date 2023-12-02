@@ -15,7 +15,7 @@
         <div class="Layout">
             <div class="Layout__content">
                 <%- include(paths.toPartials + '/header.ejs'); %>
-                <!--%- include(paths.toPartials + '/prev-next-nav.ejs'); %-->
+                <%- include(paths.toPartials + '/prev-next-nav.ejs'); %>
 
                 <main class="Main SongPage">
                     <div class="Main__container SongPage__container">
@@ -57,12 +57,10 @@
                                 <% } %>
                             </main>
                         </div>
-
-                            <!-- %- include(paths.toPartials + '/song-share.ejs'); % -->
                     </div>
                 </main>
 
-                <!--        <footer class="SongPage__footer"></footer>-->
+                <%- include(paths.toPartials + '/prev-next-nav.ejs'); %>
             </div>
         </div>
     </body>

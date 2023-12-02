@@ -1,12 +1,10 @@
 @import 'mixins';
 @import 'variables';
 
+
 .SongPage {
     background-color: var(--index-bg-color);
-
-    //&__header {
-    //    padding: 20px var(--song-content-padding);
-    //}
+    position: relative;
 
     &__text {
         padding: 60px var(--song-content-padding);
@@ -39,6 +37,10 @@
         line-height: 140%;
         color: var(--title-color);
         margin: 0 0 16px 0;
+
+        @include breakpoint(sm-up) {
+            font-size: 28px;
+        }
     }
 
     &__author {

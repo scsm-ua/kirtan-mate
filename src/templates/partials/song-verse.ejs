@@ -4,7 +4,7 @@
         href="<%= paths.toCss %>/partials/song-verse.css"
     />
 
-    <% if (verses.length > 1) { %>
+    <% if (verses.length > 1 && item.number) { %>
         <header class="SongVerse__header">
             <h6 class="SongVerse__title">
                 <%= item.number %>

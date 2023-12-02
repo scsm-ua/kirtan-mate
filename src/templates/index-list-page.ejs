@@ -12,10 +12,13 @@
 <div class="Layout">
     <div class="Layout__content">
         <%- include(paths.toPartials + '/header.ejs'); %>
-        <%- include(paths.toPartials + '/navigation.ejs'); %>
 
         <main class="Main IndexPage">
             <div class="Main__container IndexPage__container">
+                <div class="IndexPage__navigation">
+                    <%- include(paths.toPartials + '/navigation.ejs'); %>
+                </div>
+
                 <div class="Main__content IndexPage__content">
                     <ul class="IndexPage__list">
                         <% items.forEach((item) => { %>

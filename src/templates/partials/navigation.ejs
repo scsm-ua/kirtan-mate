@@ -1,39 +1,33 @@
-<div class="Navigation">
-    <link
-        rel="stylesheet"
-        href="<%= paths.toCss %>/partials/navigation.css"
-    />
+<link
+    rel="stylesheet"
+    href="<%= paths.toCss %>/partials/navigation.css"
+/>
 
-    <div class="Navigation__container">
-        <div class="Navigation__content">
-            <a href="<%= paths.toPages.index %>" class="Navigation__link">
-                <div class="Navigation__text">
-                    Зміст
-                </div>
-            </a>
+<a href="<%= paths.toPages.index %>">
+    <button class="AppButton Navigation__link">
+        <span>Зміст</span>
+    </button>
+</a>
 
-            <a href="<%= paths.toPages.index_list %>" class="Navigation__link">
-                <div class="Navigation__text">
-                    Індекс
-                </div>
-            </a>
-        </div>
-    </div>
+<a href="<%= paths.toPages.index_list %>">
+    <button class="AppButton Navigation__link">
+        <span>Індекс</span>
+    </button>
+</a>
 
-    <script>
-        (function nav() {
-            const p = location.pathname;
-            const path = p.endsWith('/')
-                ? p.slice(0, -1)
-                : p;
+<script>
+    (function nav() {
+        const p = location.pathname;
+        const path = p.endsWith('/')
+            ? p.slice(0, -1)
+            : p;
 
-            Array.from(
-                document.getElementsByClassName('Navigation__link')
-            ).forEach((el) => {
-                if (el.href.endsWith(path)) {
-                    el.classList.add('Navigation__link--active');
-                }
-            });
-        })()
-    </script>
-</div>
+        Array.from(
+            document.getElementsByClassName('Navigation__link')
+        ).forEach((el) => {
+            if (el.href.endsWith(path)) {
+                el.classList.add('Navigation__link--active');
+            }
+        });
+    })()
+</script>
