@@ -1,9 +1,12 @@
 .Navigation {
     &__link {
+        margin: 0 calc(var(--side-padding) / 2);
+    }
+
+    &__button {
         height: 36px;
         width: 150px;
         padding: 5px 12px;
-        margin: 0 calc(var(--side-padding) / 2);
 
         border: none;
         border-radius: 100px;
@@ -15,7 +18,13 @@
         font-size: 16px;
         text-transform: uppercase;
 
-        &:hover {
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            color: var(--border-color);
+        }
+
+        &:hover:not(:disabled) {
             color: var(--accent-color);
         }
 

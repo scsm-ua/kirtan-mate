@@ -3,16 +3,16 @@
 
     <div class="PrevNextNav__container">
         <div class="PrevNextNav__content">
-            <a href="" id="prev-link">
-                <button class="AppButton Navigation__link PrevNextNav__link">
+            <a class="PrevNextNav__link PrevNextNav__link--prev" href="">
+                <button class="AppButton Navigation__button PrevNextNav__button">
                     <span class="PrevNextNav__icon PrevNextNav__icon--prev icon-chevron-right"></span>
                 </button>
             </a>
 
             <%- include(paths.toPartials + '/navigation.ejs'); %>
 
-            <a href="" id="next-link">
-                <button class="AppButton Navigation__link PrevNextNav__link">
+            <a class="PrevNextNav__link PrevNextNav__link--next" href="">
+                <button class="AppButton Navigation__button PrevNextNav__button">
                     <span class="PrevNextNav__icon PrevNextNav__icon--next icon-chevron-right"></span>
                 </button>
             </a>
@@ -20,26 +20,44 @@
     </div>
 
     <script>
-        try {
-            const contentItems = JSON.parse('<%- contentItems %>');
-            const prevLink = document.getElementById('prev-link');
-            const nextLink = document.getElementById('next-link');
+        (function() {
+            try {
+                const contentItems = JSON.parse('<%- contentItems %>');
+                const prevLinks = document.getElementsByClassName('PrevNextNav__link--prev');
+                const nextLinks = document.getElementsByClassName('PrevNextNav__link--next');
 
-            const items = contentItems.flatMap((cat) => cat.items);
-            const index = items.findIndex((item) =>
-                window.location.pathname.includes(item.fileName)
-            );
+                const items = contentItems.flatMap((cat) => cat.items);
+                const index = items.findIndex((item) =>
+                    window.location.pathname.includes(item.fileName)
+                );
 
-            const prevIndex = index === 0 ? items.length - 1 : index - 1;
-            const nextIndex = index === items.length - 1 ? 0 : index + 1;
+                Array.from(prevLinks)
+                    .forEach((el) => {
+                        if (index === 0) {
+                            el.removeAttribute('href');
+                            el.children[0].disabled = true;
+                        } else {
+                            el.setAttribute('href', items[index - 1].fileName);
+                            el.children[0].disabled = false;
+                            el.title = items[index - 1].name;
+                        }
+                    })
 
-            prevLink.title = items[prevIndex].name;
-            nextLink.title = items[nextIndex].name;
+                Array.from(nextLinks)
+                    .forEach((el) => {
+                        if (index === items.length - 1) {
+                            el.removeAttribute('href');
+                            el.children[0].disabled = true;
+                        } else {
+                            el.setAttribute('href', items[index + 1].fileName);
+                            el.children[0].disabled = false;
+                            el.title = items[index + 1].name;
+                        }
+                    })
 
-            prevLink.href = /*'html/' +*/ items[prevIndex].fileName;
-            nextLink.href = /*'html/' +*/ items[nextIndex].fileName;
-        } catch (e) {
-            window.console.error(e);
-        }
+            } catch (e) {
+                window.console.error(e);
+            }
+        } ())
     </script>
 </div>
