@@ -24,7 +24,7 @@ function processSong(filename) {
 
 /**
  *
- * @param text
+ * @param text: string
  * @return {TSongJSON}
  */
 function convertSongToJSON(text) {
@@ -85,6 +85,7 @@ function convertSongToJSON(text) {
     return song;
 }
 
+/**/
 const song_line_types = {
     title: /^# (.+)/,
     author: /^## (.+)/,
@@ -93,6 +94,49 @@ const song_line_types = {
     translation: /^([^\s#].+)/
 };
 
+/**
+ * @param text: string
+ * @return {TSongJSON}
+ */
+function convertSong(text) {
+    return postProcessSong(convertSongToJSON(text));
+}
+
+/**
+ * @param song: TSongJSON
+ * @returns {TSongJSON}
+ */
+function postProcessSong(song) {
+    return {
+        ...song,
+        verses: song.verses.map((verse) => ({
+            ...verse,
+            translation: processTranslation(verse.translation)
+        }))
+    };
+}
+
+/**/
+const NOTE_MD_REGEX = /\*\*_(.*?)_\*\*/gm;
+const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
+
+/**
+ * Handles 'hindi' terms, soft line breaks and notes.
+ * @param lines: string[]
+ * @return {string[]}
+ */
+function processTranslation(lines) {
+    return lines
+        .join('\n')
+        .replace(NOTE_MD_REGEX, '<i class="SongVerse__note">$1</i>\n')
+        .replace(TERM_MD_REGEX, '<i class="SongVerse__term">$1</i>')
+        .replaceAll('\\\n', '<br class="SongVerse__break" />')
+        .split(/\n/);
+}
+
+/**
+ *
+ */
 function getSongLineInfo(line) {
     for (var id in song_line_types) {
         var m = line.match(song_line_types[id]);
@@ -237,6 +281,6 @@ function getSongFirstLine(filename) {
 
 /**/
 module.exports = {
-    convertMDToJSON: convertSongToJSON,
+    convertMDToJSON: convertSong,
     getIndexJSON: getIndexJSON
 };
