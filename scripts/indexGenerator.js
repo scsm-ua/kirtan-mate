@@ -22,6 +22,11 @@ function processSong(filename) {
     return convertSongToJSON(text);
 }
 
+/**
+ *
+ * @param text: string
+ * @return {TSongJSON}
+ */
 function convertSongToJSON(text) {
     var lines = text.split(/\n/);
     // Filter empty lines.
@@ -80,6 +85,7 @@ function convertSongToJSON(text) {
     return song;
 }
 
+/**/
 const song_line_types = {
     title: /^# (.+)/,
     author: /^## (.+)/,
@@ -88,6 +94,49 @@ const song_line_types = {
     translation: /^([^\s#].+)/
 };
 
+/**
+ * @param text: string
+ * @return {TSongJSON}
+ */
+function convertSong(text) {
+    return postProcessSong(convertSongToJSON(text));
+}
+
+/**
+ * @param song: TSongJSON
+ * @returns {TSongJSON}
+ */
+function postProcessSong(song) {
+    return {
+        ...song,
+        verses: song.verses.map((verse) => ({
+            ...verse,
+            translation: processTranslation(verse.translation)
+        }))
+    };
+}
+
+/**/
+const NOTE_MD_REGEX = /\*\*_(.*?)_\*\*/gm;
+const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
+
+/**
+ * Handles 'hindi' terms, soft line breaks and notes.
+ * @param lines: string[]
+ * @return {string[]}
+ */
+function processTranslation(lines) {
+    return lines
+        .join('\n')
+        .replace(NOTE_MD_REGEX, '<i class="SongVerse__note">$1</i>\n')
+        .replace(TERM_MD_REGEX, '<i class="SongVerse__term">$1</i>')
+        .replaceAll('\\\n', '<br class="SongVerse__break" />')
+        .split(/\n/);
+}
+
+/**
+ *
+ */
 function getSongLineInfo(line) {
     for (var id in song_line_types) {
         var m = line.match(song_line_types[id]);
@@ -105,7 +154,6 @@ function getSongLineInfo(line) {
 }
 
 // Index.
-
 function getIndexJSON() {
     var data = fs.readFileSync(PATHS.SRC.MD_INDEX_FILE);
     var text = data.toString();
@@ -120,15 +168,14 @@ function getIndexJSON() {
 
 function convertIndexToJSON(text) {
     var lines = text.split(/\n/);
-
     var categories = [];
+    var last_line_id;
 
     function getLastCategory(options) {
         if ((options && options.create_new) || !categories.length) {
             // Category template.
             categories.push({
                 name: null,
-                icon: null,
                 items: []
             });
         }
@@ -136,15 +183,12 @@ function convertIndexToJSON(text) {
         return categories[categories.length - 1];
     }
 
-    var last_line_id;
-
     lines.forEach((line) => {
         var { line_id, name } = getIndexLineInfo(line);
         switch (line_id) {
             case 'name':
                 var cateogory = getLastCategory({ create_new: true });
                 cateogory.name = name;
-                cateogory.icon = getCategoryIcon(name);
                 break;
             case 'song':
                 getLastCategory().items.push({
@@ -168,7 +212,7 @@ function convertIndexToJSON(text) {
 const index_line_types = {
     name: /^### (.+)/,
     // Extract only filename without extension.
-    song: /^\s?- \[[^\]]+\]\(songs\/([^\)]+)\.md\)$/
+    song: /^\s?- \[[^\]]+\]\(songs\/([^\)]+)\.md\)/
 };
 
 function getIndexLineInfo(line) {
@@ -187,15 +231,6 @@ function getIndexLineInfo(line) {
     };
 }
 
-function getCategoryIcon(name) {
-    var caterory_meta_info = categories_meta.find((i) => i.name === name);
-    var icon = caterory_meta_info?.icon || '';
-    if (!icon) {
-        // TODO: better errors processing.
-        console.error('No category icon for', name);
-    }
-    return icon;
-}
 
 var songs_cache = {};
 
@@ -235,7 +270,7 @@ function getSongFirstLine(filename) {
         console.error('Song first line not found', filename);
         return;
     }
-    return first_line;
+    return first_line.trim();
 }
 
 /**
@@ -246,6 +281,6 @@ function getSongFirstLine(filename) {
 
 /**/
 module.exports = {
-    convertMDToJSON: convertSongToJSON,
+    convertMDToJSON: convertSong,
     getIndexJSON: getIndexJSON
 };

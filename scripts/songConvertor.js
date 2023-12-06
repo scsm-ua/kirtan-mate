@@ -1,70 +1,80 @@
 const ejs = require('ejs');
-const { marked } = require('marked');
 const path = require('path');
 const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
 
 /**/
-const { auxTransform } = require('./auxTransform');
 const { convertMDToJSON, getIndexJSON } = require('../scripts/indexGenerator');
-const { htmlRenderer } = require('./htmlRenderer');
 const { PATHS } = require('../scripts/constants');
-const { BUILD, SRC, FILES } = PATHS;
+const { BUILD, FILES, PAGES, SRC } = PATHS;
 
-marked.use({ renderer: htmlRenderer });
 
-/**
- *
- */
-function convert(content, template) {
-    const htmlString = marked.parse(content);
-    return fillTemplate(template, auxTransform(htmlString));
-}
+/*** JSON to HTML song conversion. ***/
 
 /**
  *
  */
-function fillTemplate(template, content) {
-    const title = content.match(/<h1[^>]*>([^<]+)<\/h1>/)[1];
-
-    const paths = {
-        toCss: path.relative(BUILD.HTML_FILES, BUILD.CSS_FILES),
-        toIcons: path.relative(BUILD.HTML_FILES, BUILD.ICON_FILES),
-        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
-        index: process.env.HOME_URL || '/'
-    };
-
-    return ejs.render(template, {
-        content: content,
-        contentItems: JSON.stringify(require(BUILD.INDEX_FILE)),
-        paths: paths,
-        title: title
-    });
-}
-
-/**
- *
- */
-function convertor(templatePromise) {
+function makeSongHTML(templatePromise) {
     return new Transform({
         objectMode: true,
 
         transform(file, encoding, callback) {
             try {
-                const htmlString = convert(
-                    file.contents.toString(),
-                    templatePromise
+                const htmlString = fillTemplate(
+                    templatePromise,
+                    JSON.parse(file.contents.toString())
                 );
-                file.contents = Buffer.from(htmlString, 'utf8');
 
+                file.contents = Buffer.from(htmlString, 'utf8');
                 this.push(file);
                 callback();
+
             } catch (error) {
                 callback(error);
             }
         }
     });
 }
+
+/**
+ * @param template: string;
+ * @param content: TSongJSON;
+ * @return {string}
+ */
+function fillTemplate(template, content) {
+    const { author, title, verses } = content;
+
+    const paths = {
+        toCss: path.relative(BUILD.HTML_FILES, BUILD.CSS_FILES),
+        toIcons: path.relative(BUILD.HTML_FILES, BUILD.ICON_FILES),
+        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
+        toPages: {
+            index: PAGES.INDEX,
+            index_list: PAGES.INDEX_LIST
+        }
+    };
+
+    return ejs.render(template, {
+        author: author,
+        contentItems: JSON.stringify(require(BUILD.INDEX_FILE)),
+        functions: {
+            transformLine: transformLine
+        },
+        paths: paths,
+        title: title,
+        verses: verses
+    });
+}
+
+/**
+ * EJS trims lines even despite 'rmWhitespace: false'.
+ * But we want some verse lines have extra space in the beginning.
+ */
+function transformLine(text) {
+    return text
+        .replaceAll('    ', '<span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>')
+}
+
 
 /****************************/
 /* Markdown to JSON section */
@@ -110,7 +120,7 @@ function getJSONIndexStream() {
 
 /**/
 module.exports = {
+    getJSONIndexStream: getJSONIndexStream,
+    makeSongHTML,
     md2jsonConvertor: md2json,
-    songConvertor: convertor,
-    getJSONIndexStream: getJSONIndexStream
 };

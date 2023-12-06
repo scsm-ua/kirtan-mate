@@ -1,0 +1,78 @@
+<div class="PrevNextNav">
+    <link rel="stylesheet" href="<%= paths.toCss %>/partials/prev-next-nav.css" />
+
+    <div class="PrevNextNav__container">
+        <div class="PrevNextNav__content">
+            <a class="PrevNextNav__link PrevNextNav__link--prev" href="">
+                <button class="AppButton Navigation__button PrevNextNav__button">
+                    <span class="PrevNextNav__icon PrevNextNav__icon--prev icon-chevron-right"></span>
+                </button>
+            </a>
+
+            <%- include(paths.toPartials + '/navigation.ejs'); %>
+
+            <a class="PrevNextNav__link PrevNextNav__link--next" href="">
+                <button class="AppButton Navigation__button PrevNextNav__button">
+                    <span class="PrevNextNav__icon PrevNextNav__icon--next icon-chevron-right"></span>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.9/swiped-events.min.js" integrity="sha512-Km1M9MRIhy+uzmSn7MU2G0fQawFMpfpScHpf0UUvcpkGJCJhwlTRF/mbTUimo1N9woYZ5RLES7iL+kp65Q1d0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        (function() {
+            try {
+                const contentItems = JSON.parse('<%- contentItems %>');
+                const prevLinks = document.getElementsByClassName('PrevNextNav__link--prev');
+                const nextLinks = document.getElementsByClassName('PrevNextNav__link--next');
+
+                const items = contentItems.flatMap((cat) => cat.items);
+                const index = items.findIndex((item) =>
+                    window.location.pathname.includes(item.fileName)
+                );
+
+                Array.from(prevLinks)
+                    .forEach((el) => {
+                        if (index === 0) {
+                            el.removeAttribute('href');
+                            el.children[0].disabled = true;
+                        } else {
+                            el.setAttribute('href', items[index - 1].fileName);
+                            el.children[0].disabled = false;
+                            el.title = items[index - 1].name;
+                        }
+                    })
+
+                Array.from(nextLinks)
+                    .forEach((el) => {
+                        if (index === items.length - 1) {
+                            el.removeAttribute('href');
+                            el.children[0].disabled = true;
+                        } else {
+                            el.setAttribute('href', items[index + 1].fileName);
+                            el.children[0].disabled = false;
+                            el.title = items[index + 1].name;
+                        }
+                    })
+
+                /**
+                 * Swipe events.
+                 */
+                document.addEventListener('swiped-left', () => {
+                    if (index !== items.length - 1)
+                        window.location.href = items[index + 1].fileName
+                });
+
+                document.addEventListener('swiped-right', () => {
+                    if (index !== 0)
+                        window.location.href = items[index - 1].fileName
+                });
+
+            } catch (e) {
+                window.console.error(e);
+            }
+        } ())
+    </script>
+</div>

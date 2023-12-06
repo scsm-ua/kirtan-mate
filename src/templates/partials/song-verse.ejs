@@ -1,0 +1,32 @@
+<li class="SongVerse">
+    <link
+        rel="stylesheet"
+        href="<%= paths.toCss %>/partials/song-verse.css"
+    />
+
+    <% if (verses.length > 1 && item.number) { %>
+        <header class="SongVerse__header">
+            <h6 class="SongVerse__title">
+                <%= item.number %>
+            </h6>
+        </header>
+    <% } %>
+
+    <ul class="SongVerse__text">
+        <% item.text.forEach((line) => { %>
+            <li class="SongVerse__line">
+                <%- functions.transformLine(line) %>
+            </li>
+        <% }) %>
+    </ul>
+
+    <ul class="SongVerse__translation">
+        <% item.translation.forEach((p) => { %>
+            <li class="SongVerse__paragraph">
+                <p>
+                    <%- p %>
+                </p>
+            </li>
+        <% }) %>
+    </ul>
+</li>

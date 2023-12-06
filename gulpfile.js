@@ -11,13 +11,14 @@ require('dotenv').config();
 
 /**/
 const {
-    md2jsonConvertor,
-    songConvertor,
-    getJSONIndexStream
+    getJSONIndexStream,
+    makeSongHTML,
+    md2jsonConvertor
 } = require('./scripts/songConvertor');
+const { makeIndexList } = require('./scripts/makeIndexList');
 const { PATHS } = require('./scripts/constants');
 const { readFile } = require('./scripts/ioHelpers');
-const { BUILD, FILES, SRC } = PATHS;
+const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
  *
@@ -59,8 +60,8 @@ gulp.task('html', async () => {
     );
 
     return gulp
-        .src(SRC.MD_FILES + '/**/*.md')
-        .pipe(songConvertor(templatePromise))
+        .src(BUILD.JSON_FILES + '/**/*.json')
+        .pipe(makeSongHTML(templatePromise))
         .pipe(
             rename({
                 extname: '.html'
@@ -107,7 +108,10 @@ gulp.task('index', () => {
         toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
         toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
         toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
-        index: process.env.HOME_URL || '/'
+        toPages: {
+            index: PAGES.INDEX,
+            index_list: PAGES.INDEX_LIST
+        }
     };
 
     return gulp
@@ -115,6 +119,34 @@ gulp.task('index', () => {
         .pipe(
             ejs({
                 categories: require(BUILD.INDEX_FILE),
+                paths: paths
+            }).on('error', console.error)
+        )
+        .pipe(gulp.dest(BUILD.ROOT))
+        .pipe(shell([extChangeCmd]));
+});
+
+/**
+ *
+ */
+gulp.task('index-list', () => {
+    const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_LIST} ${BUILD.ROOT}/${FILES.HTML.INDEX_LIST}`;
+
+    const paths = {
+        toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
+        toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
+        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
+        toPages: {
+            index: PAGES.INDEX,
+            index_list: PAGES.INDEX_LIST
+        }
+    };
+
+    return gulp
+        .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
+        .pipe(
+            ejs({
+                items: makeIndexList(require(BUILD.INDEX_FILE)),
                 paths: paths
             }).on('error', console.error)
         )
@@ -135,6 +167,7 @@ gulp.task('build', (done) => {
         'clean',
         'md2json',
         'generate-index',
+        'index-list',
         ['html-folder', 'copy-icons', 'copy-font'],
         ['sass', 'html', 'index'],
         done

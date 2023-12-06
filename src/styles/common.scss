@@ -1,6 +1,10 @@
 @import 'mixins';
 @import 'variables';
 
+* {
+    box-sizing: border-box;
+}
+
 body,
 html {
     height: 100%;
@@ -12,8 +16,9 @@ body {
     font-size: var(--font-size);
     font-weight: 400;
     line-height: 1.5;
+    letter-spacing: 0.64px;
     color: var(--text-color);
-    background-color: var(--body-bg);
+    background-color: var(--song-bg-color);
 }
 
 h6,
@@ -32,7 +37,7 @@ h1,
     margin-bottom: 0.5em;
     font-weight: 700;
     line-height: 1.2;
-    color: var(--bs-heading-color);
+    color: var(--title-color);
 }
 
 h1,
@@ -90,33 +95,50 @@ p {
     margin-bottom: 1rem;
 }
 
+/**/
 .ellipsis {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+/**/
 .Layout {
-    display: flex;
-    flex-direction: column;
     height: 100%;
     overflow: hidden;
+
+    &__content {
+        height: 100%;
+        overflow: auto;
+    }
 }
 
+/**/
 .Main {
-    flex: 1;
-    height: 100%;
-    overflow: auto;
-
-    @include breakpoint(md-up) {
-        height: calc(100% - var(--header-height));
-    }
+    min-height: 100%;
 
     &__container {
-        padding: 0;
+        margin: 0 auto;
+        max-width: var(--content-max-width);
+    }
 
-        @include breakpoint(md-up) {
-            padding: 0 var(--main-content-padding);
-        }
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0px var(--side-padding) 24px;
+    }
+}
+
+
+/**/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

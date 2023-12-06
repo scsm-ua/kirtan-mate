@@ -1,0 +1,24 @@
+@import 'mixins';
+
+
+.IndexPage {
+    background-color: var(--index-bg-color);
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px calc(var(--side-padding) / 2);
+
+        @include breakpoint(xs-up) {
+            justify-content: space-around;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}

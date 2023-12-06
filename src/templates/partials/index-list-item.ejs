@@ -1,0 +1,30 @@
+<li class="IndexListItem">
+    <link
+        rel="stylesheet"
+        href="<%= paths.toCss %>/partials/index-list-item.css"
+    />
+
+    <% if (item.name) { %>
+        <header class="IndexListItem__header">
+            <h6 class="IndexListItem__title">
+                <%= item.name %>
+            </h6>
+        </header>
+    <% } %>
+
+    <ul class="IndexListItem__list">
+        <% item.items.forEach((song) => { %>
+            <li class="IndexListItem__item">
+                <a href="html/<%= song.fileName %>" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="<%= song.aliasName %>">
+                        <%= song.name %>
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+</li>
