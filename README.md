@@ -12,13 +12,13 @@ Preview: https://scsm-ua.github.io/kirtan-mate/
 
 Used deploy script: [.github/workflows/build_and_deploy.yml](.github/workflows/build_and_deploy.yml):
 
-### HOME_URL
+### HOME_BASE_URL
 
-Setup `HOME_URL`: 
+Setup `HOME_BASE_URL`: 
 
 `Repository` > `Settings` > `Secrets and variables` > `Actions` > `Variables` > `New repository variable`:
 
-`HOME_URL` = `https://scsm-ua.github.io/kirtan-mate`
+`HOME_BASE_URL` = `https://scsm-ua.github.io/kirtan-mate`
 
 ### GH_TOKEN
 
@@ -44,4 +44,6 @@ Setup github pages for repository.
 
 ## Local deploy
 
-Copy `.env.sample` to `.env` with your local root path for `HOME_URL`.
+Copy `.env.sample` to `.env` with your local root path for `HOME_BASE_URL`.
+
+To use with local filesystem use `EXPLICIT_INDEX=1` to build home path with  `.../index.html`.

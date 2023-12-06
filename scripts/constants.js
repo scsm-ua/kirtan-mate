@@ -44,8 +44,8 @@ const PATHS = {
         JSON_INDEX_LIST_FILE: 'src/meta/index-list.json'
     },
     PAGES: {
-        INDEX: (process.env.HOME_URL || '/') + (process.env.EXPLICIT_INDEX ? indexPath : ''),
-        INDEX_LIST: (process.env.HOME_URL || '/') + indexListPath
+        INDEX: (process.env.HOME_BASE_URL || '') + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
+        INDEX_LIST: (process.env.HOME_BASE_URL || '') + '/' + indexListPath
     }
 };
 
