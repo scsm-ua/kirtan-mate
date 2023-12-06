@@ -49,7 +49,7 @@ function fillTemplate(template, content) {
         toIcons: path.relative(BUILD.HTML_FILES, BUILD.ICON_FILES),
         toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
         toPages: {
-            index: process.env.HOME_URL || PAGES.INDEX,
+            index: PAGES.INDEX,
             index_list: PAGES.INDEX_LIST
         }
     };

@@ -3,6 +3,8 @@ const path = require('path');
 const OUTPUT_DIR = 'docs';
 const contentItems = 'contentItems.json';
 const indexListJson = 'index-list.json';
+const indexPath = 'index.html';
+const indexListPath = 'index-list-page.html';
 
 const PATHS = {
     BUILD: {
@@ -22,8 +24,8 @@ const PATHS = {
             SONG_PAGE: 'song-page.ejs'
         },
         HTML: {
-            INDEX: 'index.html',
-            INDEX_LIST: 'index-list-page.html'
+            INDEX: indexPath,
+            INDEX_LIST: indexListPath
         },
         JSON: {
             INDEX: contentItems,
@@ -42,8 +44,8 @@ const PATHS = {
         JSON_INDEX_LIST_FILE: 'src/meta/index-list.json'
     },
     PAGES: {
-        INDEX: '/',
-        INDEX_LIST: '/index_list.html'
+        INDEX: (process.env.HOME_URL || '/') + (process.env.EXPLICIT_INDEX ? indexPath : ''),
+        INDEX_LIST: (process.env.HOME_URL || '/') + indexListPath
     }
 };
 

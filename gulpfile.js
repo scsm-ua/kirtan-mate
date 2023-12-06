@@ -109,11 +109,9 @@ gulp.task('index', () => {
         toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
         toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
         toPages: {
-            index: process.env.HOME_URL || PAGES.INDEX,
+            index: PAGES.INDEX,
             index_list: PAGES.INDEX_LIST
-        },
-        // Remove in favour of 'toPages'
-        index: process.env.HOME_URL || '/'
+        }
     };
 
     return gulp
@@ -139,7 +137,7 @@ gulp.task('index-list', () => {
         toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
         toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
         toPages: {
-            index: process.env.HOME_URL || PAGES.INDEX,
+            index: PAGES.INDEX,
             index_list: PAGES.INDEX_LIST
         }
     };
