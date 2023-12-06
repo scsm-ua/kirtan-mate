@@ -8,299 +8,558 @@
 
         <link rel="stylesheet" href="../css/index.css" />
         <link rel="stylesheet" href="../css/song-page.css" />
-        <link rel="stylesheet" href="../css/partials/song.css" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
 
     <body>
         <div class="Layout">
-            <header class="HeaderDesktop">
+            <div class="Layout__content">
+                <header class="Header">
     <link
         rel="stylesheet"
-        href="../css/partials/header-desktop.css"
+        href="../css/partials/header.css"
     />
 
-    <div class="HeaderDesktop__top">
-        <div class="HeaderDesktop__fill"></div>
-        <div class="HeaderDesktop__background"></div>
-        <div class="HeaderDesktop__ribbon"></div>
+    <div class="Header__container">
+        <div class="Header__content">
+            <a href="https://scsm-ua.github.io/kirtan-mate" class="Header__home">
+                <img
+                    alt="Home"
+                    class="Header__logo"
+                    src="../icons/svg/kirtan-mate.svg"
+                />
+            </a>
+        </div>
     </div>
+</header>
 
-    <div class="HeaderDesktop__container">
-        <div class="HeaderDesktop__content">
-            <a href="https://scsm-ua.github.io/kirtan-mate" class="HeaderDesktop__home">
-                <div class="HeaderDesktop__logo">
-                    <img
-                        src="../icons/peacock-logo-2.jpg"
-                        alt="Home"
-                    />
-                </div>
-                <div class="HeaderDesktop__title">
-                    <img
-                        src="../icons/svg/kirtan-mate.svg"
-                        alt="Home"
-                    />
-                </div>
+                <div class="PrevNextNav">
+    <link rel="stylesheet" href="../css/partials/prev-next-nav.css" />
+
+    <div class="PrevNextNav__container">
+        <div class="PrevNextNav__content">
+            <a class="PrevNextNav__link PrevNextNav__link--prev" href="">
+                <button class="AppButton Navigation__button PrevNextNav__button">
+                    <span class="PrevNextNav__icon PrevNextNav__icon--prev icon-chevron-right"></span>
+                </button>
             </a>
 
-            <!--                    <div class="HeaderDesktop__search">-->
-            <!--                        <img src="../icons/svg/search.svg" alt="Home">-->
-            <!--                    </div>-->
+            <link
+    rel="stylesheet"
+    href="../css/partials/navigation.css"
+/>
+
+<a class="Navigation__link" href="https://scsm-ua.github.io/kirtan-mate">
+    <button class="AppButton Navigation__button">
+        <span>Зміст</span>
+    </button>
+</a>
+
+<a class="Navigation__link" href="https://scsm-ua.github.io/kirtan-mate/index-list-page.html">
+    <button class="AppButton Navigation__button">
+        <span>Індекс</span>
+    </button>
+</a>
+
+<script>
+    (function nav() {
+        const p = location.pathname;
+        const path = p.endsWith('/')
+            ? p.slice(0, -1)
+            : p;
+
+        Array.from(
+            document.getElementsByClassName('Navigation__link')
+        ).forEach((el) => {
+            if (el.href.endsWith(path)) {
+                el.classList.add('Navigation__link--active');
+            }
+        });
+    })()
+</script>
+
+
+            <a class="PrevNextNav__link PrevNextNav__link--next" href="">
+                <button class="AppButton Navigation__button PrevNextNav__button">
+                    <span class="PrevNextNav__icon PrevNextNav__icon--next icon-chevron-right"></span>
+                </button>
+            </a>
         </div>
     </div>
-</header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.9/swiped-events.min.js" integrity="sha512-Km1M9MRIhy+uzmSn7MU2G0fQawFMpfpScHpf0UUvcpkGJCJhwlTRF/mbTUimo1N9woYZ5RLES7iL+kp65Q1d0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        (function() {
+            try {
+                const contentItems = JSON.parse('[{"name":"Вступ","items":[{"name":"Пан̃ча-таттва мантра","aliasName":"ш́рі-кр̣ш̣н̣а-чаітанйа прабгу нітйа̄нанда","fileName":"pancha-tattva.html"},{"name":"Харе Кришна маха̄-мантра","aliasName":"харе кр̣ш̣н̣а харе кр̣ш̣н̣а, кр̣ш̣н̣а кр̣ш̣н̣а харе харе","fileName":"hare-krishna.html"}]},{"name":"Ранкове Араті і програма","items":[{"name":"Прабга̄ті Ґīті","aliasName":"калі-куккура-кадана джаді ча̄о хе","fileName":"kali-kukkura-kadana-jadi-chhao-he-kaliyuga-pavana-kali-bhaya-nashiana.html"},{"name":"Шрī Шячīнандана-вандана̄","aliasName":"джая шячīнандана сура-муні-вандана,","fileName":"jaya-shiachinandana-sura-muni-vandana-bhava-bhaya-khandana-jayo-he.html"},{"name":"Ґурудева","aliasName":"ґурудева!","fileName":"gurudeva.html"},{"name":"Шаранагаті. Благодатне звернення","aliasName":"шрī-кришна-чайтанья прабгу джīве дая корі’","fileName":"shri-kryshna-chhaitanya-prabhu-jive-daya-kori.html"},{"name":"Нама-Санкірттан","aliasName":"харі харає намах кришна ядава̄я намах","fileName":"hari-haraye-namah-kryshna-yadavaya-namah.html"},{"name":"Арунодоя-кīртан","aliasName":"джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле","fileName":"jiv-jago-jiv-jago-gaurachanda-bole.html"}]},{"name":"Вечірнє Араті","items":[{"name":"Шрī Ґовінда Кунда Ґупта-Ґовардган А̄раті","aliasName":"джая джая ґіріра̄джер а̄раті вішяла","fileName":"jaya-jaya-girirajer-arati-vishiala.html"},{"name":"Ш́рі Ґаура-а̄раті","aliasName":"(кіба)  джая джая ґаура̄ча̄ндер а̄ротіко шобга̄","fileName":"jaya-jaya-gaurachhander-arotiko-shobha.html"},{"name":"Шрī Ґуру-вайшнава Ма̄ха̄тмʼя-ґīті","aliasName":"шрī ґуру чарана-падма, кевала-бгакаті-садма,","fileName":"shri-guru-chharana-padma.html"}]},{"name":"Вчителям","items":[{"name":"Шрī Ґуру Āраті","aliasName":"джая джая ґурудевер а̄раті уджджвала","fileName":"jaya-jaya-gurudever-arati-ujjvala.html"},{"name":"Шрī Шрī Ґурва̄штака","aliasName":"самса̄ра-да̄ва̄нала-лīдга-лока-","fileName":"samsara-davanala-lidha-loka.html"}]},{"name":"Нітьянанді","items":[{"name":"Акрохдха Парамананада","aliasName":"акродга парама̄нанда нітьянанда ра̄й","fileName":"akrodha-paramananda.html"},{"name":"А̄ґʼя-Тахал","aliasName":"надīя-ґодруме нітьянанда маха̄джана","fileName":"nadiya-godrume-nityananda-mahajana.html"}]},{"name":"Шрі Чайтаньї Махапрабгу","items":[{"name":"Авата̄ра Са̄ра","aliasName":"авата̄ра са̄ра ґора̄ авата̄ра","fileName":"avatara-sara-gora-avatara.html"},{"name":"Шрī На̄ма","aliasName":"ґа̄й ґора̄ мадгур сваре","fileName":"gay-gora-madhur-svare.html"}]},{"name":"Інші бгаджани","items":[{"name":"Бгаджаху Ре Мана","aliasName":"бгаджаху ре мана шрī-нанда-нандана","fileName":"bhajahu-re-mana-shri-nanda-nandana.html"},{"name":"Ама̄ра джīвана","aliasName":"а̄ма̄ра джīвана, сада̄ па̄пе рата,","fileName":"amara-jivana-sada-pape-rata.html"}]}]');
+                const prevLinks = document.getElementsByClassName('PrevNextNav__link--prev');
+                const nextLinks = document.getElementsByClassName('PrevNextNav__link--next');
+
+                const items = contentItems.flatMap((cat) => cat.items);
+                const index = items.findIndex((item) =>
+                    window.location.pathname.includes(item.fileName)
+                );
+
+                Array.from(prevLinks)
+                    .forEach((el) => {
+                        if (index === 0) {
+                            el.removeAttribute('href');
+                            el.children[0].disabled = true;
+                        } else {
+                            el.setAttribute('href', items[index - 1].fileName);
+                            el.children[0].disabled = false;
+                            el.title = items[index - 1].name;
+                        }
+                    })
+
+                Array.from(nextLinks)
+                    .forEach((el) => {
+                        if (index === items.length - 1) {
+                            el.removeAttribute('href');
+                            el.children[0].disabled = true;
+                        } else {
+                            el.setAttribute('href', items[index + 1].fileName);
+                            el.children[0].disabled = false;
+                            el.title = items[index + 1].name;
+                        }
+                    })
+
+                /**
+                 * Swipe events.
+                 */
+                document.addEventListener('swiped-left', () => {
+                    if (index !== items.length - 1)
+                        window.location.href = items[index + 1].fileName
+                });
+
+                document.addEventListener('swiped-right', () => {
+                    if (index !== 0)
+                        window.location.href = items[index - 1].fileName
+                });
+
+            } catch (e) {
+                window.console.error(e);
+            }
+        } ())
+    </script>
+</div>
 
 
-            <main class="Main SongPage">
-                <header class="HeaderMobile">
+                <main class="Main SongPage">
+                    <div class="Main__container SongPage__container">
+                        <div class="Main__content SongPage__content">
+                            <header class="SongPage__header">
+                                <div class="SongPage__box">
+                                    
+                                        <h1 class="SongPage__title">
+                                            Бгаджаху Ре Мана
+                                        </h1>
+                                    
+
+
+                                    
+                                        <div class="SongPage__author">
+                                            Шріла Ґовінда Дас Кавірадж
+                                        </div>
+                                    
+                                </div>
+
+                                <button
+                                    class="AppButton RoundButton RoundButton--L RoundButton--dark"
+                                    id="share-button"
+                                    title="Поділитися піснею"
+                                >
+                                    <span class="AppIcon icon-share"></span>
+                                </button>
+                            </header>
+
+                            <main class="SongPage__main">
+                                
+                                    <ul class="SongPage__verses">
+                                        
+                                            <li class="SongVerse">
     <link
         rel="stylesheet"
-        href="../css/partials/header-mobile.css"
+        href="../css/partials/song-verse.css"
     />
 
-    <!--  <div class="HeaderMobile__top">-->
-    <!--    <div class="HeaderMobile__fill"></div>-->
-    <!--    <div class="HeaderMobile__background"></div>-->
-    <!--  </div>-->
+    
+        <header class="SongVerse__header">
+            <h6 class="SongVerse__title">
+                1
+            </h6>
+        </header>
+    
 
-    <div class="HeaderMobile__container">
-        <div class="HeaderMobile__ribbon">
-            <div class="HeaderMobile__content">
-                <a href="https://scsm-ua.github.io/kirtan-mate" class="HeaderMobile__home">
-                    <div class="HeaderMobile__logo">
-                        <img
-                            src="../icons/peacock-logo-2.jpg"
-                            alt="Home"
-                        />
-                    </div>
-                    <div class="HeaderMobile__title">
-                        <img
-                            src="../icons/svg/kirtan-mate.svg"
-                            alt="Home"
-                        />
-                    </div>
-                </a>
+    <ul class="SongVerse__text">
+        
+            <li class="SongVerse__line">
+                бгаджаху ре мана шрī-нанда-нандана
+            </li>
+        
+            <li class="SongVerse__line">
+                <span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>абгая-чарана̄равінда ре
+            </li>
+        
+            <li class="SongVerse__line">
+                дӯрлабга ма̄нава джанама сат-санґе
+            </li>
+        
+            <li class="SongVerse__line">
+                <span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>тарохо е бгава-сіндгу ре
+            </li>
+        
+    </ul>
 
-                <!--                    <div class="HeaderMobile__search">-->
-                <!--                        <img src="../icons/svg/search.svg" alt="Home">-->
-                <!--                    </div>-->
-            </div>
+    <ul class="SongVerse__translation">
+        
+            <li class="SongVerse__paragraph">
+                <p>
+                    Мій ум! Служи стопам сина Нанди, прекрасним наче лотоси, адже вони звільнять тебе від усякого страху! Тобі поталанило народитися людиною, тому шукай спілкування із святими — так ти подолаєш цей океан матеріального буття.
+                </p>
+            </li>
+        
+    </ul>
+</li>
+
+                                        
+                                            <li class="SongVerse">
+    <link
+        rel="stylesheet"
+        href="../css/partials/song-verse.css"
+    />
+
+    
+        <header class="SongVerse__header">
+            <h6 class="SongVerse__title">
+                2
+            </h6>
+        </header>
+    
+
+    <ul class="SongVerse__text">
+        
+            <li class="SongVerse__line">
+                шіта а̄тапа ба̄та барішана
+            </li>
+        
+            <li class="SongVerse__line">
+                <span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>е діна джа̄мінī джа̄ґі ре
+            </li>
+        
+            <li class="SongVerse__line">
+                біпхале севіну крипана дураджана
+            </li>
+        
+            <li class="SongVerse__line">
+                <span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>чапала сукха-лаба ла̄ґі’ ре
+            </li>
+        
+    </ul>
+
+    <ul class="SongVerse__translation">
+        
+            <li class="SongVerse__paragraph">
+                <p>
+                    Спека, холод, буревії та зливи мучають мене вдень і вночі без спочину. Женучись за краплею мерехтливого щастя я обрік себе служити брехливим і низьким людям.
+                </p>
+            </li>
+        
+    </ul>
+</li>
+
+                                        
+                                            <li class="SongVerse">
+    <link
+        rel="stylesheet"
+        href="../css/partials/song-verse.css"
+    />
+
+    
+        <header class="SongVerse__header">
+            <h6 class="SongVerse__title">
+                3
+            </h6>
+        </header>
+    
+
+    <ul class="SongVerse__text">
+        
+            <li class="SongVerse__line">
+                е дгана, джаувана, путра, паріджана
+            </li>
+        
+            <li class="SongVerse__line">
+                <span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>ітхе кі а̄чхе паратīті ре
+            </li>
+        
+            <li class="SongVerse__line">
+                камала-дала-джала, джīвана таламала
+            </li>
+        
+            <li class="SongVerse__line">
+                <span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>бгаджаху харі-пада ніті ре
+            </li>
+        
+    </ul>
+
+    <ul class="SongVerse__translation">
+        
+            <li class="SongVerse__paragraph">
+                <p>
+                    Як радіти хорошому здоров'ю, молодості, дітям та рідним, коли життя наче крапля роси, яка тремтить на пелюстці лотоса, готова щомиті зірватися донизу? О ум! Прошу тебе, служи Господнім стопам.
+                </p>
+            </li>
+        
+    </ul>
+</li>
+
+                                        
+                                            <li class="SongVerse">
+    <link
+        rel="stylesheet"
+        href="../css/partials/song-verse.css"
+    />
+
+    
+        <header class="SongVerse__header">
+            <h6 class="SongVerse__title">
+                4
+            </h6>
+        </header>
+    
+
+    <ul class="SongVerse__text">
+        
+            <li class="SongVerse__line">
+                шравана, кīртана, смарана, вандана,
+            </li>
+        
+            <li class="SongVerse__line">
+                <span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>па̄да-севана, да̄сья ре
+            </li>
+        
+            <li class="SongVerse__line">
+                пӯджана, сакхī-джана, а̄тма-ніведана
+            </li>
+        
+            <li class="SongVerse__line">
+                <span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>ґовінда-да̄са-абгіла̄ша ре
+            </li>
+        
+    </ul>
+
+    <ul class="SongVerse__translation">
+        
+            <li class="SongVerse__paragraph">
+                <p>
+                    Тому єдине, до чого прагне Ґовінда Дас — це долучитися до дев'яти практик служіння Господу: слухати про Нього, оспівувати Його славу, пам'ятати про Нього, молитися Йому, поклонятися Його стопам, бути слугою, пропонувати Йому квіти, пахощі та інші підношення, бути Його другом і цілковито присвятити себе Йому.
+                </p>
+            </li>
+        
+    </ul>
+</li>
+
+                                        
+                                    </ul>
+                                
+                            </main>
+                        </div>
+                    </div>
+                </main>
+
+                <div class="PrevNextNav">
+    <link rel="stylesheet" href="../css/partials/prev-next-nav.css" />
+
+    <div class="PrevNextNav__container">
+        <div class="PrevNextNav__content">
+            <a class="PrevNextNav__link PrevNextNav__link--prev" href="">
+                <button class="AppButton Navigation__button PrevNextNav__button">
+                    <span class="PrevNextNav__icon PrevNextNav__icon--prev icon-chevron-right"></span>
+                </button>
+            </a>
+
+            <link
+    rel="stylesheet"
+    href="../css/partials/navigation.css"
+/>
+
+<a class="Navigation__link" href="https://scsm-ua.github.io/kirtan-mate">
+    <button class="AppButton Navigation__button">
+        <span>Зміст</span>
+    </button>
+</a>
+
+<a class="Navigation__link" href="https://scsm-ua.github.io/kirtan-mate/index-list-page.html">
+    <button class="AppButton Navigation__button">
+        <span>Індекс</span>
+    </button>
+</a>
+
+<script>
+    (function nav() {
+        const p = location.pathname;
+        const path = p.endsWith('/')
+            ? p.slice(0, -1)
+            : p;
+
+        Array.from(
+            document.getElementsByClassName('Navigation__link')
+        ).forEach((el) => {
+            if (el.href.endsWith(path)) {
+                el.classList.add('Navigation__link--active');
+            }
+        });
+    })()
+</script>
+
+
+            <a class="PrevNextNav__link PrevNextNav__link--next" href="">
+                <button class="AppButton Navigation__button PrevNextNav__button">
+                    <span class="PrevNextNav__icon PrevNextNav__icon--next icon-chevron-right"></span>
+                </button>
+            </a>
         </div>
     </div>
-</header>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiped-events/1.1.9/swiped-events.min.js" integrity="sha512-Km1M9MRIhy+uzmSn7MU2G0fQawFMpfpScHpf0UUvcpkGJCJhwlTRF/mbTUimo1N9woYZ5RLES7iL+kp65Q1d0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-                <div class="Main__container SongPage__container">
-                    <header class="SongPage__header">
-                        <div class="SongPage__back">
-                            <div class="ReturnHome">
-    <link rel="stylesheet" href="../css/partials/return-home.css" />
-    <a class="ReturnHome__anchor" href="https://scsm-ua.github.io/kirtan-mate">
-        <span class="ReturnHome__icon icon-arrow_back"></span>
-        <span class="ReturnHome__text">Повернутися</span>
-    </a>
+    <script>
+        (function() {
+            try {
+                const contentItems = JSON.parse('[{"name":"Вступ","items":[{"name":"Пан̃ча-таттва мантра","aliasName":"ш́рі-кр̣ш̣н̣а-чаітанйа прабгу нітйа̄нанда","fileName":"pancha-tattva.html"},{"name":"Харе Кришна маха̄-мантра","aliasName":"харе кр̣ш̣н̣а харе кр̣ш̣н̣а, кр̣ш̣н̣а кр̣ш̣н̣а харе харе","fileName":"hare-krishna.html"}]},{"name":"Ранкове Араті і програма","items":[{"name":"Прабга̄ті Ґīті","aliasName":"калі-куккура-кадана джаді ча̄о хе","fileName":"kali-kukkura-kadana-jadi-chhao-he-kaliyuga-pavana-kali-bhaya-nashiana.html"},{"name":"Шрī Шячīнандана-вандана̄","aliasName":"джая шячīнандана сура-муні-вандана,","fileName":"jaya-shiachinandana-sura-muni-vandana-bhava-bhaya-khandana-jayo-he.html"},{"name":"Ґурудева","aliasName":"ґурудева!","fileName":"gurudeva.html"},{"name":"Шаранагаті. Благодатне звернення","aliasName":"шрī-кришна-чайтанья прабгу джīве дая корі’","fileName":"shri-kryshna-chhaitanya-prabhu-jive-daya-kori.html"},{"name":"Нама-Санкірттан","aliasName":"харі харає намах кришна ядава̄я намах","fileName":"hari-haraye-namah-kryshna-yadavaya-namah.html"},{"name":"Арунодоя-кīртан","aliasName":"джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле","fileName":"jiv-jago-jiv-jago-gaurachanda-bole.html"}]},{"name":"Вечірнє Араті","items":[{"name":"Шрī Ґовінда Кунда Ґупта-Ґовардган А̄раті","aliasName":"джая джая ґіріра̄джер а̄раті вішяла","fileName":"jaya-jaya-girirajer-arati-vishiala.html"},{"name":"Ш́рі Ґаура-а̄раті","aliasName":"(кіба)  джая джая ґаура̄ча̄ндер а̄ротіко шобга̄","fileName":"jaya-jaya-gaurachhander-arotiko-shobha.html"},{"name":"Шрī Ґуру-вайшнава Ма̄ха̄тмʼя-ґīті","aliasName":"шрī ґуру чарана-падма, кевала-бгакаті-садма,","fileName":"shri-guru-chharana-padma.html"}]},{"name":"Вчителям","items":[{"name":"Шрī Ґуру Āраті","aliasName":"джая джая ґурудевер а̄раті уджджвала","fileName":"jaya-jaya-gurudever-arati-ujjvala.html"},{"name":"Шрī Шрī Ґурва̄штака","aliasName":"самса̄ра-да̄ва̄нала-лīдга-лока-","fileName":"samsara-davanala-lidha-loka.html"}]},{"name":"Нітьянанді","items":[{"name":"Акрохдха Парамананада","aliasName":"акродга парама̄нанда нітьянанда ра̄й","fileName":"akrodha-paramananda.html"},{"name":"А̄ґʼя-Тахал","aliasName":"надīя-ґодруме нітьянанда маха̄джана","fileName":"nadiya-godrume-nityananda-mahajana.html"}]},{"name":"Шрі Чайтаньї Махапрабгу","items":[{"name":"Авата̄ра Са̄ра","aliasName":"авата̄ра са̄ра ґора̄ авата̄ра","fileName":"avatara-sara-gora-avatara.html"},{"name":"Шрī На̄ма","aliasName":"ґа̄й ґора̄ мадгур сваре","fileName":"gay-gora-madhur-svare.html"}]},{"name":"Інші бгаджани","items":[{"name":"Бгаджаху Ре Мана","aliasName":"бгаджаху ре мана шрī-нанда-нандана","fileName":"bhajahu-re-mana-shri-nanda-nandana.html"},{"name":"Ама̄ра джīвана","aliasName":"а̄ма̄ра джīвана, сада̄ па̄пе рата,","fileName":"amara-jivana-sada-pape-rata.html"}]}]');
+                const prevLinks = document.getElementsByClassName('PrevNextNav__link--prev');
+                const nextLinks = document.getElementsByClassName('PrevNextNav__link--next');
+
+                const items = contentItems.flatMap((cat) => cat.items);
+                const index = items.findIndex((item) =>
+                    window.location.pathname.includes(item.fileName)
+                );
+
+                Array.from(prevLinks)
+                    .forEach((el) => {
+                        if (index === 0) {
+                            el.removeAttribute('href');
+                            el.children[0].disabled = true;
+                        } else {
+                            el.setAttribute('href', items[index - 1].fileName);
+                            el.children[0].disabled = false;
+                            el.title = items[index - 1].name;
+                        }
+                    })
+
+                Array.from(nextLinks)
+                    .forEach((el) => {
+                        if (index === items.length - 1) {
+                            el.removeAttribute('href');
+                            el.children[0].disabled = true;
+                        } else {
+                            el.setAttribute('href', items[index + 1].fileName);
+                            el.children[0].disabled = false;
+                            el.title = items[index + 1].name;
+                        }
+                    })
+
+                /**
+                 * Swipe events.
+                 */
+                document.addEventListener('swiped-left', () => {
+                    if (index !== items.length - 1)
+                        window.location.href = items[index + 1].fileName
+                });
+
+                document.addEventListener('swiped-right', () => {
+                    if (index !== 0)
+                        window.location.href = items[index - 1].fileName
+                });
+
+            } catch (e) {
+                window.console.error(e);
+            }
+        } ())
+    </script>
 </div>
 
-                        </div>
-                    </header>
-
-                    <div class="SongPage__content">
-                        
-    <div class="Song__header"><h1>Бгаджаху Ре Мана</h1>
-<div class="Song__author">Шріла Ґовінда Дас Кавірадж</div>
-                </div>
-    <div class="Song__body"><h5 class="Song__number">
-                  <span>1</span>
-                </h5>
-              <section class="Song__verse">
-<div class="Song__line">бгаджаху ре мана шрī-нанда-нандана</div>
-<div class="Song__line"><span class="Song__space">    </span>абгая-чарана̄равінда ре</div>
-<div class="Song__line">дӯрлабга ма̄нава джанама сат-санґе</div>
-<div class="Song__line"><span class="Song__space">    </span>тарохо е бгава-сіндгу ре</div>
-</section><p>Мій ум! Служи стопам сина Нанди, прекрасним наче лотоси, адже вони звільнять тебе від усякого страху! Тобі поталанило народитися людиною, тому шукай спілкування із святими — так ти подолаєш цей океан матеріального буття.</p>
-
-                <h5 class="Song__number">
-                  <span>2</span>
-                </h5>
-              <section class="Song__verse">
-<div class="Song__line">шіта а̄тапа ба̄та барішана</div>
-<div class="Song__line"><span class="Song__space">    </span>е діна джа̄мінī джа̄ґі ре</div>
-<div class="Song__line">біпхале севіну крипана дураджана</div>
-<div class="Song__line"><span class="Song__space">    </span>чапала сукха-лаба ла̄ґі’ ре</div>
-</section><p>Спека, холод, буревії та зливи мучають мене вдень і вночі без спочину. Женучись за краплею мерехтливого щастя я обрік себе служити брехливим і низьким людям.</p>
-
-                <h5 class="Song__number">
-                  <span>3</span>
-                </h5>
-              <section class="Song__verse">
-<div class="Song__line">е дгана, джаувана, путра, паріджана</div>
-<div class="Song__line"><span class="Song__space">    </span>ітхе кі а̄чхе паратīті ре</div>
-<div class="Song__line">камала-дала-джала, джīвана таламала</div>
-<div class="Song__line"><span class="Song__space">    </span>бгаджаху харі-пада ніті ре</div>
-</section><p>Як радіти хорошому здоров&#39;ю, молодості, дітям та рідним, коли життя наче крапля роси, яка тремтить на пелюстці лотоса, готова щомиті зірватися донизу? О ум! Прошу тебе, служи Господнім стопам.</p>
-
-                <h5 class="Song__number">
-                  <span>4</span>
-                </h5>
-              <section class="Song__verse">
-<div class="Song__line">шравана, кīртана, смарана, вандана,</div>
-<div class="Song__line"><span class="Song__space">    </span>па̄да-севана, да̄сья ре</div>
-<div class="Song__line">пӯджана, сакхī-джана, а̄тма-ніведана</div>
-<div class="Song__line"><span class="Song__space">    </span>ґовінда-да̄са-абгіла̄ша ре</div>
-</section><p>Тому єдине, до чого прагне Ґовінда Дас — це долучитися до дев&#39;яти практик служіння Господу: слухати про Нього, оспівувати Його славу, пам&#39;ятати про Нього, молитися Йому, поклонятися Його стопам, бути слугою, пропонувати Йому квіти, пахощі та інші підношення, бути Його другом і цілковито присвятити себе Йому.</p>
-</div>
-  
-                    </div>
-
-                    <div class="SongShare">
-    <link rel="stylesheet" href="../css/partials/song-share.css" />
-
-    <div class="SongShare__container">
-        <h4 class="SongShare__share">Поділитися</h4>
-
-        <div class="SongShare__content">
-            <div class="SongShare__qr" id="qrcode"></div>
-
-            <div class="SongShare__copy">
-                <label for="" class="SongShare__label"
-                    >Копіювати посилання на сторінку</label
-                >
-
-                <div class="SongShare__form">
-                    <input
-                        class="SongShare__input"
-                        id="href"
-                        readonly
-                        type="text"
-                    />
-
-                    <button
-                        class="ButtonRound ButtonRound--green SongShare__button"
-                        id="button"
-                    >
-                        <span class="SongShare__icon icon-content_copy"></span>
-                    </button>
-                </div>
             </div>
         </div>
 
         <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
-            integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
+                src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+                integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"
         ></script>
 
         <script>
-            const href = window.location.href;
-            const button = document.getElementById('button');
-            const input = document.getElementById('href');
+            (function() {
+                /**
+                 * Modal window setup.
+                 */
+                const btn = document.getElementById('share-button');
+                btn.onclick = () => modal.open();
 
-            /**/
-            input.value = href;
-            button.addEventListener('click', () => copyTextToClipboard(href));
+                const modal = new tingle.modal({
+                    footer: false,
+                    stickyFooter: false,
+                    closeMethods: ['overlay', 'button', 'escape'],
+                    cssClass: ['AppModal']
+                });
 
-            /**/
-            const qr = document.getElementById('qrcode');
-            new QRCode(qr, {
-                text: href,
-                width: 128,
-                height: 128
-            });
+                modal.setContent(`<link rel="stylesheet" href="../css/partials/song-share.css" />
 
-            /**/
-            function copyTextToClipboard(text) {
-                navigator.clipboard.writeText(text).catch(window.console.error);
-            }
+<div class="SongShare">
+    <div class="SongShare__container">
+        <h4 class="SongShare__title">Поділитися</h4>
+        <div class="SongShare__qr" id="qrcode-block"></div>
+
+        <div class="SongShare__copy">
+            <label for="" class="SongShare__label"
+                >Копіювати посилання на сторінку</label
+            >
+
+            <div class="SongShare__form">
+                <input
+                    class="SongShare__input"
+                    id="href-input"
+                    readonly
+                    type="text"
+                />
+
+                <button
+                    class="AppButton RoundButton RoundButton--L RoundButton--dark SongShare__button"
+                    id="copy-button"
+                >
+                    <span class="icon-copy"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+`);
+
+                /**
+                 * Share the URL.
+                 */
+                const href = window.location.href;
+                const button = document.getElementById('copy-button');
+                const input = document.getElementById('href-input');
+
+                input.value = href;
+                button.addEventListener('click', () => {
+                    navigator.clipboard.writeText(href).catch(window.console.error);
+                    setTimeout(() => modal.close(), 300);
+                });
+
+                const qr = document.getElementById('qrcode-block');
+                new QRCode(qr, {
+                    text: href,
+                    width: 170,
+                    height: 170
+                });
+            } ())
         </script>
-    </div>
-</div>
-
-                    <div class="PrevNext">
-    <link rel="stylesheet" href="../css/partials/prev-next.css" />
-
-    <div class="PrevNext__container">
-        <div class="PrevNext__content">
-            <div class="PrevNext__item PrevNext__item--prev" id="prev-block">
-                <button
-                    class="ButtonRound ButtonRound--green PrevNext__button"
-                    id="prev-btn"
-                >
-                    <span
-                        class="PrevNext__icon PrevNext__icon--prev icon-arrow_back"
-                    ></span>
-                </button>
-
-                <div class="PrevNext__text">
-                    <h6 class="PrevNext__description">Попередня пісня</h6>
-                    <div class="ellipsis PrevNext__title" id="prev-title">
-                        --
-                    </div>
-                </div>
-            </div>
-
-            <div class="PrevNext__item PrevNext__item--next" id="next-block">
-                <div class="PrevNext__text PrevNext__text--next">
-                    <h6 class="PrevNext__description">Наступна пісня</h6>
-                    <div class="ellipsis PrevNext__title" id="next-title">
-                        Ш́́рīмад‑Бгāґаватам Ш́́рīмад‑Бгāґаватам Ш́́рīмад‑Бгāґаватам
-                        Ш́́рīмад‑Бгāґаватам
-                    </div>
-                </div>
-
-                <button
-                    class="ButtonRound ButtonRound--green PrevNext__button"
-                    id="next-btn"
-                >
-                    <span
-                        class="PrevNext__icon PrevNext__icon--next icon-arrow_back"
-                    ></span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        try {
-            const contentItems = JSON.parse('[{"name":"Вступ","icon":"","items":[{"name":"Пан̃ча-таттва мантра","aliasName":"ш́рі-кр̣ш̣н̣а-чаітанйа прабгу нітйа̄нанда","fileName":"pancha-tattva.html"},{"name":"Харе Кришна маха̄-мантра","aliasName":"харе кр̣ш̣н̣а харе кр̣ш̣н̣а, кр̣ш̣н̣а кр̣ш̣н̣а харе харе","fileName":"hare-krishna.html"}]},{"name":"Ранкове Араті і програма","icon":"brightness","items":[{"name":"Прабга̄ті Ґīті","aliasName":"    калі-куккура-кадана джаді ча̄о хе","fileName":"kali-kukkura-kadana-jadi-chhao-he-kaliyuga-pavana-kali-bhaya-nashiana.html"},{"name":"Шрī Шячīнандана-вандана̄","aliasName":"джая шячīнандана сура-муні-вандана,","fileName":"jaya-shiachinandana-sura-muni-vandana-bhava-bhaya-khandana-jayo-he.html"},{"name":"Ґурудева","aliasName":"ґурудева!","fileName":"gurudeva.html"},{"name":"Шаранагаті. Благодатне звернення","aliasName":"шрī-кришна-чайтанья прабгу джīве дая корі’","fileName":"shri-kryshna-chhaitanya-prabhu-jive-daya-kori.html"},{"name":"Нама-Санкірттан","aliasName":"харі харає намах кришна ядава̄я намах","fileName":"hari-haraye-namah-kryshna-yadavaya-namah.html"},{"name":"Арунодоя-кīртан","aliasName":"джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле","fileName":"jiv-jago-jiv-jago-gaurachanda-bole.html"}]},{"name":"Вечірнє Араті","icon":"nightlight","items":[{"name":"Шрī Ґовінда Кунда Ґупта-Ґовардган А̄раті","aliasName":"джая джая ґіріра̄джер а̄раті вішяла","fileName":"jaya-jaya-girirajer-arati-vishiala.html"},{"name":"Ш́рі Ґаура-а̄раті","aliasName":"(кіба)  джая джая ґаура̄ча̄ндер а̄ротіко шобга̄","fileName":"jaya-jaya-gaurachhander-arotiko-shobha.html"},{"name":"Шрī Ґуру-вайшнава Ма̄ха̄тмʼя-ґīті","aliasName":"шрī ґуру чарана-падма, кевала-бгакаті-садма,","fileName":"shri-guru-chharana-padma.html"}]},{"name":"Вчителям","icon":"","items":[{"name":"Шрī Ґуру Āраті","aliasName":"джая джая ґурудевер а̄раті уджджвала","fileName":"jaya-jaya-gurudever-arati-ujjvala.html"},{"name":"Шрī Шрī Ґурва̄штака","aliasName":"самса̄ра-да̄ва̄нала-лīдга-лока-","fileName":"samsara-davanala-lidha-loka.html"}]},{"name":"Нітьянанді","icon":"diamond","items":[{"name":"Акрохдха Парамананада","aliasName":"акродга парама̄нанда нітьянанда ра̄й","fileName":"akrodha-paramananda.html"},{"name":"А̄ґʼя-Тахал","aliasName":"надīя-ґодруме нітьянанда маха̄джана","fileName":"nadiya-godrume-nityananda-mahajana.html"}]},{"name":"Шрі Чайтаньї Махапрабгу","icon":"","items":[{"name":"Авата̄ра Са̄ра","aliasName":"авата̄ра са̄ра ґора̄ авата̄ра","fileName":"avatara-sara-gora-avatara.html"},{"name":"Шрī На̄ма","aliasName":"ґа̄й ґора̄ мадгур сваре","fileName":"gay-gora-madhur-svare.html"}]},{"name":"Інші бгаджани","icon":"","items":[{"name":"Бгаджаху Ре Мана","aliasName":"бгаджаху ре мана шрī-нанда-нандана","fileName":"bhajahu-re-mana-shri-nanda-nandana.html"},{"name":"Ама̄ра джīвана","aliasName":"а̄ма̄ра джīвана, сада̄ па̄пе рата,","fileName":"amara-jivana-sada-pape-rata.html"}]}]');
-
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            const prevTitle = document.getElementById('prev-title');
-            const nextTitle = document.getElementById('next-title');
-
-            const items = contentItems.flatMap((cat) => cat.items);
-            const index = items.findIndex((item) =>
-                window.location.pathname.includes(item.fileName)
-            );
-
-            const prevIndex = index === 0 ? items.length - 1 : index - 1;
-            const nextIndex = index === items.length - 1 ? 0 : index + 1;
-
-            prevTitle.innerText = items[prevIndex].name;
-            nextTitle.innerText = items[nextIndex].name;
-
-            prevBtn.addEventListener(
-                'click',
-                () =>
-                    (window.location =
-                        items[prevIndex].fileName)
-            );
-            nextBtn.addEventListener(
-                'click',
-                () =>
-                    (window.location =
-                        items[nextIndex].fileName)
-            );
-        } catch (e) {
-            window.console.error(e);
-        }
-    </script>
-</div>
-
-                </div>
-            </main>
-
-            <!--        <footer class="SongPage__footer"></footer>-->
-        </div>
     </body>
 </html>

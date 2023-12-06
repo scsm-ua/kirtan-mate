@@ -1,19 +1,40 @@
-.ButtonRound {
+.RoundButton {
+  border-radius: 50%;
+  border: none;
+  /**/
+  /**/
+  /**/
+}
+.RoundButton--L {
+  height: 40px;
+  min-width: 40px;
+  width: 40px;
+  padding: 8px;
+  font-size: 16px;
+}
+.RoundButton--dark {
+  color: white;
+  background: var(--brown);
+}
+.RoundButton--dark:hover {
+  color: var(--accent-color);
+}
+.RoundButton--dark:active {
+  filter: brightness(2);
+}
+.RoundButton--green {
+  background-color: #008353;
+}
+.RoundButton--green:hover {
+  background-color: rgba(0, 131, 83, 0.8);
+}
+
+/**/
+.AppButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
-  width: 56px;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
-  transition: all 0.4s;
+  transition: all 0.3s;
   cursor: pointer;
-  color: white;
-}
-.ButtonRound--green {
-  background-color: #008353;
-}
-.ButtonRound--green:hover {
-  background-color: rgba(0, 131, 83, 0.8);
+  font-family: var(--font-main);
 }

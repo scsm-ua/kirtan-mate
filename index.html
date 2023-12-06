@@ -1,481 +1,451 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Kirtan Mate</title>
+        <title>Kirtan Mate - Home</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/home-page.css" />
+        <link rel="stylesheet" href="css/index-page.css" />
     </head>
     <body>
         <div class="Layout">
-            <header class="HeaderDesktop">
+            <div class="Layout__content">
+                <header class="Header">
     <link
         rel="stylesheet"
-        href="css/partials/header-desktop.css"
+        href="css/partials/header.css"
     />
 
-    <div class="HeaderDesktop__top">
-        <div class="HeaderDesktop__fill"></div>
-        <div class="HeaderDesktop__background"></div>
-        <div class="HeaderDesktop__ribbon"></div>
-    </div>
-
-    <div class="HeaderDesktop__container">
-        <div class="HeaderDesktop__content">
-            <a href="https://scsm-ua.github.io/kirtan-mate" class="HeaderDesktop__home">
-                <div class="HeaderDesktop__logo">
-                    <img
-                        src="icons/peacock-logo-2.jpg"
-                        alt="Home"
-                    />
-                </div>
-                <div class="HeaderDesktop__title">
-                    <img
-                        src="icons/svg/kirtan-mate.svg"
-                        alt="Home"
-                    />
-                </div>
+    <div class="Header__container">
+        <div class="Header__content">
+            <a href="https://scsm-ua.github.io/kirtan-mate" class="Header__home">
+                <img
+                    alt="Home"
+                    class="Header__logo"
+                    src="icons/svg/kirtan-mate.svg"
+                />
             </a>
-
-            <!--                    <div class="HeaderDesktop__search">-->
-            <!--                        <img src="../icons/svg/search.svg" alt="Home">-->
-            <!--                    </div>-->
         </div>
     </div>
 </header>
 
 
-            <main class="Main HomePage">
-                <div class="Main__container HomePage__container">
-                    <div class="HomePage__content">
-                        <ul class="HomePage__categories">
-                            
-                            <li class="CategoryItem">
+                <main class="Main IndexPage">
+                    <div class="Main__container IndexPage__container">
+                        <div class="IndexPage__navigation">
+                            <link
+    rel="stylesheet"
+    href="css/partials/navigation.css"
+/>
+
+<a class="Navigation__link" href="https://scsm-ua.github.io/kirtan-mate">
+    <button class="AppButton Navigation__button">
+        <span>Зміст</span>
+    </button>
+</a>
+
+<a class="Navigation__link" href="https://scsm-ua.github.io/kirtan-mate/index-list-page.html">
+    <button class="AppButton Navigation__button">
+        <span>Індекс</span>
+    </button>
+</a>
+
+<script>
+    (function nav() {
+        const p = location.pathname;
+        const path = p.endsWith('/')
+            ? p.slice(0, -1)
+            : p;
+
+        Array.from(
+            document.getElementsByClassName('Navigation__link')
+        ).forEach((el) => {
+            if (el.href.endsWith(path)) {
+                el.classList.add('Navigation__link--active');
+            }
+        });
+    })()
+</script>
+
+                        </div>
+
+                        <div class="Main__content IndexPage__content">
+                            <ul class="IndexPage__list">
+                                
+                                    <li class="IndexListItem">
     <link
         rel="stylesheet"
-        href="css/partials/category-item.css"
+        href="css/partials/index-list-item.css"
     />
 
-    <header class="CategoryItem__header">
-        <div class="CategoryItem__prefix">
-            <span class="CategoryItem__icon icon-"></span>
-        </div>
+    
+        <header class="IndexListItem__header">
+            <h6 class="IndexListItem__title">
+                Вступ
+            </h6>
+        </header>
+    
 
-        <h3 class="CategoryItem__title">
-            Вступ
-        </h3>
-    </header>
-
-    <ul class="CategoryItem__list">
+    <ul class="IndexListItem__list">
         
-        <a href="html/pancha-tattva.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
+            <li class="IndexListItem__item">
+                <a href="html/pancha-tattva.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="ш́рі-кр̣ш̣н̣а-чаітанйа прабгу нітйа̄нанда">
+                        Пан̃ча-таттва мантра
+                    </h6>
 
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Пан̃ча-таттва мантра
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    ш́рі-кр̣ш̣н̣а-чаітанйа прабгу нітйа̄нанда
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/hare-krishna.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Харе Кришна маха̄-мантра
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    харе кр̣ш̣н̣а харе кр̣ш̣н̣а, кр̣ш̣н̣а кр̣ш̣н̣а харе харе
-                </div>
-            </div>
-        </a>
-        
-    </ul>
-</li>
-
-                            
-                            <li class="CategoryItem">
-    <link
-        rel="stylesheet"
-        href="css/partials/category-item.css"
-    />
-
-    <header class="CategoryItem__header">
-        <div class="CategoryItem__prefix">
-            <span class="CategoryItem__icon icon-brightness"></span>
-        </div>
-
-        <h3 class="CategoryItem__title">
-            Ранкове Араті і програма
-        </h3>
-    </header>
-
-    <ul class="CategoryItem__list">
-        
-        <a href="html/kali-kukkura-kadana-jadi-chhao-he-kaliyuga-pavana-kali-bhaya-nashiana.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Прабга̄ті Ґīті
-                </h6>
-
-                <div class="CategoryItem__alias">
-                        калі-куккура-кадана джаді ча̄о хе
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/jaya-shiachinandana-sura-muni-vandana-bhava-bhaya-khandana-jayo-he.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Шрī Шячīнандана-вандана̄
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    джая шячīнандана сура-муні-вандана,
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/gurudeva.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Ґурудева
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    ґурудева!
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/shri-kryshna-chhaitanya-prabhu-jive-daya-kori.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Шаранагаті. Благодатне звернення
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    шрī-кришна-чайтанья прабгу джīве дая корі’
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/hari-haraye-namah-kryshna-yadavaya-namah.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Нама-Санкірттан
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    харі харає намах кришна ядава̄я намах
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/jiv-jago-jiv-jago-gaurachanda-bole.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Арунодоя-кīртан
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле
-                </div>
-            </div>
-        </a>
-        
-    </ul>
-</li>
-
-                            
-                            <li class="CategoryItem">
-    <link
-        rel="stylesheet"
-        href="css/partials/category-item.css"
-    />
-
-    <header class="CategoryItem__header">
-        <div class="CategoryItem__prefix">
-            <span class="CategoryItem__icon icon-nightlight"></span>
-        </div>
-
-        <h3 class="CategoryItem__title">
-            Вечірнє Араті
-        </h3>
-    </header>
-
-    <ul class="CategoryItem__list">
-        
-        <a href="html/jaya-jaya-girirajer-arati-vishiala.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Шрī Ґовінда Кунда Ґупта-Ґовардган А̄раті
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    джая джая ґіріра̄джер а̄раті вішяла
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/jaya-jaya-gaurachhander-arotiko-shobha.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Ш́рі Ґаура-а̄раті
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    (кіба)  джая джая ґаура̄ча̄ндер а̄ротіко шобга̄
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/shri-guru-chharana-padma.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Шрī Ґуру-вайшнава Ма̄ха̄тмʼя-ґīті
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    шрī ґуру чарана-падма, кевала-бгакаті-садма,
-                </div>
-            </div>
-        </a>
-        
-    </ul>
-</li>
-
-                            
-                            <li class="CategoryItem">
-    <link
-        rel="stylesheet"
-        href="css/partials/category-item.css"
-    />
-
-    <header class="CategoryItem__header">
-        <div class="CategoryItem__prefix">
-            <span class="CategoryItem__icon icon-"></span>
-        </div>
-
-        <h3 class="CategoryItem__title">
-            Вчителям
-        </h3>
-    </header>
-
-    <ul class="CategoryItem__list">
-        
-        <a href="html/jaya-jaya-gurudever-arati-ujjvala.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Шрī Ґуру Āраті
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    джая джая ґурудевер а̄раті уджджвала
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/samsara-davanala-lidha-loka.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Шрī Шрī Ґурва̄штака
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    самса̄ра-да̄ва̄нала-лīдга-лока-
-                </div>
-            </div>
-        </a>
-        
-    </ul>
-</li>
-
-                            
-                            <li class="CategoryItem">
-    <link
-        rel="stylesheet"
-        href="css/partials/category-item.css"
-    />
-
-    <header class="CategoryItem__header">
-        <div class="CategoryItem__prefix">
-            <span class="CategoryItem__icon icon-diamond"></span>
-        </div>
-
-        <h3 class="CategoryItem__title">
-            Нітьянанді
-        </h3>
-    </header>
-
-    <ul class="CategoryItem__list">
-        
-        <a href="html/akrodha-paramananda.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Акрохдха Парамананада
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    акродга парама̄нанда нітьянанда ра̄й
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/nadiya-godrume-nityananda-mahajana.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    А̄ґʼя-Тахал
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    надīя-ґодруме нітьянанда маха̄джана
-                </div>
-            </div>
-        </a>
-        
-    </ul>
-</li>
-
-                            
-                            <li class="CategoryItem">
-    <link
-        rel="stylesheet"
-        href="css/partials/category-item.css"
-    />
-
-    <header class="CategoryItem__header">
-        <div class="CategoryItem__prefix">
-            <span class="CategoryItem__icon icon-"></span>
-        </div>
-
-        <h3 class="CategoryItem__title">
-            Шрі Чайтаньї Махапрабгу
-        </h3>
-    </header>
-
-    <ul class="CategoryItem__list">
-        
-        <a href="html/avatara-sara-gora-avatara.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Авата̄ра Са̄ра
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    авата̄ра са̄ра ґора̄ авата̄ра
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/gay-gora-madhur-svare.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Шрī На̄ма
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    ґа̄й ґора̄ мадгур сваре
-                </div>
-            </div>
-        </a>
-        
-    </ul>
-</li>
-
-                            
-                            <li class="CategoryItem">
-    <link
-        rel="stylesheet"
-        href="css/partials/category-item.css"
-    />
-
-    <header class="CategoryItem__header">
-        <div class="CategoryItem__prefix">
-            <span class="CategoryItem__icon icon-"></span>
-        </div>
-
-        <h3 class="CategoryItem__title">
-            Інші бгаджани
-        </h3>
-    </header>
-
-    <ul class="CategoryItem__list">
-        
-        <a href="html/bhajahu-re-mana-shri-nanda-nandana.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Бгаджаху Ре Мана
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    бгаджаху ре мана шрī-нанда-нандана
-                </div>
-            </div>
-        </a>
-        
-        <a href="html/amara-jivana-sada-pape-rata.html" class="CategoryItem__item">
-            <div class="CategoryItem__marker icon-summarize"></div>
-
-            <div class="CategoryItem__box">
-                <h6 class="CategoryItem__name">
-                    Ама̄ра джīвана
-                </h6>
-
-                <div class="CategoryItem__alias">
-                    а̄ма̄ра джīвана, сада̄ па̄пе рата,
-                </div>
-            </div>
-        </a>
-        
-    </ul>
-</li>
-
-                            
-                        </ul>
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
                     </div>
-                </div>
-            </main>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/hare-krishna.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="харе кр̣ш̣н̣а харе кр̣ш̣н̣а, кр̣ш̣н̣а кр̣ш̣н̣а харе харе">
+                        Харе Кришна маха̄-мантра
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+    </ul>
+</li>
+
+                                
+                                    <li class="IndexListItem">
+    <link
+        rel="stylesheet"
+        href="css/partials/index-list-item.css"
+    />
+
+    
+        <header class="IndexListItem__header">
+            <h6 class="IndexListItem__title">
+                Ранкове Араті і програма
+            </h6>
+        </header>
+    
+
+    <ul class="IndexListItem__list">
+        
+            <li class="IndexListItem__item">
+                <a href="html/kali-kukkura-kadana-jadi-chhao-he-kaliyuga-pavana-kali-bhaya-nashiana.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="калі-куккура-кадана джаді ча̄о хе">
+                        Прабга̄ті Ґīті
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/jaya-shiachinandana-sura-muni-vandana-bhava-bhaya-khandana-jayo-he.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="джая шячīнандана сура-муні-вандана,">
+                        Шрī Шячīнандана-вандана̄
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/gurudeva.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="ґурудева!">
+                        Ґурудева
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/shri-kryshna-chhaitanya-prabhu-jive-daya-kori.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="шрī-кришна-чайтанья прабгу джīве дая корі’">
+                        Шаранагаті. Благодатне звернення
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/hari-haraye-namah-kryshna-yadavaya-namah.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="харі харає намах кришна ядава̄я намах">
+                        Нама-Санкірттан
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/jiv-jago-jiv-jago-gaurachanda-bole.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле">
+                        Арунодоя-кīртан
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+    </ul>
+</li>
+
+                                
+                                    <li class="IndexListItem">
+    <link
+        rel="stylesheet"
+        href="css/partials/index-list-item.css"
+    />
+
+    
+        <header class="IndexListItem__header">
+            <h6 class="IndexListItem__title">
+                Вечірнє Араті
+            </h6>
+        </header>
+    
+
+    <ul class="IndexListItem__list">
+        
+            <li class="IndexListItem__item">
+                <a href="html/jaya-jaya-girirajer-arati-vishiala.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="джая джая ґіріра̄джер а̄раті вішяла">
+                        Шрī Ґовінда Кунда Ґупта-Ґовардган А̄раті
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/jaya-jaya-gaurachhander-arotiko-shobha.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="(кіба)  джая джая ґаура̄ча̄ндер а̄ротіко шобга̄">
+                        Ш́рі Ґаура-а̄раті
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/shri-guru-chharana-padma.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="шрī ґуру чарана-падма, кевала-бгакаті-садма,">
+                        Шрī Ґуру-вайшнава Ма̄ха̄тмʼя-ґīті
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+    </ul>
+</li>
+
+                                
+                                    <li class="IndexListItem">
+    <link
+        rel="stylesheet"
+        href="css/partials/index-list-item.css"
+    />
+
+    
+        <header class="IndexListItem__header">
+            <h6 class="IndexListItem__title">
+                Вчителям
+            </h6>
+        </header>
+    
+
+    <ul class="IndexListItem__list">
+        
+            <li class="IndexListItem__item">
+                <a href="html/jaya-jaya-gurudever-arati-ujjvala.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="джая джая ґурудевер а̄раті уджджвала">
+                        Шрī Ґуру Āраті
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/samsara-davanala-lidha-loka.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="самса̄ра-да̄ва̄нала-лīдга-лока-">
+                        Шрī Шрī Ґурва̄штака
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+    </ul>
+</li>
+
+                                
+                                    <li class="IndexListItem">
+    <link
+        rel="stylesheet"
+        href="css/partials/index-list-item.css"
+    />
+
+    
+        <header class="IndexListItem__header">
+            <h6 class="IndexListItem__title">
+                Нітьянанді
+            </h6>
+        </header>
+    
+
+    <ul class="IndexListItem__list">
+        
+            <li class="IndexListItem__item">
+                <a href="html/akrodha-paramananda.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="акродга парама̄нанда нітьянанда ра̄й">
+                        Акрохдха Парамананада
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/nadiya-godrume-nityananda-mahajana.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="надīя-ґодруме нітьянанда маха̄джана">
+                        А̄ґʼя-Тахал
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+    </ul>
+</li>
+
+                                
+                                    <li class="IndexListItem">
+    <link
+        rel="stylesheet"
+        href="css/partials/index-list-item.css"
+    />
+
+    
+        <header class="IndexListItem__header">
+            <h6 class="IndexListItem__title">
+                Шрі Чайтаньї Махапрабгу
+            </h6>
+        </header>
+    
+
+    <ul class="IndexListItem__list">
+        
+            <li class="IndexListItem__item">
+                <a href="html/avatara-sara-gora-avatara.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="авата̄ра са̄ра ґора̄ авата̄ра">
+                        Авата̄ра Са̄ра
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/gay-gora-madhur-svare.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="ґа̄й ґора̄ мадгур сваре">
+                        Шрī На̄ма
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+    </ul>
+</li>
+
+                                
+                                    <li class="IndexListItem">
+    <link
+        rel="stylesheet"
+        href="css/partials/index-list-item.css"
+    />
+
+    
+        <header class="IndexListItem__header">
+            <h6 class="IndexListItem__title">
+                Інші бгаджани
+            </h6>
+        </header>
+    
+
+    <ul class="IndexListItem__list">
+        
+            <li class="IndexListItem__item">
+                <a href="html/bhajahu-re-mana-shri-nanda-nandana.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="бгаджаху ре мана шрī-нанда-нандана">
+                        Бгаджаху Ре Мана
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="html/amara-jivana-sada-pape-rata.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="а̄ма̄ра джīвана, сада̄ па̄пе рата,">
+                        Ама̄ра джīвана
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+    </ul>
+</li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
         </div>
     </body>
 </html>

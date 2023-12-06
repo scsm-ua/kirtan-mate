@@ -1,6 +1,6 @@
 @font-face {
   font-family: "icomoon";
-  src: url("icomoon.woff?1kfyux") format("woff");
+  src: url("icomoon.woff?o4k3s1") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -20,154 +20,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-add:before {
+.icon-arrow-left:before {
   content: "\e900";
 }
 
-.icon-arrow_back:before {
+.icon-chevron-right:before {
   content: "\e901";
 }
 
-.icon-arrow_forward:before {
+.icon-copy:before {
   content: "\e902";
 }
 
-.icon-article:before {
+.icon-share:before {
   content: "\e903";
-}
-
-.icon-assignment:before {
-  content: "\e904";
-}
-
-.icon-auto_stories:before {
-  content: "\e905";
-}
-
-.icon-brand_awareness:before {
-  content: "\e906";
-}
-
-.icon-brightness:before {
-  content: "\e907";
-}
-
-.icon-celebration:before {
-  content: "\e908";
-}
-
-.icon-cheer:before {
-  content: "\e909";
-}
-
-.icon-close:before {
-  content: "\e90a";
-}
-
-.icon-content_copy:before {
-  content: "\e90b";
-}
-
-.icon-description:before {
-  content: "\e90c";
-}
-
-.icon-diamond:before {
-  content: "\e90d";
-}
-
-.icon-done:before {
-  content: "\e90e";
-}
-
-.icon-eco:before {
-  content: "\e90f";
-}
-
-.icon-emoji_nature:before {
-  content: "\e910";
-}
-
-.icon-expand:before {
-  content: "\e911";
-}
-
-.icon-favorite:before {
-  content: "\e912";
-}
-
-.icon-feed:before {
-  content: "\e913";
-}
-
-.icon-filter_vintage_2:before {
-  content: "\e914";
-}
-
-.icon-filter_vintage:before {
-  content: "\e915";
-}
-
-.icon-flag:before {
-  content: "\e916";
-}
-
-.icon-flare:before {
-  content: "\e917";
-}
-
-.icon-folded_hands:before {
-  content: "\e918";
-}
-
-.icon-globe:before {
-  content: "\e919";
-}
-
-.icon-home:before {
-  content: "\e91a";
-}
-
-.icon-kid_star:before {
-  content: "\e91b";
-}
-
-.icon-menu:before {
-  content: "\e91c";
-}
-
-.icon-more_vert:before {
-  content: "\e91d";
-}
-
-.icon-nest_eco_leaf:before {
-  content: "\e91e";
-}
-
-.icon-nightlight:before {
-  content: "\e91f";
-}
-
-.icon-psychiatry:before {
-  content: "\e920";
-}
-
-.icon-search:before {
-  content: "\e921";
-}
-
-.icon-spa:before {
-  content: "\e922";
-}
-
-.icon-summarize:before {
-  content: "\e923";
-}
-
-.icon-view_timeline:before {
-  content: "\e924";
-}
-
-.icon-wb_sunny:before {
-  content: "\e925";
 }
