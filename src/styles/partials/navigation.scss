@@ -34,6 +34,10 @@
             font-weight: 700;
             box-shadow: none;
             background-color: var(--header-bg-color);
+
+            &:hover {
+                color: white;
+            }
         }
     }
 }
