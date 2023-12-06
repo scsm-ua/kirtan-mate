@@ -74,7 +74,7 @@
             document.getElementsByClassName('Navigation__link')
         ).forEach((el) => {
             if (el.href.endsWith(path)) {
-                el.classList.add('Navigation__link--active');
+                el.children[0].classList.add('Navigation__button--active');
             }
         });
     })()
@@ -504,7 +504,7 @@
             document.getElementsByClassName('Navigation__link')
         ).forEach((el) => {
             if (el.href.endsWith(path)) {
-                el.classList.add('Navigation__link--active');
+                el.children[0].classList.add('Navigation__button--active');
             }
         });
     })()

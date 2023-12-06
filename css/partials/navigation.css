@@ -29,3 +29,6 @@
   box-shadow: none;
   background-color: var(--header-bg-color);
 }
+.Navigation__button--active:hover {
+  color: white;
+}
