@@ -117,7 +117,7 @@ function postProcessSong(song) {
 }
 
 /**/
-const NOTE_MD_REGEX = /\*\*_(.*?)_\*\*/gm;
+const NOTE_MD_REGEX = /\*\*\*(.*?)\*\*\*/gm;
 const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
 
 /**
