@@ -296,6 +296,7 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 .AppModal .tingle-modal-box {
   border-radius: 24px;
   background-color: var(--song-bg-color) !important;
+  max-width: 500px;
 }
 @media (max-width: 540px) {
   .AppModal .tingle-modal-box {
