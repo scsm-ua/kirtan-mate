@@ -10,13 +10,14 @@ const shell = require('gulp-shell');
 require('dotenv').config();
 
 /**/
+const { createHeadParts } = require('./scripts/createHeadParts');
 const {
     getJSONIndexStream,
     makeSongHTML,
     md2jsonConvertor
 } = require('./scripts/songConvertor');
 const { makeIndexList } = require('./scripts/makeIndexList');
-const { PATHS } = require('./scripts/constants');
+const { PATHS, ORIGIN } = require('./scripts/constants');
 const { readFile } = require('./scripts/ioHelpers');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
@@ -42,8 +43,8 @@ gulp.task('copy-font', () => {
 /**
  *
  */
-gulp.task('copy-icons', () => {
-    return gulp.src(SRC.ICON_FILES + '/**/*').pipe(gulp.dest(BUILD.ICON_FILES));
+gulp.task('copy-img', () => {
+    return gulp.src(SRC.IMG_FILES + '/**/*').pipe(gulp.dest(BUILD.IMG_FILES));
 });
 
 /**
@@ -60,7 +61,10 @@ gulp.task('html', async () => {
     );
 
     return gulp
-        .src(BUILD.JSON_FILES + '/**/*.json')
+        .src([
+            BUILD.JSON_FILES + '/**/*.json',
+            '!' + BUILD.JSON_FILES + '/**/contentItems.json'
+        ])
         .pipe(makeSongHTML(templatePromise))
         .pipe(
             rename({
@@ -104,9 +108,17 @@ gulp.task('generate-index', (done) => {
 gulp.task('index', () => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${FILES.HTML.INDEX}`;
 
+    const headParts = {
+        title: 'Home',
+        description: 'Сайт вайшнавських пісень',
+        origin: ORIGIN,
+        path: '/',
+        imgSrc: FILES.SHARING_BANNER
+    };
+
     const paths = {
         toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
-        toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
+        toImages: path.relative(BUILD.ROOT, BUILD.IMG_FILES),
         toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
         toPages: {
             index: PAGES.INDEX,
@@ -119,6 +131,7 @@ gulp.task('index', () => {
         .pipe(
             ejs({
                 categories: require(BUILD.INDEX_FILE),
+                headParts: createHeadParts(headParts),
                 paths: paths
             }).on('error', console.error)
         )
@@ -132,9 +145,17 @@ gulp.task('index', () => {
 gulp.task('index-list', () => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_LIST} ${BUILD.ROOT}/${FILES.HTML.INDEX_LIST}`;
 
+    const headParts = {
+        title: 'Індекс А-Я',
+        description: 'Сайт вайшнавських пісень',
+        origin: ORIGIN,
+        path: '/' + FILES.HTML.INDEX_LIST,
+        imgSrc: FILES.SHARING_BANNER
+    };
+
     const paths = {
         toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
-        toIcons: path.relative(BUILD.ROOT, BUILD.ICON_FILES),
+        toImages: path.relative(BUILD.ROOT, BUILD.IMG_FILES),
         toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
         toPages: {
             index: PAGES.INDEX,
@@ -147,6 +168,7 @@ gulp.task('index-list', () => {
         .pipe(
             ejs({
                 items: makeIndexList(require(BUILD.INDEX_FILE)),
+                headParts: createHeadParts(headParts),
                 paths: paths
             }).on('error', console.error)
         )
@@ -168,7 +190,7 @@ gulp.task('build', (done) => {
         'md2json',
         'generate-index',
         'index-list',
-        ['html-folder', 'copy-icons', 'copy-font'],
+        ['html-folder', 'copy-img', 'copy-font'],
         ['sass', 'html', 'index'],
         done
     );

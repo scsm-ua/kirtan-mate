@@ -5,12 +5,19 @@ const contentItems = 'contentItems.json';
 const indexListJson = 'index-list.json';
 const indexPath = 'index.html';
 const indexListPath = 'index-list-page.html';
+const sharingBanner = 'sharing-banner.png';
 
+/**/
+const ORIGIN = (process.env.HOME_BASE_URL || '');
+
+/**
+ *
+ */
 const PATHS = {
     BUILD: {
         CSS_FILES: OUTPUT_DIR + '/css',
         HTML_FILES: OUTPUT_DIR + '/html',
-        ICON_FILES: OUTPUT_DIR + '/icons',
+        IMG_FILES: OUTPUT_DIR + '/images',
         JSON_FILES: OUTPUT_DIR + '/json',
         // `resolve` to use with `require`.
         INDEX_FILE: path.resolve(OUTPUT_DIR + '/json/' + contentItems),
@@ -30,24 +37,25 @@ const PATHS = {
         JSON: {
             INDEX: contentItems,
             INDEX_LIST: indexListJson
-        }
+        },
+        SHARING_BANNER: (process.env.HOME_BASE_URL || '') + '/images/' + sharingBanner
     },
     SRC: {
         CSS_FILES: 'src/styles',
         EJS_FILES: 'src/templates',
         EJS_PARTIALS_FILES: 'src/templates/partials',
         HTML_FILES: 'src/html',
-        ICON_FILES: 'src/icons',
+        IMG_FILES: 'src/images',
         MD_FILES: 'src/md',
         MD_INDEX_FILE: 'src/meta/index.md',
         JSON_CATEGORIES_FILE: 'src/meta/categories.json',
         JSON_INDEX_LIST_FILE: 'src/meta/index-list.json'
     },
     PAGES: {
-        INDEX: (process.env.HOME_BASE_URL || '') + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
-        INDEX_LIST: (process.env.HOME_BASE_URL || '') + '/' + indexListPath
+        INDEX: ORIGIN + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
+        INDEX_LIST: ORIGIN + '/' + indexListPath
     }
 };
 
 /**/
-module.exports = { PATHS };
+module.exports = { ORIGIN, PATHS };

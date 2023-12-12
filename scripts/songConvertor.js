@@ -4,8 +4,9 @@ const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
 
 /**/
-const { convertMDToJSON, getIndexJSON } = require('../scripts/indexGenerator');
-const { PATHS } = require('../scripts/constants');
+const { convertMDToJSON, getIndexJSON } = require('./indexGenerator');
+const { createHeadParts } = require('./createHeadParts');
+const { ORIGIN, PATHS } = require('./constants');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 
@@ -22,7 +23,8 @@ function makeSongHTML(templatePromise) {
             try {
                 const htmlString = fillTemplate(
                     templatePromise,
-                    JSON.parse(file.contents.toString())
+                    JSON.parse(file.contents.toString()),
+                    file.path
                 );
 
                 file.contents = Buffer.from(htmlString, 'utf8');
@@ -39,14 +41,24 @@ function makeSongHTML(templatePromise) {
 /**
  * @param template: string;
  * @param content: TSongJSON;
+ * @param filePath: string;
  * @return {string}
  */
-function fillTemplate(template, content) {
+function fillTemplate(template, content, filePath) {
     const { author, title, verses } = content;
+    const { text } = verses[0];
+
+    const headParts = {
+        title: author ? title + '. ' + author : title,
+        description: `${text[0]}\n${text[1]}...`,
+        origin: ORIGIN,
+        path: '/html/' + path.parse(filePath).name + '.html',
+        imgSrc: FILES.SHARING_BANNER
+    };
 
     const paths = {
         toCss: path.relative(BUILD.HTML_FILES, BUILD.CSS_FILES),
-        toIcons: path.relative(BUILD.HTML_FILES, BUILD.ICON_FILES),
+        toImages: path.relative(BUILD.HTML_FILES, BUILD.IMG_FILES),
         toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
         toPages: {
             index: PAGES.INDEX,
@@ -60,6 +72,7 @@ function fillTemplate(template, content) {
         functions: {
             transformLine: transformLine
         },
+        headParts: createHeadParts(headParts),
         paths: paths,
         title: title,
         verses: verses
