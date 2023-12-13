@@ -1,20 +1,15 @@
+const { PATHS, ORIGIN } = require('./constants');
+
 /**
  * Note: the title and description do NOT get escaped.
  * @param title: string - this will get suffixed with ' | Kirtan Mate'.
  * @param description: string - no special symbols!
- * @param origin: string - location origin.
  * @param path: string - no leading or trailing slashes!
- * @param imgSrc: string - the banner image source.
  */
-function createHeadParts({
-    title,
-    description,
-    origin,
-    path,
-    imgSrc
-}) {
+function createHeadParts({ title, description, path }) {
+    const imgSrc = PATHS.FILES.SHARING_BANNER;
     const _title = title + ' | Kirtan Mate';
-    const canonical = origin + path;
+    const canonical = ORIGIN + path;
 
     return `
         <title>${_title}</title>
@@ -39,32 +34,32 @@ function createHeadParts({
         <meta name="twitter:title" content="${title}" />
         <meta name="twitter:description" content="${description}" />
 
-        ${getSchema(origin, path, title)}
+        ${getSchema(path, title)}
     `;
 }
 
 /**
  *
  */
-function getSchema(origin, path, title) {
+function getSchema(path, title) {
     const content = {
         '@context': 'https://schema.org',
         '@graph': [
             {
                 '@type': 'WebSite',
-                '@id': origin + '/#website',
-                'url': origin + '/',
+                '@id': ORIGIN + '/#website',
+                'url': ORIGIN + '/',
                 'name': 'Kirtan Mate',
                 'description': 'Вайшнавські пісні',
                 'inLanguage': 'ua-UA'
             },
             {
                 '@type': 'CollectionPage',
-                '@id': origin + '/' + path,
-                'url': origin + '/' + path,
+                '@id': ORIGIN + '/' + path,
+                'url': ORIGIN + '/' + path,
                 'name': title,
                 'isPartOf': {
-                    '@id': origin + '/#website'
+                    '@id': ORIGIN + '/#website'
                 }
             }
         ]
@@ -74,8 +69,32 @@ function getSchema(origin, path, title) {
     return `<script type="application/ld+json">${sch}</script>`;
 }
 
+/**
+ * Converts the list of categories into the list of song related XML parts.
+ * @param categories: TCategory[]
+ * @returns {string}
+ */
+function createSongXMLParts(categories) {
+    let result = '';
+
+    categories
+        .flatMap((cat) => cat.items)
+        .forEach((item) => (
+            result += `
+                <url>
+                    <loc>${encodeURI(ORIGIN + '/html/' + item.fileName)}</loc>
+                    <changefreq>weekly</changefreq>
+                    <priority>0.8</priority>
+                </url>
+            `
+        ));
+
+    return result;
+}
+
 
 /**/
 module.exports = {
-    createHeadParts: createHeadParts
+    createHeadParts: createHeadParts,
+    createSongXMLParts: createSongXMLParts
 };

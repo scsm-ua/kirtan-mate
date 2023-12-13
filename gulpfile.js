@@ -10,7 +10,7 @@ const shell = require('gulp-shell');
 require('dotenv').config();
 
 /**/
-const { createHeadParts } = require('./scripts/createHeadParts');
+const { createHeadParts, createSongXMLParts } = require('./scripts/createHeadParts');
 const {
     getJSONIndexStream,
     makeSongHTML,
@@ -111,9 +111,7 @@ gulp.task('index', () => {
     const headParts = {
         title: 'Home',
         description: 'Сайт вайшнавських пісень',
-        origin: ORIGIN,
-        path: '/',
-        imgSrc: FILES.SHARING_BANNER
+        path: '/'
     };
 
     const paths = {
@@ -148,9 +146,7 @@ gulp.task('index-list', () => {
     const headParts = {
         title: 'Індекс А-Я',
         description: 'Сайт вайшнавських пісень',
-        origin: ORIGIN,
-        path: '/' + FILES.HTML.INDEX_LIST,
-        imgSrc: FILES.SHARING_BANNER
+        path: '/' + FILES.HTML.INDEX_LIST
     };
 
     const paths = {
@@ -179,6 +175,25 @@ gulp.task('index-list', () => {
 /**
  *
  */
+gulp.task('sitemap', () => {
+    const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.SITEMAP} ${BUILD.ROOT}/${FILES.XML.SITEMAP}`;
+
+    return gulp
+        .src(SRC.EJS_FILES + '/' + FILES.EJS.SITEMAP)
+        .pipe(
+            ejs({
+                indexListPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX_LIST),
+                indexPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX),
+                songList: createSongXMLParts(require(BUILD.INDEX_FILE))
+            }).on('error', console.error)
+        )
+        .pipe(gulp.dest(BUILD.ROOT))
+        .pipe(shell([extChangeCmd]));
+});
+
+/**
+ *
+ */
 gulp.task('clean', shell.task('rm -rf docs'));
 
 /**
@@ -191,7 +206,7 @@ gulp.task('build', (done) => {
         'generate-index',
         'index-list',
         ['html-folder', 'copy-img', 'copy-font'],
-        ['sass', 'html', 'index'],
+        ['sass', 'html', 'index', 'sitemap'],
         done
     );
 });

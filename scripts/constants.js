@@ -28,6 +28,7 @@ const PATHS = {
         EJS: {
             INDEX: 'index.ejs',
             INDEX_LIST: 'index-list-page.ejs',
+            SITEMAP: 'sitemap.ejs',
             SONG_PAGE: 'song-page.ejs'
         },
         HTML: {
@@ -38,7 +39,10 @@ const PATHS = {
             INDEX: contentItems,
             INDEX_LIST: indexListJson
         },
-        SHARING_BANNER: (process.env.HOME_BASE_URL || '') + '/images/' + sharingBanner
+        SHARING_BANNER: (process.env.HOME_BASE_URL || '') + '/images/' + sharingBanner,
+        XML: {
+            SITEMAP: 'sitemap.xml'
+        }
     },
     SRC: {
         CSS_FILES: 'src/styles',

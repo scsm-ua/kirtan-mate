@@ -1,10 +1,6 @@
 type TCategory = {
     name: string; // Category name.
-    items: {
-        aliasName: string; // The First line.
-        fileName: string;
-        name: string;
-    }
+    items: TCategoryItem[];
 };
 
 

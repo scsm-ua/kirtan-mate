@@ -51,9 +51,7 @@ function fillTemplate(template, content, filePath) {
     const headParts = {
         title: author ? title + '. ' + author : title,
         description: `${text[0]}\n${text[1]}...`,
-        origin: ORIGIN,
-        path: '/html/' + path.parse(filePath).name + '.html',
-        imgSrc: FILES.SHARING_BANNER
+        path: '/html/' + path.parse(filePath).name + '.html'
     };
 
     const paths = {
