@@ -109,7 +109,7 @@ gulp.task('index', () => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${FILES.HTML.INDEX}`;
 
     const headParts = {
-        title: 'Home',
+        title: 'Зміст',
         description: 'Сайт вайшнавських пісень',
         path: '/'
     };
