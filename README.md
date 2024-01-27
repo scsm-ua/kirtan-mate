@@ -47,3 +47,9 @@ Setup github pages for repository.
 Copy `.env.sample` to `.env` with your local root path for `HOME_BASE_URL`.
 
 To use with local filesystem use `EXPLICIT_INDEX=1` to build home path with  `.../index.html`.
+
+## Songbooks version
+
+Update songbook version in `pnpm-lock.yml` with:
+
+    pnpm update
