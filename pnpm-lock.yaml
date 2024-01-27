@@ -6,14 +6,14 @@ settings:
 
 dependencies:
   dotenv:
-    specifier: ^16.3.1
+    specifier: ^16.4.1
     version: 16.4.1
   ejs:
     specifier: ^3.1.9
     version: 3.1.9
   gaudiya-gitanjali-ua:
     specifier: github:scsm-ua/gaudiya-gitanjali-ua
-    version: github.com/scsm-ua/gaudiya-gitanjali-ua/5da824e2e7b903d08d7f84c386956f6cd9261c13
+    version: github.com/scsm-ua/gaudiya-gitanjali-ua/b878372b7bcdc36fd45480dfe6a7050ce39e2f99
   gulp-ejs:
     specifier: ^5.1.0
     version: 5.1.0
@@ -33,7 +33,7 @@ dependencies:
     specifier: ^4.1.0
     version: 4.1.0
   sass:
-    specifier: ^1.66.1
+    specifier: ^1.70.0
     version: 1.70.0
   vinyl-source-stream:
     specifier: ^2.0.0
@@ -2519,8 +2519,8 @@ packages:
       yargs-parser: 5.0.1
     dev: true
 
-  github.com/scsm-ua/gaudiya-gitanjali-ua/5da824e2e7b903d08d7f84c386956f6cd9261c13:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/5da824e2e7b903d08d7f84c386956f6cd9261c13}
+  github.com/scsm-ua/gaudiya-gitanjali-ua/b878372b7bcdc36fd45480dfe6a7050ce39e2f99:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/b878372b7bcdc36fd45480dfe6a7050ce39e2f99}
     name: gaudiya-gitanjali-ua
     version: 1.0.0
     dev: false
