@@ -49,11 +49,7 @@ const PATHS = {
         EJS_FILES: 'src/templates',
         EJS_PARTIALS_FILES: 'src/templates/partials',
         HTML_FILES: 'src/html',
-        IMG_FILES: 'src/images',
-        MD_FILES: 'src/md',
-        MD_INDEX_FILE: 'src/meta/index.md',
-        JSON_CATEGORIES_FILE: 'src/meta/categories.json',
-        JSON_INDEX_LIST_FILE: 'src/meta/index-list.json'
+        IMG_FILES: 'src/images'
     },
     PAGES: {
         INDEX: ORIGIN + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),

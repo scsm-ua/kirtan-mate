@@ -2,12 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 const { PATHS } = require('../scripts/constants');
-const categories_meta = require(path.resolve(PATHS.SRC.JSON_CATEGORIES_FILE));
+const { getContentsFilePath } = require('./songbookLoader');
 
 // Songs.
 
 function readSongs() {
     var songs = {};
+    // TODO: fix PATHS.SRC.MD_FILES
     fs.readdirSync(PATHS.SRC.MD_FILES).forEach((file) => {
         var song_path = path.resolve(PATHS.SRC.MD_FILES, file);
         songs[file] = processSong(song_path);
@@ -155,7 +156,7 @@ function getSongLineInfo(line) {
 
 // Index.
 function getIndexJSON() {
-    var data = fs.readFileSync(PATHS.SRC.MD_INDEX_FILE);
+    var data = fs.readFileSync(getContentsFilePath());
     var text = data.toString();
     var categories = convertIndexToJSON(text);
 

@@ -8,6 +8,7 @@
     "dependencies": {
         "dotenv": "^16.3.1",
         "ejs": "^3.1.9",
+        "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua",
         "gulp-ejs": "^5.1.0",
         "gulp-rename": "^2.0.0",
         "gulp-sass": "^5.1.0",
