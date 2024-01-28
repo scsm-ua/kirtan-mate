@@ -2,7 +2,7 @@ Preview: https://scsm-ua.github.io/kirtan-mate/
 
 ## Run
 
-    npm i
+    pnpm i
 
     gulp build
 
