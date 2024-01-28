@@ -11,6 +11,7 @@ function findSongbook() {
         var songbookInfoPath = path.resolve(modulePath, 'songbook.json');
         if (fs.existsSync(songbookInfoPath)) {
             songbookPath = modulePath;
+            console.log('--- Loading songbook:', modulePath)
             return;
         }
     }

@@ -264,6 +264,10 @@ function getSongFirstLine(filename) {
         return;
     }
     var first_verse = song_json.verses.find((verse) => verse.number);
+    if (!first_verse) {
+        // Get first verse if no numbers.
+        first_verse = song_json.verses[0];
+    }
     var first_line = first_verse?.text && first_verse.text[0];
     if (!first_line) {
         // TODO: better errors processing.

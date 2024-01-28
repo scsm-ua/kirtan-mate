@@ -18,6 +18,10 @@ function makeIndexList(categories) {
     .forEach((item) => {
         const firstLetter = getFirstLetter(item);
 
+        if (!firstLetter) {
+            console.warn('No first letter in', item);
+        }
+
         if (!list.has(firstLetter)) {
             return list.set(firstLetter, [item]);
         }
@@ -57,7 +61,8 @@ function makeLineVersions(items) {
             aliasName: alias
         })
 
-        if (~idx) {
+        // Do not put empty alias when all word in braces.
+        if (idx > -1 && idx < alias.length - 1) {
             arr.push({
                 ...cat,
                 aliasName: alias.slice(idx + 1).trim()
