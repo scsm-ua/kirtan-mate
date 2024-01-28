@@ -19,6 +19,7 @@ const {
 const { makeIndexList } = require('./scripts/makeIndexList');
 const { PATHS, ORIGIN } = require('./scripts/constants');
 const { readFile } = require('./scripts/ioHelpers');
+const { getSongsPath } = require('./scripts/songbookLoader');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
@@ -83,9 +84,8 @@ gulp.task('md2json', (done) => {
     const templatePromise = fs.readFileSync(
         SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
     );
-
     return gulp
-        .src(SRC.MD_FILES + '/**/*.md')
+        .src(getSongsPath() + '/*.md')
         .pipe(md2jsonConvertor(templatePromise))
         .pipe(
             rename({
