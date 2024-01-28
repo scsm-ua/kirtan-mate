@@ -18,6 +18,8 @@ Example:
 
     "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua#369e9f1b5b758080f31edd690e33721402a1443e",
 
+In case when no commit specified, use `pnpm update` in CLI to refresh lock file.
+
 ## GH Pages deploy setup
 
 Used deploy script: [.github/workflows/build_and_deploy.yml](.github/workflows/build_and_deploy.yml):
@@ -57,9 +59,3 @@ Setup github pages for repository.
 Copy `.env.sample` to `.env` with your local root path for `HOME_BASE_URL`.
 
 To use with local filesystem use `EXPLICIT_INDEX=1` to build home path with  `.../index.html`.
-
-## Songbooks version
-
-Update songbook version in `pnpm-lock.yml` with:
-
-    pnpm update
