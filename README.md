@@ -8,6 +8,16 @@ Preview: https://scsm-ua.github.io/kirtan-mate/
 
     gulp watch
 
+## Update songbook version
+
+Update required commit hash to `dependencies` section in [package.json](package.json) and push coomit:
+
+    "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua#<REQUIRED COMMIT HASH>",
+
+Example:
+
+    "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua#369e9f1b5b758080f31edd690e33721402a1443e",
+
 ## GH Pages deploy setup
 
 Used deploy script: [.github/workflows/build_and_deploy.yml](.github/workflows/build_and_deploy.yml):
