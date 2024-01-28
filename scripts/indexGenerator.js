@@ -2,15 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 const { PATHS } = require('../scripts/constants');
-const { getContentsFilePath } = require('./songbookLoader');
+const { getContentsFilePath, getSongsPath } = require('./songbookLoader');
 
 // Songs.
 
 function readSongs() {
     var songs = {};
-    // TODO: fix PATHS.SRC.MD_FILES
-    fs.readdirSync(PATHS.SRC.MD_FILES).forEach((file) => {
-        var song_path = path.resolve(PATHS.SRC.MD_FILES, file);
+    fs.readdirSync(getSongsPath()).forEach((file) => {
+        var song_path = path.resolve(getSongsPath(), file);
         songs[file] = processSong(song_path);
     });
 
