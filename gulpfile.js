@@ -21,6 +21,7 @@ const { makeIndexList } = require('./scripts/makeIndexList');
 const { PATHS, ORIGIN } = require('./scripts/constants');
 const { readFile } = require('./scripts/ioHelpers');
 const { getSongsPath } = require('./scripts/songbookLoader');
+const { i18n } = require('./scripts/i18n');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
@@ -118,8 +119,8 @@ gulp.task('index', () => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${FILES.HTML.INDEX}`;
 
     const headParts = {
-        title: 'Зміст',
-        description: 'Сайт вайшнавських пісень',
+        title: i18n('Contents'),
+        description: i18n('Vaishnava Songbook'),
         path: '/'
     };
 
@@ -139,7 +140,8 @@ gulp.task('index', () => {
             ejs({
                 categories: require(BUILD.CONTENTS_FILE),
                 headParts: createHeadParts(headParts),
-                paths: paths
+                paths: paths,
+                i18n: i18n
             }).on('error', console.error)
         )
         .pipe(gulp.dest(BUILD.ROOT))
@@ -153,8 +155,8 @@ gulp.task('index-list', () => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_LIST} ${BUILD.ROOT}/${FILES.HTML.INDEX_LIST}`;
 
     const headParts = {
-        title: 'Індекс А-Я',
-        description: 'Сайт вайшнавських пісень',
+        title: i18n('Index'),
+        description: i18n('Vaishnava Songbook'),
         path: '/' + FILES.HTML.INDEX_LIST
     };
 
@@ -174,7 +176,8 @@ gulp.task('index-list', () => {
             ejs({
                 items: makeIndexList(require(BUILD.CONTENTS_FILE), require(BUILD.INDEX_FILE)),
                 headParts: createHeadParts(headParts),
-                paths: paths
+                paths: paths,
+                i18n: i18n
             }).on('error', console.error)
         )
         .pipe(gulp.dest(BUILD.ROOT))
@@ -193,7 +196,8 @@ gulp.task('sitemap', () => {
             ejs({
                 indexListPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX_LIST),
                 indexPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX),
-                songList: createSongXMLParts(require(BUILD.CONTENTS_FILE))
+                songList: createSongXMLParts(require(BUILD.CONTENTS_FILE)),
+                i18n: i18n
             }).on('error', console.error)
         )
         .pipe(gulp.dest(BUILD.ROOT))

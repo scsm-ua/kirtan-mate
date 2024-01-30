@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 var songbookPath;
+var songbookInfo;
 
 function findSongbook() {
     var modulesRootPath = path.resolve(__dirname, '../node_modules');
@@ -10,6 +11,7 @@ function findSongbook() {
     for (const modulePath of modules_listing) {
         var songbookInfoPath = path.resolve(modulePath, 'songbook.json');
         if (fs.existsSync(songbookInfoPath)) {
+            songbookInfo = require(songbookInfoPath);
             songbookPath = modulePath;
             console.log('--- Loading songbook:', modulePath)
             return;
@@ -34,5 +36,6 @@ findSongbook();
 module.exports = {
     getContentsFilePath: getContentsFilePath,
     getIndexFilePath: getIndexFilePath,
-    getSongsPath: getSongsPath
+    getSongsPath: getSongsPath,
+    songbookInfo: songbookInfo
 };

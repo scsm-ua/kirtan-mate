@@ -7,6 +7,7 @@ const VinylStream = require('vinyl-source-stream');
 const { convertMDToJSON, getContentsJSON, getIndexJSON } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
 const { ORIGIN, PATHS } = require('./constants');
+const { i18n } = require('./i18n');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 
@@ -67,13 +68,12 @@ function fillTemplate(template, content, filePath) {
     return ejs.render(template, {
         author: author,
         contentItems: JSON.stringify(require(BUILD.CONTENTS_FILE)),
-        functions: {
-            transformLine: transformLine
-        },
         headParts: createHeadParts(headParts),
         paths: paths,
         title: title,
-        verses: verses
+        verses: verses,
+        i18n: i18n,
+        transformLine: transformLine
     });
 }
 
