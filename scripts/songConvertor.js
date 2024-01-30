@@ -6,7 +6,7 @@ const VinylStream = require('vinyl-source-stream');
 /**/
 const { convertMDToJSON, getContentsJSON, getIndexJSON } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
-const { ORIGIN, PATHS } = require('./constants');
+const { PATHS } = require('./constants');
 const { i18n } = require('./i18n');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
