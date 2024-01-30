@@ -58,7 +58,7 @@ function makeLineVersions(items, index) {
         var alias;
 
         if (index[item.id]) {
-            alias = item.id;
+            alias = index[item.id];
         } else {
             alias = processLineEnding(item.aliasName);
         }
@@ -103,7 +103,7 @@ function processLineEnding(line) {
  * @returns {string}
  */
 function getFirstLetter(item) {
-    return item.aliasName.startsWith('(')
+    return (item.aliasName.startsWith('(') || item.aliasName.startsWith('‘'))
         ? item.aliasName[1]
         : item.aliasName[0];
 }
