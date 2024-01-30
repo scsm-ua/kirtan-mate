@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const { PATHS } = require('../scripts/constants');
-const { getContentsFilePath, getSongsPath } = require('./songbookLoader');
+const { getContentsFilePath, getSongsPath, getIndexFilePath } = require('./songbookLoader');
 
 // Songs.
 
@@ -154,10 +154,10 @@ function getSongLineInfo(line) {
 }
 
 // Index.
-function getIndexJSON() {
+function getContentsJSON() {
     var data = fs.readFileSync(getContentsFilePath());
     var text = data.toString();
-    var categories = convertIndexToJSON(text);
+    var categories = convertContentsToJSON(text);
 
     // Filter empty categories.
     categories = categories.filter((category) => category.items.length > 0);
@@ -166,7 +166,45 @@ function getIndexJSON() {
     return categories;
 }
 
+function getIndexJSON() {
+    if (fs.existsSync(getIndexFilePath())) {
+        var data = fs.readFileSync(getIndexFilePath());
+        var text = data.toString();
+        var index = convertIndexToJSON(text);
+    
+        // console.log(JSON.stringify(index, null, 4));
+        return index;
+    } else {
+        // Fallback to empty.
+        return convertIndexToJSON('');
+    }
+}
+
 function convertIndexToJSON(text) {
+    var lines = text.split(/\n/).filter(i => !!i);
+    var songs = {};
+
+    lines.forEach((line) => {
+
+        var match = line.match(/^\s?- \[([^\]]+)\]\(songs\/([^\)]+)\.md\)/);
+
+        if (match) {
+            var song_alias = match[1];
+            var song_id = match[2];
+            if (!(song_id in songs)) {
+                songs[song_id] = song_alias;
+            } else {
+                console.warn('- Duplicate index line', line);
+            }
+        } else {
+            console.warn('- No match in index for line', line);
+        }
+    });
+
+    return songs;
+}
+
+function convertContentsToJSON(text) {
     var lines = text.split(/\n/);
     var categories = [];
     var last_line_id;
@@ -192,6 +230,7 @@ function convertIndexToJSON(text) {
                 break;
             case 'song':
                 getLastCategory().items.push({
+                    id: name,
                     name: getSongName(name),
                     // TODO: trim
                     // TODO: replace tabs
@@ -286,5 +325,6 @@ function getSongFirstLine(filename) {
 /**/
 module.exports = {
     convertMDToJSON: convertSong,
+    getContentsJSON: getContentsJSON,
     getIndexJSON: getIndexJSON
 };

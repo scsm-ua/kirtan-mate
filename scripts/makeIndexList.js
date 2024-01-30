@@ -7,11 +7,12 @@ const deburr = require('lodash.deburr');
  * @param categories: TCategory[]
  * @returns {TCategory[]}
  */
-function makeIndexList(categories) {
+function makeIndexList(categories, index) {
     const list = new Map();
 
     makeLineVersions(
-        categories.flatMap((cat) => cat.items)
+        categories.flatMap((cat) => cat.items),
+        index
     ).sort((a, b) =>
         getAliasCleaned(a).localeCompare(getAliasCleaned(b))
     )
@@ -49,22 +50,29 @@ function makeIndexList(categories) {
  * @param items: TCategoryItem[]
  * @returns {TCategoryItem[]}
  */
-function makeLineVersions(items) {
+function makeLineVersions(items, index) {
     const arr = [];
 
-    items.forEach((cat) => {
-        const alias = processLineEnding(cat.aliasName);
-        const idx = alias.indexOf(')');
+    items.forEach((item) => {
+
+        var alias;
+
+        if (index[item.id]) {
+            alias = item.id;
+        } else {
+            alias = processLineEnding(item.aliasName);
+        }
 
         arr.push({
-            ...cat,
+            ...item,
             aliasName: alias
         })
 
         // Do not put empty alias when all word in braces.
+        const idx = alias.indexOf(')');
         if (idx > -1 && idx < alias.length - 1) {
             arr.push({
-                ...cat,
+                ...item,
                 aliasName: alias.slice(idx + 1).trim()
             })
         }

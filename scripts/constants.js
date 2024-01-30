@@ -2,7 +2,7 @@ const path = require('path');
 
 const OUTPUT_DIR = 'docs';
 const contentItems = 'contentItems.json';
-const indexListJson = 'index-list.json';
+const indexItems = 'indexItems.json';
 const indexPath = 'index.html';
 const indexListPath = 'index-list-page.html';
 const sharingBanner = 'sharing-banner.png';
@@ -20,8 +20,8 @@ const PATHS = {
         IMG_FILES: OUTPUT_DIR + '/images',
         JSON_FILES: OUTPUT_DIR + '/json',
         // `resolve` to use with `require`.
-        INDEX_FILE: path.resolve(OUTPUT_DIR + '/json/' + contentItems),
-        INDEX_LIST_FILE: path.resolve(OUTPUT_DIR + '/json/' + indexListJson),
+        CONTENTS_FILE: path.resolve(OUTPUT_DIR + '/json/' + contentItems),
+        INDEX_FILE: path.resolve(OUTPUT_DIR + '/json/' + indexItems),
         ROOT: OUTPUT_DIR
     },
     FILES: {
@@ -36,8 +36,8 @@ const PATHS = {
             INDEX_LIST: indexListPath
         },
         JSON: {
-            INDEX: contentItems,
-            INDEX_LIST: indexListJson
+            CONTENTS: contentItems,
+            INDEX: indexItems
         },
         SHARING_BANNER: (process.env.HOME_BASE_URL || '') + '/images/' + sharingBanner,
         XML: {

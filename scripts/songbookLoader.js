@@ -21,6 +21,10 @@ function getContentsFilePath() {
     return songbookPath + '/contents.md';
 }
 
+function getIndexFilePath() {
+    return songbookPath + '/index.md';
+}
+
 function getSongsPath() {
     return songbookPath + '/songs';
 }
@@ -29,5 +33,6 @@ findSongbook();
 
 module.exports = {
     getContentsFilePath: getContentsFilePath,
+    getIndexFilePath: getIndexFilePath,
     getSongsPath: getSongsPath
 };

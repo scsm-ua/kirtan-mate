@@ -4,7 +4,7 @@ const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
 
 /**/
-const { convertMDToJSON, getIndexJSON } = require('./indexGenerator');
+const { convertMDToJSON, getContentsJSON, getIndexJSON } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
 const { ORIGIN, PATHS } = require('./constants');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
@@ -66,7 +66,7 @@ function fillTemplate(template, content, filePath) {
 
     return ejs.render(template, {
         author: author,
-        contentItems: JSON.stringify(require(BUILD.INDEX_FILE)),
+        contentItems: JSON.stringify(require(BUILD.CONTENTS_FILE)),
         functions: {
             transformLine: transformLine
         },
@@ -117,6 +117,19 @@ function md2json() {
 }
 
 /****************************/
+/* Generate JSON contents      */
+/****************************/
+
+/**
+ *
+ */
+function getJSONContentsStream() {
+    const stream = VinylStream(FILES.JSON.CONTENTS);
+    stream.end(JSON.stringify(getContentsJSON(), null, 2));
+    return stream;
+}
+
+/****************************/
 /* Generate JSON index      */
 /****************************/
 
@@ -131,6 +144,7 @@ function getJSONIndexStream() {
 
 /**/
 module.exports = {
+    getJSONContentsStream: getJSONContentsStream,
     getJSONIndexStream: getJSONIndexStream,
     makeSongHTML,
     md2jsonConvertor: md2json,

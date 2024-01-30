@@ -12,6 +12,7 @@ require('dotenv').config();
 /**/
 const { createHeadParts, createSongXMLParts } = require('./scripts/createHeadParts');
 const {
+    getJSONContentsStream,
     getJSONIndexStream,
     makeSongHTML,
     md2jsonConvertor
@@ -63,8 +64,9 @@ gulp.task('html', async () => {
 
     return gulp
         .src([
-            BUILD.JSON_FILES + '/**/*.json',
-            '!' + BUILD.JSON_FILES + '/**/contentItems.json'
+            BUILD.JSON_FILES + '/*.json',
+            '!' + BUILD.CONTENTS_FILE,
+            '!' + BUILD.INDEX_FILE
         ])
         .pipe(makeSongHTML(templatePromise))
         .pipe(
@@ -93,6 +95,13 @@ gulp.task('md2json', (done) => {
             })
         )
         .pipe(gulp.dest(BUILD.JSON_FILES), done);
+});
+
+/**
+ *
+ */
+gulp.task('generate-contents', (done) => {
+    return getJSONContentsStream().pipe(gulp.dest(BUILD.JSON_FILES), done);
 });
 
 /**
@@ -128,7 +137,7 @@ gulp.task('index', () => {
         .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX)
         .pipe(
             ejs({
-                categories: require(BUILD.INDEX_FILE),
+                categories: require(BUILD.CONTENTS_FILE),
                 headParts: createHeadParts(headParts),
                 paths: paths
             }).on('error', console.error)
@@ -163,7 +172,7 @@ gulp.task('index-list', () => {
         .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
         .pipe(
             ejs({
-                items: makeIndexList(require(BUILD.INDEX_FILE)),
+                items: makeIndexList(require(BUILD.CONTENTS_FILE), require(BUILD.INDEX_FILE)),
                 headParts: createHeadParts(headParts),
                 paths: paths
             }).on('error', console.error)
@@ -184,7 +193,7 @@ gulp.task('sitemap', () => {
             ejs({
                 indexListPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX_LIST),
                 indexPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX),
-                songList: createSongXMLParts(require(BUILD.INDEX_FILE))
+                songList: createSongXMLParts(require(BUILD.CONTENTS_FILE))
             }).on('error', console.error)
         )
         .pipe(gulp.dest(BUILD.ROOT))
@@ -203,6 +212,7 @@ gulp.task('build', (done) => {
     runSequence(
         'clean',
         'md2json',
+        'generate-contents',
         'generate-index',
         'index-list',
         ['html-folder', 'copy-img', 'copy-font'],
