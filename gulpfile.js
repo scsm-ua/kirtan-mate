@@ -22,7 +22,7 @@ const {
 const { makeIndexList } = require('./scripts/makeIndexList');
 const { PATHS, ORIGIN } = require('./scripts/constants');
 const { readFile } = require('./scripts/ioHelpers');
-const { getSongsPath, getSongbookIdList } = require('./scripts/songbookLoader');
+const { getSongsPath, getSongbookIdList, getSongbookName } = require('./scripts/songbookLoader');
 const { i18n } = require('./scripts/i18n');
 const { getTemplatePaths } = require('./scripts/utils');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
@@ -149,7 +149,54 @@ gulp.task('generate-index', (done) => {
 /**
  *
  */
-gulp.task('index', (done) => {
+gulp.task('songbooks', (done) => {
+
+    var songbooks = getSongbookIdList().map(songbook_id => {
+        return {
+            name: getSongbookName(songbook_id),
+            contentsPath: PATHS.PAGES.getIndex(songbook_id)
+        };
+    });
+
+    const headParts = {
+        // TODO: ??
+        title: 'Vaishnava Songbook',
+        // TODO: ??
+        description: 'Vaishnava Songbook',
+        path: PATHS.PAGES.INDEX
+    };
+
+    const paths = {
+        toCss: PATHS.RELATIVE.CSS,
+        toImages: PATHS.RELATIVE.IMG,
+        toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
+        toPages: {
+            index: PATHS.PAGES.INDEX
+        }
+    };
+
+    return gulp
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.SONGBOOKS)
+            .pipe(
+                ejs({
+                    songbooks: songbooks,
+                    headParts: createHeadParts(headParts),
+                    paths: paths
+                }).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: 'index',
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done);
+});
+
+/**
+ *
+ */
+gulp.task('songbook-contents', (done) => {
     const tasks = getSongbookIdList().map(songbook_id => {
 
         var current_i18n = i18n(songbook_id);
@@ -187,7 +234,7 @@ gulp.task('index', (done) => {
 /**
  *
  */
-gulp.task('index-list', (done) => {
+gulp.task('songbook-index', (done) => {
     const tasks = getSongbookIdList().map(songbook_id => {
 
         const headParts = {
@@ -234,7 +281,9 @@ gulp.task('sitemap', () => {
         .src(SRC.EJS_FILES + '/' + FILES.EJS.SITEMAP)
         .pipe(
             ejs({
+                // TODO: fix
                 indexListPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX_LIST),
+                // TODO: fix
                 indexPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX),
                 songList: songList,
                 i18n: i18n
@@ -260,7 +309,7 @@ gulp.task('build', (done) => {
         'generate-index',
         ['copy-img', 'copy-font'],
         ['sass', 'html', 'sitemap'],
-        ['index', 'index-list'],
+        ['songbook-contents', 'songbook-index'],
         done
     );
 });
@@ -272,6 +321,6 @@ gulp.task('watch', () => {
     gulp.watch(SRC.CSS_FILES + '/**/*.scss', gulp.series(['sass']));
     gulp.watch(
         [SRC.MD_FILES + '/**/*.md', SRC.EJS_FILES + '/**/*.ejs'],
-        gulp.series(['html', 'index'])
+        gulp.series(['html', 'songbook-contents', 'songbook-index', 'songbooks'])
     );
 });

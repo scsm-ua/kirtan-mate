@@ -1,6 +1,6 @@
 {
-    "name": "markdown-to-html",
-    "version": "0.1.0",
+    "name": "kirtan-mate",
+    "version": "0.3.0",
     "scripts": {
         "build": "gulp build",
         "watch": "gulp watch"

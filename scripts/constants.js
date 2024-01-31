@@ -37,8 +37,11 @@ const PATHS = {
     },
     FILES: {
         EJS: {
+            // TODO: rename
             INDEX: 'index.ejs',
+            // TODO: rename
             INDEX_LIST: 'index-list-page.ejs',
+            SONGBOOKS: 'songbooks.ejs',
             SITEMAP: 'sitemap.ejs',
             SONG_PAGE: 'song-page.ejs'
         },
@@ -62,7 +65,10 @@ const PATHS = {
         IMG_FILES: 'src/images'
     },
     PAGES: {
+        INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
+        // TODO: rename
         getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
+        // TODO: rename
         getIndexList: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath
     }
 };
