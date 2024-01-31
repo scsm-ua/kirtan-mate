@@ -220,8 +220,9 @@ gulp.task('songbook-contents', (done) => {
                 }).on('error', console.error)
             )
             .pipe(gulp.dest(BUILD.ROOT))
+            // TODO: use rename?
             .pipe(shell([extChangeCmd]), done);
-        task.displayName = "index " + songbook_id;
+        task.displayName = "songbook-contents " + songbook_id;
         return task;
     });
 
@@ -256,8 +257,9 @@ gulp.task('songbook-index', (done) => {
                 }).on('error', console.error)
             )
             .pipe(gulp.dest(BUILD.ROOT + ''))
+            // TODO: use rename?
             .pipe(shell([extChangeCmd]), done);
-        task.displayName = "index-list " + songbook_id;
+        task.displayName = "songbook-index " + songbook_id;
         return task;
     });
 
@@ -309,7 +311,7 @@ gulp.task('build', (done) => {
         'generate-index',
         ['copy-img', 'copy-font'],
         ['sass', 'html', 'sitemap'],
-        ['songbook-contents', 'songbook-index'],
+        ['songbook-contents', 'songbook-index', 'songbooks'],
         done
     );
 });
