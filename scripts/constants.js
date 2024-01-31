@@ -19,12 +19,14 @@ const PATHS = {
     RELATIVE: {
         CSS: ORIGIN + '/' + CSS_DIR,
         IMG: ORIGIN + '/' + IMG_DIR,
+        toSongs: (songbook_id) => ORIGIN + '/' + songbook_id
     },
     BUILD: {
         CSS_FILES: OUTPUT_DIR + '/' + CSS_DIR,
         HTML_FILES: OUTPUT_DIR + '/html',
         IMG_FILES: OUTPUT_DIR + '/' + IMG_DIR,
-        JSON_FILES: OUTPUT_DIR + '/json',
+        getJsonPath: (songbook_id) => OUTPUT_DIR + '/json/' + songbook_id,
+        getSongbookRoot: (songbook_id) => OUTPUT_DIR + '/' + songbook_id,
         getContentsFile: function(songbook_id) {
             return path.resolve(OUTPUT_DIR, 'json', songbook_id, contentItems);
         },
@@ -48,7 +50,7 @@ const PATHS = {
             CONTENTS: contentItems,
             INDEX: indexItems
         },
-        SHARING_BANNER: (process.env.HOME_BASE_URL || '') + '/images/' + sharingBanner,
+        SHARING_BANNER: ORIGIN + '/images/' + sharingBanner,
         XML: {
             SITEMAP: 'sitemap.xml'
         }
@@ -61,7 +63,7 @@ const PATHS = {
     },
     PAGES: {
         getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
-        getIndexList:(songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath
+        getIndexList: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath
     }
 };
 

@@ -6,10 +6,10 @@ const VinylStream = require('vinyl-source-stream');
 /**/
 const { convertMDToJSON, getContentsJSON, getIndexJSON } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
-const { PATHS } = require('./constants');
+const { PATHS, ORIGIN } = require('./constants');
 const { i18n } = require('./i18n');
 const { getTemplatePaths } = require('./utils');
-const { BUILD, FILES, PAGES, SRC } = PATHS;
+const { BUILD, FILES } = PATHS;
 
 
 /*** JSON to HTML song conversion. ***/
@@ -48,6 +48,7 @@ function makeSongHTML(songbook_id, templatePromise) {
  * @return {string}
  */
 function fillTemplate(songbook_id, template, content, filePath) {
+    // TODO: subtitle.
     const { author, title, verses } = content;
 
     if (!verses) {
@@ -61,7 +62,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
         // TODO: subtitle.
         title: author ? title + '. ' + author : title,
         description: `${text[0]}\n${text[1]}...`,
-        path: '/html/' + songbook_id + '/' + path.parse(filePath).name + '.html'
+        path: ORIGIN + '/' + songbook_id + '/' + path.parse(filePath).name + '.html'
     };
 
     return ejs.render(template, {

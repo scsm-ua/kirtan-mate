@@ -61,22 +61,21 @@ gulp.task('html', async (done) => {
         SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
     );
 
-    const tasks = getSongbookIdList().map(songbook_id => {
-
-        var task = () => gulp
-            .src([
-                BUILD.JSON_FILES + '/**/*.json',
-                '!**/' + FILES.JSON.CONTENTS,
-                '!**/' + FILES.JSON.INDEX
-            ])
-            .pipe(makeSongHTML(songbook_id, templatePromise))
-            .pipe(
-                rename({
-                    extname: '.html'
-                })
-            )
-            .pipe(gulp.dest(BUILD.ROOT));
-
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        var task = (done) => gulp
+                .src([
+                    BUILD.getJsonPath(songbook_id) + '/*.json',
+                    '!**/' + FILES.JSON.CONTENTS,
+                    '!**/' + FILES.JSON.INDEX
+                ])
+                .pipe(makeSongHTML(songbook_id, templatePromise))
+                .pipe(
+                    rename({
+                        extname: '.html'
+                    })
+                )
+                .pipe(gulp.dest(BUILD.getSongbookRoot(songbook_id)), done);
+        
         task.displayName = "html " + songbook_id;
         return task;
     });
@@ -104,7 +103,7 @@ gulp.task('md2json', (done) => {
                     extname: '.json'
                 })
             )
-            .pipe(gulp.dest(BUILD.JSON_FILES + '/' + songbook_id), done);
+            .pipe(gulp.dest(BUILD.getJsonPath(songbook_id)), done);
             task.displayName = "md2json " + songbook_id;
         return task;
     });
@@ -120,7 +119,7 @@ gulp.task('md2json', (done) => {
  */
 gulp.task('generate-contents', (done) => {
     const tasks = getSongbookIdList().map(songbook_id => {
-        var task = (done) => getJSONContentsStream(songbook_id).pipe(gulp.dest(BUILD.JSON_FILES + '/' + songbook_id), done);
+        var task = (done) => getJSONContentsStream(songbook_id).pipe(gulp.dest(BUILD.getJsonPath(songbook_id)), done);
         task.displayName = "generate-contents " + songbook_id;
         return task;
     });
@@ -136,7 +135,7 @@ gulp.task('generate-contents', (done) => {
  */
 gulp.task('generate-index', (done) => {
     const tasks = getSongbookIdList().map(songbook_id => {
-        var task = (done) => getJSONIndexStream(songbook_id).pipe(gulp.dest(BUILD.JSON_FILES + '/' + songbook_id), done);
+        var task = (done) => getJSONIndexStream(songbook_id).pipe(gulp.dest(BUILD.getJsonPath(songbook_id)), done);
         task.displayName = "generate-index " + songbook_id;
         return task;
     });
@@ -151,8 +150,6 @@ gulp.task('generate-index', (done) => {
  *
  */
 gulp.task('index', (done) => {
-    const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${FILES.HTML.INDEX}`;
-
     const tasks = getSongbookIdList().map(songbook_id => {
 
         var current_i18n = i18n(songbook_id);
@@ -160,10 +157,12 @@ gulp.task('index', (done) => {
         const headParts = {
             title: current_i18n('Contents'),
             description: current_i18n('Vaishnava Songbook'),
-            path: '/'
+            path: PATHS.PAGES.getIndex(songbook_id)
         };
+
+        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX}`;
     
-        var task = () => gulp
+        var task = (done) => gulp
             .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX)
             .pipe(
                 ejs({
@@ -174,7 +173,7 @@ gulp.task('index', (done) => {
                 }).on('error', console.error)
             )
             .pipe(gulp.dest(BUILD.ROOT))
-            .pipe(shell([extChangeCmd]));
+            .pipe(shell([extChangeCmd]), done);
         task.displayName = "index " + songbook_id;
         return task;
     });
@@ -189,17 +188,17 @@ gulp.task('index', (done) => {
  *
  */
 gulp.task('index-list', (done) => {
-    const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_LIST} ${BUILD.ROOT}/${FILES.HTML.INDEX_LIST}`;
-
     const tasks = getSongbookIdList().map(songbook_id => {
 
         const headParts = {
             title: i18n(songbook_id)('Index'),
             description: i18n(songbook_id)('Vaishnava Songbook'),
-            path: '/' + FILES.HTML.INDEX_LIST
+            path: PATHS.PAGES.getIndexList(songbook_id)
         };
 
-        var task = () => gulp
+        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_LIST} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX_LIST}`;
+
+        var task = (done) => gulp
             .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
             .pipe(
                 ejs({
@@ -209,8 +208,8 @@ gulp.task('index-list', (done) => {
                     i18n: i18n(songbook_id)
                 }).on('error', console.error)
             )
-            .pipe(gulp.dest(BUILD.ROOT))
-            .pipe(shell([extChangeCmd]));
+            .pipe(gulp.dest(BUILD.ROOT + ''))
+            .pipe(shell([extChangeCmd]), done);
         task.displayName = "index-list " + songbook_id;
         return task;
     });
@@ -259,9 +258,9 @@ gulp.task('build', (done) => {
         'md2json',
         'generate-contents',
         'generate-index',
-        'index-list',
         ['copy-img', 'copy-font'],
-        ['sass', 'html', 'index', 'sitemap'],
+        ['sass', 'html', 'sitemap'],
+        ['index', 'index-list'],
         done
     );
 });

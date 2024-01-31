@@ -279,7 +279,7 @@ function getSongJSON(songbook_id, filename) {
         return songs_cache[filename];
     }
 
-    var filepath = path.resolve(PATHS.BUILD.JSON_FILES, songbook_id, filename + '.json');
+    var filepath = path.resolve(PATHS.BUILD.getJsonPath(songbook_id), filename + '.json');
     if (!fs.existsSync(filepath)) {
         // TODO: better errors processing.
         console.error('Song JSON not found', filepath);

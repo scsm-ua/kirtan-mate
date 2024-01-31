@@ -9,18 +9,17 @@ const { PATHS, ORIGIN } = require('./constants');
 function createHeadParts({ title, description, path }) {
     const imgSrc = PATHS.FILES.SHARING_BANNER;
     const _title = title + ' | Kirtan Mate';
-    const canonical = ORIGIN + path;
 
     return `
         <title>${_title}</title>
-        <link rel="canonical" href="${canonical}" />
+        <link rel="canonical" href="${path}" />
         <meta name="description" content="${description}" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property="og:title" content="${title}" />
         <meta property="og:description" content="${description}" />
-        <meta property="og:url" content="${canonical}" />
+        <meta property="og:url" content="${path}" />
         <meta property="og:locale" content="ua_UA" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Kirtan Mate" />
@@ -55,8 +54,8 @@ function getSchema(path, title) {
             },
             {
                 '@type': 'CollectionPage',
-                '@id': ORIGIN + '/' + path,
-                'url': ORIGIN + '/' + path,
+                '@id': path,
+                'url': path,
                 'name': title,
                 'isPartOf': {
                     '@id': ORIGIN + '/#website'
