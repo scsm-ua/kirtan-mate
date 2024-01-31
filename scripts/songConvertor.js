@@ -17,7 +17,7 @@ const { BUILD, FILES } = PATHS;
 /**
  *
  */
-function makeSongHTML(songbook_id, templatePromise) {
+function makeSongHTML(songbook_id, template) {
     return new Transform({
         objectMode: true,
 
@@ -25,7 +25,7 @@ function makeSongHTML(songbook_id, templatePromise) {
             try {
                 const htmlString = fillTemplate(
                     songbook_id,
-                    templatePromise,
+                    template,
                     JSON.parse(file.contents.toString()),
                     file.path
                 );

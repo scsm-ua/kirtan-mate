@@ -30,36 +30,36 @@ const { BUILD, FILES, PAGES, SRC } = PATHS;
 /**
  *
  */
-gulp.task('sass', () => {
+gulp.task('sass', (done) => {
     return gulp
         .src(SRC.CSS_FILES + '/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(BUILD.CSS_FILES));
+        .pipe(gulp.dest(BUILD.CSS_FILES), done);
 });
 
 /**
  *
  */
-gulp.task('copy-font', () => {
+gulp.task('copy-font', (done) => {
     return gulp
         .src(SRC.CSS_FILES + '/**/*.woff')
-        .pipe(gulp.dest(BUILD.CSS_FILES));
+        .pipe(gulp.dest(BUILD.CSS_FILES), done);
 });
 
 /**
  *
  */
-gulp.task('copy-img', () => {
-    return gulp.src(SRC.IMG_FILES + '/**/*').pipe(gulp.dest(BUILD.IMG_FILES));
+gulp.task('copy-img', (done) => {
+    return gulp.src(SRC.IMG_FILES + '/**/*').pipe(gulp.dest(BUILD.IMG_FILES), done);
 });
 
 /**
  *
  */
-gulp.task('html', async (done) => {
-    const templatePromise = await readFile(
+gulp.task('html', (done) => {
+    const template = fs.readFileSync(
         SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
-    );
+    ).toString();
 
     const tasks = getSongbookIdList().map((songbook_id) => {
         var task = (done) => gulp
@@ -68,7 +68,7 @@ gulp.task('html', async (done) => {
                     '!**/' + FILES.JSON.CONTENTS,
                     '!**/' + FILES.JSON.INDEX
                 ])
-                .pipe(makeSongHTML(songbook_id, templatePromise))
+                .pipe(makeSongHTML(songbook_id, template))
                 .pipe(
                     rename({
                         extname: '.html'
@@ -272,7 +272,7 @@ gulp.task('songbook-index', (done) => {
 /**
  *
  */
-gulp.task('sitemap', () => {
+gulp.task('sitemap', (done) => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.SITEMAP} ${BUILD.ROOT}/${FILES.XML.SITEMAP}`;
 
     var songList = getSongbookIdList().map(songbook_id => {
@@ -292,7 +292,7 @@ gulp.task('sitemap', () => {
             }).on('error', console.error)
         )
         .pipe(gulp.dest(BUILD.ROOT))
-        .pipe(shell([extChangeCmd]));
+        .pipe(shell([extChangeCmd]), done);
 });
 
 /**
@@ -306,12 +306,17 @@ gulp.task('clean', shell.task('rm -rf docs'));
 gulp.task('build', (done) => {
     runSequence(
         'clean',
+        'copy-img',
+        'copy-font',
+        'sass',
         'md2json',
         'generate-contents',
         'generate-index',
-        ['copy-img', 'copy-font'],
-        ['sass', 'html', 'sitemap'],
-        ['songbook-contents', 'songbook-index', 'songbooks'],
+        'html',
+        'songbook-contents',
+        'songbook-index',
+        'sitemap',
+        'songbooks',
         done
     );
 });
