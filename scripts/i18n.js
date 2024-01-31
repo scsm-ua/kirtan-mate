@@ -1,9 +1,14 @@
-const { songbookInfo } = require("./songbookLoader");
+const { getSongbooki18n } = require("./songbookLoader");
 
-module.exports.i18n = function(text) {
-    if (songbookInfo.i18n && text in songbookInfo.i18n) {
-        return songbookInfo.i18n[text];
-    } else {
-        return text;
+module.exports.i18n = function(songbook_id) {
+
+    var i18n_dict = getSongbooki18n(songbook_id);
+
+    return function(text) {
+        if (i18n_dict && text in i18n_dict) {
+            return i18n_dict[text];
+        } else {
+            return text;
+        }
     }
 }

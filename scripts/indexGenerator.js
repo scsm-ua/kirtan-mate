@@ -154,10 +154,10 @@ function getSongLineInfo(line) {
 }
 
 // Index.
-function getContentsJSON() {
-    var data = fs.readFileSync(getContentsFilePath());
+function getContentsJSON(songbook_id) {
+    var data = fs.readFileSync(getContentsFilePath(songbook_id));
     var text = data.toString();
-    var categories = convertContentsToJSON(text);
+    var categories = convertContentsToJSON(songbook_id, text);
 
     // Filter empty categories.
     categories = categories.filter((category) => category.items.length > 0);
@@ -166,9 +166,10 @@ function getContentsJSON() {
     return categories;
 }
 
-function getIndexJSON() {
-    if (fs.existsSync(getIndexFilePath())) {
-        var data = fs.readFileSync(getIndexFilePath());
+function getIndexJSON(songbook_id) {
+    var indexFilePath = getIndexFilePath(songbook_id);
+    if (fs.existsSync(indexFilePath)) {
+        var data = fs.readFileSync(indexFilePath);
         var text = data.toString();
         var index = convertIndexToJSON(text);
     
@@ -204,7 +205,7 @@ function convertIndexToJSON(text) {
     return songs;
 }
 
-function convertContentsToJSON(text) {
+function convertContentsToJSON(songbook_id, text) {
     var lines = text.split(/\n/);
     var categories = [];
     var last_line_id;
@@ -231,11 +232,11 @@ function convertContentsToJSON(text) {
             case 'song':
                 getLastCategory().items.push({
                     id: name,
-                    name: getSongName(name),
+                    name: getSongName(songbook_id, name),
                     // TODO: trim
                     // TODO: replace tabs
                     // TODO: trim -
-                    aliasName: getSongFirstLine(name),
+                    aliasName: getSongFirstLine(songbook_id, name),
                     fileName: name + '.html'
                 });
                 break;
@@ -273,12 +274,12 @@ function getIndexLineInfo(line) {
 
 var songs_cache = {};
 
-function getSongJSON(filename) {
+function getSongJSON(songbook_id, filename) {
     if (songs_cache[filename]) {
         return songs_cache[filename];
     }
 
-    var filepath = path.resolve(PATHS.BUILD.JSON_FILES, filename + '.json');
+    var filepath = path.resolve(PATHS.BUILD.JSON_FILES, songbook_id, filename + '.json');
     if (!fs.existsSync(filepath)) {
         // TODO: better errors processing.
         console.error('Song JSON not found', filepath);
@@ -289,16 +290,16 @@ function getSongJSON(filename) {
     return songs_cache[filename];
 }
 
-function getSongName(filename) {
-    var song_json = getSongJSON(filename);
+function getSongName(songbook_id, filename) {
+    var song_json = getSongJSON(songbook_id, filename);
     if (!song_json) {
         return;
     }
     return song_json.title;
 }
 
-function getSongFirstLine(filename) {
-    var song_json = getSongJSON(filename);
+function getSongFirstLine(songbook_id, filename) {
+    var song_json = getSongJSON(songbook_id, filename);
     if (!song_json) {
         return;
     }

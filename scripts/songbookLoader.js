@@ -1,41 +1,50 @@
 const path = require('path');
 const fs = require('fs');
 
-var songbookPath;
-var songbookInfo;
+var songbooks = {};
 
-function findSongbook() {
+function findSongbooks() {
     var modulesRootPath = path.resolve(__dirname, '../node_modules');
     var modules_listing = fs.readdirSync(modulesRootPath).map(module_name => path.resolve(modulesRootPath, module_name));
     
     for (const modulePath of modules_listing) {
         var songbookInfoPath = path.resolve(modulePath, 'songbook.json');
         if (fs.existsSync(songbookInfoPath)) {
-            songbookInfo = require(songbookInfoPath);
-            songbookPath = modulePath;
-            console.log('--- Loading songbook:', modulePath)
-            return;
+            var songbookInfo = require(songbookInfoPath);
+            songbookInfo.path = modulePath;
+            songbooks[songbookInfo.slug] = songbookInfo;
+
+            console.log('--- Loaded songbook:', modulePath)
         }
     }
 }
 
-function getContentsFilePath() {
-    return songbookPath + '/contents.md';
+function getContentsFilePath(songbook_id) {
+    return songbooks[songbook_id].path + '/contents.md';
 }
 
-function getIndexFilePath() {
-    return songbookPath + '/index.md';
+function getIndexFilePath(songbook_id) {
+    return songbooks[songbook_id].path + '/index.md';
 }
 
-function getSongsPath() {
-    return songbookPath + '/songs';
+function getSongsPath(songbook_id) {
+    return songbooks[songbook_id].path + '/songs';
 }
 
-findSongbook();
+function getSongbooki18n(songbook_id) {
+    return songbooks[songbook_id].i18n;
+}
+
+function getSongbookIdList() {
+    return Object.keys(songbooks);
+}
+
+findSongbooks();
 
 module.exports = {
     getContentsFilePath: getContentsFilePath,
     getIndexFilePath: getIndexFilePath,
     getSongsPath: getSongsPath,
-    songbookInfo: songbookInfo
+    getSongbooki18n: getSongbooki18n,
+    getSongbookIdList: getSongbookIdList
 };

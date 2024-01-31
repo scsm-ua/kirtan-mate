@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 const ejs = require('gulp-ejs');
 const gulp = require('gulp');
 const path = require('path');
@@ -20,8 +22,9 @@ const {
 const { makeIndexList } = require('./scripts/makeIndexList');
 const { PATHS, ORIGIN } = require('./scripts/constants');
 const { readFile } = require('./scripts/ioHelpers');
-const { getSongsPath } = require('./scripts/songbookLoader');
+const { getSongsPath, getSongbookIdList } = require('./scripts/songbookLoader');
 const { i18n } = require('./scripts/i18n');
+const { getTemplatePaths } = require('./scripts/utils');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
@@ -53,135 +56,169 @@ gulp.task('copy-img', () => {
 /**
  *
  */
-gulp.task('html-folder', shell.task('mkdir -p ' + BUILD.HTML_FILES));
-
-/**
- *
- */
-gulp.task('html', async () => {
+gulp.task('html', async (done) => {
     const templatePromise = await readFile(
         SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
     );
 
-    return gulp
-        .src([
-            BUILD.JSON_FILES + '/*.json',
-            '!' + BUILD.CONTENTS_FILE,
-            '!' + BUILD.INDEX_FILE
-        ])
-        .pipe(makeSongHTML(templatePromise))
-        .pipe(
-            rename({
-                extname: '.html'
-            })
-        )
-        .pipe(gulp.dest(BUILD.HTML_FILES));
+    const tasks = getSongbookIdList().map(songbook_id => {
+
+        var task = () => gulp
+            .src([
+                BUILD.JSON_FILES + '/**/*.json',
+                '!**/' + FILES.JSON.CONTENTS,
+                '!**/' + FILES.JSON.INDEX
+            ])
+            .pipe(makeSongHTML(songbook_id, templatePromise))
+            .pipe(
+                rename({
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT));
+
+        task.displayName = "html " + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })(); 
 });
 
 /**
  *
  */
 gulp.task('md2json', (done) => {
-    // TODO: had to use 'fs' to provide 'done' callback without async.
-    var fs = require('fs');
-    const templatePromise = fs.readFileSync(
-        SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
-    );
-    return gulp
-        .src(getSongsPath() + '/*.md')
-        .pipe(md2jsonConvertor(templatePromise))
-        .pipe(
-            rename({
-                extname: '.json'
-            })
-        )
-        .pipe(gulp.dest(BUILD.JSON_FILES), done);
+    const tasks = getSongbookIdList().map(songbook_id => {
+        const templatePromise = fs.readFileSync(
+            SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
+        );
+        var task = (done) =>
+            gulp
+            .src(getSongsPath(songbook_id) + '/*.md')
+            .pipe(md2jsonConvertor(templatePromise))
+            .pipe(
+                rename({
+                    extname: '.json'
+                })
+            )
+            .pipe(gulp.dest(BUILD.JSON_FILES + '/' + songbook_id), done);
+            task.displayName = "md2json " + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })(); 
 });
 
 /**
  *
  */
 gulp.task('generate-contents', (done) => {
-    return getJSONContentsStream().pipe(gulp.dest(BUILD.JSON_FILES), done);
+    const tasks = getSongbookIdList().map(songbook_id => {
+        var task = (done) => getJSONContentsStream(songbook_id).pipe(gulp.dest(BUILD.JSON_FILES + '/' + songbook_id), done);
+        task.displayName = "generate-contents " + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })(); 
 });
 
 /**
  *
  */
 gulp.task('generate-index', (done) => {
-    return getJSONIndexStream().pipe(gulp.dest(BUILD.JSON_FILES), done);
+    const tasks = getSongbookIdList().map(songbook_id => {
+        var task = (done) => getJSONIndexStream(songbook_id).pipe(gulp.dest(BUILD.JSON_FILES + '/' + songbook_id), done);
+        task.displayName = "generate-index " + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })(); 
 });
 
 /**
  *
  */
-gulp.task('index', () => {
+gulp.task('index', (done) => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${FILES.HTML.INDEX}`;
 
-    const headParts = {
-        title: i18n('Contents'),
-        description: i18n('Vaishnava Songbook'),
-        path: '/'
-    };
+    const tasks = getSongbookIdList().map(songbook_id => {
 
-    const paths = {
-        toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
-        toImages: path.relative(BUILD.ROOT, BUILD.IMG_FILES),
-        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
-        toPages: {
-            index: PAGES.INDEX,
-            index_list: PAGES.INDEX_LIST
-        }
-    };
+        var current_i18n = i18n(songbook_id);
 
-    return gulp
-        .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX)
-        .pipe(
-            ejs({
-                categories: require(BUILD.CONTENTS_FILE),
-                headParts: createHeadParts(headParts),
-                paths: paths,
-                i18n: i18n
-            }).on('error', console.error)
-        )
-        .pipe(gulp.dest(BUILD.ROOT))
-        .pipe(shell([extChangeCmd]));
+        const headParts = {
+            title: current_i18n('Contents'),
+            description: current_i18n('Vaishnava Songbook'),
+            path: '/'
+        };
+    
+        var task = () => gulp
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX)
+            .pipe(
+                ejs({
+                    categories: require(BUILD.getContentsFile(songbook_id)),
+                    headParts: createHeadParts(headParts),
+                    paths: getTemplatePaths(songbook_id),
+                    i18n: current_i18n
+                }).on('error', console.error)
+            )
+            .pipe(gulp.dest(BUILD.ROOT))
+            .pipe(shell([extChangeCmd]));
+        task.displayName = "index " + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })(); 
 });
 
 /**
  *
  */
-gulp.task('index-list', () => {
+gulp.task('index-list', (done) => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_LIST} ${BUILD.ROOT}/${FILES.HTML.INDEX_LIST}`;
 
-    const headParts = {
-        title: i18n('Index'),
-        description: i18n('Vaishnava Songbook'),
-        path: '/' + FILES.HTML.INDEX_LIST
-    };
+    const tasks = getSongbookIdList().map(songbook_id => {
 
-    const paths = {
-        toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
-        toImages: path.relative(BUILD.ROOT, BUILD.IMG_FILES),
-        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
-        toPages: {
-            index: PAGES.INDEX,
-            index_list: PAGES.INDEX_LIST
-        }
-    };
+        const headParts = {
+            title: i18n(songbook_id)('Index'),
+            description: i18n(songbook_id)('Vaishnava Songbook'),
+            path: '/' + FILES.HTML.INDEX_LIST
+        };
 
-    return gulp
-        .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
-        .pipe(
-            ejs({
-                items: makeIndexList(require(BUILD.CONTENTS_FILE), require(BUILD.INDEX_FILE)),
-                headParts: createHeadParts(headParts),
-                paths: paths,
-                i18n: i18n
-            }).on('error', console.error)
-        )
-        .pipe(gulp.dest(BUILD.ROOT))
-        .pipe(shell([extChangeCmd]));
+        var task = () => gulp
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
+            .pipe(
+                ejs({
+                    items: makeIndexList(require(BUILD.getContentsFile(songbook_id)), require(BUILD.getIndexFile(songbook_id))),
+                    headParts: createHeadParts(headParts),
+                    paths: getTemplatePaths(songbook_id),
+                    i18n: i18n(songbook_id)
+                }).on('error', console.error)
+            )
+            .pipe(gulp.dest(BUILD.ROOT))
+            .pipe(shell([extChangeCmd]));
+        task.displayName = "index-list " + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })(); 
 });
 
 /**
@@ -190,13 +227,17 @@ gulp.task('index-list', () => {
 gulp.task('sitemap', () => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.SITEMAP} ${BUILD.ROOT}/${FILES.XML.SITEMAP}`;
 
+    var songList = getSongbookIdList().map(songbook_id => {
+        return createSongXMLParts(songbook_id, require(BUILD.getContentsFile(songbook_id)))
+    }).join('\n');
+
     return gulp
         .src(SRC.EJS_FILES + '/' + FILES.EJS.SITEMAP)
         .pipe(
             ejs({
                 indexListPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX_LIST),
                 indexPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX),
-                songList: createSongXMLParts(require(BUILD.CONTENTS_FILE)),
+                songList: songList,
                 i18n: i18n
             }).on('error', console.error)
         )
@@ -219,7 +260,7 @@ gulp.task('build', (done) => {
         'generate-contents',
         'generate-index',
         'index-list',
-        ['html-folder', 'copy-img', 'copy-font'],
+        ['copy-img', 'copy-font'],
         ['sass', 'html', 'index', 'sitemap'],
         done
     );

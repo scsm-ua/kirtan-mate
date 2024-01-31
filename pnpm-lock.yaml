@@ -7,6 +7,9 @@ dependencies:
   ejs:
     specifier: ^3.1.9
     version: 3.1.9
+  gaudiya-gitanjali-ua:
+    specifier: github:scsm-ua/gaudiya-gitanjali-ua
+    version: github.com/scsm-ua/gaudiya-gitanjali-ua/4deafae8c5601f15386cd0d81080b9cde9fba93b
   gulp-ejs:
     specifier: ^5.1.0
     version: 5.1.0
@@ -2514,6 +2517,12 @@ packages:
       y18n: 3.2.2
       yargs-parser: 5.0.1
     dev: true
+
+  github.com/scsm-ua/gaudiya-gitanjali-ua/4deafae8c5601f15386cd0d81080b9cde9fba93b:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/4deafae8c5601f15386cd0d81080b9cde9fba93b}
+    name: gaudiya-gitanjali-ua
+    version: 1.0.0
+    dev: false
 
   github.com/scsm-ua/kirtan-guide-en/cabaff88ae705fc5b218fc3345213fe96d69abca:
     resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/cabaff88ae705fc5b218fc3345213fe96d69abca}

@@ -8,6 +8,7 @@ const { convertMDToJSON, getContentsJSON, getIndexJSON } = require('./indexGener
 const { createHeadParts } = require('./createHeadParts');
 const { PATHS } = require('./constants');
 const { i18n } = require('./i18n');
+const { getTemplatePaths } = require('./utils');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 
@@ -16,13 +17,14 @@ const { BUILD, FILES, PAGES, SRC } = PATHS;
 /**
  *
  */
-function makeSongHTML(templatePromise) {
+function makeSongHTML(songbook_id, templatePromise) {
     return new Transform({
         objectMode: true,
 
         transform(file, encoding, callback) {
             try {
                 const htmlString = fillTemplate(
+                    songbook_id,
                     templatePromise,
                     JSON.parse(file.contents.toString()),
                     file.path
@@ -45,34 +47,31 @@ function makeSongHTML(templatePromise) {
  * @param filePath: string;
  * @return {string}
  */
-function fillTemplate(template, content, filePath) {
+function fillTemplate(songbook_id, template, content, filePath) {
     const { author, title, verses } = content;
+
+    if (!verses) {
+        console.warn('No verse in ' + filePath);
+        return '';
+    }
+
     const { text } = verses[0];
 
     const headParts = {
+        // TODO: subtitle.
         title: author ? title + '. ' + author : title,
         description: `${text[0]}\n${text[1]}...`,
-        path: '/html/' + path.parse(filePath).name + '.html'
-    };
-
-    const paths = {
-        toCss: path.relative(BUILD.HTML_FILES, BUILD.CSS_FILES),
-        toImages: path.relative(BUILD.HTML_FILES, BUILD.IMG_FILES),
-        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
-        toPages: {
-            index: PAGES.INDEX,
-            index_list: PAGES.INDEX_LIST
-        }
+        path: '/html/' + songbook_id + '/' + path.parse(filePath).name + '.html'
     };
 
     return ejs.render(template, {
         author: author,
-        contentItems: JSON.stringify(require(BUILD.CONTENTS_FILE)),
+        contentItems: JSON.stringify(require(BUILD.getContentsFile(songbook_id))),
         headParts: createHeadParts(headParts),
-        paths: paths,
+        paths: getTemplatePaths(songbook_id),
         title: title,
         verses: verses,
-        i18n: i18n,
+        i18n: i18n(songbook_id),
         transformLine: transformLine
     });
 }
@@ -123,9 +122,9 @@ function md2json() {
 /**
  *
  */
-function getJSONContentsStream() {
+function getJSONContentsStream(songbook_id) {
     const stream = VinylStream(FILES.JSON.CONTENTS);
-    stream.end(JSON.stringify(getContentsJSON(), null, 2));
+    stream.end(JSON.stringify(getContentsJSON(songbook_id), null, 2));
     return stream;
 }
 
@@ -136,9 +135,9 @@ function getJSONContentsStream() {
 /**
  *
  */
-function getJSONIndexStream() {
+function getJSONIndexStream(songbook_id) {
     const stream = VinylStream(FILES.JSON.INDEX);
-    stream.end(JSON.stringify(getIndexJSON(), null, 2));
+    stream.end(JSON.stringify(getIndexJSON(songbook_id), null, 2));
     return stream;
 }
 

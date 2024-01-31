@@ -74,7 +74,7 @@ function getSchema(path, title) {
  * @param categories: TCategory[]
  * @returns {string}
  */
-function createSongXMLParts(categories) {
+function createSongXMLParts(songbook_id, categories) {
     let result = '';
 
     categories
@@ -82,7 +82,7 @@ function createSongXMLParts(categories) {
         .forEach((item) => (
             result += `
                 <url>
-                    <loc>${encodeURI(ORIGIN + '/html/' + item.fileName)}</loc>
+                    <loc>${encodeURI(ORIGIN + '/' + songbook_id + '/' + item.fileName)}</loc>
                     <changefreq>weekly</changefreq>
                     <priority>0.8</priority>
                 </url>

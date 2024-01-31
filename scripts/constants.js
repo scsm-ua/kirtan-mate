@@ -1,6 +1,8 @@
 const path = require('path');
 
 const OUTPUT_DIR = 'docs';
+const CSS_DIR = 'css';
+const IMG_DIR = 'css';
 const contentItems = 'contentItems.json';
 const indexItems = 'indexItems.json';
 const indexPath = 'index.html';
@@ -14,14 +16,21 @@ const ORIGIN = (process.env.HOME_BASE_URL || '');
  *
  */
 const PATHS = {
+    RELATIVE: {
+        CSS: ORIGIN + '/' + CSS_DIR,
+        IMG: ORIGIN + '/' + IMG_DIR,
+    },
     BUILD: {
-        CSS_FILES: OUTPUT_DIR + '/css',
+        CSS_FILES: OUTPUT_DIR + '/' + CSS_DIR,
         HTML_FILES: OUTPUT_DIR + '/html',
-        IMG_FILES: OUTPUT_DIR + '/images',
+        IMG_FILES: OUTPUT_DIR + '/' + IMG_DIR,
         JSON_FILES: OUTPUT_DIR + '/json',
-        // `resolve` to use with `require`.
-        CONTENTS_FILE: path.resolve(OUTPUT_DIR + '/json/' + contentItems),
-        INDEX_FILE: path.resolve(OUTPUT_DIR + '/json/' + indexItems),
+        getContentsFile: function(songbook_id) {
+            return path.resolve(OUTPUT_DIR, 'json', songbook_id, contentItems);
+        },
+        getIndexFile: function(songbook_id) {
+            return path.resolve(OUTPUT_DIR, 'json', songbook_id, indexItems);
+        },
         ROOT: OUTPUT_DIR
     },
     FILES: {
@@ -48,12 +57,11 @@ const PATHS = {
         CSS_FILES: 'src/styles',
         EJS_FILES: 'src/templates',
         EJS_PARTIALS_FILES: 'src/templates/partials',
-        HTML_FILES: 'src/html',
         IMG_FILES: 'src/images'
     },
     PAGES: {
-        INDEX: ORIGIN + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
-        INDEX_LIST: ORIGIN + '/' + indexListPath
+        getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
+        getIndexList:(songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath
     }
 };
 

@@ -1,0 +1,712 @@
+diff --git a/gulpfile.js b/gulpfile.js
+index 6fee9a4..7a4e6d6 100644
+--- a/gulpfile.js
++++ b/gulpfile.js
+@@ -1,3 +1,5 @@
++var fs = require('fs');
++
+ const ejs = require('gulp-ejs');
+ const gulp = require('gulp');
+ const path = require('path');
+@@ -20,8 +22,9 @@ const {
+ const { makeIndexList } = require('./scripts/makeIndexList');
+ const { PATHS, ORIGIN } = require('./scripts/constants');
+ const { readFile } = require('./scripts/ioHelpers');
+-const { getSongsPath } = require('./scripts/songbookLoader');
++const { getSongsPath, getSongbookIdList } = require('./scripts/songbookLoader');
+ const { i18n } = require('./scripts/i18n');
++const { getTemplatePaths } = require('./scripts/utils');
+ const { BUILD, FILES, PAGES, SRC } = PATHS;
+ 
+ /**
+@@ -53,135 +56,169 @@ gulp.task('copy-img', () => {
+ /**
+  *
+  */
+-gulp.task('html-folder', shell.task('mkdir -p ' + BUILD.HTML_FILES));
+-
+-/**
+- *
+- */
+-gulp.task('html', async () => {
++gulp.task('html', async (done) => {
+     const templatePromise = await readFile(
+         SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
+     );
+ 
+-    return gulp
+-        .src([
+-            BUILD.JSON_FILES + '/*.json',
+-            '!' + BUILD.CONTENTS_FILE,
+-            '!' + BUILD.INDEX_FILE
+-        ])
+-        .pipe(makeSongHTML(templatePromise))
+-        .pipe(
+-            rename({
+-                extname: '.html'
+-            })
+-        )
+-        .pipe(gulp.dest(BUILD.HTML_FILES));
++    const tasks = getSongbookIdList().map(songbook_id => {
++
++        var task = () => gulp
++            .src([
++                BUILD.JSON_FILES + '/**/*.json',
++                '!**/' + FILES.JSON.CONTENTS,
++                '!**/' + FILES.JSON.INDEX
++            ])
++            .pipe(makeSongHTML(songbook_id, templatePromise))
++            .pipe(
++                rename({
++                    extname: '.html'
++                })
++            )
++            .pipe(gulp.dest(BUILD.ROOT));
++
++        task.displayName = "html " + songbook_id;
++        return task;
++    });
++
++    return gulp.series(...tasks, (seriesDone) => {
++        seriesDone();
++        done();
++    })(); 
+ });
+ 
+ /**
+  *
+  */
+ gulp.task('md2json', (done) => {
+-    // TODO: had to use 'fs' to provide 'done' callback without async.
+-    var fs = require('fs');
+-    const templatePromise = fs.readFileSync(
+-        SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
+-    );
+-    return gulp
+-        .src(getSongsPath() + '/*.md')
+-        .pipe(md2jsonConvertor(templatePromise))
+-        .pipe(
+-            rename({
+-                extname: '.json'
+-            })
+-        )
+-        .pipe(gulp.dest(BUILD.JSON_FILES), done);
++    const tasks = getSongbookIdList().map(songbook_id => {
++        const templatePromise = fs.readFileSync(
++            SRC.EJS_FILES + '/' + FILES.EJS.SONG_PAGE
++        );
++        var task = (done) =>
++            gulp
++            .src(getSongsPath(songbook_id) + '/*.md')
++            .pipe(md2jsonConvertor(templatePromise))
++            .pipe(
++                rename({
++                    extname: '.json'
++                })
++            )
++            .pipe(gulp.dest(BUILD.JSON_FILES + '/' + songbook_id), done);
++            task.displayName = "md2json " + songbook_id;
++        return task;
++    });
++
++    return gulp.series(...tasks, (seriesDone) => {
++        seriesDone();
++        done();
++    })(); 
+ });
+ 
+ /**
+  *
+  */
+ gulp.task('generate-contents', (done) => {
+-    return getJSONContentsStream().pipe(gulp.dest(BUILD.JSON_FILES), done);
++    const tasks = getSongbookIdList().map(songbook_id => {
++        var task = (done) => getJSONContentsStream(songbook_id).pipe(gulp.dest(BUILD.JSON_FILES + '/' + songbook_id), done);
++        task.displayName = "generate-contents " + songbook_id;
++        return task;
++    });
++
++    return gulp.series(...tasks, (seriesDone) => {
++        seriesDone();
++        done();
++    })(); 
+ });
+ 
+ /**
+  *
+  */
+ gulp.task('generate-index', (done) => {
+-    return getJSONIndexStream().pipe(gulp.dest(BUILD.JSON_FILES), done);
++    const tasks = getSongbookIdList().map(songbook_id => {
++        var task = (done) => getJSONIndexStream(songbook_id).pipe(gulp.dest(BUILD.JSON_FILES + '/' + songbook_id), done);
++        task.displayName = "generate-index " + songbook_id;
++        return task;
++    });
++
++    return gulp.series(...tasks, (seriesDone) => {
++        seriesDone();
++        done();
++    })(); 
+ });
+ 
+ /**
+  *
+  */
+-gulp.task('index', () => {
++gulp.task('index', (done) => {
+     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${FILES.HTML.INDEX}`;
+ 
+-    const headParts = {
+-        title: i18n('Contents'),
+-        description: i18n('Vaishnava Songbook'),
+-        path: '/'
+-    };
+-
+-    const paths = {
+-        toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
+-        toImages: path.relative(BUILD.ROOT, BUILD.IMG_FILES),
+-        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
+-        toPages: {
+-            index: PAGES.INDEX,
+-            index_list: PAGES.INDEX_LIST
+-        }
+-    };
++    const tasks = getSongbookIdList().map(songbook_id => {
+ 
+-    return gulp
+-        .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX)
+-        .pipe(
+-            ejs({
+-                categories: require(BUILD.CONTENTS_FILE),
+-                headParts: createHeadParts(headParts),
+-                paths: paths,
+-                i18n: i18n
+-            }).on('error', console.error)
+-        )
+-        .pipe(gulp.dest(BUILD.ROOT))
+-        .pipe(shell([extChangeCmd]));
++        var current_i18n = i18n(songbook_id);
++
++        const headParts = {
++            title: current_i18n('Contents'),
++            description: current_i18n('Vaishnava Songbook'),
++            path: '/'
++        };
++    
++        var task = () => gulp
++            .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX)
++            .pipe(
++                ejs({
++                    categories: require(BUILD.getContentsFile(songbook_id)),
++                    headParts: createHeadParts(headParts),
++                    paths: getTemplatePaths(songbook_id),
++                    i18n: current_i18n
++                }).on('error', console.error)
++            )
++            .pipe(gulp.dest(BUILD.ROOT))
++            .pipe(shell([extChangeCmd]));
++        task.displayName = "index " + songbook_id;
++        return task;
++    });
++
++    return gulp.series(...tasks, (seriesDone) => {
++        seriesDone();
++        done();
++    })(); 
+ });
+ 
+ /**
+  *
+  */
+-gulp.task('index-list', () => {
++gulp.task('index-list', (done) => {
+     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_LIST} ${BUILD.ROOT}/${FILES.HTML.INDEX_LIST}`;
+ 
+-    const headParts = {
+-        title: i18n('Index'),
+-        description: i18n('Vaishnava Songbook'),
+-        path: '/' + FILES.HTML.INDEX_LIST
+-    };
+-
+-    const paths = {
+-        toCss: path.relative(BUILD.ROOT, BUILD.CSS_FILES),
+-        toImages: path.relative(BUILD.ROOT, BUILD.IMG_FILES),
+-        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
+-        toPages: {
+-            index: PAGES.INDEX,
+-            index_list: PAGES.INDEX_LIST
+-        }
+-    };
++    const tasks = getSongbookIdList().map(songbook_id => {
+ 
+-    return gulp
+-        .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
+-        .pipe(
+-            ejs({
+-                items: makeIndexList(require(BUILD.CONTENTS_FILE), require(BUILD.INDEX_FILE)),
+-                headParts: createHeadParts(headParts),
+-                paths: paths,
+-                i18n: i18n
+-            }).on('error', console.error)
+-        )
+-        .pipe(gulp.dest(BUILD.ROOT))
+-        .pipe(shell([extChangeCmd]));
++        const headParts = {
++            title: i18n(songbook_id)('Index'),
++            description: i18n(songbook_id)('Vaishnava Songbook'),
++            path: '/' + FILES.HTML.INDEX_LIST
++        };
++
++        var task = () => gulp
++            .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
++            .pipe(
++                ejs({
++                    items: makeIndexList(require(BUILD.getContentsFile(songbook_id)), require(BUILD.getIndexFile(songbook_id))),
++                    headParts: createHeadParts(headParts),
++                    paths: getTemplatePaths(songbook_id),
++                    i18n: i18n(songbook_id)
++                }).on('error', console.error)
++            )
++            .pipe(gulp.dest(BUILD.ROOT))
++            .pipe(shell([extChangeCmd]));
++        task.displayName = "index-list " + songbook_id;
++        return task;
++    });
++
++    return gulp.series(...tasks, (seriesDone) => {
++        seriesDone();
++        done();
++    })(); 
+ });
+ 
+ /**
+@@ -190,13 +227,17 @@ gulp.task('index-list', () => {
+ gulp.task('sitemap', () => {
+     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.SITEMAP} ${BUILD.ROOT}/${FILES.XML.SITEMAP}`;
+ 
++    var songList = getSongbookIdList().map(songbook_id => {
++        return createSongXMLParts(songbook_id, require(BUILD.getContentsFile(songbook_id)))
++    }).join('\n');
++
+     return gulp
+         .src(SRC.EJS_FILES + '/' + FILES.EJS.SITEMAP)
+         .pipe(
+             ejs({
+                 indexListPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX_LIST),
+                 indexPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX),
+-                songList: createSongXMLParts(require(BUILD.CONTENTS_FILE)),
++                songList: songList,
+                 i18n: i18n
+             }).on('error', console.error)
+         )
+@@ -219,7 +260,7 @@ gulp.task('build', (done) => {
+         'generate-contents',
+         'generate-index',
+         'index-list',
+-        ['html-folder', 'copy-img', 'copy-font'],
++        ['copy-img', 'copy-font'],
+         ['sass', 'html', 'index', 'sitemap'],
+         done
+     );
+diff --git a/package.json b/package.json
+index 79c8241..4592713 100644
+--- a/package.json
++++ b/package.json
+@@ -9,6 +9,7 @@
+         "dotenv": "^16.4.1",
+         "ejs": "^3.1.9",
+         "kirtan-guide-en": "github:scsm-ua/kirtan-guide-en",
++        "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua",
+         "gulp-ejs": "^5.1.0",
+         "gulp-rename": "^2.0.0",
+         "gulp-sass": "^5.1.0",
+diff --git a/pnpm-lock.yaml b/pnpm-lock.yaml
+index 84c2a4e..ec0803e 100644
+--- a/pnpm-lock.yaml
++++ b/pnpm-lock.yaml
+@@ -7,6 +7,9 @@ dependencies:
+   ejs:
+     specifier: ^3.1.9
+     version: 3.1.9
++  gaudiya-gitanjali-ua:
++    specifier: github:scsm-ua/gaudiya-gitanjali-ua
++    version: github.com/scsm-ua/gaudiya-gitanjali-ua/4deafae8c5601f15386cd0d81080b9cde9fba93b
+   gulp-ejs:
+     specifier: ^5.1.0
+     version: 5.1.0
+@@ -2515,6 +2518,12 @@ packages:
+       yargs-parser: 5.0.1
+     dev: true
+ 
++  github.com/scsm-ua/gaudiya-gitanjali-ua/4deafae8c5601f15386cd0d81080b9cde9fba93b:
++    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/4deafae8c5601f15386cd0d81080b9cde9fba93b}
++    name: gaudiya-gitanjali-ua
++    version: 1.0.0
++    dev: false
++
+   github.com/scsm-ua/kirtan-guide-en/cabaff88ae705fc5b218fc3345213fe96d69abca:
+     resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/cabaff88ae705fc5b218fc3345213fe96d69abca}
+     name: kirtan-guide-en
+diff --git a/scripts/constants.js b/scripts/constants.js
+index 17ab47d..0a49ab7 100644
+--- a/scripts/constants.js
++++ b/scripts/constants.js
+@@ -1,6 +1,8 @@
+ const path = require('path');
+ 
+ const OUTPUT_DIR = 'docs';
++const CSS_DIR = 'css';
++const IMG_DIR = 'css';
+ const contentItems = 'contentItems.json';
+ const indexItems = 'indexItems.json';
+ const indexPath = 'index.html';
+@@ -14,14 +16,21 @@ const ORIGIN = (process.env.HOME_BASE_URL || '');
+  *
+  */
+ const PATHS = {
++    RELATIVE: {
++        CSS: ORIGIN + '/' + CSS_DIR,
++        IMG: ORIGIN + '/' + IMG_DIR,
++    },
+     BUILD: {
+-        CSS_FILES: OUTPUT_DIR + '/css',
++        CSS_FILES: OUTPUT_DIR + '/' + CSS_DIR,
+         HTML_FILES: OUTPUT_DIR + '/html',
+-        IMG_FILES: OUTPUT_DIR + '/images',
++        IMG_FILES: OUTPUT_DIR + '/' + IMG_DIR,
+         JSON_FILES: OUTPUT_DIR + '/json',
+-        // `resolve` to use with `require`.
+-        CONTENTS_FILE: path.resolve(OUTPUT_DIR + '/json/' + contentItems),
+-        INDEX_FILE: path.resolve(OUTPUT_DIR + '/json/' + indexItems),
++        getContentsFile: function(songbook_id) {
++            return path.resolve(OUTPUT_DIR, 'json', songbook_id, contentItems);
++        },
++        getIndexFile: function(songbook_id) {
++            return path.resolve(OUTPUT_DIR, 'json', songbook_id, indexItems);
++        },
+         ROOT: OUTPUT_DIR
+     },
+     FILES: {
+@@ -48,12 +57,11 @@ const PATHS = {
+         CSS_FILES: 'src/styles',
+         EJS_FILES: 'src/templates',
+         EJS_PARTIALS_FILES: 'src/templates/partials',
+-        HTML_FILES: 'src/html',
+         IMG_FILES: 'src/images'
+     },
+     PAGES: {
+-        INDEX: ORIGIN + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
+-        INDEX_LIST: ORIGIN + '/' + indexListPath
++        getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
++        getIndexList:(songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath
+     }
+ };
+ 
+diff --git a/scripts/createHeadParts.js b/scripts/createHeadParts.js
+index 2d38a7a..d00df39 100644
+--- a/scripts/createHeadParts.js
++++ b/scripts/createHeadParts.js
+@@ -74,7 +74,7 @@ function getSchema(path, title) {
+  * @param categories: TCategory[]
+  * @returns {string}
+  */
+-function createSongXMLParts(categories) {
++function createSongXMLParts(songbook_id, categories) {
+     let result = '';
+ 
+     categories
+@@ -82,7 +82,7 @@ function createSongXMLParts(categories) {
+         .forEach((item) => (
+             result += `
+                 <url>
+-                    <loc>${encodeURI(ORIGIN + '/html/' + item.fileName)}</loc>
++                    <loc>${encodeURI(ORIGIN + '/' + songbook_id + '/' + item.fileName)}</loc>
+                     <changefreq>weekly</changefreq>
+                     <priority>0.8</priority>
+                 </url>
+diff --git a/scripts/i18n.js b/scripts/i18n.js
+index 50d569e..8ccfb3a 100644
+--- a/scripts/i18n.js
++++ b/scripts/i18n.js
+@@ -1,9 +1,14 @@
+-const { songbookInfo } = require("./songbookLoader");
++const { getSongbooki18n } = require("./songbookLoader");
+ 
+-module.exports.i18n = function(text) {
+-    if (songbookInfo.i18n && text in songbookInfo.i18n) {
+-        return songbookInfo.i18n[text];
+-    } else {
+-        return text;
++module.exports.i18n = function(songbook_id) {
++
++    var i18n_dict = getSongbooki18n(songbook_id);
++
++    return function(text) {
++        if (i18n_dict && text in i18n_dict) {
++            return i18n_dict[text];
++        } else {
++            return text;
++        }
+     }
+ }
+diff --git a/scripts/indexGenerator.js b/scripts/indexGenerator.js
+index 3f8b18a..aaad7aa 100644
+--- a/scripts/indexGenerator.js
++++ b/scripts/indexGenerator.js
+@@ -154,10 +154,10 @@ function getSongLineInfo(line) {
+ }
+ 
+ // Index.
+-function getContentsJSON() {
+-    var data = fs.readFileSync(getContentsFilePath());
++function getContentsJSON(songbook_id) {
++    var data = fs.readFileSync(getContentsFilePath(songbook_id));
+     var text = data.toString();
+-    var categories = convertContentsToJSON(text);
++    var categories = convertContentsToJSON(songbook_id, text);
+ 
+     // Filter empty categories.
+     categories = categories.filter((category) => category.items.length > 0);
+@@ -166,9 +166,10 @@ function getContentsJSON() {
+     return categories;
+ }
+ 
+-function getIndexJSON() {
+-    if (fs.existsSync(getIndexFilePath())) {
+-        var data = fs.readFileSync(getIndexFilePath());
++function getIndexJSON(songbook_id) {
++    var indexFilePath = getIndexFilePath(songbook_id);
++    if (fs.existsSync(indexFilePath)) {
++        var data = fs.readFileSync(indexFilePath);
+         var text = data.toString();
+         var index = convertIndexToJSON(text);
+     
+@@ -204,7 +205,7 @@ function convertIndexToJSON(text) {
+     return songs;
+ }
+ 
+-function convertContentsToJSON(text) {
++function convertContentsToJSON(songbook_id, text) {
+     var lines = text.split(/\n/);
+     var categories = [];
+     var last_line_id;
+@@ -231,11 +232,11 @@ function convertContentsToJSON(text) {
+             case 'song':
+                 getLastCategory().items.push({
+                     id: name,
+-                    name: getSongName(name),
++                    name: getSongName(songbook_id, name),
+                     // TODO: trim
+                     // TODO: replace tabs
+                     // TODO: trim -
+-                    aliasName: getSongFirstLine(name),
++                    aliasName: getSongFirstLine(songbook_id, name),
+                     fileName: name + '.html'
+                 });
+                 break;
+@@ -273,12 +274,12 @@ function getIndexLineInfo(line) {
+ 
+ var songs_cache = {};
+ 
+-function getSongJSON(filename) {
++function getSongJSON(songbook_id, filename) {
+     if (songs_cache[filename]) {
+         return songs_cache[filename];
+     }
+ 
+-    var filepath = path.resolve(PATHS.BUILD.JSON_FILES, filename + '.json');
++    var filepath = path.resolve(PATHS.BUILD.JSON_FILES, songbook_id, filename + '.json');
+     if (!fs.existsSync(filepath)) {
+         // TODO: better errors processing.
+         console.error('Song JSON not found', filepath);
+@@ -289,16 +290,16 @@ function getSongJSON(filename) {
+     return songs_cache[filename];
+ }
+ 
+-function getSongName(filename) {
+-    var song_json = getSongJSON(filename);
++function getSongName(songbook_id, filename) {
++    var song_json = getSongJSON(songbook_id, filename);
+     if (!song_json) {
+         return;
+     }
+     return song_json.title;
+ }
+ 
+-function getSongFirstLine(filename) {
+-    var song_json = getSongJSON(filename);
++function getSongFirstLine(songbook_id, filename) {
++    var song_json = getSongJSON(songbook_id, filename);
+     if (!song_json) {
+         return;
+     }
+diff --git a/scripts/songConvertor.js b/scripts/songConvertor.js
+index b3c34e8..e1224e4 100644
+--- a/scripts/songConvertor.js
++++ b/scripts/songConvertor.js
+@@ -8,6 +8,7 @@ const { convertMDToJSON, getContentsJSON, getIndexJSON } = require('./indexGener
+ const { createHeadParts } = require('./createHeadParts');
+ const { PATHS } = require('./constants');
+ const { i18n } = require('./i18n');
++const { getTemplatePaths } = require('./utils');
+ const { BUILD, FILES, PAGES, SRC } = PATHS;
+ 
+ 
+@@ -16,13 +17,14 @@ const { BUILD, FILES, PAGES, SRC } = PATHS;
+ /**
+  *
+  */
+-function makeSongHTML(templatePromise) {
++function makeSongHTML(songbook_id, templatePromise) {
+     return new Transform({
+         objectMode: true,
+ 
+         transform(file, encoding, callback) {
+             try {
+                 const htmlString = fillTemplate(
++                    songbook_id,
+                     templatePromise,
+                     JSON.parse(file.contents.toString()),
+                     file.path
+@@ -45,34 +47,31 @@ function makeSongHTML(templatePromise) {
+  * @param filePath: string;
+  * @return {string}
+  */
+-function fillTemplate(template, content, filePath) {
++function fillTemplate(songbook_id, template, content, filePath) {
+     const { author, title, verses } = content;
++
++    if (!verses) {
++        console.warn('No verse in ' + filePath);
++        return '';
++    }
++
+     const { text } = verses[0];
+ 
+     const headParts = {
++        // TODO: subtitle.
+         title: author ? title + '. ' + author : title,
+         description: `${text[0]}\n${text[1]}...`,
+-        path: '/html/' + path.parse(filePath).name + '.html'
+-    };
+-
+-    const paths = {
+-        toCss: path.relative(BUILD.HTML_FILES, BUILD.CSS_FILES),
+-        toImages: path.relative(BUILD.HTML_FILES, BUILD.IMG_FILES),
+-        toPartials: path.join(process.cwd(), SRC.EJS_PARTIALS_FILES),
+-        toPages: {
+-            index: PAGES.INDEX,
+-            index_list: PAGES.INDEX_LIST
+-        }
++        path: '/html/' + songbook_id + '/' + path.parse(filePath).name + '.html'
+     };
+ 
+     return ejs.render(template, {
+         author: author,
+-        contentItems: JSON.stringify(require(BUILD.CONTENTS_FILE)),
++        contentItems: JSON.stringify(require(BUILD.getContentsFile(songbook_id))),
+         headParts: createHeadParts(headParts),
+-        paths: paths,
++        paths: getTemplatePaths(songbook_id),
+         title: title,
+         verses: verses,
+-        i18n: i18n,
++        i18n: i18n(songbook_id),
+         transformLine: transformLine
+     });
+ }
+@@ -123,9 +122,9 @@ function md2json() {
+ /**
+  *
+  */
+-function getJSONContentsStream() {
++function getJSONContentsStream(songbook_id) {
+     const stream = VinylStream(FILES.JSON.CONTENTS);
+-    stream.end(JSON.stringify(getContentsJSON(), null, 2));
++    stream.end(JSON.stringify(getContentsJSON(songbook_id), null, 2));
+     return stream;
+ }
+ 
+@@ -136,9 +135,9 @@ function getJSONContentsStream() {
+ /**
+  *
+  */
+-function getJSONIndexStream() {
++function getJSONIndexStream(songbook_id) {
+     const stream = VinylStream(FILES.JSON.INDEX);
+-    stream.end(JSON.stringify(getIndexJSON(), null, 2));
++    stream.end(JSON.stringify(getIndexJSON(songbook_id), null, 2));
+     return stream;
+ }
+ 
+diff --git a/scripts/songbookLoader.js b/scripts/songbookLoader.js
+index 81e98e6..209aa5c 100644
+--- a/scripts/songbookLoader.js
++++ b/scripts/songbookLoader.js
+@@ -1,41 +1,50 @@
+ const path = require('path');
+ const fs = require('fs');
+ 
+-var songbookPath;
+-var songbookInfo;
++var songbooks = {};
+ 
+-function findSongbook() {
++function findSongbooks() {
+     var modulesRootPath = path.resolve(__dirname, '../node_modules');
+     var modules_listing = fs.readdirSync(modulesRootPath).map(module_name => path.resolve(modulesRootPath, module_name));
+     
+     for (const modulePath of modules_listing) {
+         var songbookInfoPath = path.resolve(modulePath, 'songbook.json');
+         if (fs.existsSync(songbookInfoPath)) {
+-            songbookInfo = require(songbookInfoPath);
+-            songbookPath = modulePath;
+-            console.log('--- Loading songbook:', modulePath)
+-            return;
++            var songbookInfo = require(songbookInfoPath);
++            songbookInfo.path = modulePath;
++            songbooks[songbookInfo.slug] = songbookInfo;
++
++            console.log('--- Loaded songbook:', modulePath)
+         }
+     }
+ }
+ 
+-function getContentsFilePath() {
+-    return songbookPath + '/contents.md';
++function getContentsFilePath(songbook_id) {
++    return songbooks[songbook_id].path + '/contents.md';
++}
++
++function getIndexFilePath(songbook_id) {
++    return songbooks[songbook_id].path + '/index.md';
++}
++
++function getSongsPath(songbook_id) {
++    return songbooks[songbook_id].path + '/songs';
+ }
+ 
+-function getIndexFilePath() {
+-    return songbookPath + '/index.md';
++function getSongbooki18n(songbook_id) {
++    return songbooks[songbook_id].i18n;
+ }
+ 
+-function getSongsPath() {
+-    return songbookPath + '/songs';
++function getSongbookIdList() {
++    return Object.keys(songbooks);
+ }
+ 
+-findSongbook();
++findSongbooks();
+ 
+ module.exports = {
+     getContentsFilePath: getContentsFilePath,
+     getIndexFilePath: getIndexFilePath,
+     getSongsPath: getSongsPath,
+-    songbookInfo: songbookInfo
++    getSongbooki18n: getSongbooki18n,
++    getSongbookIdList: getSongbookIdList
+ };
+\ No newline at end of file
