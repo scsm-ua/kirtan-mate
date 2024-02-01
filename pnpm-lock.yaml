@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   dotenv:
     specifier: ^16.4.1
@@ -13,7 +9,7 @@ dependencies:
     version: 3.1.9
   gaudiya-gitanjali-ua:
     specifier: github:scsm-ua/gaudiya-gitanjali-ua
-    version: github.com/scsm-ua/gaudiya-gitanjali-ua/4deafae8c5601f15386cd0d81080b9cde9fba93b
+    version: github.com/scsm-ua/gaudiya-gitanjali-ua/5c725d6f42ac9a7c089094310125c8bdb28c8d9d
   gulp-ejs:
     specifier: ^5.1.0
     version: 5.1.0
@@ -31,7 +27,7 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/cabaff88ae705fc5b218fc3345213fe96d69abca
+    version: github.com/scsm-ua/kirtan-guide-en/ad8a57ffb1c40fce66a6a7871f7c1c01e99ff820
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
@@ -2522,14 +2518,18 @@ packages:
       yargs-parser: 5.0.1
     dev: true
 
-  github.com/scsm-ua/gaudiya-gitanjali-ua/4deafae8c5601f15386cd0d81080b9cde9fba93b:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/4deafae8c5601f15386cd0d81080b9cde9fba93b}
+  github.com/scsm-ua/gaudiya-gitanjali-ua/5c725d6f42ac9a7c089094310125c8bdb28c8d9d:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/5c725d6f42ac9a7c089094310125c8bdb28c8d9d}
     name: gaudiya-gitanjali-ua
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/cabaff88ae705fc5b218fc3345213fe96d69abca:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/cabaff88ae705fc5b218fc3345213fe96d69abca}
+  github.com/scsm-ua/kirtan-guide-en/ad8a57ffb1c40fce66a6a7871f7c1c01e99ff820:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/ad8a57ffb1c40fce66a6a7871f7c1c01e99ff820}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false

@@ -20,9 +20,8 @@ const {
     md2jsonConvertor
 } = require('./scripts/songConvertor');
 const { makeIndexList } = require('./scripts/makeIndexList');
-const { PATHS, ORIGIN } = require('./scripts/constants');
-const { readFile } = require('./scripts/ioHelpers');
-const { getSongsPath, getSongbookIdList, getSongbookName } = require('./scripts/songbookLoader');
+const { PATHS } = require('./scripts/constants');
+const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
 const { i18n } = require('./scripts/i18n');
 const { getTemplatePaths } = require('./scripts/utils');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
@@ -153,7 +152,8 @@ gulp.task('songbooks', (done) => {
 
     var songbooks = getSongbookIdList().map(songbook_id => {
         return {
-            name: getSongbookName(songbook_id),
+            title: getSongbookInfo(songbook_id).title,
+            subtitle: getSongbookInfo(songbook_id).subtitle,
             contentsPath: PATHS.PAGES.getIndex(songbook_id)
         };
     });
@@ -283,10 +283,7 @@ gulp.task('sitemap', (done) => {
         .src(SRC.EJS_FILES + '/' + FILES.EJS.SITEMAP)
         .pipe(
             ejs({
-                // TODO: fix
-                indexListPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX_LIST),
-                // TODO: fix
-                indexPagePath: encodeURI(ORIGIN + '/' + FILES.HTML.INDEX),
+                root: encodeURI(PATHS.PAGES.INDEX),
                 songList: songList,
                 i18n: i18n
             }).on('error', console.error)

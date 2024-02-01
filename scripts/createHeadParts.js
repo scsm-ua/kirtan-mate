@@ -68,27 +68,31 @@ function getSchema(path, title) {
     return `<script type="application/ld+json">${sch}</script>`;
 }
 
+function getItemXML(path, priority) {
+    return `
+        <url>
+            <loc>${encodeURI(path)}</loc>
+            <changefreq>weekly</changefreq>
+            <priority>${priority}</priority>
+        </url>
+    `;
+}
+
 /**
  * Converts the list of categories into the list of song related XML parts.
  * @param categories: TCategory[]
  * @returns {string}
  */
 function createSongXMLParts(songbook_id, categories) {
-    let result = '';
+    let indexes = getItemXML(PATHS.PAGES.getIndex(songbook_id), 1)
+                + getItemXML(PATHS.PAGES.getIndexList(songbook_id), 1);
 
-    categories
+    let songs = categories
         .flatMap((cat) => cat.items)
-        .forEach((item) => (
-            result += `
-                <url>
-                    <loc>${encodeURI(ORIGIN + '/' + songbook_id + '/' + item.fileName)}</loc>
-                    <changefreq>weekly</changefreq>
-                    <priority>0.8</priority>
-                </url>
-            `
-        ));
+        .map((item) => getItemXML(PATHS.RELATIVE.toSongs(songbook_id) + '/' + item.fileName, 0.8))
+        .join();
 
-    return result;
+    return indexes + songs;
 }
 
 
