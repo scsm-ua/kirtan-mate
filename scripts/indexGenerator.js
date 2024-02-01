@@ -272,11 +272,14 @@ function getIndexLineInfo(line) {
 }
 
 
-var songs_cache = {};
+var songbooks_cache = {};
 
 function getSongJSON(songbook_id, filename) {
-    if (songs_cache[filename]) {
-        return songs_cache[filename];
+
+    var songbook_cache = songbooks_cache[songbook_id] = songbooks_cache[songbook_id] || {};
+
+    if (songbook_cache[filename]) {
+        return songbook_cache[filename];
     }
 
     var filepath = path.resolve(PATHS.BUILD.getJsonPath(songbook_id), filename + '.json');
@@ -286,8 +289,8 @@ function getSongJSON(songbook_id, filename) {
         return;
     }
 
-    songs_cache[filename] = require(filepath);
-    return songs_cache[filename];
+    songbook_cache[filename] = require(filepath);
+    return songbook_cache[filename];
 }
 
 function getSongName(songbook_id, filename) {
