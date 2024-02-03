@@ -35,7 +35,8 @@ function convertSongToJSON(text) {
     // Song template.
     var song = {
         title: null,
-        author: null,
+        author: [],
+        subtitle: null,
         verses: []
     };
 
@@ -62,7 +63,10 @@ function convertSongToJSON(text) {
                 song.title = line_value;
                 break;
             case 'author':
-                song.author = line_value;
+                song.author.push(line_value);
+                break;
+            case 'subtitle':
+                song.subtitle = line_value;
                 break;
             case 'verse_number':
                 getLastVerse({ create_new: true }).number = line_value;
@@ -89,6 +93,7 @@ function convertSongToJSON(text) {
 const song_line_types = {
     title: /^# (.+)/,
     author: /^## (.+)/,
+    subtitle: /^### (.+)/,
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
     translation: /^([^\s#].+)/

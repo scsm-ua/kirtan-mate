@@ -41,6 +41,13 @@
         font-weight: 300;
     }
 
+    &__subtitle {
+        color: var(--text-color);
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 16px;
+    }
+
     &__main {
         width: 100%;
     }

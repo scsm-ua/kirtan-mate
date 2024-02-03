@@ -49,7 +49,7 @@ function makeSongHTML(songbook_id, template) {
  */
 function fillTemplate(songbook_id, template, content, filePath) {
     // TODO: subtitle.
-    const { author, title, verses } = content;
+    const { author, subtitle, title, verses } = content;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -58,15 +58,23 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     const { text } = verses[0];
 
+    var pageTitle = title;
+    if (author && author.length) {
+        pageTitle += '. ' + author[0];
+    }
+    if (subtitle) {
+        pageTitle += '. ' + subtitle;
+    }
+
     const headParts = {
-        // TODO: subtitle.
-        title: author ? title + '. ' + author : title,
+        title: pageTitle,
         description: `${text[0]}\n${text[1]}...`,
         path: ORIGIN + '/' + songbook_id + '/' + path.parse(filePath).name + '.html'
     };
 
     return ejs.render(template, {
         author: author,
+        subtitle: subtitle,
         contentItems: JSON.stringify(require(BUILD.getContentsFile(songbook_id))),
         headParts: createHeadParts(headParts),
         paths: getTemplatePaths(songbook_id),
