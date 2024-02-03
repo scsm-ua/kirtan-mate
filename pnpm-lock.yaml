@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   dotenv:
     specifier: ^16.4.1
@@ -27,7 +31,7 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/ad8a57ffb1c40fce66a6a7871f7c1c01e99ff820
+    version: github.com/scsm-ua/kirtan-guide-en/ef0604a20da745c01e0975a1b74bb2ec97218aa2
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
@@ -2524,12 +2528,8 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/ad8a57ffb1c40fce66a6a7871f7c1c01e99ff820:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/ad8a57ffb1c40fce66a6a7871f7c1c01e99ff820}
+  github.com/scsm-ua/kirtan-guide-en/ef0604a20da745c01e0975a1b74bb2ec97218aa2:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/ef0604a20da745c01e0975a1b74bb2ec97218aa2}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
