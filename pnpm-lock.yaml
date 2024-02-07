@@ -31,7 +31,7 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/205f3ed44a7f0a37c05395e116e2a89cb9c2ddfe
+    version: github.com/scsm-ua/kirtan-guide-en/175a870c532346995350db0ade3049a3b0adcf40
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
@@ -331,7 +331,7 @@ packages:
       es-errors: 1.3.0
       function-bind: 1.1.2
       get-intrinsic: 1.2.4
-      set-function-length: 1.2.0
+      set-function-length: 1.2.1
     dev: true
 
   /camelcase@3.0.0:
@@ -376,8 +376,8 @@ packages:
       - supports-color
     dev: true
 
-  /chokidar@3.5.3:
-    resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
+  /chokidar@3.6.0:
+    resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
     dependencies:
       anymatch: 3.1.3
@@ -2028,7 +2028,7 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
-      chokidar: 3.5.3
+      chokidar: 3.6.0
       immutable: 4.3.5
       source-map-js: 1.0.2
     dev: false
@@ -2049,11 +2049,12 @@ packages:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
     dev: true
 
-  /set-function-length@1.2.0:
-    resolution: {integrity: sha512-4DBHDoyHlM1IRPGYcoxexgh67y4ueR53FKV1yyxwFMY7aCqcN/38M1+SwZ/qJQ8iLv7+ck385ot4CcisOAPT9w==}
+  /set-function-length@1.2.1:
+    resolution: {integrity: sha512-j4t6ccc+VsKwYHso+kElc5neZpjtq9EnRICFZtWyBsLojhmeF/ZBd/elqm22WJh/BziDe/SBiOeAt0m2mfLD0g==}
     engines: {node: '>= 0.4'}
     dependencies:
       define-data-property: 1.1.2
+      es-errors: 1.3.0
       function-bind: 1.1.2
       get-intrinsic: 1.2.4
       gopd: 1.0.1
@@ -2538,8 +2539,8 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/205f3ed44a7f0a37c05395e116e2a89cb9c2ddfe:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/205f3ed44a7f0a37c05395e116e2a89cb9c2ddfe}
+  github.com/scsm-ua/kirtan-guide-en/175a870c532346995350db0ade3049a3b0adcf40:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/175a870c532346995350db0ade3049a3b0adcf40}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
