@@ -31,7 +31,7 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/da17dcfe3fef33d807ce64544fb4af02c2eec6bb
+    version: github.com/scsm-ua/kirtan-guide-en/56c26c69d8bad16d368ffa712f6ee99661b79b9a
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
@@ -2137,7 +2137,7 @@ packages:
     resolution: {integrity: sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA==}
     dependencies:
       spdx-expression-parse: 3.0.1
-      spdx-license-ids: 3.0.16
+      spdx-license-ids: 3.0.17
     dev: true
 
   /spdx-exceptions@2.4.0:
@@ -2148,11 +2148,11 @@ packages:
     resolution: {integrity: sha512-cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==}
     dependencies:
       spdx-exceptions: 2.4.0
-      spdx-license-ids: 3.0.16
+      spdx-license-ids: 3.0.17
     dev: true
 
-  /spdx-license-ids@3.0.16:
-    resolution: {integrity: sha512-eWN+LnM3GR6gPu35WxNgbGl8rmY1AEmoMDvL/QD6zYmPWgywxWqJWNdLGT+ke8dKNWrcYgYjPpG5gbTfghP8rw==}
+  /spdx-license-ids@3.0.17:
+    resolution: {integrity: sha512-sh8PWc/ftMqAAdFiBu6Fy6JUOYjqDJBJvIhpfDMyHrr0Rbp5liZqd4TjtQ/RgfLjKFZb+LMx5hpml5qOWy0qvg==}
     dev: true
 
   /split-string@3.1.0:
@@ -2539,8 +2539,8 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/da17dcfe3fef33d807ce64544fb4af02c2eec6bb:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/da17dcfe3fef33d807ce64544fb4af02c2eec6bb}
+  github.com/scsm-ua/kirtan-guide-en/56c26c69d8bad16d368ffa712f6ee99661b79b9a:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/56c26c69d8bad16d368ffa712f6ee99661b79b9a}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
