@@ -97,7 +97,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
  */
 function transformLine(text) {
     return text
-        .replaceAll('    ', '<span class="SongVerse__space">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>')
+        .replaceAll('    ', '<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>')
 }
 
 
