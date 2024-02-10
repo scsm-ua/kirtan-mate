@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   dotenv:
-    specifier: ^16.4.1
-    version: 16.4.1
+    specifier: ^16.4.2
+    version: 16.4.2
   ejs:
     specifier: ^3.1.9
     version: 3.1.9
@@ -31,7 +31,7 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/abd8f735f50d06b8204dfd2e4d5711fcf391622d
+    version: github.com/scsm-ua/kirtan-guide-en/c461bde6b43d000b6b61cdc1a8106b8013594959
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
@@ -586,8 +586,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /dotenv@16.4.1:
-    resolution: {integrity: sha512-CjA3y+Dr3FyFDOAMnxZEGtnW9KBR2M0JvvUtXNW+dYJL5ROWxP9DUHCwgFqpMk0OXCc0ljhaNTr2w/kutYIcHQ==}
+  /dotenv@16.4.2:
+    resolution: {integrity: sha512-rZSSFxke7d9nYQ5NeMIwp5PP+f8wXgKNljpOb7KtH6SKW1cEqcXAz9VSJYVLKe7Jhup/gUYOkaeSVyK8GJ+nBg==}
     engines: {node: '>=12'}
     dev: false
 
@@ -2539,8 +2539,8 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/abd8f735f50d06b8204dfd2e4d5711fcf391622d:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/abd8f735f50d06b8204dfd2e4d5711fcf391622d}
+  github.com/scsm-ua/kirtan-guide-en/c461bde6b43d000b6b61cdc1a8106b8013594959:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/c461bde6b43d000b6b61cdc1a8106b8013594959}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
