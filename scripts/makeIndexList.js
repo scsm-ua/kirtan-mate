@@ -39,7 +39,7 @@ function makeIndexList(categories, index) {
                 // Swapping `aliasName` and `name`.
                 aliasName: name,
                 fileName: fileName,
-                name: aliasName
+                title: aliasName
             }))
         }));
 }
