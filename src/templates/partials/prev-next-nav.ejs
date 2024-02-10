@@ -24,13 +24,12 @@
     <script>
         (function() {
             try {
-                const contentItems = JSON.parse('<%- contentItems %>');
+                const orderedSongs = <%- orderedSongs %>;
                 const prevLinks = document.getElementsByClassName('PrevNextNav__link--prev');
                 const nextLinks = document.getElementsByClassName('PrevNextNav__link--next');
 
-                const items = contentItems.flatMap((cat) => cat.items);
-                const index = items.findIndex((item) =>
-                    window.location.pathname.includes(item.fileName)
+                const index = orderedSongs.findIndex((item) =>
+                    window.location.pathname.includes(item)
                 );
 
                 Array.from(prevLinks)
@@ -39,21 +38,21 @@
                             el.removeAttribute('href');
                             el.children[0].disabled = true;
                         } else {
-                            el.setAttribute('href', items[index - 1].fileName);
+                            el.setAttribute('href', orderedSongs[index - 1]);
                             el.children[0].disabled = false;
-                            el.title = items[index - 1].name;
+                            el.title = orderedSongs[index - 1].name;
                         }
                     })
 
                 Array.from(nextLinks)
                     .forEach((el) => {
-                        if (index === items.length - 1) {
+                        if (index === orderedSongs.length - 1) {
                             el.removeAttribute('href');
                             el.children[0].disabled = true;
                         } else {
-                            el.setAttribute('href', items[index + 1].fileName);
+                            el.setAttribute('href', orderedSongs[index + 1]);
                             el.children[0].disabled = false;
-                            el.title = items[index + 1].name;
+                            el.title = orderedSongs[index + 1].name;
                         }
                     })
 
@@ -61,13 +60,13 @@
                  * Swipe events.
                  */
                 document.addEventListener('swiped-left', () => {
-                    if (index !== items.length - 1)
-                        window.location.href = items[index + 1].fileName
+                    if (index !== orderedSongs.length - 1)
+                        window.location.href = orderedSongs[index + 1]
                 });
 
                 document.addEventListener('swiped-right', () => {
                     if (index !== 0)
-                        window.location.href = items[index - 1].fileName
+                        window.location.href = orderedSongs[index - 1]
                 });
 
             } catch (e) {

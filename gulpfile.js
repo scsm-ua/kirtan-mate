@@ -207,10 +207,10 @@ gulp.task('songbook-contents', (done) => {
             path: PATHS.PAGES.getIndex(songbook_id)
         };
 
-        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX}`;
+        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.CONTENTS} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX}`;
     
         var task = (done) => gulp
-            .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX)
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.CONTENTS)
             .pipe(
                 ejs({
                     categories: require(BUILD.getContentsFile(songbook_id)),

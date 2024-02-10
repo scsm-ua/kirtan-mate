@@ -41,6 +41,12 @@ function makeSongHTML(songbook_id, template) {
     });
 }
 
+function getSongsOrderedList(songbook_id) {
+    var contents = require(BUILD.getContentsFile(songbook_id));
+    var items = contents.flatMap((cat) => cat.items);
+    return items.map(i => i.fileName);
+}
+
 /**
  * @param template: string;
  * @param content: TSongJSON;
@@ -75,7 +81,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
     return ejs.render(template, {
         author: author,
         subtitle: subtitle,
-        contentItems: JSON.stringify(require(BUILD.getContentsFile(songbook_id))),
+        orderedSongs: JSON.stringify(getSongsOrderedList(songbook_id)),
         headParts: createHeadParts(headParts),
         paths: getTemplatePaths(songbook_id),
         title: title,

@@ -228,7 +228,7 @@ function convertContentsToJSON(songbook_id, text) {
     }
 
     lines.forEach((line) => {
-        var { line_id, name } = getIndexLineInfo(line);
+        var { line_id, name, filename } = getIndexLineInfo(line);
         switch (line_id) {
             case 'name':
                 var cateogory = getLastCategory({ create_new: true });
@@ -236,13 +236,14 @@ function convertContentsToJSON(songbook_id, text) {
                 break;
             case 'song':
                 getLastCategory().items.push({
-                    id: name,
-                    name: getSongName(songbook_id, name),
+                    id: filename,
+                    title: name,
+                    name: getSongName(songbook_id, filename),
                     // TODO: trim
                     // TODO: replace tabs
                     // TODO: trim -
-                    aliasName: getSongFirstLine(songbook_id, name),
-                    fileName: name + '.html'
+                    aliasName: getSongFirstLine(songbook_id, filename),
+                    fileName: filename + '.html'
                 });
                 break;
             default:
@@ -257,7 +258,7 @@ function convertContentsToJSON(songbook_id, text) {
 const index_line_types = {
     name: /^### (.+)/,
     // Extract only filename without extension.
-    song: /^\s?- \[[^\]]+\]\(songs\/([^\)]+)\.md\)/
+    song: /^\s?- \[([^\]]+)\]\(songs\/([^\)]+)\.md\)/
 };
 
 function getIndexLineInfo(line) {
@@ -266,13 +267,15 @@ function getIndexLineInfo(line) {
         if (m) {
             return {
                 line_id: id,
-                name: m[1]
+                name: m[1],
+                filename: m[2]
             };
         }
     }
     return {
         line_id: null,
-        name: null
+        name: null,
+        filename: null
     };
 }
 

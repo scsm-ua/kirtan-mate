@@ -38,7 +38,7 @@ const PATHS = {
     FILES: {
         EJS: {
             // TODO: rename
-            INDEX: 'index.ejs',
+            CONTENTS: 'index.ejs',
             // TODO: rename
             INDEX_LIST: 'index-list-page.ejs',
             SONGBOOKS: 'songbooks.ejs',
