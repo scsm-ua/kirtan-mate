@@ -12,21 +12,25 @@
         </header>
     <% } %>
 
-    <ul class="SongVerse__text">
-        <% item.text.forEach((line) => { %>
-            <li class="SongVerse__line">
-                <%- transformLine(line) %>
-            </li>
-        <% }) %>
-    </ul>
+    <% if (item.text.length) { %>
+        <ul class="SongVerse__text">
+            <% item.text.forEach((line) => { %>
+                <li class="SongVerse__line">
+                    <%- transformLine(line) %>
+                </li>
+            <% }) %>
+        </ul>
+    <% } %>
 
-    <ul class="SongVerse__translation">
-        <% item.translation.forEach((p) => { %>
-            <li class="SongVerse__paragraph">
-                <p>
-                    <%- p %>
-                </p>
-            </li>
-        <% }) %>
-    </ul>
+    <% if (item.translation.length) { %>
+        <ul class="SongVerse__translation">
+            <% item.translation.forEach((p) => { %>
+                <li class="SongVerse__paragraph">
+                    <p>
+                        <%- p %>
+                    </p>
+                </li>
+            <% }) %>
+        </ul>
+    <% } %>
 </li>
