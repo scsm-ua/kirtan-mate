@@ -15,9 +15,13 @@
     <% if (item.text.length) { %>
         <ul class="SongVerse__text">
             <% item.text.forEach((line) => { %>
-                <li class="SongVerse__line">
-                    <%- transformLine(line) %>
-                </li>
+                <% if (line) { %>
+                    <li class="SongVerse__line">
+                        <%- transformLine(line) %>
+                    </li>
+                <% } else { %>
+                    <br>
+                <% } %>
             <% }) %>
         </ul>
     <% } %>

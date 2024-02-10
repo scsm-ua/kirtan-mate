@@ -29,9 +29,7 @@ function processSong(filename) {
  */
 function convertSongToJSON(text) {
     var lines = text.split(/\n/);
-    // Filter empty lines.
-    lines = lines.filter((i) => i.trim());
-
+    
     // Song template.
     var song = {
         title: null,
@@ -54,10 +52,15 @@ function convertSongToJSON(text) {
     }
 
     var last_line_id;
+    var verse_separator;
 
     // TODO: shikshastakam first verse has no number
     lines.forEach((line) => {
         var { line_id, line_value } = getSongLineInfo(line);
+        if (line_id && line_id !== 'verse_text') {
+            // Disable empty verse line.
+            verse_empty_line = false;
+        }
         switch (line_id) {
             case 'title':
                 song.title = line_value;
@@ -72,6 +75,12 @@ function convertSongToJSON(text) {
                 getLastVerse({ create_new: true }).number = line_value;
                 break;
             case 'verse_text':
+                if (verse_empty_line) {
+                    verse_empty_line = false;
+                    getLastVerse({
+                        create_new: false
+                    }).text.push('');
+                }
                 getLastVerse({
                     create_new: last_line_id === 'translation'
                 }).text.push(line_value);
@@ -80,10 +89,20 @@ function convertSongToJSON(text) {
                 getLastVerse().translation.push(line_value);
                 break;
             default:
-                // TODO: better errors processing.
-                console.error("Can't recognize line id", line_id, line_value);
+                if (!line.trim()) {
+                    // Empty line.
+                    if (last_line_id === 'verse_text') {
+                        verse_empty_line = true;
+                    }
+                } else {
+                    // TODO: better errors processing.
+                    console.error("Can't recognize line id", line_id, line_value);
+                }
         }
-        last_line_id = line_id;
+        if (line_id) {
+            // Skip empty lines.
+            last_line_id = line_id;
+        }
     });
 
     return song;
