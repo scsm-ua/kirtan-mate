@@ -39,6 +39,10 @@
         color: var(--title-color);
     }
 
+    &__light {
+        font-weight: initial;
+    }
+
     &__translation {
         list-style-type: none;
         margin: 0;
