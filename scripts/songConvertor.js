@@ -55,7 +55,7 @@ function getSongsOrderedList(songbook_id) {
  */
 function fillTemplate(songbook_id, template, content, filePath) {
     // TODO: subtitle.
-    const { author, subtitle, title, verses } = content;
+    const { author, subtitle, title, verses, attributes } = content;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -86,22 +86,36 @@ function fillTemplate(songbook_id, template, content, filePath) {
         paths: getTemplatePaths(songbook_id),
         title: title,
         verses: verses,
+        attributes: attributes,
         i18n: i18n(songbook_id),
         transformLine: transformLine
     });
 }
 
+const TAG_RE = /<[^>]+>/gi;
+const PARANTHESES_RE = /(\([^\)]+\))/gi;
+const PARANTHESES_START_RE = /(\([^\)]+)\s*$/gi;    // ) End in next line.
+const PARANTHESES_END_RE = /^(\s*)([^\)]+\))/gi;    // ( Start in prev line.
+
 /**
  * EJS trims lines even despite 'rmWhitespace: false'.
  * But we want some verse lines have extra space in the beginning.
  */
-function transformLine(text) {
-    return text
-        // This replace must be first, bacause `SongVerse__space` class includes `_` symbol.
-        .replace(/_([^_]+)_/gi, '<span class="SongVerse__light">$1</span>')
-        .replaceAll('    ', '<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
-}
+function transformLine(text, attributes) {
 
+    // Cleanup tags for safaty.
+    text = text.replace(TAG_RE, '')
+
+    if (attributes && attributes['verse parentheses'] === 'non bold') {
+        text = text.replace(PARANTHESES_RE,  '<span class="SongVerse__light">$1</span>')
+        text = text.replace(PARANTHESES_START_RE,  '<span class="SongVerse__light">$1</span>')
+        text = text.replace(PARANTHESES_END_RE,  '$1<span class="SongVerse__light">$2</span>')
+    }
+
+    text = text.replaceAll('    ', '<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
+
+    return text;
+}
 
 /****************************/
 /* Markdown to JSON section */

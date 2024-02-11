@@ -17,7 +17,7 @@
             <% item.text.forEach((line) => { %>
                 <% if (line) { %>
                     <li class="SongVerse__line">
-                        <%- transformLine(line) %>
+                        <%- transformLine(line, attributes) %>
                     </li>
                 <% } else { %>
                     <br>

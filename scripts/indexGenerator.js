@@ -88,6 +88,15 @@ function convertSongToJSON(text) {
             case 'translation':
                 getLastVerse().translation.push(line_value);
                 break;
+            case 'attribute':
+                var bits = line_value.split(/=/);
+                if (bits.length !== 2) {
+                    console.error("Can't recognize attribute", line);
+                } else {
+                    song.attributes = song.attributes || {};
+                    song.attributes[bits[0].trim()] = bits[1].trim();
+                }
+                break;
             default:
                 if (!line.trim()) {
                     // Empty line.
@@ -96,7 +105,7 @@ function convertSongToJSON(text) {
                     }
                 } else {
                     // TODO: better errors processing.
-                    console.error("Can't recognize line id", line_id, line_value);
+                    console.error("Can't recognize line id", line_id, line);
                 }
         }
         if (line_id) {
@@ -115,6 +124,7 @@ const song_line_types = {
     subtitle: /^### (.+)/,
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
+    attribute: /^> (.+)/,
     translation: /^([^\s#].+)/
 };
 
@@ -141,6 +151,7 @@ function postProcessSong(song) {
 }
 
 /**/
+const TAG_RE = /<[^>]+>/gm;
 const NOTE_MD_REGEX = /\*\*\*(.*?)\*\*\*/gm;
 const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
 
@@ -152,6 +163,8 @@ const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
 function processTranslation(lines) {
     return lines
         .join('\n')
+        // Cleanup tags for safaty.
+        .replace(TAG_RE, '')
         .replace(NOTE_MD_REGEX, '<i class="SongVerse__note">$1</i>\n')
         .replace(TERM_MD_REGEX, '<i class="SongVerse__term">$1</i>')
         .replaceAll('\\\n', '<br class="SongVerse__break" />')
