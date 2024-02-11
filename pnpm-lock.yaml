@@ -31,7 +31,7 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/8c1816c7002cbe472df62e04e0e353dfb621d3f1
+    version: github.com/scsm-ua/kirtan-guide-en/cb0cda604353435e57c9397f6ef9e4e5a4ccd3f4
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
@@ -2539,8 +2539,8 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/8c1816c7002cbe472df62e04e0e353dfb621d3f1:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/8c1816c7002cbe472df62e04e0e353dfb621d3f1}
+  github.com/scsm-ua/kirtan-guide-en/cb0cda604353435e57c9397f6ef9e4e5a4ccd3f4:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/cb0cda604353435e57c9397f6ef9e4e5a4ccd3f4}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
