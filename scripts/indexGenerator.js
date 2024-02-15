@@ -120,8 +120,8 @@ function convertSongToJSON(text) {
 /**/
 const song_line_types = {
     title: /^# (.+)/,
-    author: /^## (.+)/,
-    subtitle: /^### (.+)/,
+    subtitle: /^## (.+)/,
+    author: /^### (.+)/,
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
     attribute: /^> (.+)/,

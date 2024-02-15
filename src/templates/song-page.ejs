@@ -28,22 +28,18 @@
                                         </h1>
                                     <% } %>
 
-
-                                    <% if (author && author.length) { %>
-                                        <div class="SongPage__author">
-                                            <% author.forEach((item, idx) => { %>
-                                                <%= item %>
-                                                <% if (idx < author.length - 1) { %>
-                                                    <br>
-                                                <% } %>
-                                            <% }) %>    
-                                        </div>
-                                    <% } %>
-
                                     <% if (subtitle) { %>
                                         <div class="SongPage__subtitle">
                                             <%= subtitle %>
                                         </div>
+                                    <% } %>
+
+                                    <% if (author && author.length) { %>
+                                        <% author.forEach((item, idx) => { %>
+                                            <div class="SongPage__author">
+                                                <%= item %>
+                                            </div>
+                                        <% }) %>
                                     <% } %>
                                 </div>
 
