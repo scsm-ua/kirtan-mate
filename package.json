@@ -6,7 +6,7 @@
         "watch": "gulp watch"
     },
     "dependencies": {
-        "dotenv": "^16.4.2",
+        "dotenv": "^16.4.4",
         "ejs": "^3.1.9",
         "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua",
         "gulp-ejs": "^5.1.0",
