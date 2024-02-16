@@ -275,7 +275,8 @@ function convertContentsToJSON(songbook_id, text) {
                     // TODO: replace tabs
                     // TODO: trim -
                     aliasName: getSongFirstLine(songbook_id, filename),
-                    fileName: filename + '.html'
+                    fileName: filename + '.html',
+                    page: getSongPage(songbook_id, filename),
                 });
                 break;
             default:
@@ -339,6 +340,14 @@ function getSongName(songbook_id, filename) {
         return;
     }
     return song_json.title[0];
+}
+
+function getSongPage(songbook_id, filename) {
+    var song_json = getSongJSON(songbook_id, filename);
+    if (!song_json) {
+        return;
+    }
+    return song_json.attributes?.page;
 }
 
 function getSongFirstLine(songbook_id, filename) {

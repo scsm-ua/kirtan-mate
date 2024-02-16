@@ -35,11 +35,12 @@ function makeIndexList(categories, index) {
         .sort(((a, b) => a[0].localeCompare(b[0])))
         .map(([letter, items]) => ({
             name: letter.toUpperCase(),
-            items: items.map(({ aliasName, fileName, name }) => ({
+            items: items.map(({ aliasName, fileName, name, page }) => ({
                 // Swapping `aliasName` and `name`.
                 aliasName: name,
                 fileName: fileName,
-                title: aliasName
+                title: aliasName,
+                page: page
             }))
         }));
 }
