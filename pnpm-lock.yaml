@@ -31,13 +31,13 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/5ea7877f2d7e59cb838efa82c9aca84ab12ae0b2
+    version: github.com/scsm-ua/kirtan-guide-en/6d9b920ef38a1efbd771c2126deec27761af3a46
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
   sass:
-    specifier: ^1.70.0
-    version: 1.70.0
+    specifier: ^1.71.0
+    version: 1.71.0
   vinyl-source-stream:
     specifier: ^2.0.0
     version: 2.0.0
@@ -2030,8 +2030,8 @@ packages:
       ret: 0.1.15
     dev: true
 
-  /sass@1.70.0:
-    resolution: {integrity: sha512-uUxNQ3zAHeAx5nRFskBnrWzDUJrrvpCPD5FNAoRvTi0WwremlheES3tg+56PaVtCs5QDRX5CBLxxKMDJMEa1WQ==}
+  /sass@1.71.0:
+    resolution: {integrity: sha512-HKKIKf49Vkxlrav3F/w6qRuPcmImGVbIXJ2I3Kg0VMA+3Bav+8yE9G5XmP5lMj6nl4OlqbPftGAscNaNu28b8w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -2546,8 +2546,8 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/5ea7877f2d7e59cb838efa82c9aca84ab12ae0b2:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/5ea7877f2d7e59cb838efa82c9aca84ab12ae0b2}
+  github.com/scsm-ua/kirtan-guide-en/6d9b920ef38a1efbd771c2126deec27761af3a46:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/6d9b920ef38a1efbd771c2126deec27761af3a46}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
