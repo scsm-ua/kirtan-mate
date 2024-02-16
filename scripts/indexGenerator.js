@@ -32,7 +32,7 @@ function convertSongToJSON(text) {
     
     // Song template.
     var song = {
-        title: null,
+        title: [],
         author: [],
         subtitle: null,
         verses: []
@@ -63,7 +63,7 @@ function convertSongToJSON(text) {
         }
         switch (line_id) {
             case 'title':
-                song.title = line_value;
+                song.title.push(line_value);
                 break;
             case 'author':
                 song.author.push(line_value);
@@ -338,7 +338,7 @@ function getSongName(songbook_id, filename) {
     if (!song_json) {
         return;
     }
-    return song_json.title;
+    return song_json.title[0];
 }
 
 function getSongFirstLine(songbook_id, filename) {
