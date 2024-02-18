@@ -163,6 +163,7 @@ function getSongooksRenderContext() {
     };
 
     const paths = {
+        toAppcacheManifest: PATHS.RELATIVE.APPCACHE_MANIFEST,
         toCss: PATHS.RELATIVE.CSS,
         toImages: PATHS.RELATIVE.IMG,
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
@@ -213,6 +214,24 @@ gulp.task('404', (done) => {
             )
             .pipe(gulp.dest(BUILD.ROOT), done);
 });
+
+/**
+ *
+ */
+gulp.task('appcache', (done) => {
+    return gulp
+            .src([SRC.EJS_FILES + '/' + FILES.EJS.APPCACHE])
+            .pipe(
+                ejs({
+                    
+                }).on('error', console.error)
+            )
+            .pipe(
+                rename(FILES.APPCACHE_MANIFEST)
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done);
+});
+
 
 /**
  *
@@ -336,6 +355,7 @@ gulp.task('build', (done) => {
         'sitemap',
         'songbooks',
         '404',
+        'appcache',
         done
     );
 });

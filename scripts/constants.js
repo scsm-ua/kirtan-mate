@@ -8,6 +8,7 @@ const indexItems = 'indexItems.json';
 const indexPath = 'index.html';
 const indexListPath = 'index-list-page.html';
 const sharingBanner = 'sharing-banner.png';
+const appcacheManifest = 'manifest.appcache'
 
 /**/
 const ORIGIN = (process.env.HOME_BASE_URL || '');
@@ -19,7 +20,8 @@ const PATHS = {
     RELATIVE: {
         CSS: ORIGIN + '/' + CSS_DIR,
         IMG: ORIGIN + '/' + IMG_DIR,
-        toSongs: (songbook_id) => ORIGIN + '/' + songbook_id
+        toSongs: (songbook_id) => ORIGIN + '/' + songbook_id,
+        APPCACHE_MANIFEST: ORIGIN + '/' + appcacheManifest
     },
     BUILD: {
         CSS_FILES: OUTPUT_DIR + '/' + CSS_DIR,
@@ -44,7 +46,8 @@ const PATHS = {
             SONGBOOKS: 'songbooks.ejs',
             NOT_FOUND: '404.ejs',
             SITEMAP: 'sitemap.ejs',
-            SONG_PAGE: 'song-page.ejs'
+            SONG_PAGE: 'song-page.ejs',
+            APPCACHE: 'appcache.ejs'
         },
         HTML: {
             INDEX: indexPath,
@@ -57,7 +60,8 @@ const PATHS = {
         SHARING_BANNER: ORIGIN + '/images/' + sharingBanner,
         XML: {
             SITEMAP: 'sitemap.xml'
-        }
+        },
+        APPCACHE_MANIFEST: appcacheManifest
     },
     SRC: {
         CSS_FILES: 'src/styles',

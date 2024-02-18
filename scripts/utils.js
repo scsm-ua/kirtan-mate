@@ -3,6 +3,7 @@ const { PATHS } = require('./constants');
 
 exports.getTemplatePaths = function(songbook_id) {
     return {
+        toAppcacheManifest: PATHS.RELATIVE.APPCACHE_MANIFEST,
         toCss: PATHS.RELATIVE.CSS,
         toImages: PATHS.RELATIVE.IMG,
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
