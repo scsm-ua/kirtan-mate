@@ -145,11 +145,7 @@ gulp.task('generate-index', (done) => {
     })(); 
 });
 
-/**
- *
- */
-gulp.task('songbooks', (done) => {
-
+function getSongooksRenderContext() {
     var songbooks = getSongbookIdList().map(songbook_id => {
         return {
             title: getSongbookInfo(songbook_id).title,
@@ -175,18 +171,43 @@ gulp.task('songbooks', (done) => {
         }
     };
 
+    return {
+        songbooks: songbooks,
+        headParts: createHeadParts(headParts),
+        paths: paths
+    };
+}
+
+/**
+ *
+ */
+gulp.task('songbooks', (done) => {
     return gulp
-            .src(SRC.EJS_FILES + '/' + FILES.EJS.SONGBOOKS)
+            .src([SRC.EJS_FILES + '/' + FILES.EJS.SONGBOOKS])
             .pipe(
-                ejs({
-                    songbooks: songbooks,
-                    headParts: createHeadParts(headParts),
-                    paths: paths
-                }).on('error', console.error)
+                ejs(getSongooksRenderContext()).on('error', console.error)
             )
             .pipe(
                 rename({
                     basename: 'index',
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done);
+});
+
+/**
+ *
+ */
+gulp.task('404', (done) => {
+    return gulp
+            .src([SRC.EJS_FILES + '/' + FILES.EJS.NOT_FOUND])
+            .pipe(
+                ejs(getSongooksRenderContext()).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: '404',
                     extname: '.html'
                 })
             )
@@ -314,6 +335,7 @@ gulp.task('build', (done) => {
         'songbook-index',
         'sitemap',
         'songbooks',
+        '404',
         done
     );
 });

@@ -42,6 +42,7 @@ const PATHS = {
             // TODO: rename
             INDEX_LIST: 'index-list-page.ejs',
             SONGBOOKS: 'songbooks.ejs',
+            NOT_FOUND: '404.ejs',
             SITEMAP: 'sitemap.ejs',
             SONG_PAGE: 'song-page.ejs'
         },

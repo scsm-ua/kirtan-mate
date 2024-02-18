@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- headParts %>
+
+        <!-- Google Search Verification Tag -->
+        <meta name="google-site-verification" content="f9oZnXzS_z1d4zbfTIBeXcGZKhoxh2i8mA-Q-MxYLto" />
+
+        <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
+        <link rel="stylesheet" href="<%= paths.toCss %>/index-page.css" />
+    </head>
+    <body>
+        <div class="Layout">
+            <div class="Layout__content">
+                <%- include(paths.toPartials + '/header.ejs'); %>
+
+                <main class="Main IndexPage">
+                    <div class="Main__container IndexPage__container">
+
+                        <div class="IndexPage__navigation"></div>
+
+                        <div class="Main__content IndexPage__content">
+
+                            <div>
+                                <h2>Page not found</h2>
+                                <p>
+                                    This site does not contain the requested URL. Try to start navagation selecting songbook from the list below:
+                                </p>
+                            </div>
+                            
+                            <ul class="IndexPage__list">    
+                                
+                                <% songbooks.forEach((songbook) => { %>
+
+                                    <li class="IndexListItem">
+                                        <link
+                                            rel="stylesheet"
+                                            href="<%= paths.toCss %>/partials/index-list-item.css"
+                                        />
+                                    
+                                        <ul class="IndexListItem__list">
+                                            
+                                            <li class="IndexListItem__item">
+                                                <a href="<%= songbook.contentsPath %>" class="IndexListItem__link">
+                                                    <div>
+                                                        <h6 class="IndexListItem__name">
+                                                            <%= songbook.title %>
+                                                        </h6>
+                                                        <div class="IndexListItem__subtitle">
+                                                            <%= songbook.subtitle %>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="IndexListItem__suffix">
+                                                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+
+                                <% }); %>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
