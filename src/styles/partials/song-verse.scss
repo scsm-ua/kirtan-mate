@@ -37,8 +37,26 @@
         font-weight: 700;
         line-height: 24px;
         color: var(--title-color);
-    }
+        text-indent: -1em;
+        margin-left: 1em;
 
+        &_indent_1 {
+            margin-left: 2em;
+        }
+    
+        &_indent_2 {
+            margin-left: 3em;
+        }
+    
+        &_indent_3 {
+            margin-left: 4em;
+        }
+    
+        &_indent_4 {
+            margin-left: 5em;
+        }
+    }
+    
     &__light {
         font-weight: initial;
     }

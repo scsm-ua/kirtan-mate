@@ -88,7 +88,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
         verses: verses,
         attributes: attributes,
         i18n: i18n(songbook_id),
-        transformLine: transformLine
+        transformLine: transformLine,
+        getLineIndentClass: getLineIndentClass
     });
 }
 
@@ -96,6 +97,21 @@ const TAG_RE = /<[^>]+>/gi;
 const PARANTHESES_RE = /(\([^\)]+\))/gi;
 const PARANTHESES_START_RE = /(\([^\)]+)\s*$/gi;    // ) End in next line.
 const PARANTHESES_END_RE = /^(\s*)([^\)]+\))/gi;    // ( Start in prev line.
+
+
+function getLineIndentClass(text, prefix) {
+    var m = text.match(/^\s+/);
+    if (m) {
+        var count = Math.floor(m[0].length / 4);
+        if (count > 4) {
+            count = 4;
+        }
+        if (count) {
+            return prefix + '_indent_' + count;
+        }
+    }
+    return '';
+}
 
 /**
  * EJS trims lines even despite 'rmWhitespace: false'.
@@ -112,7 +128,8 @@ function transformLine(text, attributes) {
         text = text.replace(PARANTHESES_END_RE,  '$1<span class="SongVerse__light">$2</span>')
     }
 
-    text = text.replaceAll('    ', '<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
+    // Try fix with indents.
+    // text = text.replaceAll('    ', '<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
 
     return text;
 }

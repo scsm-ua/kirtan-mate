@@ -16,7 +16,7 @@
         <ul class="SongVerse__text">
             <% item.text.forEach((line) => { %>
                 <% if (line) { %>
-                    <li class="SongVerse__line">
+                    <li class="SongVerse__line <%= getLineIndentClass(line, 'SongVerse__line') %>">
                         <%- transformLine(line, attributes) %>
                     </li>
                 <% } else { %>
