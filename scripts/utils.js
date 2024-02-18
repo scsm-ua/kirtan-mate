@@ -3,6 +3,7 @@ const { PATHS } = require('./constants');
 
 exports.getTemplatePaths = function(songbook_id) {
     return {
+        toServiceWorker: PATHS.RELATIVE.SERVICE_WORKER,
         toCss: PATHS.RELATIVE.CSS,
         toImages: PATHS.RELATIVE.IMG,
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),

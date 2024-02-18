@@ -1,0 +1,6 @@
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('<%= paths.toServiceWorker %>');
+    }
+</script>
+<script src="<%= paths.toServiceWorker %>"></script>
