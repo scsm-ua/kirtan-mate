@@ -22,24 +22,33 @@
                         <div class="Main__content SongPage__content">
                             <header class="SongPage__header">
                                 <div class="SongPage__box">
-                                    <% if (title) { %>
-                                        <h1 class="SongPage__title">
-                                            <%= title %>
-                                        </h1>
+                                    <% if (title && title.length) { %>
+                                        <% title.forEach((item, idx) => { %>
+                                            <h1 class="SongPage__title <% if (idx === title.length - 1) {%>SongPage__title_last<% } %>">
+                                                <%= item %>
+                                            </h1>
+                                        <% }) %>
                                     <% } %>
 
-
-                                    <% if (author) { %>
-                                        <div class="SongPage__author">
-                                            <%= author %>
+                                    <% if (subtitle) { %>
+                                        <div class="SongPage__subtitle">
+                                            <%= subtitle %>
                                         </div>
+                                    <% } %>
+
+                                    <% if (author && author.length) { %>
+                                        <% author.forEach((item, idx) => { %>
+                                            <div class="SongPage__author <% if (idx === 0) {%>SongPage__author_first<% } %>">
+                                                <%= item %>
+                                            </div>
+                                        <% }) %>
                                     <% } %>
                                 </div>
 
                                 <button
                                     class="AppButton RoundButton RoundButton--L RoundButton--dark"
                                     id="share-button"
-                                    title="Поділитися піснею"
+                                    title="<%= i18n('Share song') %>"
                                 >
                                     <span class="AppIcon icon-share"></span>
                                 </button>
@@ -110,5 +119,6 @@
                 });
             } ())
         </script>
+        <%- include(paths.toPartials + '/gtag.ejs'); %>
     </body>
 </html>

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const { PATHS } = require('../scripts/constants');
-const { getContentsFilePath, getSongsPath } = require('./songbookLoader');
+const { getContentsFilePath, getSongsPath, getIndexFilePath } = require('./songbookLoader');
 
 // Songs.
 
@@ -29,13 +29,12 @@ function processSong(filename) {
  */
 function convertSongToJSON(text) {
     var lines = text.split(/\n/);
-    // Filter empty lines.
-    lines = lines.filter((i) => i.trim());
-
+    
     // Song template.
     var song = {
-        title: null,
-        author: null,
+        title: [],
+        author: [],
+        subtitle: null,
         verses: []
     };
 
@@ -53,21 +52,35 @@ function convertSongToJSON(text) {
     }
 
     var last_line_id;
+    var verse_separator;
 
     // TODO: shikshastakam first verse has no number
     lines.forEach((line) => {
         var { line_id, line_value } = getSongLineInfo(line);
+        if (line_id && line_id !== 'verse_text') {
+            // Disable empty verse line.
+            verse_empty_line = false;
+        }
         switch (line_id) {
             case 'title':
-                song.title = line_value;
+                song.title.push(line_value);
                 break;
             case 'author':
-                song.author = line_value;
+                song.author.push(line_value);
+                break;
+            case 'subtitle':
+                song.subtitle = line_value;
                 break;
             case 'verse_number':
                 getLastVerse({ create_new: true }).number = line_value;
                 break;
             case 'verse_text':
+                if (verse_empty_line) {
+                    verse_empty_line = false;
+                    getLastVerse({
+                        create_new: false
+                    }).text.push('');
+                }
                 getLastVerse({
                     create_new: last_line_id === 'translation'
                 }).text.push(line_value);
@@ -75,11 +88,30 @@ function convertSongToJSON(text) {
             case 'translation':
                 getLastVerse().translation.push(line_value);
                 break;
+            case 'attribute':
+                var bits = line_value.split(/=/);
+                if (bits.length !== 2) {
+                    console.error("Can't recognize attribute", line);
+                } else {
+                    song.attributes = song.attributes || {};
+                    song.attributes[bits[0].trim()] = bits[1].trim();
+                }
+                break;
             default:
-                // TODO: better errors processing.
-                console.error("Can't recognize line id", line_id, line_value);
+                if (!line.trim()) {
+                    // Empty line.
+                    if (last_line_id === 'verse_text') {
+                        verse_empty_line = true;
+                    }
+                } else {
+                    // TODO: better errors processing.
+                    console.error("Can't recognize line id", line_id, line);
+                }
         }
-        last_line_id = line_id;
+        if (line_id) {
+            // Skip empty lines.
+            last_line_id = line_id;
+        }
     });
 
     return song;
@@ -88,9 +120,11 @@ function convertSongToJSON(text) {
 /**/
 const song_line_types = {
     title: /^# (.+)/,
-    author: /^## (.+)/,
+    subtitle: /^## (.+)/,
+    author: /^### (.+)/,
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
+    attribute: /^> (.+)/,
     translation: /^([^\s#].+)/
 };
 
@@ -117,6 +151,7 @@ function postProcessSong(song) {
 }
 
 /**/
+const TAG_RE = /<[^>]+>/gm;
 const NOTE_MD_REGEX = /\*\*\*(.*?)\*\*\*/gm;
 const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
 
@@ -128,6 +163,8 @@ const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
 function processTranslation(lines) {
     return lines
         .join('\n')
+        // Cleanup tags for safaty.
+        .replace(TAG_RE, '')
         .replace(NOTE_MD_REGEX, '<i class="SongVerse__note">$1</i>\n')
         .replace(TERM_MD_REGEX, '<i class="SongVerse__term">$1</i>')
         .replaceAll('\\\n', '<br class="SongVerse__break" />')
@@ -154,10 +191,10 @@ function getSongLineInfo(line) {
 }
 
 // Index.
-function getIndexJSON() {
-    var data = fs.readFileSync(getContentsFilePath());
+function getContentsJSON(songbook_id) {
+    var data = fs.readFileSync(getContentsFilePath(songbook_id));
     var text = data.toString();
-    var categories = convertIndexToJSON(text);
+    var categories = convertContentsToJSON(songbook_id, text);
 
     // Filter empty categories.
     categories = categories.filter((category) => category.items.length > 0);
@@ -166,7 +203,46 @@ function getIndexJSON() {
     return categories;
 }
 
+function getIndexJSON(songbook_id) {
+    var indexFilePath = getIndexFilePath(songbook_id);
+    if (fs.existsSync(indexFilePath)) {
+        var data = fs.readFileSync(indexFilePath);
+        var text = data.toString();
+        var index = convertIndexToJSON(text);
+    
+        // console.log(JSON.stringify(index, null, 4));
+        return index;
+    } else {
+        // Fallback to empty.
+        return convertIndexToJSON('');
+    }
+}
+
 function convertIndexToJSON(text) {
+    var lines = text.split(/\n/).filter(i => !!i);
+    var songs = {};
+
+    lines.forEach((line) => {
+
+        var match = line.match(/^\s?- \[([^\]]+)\]\(songs\/([^\)]+)\.md\)/);
+
+        if (match) {
+            var song_alias = match[1];
+            var song_id = match[2];
+            if (!(song_id in songs)) {
+                songs[song_id] = song_alias;
+            } else {
+                console.warn('- Duplicate index line', line);
+            }
+        } else {
+            console.warn('- No match in index for line', line);
+        }
+    });
+
+    return songs;
+}
+
+function convertContentsToJSON(songbook_id, text) {
     var lines = text.split(/\n/);
     var categories = [];
     var last_line_id;
@@ -184,7 +260,7 @@ function convertIndexToJSON(text) {
     }
 
     lines.forEach((line) => {
-        var { line_id, name } = getIndexLineInfo(line);
+        var { line_id, name, filename } = getIndexLineInfo(line);
         switch (line_id) {
             case 'name':
                 var cateogory = getLastCategory({ create_new: true });
@@ -192,12 +268,15 @@ function convertIndexToJSON(text) {
                 break;
             case 'song':
                 getLastCategory().items.push({
-                    name: getSongName(name),
+                    id: filename,
+                    title: name,
+                    name: getSongName(songbook_id, filename),
                     // TODO: trim
                     // TODO: replace tabs
                     // TODO: trim -
-                    aliasName: getSongFirstLine(name),
-                    fileName: name + '.html'
+                    aliasName: getSongFirstLine(songbook_id, filename),
+                    fileName: filename + '.html',
+                    page: getSongPage(songbook_id, filename),
                 });
                 break;
             default:
@@ -212,7 +291,7 @@ function convertIndexToJSON(text) {
 const index_line_types = {
     name: /^### (.+)/,
     // Extract only filename without extension.
-    song: /^\s?- \[[^\]]+\]\(songs\/([^\)]+)\.md\)/
+    song: /^\s?- \[([^\]]+)\]\(songs\/([^\)]+)\.md\)/
 };
 
 function getIndexLineInfo(line) {
@@ -221,49 +300,66 @@ function getIndexLineInfo(line) {
         if (m) {
             return {
                 line_id: id,
-                name: m[1]
+                name: m[1],
+                filename: m[2]
             };
         }
     }
     return {
         line_id: null,
-        name: null
+        name: null,
+        filename: null
     };
 }
 
 
-var songs_cache = {};
+var songbooks_cache = {};
 
-function getSongJSON(filename) {
-    if (songs_cache[filename]) {
-        return songs_cache[filename];
+function getSongJSON(songbook_id, filename) {
+
+    var songbook_cache = songbooks_cache[songbook_id] = songbooks_cache[songbook_id] || {};
+
+    if (songbook_cache[filename]) {
+        return songbook_cache[filename];
     }
 
-    var filepath = path.resolve(PATHS.BUILD.JSON_FILES, filename + '.json');
+    var filepath = path.resolve(PATHS.BUILD.getJsonPath(songbook_id), filename + '.json');
     if (!fs.existsSync(filepath)) {
         // TODO: better errors processing.
         console.error('Song JSON not found', filepath);
         return;
     }
 
-    songs_cache[filename] = require(filepath);
-    return songs_cache[filename];
+    songbook_cache[filename] = require(filepath);
+    return songbook_cache[filename];
 }
 
-function getSongName(filename) {
-    var song_json = getSongJSON(filename);
+function getSongName(songbook_id, filename) {
+    var song_json = getSongJSON(songbook_id, filename);
     if (!song_json) {
         return;
     }
-    return song_json.title;
+    return song_json.title[0];
 }
 
-function getSongFirstLine(filename) {
-    var song_json = getSongJSON(filename);
+function getSongPage(songbook_id, filename) {
+    var song_json = getSongJSON(songbook_id, filename);
+    if (!song_json) {
+        return;
+    }
+    return song_json.attributes?.page;
+}
+
+function getSongFirstLine(songbook_id, filename) {
+    var song_json = getSongJSON(songbook_id, filename);
     if (!song_json) {
         return;
     }
     var first_verse = song_json.verses.find((verse) => verse.number);
+    if (!first_verse) {
+        // Get first verse if no numbers.
+        first_verse = song_json.verses[0];
+    }
     var first_line = first_verse?.text && first_verse.text[0];
     if (!first_line) {
         // TODO: better errors processing.
@@ -282,5 +378,6 @@ function getSongFirstLine(filename) {
 /**/
 module.exports = {
     convertMDToJSON: convertSong,
+    getContentsJSON: getContentsJSON,
     getIndexJSON: getIndexJSON
 };

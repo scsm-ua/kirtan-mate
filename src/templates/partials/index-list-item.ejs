@@ -15,9 +15,9 @@
     <ul class="IndexListItem__list">
         <% item.items.forEach((song) => { %>
             <li class="IndexListItem__item">
-                <a href="html/<%= song.fileName %>" class="IndexListItem__link">
+                <a href="<%= paths.toSongs %>/<%= song.fileName %>" class="IndexListItem__link">
                     <h6 class="IndexListItem__name" title="<%= song.aliasName %>">
-                        <%= song.name %>
+                        <%= song.title %><% if (song.page) { %>&nbsp;(<%= song.page %>)<% } %>
                     </h6>
 
                     <div class="IndexListItem__suffix">

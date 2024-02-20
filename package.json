@@ -1,21 +1,22 @@
 {
-    "name": "markdown-to-html",
-    "version": "0.1.0",
+    "name": "kirtan-mate",
+    "version": "0.3.0",
     "scripts": {
         "build": "gulp build",
         "watch": "gulp watch"
     },
     "dependencies": {
-        "dotenv": "^16.4.1",
+        "dotenv": "^16.4.4",
         "ejs": "^3.1.9",
-        "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua#369e9f1b5b758080f31edd690e33721402a1443e",
+        "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua",
         "gulp-ejs": "^5.1.0",
         "gulp-rename": "^2.0.0",
         "gulp-sass": "^5.1.0",
         "gulp-shell": "^0.8.0",
         "gulp4-run-sequence": "^1.0.2",
+        "kirtan-guide-en": "github:scsm-ua/kirtan-guide-en",
         "lodash.deburr": "^4.1.0",
-        "sass": "^1.70.0",
+        "sass": "^1.71.0",
         "vinyl-source-stream": "^2.0.0"
     },
     "devDependencies": {
