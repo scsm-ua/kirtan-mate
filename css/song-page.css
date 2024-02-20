@@ -73,17 +73,30 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   font-size: 20px;
   line-height: 140%;
   color: var(--title-color);
-  margin: 0 0 16px 0;
+  margin: 0 0 0 0;
 }
 @media screen and (min-width: 576px) {
   .SongPage__title {
     font-size: 28px;
   }
 }
+.SongPage__title_last {
+  margin: 0 0 16px 0;
+}
 .SongPage__author {
   color: var(--text-color);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
+  margin-top: 4px;
+}
+.SongPage__author_first {
+  margin-top: 16px;
+}
+.SongPage__subtitle {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 16px;
 }
 .SongPage__main {
   width: 100%;

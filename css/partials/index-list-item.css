@@ -53,6 +53,12 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   margin: 0;
   color: var(--title-color);
 }
+.IndexListItem__subtitle {
+  flex: 1;
+  line-height: 28px;
+  margin: 0;
+  color: var(--title-color);
+}
 .IndexListItem__suffix {
   position: relative;
   width: 24px;

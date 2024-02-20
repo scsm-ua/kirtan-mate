@@ -33,6 +33,23 @@
   font-weight: 700;
   line-height: 24px;
   color: var(--title-color);
+  text-indent: -1em;
+  margin-left: 1em;
+}
+.SongVerse__line_indent_1 {
+  margin-left: 2em;
+}
+.SongVerse__line_indent_2 {
+  margin-left: 3em;
+}
+.SongVerse__line_indent_3 {
+  margin-left: 4em;
+}
+.SongVerse__line_indent_4 {
+  margin-left: 5em;
+}
+.SongVerse__light {
+  font-weight: initial;
 }
 .SongVerse__translation {
   list-style-type: none;
