@@ -83,7 +83,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
         subtitle: subtitle,
         orderedSongs: JSON.stringify(getSongsOrderedList(songbook_id)),
         headParts: createHeadParts(headParts),
-        paths: getTemplatePaths(songbook_id),
+        paths: getTemplatePaths(songbook_id, {root_to_songbook: true}),
         title: title,
         verses: verses,
         attributes: attributes,
