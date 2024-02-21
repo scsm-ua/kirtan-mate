@@ -1,4 +1,4 @@
-Preview: https://scsm-ua.github.io/kirtan-mate/
+Live site: https://kirtan.site
 
 ## Run
 
