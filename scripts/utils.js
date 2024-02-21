@@ -8,6 +8,7 @@ exports.getTemplatePaths = function(songbook_id) {
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
         toSongs: PATHS.RELATIVE.toSongs(songbook_id),
         toPages: {
+            root: PATHS.PAGES.INDEX,
             // TODO: rename
             index: PATHS.PAGES.getIndex(songbook_id),
             // TODO: rename
