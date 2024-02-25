@@ -6,6 +6,7 @@ const IMG_DIR = 'css';
 const contentItems = 'contentItems.json';
 const indexItems = 'indexItems.json';
 const indexPath = 'index.html';
+const robotsPath = 'robots.txt';
 const indexListPath = 'index-list-page.html';
 const sharingBanner = 'sharing-banner.png';
 
@@ -44,6 +45,7 @@ const PATHS = {
             SONGBOOKS: 'songbooks.ejs',
             NOT_FOUND: '404.ejs',
             SITEMAP: 'sitemap.ejs',
+            ROBOTS: 'robots.ejs',
             SONG_PAGE: 'song-page.ejs'
         },
         HTML: {
@@ -66,6 +68,7 @@ const PATHS = {
         IMG_FILES: 'src/images'
     },
     PAGES: {
+        SITEMAP: ORIGIN  + '/' + robotsPath,
         INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
         // TODO: rename
         getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),

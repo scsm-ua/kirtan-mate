@@ -316,6 +316,25 @@ gulp.task('sitemap', (done) => {
 /**
  *
  */
+gulp.task('robots', (done) => {
+    return gulp
+        .src(SRC.EJS_FILES + '/' + FILES.EJS.ROBOTS)
+        .pipe(
+            ejs({
+                sitemap: encodeURI(PATHS.PAGES.SITEMAP)
+            }).on('error', console.error)
+        )
+        .pipe(
+            rename({
+                extname: '.txt'
+            })
+        )
+        .pipe(gulp.dest(BUILD.ROOT), done);
+});
+
+/**
+ *
+ */
 gulp.task('clean', shell.task('rm -rf docs'));
 
 /**
@@ -336,6 +355,7 @@ gulp.task('build', (done) => {
         'sitemap',
         'songbooks',
         '404',
+        'robots',
         done
     );
 });
