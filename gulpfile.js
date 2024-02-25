@@ -145,7 +145,7 @@ gulp.task('generate-index', (done) => {
     })(); 
 });
 
-function getSongooksRenderContext() {
+function getSongooksRenderContext(options) {
     var songbooks = getSongbookIdList().map(songbook_id => {
         return {
             title: getSongbookInfo(songbook_id).title,
@@ -159,7 +159,8 @@ function getSongooksRenderContext() {
         title: 'Vaishnava Songbook',
         // TODO: ??
         description: 'Vaishnava Songbook',
-        path: PATHS.PAGES.INDEX
+        path: PATHS.PAGES.INDEX,
+        is404: !!options?.is404
     };
 
     const paths = {
@@ -203,7 +204,7 @@ gulp.task('404', (done) => {
     return gulp
             .src([SRC.EJS_FILES + '/' + FILES.EJS.NOT_FOUND])
             .pipe(
-                ejs(getSongooksRenderContext()).on('error', console.error)
+                ejs(getSongooksRenderContext({is404: true})).on('error', console.error)
             )
             .pipe(
                 rename({

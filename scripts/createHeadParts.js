@@ -6,13 +6,19 @@ const { PATHS, ORIGIN } = require('./constants');
  * @param description: string - no special symbols!
  * @param path: string - no leading or trailing slashes!
  */
-function createHeadParts({ title, description, path }) {
+function createHeadParts({ title, description, path, is404 }) {
     const imgSrc = PATHS.FILES.SHARING_BANNER;
     const _title = title + ' | Kirtan Mate';
 
-    return `
-        <title>${_title}</title>
-        <link rel="canonical" href="${path}" />
+    var render = `
+        <title>${_title}</title>`;
+
+    if (!is404) {
+        render += `
+        <link rel="canonical" href="${path}" />`;
+    }
+
+    render += `
         <meta name="description" content="${description}" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,6 +41,8 @@ function createHeadParts({ title, description, path }) {
 
         ${getSchema(path, title)}
     `;
+
+    return render;
 }
 
 /**
