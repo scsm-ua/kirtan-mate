@@ -6,9 +6,9 @@ const IMG_DIR = 'css';
 const contentItems = 'contentItems.json';
 const indexItems = 'indexItems.json';
 const indexPath = 'index.html';
-const robotsPath = 'robots.txt';
 const indexListPath = 'index-list-page.html';
 const sharingBanner = 'sharing-banner.png';
+const sitemapName = 'sitemap.xml';
 
 /**/
 const ORIGIN = (process.env.HOME_BASE_URL || '');
@@ -58,7 +58,7 @@ const PATHS = {
         },
         SHARING_BANNER: ORIGIN + '/images/' + sharingBanner,
         XML: {
-            SITEMAP: 'sitemap.xml'
+            SITEMAP: sitemapName
         }
     },
     SRC: {
@@ -68,7 +68,7 @@ const PATHS = {
         IMG_FILES: 'src/images'
     },
     PAGES: {
-        SITEMAP: ORIGIN  + '/' + robotsPath,
+        SITEMAP: ORIGIN  + '/' + sitemapName,
         INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
         // TODO: rename
         getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
