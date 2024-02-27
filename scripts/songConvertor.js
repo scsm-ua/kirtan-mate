@@ -129,7 +129,10 @@ function transformLine(text, attributes) {
     }
 
     // Try fix with indents.
-    // text = text.replaceAll('    ', '<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
+    // Remove starting indent (as its fixed by `getLineIndentClass`).
+    text = text.replace(/^\s+/, '');
+    // Replace inner tabs.
+    text = text.replace(/\s{4}/gi, '<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
 
     return text;
 }
