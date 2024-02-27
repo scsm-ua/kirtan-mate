@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   dotenv:
     specifier: ^16.4.5
@@ -27,7 +31,10 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/ea8a5543374d150fd97cdae9527483064df36697
+    version: github.com/scsm-ua/kirtan-guide-en/8b2ee50c3d7df47eaeecc9988bba4a604ceed442
+  kirtan-guide-pocket-edition:
+    specifier: github:scsm-ua/kirtan-guide-pocket-edition
+    version: github.com/scsm-ua/kirtan-guide-pocket-edition/47ef8fbafbf3f9d34268c9f761996c5684a23163
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
@@ -500,7 +507,7 @@ packages:
   /d@1.0.1:
     resolution: {integrity: sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA==}
     dependencies:
-      es5-ext: 0.10.63
+      es5-ext: 0.10.64
       type: 1.2.0
     dev: true
 
@@ -635,8 +642,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /es5-ext@0.10.63:
-    resolution: {integrity: sha512-hUCZd2Byj/mNKjfP9jXrdVZ62B8KuA/VoK7X8nUh5qT+AxDmcbvZz041oDVZdbIN1qW6XY9VDNwzkvKnZvK2TQ==}
+  /es5-ext@0.10.64:
+    resolution: {integrity: sha512-p2snDhiLaXe6dahss1LddxqEm+SkuDvV8dnIQG0MWjyHpcMNfXKPE+/Cc0y+PhxJX3A4xGNeFCj5oc0BUh6deg==}
     engines: {node: '>=0.10'}
     requiresBuild: true
     dependencies:
@@ -650,7 +657,7 @@ packages:
     resolution: {integrity: sha512-zw4SRzoUkd+cl+ZoE15A9o1oQd920Bb0iOJMQkQhl3jNc03YqVjAhG7scf9C5KWRU/R13Orf588uCC6525o02g==}
     dependencies:
       d: 1.0.1
-      es5-ext: 0.10.63
+      es5-ext: 0.10.64
       es6-symbol: 3.1.3
     dev: true
 
@@ -665,7 +672,7 @@ packages:
     resolution: {integrity: sha512-p5um32HOTO1kP+w7PRnB+5lQ43Z6muuMuIMffvDN8ZB4GcnjLBV6zGStpbASIMk4DCAvEaamhe2zhyCb/QXXsA==}
     dependencies:
       d: 1.0.1
-      es5-ext: 0.10.63
+      es5-ext: 0.10.64
       es6-iterator: 2.0.3
       es6-symbol: 3.1.3
     dev: true
@@ -675,7 +682,7 @@ packages:
     engines: {node: '>=0.10'}
     dependencies:
       d: 1.0.1
-      es5-ext: 0.10.63
+      es5-ext: 0.10.64
       event-emitter: 0.3.5
       type: 2.7.2
     dev: true
@@ -684,7 +691,7 @@ packages:
     resolution: {integrity: sha512-D9rRn9y7kLPnJ+hMq7S/nhvoKwwvVJahBi2BPmx3bvbsEdK3W9ii8cBSGjP+72/LnM4n6fo3+dkCX5FeTQruXA==}
     dependencies:
       d: 1.0.1
-      es5-ext: 0.10.63
+      es5-ext: 0.10.64
     dev: true
 
   /expand-brackets@2.1.4:
@@ -2560,12 +2567,14 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/ea8a5543374d150fd97cdae9527483064df36697:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/ea8a5543374d150fd97cdae9527483064df36697}
+  github.com/scsm-ua/kirtan-guide-en/8b2ee50c3d7df47eaeecc9988bba4a604ceed442:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/8b2ee50c3d7df47eaeecc9988bba4a604ceed442}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
+  github.com/scsm-ua/kirtan-guide-pocket-edition/47ef8fbafbf3f9d34268c9f761996c5684a23163:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-pocket-edition/tar.gz/47ef8fbafbf3f9d34268c9f761996c5684a23163}
+    name: kirtan-guide-pocket-edition
+    version: 1.0.0
+    dev: false

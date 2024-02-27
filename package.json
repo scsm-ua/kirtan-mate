@@ -9,6 +9,7 @@
         "dotenv": "^16.4.5",
         "ejs": "^3.1.9",
         "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua",
+        "kirtan-guide-pocket-edition": "github:scsm-ua/kirtan-guide-pocket-edition",
         "gulp-ejs": "^5.1.0",
         "gulp-rename": "^2.0.0",
         "gulp-sass": "^5.1.0",
