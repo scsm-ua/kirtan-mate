@@ -1,4 +1,5 @@
 const ejs = require('ejs');
+const fs = require('fs');
 const path = require('path');
 const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
@@ -9,6 +10,7 @@ const { createHeadParts } = require('./createHeadParts');
 const { PATHS, ORIGIN } = require('./constants');
 const { i18n } = require('./i18n');
 const { getTemplatePaths } = require('./utils');
+const { getSongbookIdList } = require('./songbookLoader');
 const { BUILD, FILES } = PATHS;
 
 
@@ -78,6 +80,18 @@ function fillTemplate(songbook_id, template, content, filePath) {
         path: ORIGIN + '/' + songbook_id + '/' + path.parse(filePath).name + '.html'
     };
 
+    var variants = [];
+    getSongbookIdList().forEach(a_songbook_id => {
+        var filepath = path.resolve(PATHS.BUILD.getJsonPath(a_songbook_id), path.parse(filePath).name + '.json');
+        if (fs.existsSync(filepath)) {
+            variants.push({
+                href: ORIGIN + '/' + a_songbook_id + '/' + path.parse(filePath).name + '.html',
+                title: a_songbook_id,
+                selected: songbook_id === a_songbook_id
+            });
+        }
+    });
+
     return ejs.render(template, {
         author: author,
         subtitle: subtitle,
@@ -89,7 +103,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
         attributes: attributes,
         i18n: i18n(songbook_id),
         transformLine: transformLine,
-        getLineIndentClass: getLineIndentClass
+        getLineIndentClass: getLineIndentClass,
+        variants: variants
     });
 }
 
