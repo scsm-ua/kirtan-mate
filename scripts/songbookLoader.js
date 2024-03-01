@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const { getIndexJSON } = require('./indexGenerator.js');
 
 var songbooks = {};
 

@@ -24,6 +24,7 @@ const { PATHS } = require('./scripts/constants');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
 const { i18n } = require('./scripts/i18n');
 const { getTemplatePaths } = require('./scripts/utils');
+const { getIndexJSON, getContentsJSON } = require('./scripts/indexGenerator');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
@@ -150,7 +151,8 @@ function getSongooksRenderContext(options) {
         return {
             title: getSongbookInfo(songbook_id).title,
             subtitle: getSongbookInfo(songbook_id).subtitle,
-            contentsPath: PATHS.PAGES.getIndex(songbook_id)
+            contentsPath: PATHS.PAGES.getIndex(songbook_id),
+            songsCount: getContentsJSON(songbook_id).flatMap((cat) => cat.items).length
         };
     });
 
