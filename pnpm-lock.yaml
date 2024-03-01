@@ -31,10 +31,10 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/8b2ee50c3d7df47eaeecc9988bba4a604ceed442
+    version: github.com/scsm-ua/kirtan-guide-en/1b980e5be34d82ef577ab27548d173ae6601f603
   kirtan-guide-pocket-edition:
     specifier: github:scsm-ua/kirtan-guide-pocket-edition
-    version: github.com/scsm-ua/kirtan-guide-pocket-edition/058d42427790c2ea6978ff9aee8236f7b7d0fb77
+    version: github.com/scsm-ua/kirtan-guide-pocket-edition/8fa1383464efdc0d7b96e66e6a21e11663229e14
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
@@ -2567,14 +2567,14 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/8b2ee50c3d7df47eaeecc9988bba4a604ceed442:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/8b2ee50c3d7df47eaeecc9988bba4a604ceed442}
+  github.com/scsm-ua/kirtan-guide-en/1b980e5be34d82ef577ab27548d173ae6601f603:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/1b980e5be34d82ef577ab27548d173ae6601f603}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-pocket-edition/058d42427790c2ea6978ff9aee8236f7b7d0fb77:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-pocket-edition/tar.gz/058d42427790c2ea6978ff9aee8236f7b7d0fb77}
+  github.com/scsm-ua/kirtan-guide-pocket-edition/8fa1383464efdc0d7b96e66e6a21e11663229e14:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-pocket-edition/tar.gz/8fa1383464efdc0d7b96e66e6a21e11663229e14}
     name: kirtan-guide-pocket-edition
     version: 1.0.0
     dev: false
