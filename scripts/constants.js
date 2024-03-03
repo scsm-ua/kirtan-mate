@@ -45,7 +45,7 @@ const PATHS = {
             SONGBOOKS: 'songbooks.ejs',
             NOT_FOUND: '404.ejs',
             SITEMAP: 'sitemap.ejs',
-            ROBOTS: 'robots.ejs',
+            ROBOTS: process.env.DISABLE_ROBOTS ? 'robots-disallow.ejs' : 'robots.ejs',
             SONG_PAGE: 'song-page.ejs'
         },
         HTML: {
