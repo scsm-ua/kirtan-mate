@@ -97,8 +97,8 @@ function createSongXMLParts(songbook_id, categories) {
 
     let songs = categories
         .flatMap((cat) => cat.items)
-        .map((item) => getItemXML(PATHS.RELATIVE.toSongs(songbook_id) + '/' + item.fileName, 0.8))
-        .join();
+        .map((item) => getItemXML(PATHS.RELATIVE.toSongs(songbook_id) + '/' + item.fileName, 1))
+        .join('\n');
 
     return indexes + songs;
 }

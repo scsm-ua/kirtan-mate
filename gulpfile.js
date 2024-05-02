@@ -329,6 +329,7 @@ gulp.task('robots', (done) => {
         )
         .pipe(
             rename({
+                basename: 'robots',
                 extname: '.txt'
             })
         )

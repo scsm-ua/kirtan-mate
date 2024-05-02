@@ -13,7 +13,7 @@ dependencies:
     version: 3.1.10
   gaudiya-gitanjali-ru:
     specifier: github:scsm-ua/gaudiya-gitanjali-ru
-    version: github.com/scsm-ua/gaudiya-gitanjali-ru/09574a72a548d93c0e79028c6676cdb21c7351d5
+    version: github.com/scsm-ua/gaudiya-gitanjali-ru/ea21eee64e9ce6c9bbd0949a1aedaf24129b1fe5
   gaudiya-gitanjali-ua:
     specifier: github:scsm-ua/gaudiya-gitanjali-ua
     version: github.com/scsm-ua/gaudiya-gitanjali-ua/2eeaf856034ab64353c22c611afea56d6f1b9b39
@@ -2562,8 +2562,8 @@ packages:
       yargs-parser: 5.0.1
     dev: true
 
-  github.com/scsm-ua/gaudiya-gitanjali-ru/09574a72a548d93c0e79028c6676cdb21c7351d5:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ru/tar.gz/09574a72a548d93c0e79028c6676cdb21c7351d5}
+  github.com/scsm-ua/gaudiya-gitanjali-ru/ea21eee64e9ce6c9bbd0949a1aedaf24129b1fe5:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ru/tar.gz/ea21eee64e9ce6c9bbd0949a1aedaf24129b1fe5}
     name: gaudiya-gitanjali-ru
     version: 1.0.0
     dev: false
