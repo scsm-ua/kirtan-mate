@@ -6,7 +6,9 @@
     "Bengali poem composed by",
     "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
   ],
-  "subtitle": "The Ten Offences to the Holy Name",
+  "subtitle": [
+    "The Ten Offences to the Holy Name"
+  ],
   "verses": [
     {
       "number": "1",
