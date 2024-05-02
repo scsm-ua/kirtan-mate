@@ -82,16 +82,18 @@ function fillTemplate(songbook_id, template, content, filePath) {
     };
 
     var variants = [];
-    getSongbookIdList().forEach(a_songbook_id => {
-        var filepath = path.resolve(PATHS.BUILD.getJsonPath(a_songbook_id), path.parse(filePath).name + '.json');
-        if (fs.existsSync(filepath)) {
-            variants.push({
-                href: ORIGIN + '/' + a_songbook_id + '/' + path.parse(filePath).name + '.html',
-                title: a_songbook_id,
-                selected: songbook_id === a_songbook_id
-            });
-        }
-    });
+    if (process.env.DEV) {
+        getSongbookIdList().forEach(a_songbook_id => {
+            var filepath = path.resolve(PATHS.BUILD.getJsonPath(a_songbook_id), path.parse(filePath).name + '.json');
+            if (fs.existsSync(filepath)) {
+                variants.push({
+                    href: ORIGIN + '/' + a_songbook_id + '/' + path.parse(filePath).name + '.html',
+                    title: a_songbook_id,
+                    selected: songbook_id === a_songbook_id
+                });
+            }
+        });
+    }
 
     return ejs.render(template, {
         author: author,
