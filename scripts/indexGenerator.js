@@ -34,7 +34,7 @@ function convertSongToJSON(text) {
     var song = {
         title: [],
         author: [],
-        subtitle: null,
+        subtitle: [],
         verses: []
     };
 
@@ -44,7 +44,7 @@ function convertSongToJSON(text) {
             song.verses.push({
                 number: null,
                 text: [],
-                translation: []
+                translation: [],
             });
         }
 
@@ -69,7 +69,13 @@ function convertSongToJSON(text) {
                 song.author.push(line_value);
                 break;
             case 'subtitle':
-                song.subtitle = line_value;
+                if (song.verses.length === 0) {
+                    song.subtitle.push(line_value);
+                } else {
+                    var verse = getLastVerse({ create_new: last_line_id !== 'subtitle' });
+                    verse.subtitle = verse.subtitle || [];
+                    verse.subtitle.push(line_value);
+                }
                 break;
             case 'verse_number':
                 getLastVerse({ create_new: true }).number = line_value;

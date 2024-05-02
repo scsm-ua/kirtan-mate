@@ -17,6 +17,11 @@ function makeIndexList(categories, index) {
         getAliasCleaned(a).localeCompare(getAliasCleaned(b))
     )
     .forEach((item) => {
+        // Skip intro from index.
+        if (item.fileName === 'intro.html') {
+            return;
+        }
+
         const firstLetter = getFirstLetter(item);
 
         if (!firstLetter) {
@@ -104,7 +109,9 @@ function processLineEnding(line) {
  * @returns {string}
  */
 function getFirstLetter(item) {
-    return (item.aliasName.startsWith('(') || item.aliasName.startsWith('‘'))
+    return (item.aliasName.startsWith('(') 
+            || item.aliasName.startsWith('‘') 
+            || item.aliasName.startsWith('«'))
         ? item.aliasName[1]
         : item.aliasName[0];
 }
@@ -116,7 +123,7 @@ function getFirstLetter(item) {
  */
 function getAliasCleaned(item) {
     return deburr(item.aliasName)
-        .replace(/[,\-'()\s]/g, '');
+        .replace(/[«,\-'()\s]/g, '');
 }
 
 

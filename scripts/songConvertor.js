@@ -70,8 +70,9 @@ function fillTemplate(songbook_id, template, content, filePath) {
     if (author && author.length) {
         pageTitle += '. ' + author[0];
     }
-    if (subtitle) {
-        pageTitle += '. ' + subtitle;
+    // TODO: questionable
+    if (subtitle && subtitle.length) {
+        pageTitle += '. ' + subtitle[0];
     }
 
     const headParts = {
