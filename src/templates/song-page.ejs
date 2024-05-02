@@ -30,10 +30,12 @@
                                         <% }) %>
                                     <% } %>
 
-                                    <% if (subtitle) { %>
-                                        <div class="SongPage__subtitle">
-                                            <%= subtitle %>
-                                        </div>
+                                    <% if (subtitle && subtitle.length) { %>
+                                        <% subtitle.forEach((item, idx) => { %>
+                                            <div class="SongPage__subtitle">
+                                                <%= item %>
+                                            </div>
+                                        <% }) %>
                                     <% } %>
 
                                     <% if (author && author.length) { %>

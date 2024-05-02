@@ -11,6 +11,9 @@ dependencies:
   ejs:
     specifier: ^3.1.10
     version: 3.1.10
+  gaudiya-gitanjali-ru:
+    specifier: github:scsm-ua/gaudiya-gitanjali-ru
+    version: github.com/scsm-ua/gaudiya-gitanjali-ru/ea21eee64e9ce6c9bbd0949a1aedaf24129b1fe5
   gaudiya-gitanjali-ua:
     specifier: github:scsm-ua/gaudiya-gitanjali-ua
     version: github.com/scsm-ua/gaudiya-gitanjali-ua/2eeaf856034ab64353c22c611afea56d6f1b9b39
@@ -39,8 +42,8 @@ dependencies:
     specifier: ^4.1.0
     version: 4.1.0
   sass:
-    specifier: ^1.75.0
-    version: 1.75.0
+    specifier: ^1.76.0
+    version: 1.76.0
   vinyl-source-stream:
     specifier: ^2.0.0
     version: 2.0.0
@@ -2053,8 +2056,8 @@ packages:
       ret: 0.1.15
     dev: true
 
-  /sass@1.75.0:
-    resolution: {integrity: sha512-ShMYi3WkrDWxExyxSZPst4/okE9ts46xZmJDSawJQrnte7M1V9fScVB+uNXOVKRBt0PggHOwoZcn8mYX4trnBw==}
+  /sass@1.76.0:
+    resolution: {integrity: sha512-nc3LeqvF2FNW5xGF1zxZifdW3ffIz5aBb7I7tSvOoNu7z1RQ6pFt9MBuiPtjgaI62YWrM/txjWlOCFiGtf2xpw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -2558,6 +2561,12 @@ packages:
       y18n: 3.2.2
       yargs-parser: 5.0.1
     dev: true
+
+  github.com/scsm-ua/gaudiya-gitanjali-ru/ea21eee64e9ce6c9bbd0949a1aedaf24129b1fe5:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ru/tar.gz/ea21eee64e9ce6c9bbd0949a1aedaf24129b1fe5}
+    name: gaudiya-gitanjali-ru
+    version: 1.0.0
+    dev: false
 
   github.com/scsm-ua/gaudiya-gitanjali-ua/2eeaf856034ab64353c22c611afea56d6f1b9b39:
     resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/2eeaf856034ab64353c22c611afea56d6f1b9b39}
