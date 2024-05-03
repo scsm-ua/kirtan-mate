@@ -7,6 +7,7 @@ const contentItems = 'contentItems.json';
 const indexItems = 'indexItems.json';
 const indexPath = 'index.html';
 const indexListPath = 'index-list-page.html';
+const pagesNumbersPath = 'pages.html';
 const sharingBanner = 'sharing-banner.png';
 const sitemapName = 'sitemap.xml';
 
@@ -46,11 +47,13 @@ const PATHS = {
             NOT_FOUND: '404.ejs',
             SITEMAP: 'sitemap.ejs',
             ROBOTS: process.env.DISABLE_ROBOTS ? 'robots-disallow.ejs' : 'robots.ejs',
-            SONG_PAGE: 'song-page.ejs'
+            SONG_PAGE: 'song-page.ejs',
+            PAGES_NUMBERS: 'pages-numbers.ejs'
         },
         HTML: {
             INDEX: indexPath,
-            INDEX_LIST: indexListPath
+            INDEX_LIST: indexListPath,
+            PAGES_NUMBERS: pagesNumbersPath
         },
         JSON: {
             CONTENTS: contentItems,
@@ -73,7 +76,8 @@ const PATHS = {
         // TODO: rename
         getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
         // TODO: rename
-        getIndexList: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath
+        getIndexList: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath,
+        getPagesNumbers: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + pagesNumbersPath
     }
 };
 

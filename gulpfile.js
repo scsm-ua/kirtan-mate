@@ -19,7 +19,7 @@ const {
     makeSongHTML,
     md2jsonConvertor
 } = require('./scripts/songConvertor');
-const { makeIndexList } = require('./scripts/makeIndexList');
+const { makeIndexList, makePagesNumbers } = require('./scripts/makeIndexList');
 const { PATHS } = require('./scripts/constants');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
 const { i18n } = require('./scripts/i18n');
@@ -296,6 +296,43 @@ gulp.task('songbook-index', (done) => {
 /**
  *
  */
+gulp.task('page-numbers', (done) => {
+    const tasks = getSongbookIdList().map(songbook_id => {
+
+        const headParts = {
+            title: i18n(songbook_id)('Index'),
+            description: i18n(songbook_id)('Vaishnava Songbook'),
+            path: PATHS.PAGES.getIndexList(songbook_id)
+        };
+
+        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.PAGES_NUMBERS} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.PAGES_NUMBERS}`;
+
+        var task = (done) => gulp
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.PAGES_NUMBERS)
+            .pipe(
+                ejs({
+                    items: makePagesNumbers(require(BUILD.getContentsFile(songbook_id))),
+                    headParts: createHeadParts(headParts),
+                    paths: getTemplatePaths(songbook_id),
+                    i18n: i18n(songbook_id)
+                }).on('error', console.error)
+            )
+            .pipe(gulp.dest(BUILD.ROOT + ''))
+            // TODO: use rename?
+            .pipe(shell([extChangeCmd]), done);
+        task.displayName = "songbook-index " + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })(); 
+});
+
+/**
+ *
+ */
 gulp.task('sitemap', (done) => {
     const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.SITEMAP} ${BUILD.ROOT}/${FILES.XML.SITEMAP}`;
 
@@ -356,6 +393,7 @@ gulp.task('build', (done) => {
         'html',
         'songbook-contents',
         'songbook-index',
+        'page-numbers',
         'sitemap',
         'songbooks',
         '404',
