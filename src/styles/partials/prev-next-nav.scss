@@ -6,7 +6,7 @@
 
     .Navigation__button {
         @include breakpoint(xs) {
-            width: 90px;
+            width: initial;
         }
     }
 
