@@ -131,7 +131,7 @@ function makePagesNumbers(categories) {
     return categories
         .flatMap(cat => cat.items)
         .filter(item => item.page && !isNaN(parseInt(item.page)))
-        .sort((a, b) => parseInt(a) - parseInt(b));
+        .sort((item1, item2) => parseInt(item1.page) - parseInt(item2.page));
 }
 
 
