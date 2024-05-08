@@ -13,10 +13,10 @@ dependencies:
     version: 3.1.10
   gaudiya-gitanjali-ru:
     specifier: github:scsm-ua/gaudiya-gitanjali-ru
-    version: github.com/scsm-ua/gaudiya-gitanjali-ru/a202d879c29192e23fcd1372f7f9dbd395ab70f6
+    version: github.com/scsm-ua/gaudiya-gitanjali-ru/d322feac1313dd971c0f8a9c7ece7f27a77f1231
   gaudiya-gitanjali-ua:
     specifier: github:scsm-ua/gaudiya-gitanjali-ua
-    version: github.com/scsm-ua/gaudiya-gitanjali-ua/53c7ef4c0cd95ece03f87f3c8d6f8f004be817d4
+    version: github.com/scsm-ua/gaudiya-gitanjali-ua/005e4f1396cb91589f8208b7f003ab24ae0a21d6
   gaudiya-gitanjali-ua-preview:
     specifier: github:scsm-ua/gaudiya-gitanjali-ua-preview
     version: github.com/scsm-ua/gaudiya-gitanjali-ua-preview/384e4272085483983b7bf75e6d994b4e78c2d8c2
@@ -37,7 +37,7 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/607da501c1f00a49eea6165587e59c2830b9899f
+    version: github.com/scsm-ua/kirtan-guide-en/8b5e38744759e5f40ac9ff34d4d42fb40cece7ba
   kirtan-guide-pocket-edition:
     specifier: github:scsm-ua/kirtan-guide-pocket-edition
     version: github.com/scsm-ua/kirtan-guide-pocket-edition/bfca5469746db4bad00fec3bdccfb897cb73ca4c
@@ -2565,8 +2565,8 @@ packages:
       yargs-parser: 5.0.1
     dev: true
 
-  github.com/scsm-ua/gaudiya-gitanjali-ru/a202d879c29192e23fcd1372f7f9dbd395ab70f6:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ru/tar.gz/a202d879c29192e23fcd1372f7f9dbd395ab70f6}
+  github.com/scsm-ua/gaudiya-gitanjali-ru/d322feac1313dd971c0f8a9c7ece7f27a77f1231:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ru/tar.gz/d322feac1313dd971c0f8a9c7ece7f27a77f1231}
     name: gaudiya-gitanjali-ru
     version: 1.0.0
     dev: false
@@ -2577,14 +2577,14 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/gaudiya-gitanjali-ua/53c7ef4c0cd95ece03f87f3c8d6f8f004be817d4:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/53c7ef4c0cd95ece03f87f3c8d6f8f004be817d4}
+  github.com/scsm-ua/gaudiya-gitanjali-ua/005e4f1396cb91589f8208b7f003ab24ae0a21d6:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/005e4f1396cb91589f8208b7f003ab24ae0a21d6}
     name: gaudiya-gitanjali-ua
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/607da501c1f00a49eea6165587e59c2830b9899f:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/607da501c1f00a49eea6165587e59c2830b9899f}
+  github.com/scsm-ua/kirtan-guide-en/8b5e38744759e5f40ac9ff34d4d42fb40cece7ba:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/8b5e38744759e5f40ac9ff34d4d42fb40cece7ba}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
