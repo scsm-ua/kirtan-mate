@@ -3,18 +3,20 @@
     "name": "Вступ",
     "items": [
       {
-        "id": "pancha-tattva",
-        "title": "Пан̃ча-таттва мантра",
-        "name": "Панча-таттва мантра",
+        "id": "shri-krishna-chaitanya-prabhu-nityananda",
+        "title": "Паньча-таттва мантра",
+        "name": "Паньча-таттва мантра",
         "aliasName": "шрī-кришна-чайтанья прабгу нітьянанда",
-        "fileName": "pancha-tattva.html"
+        "fileName": "shri-krishna-chaitanya-prabhu-nityananda.html",
+        "page": "24"
       },
       {
-        "id": "hare-krishna",
+        "id": "hare-krishna-hare-krishna-krishna-krishna-hare-hare",
         "title": "Харе Кришна маха̄-мантра",
-        "name": "Харе Кришна маха̄-мантра",
+        "name": "Харе Кришна маха̄мантра",
         "aliasName": "харе кришна харе кришна кришна кришна харе харе",
-        "fileName": "hare-krishna.html"
+        "fileName": "hare-krishna-hare-krishna-krishna-krishna-hare-hare.html",
+        "page": "24"
       }
     ]
   },
@@ -22,39 +24,52 @@
     "name": "Ранкове Араті і програма",
     "items": [
       {
-        "id": "jaya-shiachinandana-sura-muni-vandana-bhava-bhaya-khandana-jayo-he",
-        "title": "Шрī Шячīнандана-вандана̄",
-        "name": "Шрī Шячīнандана-вандана̄",
-        "aliasName": "джая шячīнандана сура-муні-вандана,",
-        "fileName": "jaya-shiachinandana-sura-muni-vandana-bhava-bhaya-khandana-jayo-he.html"
+        "id": "kali-kukkura-kadana-jadi-chao-he",
+        "title": "Прабга̄ті Ґīті",
+        "name": "Прабга̄ті Ґīті",
+        "aliasName": "калі-куккура-кадана джаді ча̄о хе",
+        "fileName": "kali-kukkura-kadana-jadi-chao-he.html",
+        "page": "38"
       },
       {
-        "id": "gurudeva",
+        "id": "jaya-shiachinandana-sura-muni-vandana",
+        "title": "Шрī Шячīнандана-вандана̄",
+        "name": "Шрī Шячīнандана-вандана̄",
+        "aliasName": "джая шячīнандана    сура-муні-вандана,",
+        "fileName": "jaya-shiachinandana-sura-muni-vandana.html",
+        "page": "61"
+      },
+      {
+        "id": "gurudeva-kripa-bindu-diya-kara-ei-dase",
         "title": "Ґурудева",
         "name": "Ґурудева",
         "aliasName": "ґурудева!",
-        "fileName": "gurudeva.html"
+        "fileName": "gurudeva-kripa-bindu-diya-kara-ei-dase.html",
+        "page": "68"
       },
       {
-        "id": "shri-kryshna-chhaitanya-prabhu-jive-daya-kori",
-        "title": "Шаранагаті. Благодатне звернення",
-        "name": "Шаранагаті. Благодатне звернення",
+        "id": "shri-krishna-chaitanya-prabhu-jive-daya-kori",
+        "title": "Шярана̄ґаті. Благодатне звернення",
+        "name": "Шярана̄ґаті. Благодатне звернення",
         "aliasName": "шрī-кришна-чайтанья прабгу джīве дая корі’",
-        "fileName": "shri-kryshna-chhaitanya-prabhu-jive-daya-kori.html"
+        "fileName": "shri-krishna-chaitanya-prabhu-jive-daya-kori.html",
+        "page": "50"
       },
       {
-        "id": "hari-haraye-namah-kryshna-yadavaya-namah",
-        "title": "Нама-Санкірттан",
-        "name": "Нама-Санкірттан",
+        "id": "hari-haraye-namah-krishna-yadavaya-namah",
+        "title": "На̄м-санкīртан",
+        "name": "На̄м-санкīртан",
         "aliasName": "харі харає намах кришна ядава̄я намах",
-        "fileName": "hari-haraye-namah-kryshna-yadavaya-namah.html"
+        "fileName": "hari-haraye-namah-krishna-yadavaya-namah.html",
+        "page": "55"
       },
       {
         "id": "jiv-jago-jiv-jago-gaurachanda-bole",
         "title": "Арунодоя-кīртан",
         "name": "Арунодоя-кīртан",
         "aliasName": "джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле",
-        "fileName": "jiv-jago-jiv-jago-gaurachanda-bole.html"
+        "fileName": "jiv-jago-jiv-jago-gaurachanda-bole.html",
+        "page": "43"
       }
     ]
   },
@@ -64,31 +79,42 @@
       {
         "id": "jaya-jaya-girirajer-arati-vishiala",
         "title": "Шрī Ґовінда Кунда Ґупта-Ґовардган А̄раті",
-        "name": "Шрī Ґовінда Кунда Ґупта-Ґовардган А̄раті",
+        "name": "Шрī Ґовінда Кунда",
         "aliasName": "джая джая ґіріра̄джер а̄раті вішяла",
-        "fileName": "jaya-jaya-girirajer-arati-vishiala.html"
+        "fileName": "jaya-jaya-girirajer-arati-vishiala.html",
+        "page": "32"
       },
       {
-        "id": "jaya-jaya-gaurachhander-arotiko-shobha",
-        "title": "Ш́рі Ґаура-а̄раті",
-        "name": "Ш́рі Ґаура-а̄раті",
-        "aliasName": "(кіба)  джая джая ґаура̄ча̄ндер а̄ротіко шобга̄",
-        "fileName": "jaya-jaya-gaurachhander-arotiko-shobha.html"
+        "id": "jaya-jaya-gaurachander-arotiko-shobha",
+        "title": "Шрī Ґаура-а̄раті",
+        "name": "Шрī Ґаура-а̄раті",
+        "aliasName": "(кіба) джая джая ґаура̄ча̄ндер а̄ротіко шобга̄",
+        "fileName": "jaya-jaya-gaurachander-arotiko-shobha.html",
+        "page": "64"
+      },
+      {
+        "id": "jayare-jayare-jaya-gaura-sarasvati",
+        "title": "Шрī Са̄расват-а̄раті",
+        "name": "Шрī Са̄расват-а̄раті",
+        "aliasName": "джаяре джаяре джая ґаура-сарасватī",
+        "fileName": "jayare-jayare-jaya-gaura-sarasvati.html",
+        "page": "66"
       },
       {
         "id": "namo-namah-tulasi-maharani",
-        "title": "Шрі Туласі-парікрама-ґіті",
-        "name": "Шрі Туласі-парікрама-ґіті",
-        "aliasName": "намо ре намо ре ма̄йя намо на̄ра̄яні",
+        "title": "Шрī Туласī-парікрама̄-ґīті",
+        "name": "Шрī Туласī-парікрама̄-ґīті",
+        "aliasName": "намо ре намо ре ма̄ія намо на̄ра̄яні",
         "fileName": "namo-namah-tulasi-maharani.html",
         "page": "69"
       },
       {
-        "id": "shri-guru-chharana-padma",
+        "id": "shri-guru-charana-padma-kevala-bhakati",
         "title": "Шрī Ґуру-вайшнава Ма̄ха̄тмʼя-ґīті",
-        "name": "Шрī Ґуру-вайшнава Ма̄ха̄тмʼя-ґīті",
+        "name": "Шрī Ґуру-вайшнава",
         "aliasName": "шрī ґуру чарана-падма, кевала-бгакаті-садма,",
-        "fileName": "shri-guru-chharana-padma.html"
+        "fileName": "shri-guru-charana-padma-kevala-bhakati.html",
+        "page": "74"
       }
     ]
   },
@@ -97,17 +123,19 @@
     "items": [
       {
         "id": "jaya-jaya-gurudever-arati-ujjvala",
-        "title": "Шрī Ґуру Āраті",
-        "name": "Шрī Ґуру Āраті",
+        "title": "Шрī Ґуру А̄раті",
+        "name": "Шрī Ґуру А̄раті",
         "aliasName": "джая джая ґурудевер а̄раті уджджвала",
-        "fileName": "jaya-jaya-gurudever-arati-ujjvala.html"
+        "fileName": "jaya-jaya-gurudever-arati-ujjvala.html",
+        "page": "70"
       },
       {
         "id": "samsara-davanala-lidha-loka",
         "title": "Шрī Шрī Ґурва̄штака",
         "name": "Шрī Шрī Ґурва̄штака",
         "aliasName": "самса̄ра-да̄ва̄нала-лīдга-лока-",
-        "fileName": "samsara-davanala-lidha-loka.html"
+        "fileName": "samsara-davanala-lidha-loka.html",
+        "page": "48"
       }
     ]
   },
@@ -116,17 +144,19 @@
     "items": [
       {
         "id": "akrodha-paramananda",
-        "title": "Акрохдха Парамананада",
-        "name": "Акрохдха Парамананада",
+        "title": "Акродга парама̄нанда",
+        "name": "Акродга парама̄нанда",
         "aliasName": "акродга парама̄нанда нітьянанда ра̄й",
-        "fileName": "akrodha-paramananda.html"
+        "fileName": "akrodha-paramananda.html",
+        "page": "114"
       },
       {
         "id": "nadiya-godrume-nityananda-mahajana",
         "title": "А̄ґʼя-Тахал",
         "name": "А̄ґʼя-Тахал",
         "aliasName": "надīя-ґодруме нітьянанда маха̄джана",
-        "fileName": "nadiya-godrume-nityananda-mahajana.html"
+        "fileName": "nadiya-godrume-nityananda-mahajana.html",
+        "page": "110"
       }
     ]
   },
@@ -137,15 +167,17 @@
         "id": "avatara-sara-gora-avatara",
         "title": "Авата̄ра Са̄ра",
         "name": "Авата̄ра Са̄ра",
-        "aliasName": "авата̄ра са̄ра ґора̄ авата̄ра",
-        "fileName": "avatara-sara-gora-avatara.html"
+        "aliasName": "авата̄ра са̄ра    ґора̄ авата̄ра",
+        "fileName": "avatara-sara-gora-avatara.html",
+        "page": "121"
       },
       {
         "id": "gay-gora-madhur-svare",
         "title": "Шрī На̄ма",
         "name": "Шрī На̄ма",
         "aliasName": "ґа̄й ґора̄ мадгур сваре",
-        "fileName": "gay-gora-madhur-svare.html"
+        "fileName": "gay-gora-madhur-svare.html",
+        "page": "122"
       }
     ]
   },
@@ -156,15 +188,17 @@
         "id": "bhajahu-re-mana-shri-nanda-nandana",
         "title": "Бгаджаху Ре Мана",
         "name": "Бгаджаху Ре Мана",
-        "aliasName": "бгаджаху ре мана шрī-нанда-нандана",
-        "fileName": "bhajahu-re-mana-shri-nanda-nandana.html"
+        "aliasName": "бгаджаху ре мана    шрī-нанда-нандана",
+        "fileName": "bhajahu-re-mana-shri-nanda-nandana.html",
+        "page": "146"
       },
       {
         "id": "amara-jivana-sada-pape-rata",
-        "title": "Ама̄ра джīвана",
-        "name": "Ама̄ра джīвана",
-        "aliasName": "а̄ма̄ра джīвана, сада̄ па̄пе рата,",
-        "fileName": "amara-jivana-sada-pape-rata.html"
+        "title": "А̄ма̄ра джīвана",
+        "name": "А̄ма̄ра джīвана",
+        "aliasName": "а̄ма̄ра джīвана,    сада̄ па̄пе рата,",
+        "fileName": "amara-jivana-sada-pape-rata.html",
+        "page": "161"
       }
     ]
   }
