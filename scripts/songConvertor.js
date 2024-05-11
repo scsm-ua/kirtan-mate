@@ -57,7 +57,7 @@ function getSongsOrderedList(songbook_id) {
  */
 function fillTemplate(songbook_id, template, content, filePath) {
     // TODO: subtitle.
-    const { author, subtitle, title, verses, attributes } = content;
+    const { author, subtitle, title, verses, attributes, embeds } = content;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -103,6 +103,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
         paths: getTemplatePaths(songbook_id, {root_to_songbook: true}),
         title: title,
         verses: verses,
+        embeds: embeds,
         attributes: attributes,
         i18n: i18n(songbook_id),
         transformLine: transformLine,
