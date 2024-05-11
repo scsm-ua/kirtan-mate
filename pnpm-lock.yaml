@@ -13,10 +13,10 @@ dependencies:
     version: 3.1.10
   gaudiya-gitanjali-ru:
     specifier: github:scsm-ua/gaudiya-gitanjali-ru
-    version: github.com/scsm-ua/gaudiya-gitanjali-ru/d322feac1313dd971c0f8a9c7ece7f27a77f1231
+    version: github.com/scsm-ua/gaudiya-gitanjali-ru/bc1793c403f61b8c361c37b6f7f0f714d3e4f647
   gaudiya-gitanjali-ua:
     specifier: github:scsm-ua/gaudiya-gitanjali-ua
-    version: github.com/scsm-ua/gaudiya-gitanjali-ua/5ad594895bc21b53a2ca3b1236f210f91b16672b
+    version: github.com/scsm-ua/gaudiya-gitanjali-ua/6a95c34a0d4f9c88d164ce9ca0c57f4eeefb535c
   gaudiya-gitanjali-ua-preview:
     specifier: github:scsm-ua/gaudiya-gitanjali-ua-preview
     version: github.com/scsm-ua/gaudiya-gitanjali-ua-preview/384e4272085483983b7bf75e6d994b4e78c2d8c2
@@ -45,8 +45,8 @@ dependencies:
     specifier: ^4.1.0
     version: 4.1.0
   sass:
-    specifier: ^1.77.0
-    version: 1.77.0
+    specifier: ^1.77.1
+    version: 1.77.1
   vinyl-source-stream:
     specifier: ^2.0.0
     version: 2.0.0
@@ -2059,8 +2059,8 @@ packages:
       ret: 0.1.15
     dev: true
 
-  /sass@1.77.0:
-    resolution: {integrity: sha512-eGj4HNfXqBWtSnvItNkn7B6icqH14i3CiCGbzMKs3BAPTq62pp9NBYsBgyN4cA+qssqo9r26lW4JSvlaUUWbgw==}
+  /sass@1.77.1:
+    resolution: {integrity: sha512-OMEyfirt9XEfyvocduUIOlUSkWOXS/LAt6oblR/ISXCTukyavjex+zQNm51pPCOiFKY1QpWvEH1EeCkgyV3I6w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -2565,8 +2565,8 @@ packages:
       yargs-parser: 5.0.1
     dev: true
 
-  github.com/scsm-ua/gaudiya-gitanjali-ru/d322feac1313dd971c0f8a9c7ece7f27a77f1231:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ru/tar.gz/d322feac1313dd971c0f8a9c7ece7f27a77f1231}
+  github.com/scsm-ua/gaudiya-gitanjali-ru/bc1793c403f61b8c361c37b6f7f0f714d3e4f647:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ru/tar.gz/bc1793c403f61b8c361c37b6f7f0f714d3e4f647}
     name: gaudiya-gitanjali-ru
     version: 1.0.0
     dev: false
@@ -2577,8 +2577,8 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/gaudiya-gitanjali-ua/5ad594895bc21b53a2ca3b1236f210f91b16672b:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/5ad594895bc21b53a2ca3b1236f210f91b16672b}
+  github.com/scsm-ua/gaudiya-gitanjali-ua/6a95c34a0d4f9c88d164ce9ca0c57f4eeefb535c:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/6a95c34a0d4f9c88d164ce9ca0c57f4eeefb535c}
     name: gaudiya-gitanjali-ua
     version: 1.0.0
     dev: false
