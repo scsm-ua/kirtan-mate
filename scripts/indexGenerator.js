@@ -3,6 +3,7 @@ const path = require('path');
 
 const { PATHS } = require('../scripts/constants');
 const { getContentsFilePath, getSongsPath, getIndexFilePath } = require('./songbookLoader');
+const { getEmbedCode } = require('./embeds');
 
 // Songs.
 
@@ -56,7 +57,7 @@ function convertSongToJSON(text) {
 
     // TODO: shikshastakam first verse has no number
     lines.forEach((line) => {
-        var { line_id, line_value } = getSongLineInfo(line);
+        var { line_id, line_value, line_match } = getSongLineInfo(line);
         if (line_id && line_id !== 'verse_text') {
             // Disable empty verse line.
             verse_empty_line = false;
@@ -93,6 +94,18 @@ function convertSongToJSON(text) {
                 break;
             case 'translation':
                 getLastVerse().translation.push(line_value);
+                break;
+            case 'embed_link':
+                var embed_code = getEmbedCode(line_match[2]);
+                if (embed_code) {
+                    song.embeds = song.embeds || [];
+                    song.embeds.push({
+                        title: line_value,
+                        embed_code: embed_code
+                    });
+                } else {
+                    console.warn('Unrecognized embed link', line)
+                }
                 break;
             case 'attribute':
                 var bits = line_value.split(/=/);
@@ -131,6 +144,7 @@ const song_line_types = {
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
     attribute: /^> (.+)/,
+    embed_link: /^\[([^\]]+)\]\(([^\)]+)\)/,    // Before translation.
     translation: /^([^\s#].+)/
 };
 
@@ -186,13 +200,15 @@ function getSongLineInfo(line) {
         if (m) {
             return {
                 line_id: id,
-                line_value: m[1].trimEnd()
+                line_value: m[1].trimEnd(),
+                line_match: m
             };
         }
     }
     return {
         line_id: null,
-        line_value: null
+        line_value: null,
+        line_match: null
     };
 }
 
