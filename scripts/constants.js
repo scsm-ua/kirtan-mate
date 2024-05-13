@@ -1,6 +1,7 @@
 const path = require('path');
 
 const OUTPUT_DIR = 'docs';
+const JS_DIR = 'js';
 const CSS_DIR = 'css';
 const IMG_DIR = 'css';
 const contentItems = 'contentItems.json';
@@ -19,11 +20,13 @@ const ORIGIN = (process.env.HOME_BASE_URL || '');
  */
 const PATHS = {
     RELATIVE: {
+        JS: ORIGIN + '/' + JS_DIR,
         CSS: ORIGIN + '/' + CSS_DIR,
         IMG: ORIGIN + '/' + IMG_DIR,
         toSongs: (songbook_id) => ORIGIN + '/' + songbook_id
     },
     BUILD: {
+        JS_FILES: OUTPUT_DIR + '/' + JS_DIR,
         CSS_FILES: OUTPUT_DIR + '/' + CSS_DIR,
         HTML_FILES: OUTPUT_DIR + '/html',
         IMG_FILES: OUTPUT_DIR + '/' + IMG_DIR,
@@ -68,7 +71,8 @@ const PATHS = {
         CSS_FILES: 'src/styles',
         EJS_FILES: 'src/templates',
         EJS_PARTIALS_FILES: 'src/templates/partials',
-        IMG_FILES: 'src/images'
+        IMG_FILES: 'src/images',
+        JS_FILES: 'src/js'
     },
     PAGES: {
         SITEMAP: ORIGIN  + '/' + sitemapName,

@@ -7,6 +7,7 @@ exports.getTemplatePaths = function(songbook_id, options) {
     var rootPath = options?.root_to_songbook ? contentsPath : PATHS.PAGES.INDEX
 
     return {
+        toJs: PATHS.RELATIVE.JS,
         toCss: PATHS.RELATIVE.CSS,
         toImages: PATHS.RELATIVE.IMG,
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
