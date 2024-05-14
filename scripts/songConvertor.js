@@ -5,7 +5,7 @@ const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
 
 /**/
-const { convertMDToJSON, getContentsJSON, getIndexJSON } = require('./indexGenerator');
+const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
 const { PATHS, ORIGIN } = require('./constants');
 const { i18n } = require('./i18n');
@@ -57,7 +57,8 @@ function getSongsOrderedList(songbook_id) {
  */
 function fillTemplate(songbook_id, template, content, filePath) {
     // TODO: subtitle.
-    const { author, subtitle, title, verses, attributes, embeds } = content;
+    const { author, subtitle, title, verses, attributes } = content;
+    var { embeds } = content;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -75,25 +76,35 @@ function fillTemplate(songbook_id, template, content, filePath) {
         pageTitle += '. ' + subtitle[0];
     }
 
+    const filename = path.parse(filePath).name;
+
     const headParts = {
         title: pageTitle,
         description: `${text[0]}\n${text[1]}...`,
-        path: ORIGIN + '/' + songbook_id + '/' + path.parse(filePath).name + '.html'
+        path: ORIGIN + '/' + songbook_id + '/' + filename + '.html'
     };
 
     var variants = [];
-    if (process.env.DEV) {
-        getSongbookIdList().forEach(a_songbook_id => {
-            var filepath = path.resolve(PATHS.BUILD.getJsonPath(a_songbook_id), path.parse(filePath).name + '.json');
-            if (fs.existsSync(filepath)) {
+    
+    getSongbookIdList().forEach(a_songbook_id => {
+        var song = getSongJSON(a_songbook_id, filename, true);
+        if (song) {
+            if (process.env.DEV) {
                 variants.push({
-                    href: ORIGIN + '/' + a_songbook_id + '/' + path.parse(filePath).name + '.html',
+                    href: ORIGIN + '/' + a_songbook_id + '/' + filename + '.html',
                     title: a_songbook_id,
                     selected: songbook_id === a_songbook_id
                 });
             }
-        });
-    }
+
+            // Load embeds from other songbooks.
+            if (!embeds || !embeds.length) {
+                if (song.embeds) {
+                    embeds = song.embeds;
+                }
+            }
+        }
+    });
 
     return ejs.render(template, {
         author: author,
