@@ -37,10 +37,10 @@ dependencies:
     version: 1.0.2
   kirtan-guide-en:
     specifier: github:scsm-ua/kirtan-guide-en
-    version: github.com/scsm-ua/kirtan-guide-en/8b5e38744759e5f40ac9ff34d4d42fb40cece7ba
+    version: github.com/scsm-ua/kirtan-guide-en/3a5da632c0819bb0078aa62ca9828e9865c61885
   kirtan-guide-pocket-edition:
     specifier: github:scsm-ua/kirtan-guide-pocket-edition
-    version: github.com/scsm-ua/kirtan-guide-pocket-edition/bfca5469746db4bad00fec3bdccfb897cb73ca4c
+    version: github.com/scsm-ua/kirtan-guide-pocket-edition/63cc0bde44c6c8c87c3917e2cd7633558ec64149
   lodash.deburr:
     specifier: ^4.1.0
     version: 4.1.0
@@ -1075,7 +1075,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       lodash.clonedeep: 4.5.0
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       plugin-error: 1.0.1
       replace-ext: 2.0.0
       strip-ansi: 6.0.1
@@ -1188,8 +1188,8 @@ packages:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
     dev: true
 
-  /immutable@4.3.5:
-    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
+  /immutable@4.3.6:
+    resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
     dev: false
 
   /inflight@1.0.6:
@@ -1816,8 +1816,8 @@ packages:
       pinkie-promise: 2.0.1
     dev: true
 
-  /picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
+  /picocolors@1.0.1:
+    resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
     dev: false
 
   /picomatch@2.3.1:
@@ -2065,7 +2065,7 @@ packages:
     hasBin: true
     dependencies:
       chokidar: 3.6.0
-      immutable: 4.3.5
+      immutable: 4.3.6
       source-map-js: 1.2.0
     dev: false
 
@@ -2583,14 +2583,14 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-en/8b5e38744759e5f40ac9ff34d4d42fb40cece7ba:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/8b5e38744759e5f40ac9ff34d4d42fb40cece7ba}
+  github.com/scsm-ua/kirtan-guide-en/3a5da632c0819bb0078aa62ca9828e9865c61885:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-en/tar.gz/3a5da632c0819bb0078aa62ca9828e9865c61885}
     name: kirtan-guide-en
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/kirtan-guide-pocket-edition/bfca5469746db4bad00fec3bdccfb897cb73ca4c:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-pocket-edition/tar.gz/bfca5469746db4bad00fec3bdccfb897cb73ca4c}
+  github.com/scsm-ua/kirtan-guide-pocket-edition/63cc0bde44c6c8c87c3917e2cd7633558ec64149:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/kirtan-guide-pocket-edition/tar.gz/63cc0bde44c6c8c87c3917e2cd7633558ec64149}
     name: kirtan-guide-pocket-edition
     version: 1.0.0
     dev: false
