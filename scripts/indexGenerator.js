@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const { PATHS } = require('../scripts/constants');
-const { getContentsFilePath, getSongsPath, getIndexFilePath } = require('./songbookLoader');
+const { getContentsFilePath, getSongsPath, getIndexFilePath, getSongbookIdList } = require('./songbookLoader');
 const { getEmbedCode } = require('./embeds');
 
 // Songs.
@@ -299,6 +299,7 @@ function convertContentsToJSON(songbook_id, text) {
                     aliasName: getSongFirstLine(songbook_id, filename),
                     fileName: filename + '.html',
                     page: getSongPage(songbook_id, filename),
+                    embeds: getSongEmbedsTitles(songbook_id, filename)
                 });
                 break;
             default:
@@ -337,7 +338,7 @@ function getIndexLineInfo(line) {
 
 var songbooks_cache = {};
 
-function getSongJSON(songbook_id, filename) {
+function getSongJSON(songbook_id, filename, silent) {
 
     var songbook_cache = songbooks_cache[songbook_id] = songbooks_cache[songbook_id] || {};
 
@@ -348,7 +349,9 @@ function getSongJSON(songbook_id, filename) {
     var filepath = path.resolve(PATHS.BUILD.getJsonPath(songbook_id), filename + '.json');
     if (!fs.existsSync(filepath)) {
         // TODO: better errors processing.
-        console.error('Song JSON not found', filepath);
+        if (!silent) {
+            console.error('Song JSON not found', filepath);
+        }
         return;
     }
 
@@ -391,6 +394,21 @@ function getSongFirstLine(songbook_id, filename) {
     return first_line.trim();
 }
 
+function getSongEmbedsTitles(songbook_id, filename) {
+    var embeds;
+    getSongbookIdList().find(a_songbook_id => {
+        var song_json = getSongJSON(a_songbook_id, filename, true);
+        if (!song_json) {
+            return;
+        }
+        if (song_json.embeds?.length) {
+            embeds = song_json.embeds?.map(i => i.title);
+        }
+        return embeds;
+    });
+    return embeds;
+}
+
 /**
  * Debug.
  */
@@ -401,5 +419,6 @@ function getSongFirstLine(songbook_id, filename) {
 module.exports = {
     convertMDToJSON: convertSong,
     getContentsJSON: getContentsJSON,
-    getIndexJSON: getIndexJSON
+    getIndexJSON: getIndexJSON,
+    getSongJSON: getSongJSON
 };
