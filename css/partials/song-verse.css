@@ -63,6 +63,9 @@
   line-height: 24px;
   margin-bottom: 24px;
 }
+.SongVerse__paragraph a {
+  color: var(--text-color);
+}
 .SongVerse__term {
   font-weight: 400;
 }

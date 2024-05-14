@@ -34,6 +34,8 @@ emana durmati     saṁsāra bhitare..." />
         <link rel="stylesheet" href="https://kirtan.site/css/index.css" />
         <link rel="stylesheet" href="https://kirtan.site/css/song-page.css" />
 
+    
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
@@ -582,6 +584,7 @@ emana durmati     saṁsāra bhitare..." />
 </li>
 
                                         
+                                        
                                     </ul>
                                 
                             </main>
@@ -777,6 +780,28 @@ emana durmati     saṁsāra bhitare..." />
                     height: 240
                 });
             } ())
+        </script>
+        <script>
+            (function() {
+                var embeds = document.querySelectorAll('a[data-embed]');
+                embeds.forEach(a => {
+                    a.addEventListener('click', e => {
+                        e.preventDefault();
+
+                        var p = document.createElement('p');
+                        p.innerHTML = a.getAttribute('data-embed');;
+                        a.parentNode.parentNode.insertBefore(p, null);
+
+                        var iframe = p.querySelector("iframe");
+                        var player = SC.Widget(iframe);
+                        player.bind(SC.Widget.Events.READY, function() {
+                            player.play();
+                        });
+
+                        a.parentNode.innerHTML = a.textContent;
+                    });
+                });
+            })();
         </script>
         
 <!-- Google tag (gtag.js) -->

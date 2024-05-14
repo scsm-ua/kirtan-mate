@@ -174,7 +174,12 @@
         "name": "Харе Кршна маха-мантра",
         "aliasName": "харе кр̣ш̣н̣а харе кр̣ш̣н̣а кр̣ш̣н̣а кр̣ш̣н̣а харе харе",
         "fileName": "hare-krishna-hare-krishna-krishna-krishna-hare-hare.html",
-        "page": "24"
+        "page": "24",
+        "embeds": [
+          "Bhakti Lalita Devi",
+          "Bhakti Lalita Devi",
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "hari-nama-mahamantra-sarva-mantra-sara",
@@ -227,7 +232,11 @@
         "name": "Шри Нама-киртан",
         "aliasName": "джаш́оматӣ-нандана    браджа-баро на̄гара",
         "fileName": "jashomati-nandana-vraja-vara-nagara.html",
-        "page": "60"
+        "page": "60",
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрипад Бхагават Махарадж"
+        ]
       },
       {
         "id": "jaya-shiachinandana-sura-muni-vandana",
@@ -283,7 +292,10 @@
         "name": "Шри Шри Гурваштака",
         "aliasName": "сам̇са̄ра-да̄ва̄нала-лӣд̣ха-лока-",
         "fileName": "samsara-davanala-lidha-loka.html",
-        "page": "48"
+        "page": "48",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "shri-krishna-chaitanya-prabhu-jive-daya-kori",
@@ -299,7 +311,10 @@
         "name": "Бхаджан-гити",
         "aliasName": "бхаджа ре бхаджа ре а̄ма̄р мана ати манда",
         "fileName": "bhaja-re-bhaja-re-amar-mana-ati-manda.html",
-        "page": "51"
+        "page": "51",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "vibhavari-shiesha-aloka-praveshia",
@@ -315,7 +330,10 @@
         "name": "Тхакура-ваишнава-гана",
         "aliasName": "т̣ха̄кура ваиш̣н̣ава ган̣а    кори эи ниведана",
         "fileName": "thakura-vaishnava-gana-kori-ei-nivedana.html",
-        "page": "54"
+        "page": "54",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "hari-haraye-namah-krishna-yadavaya-namah",
@@ -323,7 +341,10 @@
         "name": "Нама-санкиртан",
         "aliasName": "хари харайе намах̣ кр̣ш̣н̣а джа̄дава̄йа намах̣",
         "fileName": "hari-haraye-namah-krishna-yadavaya-namah.html",
-        "page": "55"
+        "page": "55",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       }
     ]
   },
@@ -397,7 +418,10 @@
         "name": "Саварана-Шри-Гаура-пада-падме Прартхана",
         "aliasName": "ш́рӣ кр̣ш̣н̣а чаитанйа прабху дойа̄ коро море",
         "fileName": "shri-krishna-chaitanya-prabhu-daya-kara-more.html",
-        "page": "75"
+        "page": "75",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "vaishnava-thakura-dayara-sagara",
@@ -517,7 +541,10 @@
         "name": "Саварана-Шри-Гаура-махима",
         "aliasName": "гаура̄н̇гера дут̣и пада,    джа̄р дхана сампада,",
         "fileName": "gaurangera-duti-pada-jar-dhana-sampada.html",
-        "page": "119"
+        "page": "119",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "gaura-pahu-na-bhajiya-mainu",
@@ -655,7 +682,10 @@
         "name": "Шри Намаштакам 8",
         "aliasName": "на̄рада муни,    ба̄джа̄йа вӣн̣а̄,",
         "fileName": "narada-muni-bajaya-vina.html",
-        "page": "140"
+        "page": "140",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "krishnotkirtana-gana-nartana-parau",
@@ -687,7 +717,10 @@
         "name": "Бхаджаху Ре Мана",
         "aliasName": "бхаджаху̐ ре мана    ш́рӣ-нанда-нандана",
         "fileName": "bhajahu-re-mana-shri-nanda-nandana.html",
-        "page": "146"
+        "page": "146",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "manasa-deho-geho-jo-kichu-mora",
@@ -807,7 +840,10 @@
         "name": "Атма-самарпане",
         "aliasName": "а̄тма-самарпане гела̄ абхима̄на",
         "fileName": "atma-samarpane-gela-abhimana.html",
-        "page": "166"
+        "page": "166",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "kobe-hobe-bolo-se-dina-amar",
@@ -815,7 +851,10 @@
         "name": "Кобе хо’бе боло",
         "aliasName": "кобе хо’бе боло се-дина а̄ма̄р",
         "fileName": "kobe-hobe-bolo-se-dina-amar.html",
-        "page": "167"
+        "page": "167",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "gopinath-mama-nivedana-shiuno",
@@ -883,7 +922,10 @@
         "name": "Шри Шикшаштакам",
         "aliasName": "чето-дарпан̣а-ма̄рджанам̇",
         "fileName": "cheto-darpana-marjanam.html",
-        "page": "182"
+        "page": "182",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "pita-varana-kali-pavana-gora",
@@ -891,7 +933,11 @@
         "name": "Первый стих «Шри Шикшаштакам»",
         "aliasName": "пита-баран̣а кали-па̄вана гора̄",
         "fileName": "pita-varana-kali-pavana-gora.html",
-        "page": "184"
+        "page": "184",
+        "embeds": [
+          "Bhakti Lalita Devi",
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "tuhu-daya-sagara-tarayite-prani",
@@ -899,7 +945,10 @@
         "name": "Второй стих «Шри Шикшаштакам»",
         "aliasName": "туху̐ дойа̄-са̄гара та̄райите пра̄н̣ӣ",
         "fileName": "tuhu-daya-sagara-tarayite-prani.html",
-        "page": "185"
+        "page": "185",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "shri-krishna-kirtane-jodi-manasa-tohara",
@@ -907,7 +956,10 @@
         "name": "Третий стих «Шри Шикшаштакам»",
         "aliasName": "ш́рӣ-кр̣ш̣н̣а-кӣртане джоди ма̄наса тоха̄ра",
         "fileName": "shri-krishna-kirtane-jodi-manasa-tohara.html",
-        "page": "185"
+        "page": "185",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "prabhu-tava-pada-juge-mora-nivedana",
@@ -915,7 +967,10 @@
         "name": "Четвертый стих «Шри Шикшаштакам»",
         "aliasName": "прабху тава пада-джуге мора ниведана",
         "fileName": "prabhu-tava-pada-juge-mora-nivedana.html",
-        "page": "186"
+        "page": "186",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "anadi-karama-phole",
@@ -923,7 +978,10 @@
         "name": "Пятый стих «Шри Шикшаштакам»",
         "aliasName": "ана̄ди карама-пхоле,    под̣и бхава̄рн̣ава-джоле,",
         "fileName": "anadi-karama-phole.html",
-        "page": "187"
+        "page": "187",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "aparadha-phole-mama",
@@ -931,7 +989,10 @@
         "name": "Шестой стих «Шри Шикшаштакам»",
         "aliasName": "апара̄дха-пхоле мама    читта бхела ваджра-сама",
         "fileName": "aparadha-phole-mama.html",
-        "page": "188"
+        "page": "188",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "gaite-gaite-nama-ki-doshia-hoilo",
@@ -939,7 +1000,10 @@
         "name": "Седьмой стих «Шри Шикшаштакам»",
         "aliasName": "га̄ите га̄ите на̄ма ки дош́а̄ хоило",
         "fileName": "gaite-gaite-nama-ki-doshia-hoilo.html",
-        "page": "189"
+        "page": "189",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "gaite-govinda-nam-upajilo-bhava-gram",
@@ -947,7 +1011,10 @@
         "name": "Седьмой стих Б «Шри Шикшаштакам»",
         "aliasName": "га̄ите ‘говинда’-на̄м,    упаджило бха̄ва-гра̄м,",
         "fileName": "gaite-govinda-nam-upajilo-bhava-gram.html",
-        "page": "190"
+        "page": "190",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "sakhi-go-kemote-dhoribo-paran",
@@ -955,7 +1022,10 @@
         "name": "Седьмой стих С «Шри Шикшаштакам»",
         "aliasName": "сакхи го кемоте дхорибо пара̄н̣",
         "fileName": "sakhi-go-kemote-dhoribo-paran.html",
-        "page": "191"
+        "page": "191",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "bondhu-gon-shiunoho-vachana-mora",
@@ -963,7 +1033,10 @@
         "name": "Восьмой стих «Шри Шикшаштакам»",
         "aliasName": "бондху-гон̣!    ш́уноха вачана мора",
         "fileName": "bondhu-gon-shiunoho-vachana-mora.html",
-        "page": "191"
+        "page": "191",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "yoga-pithopari-sthita-ashta-sakhi-subeshtita",
@@ -1016,7 +1089,10 @@
         "name": "Шри Радхика-става",
         "aliasName": "ра̄дхе джайа джайа ма̄дхава-дайите",
         "fileName": "radhe-jaya-jaya-madhava-dayite.html",
-        "page": "200"
+        "page": "200",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       }
     ]
   },
@@ -1029,7 +1105,10 @@
         "name": "Хе Дева бхавантам ванде",
         "aliasName": "хе дева бхавантам̇ ванде",
         "fileName": "he-deva-bhavantam-vande.html",
-        "page": "202"
+        "page": "202",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "radha-madhava-kunja-bihari",
@@ -1101,7 +1180,10 @@
         "name": "Шрита Камала",
         "aliasName": "ш́рита-камала̄ кучха-ман̣д̣ала дхр̣та-кун̣д̣ала хе",
         "fileName": "shrita-kamala-kuchha-mandala-dhrita.html",
-        "page": "211"
+        "page": "211",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       }
     ]
   },
@@ -1154,7 +1236,10 @@
         "name": "Шри Нрсимха-пранам",
         "aliasName": "намас те нарасим̇ха̄йа",
         "fileName": "namas-te-narasimhaya.html",
-        "page": "227"
+        "page": "227",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "namamishvaram-sachchidananda-rupam",
@@ -1162,7 +1247,10 @@
         "name": "Шри Шри Дамодараштакам",
         "aliasName": "нама̄мӣш́варам̇ саччида̄нанда рӯпам̇",
         "fileName": "namamishvaram-sachchidananda-rupam.html",
-        "page": "229"
+        "page": "229",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ]
       },
       {
         "id": "nadiya-nagare-nitai-neche-neche-gay-re",
