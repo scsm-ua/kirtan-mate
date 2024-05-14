@@ -68,7 +68,7 @@
         "fileName": "hari-haraye-namah-krishna-yadavaya-namah.html",
         "page": "55",
         "embeds": [
-          "Bhakti Lalita Devi"
+          "Шрипад Бхагават Махарадж"
         ]
       },
       {
@@ -98,7 +98,11 @@
         "name": "Шрī Ґаура-а̄раті",
         "aliasName": "(кіба) джая джая ґаура̄ча̄ндер а̄ротіко шобга̄",
         "fileName": "jaya-jaya-gaurachander-arotiko-shobha.html",
-        "page": "64"
+        "page": "64",
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрипад Бхагават Махарадж"
+        ]
       },
       {
         "id": "jayare-jayare-jaya-gaura-sarasvati",
@@ -114,7 +118,10 @@
         "name": "Шрī Туласī-парікрама̄-ґīті",
         "aliasName": "намо ре намо ре ма̄ія намо на̄ра̄яні",
         "fileName": "namo-namah-tulasi-maharani.html",
-        "page": "69"
+        "page": "69",
+        "embeds": [
+          "Шрипад Бхагават Махарадж"
+        ]
       },
       {
         "id": "shri-guru-charana-padma-kevala-bhakati",
@@ -122,7 +129,10 @@
         "name": "Шрī Ґуру-вайшнава",
         "aliasName": "шрī ґуру чарана-падма, кевала-бгакаті-садма,",
         "fileName": "shri-guru-charana-padma-kevala-bhakati.html",
-        "page": "74"
+        "page": "74",
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ]
       }
     ]
   },
@@ -203,7 +213,7 @@
         "fileName": "bhajahu-re-mana-shri-nanda-nandana.html",
         "page": "146",
         "embeds": [
-          "Bhakti Lalita Devi"
+          "Шрила Говинда Махарадж"
         ]
       },
       {
@@ -212,7 +222,10 @@
         "name": "Дайньятміка̄",
         "aliasName": "(прабгу хе!)",
         "fileName": "emona-durmati-samsara-bhitore.html",
-        "page": "154"
+        "page": "154",
+        "embeds": [
+          "Шрипад Бхагават Махарадж"
+        ]
       },
       {
         "id": "amara-jivana-sada-pape-rata",
