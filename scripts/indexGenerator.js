@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const { PATHS } = require('../scripts/constants');
-const { getContentsFilePath, getSongsPath, getIndexFilePath } = require('./songbookLoader');
+const { getContentsFilePath, getSongsPath, getIndexFilePath, getSongbookIdList } = require('./songbookLoader');
+const { getEmbedCode } = require('./embeds');
 
 // Songs.
 
@@ -56,7 +57,7 @@ function convertSongToJSON(text) {
 
     // TODO: shikshastakam first verse has no number
     lines.forEach((line) => {
-        var { line_id, line_value } = getSongLineInfo(line);
+        var { line_id, line_value, line_match } = getSongLineInfo(line);
         if (line_id && line_id !== 'verse_text') {
             // Disable empty verse line.
             verse_empty_line = false;
@@ -93,6 +94,18 @@ function convertSongToJSON(text) {
                 break;
             case 'translation':
                 getLastVerse().translation.push(line_value);
+                break;
+            case 'embed_link':
+                var embed_code = getEmbedCode(line_match[2]);
+                if (embed_code) {
+                    song.embeds = song.embeds || [];
+                    song.embeds.push({
+                        title: line_value,
+                        embed_code: embed_code
+                    });
+                } else {
+                    console.warn('Unrecognized embed link', line)
+                }
                 break;
             case 'attribute':
                 var bits = line_value.split(/=/);
@@ -131,6 +144,7 @@ const song_line_types = {
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
     attribute: /^> (.+)/,
+    embed_link: /^\[([^\]]+)\]\(([^\)]+)\)/,    // Before translation.
     translation: /^([^\s#].+)/
 };
 
@@ -186,13 +200,15 @@ function getSongLineInfo(line) {
         if (m) {
             return {
                 line_id: id,
-                line_value: m[1].trimEnd()
+                line_value: m[1].trimEnd(),
+                line_match: m
             };
         }
     }
     return {
         line_id: null,
-        line_value: null
+        line_value: null,
+        line_match: null
     };
 }
 
@@ -283,6 +299,7 @@ function convertContentsToJSON(songbook_id, text) {
                     aliasName: getSongFirstLine(songbook_id, filename),
                     fileName: filename + '.html',
                     page: getSongPage(songbook_id, filename),
+                    embeds: getSongEmbedsTitles(songbook_id, filename)
                 });
                 break;
             default:
@@ -321,7 +338,7 @@ function getIndexLineInfo(line) {
 
 var songbooks_cache = {};
 
-function getSongJSON(songbook_id, filename) {
+function getSongJSON(songbook_id, filename, silent) {
 
     var songbook_cache = songbooks_cache[songbook_id] = songbooks_cache[songbook_id] || {};
 
@@ -332,7 +349,9 @@ function getSongJSON(songbook_id, filename) {
     var filepath = path.resolve(PATHS.BUILD.getJsonPath(songbook_id), filename + '.json');
     if (!fs.existsSync(filepath)) {
         // TODO: better errors processing.
-        console.error('Song JSON not found', filepath);
+        if (!silent) {
+            console.error('Song JSON not found', filepath);
+        }
         return;
     }
 
@@ -375,6 +394,21 @@ function getSongFirstLine(songbook_id, filename) {
     return first_line.trim();
 }
 
+function getSongEmbedsTitles(songbook_id, filename) {
+    var embeds;
+    getSongbookIdList().find(a_songbook_id => {
+        var song_json = getSongJSON(a_songbook_id, filename, true);
+        if (!song_json) {
+            return;
+        }
+        if (song_json.embeds?.length) {
+            embeds = song_json.embeds?.map(i => i.title);
+        }
+        return embeds;
+    });
+    return embeds;
+}
+
 /**
  * Debug.
  */
@@ -385,5 +419,6 @@ function getSongFirstLine(songbook_id, filename) {
 module.exports = {
     convertMDToJSON: convertSong,
     getContentsJSON: getContentsJSON,
-    getIndexJSON: getIndexJSON
+    getIndexJSON: getIndexJSON,
+    getSongJSON: getSongJSON
 };

@@ -17,7 +17,7 @@
             <li class="IndexListItem__item">
                 <a href="<%= paths.toSongs %>/<%= song.fileName %>" class="IndexListItem__link">
                     <h6 class="IndexListItem__name" title="<%= song.aliasName %>">
-                        <%= song.title %><% if (song.page) { %>&nbsp;<span title="Page in paper songbook">(<%= song.page %>)</span><% } %>
+                        <%= song.title %><% if (song.page) { %>&nbsp;<span title="Page in paper songbook">(<%= song.page %>)</span><% } %><% if (song.embeds) { %>&nbsp;<span title="Audio">♪</span><% } %>
                     </h6>
 
                     <div class="IndexListItem__suffix">

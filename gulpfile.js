@@ -53,6 +53,10 @@ gulp.task('copy-img', (done) => {
     return gulp.src(SRC.IMG_FILES + '/**/*').pipe(gulp.dest(BUILD.IMG_FILES), done);
 });
 
+gulp.task('copy-js', (done) => {
+    return gulp.src(SRC.JS_FILES + '/**/*').pipe(gulp.dest(BUILD.JS_FILES), done);
+});
+
 /**
  *
  */
@@ -166,6 +170,7 @@ function getSongooksRenderContext(options) {
     };
 
     const paths = {
+        toJs: PATHS.RELATIVE.JS,
         toCss: PATHS.RELATIVE.CSS,
         toImages: PATHS.RELATIVE.IMG,
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
@@ -347,6 +352,7 @@ gulp.task('clean', shell.task('rm -rf docs'));
 gulp.task('build', (done) => {
     runSequence(
         'clean',
+        'copy-js',
         'copy-img',
         'copy-font',
         'sass',
