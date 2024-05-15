@@ -138,17 +138,28 @@
                     a.addEventListener('click', e => {
                         e.preventDefault();
 
-                        var p = document.createElement('p');
-                        p.innerHTML = a.getAttribute('data-embed');;
-                        a.parentNode.parentNode.insertBefore(p, null);
+                        if (a.getAttribute('data-built')) {
 
-                        var iframe = p.querySelector("iframe");
-                        var player = SC.Widget(iframe);
-                        player.bind(SC.Widget.Events.READY, function() {
-                            player.play();
-                        });
+                            var iframe = a.parentNode.parentNode.querySelector("iframe");
+                            var player = SC.Widget(iframe);
+                            player.bind(SC.Widget.Events.READY, function() {
+                                player.play();
+                            });
 
-                        a.parentNode.innerHTML = a.textContent;
+                        } else {
+
+                            a.setAttribute('data-built', '1');
+    
+                            var p = document.createElement('p');
+                            p.innerHTML = a.getAttribute('data-embed');;
+                            a.parentNode.parentNode.insertBefore(p, null);
+    
+                            var iframe = p.querySelector("iframe");
+                            var player = SC.Widget(iframe);
+                            player.bind(SC.Widget.Events.READY, function() {
+                                player.play();
+                            });
+                        }
                     });
                 });
             })();
