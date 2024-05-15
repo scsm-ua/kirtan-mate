@@ -110,6 +110,10 @@
   ],
   "embeds": [
     {
+      "title": "Шрила Говинда Махарадж",
+      "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhuron%2F16-nama-sankirtan\"></iframe>"
+    },
+    {
       "title": "Шрипад Бхагават Махарадж",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhuron%2Fjwfephvins2j\"></iframe>"
     }

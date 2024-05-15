@@ -73,6 +73,12 @@
       ]
     }
   ],
+  "embeds": [
+    {
+      "title": "Шрила Говинда Махарадж",
+      "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fhuron%2F13-sri-vaisnava-mahima-giti\"></iframe>"
+    }
+  ],
   "attributes": {
     "page": "76",
     "verse parentheses": "non bold"

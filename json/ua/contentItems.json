@@ -50,7 +50,10 @@
         "name": "Ґурудева",
         "aliasName": "ґурудева!",
         "fileName": "gurudeva-kripa-bindu-diya-kara-ei-dase.html",
-        "page": "68"
+        "page": "68",
+        "embeds": [
+          "Шрила Шридхар Махарадж"
+        ]
       },
       {
         "id": "shri-krishna-chaitanya-prabhu-jive-daya-kori",
@@ -68,6 +71,7 @@
         "fileName": "hari-haraye-namah-krishna-yadavaya-namah.html",
         "page": "55",
         "embeds": [
+          "Шрила Говинда Махарадж",
           "Шрипад Бхагават Махарадж"
         ]
       },
@@ -213,6 +217,7 @@
         "fileName": "bhajahu-re-mana-shri-nanda-nandana.html",
         "page": "146",
         "embeds": [
+          "Шрила Говинда Махарадж",
           "Шрила Говинда Махарадж"
         ]
       },
@@ -224,6 +229,7 @@
         "fileName": "emona-durmati-samsara-bhitore.html",
         "page": "154",
         "embeds": [
+          "Шрила Шридхар Махарадж",
           "Шрипад Бхагават Махарадж"
         ]
       },
