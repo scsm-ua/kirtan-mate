@@ -24,9 +24,9 @@
                                     This site does not contain the requested URL. Try to start navagation selecting songbook from the list below:
                                 </p>
                             </div>
-                            
-                            <ul class="IndexPage__list">    
-                                
+
+                            <ul class="IndexPage__list">
+
                                 <% songbooks.forEach((songbook) => { %>
 
                                     <li class="IndexListItem">
@@ -34,9 +34,9 @@
                                             rel="stylesheet"
                                             href="<%= paths.toCss %>/partials/index-list-item.css"
                                         />
-                                    
+
                                         <ul class="IndexListItem__list">
-                                            
+
                                             <li class="IndexListItem__item">
                                                 <a href="<%= songbook.contentsPath %>" class="IndexListItem__link">
                                                     <div>
@@ -47,13 +47,13 @@
                                                             <%= songbook.subtitle %>
                                                         </div>
                                                     </div>
-                                
+
                                                     <div class="IndexListItem__suffix">
                                                         <div class="IndexListItem__icon icon-chevron-right"></div>
                                                     </div>
                                                 </a>
                                             </li>
-                                            
+
                                         </ul>
                                     </li>
 
@@ -62,6 +62,8 @@
                         </div>
                     </div>
                 </main>
+
+                <%- include(paths.toPartials + '/footer.ejs'); %>
             </div>
         </div>
         <%- include(paths.toPartials + '/gtag.ejs'); %>
