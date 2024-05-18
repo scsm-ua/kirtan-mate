@@ -24,7 +24,7 @@ const { PATHS } = require('./scripts/constants');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
 const { i18n } = require('./scripts/i18n');
 const { getTemplatePaths } = require('./scripts/utils');
-const { getIndexJSON, getContentsJSON } = require('./scripts/indexGenerator');
+const { getContentsJSON } = require('./scripts/indexGenerator');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
@@ -79,7 +79,7 @@ gulp.task('html', (done) => {
                     })
                 )
                 .pipe(gulp.dest(BUILD.getSongbookRoot(songbook_id)), done);
-        
+
         task.displayName = "html " + songbook_id;
         return task;
     });
@@ -87,7 +87,7 @@ gulp.task('html', (done) => {
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
 /**
@@ -115,7 +115,7 @@ gulp.task('md2json', (done) => {
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
 /**
@@ -131,7 +131,7 @@ gulp.task('generate-contents', (done) => {
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
 /**
@@ -147,9 +147,12 @@ gulp.task('generate-index', (done) => {
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
+/**
+ *
+ */
 function getSongooksRenderContext(options) {
     var songbooks = getSongbookIdList().map(songbook_id => {
         return {
@@ -175,14 +178,16 @@ function getSongooksRenderContext(options) {
         toImages: PATHS.RELATIVE.IMG,
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
         toPages: {
-            index: PATHS.PAGES.INDEX
+            bookList: PATHS.PAGES.BOOK_LIST,
+            search: PATHS.PAGES.SEARCH
         }
     };
 
     return {
         songbooks: songbooks,
         headParts: createHeadParts(headParts),
-        paths: paths
+        paths: paths,
+        i18n: (text) => text
     };
 }
 
@@ -211,7 +216,7 @@ gulp.task('404', (done) => {
     return gulp
             .src([SRC.EJS_FILES + '/' + FILES.EJS.NOT_FOUND])
             .pipe(
-                ejs(getSongooksRenderContext({is404: true})).on('error', console.error)
+                ejs(getSongooksRenderContext({ is404: true })).on('error', console.error)
             )
             .pipe(
                 rename({
@@ -237,7 +242,7 @@ gulp.task('songbook-contents', (done) => {
         };
 
         const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.CONTENTS} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX}`;
-    
+
         var task = (done) => gulp
             .src(SRC.EJS_FILES + '/' + FILES.EJS.CONTENTS)
             .pipe(
@@ -258,7 +263,7 @@ gulp.task('songbook-contents', (done) => {
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
 /**
@@ -295,7 +300,7 @@ gulp.task('songbook-index', (done) => {
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
 /**

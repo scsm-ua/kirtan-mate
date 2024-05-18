@@ -8,6 +8,7 @@ const contentItems = 'contentItems.json';
 const indexItems = 'indexItems.json';
 const indexPath = 'index.html';
 const indexListPath = 'index-list-page.html';
+const searchPage = 'search.html';
 const sharingBanner = 'sharing-banner.png';
 const sitemapName = 'sitemap.xml';
 
@@ -72,12 +73,15 @@ const PATHS = {
         JS_FILES: 'src/js'
     },
     PAGES: {
+        BOOK_LIST: '/',
+        SEARCH: '/' + searchPage,
         SITEMAP: ORIGIN  + '/' + sitemapName,
         INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
         // TODO: rename
         getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
         // TODO: rename
-        getIndexList: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath
+        getIndexList: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath,
+        getSearchPath: (songbook_id) => '/' + songbook_id + '/' + searchPage
     }
 };
 

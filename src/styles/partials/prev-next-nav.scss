@@ -5,7 +5,7 @@
     background-color: var(--index-bg-color);
 
     .Navigation__button {
-        @include breakpoint(xs) {
+        @include breakpoint_obsolete(xs) {
             width: initial;
         }
     }

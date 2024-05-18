@@ -10,7 +10,7 @@
         justify-content: space-between;
         padding: 24px calc(var(--side-padding) / 2);
 
-        @include breakpoint(xs-up) {
+        @include breakpoint_obsolete(xs-up) {
             justify-content: space-around;
         }
     }

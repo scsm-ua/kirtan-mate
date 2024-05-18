@@ -12,7 +12,7 @@
 
     /**/
     --content-max-width: 568px;
-    --header-height: 60px;
+    --header-height: 52px;
     --footer-height: 72px;
     --page-max-width: 768px;
     --side-padding: 20px;
@@ -20,7 +20,7 @@
     /**/
     --accent-color: var(--orange);
     --border-color: var(--grey);
-    --header-bg-color: var(--brown);
+    --header-bg-color: var(--dark);
     --footer-bg-color: var(--dark);
     --index-bg-color: var(--beige);
     --song-bg-color: #fff;
@@ -35,3 +35,11 @@
     --grey: #A4A4A4;
     --orange: #F5C149;
 }
+
+/**
+ * CSS breakpoint values.
+ */
+$bp992: 992;
+$bp840: 840;
+$bp768: 768;
+$bp576: 576;

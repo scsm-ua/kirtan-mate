@@ -104,20 +104,25 @@ p {
 
 /**/
 .Layout {
-    height: 100%;
     overflow: hidden;
+    height: 100%;
 
     &__content {
         position: relative;
-        height: 100%;
+        //height: 100%;
+        height: calc(100% - var(--footer-height));
         overflow: auto;
     }
 }
 
 /**/
 .Main {
-    min-height: calc(100% - var(--footer-height) - var(--header-height));
-    margin-bottom: var(--footer-height);
+    min-height: calc(100% - var(--header-height));
+
+    @include breakpoint($min: $bp768) {
+        min-height: 100%;
+        margin-top: var(--header-height);
+    }
 
     &__container {
         margin: 0 auto;

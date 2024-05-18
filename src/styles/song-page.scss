@@ -30,7 +30,7 @@
         color: var(--title-color);
         margin: 0 0 0 0;
 
-        @include breakpoint(sm-up) {
+        @include breakpoint_obsolete(sm-up) {
             font-size: 28px;
         }
     }

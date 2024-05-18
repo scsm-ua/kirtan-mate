@@ -1,8 +1,9 @@
 .Footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    //position: fixed;
+    //bottom: 0;
+    //left: 0;
+    //right: 0;
+    //z-index: 10;
     background-color: var(--footer-bg-color);
     height: var(--footer-height);
     max-height: var(--footer-height);
@@ -29,7 +30,7 @@
         padding: 6px 4px 0px 4px;
         cursor: pointer;
 
-        &:hover .Footer__label {
+        &:hover:not(.Footer__item--disabled) .Footer__label {
             color: #FFF;
         }
 
@@ -48,6 +49,11 @@
                 display: none;
             }
         }
+
+        //&--disabled {
+        //    color: var(--dark-grey);
+        //    cursor: not-allowed;
+        //}
     }
 
     &__icon {
@@ -58,6 +64,10 @@
         &--active {
             color: var(--orange);
         }
+
+        //.Footer__item--disabled & {
+        //    color: var(--dark-grey);
+        //}
     }
 
     &__label {
@@ -65,10 +75,15 @@
         font-weight: 400;
         line-height: 20px;
         color: var(--dark-grey);
-        transition: color 0.3s;
+        //color: #FFF;
+        transition: color 0.25s;
 
         .Footer__item--active & {
             color: var(--orange);
         }
+
+        //.Footer__item--disabled & {
+        //    color: var(--dark-grey);
+        //}
     }
 }

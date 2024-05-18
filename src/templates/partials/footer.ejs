@@ -3,29 +3,67 @@
 <footer class="Footer">
     <div class="Footer__container">
         <div class="Footer__content">
-            <a class="Footer__item">
+            <a
+                    class="Footer__item"
+                    href="<%= paths.toPages.bookList %>"
+                    id="footer-link-books"
+            >
                 <div class="Footer__icon Footer__icon--regular icon-books"></div>
                 <div class="Footer__icon Footer__icon--active icon-books-bold"></div>
-                <h6 class="Footer__label">Books</h6>
+                <h6 class="Footer__label"><%= i18n('Books') %></h6>
             </a>
 
-            <a class="Footer__item">
+            <a
+                    class="Footer__item"
+                    href="<%= paths.toPages.index %>"
+                    id="footer-link-contents"
+            >
                 <div class="Footer__icon Footer__icon--regular icon-list-music"></div>
                 <div class="Footer__icon Footer__icon--active icon-list-music-bold"></div>
-                <h6 class="Footer__label">Содержание</h6>
+                <h6 class="Footer__label"><%= i18n('Contents') %></h6>
             </a>
 
-            <a class="Footer__item">
+            <a
+                    class="Footer__item"
+                    href="<%= paths.toPages.index_list %>"
+                    id="footer-link-index-list"
+            >
                 <div class="Footer__icon Footer__icon--regular icon-arrow-up-a-z"></div>
                 <div class="Footer__icon Footer__icon--active icon-arrow-up-a-z-old"></div>
-                <h6 class="Footer__label">Index</h6>
+                <h6 class="Footer__label"><%= i18n('Index') %></h6>
             </a>
 
-            <a class="Footer__item">
+            <a
+                    class="Footer__item"
+                    href="<%= paths.toPages.search %>"
+                    id="footer-link-search"
+            >
                 <div class="Footer__icon Footer__icon--regular icon-search"></div>
                 <div class="Footer__icon Footer__icon--active icon-search-bold"></div>
-                <h6 class="Footer__label">Поиск</h6>
+                <h6 class="Footer__label"><%= i18n('Search') %></h6>
             </a>
         </div>
     </div>
 </footer>
+
+<script>
+    (function() {
+        function setActive(elem) {
+            elem.classList.add('Footer__item--active');
+        }
+
+        const pathname = location.pathname.endsWith('/')
+            ? location.pathname.slice(0, -1)
+            : location.pathname;
+
+        if (location.pathname === '/') {
+            setActive(document.getElementById('footer-link-books'));
+        } else if (pathname === '<%= paths.toPages.index %>') {
+            setActive(document.getElementById('footer-link-contents'));
+        } else if (pathname === '<%= paths.toPages.index_list %>') {
+            setActive(document.getElementById('footer-link-index-list'));
+        } else if (pathname === '<%= paths.toPages.search %>') {
+            setActive(document.getElementById('footer-link-search'));
+        }
+    })()
+</script>
