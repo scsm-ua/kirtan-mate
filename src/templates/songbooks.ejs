@@ -4,53 +4,52 @@
         <%- headParts %>
 
         <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
-        <link rel="stylesheet" href="<%= paths.toCss %>/index-page.css" />
+        <link rel="stylesheet" href="<%= paths.toCss %>/book-list-page.css" />
     </head>
     <body>
         <div class="Layout">
             <div class="Layout__content">
                 <%- include(paths.toPartials + '/header.ejs'); %>
 
-                <main class="Main IndexPage">
-                    <div class="Main__container IndexPage__container">
+                <main class="Main BookListPage">
+                    <div class="BookListPage__container">
+                        <div class="Main__content BookListPage__content">
+                            <ul class="BookListPage__list">
 
-                        <div class="IndexPage__navigation"></div>
+                                    <% songbooks.forEach((songbook) => { %>
+                                        <li class="BookListPage__item">
+                                            <a href="<%= songbook.contentsPath %>" class="BookListPage__link">
+                                                <div class="BookListPage__ratio app-fixed-ratio-container">
+                                                    <div class="app-fixed-ratio-content">
+                                                        <div class="BookListPage__box">
+                                                            <img
+                                                                    alt=""
+                                                                    class="BookListPage__image"
+                                                                    src="<%= paths.toImages %>/banner/banner-<%= songbook.songbook_id %>.png"
+                                                            >
+                                                        </div>
 
-                        <div class="Main__content IndexPage__content">
-                            <ul class="IndexPage__list">
+                                                        <div class="BookListPage__info">
+                                                            <h4 class="BookListPage__title">
+                                                                <%= songbook.title %>
+                                                            </h4>
 
-                                <% songbooks.forEach((songbook) => { %>
+                                                            <div class="ellipsis BookListPage__subtitle">
+                                                                <%= songbook.subtitle %>
+                                                            </div>
 
-                                    <li class="IndexListItem">
-                                        <link
-                                            rel="stylesheet"
-                                            href="<%= paths.toCss %>/partials/index-list-item.css"
-                                        />
-
-                                        <ul class="IndexListItem__list">
-
-                                            <li class="IndexListItem__item">
-                                                <a href="<%= songbook.contentsPath %>" class="IndexListItem__link">
-                                                    <div>
-                                                        <h6 class="IndexListItem__name">
-                                                            <%= songbook.title %> <span title="Songs count">(<%= songbook.songsCount %>)</span>
-                                                        </h6>
-                                                        <div class="IndexListItem__subtitle">
-                                                            <%= songbook.subtitle %>
+                                                            <div class="BookListPage__count">
+                                                                <%= songbook.songsCount %>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </a>
 
-                                                    <div class="IndexListItem__suffix">
-                                                        <div class="IndexListItem__icon icon-chevron-right"></div>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                        </li>
+                                    <% }); %>
 
-                                        </ul>
-                                    </li>
-
-                                <% }); %>
-                            </ul>
+                                </ul>
                         </div>
                     </div>
                 </main>

@@ -102,6 +102,27 @@ p {
     text-overflow: ellipsis;
 }
 
+/* fixed ratio couple */
+.app-fixed-ratio-container {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: '';
+        width: 100%;
+        /* this value influences the ratio */
+        padding-top: 56.3%;
+    }
+}
+
+.app-fixed-ratio-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 /**/
 .Layout {
     overflow: hidden;
@@ -118,9 +139,10 @@ p {
 /**/
 .Main {
     min-height: calc(100% - var(--header-height));
+    background-color: var(--main-bg-color);
 
     @include breakpoint($min: $bp768) {
-        min-height: 100%;
+        //min-height: 100%;
         margin-top: var(--header-height);
     }
 
