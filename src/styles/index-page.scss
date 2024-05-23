@@ -4,6 +4,10 @@
 .IndexPage {
     background-color: var(--main-bg-color);
 
+    &__title {
+        padding: 24px var(--side-padding) var(--side-padding);
+    }
+
     &__navigation {
         display: flex;
         align-items: center;

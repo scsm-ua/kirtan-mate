@@ -16,40 +16,39 @@
                         <div class="Main__content BookListPage__content">
                             <ul class="BookListPage__list">
 
-                                    <% songbooks.forEach((songbook) => { %>
-                                        <li class="BookListPage__item">
-                                            <a href="<%= songbook.contentsPath %>" class="BookListPage__link">
-                                                <div class="BookListPage__ratio app-fixed-ratio-container">
-                                                    <div class="app-fixed-ratio-content">
-                                                        <div class="BookListPage__box">
-                                                            <img
-                                                                    alt=""
-                                                                    class="BookListPage__image"
-                                                                    src="<%= paths.toImages %>/banner/banner-<%= songbook.songbook_id %>.png"
-                                                            >
+                                <% songbooks.forEach((songbook) => { %>
+                                    <li class="BookListPage__item">
+                                        <a href="<%= songbook.contentsPath %>" class="BookListPage__link">
+                                            <div class="BookListPage__ratio app-fixed-ratio-container">
+                                                <div class="app-fixed-ratio-content">
+                                                    <div class="BookListPage__box">
+                                                        <img
+                                                                alt=""
+                                                                class="BookListPage__image"
+                                                                src="<%= paths.toImages %>/banner/banner-<%= songbook.songbook_id %>.png"
+                                                        >
+                                                    </div>
+
+                                                    <div class="BookListPage__info">
+                                                        <h4 class="BookListPage__title">
+                                                            <%= songbook.title %>
+                                                        </h4>
+
+                                                        <div class="ellipsis BookListPage__subtitle">
+                                                            <%= songbook.subtitle %>
                                                         </div>
 
-                                                        <div class="BookListPage__info">
-                                                            <h4 class="BookListPage__title">
-                                                                <%= songbook.title %>
-                                                            </h4>
-
-                                                            <div class="ellipsis BookListPage__subtitle">
-                                                                <%= songbook.subtitle %>
-                                                            </div>
-
-                                                            <div class="BookListPage__count">
-                                                                <%= songbook.songsCount %>
-                                                            </div>
+                                                        <div class="BookListPage__count">
+                                                            <%= songbook.songsCount %> songs
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </a>
+                                            </div>
+                                        </a>
+                                    </li>
+                                <% }); %>
 
-                                        </li>
-                                    <% }); %>
-
-                                </ul>
+                            </ul>
                         </div>
                     </div>
                 </main>

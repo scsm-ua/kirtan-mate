@@ -92,8 +92,8 @@ function getItemXML(path, priority) {
  * @returns {string}
  */
 function createSongXMLParts(songbook_id, categories) {
-    let indexes = getItemXML(PATHS.PAGES.getIndex(songbook_id), 1)
-                + getItemXML(PATHS.PAGES.getIndexList(songbook_id), 1);
+    let indexes = getItemXML(PATHS.PAGES.getIndexPath(songbook_id), 1)
+                + getItemXML(PATHS.PAGES.getIndexAZPath(songbook_id), 1);
 
     let songs = categories
         .flatMap((cat) => cat.items)

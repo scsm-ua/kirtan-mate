@@ -24,6 +24,7 @@
         line-height: 28px;
         margin-bottom: 16px;
         padding: 0 16px;
+        text-transform: uppercase;
         background-color: var(--main-bg-color);
     }
 
@@ -52,11 +53,26 @@
         margin: 0;
         color: var(--title-color);
     }
+
     &__subtitle {
         flex: 1;
         line-height: 28px;
         margin: 0;
         color: var(--title-color);
+    }
+
+    &__page {
+        display: inline-block;
+        font-weight: 400;
+        color: var(--grey);
+    }
+
+    &__embed {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 0;
+        color: var(--grey);
     }
 
     &__suffix {
@@ -67,7 +83,7 @@
     &__icon {
         position: absolute;
         font-size: 24px;
-        color: var(--border-color);
+        color: var(--dark-grey);
         top: 1px;
         left: 0px;
     }

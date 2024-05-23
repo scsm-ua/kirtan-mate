@@ -1,3 +1,7 @@
 CSS
-    - Change the song book banner images. We want better resolution and more precise aspect ratio.
+    - Change the song book banner images. We want better resolution (srcset) and more precise aspect ratio.
 
+i18n
+    - Book List Page
+        1) Footer
+        2) Book list item, songs count translation.

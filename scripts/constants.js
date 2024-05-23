@@ -7,7 +7,7 @@ const IMG_DIR = 'css';
 const contentItems = 'contentItems.json';
 const indexItems = 'indexItems.json';
 const indexPath = 'index.html';
-const indexListPath = 'index-list-page.html';
+const indexAZPath = 'index-a-z-page.html';
 const searchPage = 'search.html';
 const sharingBanner = 'sharing-banner.png';
 const sitemapName = 'sitemap.xml';
@@ -42,19 +42,19 @@ const PATHS = {
     },
     FILES: {
         EJS: {
+            BOOK_LIST_PAGE: 'songbooks.ejs',
             // TODO: rename
-            CONTENTS: 'index.ejs',
+            CONTENTS_PAGE: 'index.ejs',
             // TODO: rename
-            INDEX_LIST: 'index-list-page.ejs',
-            SONGBOOKS: 'songbooks.ejs',
-            NOT_FOUND: '404.ejs',
-            SITEMAP: 'sitemap.ejs',
+            INDEX_A_Z_PAGE: 'index-a-z-page.ejs',
+            NOT_FOUND_PAGE: '404.ejs',
             ROBOTS: process.env.DISABLE_ROBOTS ? 'robots-disallow.ejs' : 'robots.ejs',
+            SITEMAP: 'sitemap.ejs',
             SONG_PAGE: 'song-page.ejs'
         },
         HTML: {
-            INDEX: indexPath,
-            INDEX_LIST: indexListPath
+            INDEX_PAGE: indexPath,
+            INDEX_A_Z_PAGE: indexAZPath
         },
         JSON: {
             CONTENTS: contentItems,
@@ -78,9 +78,9 @@ const PATHS = {
         SITEMAP: ORIGIN  + '/' + sitemapName,
         INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
         // TODO: rename
-        getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
+        getIndexPath: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
         // TODO: rename
-        getIndexList: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath,
+        getIndexAZPath: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexAZPath,
         getSearchPath: (songbook_id) => '/' + songbook_id + '/' + searchPage
     }
 };

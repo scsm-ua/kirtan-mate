@@ -23,6 +23,7 @@
     &__list {
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         width: calc(var(--side-padding) + 100%);
 
@@ -36,7 +37,9 @@
         }
     }
 
-    &__item {}
+    &__item {
+        max-width: 450px;
+    }
 
     &__link {
         display: block;
