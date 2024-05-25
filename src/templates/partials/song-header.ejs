@@ -1,0 +1,58 @@
+<link
+        rel="stylesheet"
+        href="<%= paths.toCss %>/partials/song-header.css"
+/>
+
+<header class="SongHeader">
+    <div class="SongHeader__container">
+        <div class="SongHeader__top">
+            <h6 class="SongHeader__book">
+                <%= currentSongbook.title %>
+            </h6>
+
+            <div class="SongHeader__controls">
+                <button class="NoBorderButton SongHeader__button" title="Show other translations">
+                    <span class="icon-book"></span>
+                </button>
+
+                <button
+                        class="NoBorderButton SongHeader__button"
+                        id="share-button"
+                        title="<%= currentSongbook.i18n.SHARE_SONG %>"
+                >
+                    <span class="icon-arrow-up-from-bracket"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="SongHeader__info">
+            <% if (title && title.length) { %>
+                <h1 class="SongHeader__title">
+                    <% title.map((item) => { %>
+                        <div><%= item %></div>
+                    <% }) %>
+                </h1>
+            <% } %>
+
+            <% if (subtitle && subtitle.length) { %>
+                <% subtitle.map((item) => { %>
+                    <div class="SongHeader__subtitle">
+                        <%= item %>
+                    </div>
+                <% }) %>
+            <% } %>
+
+            <% if (author && author.length) { %>
+                <% author.forEach((item, idx) => { %>
+                    <div class="SongHeader__author
+                        <% if (idx === 0) {%>
+                            SongHeader__author_first
+                        <% } %>
+                    ">
+                        <%= item %>
+                    </div>
+                <% }) %>
+            <% } %>
+        </div>
+    </div>
+</header>

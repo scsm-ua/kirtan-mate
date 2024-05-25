@@ -45,3 +45,11 @@
     cursor: pointer;
     font-family: var(--font-main);
 }
+
+
+/**/
+.NoBorderButton {
+    @extend .AppButton;
+    border: none;
+    background-color: transparent;
+}

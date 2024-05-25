@@ -1,7 +1,12 @@
 CSS
     - Change the song book banner images. We want better resolution (srcset) and more precise aspect ratio.
+    - Fav icon.
 
 i18n
+    - Tidy it up.
     - Book List Page
         1) Footer
         2) Book list item, songs count translation.
+
+Design
+    - Make Share modal consistent.

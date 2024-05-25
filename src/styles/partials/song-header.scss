@@ -1,0 +1,60 @@
+@import '../mixins';
+@import '../variables';
+
+.SongHeader {
+    &__container {
+        padding: var(--side-padding) var(--side-padding) 12px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+    }
+
+    &__book {
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 28px;
+        color: var(--dark-grey);
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__button {
+        font-size: 16px;
+        color: var(--dark-grey);
+        padding: 8px;
+        margin-left: 8px;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 140%;
+        color: var(--title-color);
+        margin-bottom: 10px;
+
+        @include breakpoint($min: $bp768) {
+            font-size: 28px;
+        }
+    }
+
+    &__subtitle {
+        color: var(--text-color);
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__author {
+        color: var(--text-color);
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+}

@@ -10,7 +10,7 @@ const { createHeadParts } = require('./createHeadParts');
 const { PATHS, ORIGIN } = require('./constants');
 const { i18n } = require('./i18n');
 const { getTemplatePaths } = require('./utils');
-const { getSongbookIdList } = require('./songbookLoader');
+const { getSongbookIdList, getSongbookInfo} = require('./songbookLoader');
 const { BUILD, FILES } = PATHS;
 
 
@@ -50,6 +50,7 @@ function getSongsOrderedList(songbook_id) {
 }
 
 /**
+ * @param songbook_id
  * @param template: string;
  * @param content: TSongJSON;
  * @param filePath: string;
@@ -58,7 +59,7 @@ function getSongsOrderedList(songbook_id) {
 function fillTemplate(songbook_id, template, content, filePath) {
     // TODO: subtitle.
     const { author, subtitle, title, verses, attributes } = content;
-    var { embeds } = content;
+    let { embeds } = content;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -66,8 +67,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
     }
 
     const { text } = verses[0];
+    let pageTitle = title;
 
-    var pageTitle = title;
     if (author && author.length) {
         pageTitle += '. ' + author[0];
     }
@@ -84,18 +85,26 @@ function fillTemplate(songbook_id, template, content, filePath) {
         path: ORIGIN + '/' + songbook_id + '/' + filename + '.html'
     };
 
-    var variants = [];
-    
+    const songbooksAsOptions /* TSongBookAsOption */ = getSongbookIdList()
+        .map((songbookId) => {
+            const info /* TSongBookInfo */ = getSongbookInfo(songbookId);
+            return {
+                href: ORIGIN + '/' + songbookId + '/' + filename + '.html',
+                i18n: info.i18n,
+                isSelected: songbook_id === songbookId,
+                slug: info.slug,
+                title: info.title
+            };
+        });
+
     getSongbookIdList().forEach(a_songbook_id => {
-        var song = getSongJSON(a_songbook_id, filename, true);
+        const song = getSongJSON(a_songbook_id, filename, true);
         if (song) {
-            if (process.env.DEV) {
-                variants.push({
-                    href: ORIGIN + '/' + a_songbook_id + '/' + filename + '.html',
-                    title: a_songbook_id,
-                    selected: songbook_id === a_songbook_id
-                });
-            }
+            // songbooksAsOptions.push({
+            //     href: ORIGIN + '/' + a_songbook_id + '/' + filename + '.html',
+            //     title: a_songbook_id,
+            //     selected: songbook_id === a_songbook_id
+            // });
 
             // Load embeds from other songbooks.
             if (!embeds || !embeds.length) {
@@ -119,7 +128,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
         i18n: i18n(songbook_id),
         transformLine: transformLine,
         getLineIndentClass: getLineIndentClass,
-        variants: variants
+        songbooksAsOptions: songbooksAsOptions,
+        currentSongbook: songbooksAsOptions.find((option) => option.isSelected)
     });
 }
 

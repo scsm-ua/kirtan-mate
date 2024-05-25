@@ -13,13 +13,13 @@
                     src="<%= paths.toImages %>/svg/kirtan-site.svg"
                 />
             </a>
-            <% if (locals.variants && variants.length > 1) { %>
-                <div>
-                    <% variants.forEach(function(v) { %>
-                        <a href="<%= v.href %>" style="<% if (v.selected) { %>color: white; font-weight: bold;<% } else { %>color: grey;<% } %>">[<%= v.title %>]</a>
-                    <% }) %>
-                </div>
-            <% } %>
+<!--            <% if (locals.variants && variants.length > 1) { %>-->
+<!--                <div>-->
+<!--                    <% variants.forEach(function(v) { %>-->
+<!--                        <a href="<%= v.href %>" style="<% if (v.selected) { %>color: white; font-weight: bold;<% } else { %>color: grey;<% } %>">[<%= v.title %>]</a>-->
+<!--                    <% }) %>-->
+<!--                </div>-->
+<!--            <% } %>-->
         </div>
     </div>
 </header>

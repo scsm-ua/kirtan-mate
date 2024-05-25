@@ -1,6 +1,4 @@
 .SongVerse {
-    margin-top: 24px;
-
     &__header {
         display: flex;
         justify-content: center;
@@ -43,20 +41,20 @@
         &_indent_1 {
             margin-left: 2em;
         }
-    
+
         &_indent_2 {
             margin-left: 3em;
         }
-    
+
         &_indent_3 {
             margin-left: 4em;
         }
-    
+
         &_indent_4 {
             margin-left: 5em;
         }
     }
-    
+
     &__light {
         font-weight: initial;
     }
