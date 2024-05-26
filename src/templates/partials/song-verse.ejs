@@ -32,14 +32,16 @@
     <% } %>
 
     <% if (item.translation.length) { %>
-        <ul class="SongVerse__translation">
-            <% item.translation.forEach((p) => { %>
-                <li class="SongVerse__paragraph">
-                    <p>
-                        <%- p %>
-                    </p>
-                </li>
-            <% }) %>
-        </ul>
+        <div class="Collapse Collapse__show" data-elem="translation">
+            <ul class="SongVerse__translation">
+                <% item.translation.forEach((p) => { %>
+                    <li class="SongVerse__paragraph">
+                        <p>
+                            <%- p %>
+                        </p>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
     <% } %>
 </li>

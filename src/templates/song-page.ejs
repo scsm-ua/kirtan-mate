@@ -27,11 +27,15 @@
 
                             <main class="SongPage__main">
                                 <% if (verses && verses.length) { %>
-                                    <label class="Toggle">
-                                        <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                        <div class="Toggle__switch"></div>
-                                        <span class="Toggle__label">Bluetooth</span>
-                                    </label>
+                                    <div class="SongPage__toggle">
+                                        <label class="Toggle">
+                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
+                                            <div class="Toggle__switch"></div>
+                                            <span class="Toggle__label SongPage__show">
+                                                <%= currentSongbook.i18n.SONG_PAGE.SHOW_TRANSLATION %>
+                                            </span>
+                                        </label>
+                                    </div>
 
                                     <ul class="SongPage__verses">
                                         <% verses && verses.length && verses.forEach((item, idx, arr) => { %>
@@ -42,8 +46,10 @@
                                         <% }) %>
                                     </ul>
                                 <% } %>
+                            </main>
 
-                                <% if (embeds && embeds.length) { %>
+                            <% if (embeds && embeds.length) { %>
+                                <section class="SongPage__extra">
                                     <ul class="SongPage__verses">
                                         <% embeds && embeds.length && embeds.forEach(item => { %>
                                             <%- include(
@@ -52,10 +58,8 @@
                                             ); %>
                                         <% }) %>
                                     </ul>
-                                <% } %>
-                            </main>
-
-
+                                </section>
+                            <% } %>
                         </div>
                     </div>
                 </main>
@@ -110,6 +114,7 @@
                 });
             } ())
         </script>
+
         <script>
             (function() {
                 var embeds = document.querySelectorAll('a[data-embed]');
@@ -142,6 +147,21 @@
                 });
             })();
         </script>
+
+        <script>
+            /**
+             * Collapse-expand verse translations.
+             */
+            (function () {
+                const toggle = document.getElementById('toggle-checkbox');
+                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
+
+                toggle.addEventListener('change', () =>
+                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
+                );
+            })();
+        </script>
+
         <%- include(paths.toPartials + '/gtag.ejs'); %>
     </body>
 </html>
