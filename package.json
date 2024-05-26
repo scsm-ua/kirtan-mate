@@ -18,7 +18,7 @@
         "kirtan-guide-en": "github:scsm-ua/kirtan-guide-en",
         "kirtan-guide-pocket-edition": "github:scsm-ua/kirtan-guide-pocket-edition",
         "lodash.deburr": "^4.1.0",
-        "sass": "^1.77.1",
+        "sass": "^1.77.2",
         "vinyl-source-stream": "^2.0.0"
     },
     "devDependencies": {
