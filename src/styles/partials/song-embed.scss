@@ -1,0 +1,30 @@
+.SongEmbed {
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 12px 0;
+
+        &.show .SongEmbed__icon {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__icon {
+        color: var(--border-color);
+        transition: all 0.3s ease-in;
+    }
+
+    &__title {
+        flex: 1;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 28px;
+        margin: 0 0 0 16px;
+        color: var(--title-color);
+    }
+
+    &__content {
+        padding: 12px 0 20px;
+    }
+}

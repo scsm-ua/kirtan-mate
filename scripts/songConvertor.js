@@ -99,19 +99,9 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     getSongbookIdList().forEach(a_songbook_id => {
         const song = getSongJSON(a_songbook_id, filename, true);
-        if (song) {
-            // songbooksAsOptions.push({
-            //     href: ORIGIN + '/' + a_songbook_id + '/' + filename + '.html',
-            //     title: a_songbook_id,
-            //     selected: songbook_id === a_songbook_id
-            // });
-
-            // Load embeds from other songbooks.
-            if (!embeds || !embeds.length) {
-                if (song.embeds) {
-                    embeds = song.embeds;
-                }
-            }
+        // Load embeds from other songbooks.
+        if (song?.embeds && (!embeds || !embeds.length)) {
+            embeds = song.embeds;
         }
     });
 
