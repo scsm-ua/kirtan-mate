@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- headParts %>
+
+    <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
+    <link rel="stylesheet" href="<%= paths.toCss %>/index-page.css" />
+</head>
+<body>
+<div class="Layout">
+    <div class="Layout__content">
+        <%- include(paths.toPartials + '/header.ejs'); %>
+
+        <main class="Main IndexPage">
+            <div class="Main__container IndexPage__container">
+                <div class="IndexPage__navigation">
+                    <%- include(paths.toPartials + '/navigation.ejs'); %>
+                </div>
+
+                <div class="Main__content IndexPage__content">
+                    <ul class="IndexPage__list">
+                        <% items.forEach((item) => { %>
+                            <li class="PageNumber">
+                                <a href="<%= paths.toSongs %>/<%= item.fileName %>" title="<%= item.title %> - <%= item.aliasName %>">
+                                    <button class="PageNumber__button">
+                                        <span><%= item.page %></span>
+                                    </button>
+                                </a>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<%- include(paths.toPartials + '/gtag.ejs'); %>
+</body>
+</html>

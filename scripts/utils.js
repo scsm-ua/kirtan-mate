@@ -17,7 +17,8 @@ exports.getTemplatePaths = function(songbook_id, options) {
             // TODO: rename
             index: contentsPath,
             // TODO: rename
-            index_list: PATHS.PAGES.getIndexList(songbook_id)
+            index_list: PATHS.PAGES.getIndexList(songbook_id),
+            pages_numbers: PATHS.PAGES.getPagesNumbers(songbook_id)
         }
     };
 };
