@@ -44,9 +44,8 @@ function makeSongHTML(songbook_id, template) {
 }
 
 function getSongsOrderedList(songbook_id) {
-    var contents = require(BUILD.getContentsFile(songbook_id));
-    var items = contents.flatMap((cat) => cat.items);
-    return items.map(i => i.fileName);
+    return require(BUILD.getContentsFile(songbook_id))
+        .flatMap((cat) => cat.items);
 }
 
 /**

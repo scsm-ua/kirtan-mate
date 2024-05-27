@@ -2,13 +2,12 @@
 
 
 .PrevNextNav {
+    position: fixed;
+    left: 0; right: 0;
+    z-index: 1;
+    bottom: var(--footer-height);
+    border-top: solid 1px var(--grey);
     background-color: var(--main-bg-color);
-
-    .Navigation__button {
-        @include breakpoint_obsolete(xs) {
-            width: initial;
-        }
-    }
 
     &__container {
         margin: 0 auto;
@@ -19,19 +18,50 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 24px calc(var(--side-padding) / 2);
+        padding: 14px 16px;
     }
 
     &__link {
-        margin: 0 calc(var(--side-padding) / 2);
+        display: flex;
+        align-items: center;
+        max-width: 50%;
+
+        &--disabled {
+            opacity: 0.5;
+            cursor: none;
+        }
+
+        &--prev {
+            padding-right: 12px;
+        }
+        &--next {
+            padding-left: 12px;
+        }
+
+        &:not(&--disabled):hover {
+            .PrevNextNav__icon {
+                color: var(--dark-grey);
+            }
+
+            .PrevNextNav__label {
+                color: var(--dark);
+            }
+        }
     }
 
-    &__button {
-        max-width: 36px;
+    &__label {
+        font-size: 12px;
+        color: var(--dark-grey);
+        transition: color 0.25s;
     }
 
     &__icon {
         font-size: 24px;
+        max-height: 24px;
+        line-height: 1;
+        padding-left: 6px;
+        color: var(--grey);
+        transition: color 0.25s;
 
         &--prev {
             transform: rotate(180deg);

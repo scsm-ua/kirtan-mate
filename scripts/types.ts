@@ -6,8 +6,12 @@ type TCategory = {
 
 type TCategoryItem = {
     aliasName: string; // The First line.
-    fileName: string;
+    embeds: string[];
+    fileName: string; // id + '.html'
+    id: string;
     name: string;
+    page: string;
+    title: string; // Same as name
 };
 
 
