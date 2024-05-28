@@ -11,7 +11,7 @@
     }
 
     &__header {
-        position: relative;
+        //position: relative;
         width: 100%;
     }
 
@@ -21,19 +21,20 @@
         color: var(--title-color);
         margin: 0 0 16px 0;
         padding-left: 10px;
+        text-align: center;
 
         @include breakpoint($min: $bp768) {
             font-size: 28px;
         }
     }
 
-    &__close {
-        position: absolute;
-        right: 0;
-        top: -6px;
-        padding: 10px;
-        font-size: 18px;
-    }
+    //&__close {
+    //    position: absolute;
+    //    right: 0;
+    //    top: -6px;
+    //    padding: 10px;
+    //    font-size: 18px;
+    //}
 
     &__content {}
 
@@ -64,6 +65,7 @@
         font-weight: 300;
         line-height: 24px;
         margin-bottom: 16px;
+        text-align: center;
     }
 
     &__input {
