@@ -2,12 +2,25 @@
 
 <div class="SongShare">
     <div class="SongShare__container">
-        <h4 class="SongShare__title"><%= i18n('Share') %></h4>
+        <header class="SongShare__header">
+            <h4 class="SongShare__title">
+                <%= currentSongbook.i18n.SONG_PAGE.SHARE %>
+            </h4>
+
+            <button
+                    class="NoBorderButton SongShare__close"
+                    id="close-button"
+                    title="<%= currentSongbook.i18n.SONG_PAGE.CLOSE %>"
+            >
+                <span class="icon-xmark-large"></span>
+            </button>
+        </header>
+
         <div class="SongShare__qr" id="qrcode-block"></div>
 
         <div class="SongShare__copy">
             <label for="" class="SongShare__label"
-                ><%= i18n('Copy page address') %></label
+                ><%= currentSongbook.i18n.SONG_PAGE.COPY_LINK %></label
             >
 
             <div class="SongShare__form">
@@ -21,6 +34,7 @@
                 <button
                     class="AppButton RoundButton RoundButton--L RoundButton--dark SongShare__button"
                     id="copy-button"
+                    title="<%= currentSongbook.i18n.SONG_PAGE.COPY %>"
                 >
                     <span class="icon-copy"></span>
                 </button>

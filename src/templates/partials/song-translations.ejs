@@ -1,0 +1,49 @@
+<link
+        rel="stylesheet"
+        href="<%= paths.toCss %>/partials/song-translations.css"
+/>
+
+<div class="SongTranslations">
+    <div class="SongTranslations__container">
+        <ul class="SongTranslations__content">
+
+            <% songbooksAsOptions.map(({ href, isSelected, slug, subtitle, title }) => { %>
+                <li class="
+                        <% if (isSelected) { %>
+                            SongTranslations__item SongTranslations__item--selected
+                        <% } else { %>
+                            SongTranslations__item
+                        <% } %>
+                    "
+                >
+                    <a href="<%= href %>">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            <%= paths.toImages %>/banner/small-banner-<%= slug %>.png 1x,
+                                            <%= paths.toImages %>/banner/small-banner-<%= slug %>@2.png 2x
+                                        "
+                                        src="<%= paths.toImages %>/banner/small-banner-<%= slug %>.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    <%= title %>
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    <%= subtitle %>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            <% }) %>
+
+        </ul>
+    </div>
+</div>

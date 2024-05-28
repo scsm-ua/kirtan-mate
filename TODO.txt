@@ -1,5 +1,6 @@
 CSS
     - Change the song book banner images. We want better resolution (srcset) and more precise aspect ratio.
+    - Remove the obsolete mixin.
     - Fav icon.
 
 i18n

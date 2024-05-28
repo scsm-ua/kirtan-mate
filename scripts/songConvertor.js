@@ -92,6 +92,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
                 i18n: info.i18n,
                 isSelected: songbook_id === songbookId,
                 slug: info.slug,
+                subtitle: info.subtitle,
                 title: info.title
             };
         });

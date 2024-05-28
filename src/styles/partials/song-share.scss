@@ -1,3 +1,6 @@
+@import '../mixins';
+@import '../variables';
+
 .SongShare {
     background-color: var(--song-bg-color);
 
@@ -7,16 +10,32 @@
         align-items: center;
     }
 
+    &__header {
+        position: relative;
+        width: 100%;
+    }
+
     &__title {
         font-size: 20px;
         line-height: 140%;
         color: var(--title-color);
         margin: 0 0 16px 0;
+        padding-left: 10px;
+
+        @include breakpoint($min: $bp768) {
+            font-size: 28px;
+        }
     }
 
-    &__content {
-
+    &__close {
+        position: absolute;
+        right: 0;
+        top: -6px;
+        padding: 10px;
+        font-size: 18px;
     }
+
+    &__content {}
 
     &__qr {
         margin-bottom: 48px;
@@ -45,7 +64,6 @@
         font-weight: 300;
         line-height: 24px;
         margin-bottom: 16px;
-        text-align: center;
     }
 
     &__input {
