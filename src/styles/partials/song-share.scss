@@ -20,7 +20,6 @@
         line-height: 140%;
         color: var(--title-color);
         margin: 0 0 16px 0;
-        padding-left: 10px;
         text-align: center;
 
         @include breakpoint($min: $bp768) {

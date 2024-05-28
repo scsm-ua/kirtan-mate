@@ -5,12 +5,12 @@
     &.tingle-modal {
         cursor: default !important;
         background: rgba(0, 0, 0, .4);
-        animation: fadeIn 0.4s;
+        animation: fadeIn 0.3s;
         padding: 0;
         overflow: auto;
 
         &--visible .tingle-modal-box {
-            animation: fadeIn 0.4s;
+            animation: fadeIn 0.3s;
         }
     }
 
@@ -23,6 +23,7 @@
         //background-color: var(--header-bg-color);
         height: 40px;
         width: 40px;
+        min-height: 40px;
         top: 8px;
         left: 99999px;
         right: 0;
@@ -30,6 +31,7 @@
         color: var(--dark);
         padding: 4px;
         border-radius: 50%;
+        line-height: 0.9;
         //font-size: 24px;
         //text-align: right;
         cursor: pointer !important;
@@ -37,12 +39,18 @@
         background: white;
         margin-right: 8px;
         box-shadow: 0 4px 20px 0 var(--shadow-color);
+        transition: color 0.25s;
+
+        &:hover {
+            color: var(--accent-color);
+        }
     }
 
 
     .tingle-modal__closeIcon {
         //margin-right: var(--side-padding);
         //padding: 10px 0 10px var(--side-padding);
+        display: inline-block;
         width: 18px !important;
         margin: 0;
 

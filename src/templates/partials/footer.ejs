@@ -52,17 +52,23 @@
             elem.classList.add('Footer__item--active');
         }
 
+        function areEqual(pathname, url) {
+            return url.startsWith('/')
+                ? pathname === url
+                : pathname === new URL(url).pathname;
+        }
+
         const pathname = location.pathname.endsWith('/')
             ? location.pathname.slice(0, -1)
             : location.pathname;
 
         if (location.pathname === '/') {
             setActive(document.getElementById('footer-link-books'));
-        } else if (pathname === '<%= paths.toPages.index %>') {
+        } else if (areEqual(pathname, '<%= paths.toPages.index %>')) {
             setActive(document.getElementById('footer-link-contents'));
-        } else if (pathname === '<%= paths.toPages.index_list %>') {
+        } else if (areEqual(pathname, '<%= paths.toPages.index_list %>')) {
             setActive(document.getElementById('footer-link-index-list'));
-        } else if (pathname === '<%= paths.toPages.search %>') {
+        } else if (areEqual(pathname, '<%= paths.toPages.search %>')) {
             setActive(document.getElementById('footer-link-search'));
         }
     })()
