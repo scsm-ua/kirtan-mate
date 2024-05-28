@@ -18,14 +18,14 @@
 
                                 <% songbooks.forEach((songbook) => { %>
                                     <li class="BookListPage__item">
-                                        <a href="<%= songbook.contentsPath %>" class="BookListPage__link">
+                                        <a href="<%= songbook.href %>" class="BookListPage__link">
                                             <div class="BookListPage__ratio app-fixed-ratio-container">
                                                 <div class="app-fixed-ratio-content">
                                                     <div class="BookListPage__box">
                                                         <img
                                                                 alt=""
                                                                 class="BookListPage__image"
-                                                                src="<%= paths.toImages %>/banner/banner-<%= songbook.songbook_id %>.png"
+                                                                src="<%= paths.toImages %>/banner/banner-<%= songbook.slug %>.png"
                                                         >
                                                     </div>
 

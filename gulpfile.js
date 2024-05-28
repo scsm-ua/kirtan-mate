@@ -156,11 +156,14 @@ gulp.task('generate-index', (done) => {
 function getSongooksRenderContext(options) {
     const songbooks = getSongbookIdList().map(songbook_id => {
         const info = getSongbookInfo(songbook_id);
+        const songsCount =  getContentsJSON(songbook_id)
+            .flatMap((cat) => cat.items).length;
 
         return {
             href: PATHS.PAGES.getIndexPath(songbook_id),
             isSelected: false,
             slug: songbook_id,
+            songsCount: songsCount,
             subtitle: info.subtitle,
             title: info.title
         };
