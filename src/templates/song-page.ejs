@@ -104,11 +104,8 @@
                  */
                 const href = window.location.href;
                 const input = document.getElementById('href-input');
-                // const closeButton = document.getElementById('close-button');
                 const copyButton = document.getElementById('copy-button');
-
                 input.value = href;
-                // closeButton.addEventListener('click', () => modal.close());
 
                 copyButton.addEventListener('click', () => {
                     navigator.clipboard.writeText(href).catch(window.console.error);

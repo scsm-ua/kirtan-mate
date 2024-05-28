@@ -154,13 +154,15 @@ gulp.task('generate-index', (done) => {
  *
  */
 function getSongooksRenderContext(options) {
-    var songbooks = getSongbookIdList().map(songbook_id => {
+    const songbooks = getSongbookIdList().map(songbook_id => {
+        const info = getSongbookInfo(songbook_id);
+
         return {
-            songbook_id: songbook_id,
-            title: getSongbookInfo(songbook_id).title,
-            subtitle: getSongbookInfo(songbook_id).subtitle,
-            contentsPath: PATHS.PAGES.getIndexPath(songbook_id),
-            songsCount: getContentsJSON(songbook_id).flatMap((cat) => cat.items).length
+            href: PATHS.PAGES.getIndexPath(songbook_id),
+            isSelected: false,
+            slug: songbook_id,
+            subtitle: info.subtitle,
+            title: info.title
         };
     });
 
@@ -186,6 +188,7 @@ function getSongooksRenderContext(options) {
 
     return {
         songbooks: songbooks,
+        songbooksAsOptions: songbooks,
         headParts: createHeadParts(headParts),
         paths: paths,
         i18n: (text) => text

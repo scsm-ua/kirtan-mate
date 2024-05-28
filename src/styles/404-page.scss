@@ -1,0 +1,18 @@
+.Page404 {
+    &__header {
+        padding: var(--side-padding) 0;
+    }
+
+    &__title {}
+
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        color: var(--text-color);
+    }
+
+    &__list {
+        max-width: 100%;
+    }
+}
