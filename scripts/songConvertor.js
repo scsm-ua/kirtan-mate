@@ -84,24 +84,27 @@ function fillTemplate(songbook_id, template, content, filePath) {
         path: ORIGIN + '/' + songbook_id + '/' + filename + '.html'
     };
 
-    const songbooksAsOptions /* TSongBookAsOption */ = getSongbookIdList()
-        .map((songbookId) => {
-            const info /* TSongBookInfo */ = getSongbookInfo(songbookId);
-            return {
-                href: ORIGIN + '/' + songbookId + '/' + filename + '.html',
-                i18n: info.i18n,
-                isSelected: songbook_id === songbookId,
-                slug: info.slug,
-                subtitle: info.subtitle,
-                title: info.title
-            };
-        });
+    const alternativeTranslationBooks /* TSongBookAsOption */ = [];
 
     getSongbookIdList().forEach(a_songbook_id => {
         const song = getSongJSON(a_songbook_id, filename, true);
-        // Load embeds from other songbooks.
-        if (song?.embeds && (!embeds || !embeds.length)) {
-            embeds = song.embeds;
+
+        if (song) {
+            const info /* TSongBookInfo */ = getSongbookInfo(a_songbook_id);
+
+            alternativeTranslationBooks.push({
+                href: ORIGIN + '/' + a_songbook_id + '/' + filename + '.html',
+                i18n: info.i18n,
+                isSelected: songbook_id === a_songbook_id,
+                slug: a_songbook_id,
+                subtitle: info.subtitle,
+                title: info.title
+            });
+
+            // Load embeds from other songbooks.
+            if (song.embeds && (!embeds || !embeds.length)) {
+                embeds = song.embeds;
+            }
         }
     });
 
@@ -110,7 +113,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
         subtitle: subtitle,
         orderedSongs: JSON.stringify(getSongsOrderedList(songbook_id)),
         headParts: createHeadParts(headParts),
-        paths: getTemplatePaths(songbook_id, {root_to_songbook: true}),
+        paths: getTemplatePaths(songbook_id, { root_to_songbook: true }),
         title: title,
         verses: verses,
         embeds: embeds,
@@ -118,8 +121,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
         i18n: i18n(songbook_id),
         transformLine: transformLine,
         getLineIndentClass: getLineIndentClass,
-        songbooksAsOptions: songbooksAsOptions,
-        currentSongbook: songbooksAsOptions.find((option) => option.isSelected)
+        songbooksAsOptions: alternativeTranslationBooks,
+        currentSongbook: alternativeTranslationBooks.find((option) => option.isSelected)
     });
 }
 

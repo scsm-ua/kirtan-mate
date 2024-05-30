@@ -5,6 +5,7 @@ const { PATHS, ORIGIN } = require('./constants');
  * @param title: string - this will get suffixed with ' | Kirtan Mate'.
  * @param description: string - no special symbols!
  * @param path: string - no leading or trailing slashes!
+ * @param is404: boolean
  */
 function createHeadParts({ title, description, path, is404 }) {
     const imgSrc = PATHS.FILES.SHARING_BANNER;
