@@ -1,4 +1,4 @@
-var fs = require('fs');
+const fs = require('fs');
 
 const ejs = require('gulp-ejs');
 const gulp = require('gulp');
@@ -20,12 +20,12 @@ const {
     md2jsonConvertor
 } = require('./scripts/songConvertor');
 const { makeIndexList } = require('./scripts/makeIndexList');
-const { PATHS } = require('./scripts/constants');
-const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
+const { PATHS, SEARCH_CONST} = require('./scripts/constants');
+const { getSongsPath, getSongbookIdList, getSongbookInfo} = require('./scripts/songbookLoader');
 const { i18n } = require('./scripts/i18n');
 const { getTemplatePaths } = require('./scripts/utils');
 const { getContentsJSON } = require('./scripts/indexGenerator');
-const { BUILD, FILES, PAGES, SRC } = PATHS;
+const { BUILD, FILES, SRC } = PATHS;
 
 /**
  *
@@ -237,6 +237,64 @@ gulp.task('404', (done) => {
 /**
  *
  */
+gulp.task('search-page', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        // const current_i18n = i18n(songbook_id);
+        // const info /* TSongBookInfo */ = getSongbookInfo(songbook_id);
+        // console.log(info);
+
+        const headParts = {
+            // TODO: ??
+            title: 'Search Page',
+            // TODO: ??
+            description: 'Search Page',
+            path: PATHS.PAGES.getSearchPath(songbook_id)
+        };
+
+        const pages = getContentsJSON(songbook_id)
+            .flatMap(({ items }) =>
+                items.map((item) => ({
+                    page: item.page,
+                    path: item.fileName,
+                    title: item.title
+                }))
+            )
+            .sort((a, b) => parseFloat(a.page) - parseFloat(b.page));
+
+        const task = (taskDone) =>
+            gulp
+                .src([SRC.EJS_FILES + '/' + FILES.EJS.SEARCH_PAGE])
+                .pipe(
+                    ejs({
+                        headParts: createHeadParts(headParts),
+                        i18n: (text) => text,
+                        pages: pages,
+                        paths: getTemplatePaths(songbook_id),
+                        search: SEARCH_CONST
+                    }).on('error', console.error)
+                )
+                .pipe(
+                    rename({
+                        basename: 'search-page',
+                        dirname: songbook_id,
+                        extname: '.html'
+                    })
+                )
+                .pipe(gulp.dest(BUILD.ROOT), taskDone);
+
+        task.displayName = 'search-page ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+/**
+ *
+ */
 gulp.task('songbook-contents', (done) => {
     const tasks = getSongbookIdList().map(songbook_id => {
 
@@ -382,6 +440,7 @@ gulp.task('build', (done) => {
         'generate-contents',
         'generate-index',
         'html',
+        'search-page',
         'songbook-contents',
         'songbook-a-z',
         'sitemap',

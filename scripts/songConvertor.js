@@ -1,5 +1,4 @@
 const ejs = require('ejs');
-const fs = require('fs');
 const path = require('path');
 const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
@@ -10,7 +9,7 @@ const { createHeadParts } = require('./createHeadParts');
 const { PATHS, ORIGIN } = require('./constants');
 const { i18n } = require('./i18n');
 const { getTemplatePaths } = require('./utils');
-const { getSongbookIdList, getSongbookInfo} = require('./songbookLoader');
+const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
 const { BUILD, FILES } = PATHS;
 
 

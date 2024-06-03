@@ -8,12 +8,18 @@ const contentItems = 'contentItems.json';
 const indexItems = 'indexItems.json';
 const indexPath = 'index.html';
 const indexAZPath = 'index-a-z-page.html';
-const searchPage = 'search.html';
+const searchPage = 'search-page.html';
 const sharingBanner = 'sharing-banner.png';
 const sitemapName = 'sitemap.xml';
 
 /**/
 const ORIGIN = (process.env.HOME_BASE_URL || '');
+
+/**/
+const SEARCH_CONST = {
+    ACCOUNT_ID: 'f0691c438c8d24df4',
+    SEARCH_API_KEY: 'AIzaSyCt4jPTSY3LKh14RrS7SmQPfguyhQ_y2vU'
+};
 
 /**
  *
@@ -49,6 +55,7 @@ const PATHS = {
             INDEX_A_Z_PAGE: 'index-a-z-page.ejs',
             NOT_FOUND_PAGE: '404.ejs',
             ROBOTS: process.env.DISABLE_ROBOTS ? 'robots-disallow.ejs' : 'robots.ejs',
+            SEARCH_PAGE: 'search-page.ejs',
             SITEMAP: 'sitemap.ejs',
             SONG_PAGE: 'song-page.ejs'
         },
@@ -86,4 +93,4 @@ const PATHS = {
 };
 
 /**/
-module.exports = { ORIGIN, PATHS };
+module.exports = { ORIGIN, PATHS, SEARCH_CONST };

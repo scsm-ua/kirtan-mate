@@ -1,0 +1,160 @@
+@import 'mixins';
+
+.SearchPage {
+    background-color: var(--main-bg-color);
+
+    .visible {
+        display: block;
+    }
+
+    &__container {
+        position: relative;
+        padding: var(--side-padding);
+    }
+
+    &__content {}
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 16px;
+        border-bottom: solid 1px var(--grey);
+    }
+
+    &__search {
+        position: relative;
+        flex: 1;
+        height: 48px;
+        padding: 4px;
+        border-radius: 24px;
+        border: 1px solid var(--grey);
+    }
+
+    &__input {
+        height: 40px;
+        width: 100%;
+        font-size: 16px;
+        color: var(--dark);
+        letter-spacing: 0.8px;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 4px 54px 4px 14px;
+
+        @include placeholder {
+            color: var(--grey);
+        }
+    }
+
+    &__clear {
+        position: absolute;
+        right: 7px;
+        top: 3px;
+        height: 40px;
+        width: 40px;
+        font-size: 18px;
+        transition: color 0.25s;
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+
+    &__submit {
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+        padding-top: 4px;
+        margin-left: 12px;
+    }
+
+    &__nothing {
+        display: none;
+        padding: var(--side-padding) 0;
+        border-bottom: solid 1px var(--grey);
+    }
+
+    &__results {
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__item {
+        padding: var(--side-padding) 0;
+
+        &:not(:last-child) {
+            border-bottom: solid 1px var(--grey);
+        }
+    }
+
+    &__itemLink {}
+
+    &__itemTitle {
+        transition: color 0.25s;
+
+        .SearchPage__item:hover & {
+            color: var(--accent-color);
+        }
+    }
+
+    &__itemText {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        color: var(--text-color);
+        transition: color 0.25s;
+
+        .SearchPage__item:hover & {
+            color: var(--accent-color);
+        }
+    }
+
+    &__more {
+        display: none;
+        text-align: center;
+        padding: var(--side-padding) 0;
+
+        button {
+            height: 40px;
+            border-radius: 20px;
+            font-size: 16px;
+            padding: 0 16px;
+            letter-spacing: 0.8px;
+        }
+    }
+
+    &__pages {
+        display: none;
+        margin: 0;
+        padding: var(--side-padding) 0;
+    }
+
+    &__pills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-right: -8px;
+    }
+
+    &__pill {
+        padding: 0;
+        margin: 0 6px 16px 0;
+    }
+
+    &__page {
+        height: 32px;
+        padding: 8px;
+        border-radius: 6px;
+        border: solid 1px var(--grey);
+        color: var(--dark-grey);
+        background-color: var(--song-bg-color);
+        transition: color 0.25s;
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+}
