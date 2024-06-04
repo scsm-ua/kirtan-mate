@@ -1,0 +1,115 @@
+{
+  "en": {
+    "Books": "Books",
+    "Search": "Search",
+    "Share song": "Share song",
+    "Share": "Share",
+    "Copy page address": "Copy page address",
+    "Contents": "Contents",
+    "Index": "Index",
+    "Vaishnava Songbook": "Vaishnava Songbook",
+    "BOOK_LIST_PAGE": {
+      "SONG_COUNT": "songs"
+    },
+    "FOOTER": {
+      "BOOKS": "Books",
+      "CONTENTS": "Contents",
+      "INDEX": "Index",
+      "SEARCH": "Search"
+    },
+    "SEARCH_PAGE": {
+      "CLEAR": "Clear",
+      "FIND": "Find",
+      "INPUT_PLACEHOLDER": "Find a song",
+      "LOAD_MORE": "Load more",
+      "NO_RESULTS": "Nothing has been found",
+      "PAGE_LIST": "List of pages"
+    },
+    "SONG_PAGE": {
+      "CLOSE": "Close",
+      "COPY": "Copy",
+      "COPY_LINK": "Copy page link",
+      "NEXT_SONG": "Next song",
+      "OTHER_TRANSLATIONS": "See other translations",
+      "PREVIOUS_SONG": "Previous song",
+      "SHARE": "Share",
+      "SHARE_SONG": "Share song",
+      "SHOW_TRANSLATION": "Show translation"
+    }
+  },
+  "ru": {
+    "Books": "Книги",
+    "Search": "Поиск",
+    "Share song": "Поделиться песней",
+    "Share": "Поделиться",
+    "Copy page address": "Скопировать адрес",
+    "Contents": "Содержание",
+    "Index": "Индекс",
+    "Vaishnava Songbook": "Вайшнавский песенник",
+    "BOOK_LIST_PAGE": {
+      "SONG_COUNT": "песен"
+    },
+    "FOOTER": {
+      "BOOKS": "Книги",
+      "CONTENTS": "Содержание",
+      "INDEX": "Индекс",
+      "SEARCH": "Поиск"
+    },
+    "SEARCH_PAGE": {
+      "CLEAR": "Очистить",
+      "FIND": "Найти",
+      "INPUT_PLACEHOLDER": "Найти песню",
+      "LOAD_MORE": "Загрузить еще",
+      "NO_RESULTS": "Ничего не найдено",
+      "PAGE_LIST": "Список страниц"
+    },
+    "SONG_PAGE": {
+      "CLOSE": "Закрыть",
+      "COPY": "Копировать",
+      "COPY_LINK": "Копировать ссылку на страницу",
+      "NEXT_SONG": "Следующая песня",
+      "OTHER_TRANSLATIONS": "Смотреть другие переводы",
+      "PREVIOUS_SONG": "Предыдущая песня",
+      "SHARE": "Поделиться",
+      "SHARE_SONG": "Поделиться песней",
+      "SHOW_TRANSLATION": "Показывать перевод"
+    }
+  },
+  "ua": {
+    "Books": "Книги",
+    "Search": "Пошук",
+    "Share": "Поділитися",
+    "Copy page address": "Копіювати посилання на сторінку",
+    "Contents": "Зміст",
+    "Index": "Індекс",
+    "Vaishnava Songbook": "Сайт вайшнавських пісень",
+    "BOOK_LIST_PAGE": {
+      "SONG_COUNT": "пісень"
+    },
+    "FOOTER": {
+      "BOOKS": "Книги",
+      "CONTENTS": "Зміст",
+      "INDEX": "Індекс",
+      "SEARCH": "Пошук"
+    },
+    "SEARCH_PAGE": {
+      "CLEAR": "Відчистити",
+      "FIND": "Знайти",
+      "INPUT_PLACEHOLDER": "Знайти пісню",
+      "LOAD_MORE": "Шукати ще",
+      "NO_RESULTS": "Нічого не знайдено",
+      "PAGE_LIST": "Список сторінок"
+    },
+    "SONG_PAGE": {
+      "CLOSE": "Закрити",
+      "COPY": "Копіювати",
+      "COPY_LINK": "Копіювати посилання на сторінку",
+      "NEXT_SONG": "Наступна пісня",
+      "OTHER_TRANSLATIONS": "Дивитись інші переклади",
+      "PREVIOUS_SONG": "Попередня пісня",
+      "SHARE": "Поділитися",
+      "SHARE_SONG": "Поділитися піснею",
+      "SHOW_TRANSLATION": "Показувати переклад"
+    }
+  }
+}

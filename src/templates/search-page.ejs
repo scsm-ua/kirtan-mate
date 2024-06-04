@@ -21,42 +21,58 @@
                                     autofocus
                                     class="SearchPage__input"
                                     id="search-input"
-                                    placeholder="Find a song"
+                                    placeholder="<%= i18n('SEARCH_PAGE.INPUT_PLACEHOLDER') %>"
                                     type="text"
                             >
 
-                            <button class="NoBorderButton SearchPage__clear" id="clear-button">
+                            <button
+                                    class="NoBorderButton SearchPage__clear"
+                                    id="clear-button"
+                                    title="<%= i18n('SEARCH_PAGE.CLEAR') %>"
+                            >
                                 <span class="icon-xmark-large"></span>
                             </button>
                         </div>
 
-                        <button class="RoundButton RoundButton--dark SearchPage__submit" id="submit-button">
+                        <button
+                                class="RoundButton RoundButton--dark SearchPage__submit"
+                                id="submit-button"
+                                title="<%= i18n('SEARCH_PAGE.FIND') %>"
+                        >
                             <span class="icon-search"></span>
                         </button>
                     </header>
 
                     <div class="SearchPage__content">
                         <div class="SearchPage__nothing" id="nothing-found-div">
-                            Nothing has been found.
+                            <%= i18n('SEARCH_PAGE.NO_RESULTS') %>.
                         </div>
 
                         <ul class="SearchPage__results" id="result-list"></ul>
 
                         <div class="SearchPage__more" id="show-more-button">
-                            <button class="RoundButton RoundButton--dark">Load more</button>
+                            <button class="RoundButton RoundButton--dark">
+                                <%= i18n('SEARCH_PAGE.LOAD_MORE') %>
+                            </button>
                         </div>
 
-                        <ul class="SearchPage__pages visible" id="page-list">
-                            <li class="SearchPage__pills">
-                                <% pages.map((item) => { %>
-                                    <a class="SearchPage__pill" href="<%= item.path %>" title="<%= item.title %>">
-                                        <button class="SearchPage__page">
-                                            <%= item.page %>
-                                        </button>
-                                    </a>
-                                <% }) %>
-                            </li>
-                        </ul>
+                        <div class="SearchPage__pages visible" id="page-list">
+                            <h6 class="SearchPage__pagesTitle">
+                                <%= i18n('SEARCH_PAGE.PAGE_LIST') %>
+                            </h6>
+
+                            <ul class="">
+                                <li class="SearchPage__pills">
+                                    <% pages.map((item) => { %>
+                                        <a class="SearchPage__pill" href="<%= item.path %>" title="<%= item.title %>">
+                                            <button class="SearchPage__page">
+                                                <%= item.page %>
+                                            </button>
+                                        </a>
+                                    <% }) %>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </main>

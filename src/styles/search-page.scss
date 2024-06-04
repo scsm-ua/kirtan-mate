@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 0 16px;
+        padding: 0 0 var(--side-padding);
         border-bottom: solid 1px var(--grey);
     }
 
@@ -128,8 +128,13 @@
 
     &__pages {
         display: none;
-        margin: 0;
         padding: var(--side-padding) 0;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
     }
 
     &__pills {
@@ -156,5 +161,9 @@
         &:hover {
             color: var(--accent-color);
         }
+    }
+
+    &__pagesTitle {
+        margin-bottom: 16px;
     }
 }

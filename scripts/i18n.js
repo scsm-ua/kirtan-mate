@@ -1,6 +1,14 @@
-const { getSongbooki18n } = require("./songbookLoader");
+const { getSongbooki18n } = require('./songbookLoader');
+const { isObject } = require('./ioHelpers');
+const translations = require('../src/translations.json');
 
-module.exports.i18n = function(songbook_id) {
+
+const DEFAULT_LANGUAGE = 'en';
+
+/**
+ *
+ */
+function i18n(songbook_id) {
 
     var i18n_dict = getSongbooki18n(songbook_id);
 
@@ -12,3 +20,37 @@ module.exports.i18n = function(songbook_id) {
         }
     }
 }
+
+
+/**
+ *
+ */
+function getLanguageSet(lang) {
+    return translations[lang] || translations[DEFAULT_LANGUAGE];
+}
+
+
+/**
+ *
+ */
+function getTranslationsFor(lang) {
+    return function (keyChain) {
+        const keys = keyChain.split('.');
+        let value = getLanguageSet(lang);
+
+        keys.forEach((k) =>
+            value = isObject(value) ? value[k] : (value || '')
+        );
+
+        return value || getTranslationsFor()(keyChain) || '';
+    };
+}
+
+
+/**
+ *
+ */
+module.exports = {
+    getTranslationsFor,
+    i18n
+};

@@ -20,9 +20,9 @@ const {
     md2jsonConvertor
 } = require('./scripts/songConvertor');
 const { makeIndexList } = require('./scripts/makeIndexList');
-const { PATHS, SEARCH_CONST} = require('./scripts/constants');
-const { getSongsPath, getSongbookIdList, getSongbookInfo} = require('./scripts/songbookLoader');
-const { i18n } = require('./scripts/i18n');
+const { PATHS, SEARCH_CONST } = require('./scripts/constants');
+const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
+const { i18n, getTranslationsFor } = require('./scripts/i18n');
 const { getTemplatePaths } = require('./scripts/utils');
 const { getContentsJSON } = require('./scripts/indexGenerator');
 const { BUILD, FILES, SRC } = PATHS;
@@ -267,7 +267,7 @@ gulp.task('search-page', (done) => {
                 .pipe(
                     ejs({
                         headParts: createHeadParts(headParts),
-                        i18n: (text) => text,
+                        i18n: getTranslationsFor(songbook_id.slice(0, 2)),
                         pages: pages,
                         paths: getTemplatePaths(songbook_id),
                         search: SEARCH_CONST
