@@ -1,14 +1,27 @@
 const path = require('path');
 
+/**
+ *
+ */
+const BASE_FILE_NAMES = {
+    A_Z: 'a-z',
+    BOOK_LIST: 'index',
+    CONTENTS: 'contents',
+    NOT_FOUND: '404',
+    SEARCH: 'search'
+};
+
 const OUTPUT_DIR = 'docs';
 const JS_DIR = 'js';
 const CSS_DIR = 'css';
 const IMG_DIR = 'css';
 const contentItems = 'contentItems.json';
+const contentsPage = BASE_FILE_NAMES.CONTENTS + '.html';
 const indexItems = 'indexItems.json';
-const indexPath = 'index.html';
-const indexAZPath = 'index-a-z-page.html';
-const searchPage = 'search-page.html';
+const indexPath = BASE_FILE_NAMES.BOOK_LIST + '.html';
+const indexAZPath = BASE_FILE_NAMES.A_Z + '.html';
+const notFoundPage = BASE_FILE_NAMES.NOT_FOUND + '.html';
+const searchPage = BASE_FILE_NAMES.SEARCH + '.html';
 const sharingBanner = 'sharing-banner.png';
 const sitemapName = 'sitemap.xml';
 
@@ -52,8 +65,9 @@ const PATHS = {
             // TODO: rename
             CONTENTS_PAGE: 'index.ejs',
             // TODO: rename
-            INDEX_A_Z_PAGE: 'index-a-z-page.ejs',
+            A_Z_PAGE: 'a-z-page.ejs',
             NOT_FOUND_PAGE: '404.ejs',
+            REDIRECT_PAGE: 'redirect-page.ejs',
             ROBOTS: process.env.DISABLE_ROBOTS ? 'robots-disallow.ejs' : 'robots.ejs',
             SEARCH_PAGE: 'search-page.ejs',
             SITEMAP: 'sitemap.ejs',
@@ -80,7 +94,10 @@ const PATHS = {
         JS_FILES: 'src/js'
     },
     PAGES: {
+        A_Z: '/' + indexAZPath,
         BOOK_LIST: '/',
+        CONTENTS: '/' + contentsPage,
+        NOT_FOUND: '/' + notFoundPage,
         SEARCH: '/' + searchPage,
         SITEMAP: ORIGIN  + '/' + sitemapName,
         INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
@@ -92,5 +109,25 @@ const PATHS = {
     }
 };
 
+
+/**
+ *
+ */
+function getNavigationPaths(bookId) {
+    return {
+        A_Z: '/' + bookId + PATHS.PAGES.A_Z,
+        BOOK_LIST: '/' + bookId + PATHS.PAGES.BOOK_LIST,
+        CONTENTS: '/' + bookId + PATHS.PAGES.CONTENTS,
+        SEARCH: '/' + bookId + PATHS.PAGES.SEARCH
+    }
+}
+
+
 /**/
-module.exports = { ORIGIN, PATHS, SEARCH_CONST };
+module.exports = {
+    BASE_FILE_NAMES,
+    ORIGIN,
+    PATHS,
+    SEARCH_CONST,
+    getNavigationPaths
+};

@@ -3,7 +3,13 @@
 <html lang="en">
 <head>
     <script>
-        const pagePath = '';
+        const pagePath = '<%- pagePath %>';
+        const preferredLang = navigator.language ||
+            Intl.DateTimeFormat().resolvedOptions().locale;
+
+        const lang = preferredLang.slice(0, 2) || 'en';
+        // console.log(pagePath, preferredLang, location.origin + '/' + lang + pagePath);
+        window.location = location.origin + '/' + lang + pagePath;
     </script>
 </head>
 </html>

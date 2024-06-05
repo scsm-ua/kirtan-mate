@@ -25,7 +25,8 @@ function i18n(songbook_id) {
 /**
  *
  */
-function getLanguageSet(lang) {
+function getLanguageSet(language = '') {
+    const lang = language.slice(0, 2);
     return translations[lang] || translations[DEFAULT_LANGUAGE];
 }
 

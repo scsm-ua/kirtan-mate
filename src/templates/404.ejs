@@ -17,15 +17,20 @@
                     <div class="Main__container IndexPage__container">
                         <div class="Main__content IndexPage__content">
                             <div class="Page404__header">
-                                <h3 class="Page404__title">Page not found</h3>
+                                <h3 class="Page404__title">
+                                    <%= i18n('NOT_FOUND.TITLE') %>
+                                </h3>
 
                                 <div class="Page404__text">
-                                    This site does not contain the requested page. Try to start navigation selecting songbook from the list below:
+                                    <%= i18n('NOT_FOUND.TEXT') %>
                                 </div>
                             </div>
 
                             <div class="Page404__list">
-                                <%- include(paths.toPartials + "/song-translations.ejs"); %>
+                                <%- include(
+                                    paths.toPartials + "/song-translations.ejs",
+                                    { 'songbooksAsOptions': songbooks }
+                                ); %>
                             </div>
                         </div>
                     </div>

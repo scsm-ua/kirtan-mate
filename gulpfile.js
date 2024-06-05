@@ -20,12 +20,12 @@ const {
     md2jsonConvertor
 } = require('./scripts/songConvertor');
 const { makeIndexList } = require('./scripts/makeIndexList');
-const { PATHS, SEARCH_CONST } = require('./scripts/constants');
+const { PATHS, SEARCH_CONST, BASE_FILE_NAMES, getNavigationPaths } = require('./scripts/constants');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
 const { i18n, getTranslationsFor } = require('./scripts/i18n');
 const { getTemplatePaths } = require('./scripts/utils');
 const { getContentsJSON } = require('./scripts/indexGenerator');
-const { BUILD, FILES, SRC } = PATHS;
+const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
  *
@@ -154,7 +154,9 @@ gulp.task('generate-index', (done) => {
  *
  */
 function getSongooksRenderContext(options) {
-    const songbooks = getSongbookIdList().map(songbook_id => {
+    const songbooks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsFor(songbook_id);
+
         const info = getSongbookInfo(songbook_id);
         const songsCount =  getContentsJSON(songbook_id)
             .flatMap((cat) => cat.items).length;
@@ -162,6 +164,7 @@ function getSongooksRenderContext(options) {
         return {
             href: PATHS.PAGES.getIndexPath(songbook_id),
             isSelected: false,
+            i18n: tr,
             slug: songbook_id,
             songsCount: songsCount,
             subtitle: info.subtitle,
@@ -193,10 +196,55 @@ function getSongooksRenderContext(options) {
         songbooks: songbooks,
         songbooksAsOptions: songbooks,
         headParts: createHeadParts(headParts),
-        paths: paths,
-        i18n: (text) => text
+        paths: paths
     };
 }
+
+/**
+ *
+ */
+function getCommonPageContext(bookId, options = {}) {
+    const tr = getTranslationsFor(bookId);
+
+    const songbooks = getSongbookIdList().map((songbook_id) => {
+        const info = getSongbookInfo(songbook_id);
+        const songsCount =  getContentsJSON(songbook_id)
+            .flatMap((cat) => cat.items).length;
+
+        return {
+            href: PATHS.PAGES.getIndexPath(songbook_id),
+            isSelected: false,
+            slug: songbook_id,
+            songsCount: songsCount,
+            subtitle: info.subtitle,
+            title: info.title
+        };
+    });
+
+    const headParts = {
+        title: tr('NOT_FOUND.HEAD.TITLE'),
+        description: tr('NOT_FOUND.HEAD.DESCRIPTION'),
+        path: PATHS.PAGES.INDEX,
+        is404: options.is404
+    };
+
+    const paths = {
+        toJs: PATHS.RELATIVE.JS,
+        toCss: PATHS.RELATIVE.CSS,
+        toImages: PATHS.RELATIVE.IMG,
+        toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
+        toPages: getNavigationPaths(bookId)
+    };
+
+    return {
+        headParts: createHeadParts(headParts),
+        i18n: tr,
+        paths: paths,
+        songbooks: songbooks,
+        songbooksAsOptions: songbooks
+    };
+}
+
 
 /**
  *
@@ -220,18 +268,32 @@ gulp.task('songbooks', (done) => {
  *
  */
 gulp.task('404', (done) => {
-    return gulp
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const task = (done) => gulp
             .src([SRC.EJS_FILES + '/' + FILES.EJS.NOT_FOUND_PAGE])
             .pipe(
-                ejs(getSongooksRenderContext({ is404: true })).on('error', console.error)
+                ejs(getCommonPageContext(
+                    songbook_id,
+                    { is404: true }
+                )).on('error', console.error)
             )
             .pipe(
                 rename({
                     basename: '404',
+                    dirname: songbook_id,
                     extname: '.html'
                 })
             )
             .pipe(gulp.dest(BUILD.ROOT), done);
+
+        task.displayName = '404 ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
 });
 
 /**
@@ -267,7 +329,7 @@ gulp.task('search-page', (done) => {
                 .pipe(
                     ejs({
                         headParts: createHeadParts(headParts),
-                        i18n: getTranslationsFor(songbook_id.slice(0, 2)),
+                        i18n: getTranslationsFor(songbook_id),
                         pages: pages,
                         paths: getTemplatePaths(songbook_id),
                         search: SEARCH_CONST
@@ -349,10 +411,10 @@ gulp.task('songbook-a-z', (done) => {
         };
 
         const info = getSongbookInfo(songbook_id);
-        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_A_Z_PAGE} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX_A_Z_PAGE}`;
+        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.A_Z_PAGE} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX_A_Z_PAGE}`;
 
         const task = (done) => gulp
-            .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_A_Z_PAGE)
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.A_Z_PAGE)
             .pipe(
                 ejs({
                     headParts: createHeadParts(headParts),
@@ -369,6 +431,51 @@ gulp.task('songbook-a-z', (done) => {
             .pipe(shell([extChangeCmd]), done);
 
         task.displayName = "songbook-a-z " + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+
+/**
+ *
+ */
+gulp.task('redirect-pages', (done) => {
+    const pagePaths = [
+        PAGES.A_Z,
+        PAGES.BOOK_LIST,
+        PAGES.CONTENTS,
+        PAGES.NOT_FOUND,
+        PAGES.SEARCH
+    ];
+
+    const nameMap = {
+        [PAGES.A_Z]: BASE_FILE_NAMES.A_Z,
+        [PAGES.BOOK_LIST]: BASE_FILE_NAMES.BOOK_LIST,
+        [PAGES.CONTENTS]: BASE_FILE_NAMES.CONTENTS,
+        [PAGES.NOT_FOUND]: BASE_FILE_NAMES.NOT_FOUND,
+        [PAGES.SEARCH]: BASE_FILE_NAMES.SEARCH
+    };
+
+    const tasks = pagePaths.map((pagePath) => {
+        const task = (done) => gulp
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.REDIRECT_PAGE)
+            .pipe(
+                ejs({ pagePath: pagePath }).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: nameMap[pagePath],
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done);
+
+        task.displayName = 'redirect-page ' + pagePath;
         return task;
     });
 

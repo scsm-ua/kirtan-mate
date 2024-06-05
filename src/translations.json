@@ -17,6 +17,14 @@
       "INDEX": "Index",
       "SEARCH": "Search"
     },
+    "NOT_FOUND": {
+      "HEAD": {
+        "DESCRIPTION": "Page 404",
+        "TITLE": "Vaishnava Songbook"
+      },
+      "TEXT": "This site does not contain the requested page. Try to start navigation selecting songbook from the list below:",
+      "TITLE": "Page not found"
+    },
     "SEARCH_PAGE": {
       "CLEAR": "Clear",
       "FIND": "Find",
@@ -55,6 +63,14 @@
       "INDEX": "Индекс",
       "SEARCH": "Поиск"
     },
+    "NOT_FOUND": {
+      "HEAD": {
+        "DESCRIPTION": "Страница 404",
+        "TITLE": "Вайшнавский песенник"
+      },
+      "TEXT": "Запрошенная страница не найдена. Выберите интересующий вас песенник из списка ниже:",
+      "TITLE": "Страница не найдена"
+    },
     "SEARCH_PAGE": {
       "CLEAR": "Очистить",
       "FIND": "Найти",
@@ -91,6 +107,14 @@
       "CONTENTS": "Зміст",
       "INDEX": "Індекс",
       "SEARCH": "Пошук"
+    },
+    "NOT_FOUND": {
+      "HEAD": {
+        "DESCRIPTION": "Сторінка 404",
+        "TITLE": "Вайшнавський пісенник"
+      },
+      "TEXT": "Нажаль, сторінку не знайдено. Оберіть пісенник, який вас цікавить, зі списку нижче:",
+      "TITLE": "Сторінку не знайдено"
     },
     "SEARCH_PAGE": {
       "CLEAR": "Відчистити",
