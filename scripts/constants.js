@@ -61,6 +61,7 @@ const PATHS = {
     },
     FILES: {
         EJS: {
+            // todo rename to index.ejs
             BOOK_LIST_PAGE: 'songbooks.ejs',
             // TODO: rename
             CONTENTS_PAGE: 'index.ejs',

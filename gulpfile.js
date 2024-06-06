@@ -247,25 +247,39 @@ function getCommonPageContext(bookId, options = {}) {
 
 
 /**
- *
- */
-gulp.task('songbooks', (done) => {
-    return gulp
+ * Path `/{bookId}/index.html`;
+ * */
+gulp.task('songbook-list', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const task = (done) => gulp
             .src([SRC.EJS_FILES + '/' + FILES.EJS.BOOK_LIST_PAGE])
             .pipe(
-                ejs(getSongooksRenderContext()).on('error', console.error)
+                ejs(getCommonPageContext(
+                    songbook_id
+                )).on('error', console.error)
             )
             .pipe(
                 rename({
-                    basename: 'index',
+                    basename: BASE_FILE_NAMES.BOOK_LIST,
+                    dirname: songbook_id,
                     extname: '.html'
                 })
             )
             .pipe(gulp.dest(BUILD.ROOT), done);
+
+        task.displayName = 'index ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
 });
 
+
 /**
- *
+ *  Path `/{bookId}/404.html`;
  */
 gulp.task('404', (done) => {
     const tasks = getSongbookIdList().map((songbook_id) => {
@@ -279,7 +293,7 @@ gulp.task('404', (done) => {
             )
             .pipe(
                 rename({
-                    basename: '404',
+                    basename: BASE_FILE_NAMES.NOT_FOUND,
                     dirname: songbook_id,
                     extname: '.html'
                 })
@@ -295,6 +309,7 @@ gulp.task('404', (done) => {
         done();
     })();
 });
+
 
 /**
  *
@@ -337,7 +352,7 @@ gulp.task('search-page', (done) => {
                 )
                 .pipe(
                     rename({
-                        basename: 'search-page',
+                        basename: BASE_FILE_NAMES.SEARCH,
                         dirname: songbook_id,
                         extname: '.html'
                     })
@@ -354,9 +369,10 @@ gulp.task('search-page', (done) => {
     })();
 });
 
+
 /**
- *
- */
+ * Path `/{bookId}/contents.html`;
+ * */
 gulp.task('songbook-contents', (done) => {
     const tasks = getSongbookIdList().map(songbook_id => {
 
@@ -397,6 +413,7 @@ gulp.task('songbook-contents', (done) => {
         done();
     })();
 });
+
 
 /**
  *
@@ -442,7 +459,12 @@ gulp.task('songbook-a-z', (done) => {
 
 
 /**
- *
+ * Paths:
+ *  `/a-z.html`         A_Z
+ *  `/index.html`       BOOK_LIST
+ *  `/contents.html`    CONTENTS
+ *  `/404.html`         NOT_FOUND
+ *  `/search.html`      SEARCH
  */
 gulp.task('redirect-pages', (done) => {
     const pagePaths = [
@@ -485,6 +507,7 @@ gulp.task('redirect-pages', (done) => {
     })();
 });
 
+
 /**
  *
  */
@@ -508,6 +531,7 @@ gulp.task('sitemap', (done) => {
         .pipe(shell([extChangeCmd]), done);
 });
 
+
 /**
  *
  */
@@ -528,10 +552,12 @@ gulp.task('robots', (done) => {
         .pipe(gulp.dest(BUILD.ROOT), done);
 });
 
+
 /**
  *
  */
 gulp.task('clean', shell.task('rm -rf docs'));
+
 
 /**
  *
@@ -551,12 +577,13 @@ gulp.task('build', (done) => {
         'songbook-contents',
         'songbook-a-z',
         'sitemap',
-        'songbooks',
+        'songbook-list',
         '404',
         'robots',
         done
     );
 });
+
 
 /**
  *
