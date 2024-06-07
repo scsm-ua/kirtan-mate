@@ -8,7 +8,8 @@ const BASE_FILE_NAMES = {
     BOOK_LIST: 'index',
     CONTENTS: 'contents',
     NOT_FOUND: '404',
-    SEARCH: 'search'
+    SEARCH: 'search',
+    SITEMAP: 'sitemap'
 };
 
 const OUTPUT_DIR = 'docs';

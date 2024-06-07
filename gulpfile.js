@@ -22,7 +22,7 @@ const {
 const { makeIndexList } = require('./scripts/makeIndexList');
 const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
-const { i18n, getTranslationsBy } = require('./scripts/i18n');
+const { getTranslationsBy } = require('./scripts/i18n');
 const { getNavigationPaths, getTemplatePaths } = require('./scripts/utils');
 const { getContentsJSON } = require('./scripts/indexGenerator');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
@@ -480,26 +480,32 @@ gulp.task('redirect-pages', (done) => {
 
 
 /**
- *
+ * Path `/{bookId}/sitemap.xml`;
  */
 gulp.task('sitemap', (done) => {
-    const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.SITEMAP} ${BUILD.ROOT}/${FILES.XML.SITEMAP}`;
+    let content = '';
 
-    var songList = getSongbookIdList().map(songbook_id => {
-        return createSongXMLParts(songbook_id, require(BUILD.getContentsFile(songbook_id)))
-    }).join('\n');
+    getSongbookIdList().forEach((bookId) =>
+        content += createSongXMLParts(
+            bookId,
+            require(BUILD.getContentsFile(bookId))
+        )
+    );
 
     return gulp
         .src(SRC.EJS_FILES + '/' + FILES.EJS.SITEMAP)
         .pipe(
             ejs({
-                root: encodeURI(PATHS.PAGES.INDEX),
-                songList: songList,
-                i18n: i18n
+                content: content
             }).on('error', console.error)
         )
-        .pipe(gulp.dest(BUILD.ROOT))
-        .pipe(shell([extChangeCmd]), done);
+        .pipe(
+            rename({
+                basename: BASE_FILE_NAMES.SITEMAP,
+                extname: '.xml'
+            })
+        )
+        .pipe(gulp.dest(BUILD.ROOT), done);
 });
 
 
@@ -562,7 +568,7 @@ gulp.task('build', (done) => {
 gulp.task('watch', () => {
     gulp.watch(SRC.CSS_FILES + '/**/*.scss', gulp.series(['sass']));
     gulp.watch(
-        [SRC.MD_FILES + '/**/*.md', SRC.EJS_FILES + '/**/*.ejs'],
+        [SRC.EJS_FILES + '/**/*.ejs'],
         gulp.series(['html', 'songbook-contents', 'songbook-a-z', 'songbooks'])
     );
 });
