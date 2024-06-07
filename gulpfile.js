@@ -20,10 +20,10 @@ const {
     md2jsonConvertor
 } = require('./scripts/songConvertor');
 const { makeIndexList } = require('./scripts/makeIndexList');
-const { PATHS, SEARCH_CONST, BASE_FILE_NAMES, getNavigationPaths } = require('./scripts/constants');
+const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
-const { i18n, getTranslationsFor } = require('./scripts/i18n');
-const { getTemplatePaths } = require('./scripts/utils');
+const { i18n, getTranslationsBy } = require('./scripts/i18n');
+const { getNavigationPaths, getTemplatePaths } = require('./scripts/utils');
 const { getContentsJSON } = require('./scripts/indexGenerator');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
@@ -150,61 +150,12 @@ gulp.task('generate-index', (done) => {
     })();
 });
 
-/**
- *
- */
-function getSongooksRenderContext(options) {
-    const songbooks = getSongbookIdList().map((songbook_id) => {
-        const tr = getTranslationsFor(songbook_id);
-
-        const info = getSongbookInfo(songbook_id);
-        const songsCount =  getContentsJSON(songbook_id)
-            .flatMap((cat) => cat.items).length;
-
-        return {
-            href: PATHS.PAGES.getIndexPath(songbook_id),
-            isSelected: false,
-            i18n: tr,
-            slug: songbook_id,
-            songsCount: songsCount,
-            subtitle: info.subtitle,
-            title: info.title
-        };
-    });
-
-    const headParts = {
-        // TODO: ??
-        title: 'Vaishnava Songbook',
-        // TODO: ??
-        description: 'Vaishnava Songbook',
-        path: PATHS.PAGES.INDEX,
-        is404: !!options?.is404
-    };
-
-    const paths = {
-        toJs: PATHS.RELATIVE.JS,
-        toCss: PATHS.RELATIVE.CSS,
-        toImages: PATHS.RELATIVE.IMG,
-        toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
-        toPages: {
-            bookList: PATHS.PAGES.BOOK_LIST,
-            search: PATHS.PAGES.SEARCH
-        }
-    };
-
-    return {
-        songbooks: songbooks,
-        songbooksAsOptions: songbooks,
-        headParts: createHeadParts(headParts),
-        paths: paths
-    };
-}
 
 /**
  *
  */
-function getCommonPageContext(bookId, options = {}) {
-    const tr = getTranslationsFor(bookId);
+function getCommonPageContext(bookId) {
+    const tr = getTranslationsBy(bookId);
 
     const songbooks = getSongbookIdList().map((songbook_id) => {
         const info = getSongbookInfo(songbook_id);
@@ -212,7 +163,7 @@ function getCommonPageContext(bookId, options = {}) {
             .flatMap((cat) => cat.items).length;
 
         return {
-            href: PATHS.PAGES.getIndexPath(songbook_id),
+            href: getNavigationPaths(songbook_id).CONTENTS,
             isSelected: false,
             slug: songbook_id,
             songsCount: songsCount,
@@ -220,13 +171,6 @@ function getCommonPageContext(bookId, options = {}) {
             title: info.title
         };
     });
-
-    const headParts = {
-        title: tr('NOT_FOUND.HEAD.TITLE'),
-        description: tr('NOT_FOUND.HEAD.DESCRIPTION'),
-        path: PATHS.PAGES.INDEX,
-        is404: options.is404
-    };
 
     const paths = {
         toJs: PATHS.RELATIVE.JS,
@@ -237,7 +181,6 @@ function getCommonPageContext(bookId, options = {}) {
     };
 
     return {
-        headParts: createHeadParts(headParts),
         i18n: tr,
         paths: paths,
         songbooks: songbooks,
@@ -251,12 +194,22 @@ function getCommonPageContext(bookId, options = {}) {
  * */
 gulp.task('songbook-list', (done) => {
     const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const headParts = createHeadParts({
+            title: tr('BOOK_LIST_PAGE.HEAD.TITLE'),
+            description: tr('BOOK_LIST_PAGE.HEAD.DESCRIPTION'),
+            path: getNavigationPaths(songbook_id).BOOK_LIST
+        });
+
+        const values = {
+            headParts: headParts,
+            ...getCommonPageContext(songbook_id)
+        };
+
         const task = (done) => gulp
             .src([SRC.EJS_FILES + '/' + FILES.EJS.BOOK_LIST_PAGE])
             .pipe(
-                ejs(getCommonPageContext(
-                    songbook_id
-                )).on('error', console.error)
+                ejs(values).on('error', console.error)
             )
             .pipe(
                 rename({
@@ -283,13 +236,23 @@ gulp.task('songbook-list', (done) => {
  */
 gulp.task('404', (done) => {
     const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const headParts = createHeadParts({
+            title: tr('NOT_FOUND_PAGE.HEAD.TITLE'),
+            description: tr('NOT_FOUND_PAGE.HEAD.DESCRIPTION'),
+            path: PATHS.PAGES.NOT_FOUND,
+            is404: true
+        });
+
+        const values = {
+            headParts: headParts,
+            ...getCommonPageContext(songbook_id)
+        };
+
         const task = (done) => gulp
             .src([SRC.EJS_FILES + '/' + FILES.EJS.NOT_FOUND_PAGE])
             .pipe(
-                ejs(getCommonPageContext(
-                    songbook_id,
-                    { is404: true }
-                )).on('error', console.error)
+                ejs(values).on('error', console.error)
             )
             .pipe(
                 rename({
@@ -344,7 +307,7 @@ gulp.task('search-page', (done) => {
                 .pipe(
                     ejs({
                         headParts: createHeadParts(headParts),
-                        i18n: getTranslationsFor(songbook_id),
+                        i18n: getTranslationsBy(songbook_id),
                         pages: pages,
                         paths: getTemplatePaths(songbook_id),
                         search: SEARCH_CONST
@@ -374,18 +337,15 @@ gulp.task('search-page', (done) => {
  * Path `/{bookId}/contents.html`;
  * */
 gulp.task('songbook-contents', (done) => {
-    const tasks = getSongbookIdList().map(songbook_id => {
-
-        const current_i18n = i18n(songbook_id);
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
         const info = getSongbookInfo(songbook_id);
 
         const headParts = {
-            title: current_i18n('Contents'),
-            description: current_i18n('Vaishnava Songbook'),
-            path: PATHS.PAGES.getIndexPath(songbook_id)
+            title: tr('CONTENTS_PAGE.HEAD.TITLE'),
+            description: tr('CONTENTS_PAGE.HEAD.DESCRIPTION'),
+            path: getNavigationPaths(songbook_id).CONTENTS
         };
-
-        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.CONTENTS_PAGE} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX_PAGE}`;
 
         const task = (done) => gulp
             .src(SRC.EJS_FILES + '/' + FILES.EJS.CONTENTS_PAGE)
@@ -393,18 +353,23 @@ gulp.task('songbook-contents', (done) => {
                 ejs({
                     categories: require(BUILD.getContentsFile(songbook_id)),
                     headParts: createHeadParts(headParts),
-                    i18n: current_i18n,
+                    i18n: tr,
                     paths: getTemplatePaths(songbook_id),
                     songbook_id: songbook_id,
                     subtitle: info.subtitle,
                     title: info.title
                 }).on('error', console.error)
             )
-            .pipe(gulp.dest(BUILD.ROOT))
-            // TODO: use rename?
-            .pipe(shell([extChangeCmd]), done);
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.CONTENTS,
+                    dirname: songbook_id,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done);
 
-        task.displayName = "songbook-contents " + songbook_id;
+        task.displayName = 'songbook-contents ' + songbook_id;
         return task;
     });
 

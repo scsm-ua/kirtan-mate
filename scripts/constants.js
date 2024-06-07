@@ -51,20 +51,16 @@ const PATHS = {
         IMG_FILES: OUTPUT_DIR + '/' + IMG_DIR,
         getJsonPath: (songbook_id) => OUTPUT_DIR + '/json/' + songbook_id,
         getSongbookRoot: (songbook_id) => OUTPUT_DIR + '/' + songbook_id,
-        getContentsFile: function(songbook_id) {
-            return path.resolve(OUTPUT_DIR, 'json', songbook_id, contentItems);
-        },
-        getIndexFile: function(songbook_id) {
-            return path.resolve(OUTPUT_DIR, 'json', songbook_id, indexItems);
-        },
+        getContentsFile: (songbook_id) =>
+            path.resolve(OUTPUT_DIR, 'json', songbook_id, contentItems),
+        getIndexFile: (songbook_id) =>
+            path.resolve(OUTPUT_DIR, 'json', songbook_id, indexItems),
         ROOT: OUTPUT_DIR
     },
     FILES: {
         EJS: {
-            // todo rename to index.ejs
-            BOOK_LIST_PAGE: 'songbooks.ejs',
-            // TODO: rename
-            CONTENTS_PAGE: 'index.ejs',
+            BOOK_LIST_PAGE: 'index-page.ejs',
+            CONTENTS_PAGE: 'contents-page.ejs',
             // TODO: rename
             A_Z_PAGE: 'a-z-page.ejs',
             NOT_FOUND_PAGE: '404.ejs',
@@ -111,24 +107,10 @@ const PATHS = {
 };
 
 
-/**
- *
- */
-function getNavigationPaths(bookId) {
-    return {
-        A_Z: '/' + bookId + PATHS.PAGES.A_Z,
-        BOOK_LIST: '/' + bookId + PATHS.PAGES.BOOK_LIST,
-        CONTENTS: '/' + bookId + PATHS.PAGES.CONTENTS,
-        SEARCH: '/' + bookId + PATHS.PAGES.SEARCH
-    }
-}
-
-
 /**/
 module.exports = {
     BASE_FILE_NAMES,
     ORIGIN,
     PATHS,
-    SEARCH_CONST,
-    getNavigationPaths
+    SEARCH_CONST
 };

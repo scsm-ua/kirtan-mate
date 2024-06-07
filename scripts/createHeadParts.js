@@ -9,7 +9,7 @@ const { PATHS, ORIGIN } = require('./constants');
  */
 function createHeadParts({ title, description, path, is404 }) {
     const imgSrc = PATHS.FILES.SHARING_BANNER;
-    const _title = title + ' | Kirtan Mate';
+    const _title = title + ' | Kirtan Site';
 
     var render = `
         <title>${_title}</title>`;

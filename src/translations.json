@@ -9,6 +9,10 @@
     "Index": "Index",
     "Vaishnava Songbook": "Vaishnava Songbook",
     "BOOK_LIST_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "List of available song books",
+        "TITLE": "Vaishnava Songbook"
+      },
       "SONG_COUNT": "songs"
     },
     "FOOTER": {
@@ -17,7 +21,13 @@
       "INDEX": "Index",
       "SEARCH": "Search"
     },
-    "NOT_FOUND": {
+    "CONTENTS_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Contents",
+        "TITLE": "Vaishnava Songbook"
+      }
+    },
+    "NOT_FOUND_PAGE": {
       "HEAD": {
         "DESCRIPTION": "Page 404",
         "TITLE": "Vaishnava Songbook"
@@ -55,6 +65,10 @@
     "Index": "Индекс",
     "Vaishnava Songbook": "Вайшнавский песенник",
     "BOOK_LIST_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Список доступных песенников",
+        "TITLE": "Вайшнавский песенник"
+      },
       "SONG_COUNT": "песен"
     },
     "FOOTER": {
@@ -63,7 +77,13 @@
       "INDEX": "Индекс",
       "SEARCH": "Поиск"
     },
-    "NOT_FOUND": {
+    "CONTENTS_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Содержание",
+        "TITLE": "Вайшнавский песенник"
+      }
+    },
+    "NOT_FOUND_PAGE": {
       "HEAD": {
         "DESCRIPTION": "Страница 404",
         "TITLE": "Вайшнавский песенник"
@@ -100,6 +120,10 @@
     "Index": "Індекс",
     "Vaishnava Songbook": "Сайт вайшнавських пісень",
     "BOOK_LIST_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Список наявних пісенників",
+        "TITLE": "Вайшнавський пісенник"
+      },
       "SONG_COUNT": "пісень"
     },
     "FOOTER": {
@@ -108,7 +132,13 @@
       "INDEX": "Індекс",
       "SEARCH": "Пошук"
     },
-    "NOT_FOUND": {
+    "CONTENTS_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Зміст",
+        "TITLE": "Вайшнавський пісенник"
+      }
+    },
+    "NOT_FOUND_PAGE": {
       "HEAD": {
         "DESCRIPTION": "Сторінка 404",
         "TITLE": "Вайшнавський пісенник"

@@ -34,7 +34,7 @@ function getLanguageSet(language = '') {
 /**
  *
  */
-function getTranslationsFor(lang) {
+function getTranslationsBy(lang) {
     return function (keyChain) {
         const keys = keyChain.split('.');
         let value = getLanguageSet(lang);
@@ -43,7 +43,7 @@ function getTranslationsFor(lang) {
             value = isObject(value) ? value[k] : (value || '')
         );
 
-        return value || getTranslationsFor()(keyChain) || '';
+        return value || getTranslationsBy()(keyChain) || '';
     };
 }
 
@@ -52,6 +52,6 @@ function getTranslationsFor(lang) {
  *
  */
 module.exports = {
-    getTranslationsFor,
+    getTranslationsBy,
     i18n
 };
