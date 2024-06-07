@@ -42,6 +42,10 @@
       "TITLE": "Page not found"
     },
     "SEARCH_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Search page",
+        "TITLE": "Vaishnava Songbook"
+      },
       "CLEAR": "Clear",
       "FIND": "Find",
       "INPUT_PLACEHOLDER": "Find a song",
@@ -104,6 +108,10 @@
       "TITLE": "Страница не найдена"
     },
     "SEARCH_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Страница поиска",
+        "TITLE": "Вайшнавский песенник"
+      },
       "CLEAR": "Очистить",
       "FIND": "Найти",
       "INPUT_PLACEHOLDER": "Найти песню",
@@ -165,6 +173,10 @@
       "TITLE": "Сторінку не знайдено"
     },
     "SEARCH_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Сторінка пошуку",
+        "TITLE": "Вайшнавський пісенник"
+      },
       "CLEAR": "Відчистити",
       "FIND": "Знайти",
       "INPUT_PLACEHOLDER": "Знайти пісню",

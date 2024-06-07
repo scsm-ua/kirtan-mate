@@ -237,6 +237,7 @@ gulp.task('songbook-list', (done) => {
 gulp.task('404', (done) => {
     const tasks = getSongbookIdList().map((songbook_id) => {
         const tr = getTranslationsBy(songbook_id);
+
         const headParts = createHeadParts({
             title: tr('NOT_FOUND_PAGE.HEAD.TITLE'),
             description: tr('NOT_FOUND_PAGE.HEAD.DESCRIPTION'),
@@ -275,20 +276,15 @@ gulp.task('404', (done) => {
 
 
 /**
- *
+ * Path `/{bookId}/search.html`;
  */
 gulp.task('search-page', (done) => {
     const tasks = getSongbookIdList().map((songbook_id) => {
-        // const current_i18n = i18n(songbook_id);
-        // const info /* TSongBookInfo */ = getSongbookInfo(songbook_id);
-        // console.log(info);
-
+        const tr = getTranslationsBy(songbook_id);
         const headParts = {
-            // TODO: ??
-            title: 'Search Page',
-            // TODO: ??
-            description: 'Search Page',
-            path: PATHS.PAGES.getSearchPath(songbook_id)
+            title: tr('SEARCH_PAGE.HEAD.TITLE'),
+            description: tr('SEARCH_PAGE.HEAD.DESCRIPTION'),
+            path: getNavigationPaths(songbook_id).SEARCH
         };
 
         const pages = getContentsJSON(songbook_id)
@@ -299,15 +295,16 @@ gulp.task('search-page', (done) => {
                     title: item.title
                 }))
             )
-            .sort((a, b) => parseFloat(a.page) - parseFloat(b.page));
+            .sort((a, b) =>
+                parseFloat(a.page) - parseFloat(b.page)
+            );
 
-        const task = (taskDone) =>
-            gulp
+        const task = (taskDone) => gulp
                 .src([SRC.EJS_FILES + '/' + FILES.EJS.SEARCH_PAGE])
                 .pipe(
                     ejs({
                         headParts: createHeadParts(headParts),
-                        i18n: getTranslationsBy(songbook_id),
+                        i18n: tr,
                         pages: pages,
                         paths: getTemplatePaths(songbook_id),
                         search: SEARCH_CONST

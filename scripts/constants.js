@@ -101,8 +101,7 @@ const PATHS = {
         // TODO: rename
         getIndexPath: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
         // TODO: rename
-        getIndexAZPath: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexAZPath,
-        getSearchPath: (songbook_id) => '/' + songbook_id + '/' + searchPage
+        getIndexAZPath: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexAZPath
     }
 };
 
