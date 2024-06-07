@@ -8,6 +8,12 @@
     "Contents": "Contents",
     "Index": "Index",
     "Vaishnava Songbook": "Vaishnava Songbook",
+    "A_Z_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Index list A-Z",
+        "TITLE": "Vaishnava Songbook"
+      }
+    },
     "BOOK_LIST_PAGE": {
       "HEAD": {
         "DESCRIPTION": "List of available song books",
@@ -64,6 +70,12 @@
     "Contents": "Содержание",
     "Index": "Индекс",
     "Vaishnava Songbook": "Вайшнавский песенник",
+    "A_Z_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Индексная страница А-Я",
+        "TITLE": "Вайшнавский песенник"
+      }
+    },
     "BOOK_LIST_PAGE": {
       "HEAD": {
         "DESCRIPTION": "Список доступных песенников",
@@ -119,6 +131,12 @@
     "Contents": "Зміст",
     "Index": "Індекс",
     "Vaishnava Songbook": "Сайт вайшнавських пісень",
+    "A_Z_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Індексна сторінка А-Я",
+        "TITLE": "Вайшнавський пісенник"
+      }
+    },
     "BOOK_LIST_PAGE": {
       "HEAD": {
         "DESCRIPTION": "Список наявних пісенників",

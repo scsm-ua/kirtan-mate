@@ -381,38 +381,47 @@ gulp.task('songbook-contents', (done) => {
 
 
 /**
- *
+ * Path `/{bookId}/a-z.html`;
  */
 gulp.task('songbook-a-z', (done) => {
-    const tasks = getSongbookIdList().map(songbook_id => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const info = getSongbookInfo(songbook_id);
 
         const headParts = {
-            title: i18n(songbook_id)('Index'),
-            description: i18n(songbook_id)('Vaishnava Songbook'),
-            path: PATHS.PAGES.getIndexAZPath(songbook_id)
+            title: tr('A_Z_PAGE.HEAD.TITLE'),
+            description: tr('A_Z_PAGE.HEAD.DESCRIPTION'),
+            path: getNavigationPaths(songbook_id).A_Z
         };
 
-        const info = getSongbookInfo(songbook_id);
-        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.A_Z_PAGE} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX_A_Z_PAGE}`;
+        const items = makeIndexList(
+            require(BUILD.getContentsFile(songbook_id)),
+            require(BUILD.getIndexFile(songbook_id))
+        );
 
         const task = (done) => gulp
             .src(SRC.EJS_FILES + '/' + FILES.EJS.A_Z_PAGE)
             .pipe(
                 ejs({
                     headParts: createHeadParts(headParts),
-                    i18n: i18n(songbook_id),
-                    items: makeIndexList(require(BUILD.getContentsFile(songbook_id)), require(BUILD.getIndexFile(songbook_id))),
+                    i18n: tr,
+                    items: items,
                     paths: getTemplatePaths(songbook_id),
                     songbook_id: songbook_id,
                     subtitle: info.subtitle,
                     title: info.title
                 }).on('error', console.error)
             )
-            .pipe(gulp.dest(BUILD.ROOT + ''))
-            // TODO: use rename?
-            .pipe(shell([extChangeCmd]), done);
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.A_Z,
+                    dirname: songbook_id,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done)
 
-        task.displayName = "songbook-a-z " + songbook_id;
+        task.displayName = 'songbook-a-z ' + songbook_id;
         return task;
     });
 
