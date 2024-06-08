@@ -1,13 +1,5 @@
 {
   "en": {
-    "Books": "Books",
-    "Search": "Search",
-    "Share song": "Share song",
-    "Share": "Share",
-    "Copy page address": "Copy page address",
-    "Contents": "Contents",
-    "Index": "Index",
-    "Vaishnava Songbook": "Vaishnava Songbook",
     "A_Z_PAGE": {
       "HEAD": {
         "DESCRIPTION": "Index list A-Z",
@@ -66,14 +58,6 @@
     }
   },
   "ru": {
-    "Books": "Книги",
-    "Search": "Поиск",
-    "Share song": "Поделиться песней",
-    "Share": "Поделиться",
-    "Copy page address": "Скопировать адрес",
-    "Contents": "Содержание",
-    "Index": "Индекс",
-    "Vaishnava Songbook": "Вайшнавский песенник",
     "A_Z_PAGE": {
       "HEAD": {
         "DESCRIPTION": "Индексная страница А-Я",
@@ -132,13 +116,6 @@
     }
   },
   "ua": {
-    "Books": "Книги",
-    "Search": "Пошук",
-    "Share": "Поділитися",
-    "Copy page address": "Копіювати посилання на сторінку",
-    "Contents": "Зміст",
-    "Index": "Індекс",
-    "Vaishnava Songbook": "Сайт вайшнавських пісень",
     "A_Z_PAGE": {
       "HEAD": {
         "DESCRIPTION": "Індексна сторінка А-Я",

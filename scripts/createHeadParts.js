@@ -1,5 +1,5 @@
+const { getNavigationPaths } = require('./utils');
 const { PATHS, ORIGIN } = require('./constants');
-const { getNavigationPaths } = require("./utils");
 
 /**
  * Note: the title and description do NOT get escaped.

@@ -55,6 +55,7 @@ function makeIndexList(categories, index) {
  * Checking for the aliasNames that are prefixed with words
  * in brackets, such as `(кіба) джая...`. Making duplicates for them.
  * @param items: TCategoryItem[]
+ * @param index
  * @returns {TCategoryItem[]}
  */
 function makeLineVersions(items, index) {

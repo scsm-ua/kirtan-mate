@@ -16,10 +16,10 @@ const OUTPUT_DIR = 'docs';
 const JS_DIR = 'js';
 const CSS_DIR = 'css';
 const IMG_DIR = 'css';
+
 const contentItems = 'contentItems.json';
 const contentsPage = BASE_FILE_NAMES.CONTENTS + '.html';
 const indexItems = 'indexItems.json';
-const indexPath = BASE_FILE_NAMES.BOOK_LIST + '.html';
 const indexAZPath = BASE_FILE_NAMES.A_Z + '.html';
 const notFoundPage = BASE_FILE_NAMES.NOT_FOUND + '.html';
 const searchPage = BASE_FILE_NAMES.SEARCH + '.html';
@@ -70,19 +70,12 @@ const PATHS = {
             SITEMAP: 'sitemap.ejs',
             SONG_PAGE: 'song-page.ejs'
         },
-        HTML: {
-            INDEX_PAGE: indexPath,
-            INDEX_A_Z_PAGE: indexAZPath
-        },
         JSON: {
             CONTENTS: contentItems,
             INDEX: indexItems
         },
         SHARING_BANNER: ORIGIN + '/images/' + sharingBanner,
-        SITEMAP: ORIGIN  + '/' + sitemapName,
-        XML: {
-            SITEMAP: sitemapName
-        }
+        SITEMAP: ORIGIN  + '/' + sitemapName
     },
     SRC: {
         CSS_FILES: 'src/styles',
@@ -96,8 +89,7 @@ const PATHS = {
         BOOK_LIST: '/',
         CONTENTS: '/' + contentsPage,
         NOT_FOUND: '/' + notFoundPage,
-        SEARCH: '/' + searchPage,
-        INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : '')
+        SEARCH: '/' + searchPage
     }
 };
 
