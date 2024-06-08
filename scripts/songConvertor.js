@@ -6,10 +6,10 @@ const VinylStream = require('vinyl-source-stream');
 /**/
 const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
-const { PATHS, ORIGIN } = require('./constants');
-const { i18n } = require('./i18n');
-const { getTemplatePaths } = require('./utils');
 const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
+const { getTemplatePaths } = require('./utils');
+const { getTranslationsBy } = require('./i18n');
+const { PATHS, ORIGIN } = require('./constants');
 const { BUILD, FILES } = PATHS;
 
 
@@ -42,10 +42,15 @@ function makeSongHTML(songbook_id, template) {
     });
 }
 
+
+/**
+ *
+ */
 function getSongsOrderedList(songbook_id) {
     return require(BUILD.getContentsFile(songbook_id))
         .flatMap((cat) => cat.items);
 }
+
 
 /**
  * @param songbook_id
@@ -57,7 +62,6 @@ function getSongsOrderedList(songbook_id) {
 function fillTemplate(songbook_id, template, content, filePath) {
     // TODO: subtitle.
     const { author, subtitle, title, verses, attributes } = content;
-    let { embeds } = content;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -65,6 +69,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
     }
 
     const { text } = verses[0];
+    let { embeds } = content;
     let pageTitle = title;
 
     if (author && author.length) {
@@ -80,20 +85,21 @@ function fillTemplate(songbook_id, template, content, filePath) {
     const headParts = {
         title: pageTitle,
         description: `${text[0]}\n${text[1]}...`,
-        path: ORIGIN + '/' + songbook_id + '/' + filename + '.html'
+        path: '/' + songbook_id + '/' + filename + '.html'
     };
 
     const alternativeTranslationBooks /* TSongBookAsOption */ = [];
 
-    getSongbookIdList().forEach(a_songbook_id => {
+    getSongbookIdList().forEach((a_songbook_id) => {
         const song = getSongJSON(a_songbook_id, filename, true);
 
         if (song) {
             const info /* TSongBookInfo */ = getSongbookInfo(a_songbook_id);
+            const tr = getTranslationsBy(a_songbook_id);
 
             alternativeTranslationBooks.push({
                 href: ORIGIN + '/' + a_songbook_id + '/' + filename + '.html',
-                i18n: info.i18n,
+                i18n: tr,
                 isSelected: songbook_id === a_songbook_id,
                 slug: a_songbook_id,
                 subtitle: info.subtitle,
@@ -107,6 +113,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
         }
     });
 
+    const currentSongbook = alternativeTranslationBooks.find((option) => option.isSelected);
+
     return ejs.render(template, {
         author: author,
         subtitle: subtitle,
@@ -117,20 +125,30 @@ function fillTemplate(songbook_id, template, content, filePath) {
         verses: verses,
         embeds: embeds,
         attributes: attributes,
-        i18n: i18n(songbook_id),
+        i18n: currentSongbook.i18n,
         transformLine: transformLine,
         getLineIndentClass: getLineIndentClass,
         songbooksAsOptions: alternativeTranslationBooks,
-        currentSongbook: alternativeTranslationBooks.find((option) => option.isSelected)
+        currentSongbook: currentSongbook
     });
 }
 
+/**
+ *
+ * @type {RegExp}
+ */
 const TAG_RE = /<[^>]+>/gi;
 const PARANTHESES_RE = /(\([^\)]+\))/gi;
 const PARANTHESES_START_RE = /(\([^\)]+)\s*$/gi;    // ) End in next line.
 const PARANTHESES_END_RE = /^(\s*)([^\)]+\))/gi;    // ( Start in prev line.
 
 
+/**
+ *
+ * @param text
+ * @param prefix
+ * @return {string}
+ */
 function getLineIndentClass(text, prefix) {
     var m = text.match(/^\s+/);
     if (m) {
@@ -144,6 +162,7 @@ function getLineIndentClass(text, prefix) {
     }
     return '';
 }
+
 
 /**
  * EJS trims lines even despite 'rmWhitespace: false'.

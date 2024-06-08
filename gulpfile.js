@@ -13,18 +13,18 @@ require('dotenv').config();
 
 /**/
 const { createHeadParts, createSongXMLParts } = require('./scripts/createHeadParts');
+const { getContentsJSON } = require('./scripts/indexGenerator');
 const {
     getJSONContentsStream,
     getJSONIndexStream,
     makeSongHTML,
     md2jsonConvertor
 } = require('./scripts/songConvertor');
-const { makeIndexList } = require('./scripts/makeIndexList');
-const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
+const { getNavigationPaths, getTemplatePaths } = require('./scripts/utils');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
 const { getTranslationsBy } = require('./scripts/i18n');
-const { getNavigationPaths, getTemplatePaths } = require('./scripts/utils');
-const { getContentsJSON } = require('./scripts/indexGenerator');
+const { makeIndexList } = require('./scripts/makeIndexList');
+const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
@@ -80,7 +80,7 @@ gulp.task('html', (done) => {
                 )
                 .pipe(gulp.dest(BUILD.getSongbookRoot(songbook_id)), done);
 
-        task.displayName = "html " + songbook_id;
+        task.displayName = 'html ' + songbook_id;
         return task;
     });
 
@@ -517,7 +517,7 @@ gulp.task('robots', (done) => {
         .src(SRC.EJS_FILES + '/' + FILES.EJS.ROBOTS)
         .pipe(
             ejs({
-                sitemap: encodeURI(PATHS.PAGES.SITEMAP)
+                sitemap: encodeURI(FILES.SITEMAP)
             }).on('error', console.error)
         )
         .pipe(
@@ -556,6 +556,7 @@ gulp.task('build', (done) => {
         'sitemap',
         'songbook-list',
         '404',
+        'redirect-pages',
         'robots',
         done
     );

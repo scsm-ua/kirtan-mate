@@ -5,19 +5,20 @@ const { getNavigationPaths } = require("./utils");
  * Note: the title and description do NOT get escaped.
  * @param title: string - this will get suffixed with ' | Kirtan Site'.
  * @param description: string - no special symbols!
- * @param path: string - no leading or trailing slashes!
+ * @param url: string - no leading or trailing slashes!
  * @param is404: boolean
  */
 function createHeadParts({ title, description, path, is404 }) {
     const imgSrc = PATHS.FILES.SHARING_BANNER;
     const _title = title + ' | Kirtan Site';
+    const url = ORIGIN + path;
 
-    var render = `
+    let render = `
         <title>${_title}</title>`;
 
     if (!is404) {
         render += `
-        <link rel="canonical" href="${path}" />`;
+        <link rel="canonical" href="${url}" />`;
     }
 
     render += `
@@ -27,7 +28,7 @@ function createHeadParts({ title, description, path, is404 }) {
 
         <meta property="og:title" content="${title}" />
         <meta property="og:description" content="${description}" />
-        <meta property="og:url" content="${path}" />
+        <meta property="og:url" content="${url}" />
         <meta property="og:locale" content="ua_UA" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Kirtan Site" />
@@ -41,7 +42,7 @@ function createHeadParts({ title, description, path, is404 }) {
         <meta name="twitter:title" content="${title}" />
         <meta name="twitter:description" content="${description}" />
 
-        ${getSchema(path, title, description)}
+        ${getSchema(url, title, description)}
     `;
 
     return render;
@@ -50,7 +51,7 @@ function createHeadParts({ title, description, path, is404 }) {
 /**
  *
  */
-function getSchema(path, title, description) {
+function getSchema(url, title, description) {
     const content = {
         '@context': 'https://schema.org',
         '@graph': [
@@ -64,8 +65,8 @@ function getSchema(path, title, description) {
             },
             {
                 '@type': 'CollectionPage',
-                '@id': path,
-                'url': path,
+                '@id': url,
+                'url': url,
                 'name': title,
                 'isPartOf': {
                     '@id': ORIGIN + '/#website'
@@ -80,15 +81,15 @@ function getSchema(path, title, description) {
 
 /**
  *
- * @param path
+ * @param url
  * @param priority
  * @param period
  * @return {string}
  */
-function getItemXML(path, priority, period = 'weekly') {
+function getItemXML(url, priority, period = 'weekly') {
     return `
     <url>
-        <loc>${encodeURI(path)}</loc>
+        <loc>${encodeURI(url)}</loc>
         <changefreq>${period}</changefreq>
         <priority>${priority}</priority>
     </url>

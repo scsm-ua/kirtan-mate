@@ -1,25 +1,8 @@
-const { getSongbooki18n } = require('./songbookLoader');
 const { isObject } = require('./ioHelpers');
 const translations = require('../src/translations.json');
 
 
 const DEFAULT_LANGUAGE = 'en';
-
-/**
- *
- */
-function i18n(songbook_id) {
-
-    var i18n_dict = getSongbooki18n(songbook_id);
-
-    return function(text) {
-        if (i18n_dict && text in i18n_dict) {
-            return i18n_dict[text];
-        } else {
-            return text;
-        }
-    }
-}
 
 
 /**
@@ -52,6 +35,5 @@ function getTranslationsBy(lang) {
  *
  */
 module.exports = {
-    getTranslationsBy,
-    i18n
+    getTranslationsBy
 };

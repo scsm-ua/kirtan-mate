@@ -4,7 +4,7 @@
     <div class="SongShare__container">
         <header class="SongShare__header">
             <h4 class="SongShare__title">
-                <%= currentSongbook.i18n.SONG_PAGE.SHARE %>
+                <%= currentSongbook.i18n('SONG_PAGE.SHARE') %>
             </h4>
         </header>
 
@@ -12,7 +12,7 @@
 
         <div class="SongShare__copy">
             <label for="" class="SongShare__label"
-                ><%= currentSongbook.i18n.SONG_PAGE.COPY_LINK %></label
+                ><%= currentSongbook.i18n('SONG_PAGE.COPY_LINK') %></label
             >
 
             <div class="SongShare__form">
@@ -26,7 +26,7 @@
                 <button
                     class="AppButton RoundButton RoundButton--L RoundButton--dark SongShare__button"
                     id="copy-button"
-                    title="<%= currentSongbook.i18n.SONG_PAGE.COPY %>"
+                    title="<%= currentSongbook.i18n('SONG_PAGE.COPY') %>"
                 >
                     <span class="icon-copy"></span>
                 </button>

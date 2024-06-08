@@ -62,7 +62,6 @@ const PATHS = {
         EJS: {
             BOOK_LIST_PAGE: 'index-page.ejs',
             CONTENTS_PAGE: 'contents-page.ejs',
-            // TODO: rename
             A_Z_PAGE: 'a-z-page.ejs',
             NOT_FOUND_PAGE: '404.ejs',
             REDIRECT_PAGE: 'redirect-page.ejs',
@@ -80,6 +79,7 @@ const PATHS = {
             INDEX: indexItems
         },
         SHARING_BANNER: ORIGIN + '/images/' + sharingBanner,
+        SITEMAP: ORIGIN  + '/' + sitemapName,
         XML: {
             SITEMAP: sitemapName
         }
@@ -97,12 +97,7 @@ const PATHS = {
         CONTENTS: '/' + contentsPage,
         NOT_FOUND: '/' + notFoundPage,
         SEARCH: '/' + searchPage,
-        SITEMAP: ORIGIN  + '/' + sitemapName,
-        INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
-        // TODO: rename
-        getIndexPath: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
-        // TODO: rename
-        getIndexAZPath: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexAZPath
+        INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : '')
     }
 };
 
