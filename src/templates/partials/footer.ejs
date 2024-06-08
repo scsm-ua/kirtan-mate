@@ -48,29 +48,19 @@
 
 <script>
     (function() {
-        function setActive(elem) {
-            elem.classList.add('Footer__item--active');
+        function setActive(id) {
+            document.getElementById(id).classList.add('Footer__item--active');
         }
 
-        function areEqual(pathname, url) {
-            return !url || url.startsWith('/')
-                ? pathname === url
-                : pathname === new URL(url).pathname;
-        }
-
-        const pathname = location.pathname.endsWith('/')
-            ? location.pathname.slice(0, -1)
-            : location.pathname;
-
-        // if (location.pathname === '/') {
-        if (areEqual(pathname, '<%= paths.toPages.BOOK_LIST %>')) {
-            setActive(document.getElementById('footer-link-books'));
-        } else if (areEqual(pathname, '<%= paths.toPages.CONTENTS %>')) {
-            setActive(document.getElementById('footer-link-contents'));
-        } else if (areEqual(pathname, '<%= paths.toPages.A_Z %>')) {
-            setActive(document.getElementById('footer-link-index-list'));
-        } else if (areEqual(pathname, '<%= paths.toPages.SEARCH %>')) {
-            setActive(document.getElementById('footer-link-search'));
+        switch (location.pathname) {
+            case('<%= paths.toPages.BOOK_LIST %>'):
+                return setActive('footer-link-books');
+            case('<%= paths.toPages.CONTENTS %>'):
+                return setActive('footer-link-contents');
+            case('<%= paths.toPages.A_Z %>'):
+                return setActive('footer-link-index-list');
+            case('<%= paths.toPages.SEARCH %>'):
+                return setActive('footer-link-search');
         }
     })()
 </script>
