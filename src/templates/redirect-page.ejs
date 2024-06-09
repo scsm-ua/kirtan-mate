@@ -4,20 +4,28 @@
 <head>
     <script>
         let preservedBookId;
+
+        function makeRedirectTo(bookId) {
+            window.location = location.origin + '/' + bookId + '<%- pagePath %>';
+        }
+
         try {
             preservedBookId = localStorage.getItem('CURRENT_BOOK_ID');
         } catch (e) {
             console.error(e);
         }
 
-        const lang = preservedBookId ||
-            (
+        if (preservedBookId) {
+            makeRedirectTo(preservedBookId);
+        } else {
+            const lang = (
                 navigator.language ||
                 Intl.DateTimeFormat().resolvedOptions()
-            ).slice(0, 2) ||
-            'en';
+            ).slice(0, 2);
 
-        window.location = location.origin + '/' + lang + '<%- pagePath %>';
+            const bookIdList = '<%- bookIdList %>'.split(',');
+            makeRedirectTo(bookIdList.includes(lang) ? lang : 'en');
+        }
     </script>
 </head>
 </html>

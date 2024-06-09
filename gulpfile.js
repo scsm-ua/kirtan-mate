@@ -438,6 +438,8 @@ gulp.task('songbook-a-z', (done) => {
  *  `/search.html`      SEARCH
  */
 gulp.task('redirect-pages', (done) => {
+    const bookIdList = getSongbookIdList().join(',');
+
     const pagePaths = [
         PAGES.A_Z,
         PAGES.BOOK_LIST,
@@ -458,7 +460,10 @@ gulp.task('redirect-pages', (done) => {
         const task = (done) => gulp
             .src(SRC.EJS_FILES + '/' + FILES.EJS.REDIRECT_PAGE)
             .pipe(
-                ejs({ pagePath: pagePath }).on('error', console.error)
+                ejs({
+                    bookIdList: bookIdList,
+                    pagePath: pagePath
+                }).on('error', console.error)
             )
             .pipe(
                 rename({
