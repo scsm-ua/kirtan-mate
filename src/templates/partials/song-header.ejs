@@ -13,10 +13,13 @@
             <div class="SongHeader__controls">
                 <button
                         class="NoBorderButton SongHeader__button"
+                        <% if (songbooksAsOptions.length <= 1) { %>
+                            disabled
+                        <% } %>
                         id="variants-button"
                         title="<%= currentSongbook.i18n('SONG_PAGE.OTHER_TRANSLATIONS') %>"
                 >
-                    <span class="icon-book"></span>
+                    <span class="SongHeader__button--text"><%= currentSongbook.slug.toUpperCase() %></span>
                 </button>
 
                 <button
