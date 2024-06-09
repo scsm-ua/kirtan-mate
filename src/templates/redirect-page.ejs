@@ -3,13 +3,21 @@
 <html lang="en">
 <head>
     <script>
-        const pagePath = '<%- pagePath %>';
-        const preferredLang = navigator.language ||
-            Intl.DateTimeFormat().resolvedOptions().locale;
+        let preservedBookId;
+        try {
+            preservedBookId = localStorage.getItem('CURRENT_BOOK_ID');
+        } catch (e) {
+            console.error(e);
+        }
 
-        const lang = preferredLang.slice(0, 2) || 'en';
-        // console.log(pagePath, preferredLang, location.origin + '/' + lang + pagePath);
-        window.location = location.origin + '/' + lang + pagePath;
+        const lang = preservedBookId ||
+            (
+                navigator.language ||
+                Intl.DateTimeFormat().resolvedOptions()
+            ).slice(0, 2) ||
+            'en';
+
+        window.location = location.origin + '/' + lang + '<%- pagePath %>';
     </script>
 </head>
 </html>

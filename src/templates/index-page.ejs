@@ -5,6 +5,7 @@
 
         <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
         <link rel="stylesheet" href="<%= paths.toCss %>/book-list-page.css" />
+        <script src="<%= paths.toJs %>/user-choice.js"></script>
     </head>
     <body>
         <div class="Layout">
@@ -17,7 +18,11 @@
                             <ul class="BookListPage__list">
 
                                 <% songbooks.forEach((songbook) => { %>
-                                    <li class="BookListPage__item">
+                                    <li
+                                            class="BookListPage__item"
+                                            data-book-id="<%= songbook.slug %>"
+                                            onclick="handleBookChoice(event)"
+                                    >
                                         <a href="<%= songbook.href %>" class="BookListPage__link">
                                             <div class="BookListPage__ratio app-fixed-ratio-container">
                                                 <div class="app-fixed-ratio-content">
@@ -56,6 +61,7 @@
 
             <%- include(paths.toPartials + '/footer.ejs'); %>
         </div>
+
         <%- include(paths.toPartials + '/gtag.ejs'); %>
     </body>
 </html>
