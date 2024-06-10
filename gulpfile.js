@@ -295,6 +295,7 @@ gulp.task('search-page', (done) => {
                     title: item.title
                 }))
             )
+            .filter(page => page.page)
             .sort((a, b) =>
                 parseFloat(a.page) - parseFloat(b.page)
             );
