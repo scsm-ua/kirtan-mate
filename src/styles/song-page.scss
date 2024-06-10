@@ -16,6 +16,7 @@
         border-radius: 24px;
         box-shadow: 0px 4px 20px 0px rgba(56, 55, 142, 0.15);
         padding: var(--side-padding) var(--side-padding) 8px;
+        margin-bottom: calc(1.5 * var(--side-padding));
     }
 
     &__toggle {
@@ -28,11 +29,11 @@
 
     &__verses {
         list-style-type: none;
-        margin: 16px 0 0;
+        margin: 16px 0;
         padding: 0;
     }
 
     &__extra {
-        padding: var(--side-padding);
+        padding: 0 var(--side-padding) var(--side-padding);
     }
 }

@@ -2,10 +2,10 @@
 
 
 .PrevNextNav {
-    position: fixed;
+    position: absolute;
     left: 0; right: 0;
     z-index: 1;
-    bottom: var(--footer-height);
+    bottom: 0;
     border-top: solid 1px var(--grey);
     background-color: var(--main-bg-color);
 

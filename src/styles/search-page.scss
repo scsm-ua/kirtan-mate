@@ -50,11 +50,13 @@
     &__clear {
         position: absolute;
         right: 7px;
-        top: 3px;
+        top: 4px;
         height: 40px;
         width: 40px;
         font-size: 18px;
+        padding: 10px;
         transition: color 0.25s;
+        color: var(--grey);
 
         &:hover {
             color: var(--accent-color);
@@ -65,7 +67,7 @@
         height: 40px;
         width: 40px;
         font-size: 20px;
-        padding-top: 4px;
+        padding: 4px;
         margin-left: 12px;
     }
 
