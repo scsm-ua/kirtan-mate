@@ -1249,6 +1249,20 @@
     
 
         <url>
+            <loc>https://kirtan.site/ua/udilo-aruna-puraba-bhage.html</loc>
+            <changefreq>weekly</changefreq>
+            <priority>1</priority>
+        </url>
+    
+
+        <url>
+            <loc>https://kirtan.site/ua/jiv-jago-jiv-jago-gaurachanda-bole.html</loc>
+            <changefreq>weekly</changefreq>
+            <priority>1</priority>
+        </url>
+    
+
+        <url>
             <loc>https://kirtan.site/ua/shri-krishna-chaitanya-prabhu-jive-daya-kori.html</loc>
             <changefreq>weekly</changefreq>
             <priority>1</priority>
@@ -1257,13 +1271,6 @@
 
         <url>
             <loc>https://kirtan.site/ua/hari-haraye-namah-krishna-yadavaya-namah.html</loc>
-            <changefreq>weekly</changefreq>
-            <priority>1</priority>
-        </url>
-    
-
-        <url>
-            <loc>https://kirtan.site/ua/jiv-jago-jiv-jago-gaurachanda-bole.html</loc>
             <changefreq>weekly</changefreq>
             <priority>1</priority>
         </url>

@@ -56,6 +56,22 @@
         ]
       },
       {
+        "id": "udilo-aruna-puraba-bhage",
+        "title": "Арунодоя-кīртан 1",
+        "name": "Арунодоя-кīртан",
+        "aliasName": "уділо аруна пӯраба-бга̄ґе,",
+        "fileName": "udilo-aruna-puraba-bhage.html",
+        "page": "42"
+      },
+      {
+        "id": "jiv-jago-jiv-jago-gaurachanda-bole",
+        "title": "Арунодоя-кīртан 2",
+        "name": "Арунодоя-кīртан",
+        "aliasName": "джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле",
+        "fileName": "jiv-jago-jiv-jago-gaurachanda-bole.html",
+        "page": "43"
+      },
+      {
         "id": "shri-krishna-chaitanya-prabhu-jive-daya-kori",
         "title": "Шярана̄ґаті. Благодатне звернення",
         "name": "Шярана̄ґаті. Благодатне звернення",
@@ -74,14 +90,6 @@
           "Шрила Говинда Махарадж",
           "Шрипад Бхагават Махарадж"
         ]
-      },
-      {
-        "id": "jiv-jago-jiv-jago-gaurachanda-bole",
-        "title": "Арунодоя-кīртан",
-        "name": "Арунодоя-кīртан",
-        "aliasName": "джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле",
-        "fileName": "jiv-jago-jiv-jago-gaurachanda-bole.html",
-        "page": "43"
       }
     ]
   },
