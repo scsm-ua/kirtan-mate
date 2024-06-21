@@ -13,7 +13,7 @@
       {
         "id": "hare-krishna-hare-krishna-krishna-krishna-hare-hare",
         "title": "Харе Кришна маха̄-мантра",
-        "name": "Харе Кришна маха̄мантра",
+        "name": "Харе Крішна маха̄мантра",
         "aliasName": "харе кришна харе кришна кришна кришна харе харе",
         "fileName": "hare-krishna-hare-krishna-krishna-krishna-hare-hare.html",
         "page": "24",
@@ -82,6 +82,22 @@
         "aliasName": "джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле",
         "fileName": "jiv-jago-jiv-jago-gaurachanda-bole.html",
         "page": "43"
+      }
+    ]
+  },
+  {
+    "name": "Обіднє Араті",
+    "items": [
+      {
+        "id": "bhaja-bhakata-vatsala-shri-gaurahari",
+        "title": "Шрī Бгоґ А̄раті Ґīті",
+        "name": "Шрī Бгоґ А̄раті Ґīті",
+        "aliasName": "бгаджа бгаката-ватсала шрī-ґаурахарі",
+        "fileName": "bhaja-bhakata-vatsala-shri-gaurahari.html",
+        "page": "58",
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ]
       }
     ]
   },
