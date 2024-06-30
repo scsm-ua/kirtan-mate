@@ -63,6 +63,10 @@
                             <main class="SongPage__main">
                                 <% if ((verses && verses.length) || (embeds && embeds.length)) { %>
                                     <ul class="SongPage__verses">
+                                        <link
+                                            rel="stylesheet"
+                                            href="<%= paths.toCss %>/partials/song-verse.css"
+                                        />
                                         <% verses && verses.length && verses.forEach((item, idx, arr) => { %>
                                             <%- include(
                                                 paths.toPartials + '/song-verse.ejs',

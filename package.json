@@ -8,18 +8,15 @@
     "dependencies": {
         "dotenv": "^16.4.5",
         "ejs": "^3.1.10",
-        "gaudiya-gitanjali-ru": "github:scsm-ua/gaudiya-gitanjali-ru",
-        "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua",
         "gulp-ejs": "^5.1.0",
         "gulp-rename": "^2.0.0",
         "gulp-sass": "^5.1.0",
         "gulp-shell": "^0.8.0",
         "gulp4-run-sequence": "^1.0.2",
-        "kirtan-guide-en": "github:scsm-ua/kirtan-guide-en",
-        "kirtan-guide-pocket-edition": "github:scsm-ua/kirtan-guide-pocket-edition",
         "lodash.deburr": "^4.1.0",
-        "sass": "^1.77.6",
-        "vinyl-source-stream": "^2.0.0"
+        "sass": "^1.77.2",
+        "vinyl-source-stream": "^2.0.0",
+        "bhagavad-gita-ua": "github:scsm-ua/bhagavad-gita-ua"
     },
     "devDependencies": {
         "gulp": "^4.0.2",

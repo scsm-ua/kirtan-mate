@@ -46,6 +46,8 @@ function convertSongToJSON(text) {
                 number: null,
                 text: [],
                 translation: [],
+                original: [],
+                word_by_word: []
             });
         }
 
@@ -58,7 +60,7 @@ function convertSongToJSON(text) {
     // TODO: shikshastakam first verse has no number
     lines.forEach((line) => {
         var { line_id, line_value, line_match } = getSongLineInfo(line);
-        if (line_id && line_id !== 'verse_text') {
+        if (line_id && line_id !== 'verse_text' && last_line_id !== 'quote') {
             // Disable empty verse line.
             verse_empty_line = false;
         }
@@ -81,16 +83,40 @@ function convertSongToJSON(text) {
             case 'verse_number':
                 getLastVerse({ create_new: true }).number = line_value;
                 break;
+            case 'verse_subtitle':
+                var last_verse = getLastVerse();
+                last_verse.translation.push({
+                    type: 'subtitle',
+                    text: line_value
+                });
+                break;
             case 'verse_text':
-                if (verse_empty_line) {
+                var last_verse = getLastVerse();
+                if (last_verse.translation.length) {
+                    // Contains tranlations, put translation verse quotation.
+                    if (verse_empty_line && last_verse.translation.length) {
+                        last_verse.translation.push({
+                            type: 'verse',
+                            text: ''
+                        });
+                    }
+                    verse_empty_line = false;
+                    last_verse.translation.push({
+                        type: 'verse',
+                        text: line_value
+                    });
+                } else {
+                    // No translations, add new verse text original.
+                    if (verse_empty_line && last_verse.text.length) {
+                        getLastVerse({
+                            create_new: false
+                        }).text.push('');
+                    }
                     verse_empty_line = false;
                     getLastVerse({
                         create_new: false
-                    }).text.push('');
+                    }).text.push(line_value);
                 }
-                getLastVerse({
-                    create_new: last_line_id === 'translation'
-                }).text.push(line_value);
                 break;
             case 'translation':
                 getLastVerse().translation.push(line_value);
@@ -107,19 +133,24 @@ function convertSongToJSON(text) {
                     console.warn('Unrecognized embed link', line)
                 }
                 break;
-            case 'attribute':
-                var bits = line_value.split(/=/);
-                if (bits.length !== 2) {
-                    console.error("Can't recognize attribute", line);
+            case 'quote':
+                var last_verse = getLastVerse();
+                var attr;
+                if (last_verse.text.length) {
+                    attr = 'word_by_word';
                 } else {
-                    song.attributes = song.attributes || {};
-                    song.attributes[bits[0].trim()] = bits[1].trim();
+                    attr = 'original';
                 }
+                if (verse_empty_line && last_verse[attr].length) {
+                    verse_empty_line = false;
+                    last_verse[attr].push('');
+                }
+                last_verse[attr].push(line_value);
                 break;
             default:
                 if (!line.trim()) {
                     // Empty line.
-                    if (last_line_id === 'verse_text') {
+                    if (last_line_id === 'verse_text' || last_line_id === 'quote') {
                         verse_empty_line = true;
                     }
                 } else {
@@ -142,8 +173,9 @@ const song_line_types = {
     subtitle: /^## (.+)/,
     author: /^### (.+)/,
     verse_number: /^#### (.+)/,
+    verse_subtitle: /^##### (.+)/,
     verse_text: /^    (.+)/,
-    attribute: /^> (.+)/,
+    quote: /^> (.+)/,
     embed_link: /^\[([^\]]+)\]\(([^\)]+)\)/,    // Before translation.
     translation: /^([^\s#].+)/
 };
@@ -165,7 +197,8 @@ function postProcessSong(song) {
         ...song,
         verses: song.verses.map((verse) => ({
             ...verse,
-            translation: processTranslation(verse.translation)
+            translation: processTranslation(verse.translation),
+            word_by_word: processTranslation(verse.word_by_word),
         }))
     };
 }
@@ -181,14 +214,17 @@ const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
  * @return {string[]}
  */
 function processTranslation(lines) {
-    return lines
-        .join('\n')
-        // Cleanup tags for safaty.
-        .replace(TAG_RE, '')
-        .replace(NOTE_MD_REGEX, '<i class="SongVerse__note">$1</i>\n')
-        .replace(TERM_MD_REGEX, '<i class="SongVerse__term">$1</i>')
-        .replaceAll('\\\n', '<br class="SongVerse__break" />')
-        .split(/\n/);
+    return lines.map(line => {
+        if (typeof line === 'string') {
+            return line
+                // Cleanup tags for safaty.
+                .replace(TAG_RE, '')
+                .replace(NOTE_MD_REGEX, '<i class="SongVerse__note">$1</i>\n')
+                .replace(TERM_MD_REGEX, '<i class="SongVerse__term">$1</i>');
+        } else {
+            return line;
+        }
+    });
 }
 
 /**
@@ -389,7 +425,7 @@ function getSongFirstLine(songbook_id, filename) {
     if (!first_line) {
         // TODO: better errors processing.
         console.error('Song first line not found', filename);
-        return;
+        return 'none';
     }
     return first_line.trim();
 }

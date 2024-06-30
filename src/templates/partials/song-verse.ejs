@@ -9,17 +9,27 @@
 <% } %>
 
 <li class="SongVerse">
-    <link
-        rel="stylesheet"
-        href="<%= paths.toCss %>/partials/song-verse.css"
-    />
-
     <% if (verses.length > 1 && item.number) { %>
         <header class="SongVerse__header">
             <h6 class="SongVerse__title">
                 <%= item.number %>
             </h6>
         </header>
+    <% } %>
+
+    <% if (item.original.length) { %>
+        <ul class="SongVerse__translation">
+            <% item.original.forEach((line) => { %>
+                <% if (line) { %>
+                    <li class="SongVerse__paragraph">
+                        <%- line.replace(/\\$/, '') %>
+                    </li>
+                <% } else { %>
+                    <br>
+                <% } %>
+            <% }) %>
+            <br>
+        </ul>
     <% } %>
 
     <% if (item.text.length) { %>
@@ -36,14 +46,53 @@
         </ul>
     <% } %>
 
+    <% if (item.word_by_word.length) { %>
+        <ul class="SongVerse__translation">
+            <% item.word_by_word.forEach((line) => { %>
+                <% if (line) { %>
+                    <li class="SongVerse__paragraph">
+                        <p>
+                            <%- line %>
+                        </p>
+                    </li>
+                <% } else { %>
+                    
+                <% } %>
+            <% }) %>
+        </ul>
+    <% } %>
+
     <% if (item.translation.length) { %>
         <ul class="SongVerse__translation">
-            <% item.translation.forEach((p) => { %>
-                <li class="SongVerse__paragraph">
-                    <p>
-                        <%- p %>
-                    </p>
-                </li>
+            <% item.translation.forEach((p, idx) => { %>
+                <% if (p.type === 'subtitle') { %>
+                    <li class="SongVerse__paragraph">
+                        <div class="SongPage__subtitle">
+                            <p>
+                                <strong><%= p.text %></strong>
+                            </p>
+                        </div>
+                    </li>
+                <% } else if (p.type === 'verse') { %>
+                    <% if (p.text) { %>
+                        <li class="SongVerse__line <%= getLineIndentClass(p.text, 'SongVerse__line') %>">
+                            <%- transformLine(p.text, attributes) %>
+                        </li>
+                    <% } else { %>
+                        <br>
+                    <% } %>
+                <% } else { %>
+
+                    <% if (idx > 0 && item.translation[idx - 1].type === 'verse') { %>
+                        <br>
+                    <% } %>
+
+                    <li class="SongVerse__paragraph">
+                        <p>
+                            <%- p.text || p %>
+                        </p>
+                    </li>
+                <% } %>
             <% }) %>
         </ul>
     <% } %>
