@@ -1,9 +1,7 @@
 const { isObject } = require('./ioHelpers');
 const translations = require('../src/translations.json');
 
-
 const DEFAULT_LANGUAGE = 'en';
-
 
 /**
  *
@@ -11,6 +9,11 @@ const DEFAULT_LANGUAGE = 'en';
 function getLanguageSet(language = '') {
     const lang = language.slice(0, 2);
     return translations[lang] || translations[DEFAULT_LANGUAGE];
+}
+
+function getLanguageSetNotDefault(language) {
+    const lang = language.slice(0, 2);
+    return translations[lang];
 }
 
 
@@ -26,14 +29,38 @@ function getTranslationsBy(lang) {
             value = isObject(value) ? value[k] : (value || '')
         );
 
+        // TODO: do not use recursion for default langauage.
         return value || getTranslationsBy()(keyChain) || '';
     };
 }
 
+function getTranslationOrigin(lang, text) {
+    let data = getLanguageSetNotDefault(lang);
+    if (data?.i18n) {
+        for (const [key, value] of Object.entries(data.i18n)) {
+            if (value === text) {
+                return key;
+            }
+        }
+    }
+}
+
+function getStrictTranslation(lang, text) {
+    let data = getLanguageSetNotDefault(lang);
+    return data?.i18n && data.i18n[text] || text;
+}
+
+function isDefaultLanguage(language) {
+    const lang = language.slice(0, 2);
+    return lang === DEFAULT_LANGUAGE;
+}
 
 /**
  *
  */
 module.exports = {
-    getTranslationsBy
+    getTranslationsBy,
+    getTranslationOrigin: getTranslationOrigin,
+    getStrictTranslation: getStrictTranslation,
+    isDefaultLanguage: isDefaultLanguage
 };

@@ -113,6 +113,12 @@
       "SHARE": "Поделиться",
       "SHARE_SONG": "Поделиться песней",
       "SHOW_TRANSLATION": "Показывать перевод"
+    },
+    "i18n": {
+      "Bhakti Lalita Devi": "Бхакти Лалита Деви",
+      "Srila Sridhar Maharaj": "Шрила Шридхар Махарадж",
+      "Srila Govinda Maharaj": "Шрила Говинда Махарадж",
+      "Sripad Bhagavat Maharaj": "Шрипад Бхагават Махарадж"
     }
   },
   "ua": {
@@ -171,6 +177,12 @@
       "SHARE": "Поділитися",
       "SHARE_SONG": "Поділитися піснею",
       "SHOW_TRANSLATION": "Показувати переклад"
+    },
+    "i18n": {
+      "Bhakti Lalita Devi": "Бгакті Лаліта Деві",
+      "Srila Sridhar Maharaj": "Шріла Шрідгар Махарадж",
+      "Srila Govinda Maharaj": "Шріла Ґовінда Махарадж",
+      "Sripad Bhagavat Maharaj": "Шріпад Бгаґават Махарадж"
     }
   }
 }
