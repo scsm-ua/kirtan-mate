@@ -123,7 +123,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
                     }
 
                     if (!origin_embed_title) {
-                        console.error(`No tranlation origin for ${embed_title} in ${a_songbook_id}`);
+                        console.error(`No translation origin for ${embed_title} in ${a_songbook_id}`);
                     } else {
                         embed_title = getStrictTranslation(songbook_id, origin_embed_title);
                     }
