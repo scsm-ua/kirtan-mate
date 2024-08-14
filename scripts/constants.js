@@ -43,6 +43,7 @@ const PATHS = {
         JS: ORIGIN + '/' + JS_DIR,
         CSS: ORIGIN + '/' + CSS_DIR,
         IMG: ORIGIN + '/' + IMG_DIR,
+        FAVICON: ORIGIN + '/' + IMG_DIR + '/favicon',
         toSongs: (songbook_id) => ORIGIN + '/' + songbook_id
     },
     BUILD: {
@@ -74,7 +75,7 @@ const PATHS = {
             CONTENTS: contentItems,
             INDEX: indexItems
         },
-        SHARING_BANNER: ORIGIN + '/images/' + sharingBanner,
+        SHARING_BANNER: ORIGIN + '/' + IMG_DIR + '/' + sharingBanner,
         SITEMAP: ORIGIN  + '/' + sitemapName
     },
     SRC: {

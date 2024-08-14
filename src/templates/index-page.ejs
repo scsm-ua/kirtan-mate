@@ -30,6 +30,10 @@
                                                         <img
                                                                 alt=""
                                                                 class="BookListPage__image"
+                                                                srcset="
+                                                                    <%= paths.toImages %>/banner/banner-<%= songbook.slug %>.png 1x,
+                                                                    <%= paths.toImages %>/banner/banner-<%= songbook.slug %>@2.png 2x
+                                                                "
                                                                 src="<%= paths.toImages %>/banner/banner-<%= songbook.slug %>.png"
                                                         >
                                                     </div>
