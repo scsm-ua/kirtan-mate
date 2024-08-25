@@ -15,6 +15,13 @@
         ]
       },
       {
+        "id": "acharya-varyyam-gaura-dhama-nishtham",
+        "title": "Praṇām Mantra to Śrīla Bhakti Rañjan Madhusūdan Mahārāj",
+        "name": "Śrīla Bhakti Rañjan Madhusūdan Mahārāj",
+        "aliasName": "āchārya-varyyaṁ gaura-dhāma-niṣṭhaṁ",
+        "fileName": "acharya-varyyam-gaura-dhama-nishtham.html"
+      },
+      {
         "id": "vande-vaikuntha-vritti-stham",
         "title": "Praṇām Mantra to Śrīla Bhakti Bimal Avadhūt Mahārāj",
         "name": "Śrīla Bhakti Bimal Avadhūt Mahārāj",
@@ -669,7 +676,10 @@
         "name": "Śrī Godrumachandra-bhajanopadeśa",
         "aliasName": "yadi te hari-pāda-saroja-sudhā-",
         "fileName": "yadi-te-hari-pada-saroja-sudha.html",
-        "page": "150"
+        "page": "150",
+        "embeds": [
+          "Shrila Bhakti Ranjan Madhusudan Maharaj"
+        ]
       }
     ]
   },

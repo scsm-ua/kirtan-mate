@@ -3,6 +3,13 @@
     "name": "Вступ",
     "items": [
       {
+        "id": "acharya-varyyam-gaura-dhama-nishtham",
+        "title": "Прана̄м Мантра - Шрīла Бгакті Ранджан Мадгусудан Маха̄ра̄дж",
+        "name": "Шрīла Бгакті Ранджан Мадгусудан Маха̄ра̄дж",
+        "aliasName": "а̄ча̄рʼя-варйям ґаура-дга̄ма-ніштхам",
+        "fileName": "acharya-varyyam-gaura-dhama-nishtham.html"
+      },
+      {
         "id": "shri-krishna-chaitanya-prabhu-nityananda",
         "title": "Паньча-таттва мантра",
         "name": "Паньча-таттва мантра",

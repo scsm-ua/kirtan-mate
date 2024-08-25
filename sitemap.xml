@@ -47,6 +47,13 @@
     
 
         <url>
+            <loc>https://kirtan.site/ru/acharya-varyyam-gaura-dhama-nishtham.html</loc>
+            <changefreq>weekly</changefreq>
+            <priority>1</priority>
+        </url>
+    
+
+        <url>
             <loc>https://kirtan.site/ru/vande-vaikuntha-vritti-stham.html</loc>
             <changefreq>weekly</changefreq>
             <priority>1</priority>
@@ -1214,6 +1221,13 @@
         </url>
     
         <url>
+            <loc>https://kirtan.site/ua/acharya-varyyam-gaura-dhama-nishtham.html</loc>
+            <changefreq>weekly</changefreq>
+            <priority>1</priority>
+        </url>
+    
+
+        <url>
             <loc>https://kirtan.site/ua/shri-krishna-chaitanya-prabhu-nityananda.html</loc>
             <changefreq>weekly</changefreq>
             <priority>1</priority>
@@ -1395,6 +1409,13 @@
     
         <url>
             <loc>https://kirtan.site/en/vande-ham-shri-guroh-shri-yuta-pada-kamalam.html</loc>
+            <changefreq>weekly</changefreq>
+            <priority>1</priority>
+        </url>
+    
+
+        <url>
+            <loc>https://kirtan.site/en/acharya-varyyam-gaura-dhama-nishtham.html</loc>
             <changefreq>weekly</changefreq>
             <priority>1</priority>
         </url>
