@@ -16,7 +16,7 @@ dependencies:
     version: github.com/scsm-ua/gaudiya-gitanjali-ru/739d3e481a4b6c3d76114465c405c63a0b70ecdd
   gaudiya-gitanjali-ua:
     specifier: github:scsm-ua/gaudiya-gitanjali-ua
-    version: github.com/scsm-ua/gaudiya-gitanjali-ua/72b81ff32bfdaad40a7c8f051ecc4c397f083f13
+    version: github.com/scsm-ua/gaudiya-gitanjali-ua/9c95b5c8ff9022fc4ba363ac84f2c4b531746a28
   gulp-ejs:
     specifier: ^5.1.0
     version: 5.1.0
@@ -2571,8 +2571,8 @@ packages:
     version: 1.0.0
     dev: false
 
-  github.com/scsm-ua/gaudiya-gitanjali-ua/72b81ff32bfdaad40a7c8f051ecc4c397f083f13:
-    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/72b81ff32bfdaad40a7c8f051ecc4c397f083f13}
+  github.com/scsm-ua/gaudiya-gitanjali-ua/9c95b5c8ff9022fc4ba363ac84f2c4b531746a28:
+    resolution: {tarball: https://codeload.github.com/scsm-ua/gaudiya-gitanjali-ua/tar.gz/9c95b5c8ff9022fc4ba363ac84f2c4b531746a28}
     name: gaudiya-gitanjali-ua
     version: 1.0.0
     dev: false
