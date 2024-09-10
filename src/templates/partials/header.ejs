@@ -6,20 +6,13 @@
 
     <div class="Header__container">
         <div class="Header__content">
-            <a href="<%= paths.toPages.root %>" class="Header__home">
+            <a href="<%= paths.toPages.BOOK_LIST %>" class="Header__home">
                 <img
                     alt="Home"
                     class="Header__logo"
-                    src="<%= paths.toImages %>/svg/kirtan-mate.svg"
+                    src="<%= paths.toImages %>/svg/kirtan-site.svg"
                 />
             </a>
-            <% if (locals.variants && variants.length > 1) { %>
-                <div>
-                    <% variants.forEach(function(v) { %>
-                        <a href="<%= v.href %>" style="<% if (v.selected) { %>color: white; font-weight: bold;<% } else { %>color: grey;<% } %>">[<%= v.title %>]</a>
-                    <% }) %>
-                </div>
-            <% } %>
         </div>
     </div>
 </header>

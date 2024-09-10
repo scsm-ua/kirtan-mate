@@ -1,0 +1,94 @@
+@import '../mixins';
+@import '../variables';
+
+.AppModal {
+    &.tingle-modal {
+        cursor: default !important;
+        background: rgba(0, 0, 0, .4);
+        animation: fadeIn 0.3s;
+        padding: 0;
+        overflow: auto;
+
+        &--visible .tingle-modal-box {
+            animation: fadeIn 0.3s;
+        }
+    }
+
+
+    //.tingle-modal__close {
+    //    display: none;
+    //}
+
+    .tingle-modal__close {
+        //background-color: var(--header-bg-color);
+        height: 40px;
+        width: 40px;
+        min-height: 40px;
+        top: 8px;
+        left: 99999px;
+        right: 0;
+        //color: var(--accent-color);
+        color: var(--dark);
+        padding: 4px;
+        border-radius: 50%;
+        line-height: 0.9;
+        //font-size: 24px;
+        //text-align: right;
+        cursor: pointer !important;
+        position: sticky;
+        background: white;
+        margin-right: 8px;
+        box-shadow: 0 4px 20px 0 var(--shadow-color);
+        transition: color 0.25s;
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+
+
+    .tingle-modal__closeIcon {
+        //margin-right: var(--side-padding);
+        //padding: 10px 0 10px var(--side-padding);
+        display: inline-block;
+        width: 18px !important;
+        margin: 0;
+
+        //svg {
+        //    height: 16px;
+        //}
+    }
+
+
+    .tingle-modal__closeLabel {
+        display: none;
+    }
+
+
+    .tingle-modal-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //min-height: 100%;
+        min-height: calc(100% - 40px);
+        width: auto;
+        max-width: 90%;
+        min-width: 80%;
+        margin: 0px auto;
+        background-color: transparent;
+
+        @include breakpoint($min: $bp768) {
+            max-width: 500px;
+            min-width: 500px;
+        }
+    }
+
+
+    .tingle-modal-box__content {
+        width: 100%;
+        margin: 30px 0;
+        border-radius: 24px;
+        padding: var(--side-padding);
+        background-color: var(--song-bg-color) !important;
+    }
+}

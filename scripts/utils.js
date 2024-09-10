@@ -1,23 +1,37 @@
 const path = require('path');
 const { PATHS } = require('./constants');
 
-exports.getTemplatePaths = function(songbook_id, options) {
-    
-    var contentsPath = PATHS.PAGES.getIndex(songbook_id);
-    var rootPath = options?.root_to_songbook ? contentsPath : PATHS.PAGES.INDEX
 
+/**
+ *
+ */
+function getNavigationPaths(bookId) {
+    return {
+        A_Z: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.A_Z,
+        BOOK_LIST: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.BOOK_LIST,
+        CONTENTS: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.CONTENTS,
+        SEARCH: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH
+    }
+}
+
+
+/**
+ *
+ */
+function getTemplatePaths(songbook_id) {
     return {
         toJs: PATHS.RELATIVE.JS,
         toCss: PATHS.RELATIVE.CSS,
         toImages: PATHS.RELATIVE.IMG,
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
         toSongs: PATHS.RELATIVE.toSongs(songbook_id),
-        toPages: {
-            root: rootPath,
-            // TODO: rename
-            index: contentsPath,
-            // TODO: rename
-            index_list: PATHS.PAGES.getIndexList(songbook_id)
-        }
+        toPages: getNavigationPaths(songbook_id)
     };
+}
+
+
+/**/
+module.exports = {
+    getNavigationPaths,
+    getTemplatePaths
 };

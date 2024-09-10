@@ -1,13 +1,16 @@
 const path = require('path');
 const fs = require('fs');
-const { getIndexJSON } = require('./indexGenerator.js');
+
 
 var songbooks = {};
 
+/**
+ *
+ */
 function findSongbooks() {
     var modulesRootPath = path.resolve(__dirname, '../node_modules');
     var modules_listing = fs.readdirSync(modulesRootPath).map(module_name => path.resolve(modulesRootPath, module_name));
-    
+
     for (const modulePath of modules_listing) {
         var songbookInfoPath = path.resolve(modulePath, 'songbook.json');
         if (fs.existsSync(songbookInfoPath)) {
@@ -32,10 +35,6 @@ function getSongsPath(songbook_id) {
     return songbooks[songbook_id].path + '/songs';
 }
 
-function getSongbooki18n(songbook_id) {
-    return songbooks[songbook_id].i18n;
-}
-
 function getSongbookIdList() {
     return Object.keys(songbooks);
 }
@@ -46,11 +45,14 @@ function getSongbookInfo(songbook_id) {
 
 findSongbooks();
 
+
+/**
+ *
+ */
 module.exports = {
     getContentsFilePath: getContentsFilePath,
     getIndexFilePath: getIndexFilePath,
     getSongsPath: getSongsPath,
-    getSongbooki18n: getSongbooki18n,
     getSongbookIdList: getSongbookIdList,
     getSongbookInfo: getSongbookInfo
 };

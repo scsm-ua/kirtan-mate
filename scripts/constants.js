@@ -1,27 +1,50 @@
 const path = require('path');
 
+/**
+ *
+ */
+const BASE_FILE_NAMES = {
+    A_Z: 'a-z',
+    BOOK_LIST: 'index',
+    CONTENTS: 'contents',
+    NOT_FOUND: '404',
+    SEARCH: 'search',
+    SITEMAP: 'sitemap'
+};
+
 const OUTPUT_DIR = 'docs';
 const JS_DIR = 'js';
 const CSS_DIR = 'css';
 const IMG_DIR = 'css';
+
 const contentItems = 'contentItems.json';
+const contentsPage = BASE_FILE_NAMES.CONTENTS + '.html';
 const indexItems = 'indexItems.json';
-const indexPath = 'index.html';
-const indexListPath = 'index-list-page.html';
+const indexAZPath = BASE_FILE_NAMES.A_Z + '.html';
+const notFoundPage = BASE_FILE_NAMES.NOT_FOUND + '.html';
+const searchPage = BASE_FILE_NAMES.SEARCH + '.html';
 const sharingBanner = 'sharing-banner.png';
 const sitemapName = 'sitemap.xml';
 
 /**/
 const ORIGIN = (process.env.HOME_BASE_URL || '');
 
+/**/
+const SEARCH_CONST = {
+    ACCOUNT_ID: process.env.SEARCH_ACCOUNT_ID,
+    SEARCH_API_KEY: process.env.SEARCH_API_KEY
+};
+
 /**
  *
  */
 const PATHS = {
+    ORIGIN: ORIGIN,
     RELATIVE: {
         JS: ORIGIN + '/' + JS_DIR,
         CSS: ORIGIN + '/' + CSS_DIR,
         IMG: ORIGIN + '/' + IMG_DIR,
+        FAVICON: ORIGIN + '/' + IMG_DIR + '/favicon',
         toSongs: (songbook_id) => ORIGIN + '/' + songbook_id
     },
     BUILD: {
@@ -31,38 +54,30 @@ const PATHS = {
         IMG_FILES: OUTPUT_DIR + '/' + IMG_DIR,
         getJsonPath: (songbook_id) => OUTPUT_DIR + '/json/' + songbook_id,
         getSongbookRoot: (songbook_id) => OUTPUT_DIR + '/' + songbook_id,
-        getContentsFile: function(songbook_id) {
-            return path.resolve(OUTPUT_DIR, 'json', songbook_id, contentItems);
-        },
-        getIndexFile: function(songbook_id) {
-            return path.resolve(OUTPUT_DIR, 'json', songbook_id, indexItems);
-        },
+        getContentsFile: (songbook_id) =>
+            path.resolve(OUTPUT_DIR, 'json', songbook_id, contentItems),
+        getIndexFile: (songbook_id) =>
+            path.resolve(OUTPUT_DIR, 'json', songbook_id, indexItems),
         ROOT: OUTPUT_DIR
     },
     FILES: {
         EJS: {
-            // TODO: rename
-            CONTENTS: 'index.ejs',
-            // TODO: rename
-            INDEX_LIST: 'index-list-page.ejs',
-            SONGBOOKS: 'songbooks.ejs',
-            NOT_FOUND: '404.ejs',
-            SITEMAP: 'sitemap.ejs',
+            BOOK_LIST_PAGE: 'index-page.ejs',
+            CONTENTS_PAGE: 'contents-page.ejs',
+            A_Z_PAGE: 'a-z-page.ejs',
+            NOT_FOUND_PAGE: '404.ejs',
+            REDIRECT_PAGE: 'redirect-page.ejs',
             ROBOTS: process.env.DISABLE_ROBOTS ? 'robots-disallow.ejs' : 'robots.ejs',
+            SEARCH_PAGE: 'search-page.ejs',
+            SITEMAP: 'sitemap.ejs',
             SONG_PAGE: 'song-page.ejs'
-        },
-        HTML: {
-            INDEX: indexPath,
-            INDEX_LIST: indexListPath
         },
         JSON: {
             CONTENTS: contentItems,
             INDEX: indexItems
         },
-        SHARING_BANNER: ORIGIN + '/images/' + sharingBanner,
-        XML: {
-            SITEMAP: sitemapName
-        }
+        SHARING_BANNER: ORIGIN + '/' + IMG_DIR + '/' + sharingBanner,
+        SITEMAP: ORIGIN  + '/' + sitemapName
     },
     SRC: {
         CSS_FILES: 'src/styles',
@@ -72,14 +87,19 @@ const PATHS = {
         JS_FILES: 'src/js'
     },
     PAGES: {
-        SITEMAP: ORIGIN  + '/' + sitemapName,
-        INDEX: ORIGIN  + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
-        // TODO: rename
-        getIndex: (songbook_id) => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? ('/' + indexPath) : ''),
-        // TODO: rename
-        getIndexList: (songbook_id) => ORIGIN + '/' + songbook_id + '/' + indexListPath
+        A_Z: '/' + indexAZPath,
+        BOOK_LIST: process.env.EXPLICIT_INDEX ? '/index.html' : '/',
+        CONTENTS: '/' + contentsPage,
+        NOT_FOUND: '/' + notFoundPage,
+        SEARCH: '/' + searchPage
     }
 };
 
+
 /**/
-module.exports = { ORIGIN, PATHS };
+module.exports = {
+    BASE_FILE_NAMES,
+    ORIGIN,
+    PATHS,
+    SEARCH_CONST
+};

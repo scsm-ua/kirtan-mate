@@ -1,5 +1,4 @@
 const ejs = require('ejs');
-const fs = require('fs');
 const path = require('path');
 const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
@@ -7,10 +6,10 @@ const VinylStream = require('vinyl-source-stream');
 /**/
 const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
-const { PATHS, ORIGIN } = require('./constants');
-const { i18n } = require('./i18n');
+const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
 const { getTemplatePaths } = require('./utils');
-const { getSongbookIdList } = require('./songbookLoader');
+const { getTranslationsBy, getTranslationOrigin, getStrictTranslation, isDefaultLanguage } = require('./i18n');
+const { PATHS, ORIGIN } = require('./constants');
 const { BUILD, FILES } = PATHS;
 
 
@@ -43,13 +42,18 @@ function makeSongHTML(songbook_id, template) {
     });
 }
 
-function getSongsOrderedList(songbook_id) {
-    var contents = require(BUILD.getContentsFile(songbook_id));
-    var items = contents.flatMap((cat) => cat.items);
-    return items.map(i => i.fileName);
-}
 
 /**
+ *
+ */
+function getSongsOrderedList(songbook_id) {
+    return require(BUILD.getContentsFile(songbook_id))
+        .flatMap((cat) => cat.items);
+}
+
+
+/**
+ * @param songbook_id
  * @param template: string;
  * @param content: TSongJSON;
  * @param filePath: string;
@@ -58,7 +62,6 @@ function getSongsOrderedList(songbook_id) {
 function fillTemplate(songbook_id, template, content, filePath) {
     // TODO: subtitle.
     const { author, subtitle, title, verses, attributes } = content;
-    var { embeds } = content;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -66,8 +69,9 @@ function fillTemplate(songbook_id, template, content, filePath) {
     }
 
     const { text } = verses[0];
+    let { embeds } = content;
+    let pageTitle = title;
 
-    var pageTitle = title;
     if (author && author.length) {
         pageTitle += '. ' + author[0];
     }
@@ -81,54 +85,104 @@ function fillTemplate(songbook_id, template, content, filePath) {
     const headParts = {
         title: pageTitle,
         description: `${text[0]}\n${text[1]}...`,
-        path: ORIGIN + '/' + songbook_id + '/' + filename + '.html'
+        path: '/' + songbook_id + '/' + filename + '.html'
     };
 
-    var variants = [];
-    
-    getSongbookIdList().forEach(a_songbook_id => {
-        var song = getSongJSON(a_songbook_id, filename, true);
+    const alternativeTranslationBooks /* TSongBookAsOption */ = [];
+
+    getSongbookIdList().forEach((a_songbook_id) => {
+        const song = getSongJSON(a_songbook_id, filename, true);
+
         if (song) {
-            if (process.env.DEV) {
-                variants.push({
-                    href: ORIGIN + '/' + a_songbook_id + '/' + filename + '.html',
-                    title: a_songbook_id,
-                    selected: songbook_id === a_songbook_id
+            const info /* TSongBookInfo */ = getSongbookInfo(a_songbook_id);
+            const tr = getTranslationsBy(a_songbook_id);
+
+            alternativeTranslationBooks.push({
+                href: ORIGIN + '/' + a_songbook_id + '/' + filename + '.html',
+                i18n: tr,
+                isSelected: songbook_id === a_songbook_id,
+                slug: a_songbook_id,
+                subtitle: info.subtitle,
+                title: info.title
+            });
+
+            // Get embeds from other songbook.
+            if (songbook_id !== a_songbook_id 
+                && song.embeds 
+                && song.embeds.length) {
+
+                // Load embeds from other songbooks.
+                var other_embeds = song.embeds.map(embed => {
+                    var embed_title = embed.title;
+
+                    var origin_embed_title = getTranslationOrigin(a_songbook_id, embed_title);
+
+                    // Use english title as default.
+                    if (!origin_embed_title && isDefaultLanguage(a_songbook_id)) {
+                        origin_embed_title = embed_title;
+                    }
+
+                    if (!origin_embed_title) {
+                        console.error(`No translation origin for ${embed_title} in ${a_songbook_id}`);
+                    } else {
+                        embed_title = getStrictTranslation(songbook_id, origin_embed_title);
+                    }
+
+                    return Object.assign({}, embed, {
+                        title: embed_title,
+                    });
                 });
+
+                embeds = (embeds || []).concat(other_embeds);
             }
 
-            // Load embeds from other songbooks.
-            if (!embeds || !embeds.length) {
-                if (song.embeds) {
-                    embeds = song.embeds;
-                }
-            }
+            // Check embeds overriding from different songbooks.
+            // if (songbook_id !== a_songbook_id 
+            //     && song.embeds 
+            //     // Use `content` to check origin (not overidden value).
+            //     && content.embeds 
+            //     && content.embeds.length) {
+            //     console.warn('Overriding song embeds for ${songbook_id} from ${a_songbook_id} in ${filePath}`);
+            // }
         }
     });
+
+    const currentSongbook = alternativeTranslationBooks.find((option) => option.isSelected);
 
     return ejs.render(template, {
         author: author,
         subtitle: subtitle,
         orderedSongs: JSON.stringify(getSongsOrderedList(songbook_id)),
         headParts: createHeadParts(headParts),
-        paths: getTemplatePaths(songbook_id, {root_to_songbook: true}),
+        paths: getTemplatePaths(songbook_id, { root_to_songbook: true }),
         title: title,
         verses: verses,
         embeds: embeds,
         attributes: attributes,
-        i18n: i18n(songbook_id),
+        i18n: currentSongbook.i18n,
         transformLine: transformLine,
         getLineIndentClass: getLineIndentClass,
-        variants: variants
+        songbooksAsOptions: alternativeTranslationBooks,
+        currentSongbook: currentSongbook
     });
 }
 
+/**
+ *
+ * @type {RegExp}
+ */
 const TAG_RE = /<[^>]+>/gi;
 const PARANTHESES_RE = /(\([^\)]+\))/gi;
 const PARANTHESES_START_RE = /(\([^\)]+)\s*$/gi;    // ) End in next line.
 const PARANTHESES_END_RE = /^(\s*)([^\)]+\))/gi;    // ( Start in prev line.
 
 
+/**
+ *
+ * @param text
+ * @param prefix
+ * @return {string}
+ */
 function getLineIndentClass(text, prefix) {
     var m = text.match(/^\s+/);
     if (m) {
@@ -142,6 +196,7 @@ function getLineIndentClass(text, prefix) {
     }
     return '';
 }
+
 
 /**
  * EJS trims lines even despite 'rmWhitespace: false'.

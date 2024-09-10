@@ -1,14 +1,19 @@
-<li class="SongVerse">
-    <link
-        rel="stylesheet"
-        href="<%= paths.toCss %>/partials/song-verse.css"
-    />
+<li class="SongEmbed">
+    <div class="SongEmbed__container">
+        <button class="NoBorderButton SongEmbed__button" data-embed>
+            <span class="SongEmbed__icon">
+                <span class="icon-shevron-right"></span>
+            </span>
 
-    <ul class="SongVerse__translation">
-        <li class="SongVerse__paragraph">
-            <p>
-                <a href="#" data-embed="<%= item.embed_code %>">▶ <%= item.title %></a>
-            </p>
-        </li>
-    </ul>
+            <span class="SongEmbed__title">
+                <%= item.title %>
+            </span>
+        </button>
+
+        <div class="Collapse">
+            <div class="SongEmbed__content">
+                <%- item.embed_code %>
+            </div>
+        </div>
+    </div>
 </li>

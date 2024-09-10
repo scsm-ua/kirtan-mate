@@ -1,0 +1,197 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <%- headParts %>
+
+    <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
+    <link rel="stylesheet" href="<%= paths.toCss %>/search-page.css" />
+</head>
+
+<body>
+    <div class="Layout">
+        <div class="Layout__content">
+            <%- include(paths.toPartials + '/header.ejs'); %>
+
+            <main class="Main SearchPage">
+                <div class="Main__container SearchPage__container">
+                    <header class="SearchPage__header">
+                        <div class="SearchPage__search">
+                            <input
+                                    autofocus
+                                    class="SearchPage__input"
+                                    id="search-input"
+                                    placeholder="<%= i18n('SEARCH_PAGE.INPUT_PLACEHOLDER') %>"
+                                    type="text"
+                            >
+
+                            <button
+                                    class="NoBorderButton SearchPage__clear"
+                                    id="clear-button"
+                                    title="<%= i18n('SEARCH_PAGE.CLEAR') %>"
+                            >
+                                <span class="icon-xmark-large"></span>
+                            </button>
+                        </div>
+
+                        <button
+                                class="RoundButton RoundButton--dark SearchPage__submit"
+                                id="submit-button"
+                                title="<%= i18n('SEARCH_PAGE.FIND') %>"
+                        >
+                            <span class="icon-search"></span>
+                        </button>
+                    </header>
+
+                    <div class="SearchPage__content">
+                        <div class="SearchPage__nothing" id="nothing-found-div">
+                            <%= i18n('SEARCH_PAGE.NO_RESULTS') %>.
+                        </div>
+
+                        <ul class="SearchPage__results" id="result-list"></ul>
+
+                        <div class="SearchPage__more" id="show-more-button">
+                            <button class="RoundButton RoundButton--dark">
+                                <%= i18n('SEARCH_PAGE.LOAD_MORE') %>
+                            </button>
+                        </div>
+
+                        <div class="SearchPage__pages visible" id="page-list">
+                            <h6 class="SearchPage__pagesTitle">
+                                <%= i18n('SEARCH_PAGE.PAGE_LIST') %>
+                            </h6>
+
+                            <ul class="">
+                                <li class="SearchPage__pills">
+                                    <% pages.map((item) => { %>
+                                        <a class="SearchPage__pill" href="<%= item.path %>" title="<%= item.title %>">
+                                            <button class="SearchPage__page">
+                                                <%= item.page %>
+                                            </button>
+                                        </a>
+                                    <% }) %>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <%- include(paths.toPartials + '/footer.ejs'); %>
+    </div>
+
+    <%- include(paths.toPartials + '/gtag.ejs'); %>
+
+    <script>
+        (function () {
+            let page = 1;
+            let results = [];
+
+            const clearButton = document.getElementById('clear-button');
+            const input = document.getElementById('search-input');
+            const nothingFound = document.getElementById('nothing-found-div');
+            const pageList = document.getElementById('page-list');
+            const resultList = document.getElementById('result-list');
+            const showMoreButton = document.getElementById('show-more-button');
+            const submitButton = document.getElementById('submit-button');
+
+            showMoreButton.addEventListener('click', () => start());
+            submitButton.addEventListener('click', () => start());
+            clearButton.addEventListener('click', () => {
+                reset();
+                input.value = '';
+            });
+
+            input.addEventListener('keydown', (e) =>
+                (e.key === 'Enter' || e.keyCode === 13) && start()
+            );
+
+            /**/
+            function find() {
+                if (!input.value) return;
+
+                const start = (page - 1) * 10 + 1;
+                const url = 'https://www.googleapis.com/customsearch/v1' +
+                    '?key=<%= search.SEARCH_API_KEY %>' +
+                    '&cx=<%= search.ACCOUNT_ID %>' +
+                    `&start=${start}` +
+                    `&q=${input.value}`;
+
+                return fetch(url, {
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                    .then((r) => r.json())
+                    .then((r) => {
+                        console.log(r);
+                        return r;
+                    })
+                    .then(({ items, searchInformation }) => ({
+                        items: items, /* Array<{ htmlFormattedUrl, htmlSnippet, htmlTitle, link }> */
+                        itemsTotal: parseInt(searchInformation.totalResults)
+                    }))
+                    .catch(console.error)
+            }
+
+            /**/
+            function start() {
+                page === 1 && reset(); // hideShowMore, clearTheList, showPages, hideNothingFound, clearResults.
+
+                find()
+                    .then(({ items, itemsTotal }) => {
+                        if (!items || itemsTotal === 0) {
+                            page === 1 ? displayElem(nothingFound, true) : displayElem(showMoreButton, false);
+                        } else {
+                            results = [...results, ...items];
+                            displayElem(pageList, false);
+                            insertItems(items);
+                            displayElem(resultList, true);
+
+                            if (results.length < itemsTotal) {
+                                page += 1;
+                                displayElem(showMoreButton, true);
+                            } else displayElem(showMoreButton, false);
+                        }
+                    })
+            }
+
+            /**/
+            function displayElem(elem, shouldShow) {
+                if (!elem) return;
+                shouldShow ? elem.classList.add('visible') : elem.classList.remove('visible');
+            }
+
+            /**/
+            function insertItems(items) {
+                let content = '';
+
+                items.forEach(({ htmlSnippet, htmlTitle, link }) => {
+                    content += `
+                        <li class="SearchPage__item">
+                            <a class="SearchPage__itemLink" href="${link}">
+                                <h5 class="SearchPage__itemTitle">
+                                    ${htmlTitle}
+                                </h5>
+                                <div class="SearchPage__itemText">
+                                    ${htmlSnippet}
+                                </div>
+                            </a>
+                        </li>
+                    `;
+                });
+
+                resultList.insertAdjacentHTML('beforeend', content);
+            }
+
+            /**/
+            function reset() {
+                results = [];
+                resultList.innerHTML = '';
+                displayElem(nothingFound, false);
+                displayElem(pageList, true);
+                displayElem(showMoreButton, false);
+            }
+        } ())
+    </script>
+</body>
+</html>

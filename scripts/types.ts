@@ -6,8 +6,12 @@ type TCategory = {
 
 type TCategoryItem = {
     aliasName: string; // The First line.
-    fileName: string;
+    embeds: string[];
+    fileName: string; // id + '.html'
+    id: string;
     name: string;
+    page: string;
+    title: string; // Same as name
 };
 
 
@@ -22,4 +26,22 @@ type TSongJSON = {
     author?: string;
     title?: string;
     verses: TSongJSONVerse[];
+};
+
+
+type TSongBookInfo = {
+    i18n: Array<Record<string, string>>;
+    path: string;
+    slug: string;
+    subtitle: string;
+    title: string;
+};
+
+
+type TSongBookAsOption = {
+    href: string;
+    i18n: Array<Record<string, string>>;
+    isSelected: boolean;
+    slug: string;
+    title: string;
 };

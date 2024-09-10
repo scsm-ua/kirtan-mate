@@ -1,0 +1,91 @@
+@import 'mixins';
+@import 'variables';
+
+
+.BookListPage {
+
+    &__container {
+        margin: 0 auto;
+        max-width: var(--page-max-width);
+    }
+
+    &__content {
+        padding-top: 24px;
+        width: 100%;
+    }
+
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+        min-width: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: calc(var(--side-padding) + 100%);
+
+        list-style-type: none;
+        margin: 0 calc(var(--side-padding) / -2);
+        padding: 0;
+
+        @include breakpoint($min: $bp768) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        max-width: 450px;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        margin-bottom: var(--side-padding);
+        padding: 0 calc(var(--side-padding) / 2);
+    }
+
+    &__ratio {
+        border-radius: 24px;
+        box-shadow: 0 4px 20px 0 var(--shadow-color);
+        overflow: hidden;
+        height: 255px;
+        min-width: 320px;
+        background-color: #FFF;
+
+        &:before {
+            padding-top: 81.5%;
+        }
+    }
+
+    &__box {
+        height: 61.8%;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    &__info {
+        padding: 12px;
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        color: var(--text-color);
+    }
+
+    &__count {
+        font-size: 12px;
+        font-weight: 300;
+        margin-top: 4px;
+        color: var(--grey);
+    }
+}

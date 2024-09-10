@@ -1,21 +1,24 @@
+const { getNavigationPaths } = require('./utils');
 const { PATHS, ORIGIN } = require('./constants');
 
 /**
  * Note: the title and description do NOT get escaped.
- * @param title: string - this will get suffixed with ' | Kirtan Mate'.
+ * @param title: string - this will get suffixed with ' | Kirtan Site'.
  * @param description: string - no special symbols!
- * @param path: string - no leading or trailing slashes!
+ * @param url: string - no leading or trailing slashes!
+ * @param is404: boolean
  */
 function createHeadParts({ title, description, path, is404 }) {
     const imgSrc = PATHS.FILES.SHARING_BANNER;
-    const _title = title + ' | Kirtan Mate';
+    const _title = title + ' | Kirtan Site';
+    const url = ORIGIN + path;
 
-    var render = `
+    let render = `
         <title>${_title}</title>`;
 
     if (!is404) {
         render += `
-        <link rel="canonical" href="${path}" />`;
+        <link rel="canonical" href="${url}" />`;
     }
 
     render += `
@@ -25,10 +28,10 @@ function createHeadParts({ title, description, path, is404 }) {
 
         <meta property="og:title" content="${title}" />
         <meta property="og:description" content="${description}" />
-        <meta property="og:url" content="${path}" />
+        <meta property="og:url" content="${url}" />
         <meta property="og:locale" content="ua_UA" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Kirtan Mate" />
+        <meta property="og:site_name" content="Kirtan Site" />
         <meta property="og:image" content="${imgSrc}" />
         <meta property="og:image:width" content="648" />
         <meta property="og:image:height" content="488" />
@@ -39,7 +42,25 @@ function createHeadParts({ title, description, path, is404 }) {
         <meta name="twitter:title" content="${title}" />
         <meta name="twitter:description" content="${description}" />
 
-        ${getSchema(path, title)}
+        ${getSchema(url, title, description)}
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="${PATHS.RELATIVE.FAVICON}/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="${PATHS.RELATIVE.FAVICON}/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="${PATHS.RELATIVE.FAVICON}/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="${PATHS.RELATIVE.FAVICON}/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="${PATHS.RELATIVE.FAVICON}/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="${PATHS.RELATIVE.FAVICON}/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="${PATHS.RELATIVE.FAVICON}/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="${PATHS.RELATIVE.FAVICON}/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="${PATHS.RELATIVE.FAVICON}/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="${PATHS.RELATIVE.FAVICON}/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="${PATHS.RELATIVE.FAVICON}/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="${PATHS.RELATIVE.FAVICON}/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="${PATHS.RELATIVE.FAVICON}/favicon-16x16.png">
+        <link rel="manifest" href="${PATHS.RELATIVE.FAVICON}/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="${PATHS.RELATIVE.FAVICON}/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
     `;
 
     return render;
@@ -48,7 +69,7 @@ function createHeadParts({ title, description, path, is404 }) {
 /**
  *
  */
-function getSchema(path, title) {
+function getSchema(url, title, description) {
     const content = {
         '@context': 'https://schema.org',
         '@graph': [
@@ -56,14 +77,14 @@ function getSchema(path, title) {
                 '@type': 'WebSite',
                 '@id': ORIGIN + '/#website',
                 'url': ORIGIN + '/',
-                'name': 'Kirtan Mate',
-                'description': 'Вайшнавські пісні',
-                'inLanguage': 'ua-UA'
+                'name': 'Kirtan Site',
+                'description': description,
+                'inLanguage': 'en-GB'
             },
             {
                 '@type': 'CollectionPage',
-                '@id': path,
-                'url': path,
+                '@id': url,
+                'url': url,
                 'name': title,
                 'isPartOf': {
                     '@id': ORIGIN + '/#website'
@@ -76,31 +97,48 @@ function getSchema(path, title) {
     return `<script type="application/ld+json">${sch}</script>`;
 }
 
-function getItemXML(path, priority) {
+/**
+ *
+ * @param url
+ * @param priority
+ * @param period
+ * @return {string}
+ */
+function getItemXML(url, priority, period = 'weekly') {
     return `
-        <url>
-            <loc>${encodeURI(path)}</loc>
-            <changefreq>weekly</changefreq>
-            <priority>${priority}</priority>
-        </url>
+    <url>
+        <loc>${encodeURI(url)}</loc>
+        <changefreq>${period}</changefreq>
+        <priority>${priority}</priority>
+    </url>
     `;
 }
 
 /**
  * Converts the list of categories into the list of song related XML parts.
+ * @param songbook_id
  * @param categories: TCategory[]
  * @returns {string}
  */
 function createSongXMLParts(songbook_id, categories) {
-    let indexes = getItemXML(PATHS.PAGES.getIndex(songbook_id), 1)
-                + getItemXML(PATHS.PAGES.getIndexList(songbook_id), 1);
+    const { A_Z, BOOK_LIST, CONTENTS } = getNavigationPaths(songbook_id);
 
-    let songs = categories
+    const indexes = getItemXML(ORIGIN + BOOK_LIST, 0.9, 'monthly') +
+        getItemXML(ORIGIN + CONTENTS, 1) +
+        getItemXML(ORIGIN + A_Z, 1);
+
+    const songs = categories
         .flatMap((cat) => cat.items)
-        .map((item) => getItemXML(PATHS.RELATIVE.toSongs(songbook_id) + '/' + item.fileName, 1))
-        .join('\n');
+        .map((item) =>
+            getItemXML(
+                PATHS.RELATIVE.toSongs(songbook_id) + '/' + item.fileName,
+                0.8,
+                'monthly'
+            )
+        )
+        .join('');
 
-    return indexes + songs;
+    return indexes + songs + '\n';
 }
 
 

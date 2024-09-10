@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="<%= paths.toCss %>/partials/footer.css" />
+
+<footer class="Footer">
+    <div class="Footer__container">
+        <div class="Footer__content">
+            <a
+                    class="Footer__item"
+                    href="<%= paths.toPages.BOOK_LIST %>"
+                    id="footer-link-books"
+            >
+                <div class="Footer__icon Footer__icon--regular icon-books"></div>
+                <div class="Footer__icon Footer__icon--active icon-books-bold"></div>
+                <h6 class="Footer__label"><%= i18n('FOOTER.BOOKS') %></h6>
+            </a>
+
+            <a
+                    class="Footer__item"
+                    href="<%= paths.toPages.CONTENTS %>"
+                    id="footer-link-contents"
+            >
+                <div class="Footer__icon Footer__icon--regular icon-list-music"></div>
+                <div class="Footer__icon Footer__icon--active icon-list-music-bold"></div>
+                <h6 class="Footer__label"><%= i18n('FOOTER.CONTENTS') %></h6>
+            </a>
+
+            <a
+                    class="Footer__item"
+                    href="<%= paths.toPages.A_Z %>"
+                    id="footer-link-index-list"
+            >
+                <div class="Footer__icon Footer__icon--regular icon-arrow-up-a-z"></div>
+                <div class="Footer__icon Footer__icon--active icon-arrow-up-a-z-old"></div>
+                <h6 class="Footer__label"><%= i18n('FOOTER.INDEX') %></h6>
+            </a>
+
+            <a
+                    class="Footer__item"
+                    href="<%= paths.toPages.SEARCH %>"
+                    id="footer-link-search"
+            >
+                <div class="Footer__icon Footer__icon--regular icon-search"></div>
+                <div class="Footer__icon Footer__icon--active icon-search-bold"></div>
+                <h6 class="Footer__label"><%= i18n('FOOTER.SEARCH') %></h6>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    (function() {
+        function setActive(id) {
+            document.getElementById(id).classList.add('Footer__item--active');
+        }
+
+        switch (location.pathname) {
+            case('<%= paths.toPages.BOOK_LIST %>'):
+                return setActive('footer-link-books');
+            case('<%= paths.toPages.CONTENTS %>'):
+                return setActive('footer-link-contents');
+            case('<%= paths.toPages.A_Z %>'):
+                return setActive('footer-link-index-list');
+            case('<%= paths.toPages.SEARCH %>'):
+                return setActive('footer-link-search');
+        }
+    })()
+</script>

@@ -6,62 +6,40 @@
 
         <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
         <link rel="stylesheet" href="<%= paths.toCss %>/song-page.css" />
+        <link rel="stylesheet" href="<%= paths.toCss %>/partials/song-embed.css" />
+        <link rel="stylesheet" href="<%= paths.toCss %>/partials/song-verse.css" />
 
-    <% if (embeds && embeds.length) { %>
-        <script src="https://w.soundcloud.com/player/api.js"></script>
-    <% } %>
+        <% if (embeds && embeds.length) { %>
+            <script src="https://w.soundcloud.com/player/api.js"></script>
+        <% } %>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="<%= paths.toJs %>/user-choice.js"></script>
     </head>
 
     <body>
         <div class="Layout">
             <div class="Layout__content">
                 <%- include(paths.toPartials + '/header.ejs'); %>
-                <%- include(paths.toPartials + '/prev-next-nav.ejs'); %>
 
                 <main class="Main SongPage">
                     <div class="Main__container SongPage__container">
-                        <div class="Main__content SongPage__content">
-                            <header class="SongPage__header">
-                                <div class="SongPage__box">
-                                    <% if (title && title.length) { %>
-                                        <% title.forEach((item, idx) => { %>
-                                            <h1 class="SongPage__title <% if (idx === title.length - 1) {%>SongPage__title_last<% } %>">
-                                                <%= item %>
-                                            </h1>
-                                        <% }) %>
-                                    <% } %>
-
-                                    <% if (subtitle && subtitle.length) { %>
-                                        <% subtitle.forEach((item, idx) => { %>
-                                            <div class="SongPage__subtitle">
-                                                <%= item %>
-                                            </div>
-                                        <% }) %>
-                                    <% } %>
-
-                                    <% if (author && author.length) { %>
-                                        <% author.forEach((item, idx) => { %>
-                                            <div class="SongPage__author <% if (idx === 0) {%>SongPage__author_first<% } %>">
-                                                <%= item %>
-                                            </div>
-                                        <% }) %>
-                                    <% } %>
-                                </div>
-
-                                <button
-                                    class="AppButton RoundButton RoundButton--L RoundButton--dark"
-                                    id="share-button"
-                                    title="<%= i18n('Share song') %>"
-                                >
-                                    <span class="AppIcon icon-share"></span>
-                                </button>
-                            </header>
+                        <div class="SongPage__content">
+                            <%- include(paths.toPartials + '/song-header.ejs'); %>
 
                             <main class="SongPage__main">
-                                <% if ((verses && verses.length) || (embeds && embeds.length)) { %>
+                                <% if (verses && verses.length) { %>
+                                    <div class="SongPage__toggle">
+                                        <label class="Toggle">
+                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
+                                            <div class="Toggle__switch"></div>
+                                            <span class="Toggle__label SongPage__show">
+                                                <%= currentSongbook.i18n('SONG_PAGE.SHOW_TRANSLATION') %>
+                                            </span>
+                                        </label>
+                                    </div>
+
                                     <ul class="SongPage__verses">
                                         <% verses && verses.length && verses.forEach((item, idx, arr) => { %>
                                             <%- include(
@@ -69,21 +47,30 @@
                                                 { 'item': item, 'verses': arr }
                                             ); %>
                                         <% }) %>
-                                        <% embeds && embeds.length && embeds.forEach(item => { %>
-                                            <%- include(
-                                                paths.toPartials + '/song-embed.ejs',
-                                                { 'item': item }
-                                            ); %>
-                                        <% }) %>
                                     </ul>
                                 <% } %>
                             </main>
+
+                            <% if (embeds && embeds.length) { %>
+                                <section class="SongPage__extra">
+                                    <ul class="SongPage__verses">
+                                        <% embeds && embeds.length && embeds.forEach(item => { %>
+                                            <%- include(
+                                            paths.toPartials + '/song-embed.ejs',
+                                            { 'item': item }
+                                            ); %>
+                                        <% }) %>
+                                    </ul>
+                                </section>
+                            <% } %>
                         </div>
                     </div>
-                </main>
 
-                <%- include(paths.toPartials + '/prev-next-nav.ejs'); %>
+                    <%- include(paths.toPartials + '/prev-next-nav.ejs'); %>
+                </main>
             </div>
+
+            <%- include(paths.toPartials + '/footer.ejs'); %>
         </div>
 
         <script
@@ -95,6 +82,9 @@
 
         <script>
             (function() {
+                /**
+                 * Show modal window with share function.
+                 */
                 /**
                  * Modal window setup.
                  */
@@ -114,11 +104,11 @@
                  * Share the URL.
                  */
                 const href = window.location.href;
-                const button = document.getElementById('copy-button');
                 const input = document.getElementById('href-input');
-
+                const copyButton = document.getElementById('copy-button');
                 input.value = href;
-                button.addEventListener('click', () => {
+
+                copyButton.addEventListener('click', () => {
                     navigator.clipboard.writeText(href).catch(window.console.error);
                     setTimeout(() => modal.close(), 300);
                 });
@@ -131,38 +121,66 @@
                 });
             } ())
         </script>
+
         <script>
+            /**
+             * Collapse-expand embedded audio frame. Make it auto-play on expand.
+             */
             (function() {
-                var embeds = document.querySelectorAll('a[data-embed]');
-                embeds.forEach(a => {
-                    var p = document.createElement('p');
-                    p.style.display = 'none';
-                    p.innerHTML = a.getAttribute('data-embed');;
-                    a.parentNode.parentNode.insertBefore(p, null);
+                const embeds = document.querySelectorAll('[data-embed]');
 
-                    a.addEventListener('click', e => {
-                        e.preventDefault();
+                embeds.forEach((elem) => {
+                    const frameContainer = elem.parentNode.querySelector('.Collapse');
 
-                        var iframe = a.parentNode.parentNode.querySelector("iframe");
-                        var p = iframe.parentNode;
+                    elem.addEventListener('click', () => {
+                        const isShown = frameContainer.classList.contains('Collapse__show');
+                        const iFrame = elem.parentNode.querySelector('iframe');
+                        const player = SC.Widget(iFrame);
 
-                        if (p.style.display === 'none') {
-                            iframe.parentNode.style.display = 'block';
-                            var player = SC.Widget(iframe);
-                            player.bind(SC.Widget.Events.READY, function() {
-                                player.play();
-                            });
-                        } else {
-                            iframe.parentNode.style.display = 'none';
-                            var player = SC.Widget(iframe);
-                            player.bind(SC.Widget.Events.READY, function() {
-                                player.pause();
-                            });
-                        }
+                        elem.classList.toggle('show');
+                        frameContainer.classList.toggle('Collapse__show');
+
+                        player.bind(SC.Widget.Events.READY, () =>
+                            isShown ? player.pause() : player.play()
+                        );
                     });
                 });
             })();
         </script>
+
+        <script>
+            /**
+             * Collapse-expand verse translations.
+             */
+            (function () {
+                const toggle = document.getElementById('toggle-checkbox');
+                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
+
+                toggle.addEventListener('change', () =>
+                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
+                );
+            })();
+        </script>
+
+        <script>
+            /**
+             * Show modal window with translation variations.
+             */
+            (function () {
+                const btn = document.getElementById('variants-button');
+                btn.onclick = () => modal.open();
+
+                const modal = new tingle.modal({
+                    footer: false,
+                    stickyFooter: false,
+                    closeMethods: ['overlay', 'button', 'escape'],
+                    cssClass: ['AppModal']
+                });
+
+                modal.setContent(`<%- include(paths.toPartials + "/song-translations.ejs"); %>`);
+            }) ();
+        </script>
+
         <%- include(paths.toPartials + '/gtag.ejs'); %>
     </body>
 </html>

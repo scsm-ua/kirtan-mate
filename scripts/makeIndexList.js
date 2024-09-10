@@ -5,6 +5,7 @@ const deburr = require('lodash.deburr');
  * Converts the list of categories into the index list. The primary letters
  * and the alias names are sorted alphabetically.
  * @param categories: TCategory[]
+ * @param index
  * @returns {TCategory[]}
  */
 function makeIndexList(categories, index) {
@@ -54,6 +55,7 @@ function makeIndexList(categories, index) {
  * Checking for the aliasNames that are prefixed with words
  * in brackets, such as `(кіба) джая...`. Making duplicates for them.
  * @param items: TCategoryItem[]
+ * @param index
  * @returns {TCategoryItem[]}
  */
 function makeLineVersions(items, index) {
@@ -109,8 +111,8 @@ function processLineEnding(line) {
  * @returns {string}
  */
 function getFirstLetter(item) {
-    return (item.aliasName.startsWith('(') 
-            || item.aliasName.startsWith('‘') 
+    return (item.aliasName.startsWith('(')
+            || item.aliasName.startsWith('‘')
             || item.aliasName.startsWith('«'))
         ? item.aliasName[1]
         : item.aliasName[0];

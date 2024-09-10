@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="<%= paths.toCss %>/partials/song-book-title.css" />
+
+<section class="SongBookTitle">
+    <div class="SongBookTitle__content">
+        <div class="SongBookTitle__box">
+            <img
+                    alt=""
+                    class="SongBookTitle__image"
+                    srcset="
+                        <%= paths.toImages %>/banner/small-banner-<%= songbook_id %>.png 1x,
+                        <%= paths.toImages %>/banner/small-banner-<%= songbook_id %>@2.png 2x
+                    "
+                    src="<%= paths.toImages %>/banner/small-banner-<%= songbook_id %>.png"
+            >
+        </div>
+
+        <div class="SongBookTitle__info">
+            <h3 class="SongBookTitle__title">
+                <%= title %>
+            </h3>
+
+            <div class="SongBookTitle__subtitle ellipsis">
+                <%= subtitle %>
+            </div>
+        </div>
+    </div>
+</section>

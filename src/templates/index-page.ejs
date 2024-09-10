@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- headParts %>
+
+        <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
+        <link rel="stylesheet" href="<%= paths.toCss %>/book-list-page.css" />
+        <script src="<%= paths.toJs %>/user-choice.js"></script>
+    </head>
+    <body>
+        <div class="Layout">
+            <div class="Layout__content">
+                <%- include(paths.toPartials + '/header.ejs'); %>
+
+                <main class="Main BookListPage">
+                    <div class="BookListPage__container">
+                        <div class="Main__content BookListPage__content">
+                            <ul class="BookListPage__list">
+
+                                <% songbooks.forEach((songbook) => { %>
+                                    <li
+                                            class="BookListPage__item"
+                                            data-book-id="<%= songbook.slug %>"
+                                            onclick="handleBookChoice(event)"
+                                    >
+                                        <a href="<%= songbook.href %>" class="BookListPage__link">
+                                            <div class="BookListPage__ratio app-fixed-ratio-container">
+                                                <div class="app-fixed-ratio-content">
+                                                    <div class="BookListPage__box">
+                                                        <img
+                                                                alt=""
+                                                                class="BookListPage__image"
+                                                                srcset="
+                                                                    <%= paths.toImages %>/banner/banner-<%= songbook.slug %>.png 1x,
+                                                                    <%= paths.toImages %>/banner/banner-<%= songbook.slug %>@2.png 2x
+                                                                "
+                                                                src="<%= paths.toImages %>/banner/banner-<%= songbook.slug %>.png"
+                                                        >
+                                                    </div>
+
+                                                    <div class="BookListPage__info">
+                                                        <h4 class="BookListPage__title">
+                                                            <%= songbook.title %>
+                                                        </h4>
+
+                                                        <div class="ellipsis BookListPage__subtitle">
+                                                            <%= songbook.subtitle %>
+                                                        </div>
+
+                                                        <div class="BookListPage__count">
+                                                            <%= songbook.songsCount %> <%= i18n('BOOK_LIST_PAGE.SONG_COUNT') %>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                <% }); %>
+
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <%- include(paths.toPartials + '/footer.ejs'); %>
+        </div>
+
+        <%- include(paths.toPartials + '/gtag.ejs'); %>
+    </body>
+</html>

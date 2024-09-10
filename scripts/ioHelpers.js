@@ -49,8 +49,16 @@ async function writeFile(pathTo, fileName, content) {
     }
 }
 
+/**
+ * If a value is object.
+ */
+function isObject(x) {
+    return typeof x === 'object' && !Array.isArray(x) && x !== null;
+}
+
 /**/
 module.exports = {
+    isObject,
     readDir,
     readFile,
     writeFile

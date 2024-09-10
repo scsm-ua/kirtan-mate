@@ -2,7 +2,11 @@
 
 
 .IndexPage {
-    background-color: var(--index-bg-color);
+    background-color: var(--main-bg-color);
+
+    &__title {
+        padding: 24px var(--side-padding) var(--side-padding);
+    }
 
     &__navigation {
         display: flex;
@@ -10,7 +14,7 @@
         justify-content: space-between;
         padding: 24px calc(var(--side-padding) / 2);
 
-        @include breakpoint(xs-up) {
+        @include breakpoint_obsolete(xs-up) {
             justify-content: space-around;
         }
     }

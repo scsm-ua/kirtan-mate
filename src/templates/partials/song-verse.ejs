@@ -1,6 +1,6 @@
 <% if (item.subtitle && item.subtitle.length) { %>
     <li class="SongVerse">
-        <% item.subtitle.forEach((item, idx) => { %>
+        <% item.subtitle.forEach((item) => { %>
             <div class="SongPage__subtitle">
                 <%= item %>
             </div>
@@ -9,11 +9,6 @@
 <% } %>
 
 <li class="SongVerse">
-    <link
-        rel="stylesheet"
-        href="<%= paths.toCss %>/partials/song-verse.css"
-    />
-
     <% if (verses.length > 1 && item.number) { %>
         <header class="SongVerse__header">
             <h6 class="SongVerse__title">
@@ -37,14 +32,16 @@
     <% } %>
 
     <% if (item.translation.length) { %>
-        <ul class="SongVerse__translation">
-            <% item.translation.forEach((p) => { %>
-                <li class="SongVerse__paragraph">
-                    <p>
-                        <%- p %>
-                    </p>
-                </li>
-            <% }) %>
-        </ul>
+        <div class="Collapse Collapse__show" data-elem="translation">
+            <ul class="SongVerse__translation">
+                <% item.translation.forEach((p) => { %>
+                    <li class="SongVerse__paragraph">
+                        <p>
+                            <%- p %>
+                        </p>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
     <% } %>
 </li>

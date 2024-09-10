@@ -1,4 +1,4 @@
-var fs = require('fs');
+const fs = require('fs');
 
 const ejs = require('gulp-ejs');
 const gulp = require('gulp');
@@ -13,18 +13,18 @@ require('dotenv').config();
 
 /**/
 const { createHeadParts, createSongXMLParts } = require('./scripts/createHeadParts');
+const { getContentsJSON } = require('./scripts/indexGenerator');
 const {
     getJSONContentsStream,
     getJSONIndexStream,
     makeSongHTML,
     md2jsonConvertor
 } = require('./scripts/songConvertor');
-const { makeIndexList } = require('./scripts/makeIndexList');
-const { PATHS } = require('./scripts/constants');
+const { getNavigationPaths, getTemplatePaths } = require('./scripts/utils');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
-const { i18n } = require('./scripts/i18n');
-const { getTemplatePaths } = require('./scripts/utils');
-const { getIndexJSON, getContentsJSON } = require('./scripts/indexGenerator');
+const { getTranslationsBy } = require('./scripts/i18n');
+const { makeIndexList } = require('./scripts/makeIndexList');
+const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
@@ -79,15 +79,15 @@ gulp.task('html', (done) => {
                     })
                 )
                 .pipe(gulp.dest(BUILD.getSongbookRoot(songbook_id)), done);
-        
-        task.displayName = "html " + songbook_id;
+
+        task.displayName = 'html ' + songbook_id;
         return task;
     });
 
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
 /**
@@ -115,7 +115,7 @@ gulp.task('md2json', (done) => {
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
 /**
@@ -131,7 +131,7 @@ gulp.task('generate-contents', (done) => {
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
 /**
@@ -147,179 +147,374 @@ gulp.task('generate-index', (done) => {
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
-function getSongooksRenderContext(options) {
-    var songbooks = getSongbookIdList().map(songbook_id => {
+
+/**
+ *
+ */
+function getCommonPageContext(bookId) {
+    const tr = getTranslationsBy(bookId);
+
+    const songbooks = getSongbookIdList().map((songbook_id) => {
+        const info = getSongbookInfo(songbook_id);
+        const songsCount =  getContentsJSON(songbook_id)
+            .flatMap((cat) => cat.items).length;
+
         return {
-            title: getSongbookInfo(songbook_id).title,
-            subtitle: getSongbookInfo(songbook_id).subtitle,
-            contentsPath: PATHS.PAGES.getIndex(songbook_id),
-            songsCount: getContentsJSON(songbook_id).flatMap((cat) => cat.items).length
+            href: getNavigationPaths(songbook_id).CONTENTS,
+            isSelected: false,
+            slug: songbook_id,
+            songsCount: songsCount,
+            subtitle: info.subtitle,
+            title: info.title
         };
     });
-
-    const headParts = {
-        // TODO: ??
-        title: 'Vaishnava Songbook',
-        // TODO: ??
-        description: 'Vaishnava Songbook',
-        path: PATHS.PAGES.INDEX,
-        is404: !!options?.is404
-    };
 
     const paths = {
         toJs: PATHS.RELATIVE.JS,
         toCss: PATHS.RELATIVE.CSS,
         toImages: PATHS.RELATIVE.IMG,
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
-        toPages: {
-            index: PATHS.PAGES.INDEX
-        }
+        toPages: getNavigationPaths(bookId)
     };
 
     return {
+        i18n: tr,
+        paths: paths,
         songbooks: songbooks,
-        headParts: createHeadParts(headParts),
-        paths: paths
+        songbooksAsOptions: songbooks
     };
 }
 
-/**
- *
- */
-gulp.task('songbooks', (done) => {
-    return gulp
-            .src([SRC.EJS_FILES + '/' + FILES.EJS.SONGBOOKS])
-            .pipe(
-                ejs(getSongooksRenderContext()).on('error', console.error)
-            )
-            .pipe(
-                rename({
-                    basename: 'index',
-                    extname: '.html'
-                })
-            )
-            .pipe(gulp.dest(BUILD.ROOT), done);
-});
 
 /**
- *
- */
-gulp.task('404', (done) => {
-    return gulp
-            .src([SRC.EJS_FILES + '/' + FILES.EJS.NOT_FOUND])
-            .pipe(
-                ejs(getSongooksRenderContext({is404: true})).on('error', console.error)
-            )
-            .pipe(
-                rename({
-                    basename: '404',
-                    extname: '.html'
-                })
-            )
-            .pipe(gulp.dest(BUILD.ROOT), done);
-});
+ * Path `/{bookId}/index.html`;
+ * */
+gulp.task('songbook-list', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const headParts = createHeadParts({
+            title: tr('BOOK_LIST_PAGE.HEAD.TITLE'),
+            description: tr('BOOK_LIST_PAGE.HEAD.DESCRIPTION'),
+            path: getNavigationPaths(songbook_id).BOOK_LIST
+        });
 
-/**
- *
- */
-gulp.task('songbook-contents', (done) => {
-    const tasks = getSongbookIdList().map(songbook_id => {
-
-        var current_i18n = i18n(songbook_id);
-
-        const headParts = {
-            title: current_i18n('Contents'),
-            description: current_i18n('Vaishnava Songbook'),
-            path: PATHS.PAGES.getIndex(songbook_id)
+        const values = {
+            headParts: headParts,
+            ...getCommonPageContext(songbook_id)
         };
 
-        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.CONTENTS} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX}`;
-    
-        var task = (done) => gulp
-            .src(SRC.EJS_FILES + '/' + FILES.EJS.CONTENTS)
+        const task = (done) => gulp
+            .src([SRC.EJS_FILES + '/' + FILES.EJS.BOOK_LIST_PAGE])
+            .pipe(
+                ejs(values).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.BOOK_LIST,
+                    dirname: songbook_id,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done);
+
+        task.displayName = 'index ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+
+/**
+ *  Path `/{bookId}/404.html`;
+ */
+gulp.task('404', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+
+        const headParts = createHeadParts({
+            title: tr('NOT_FOUND_PAGE.HEAD.TITLE'),
+            description: tr('NOT_FOUND_PAGE.HEAD.DESCRIPTION'),
+            path: PATHS.PAGES.NOT_FOUND,
+            is404: true
+        });
+
+        const values = {
+            headParts: headParts,
+            ...getCommonPageContext(songbook_id)
+        };
+
+        const task = (done) => gulp
+            .src([SRC.EJS_FILES + '/' + FILES.EJS.NOT_FOUND_PAGE])
+            .pipe(
+                ejs(values).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.NOT_FOUND,
+                    dirname: songbook_id,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done);
+
+        task.displayName = '404 ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+
+/**
+ * Path `/{bookId}/search.html`;
+ */
+gulp.task('search-page', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const headParts = {
+            title: tr('SEARCH_PAGE.HEAD.TITLE'),
+            description: tr('SEARCH_PAGE.HEAD.DESCRIPTION'),
+            path: getNavigationPaths(songbook_id).SEARCH
+        };
+
+        const pages = getContentsJSON(songbook_id)
+            .flatMap(({ items }) =>
+                items.map((item) => ({
+                    page: item.page,
+                    path: item.fileName,
+                    title: item.title
+                }))
+            )
+            .filter(page => page.page)
+            .sort((a, b) =>
+                parseFloat(a.page) - parseFloat(b.page)
+            );
+
+        const task = (taskDone) => gulp
+                .src([SRC.EJS_FILES + '/' + FILES.EJS.SEARCH_PAGE])
+                .pipe(
+                    ejs({
+                        headParts: createHeadParts(headParts),
+                        i18n: tr,
+                        pages: pages,
+                        paths: getTemplatePaths(songbook_id),
+                        search: SEARCH_CONST
+                    }).on('error', console.error)
+                )
+                .pipe(
+                    rename({
+                        basename: BASE_FILE_NAMES.SEARCH,
+                        dirname: songbook_id,
+                        extname: '.html'
+                    })
+                )
+                .pipe(gulp.dest(BUILD.ROOT), taskDone);
+
+        task.displayName = 'search-page ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+
+/**
+ * Path `/{bookId}/contents.html`;
+ * */
+gulp.task('songbook-contents', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const info = getSongbookInfo(songbook_id);
+
+        const headParts = {
+            title: tr('CONTENTS_PAGE.HEAD.TITLE'),
+            description: tr('CONTENTS_PAGE.HEAD.DESCRIPTION'),
+            path: getNavigationPaths(songbook_id).CONTENTS
+        };
+
+        const task = (done) => gulp
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.CONTENTS_PAGE)
             .pipe(
                 ejs({
                     categories: require(BUILD.getContentsFile(songbook_id)),
                     headParts: createHeadParts(headParts),
+                    i18n: tr,
                     paths: getTemplatePaths(songbook_id),
-                    i18n: current_i18n
+                    songbook_id: songbook_id,
+                    subtitle: info.subtitle,
+                    title: info.title
                 }).on('error', console.error)
             )
-            .pipe(gulp.dest(BUILD.ROOT))
-            // TODO: use rename?
-            .pipe(shell([extChangeCmd]), done);
-        task.displayName = "songbook-contents " + songbook_id;
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.CONTENTS,
+                    dirname: songbook_id,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done);
+
+        task.displayName = 'songbook-contents ' + songbook_id;
         return task;
     });
 
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
+
 /**
- *
+ * Path `/{bookId}/a-z.html`;
  */
-gulp.task('songbook-index', (done) => {
-    const tasks = getSongbookIdList().map(songbook_id => {
+gulp.task('songbook-a-z', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const info = getSongbookInfo(songbook_id);
 
         const headParts = {
-            title: i18n(songbook_id)('Index'),
-            description: i18n(songbook_id)('Vaishnava Songbook'),
-            path: PATHS.PAGES.getIndexList(songbook_id)
+            title: tr('A_Z_PAGE.HEAD.TITLE'),
+            description: tr('A_Z_PAGE.HEAD.DESCRIPTION'),
+            path: getNavigationPaths(songbook_id).A_Z
         };
 
-        const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.INDEX_LIST} ${BUILD.ROOT}/${songbook_id}/${FILES.HTML.INDEX_LIST}`;
+        const items = makeIndexList(
+            require(BUILD.getContentsFile(songbook_id)),
+            require(BUILD.getIndexFile(songbook_id))
+        );
 
-        var task = (done) => gulp
-            .src(SRC.EJS_FILES + '/' + FILES.EJS.INDEX_LIST)
+        const task = (done) => gulp
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.A_Z_PAGE)
             .pipe(
                 ejs({
-                    items: makeIndexList(require(BUILD.getContentsFile(songbook_id)), require(BUILD.getIndexFile(songbook_id))),
                     headParts: createHeadParts(headParts),
+                    i18n: tr,
+                    items: items,
                     paths: getTemplatePaths(songbook_id),
-                    i18n: i18n(songbook_id)
+                    songbook_id: songbook_id,
+                    subtitle: info.subtitle,
+                    title: info.title
                 }).on('error', console.error)
             )
-            .pipe(gulp.dest(BUILD.ROOT + ''))
-            // TODO: use rename?
-            .pipe(shell([extChangeCmd]), done);
-        task.displayName = "songbook-index " + songbook_id;
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.A_Z,
+                    dirname: songbook_id,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done)
+
+        task.displayName = 'songbook-a-z ' + songbook_id;
         return task;
     });
 
     return gulp.series(...tasks, (seriesDone) => {
         seriesDone();
         done();
-    })(); 
+    })();
 });
 
+
 /**
- *
+ * Paths:
+ *  `/a-z.html`         A_Z
+ *  `/index.html`       BOOK_LIST
+ *  `/contents.html`    CONTENTS
+ *  `/404.html`         NOT_FOUND
+ *  `/search.html`      SEARCH
+ */
+gulp.task('redirect-pages', (done) => {
+    const bookIdList = getSongbookIdList().join(',');
+
+    const pagePaths = [
+        PAGES.A_Z,
+        PAGES.BOOK_LIST,
+        PAGES.CONTENTS,
+        PAGES.NOT_FOUND,
+        PAGES.SEARCH
+    ];
+
+    const nameMap = {
+        [PAGES.A_Z]: BASE_FILE_NAMES.A_Z,
+        [PAGES.BOOK_LIST]: BASE_FILE_NAMES.BOOK_LIST,
+        [PAGES.CONTENTS]: BASE_FILE_NAMES.CONTENTS,
+        [PAGES.NOT_FOUND]: BASE_FILE_NAMES.NOT_FOUND,
+        [PAGES.SEARCH]: BASE_FILE_NAMES.SEARCH
+    };
+
+    const tasks = pagePaths.map((pagePath) => {
+        const task = (done) => gulp
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.REDIRECT_PAGE)
+            .pipe(
+                ejs({
+                    origin: PATHS.ORIGIN,
+                    bookIdList: bookIdList,
+                    pagePath: pagePath
+                }).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: nameMap[pagePath],
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done);
+
+        task.displayName = 'redirect-page ' + pagePath;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+
+/**
+ * Path `/{bookId}/sitemap.xml`;
  */
 gulp.task('sitemap', (done) => {
-    const extChangeCmd = `mv ${BUILD.ROOT}/${FILES.EJS.SITEMAP} ${BUILD.ROOT}/${FILES.XML.SITEMAP}`;
+    let content = '';
 
-    var songList = getSongbookIdList().map(songbook_id => {
-        return createSongXMLParts(songbook_id, require(BUILD.getContentsFile(songbook_id)))
-    }).join('\n');
+    getSongbookIdList().forEach((bookId) =>
+        content += createSongXMLParts(
+            bookId,
+            require(BUILD.getContentsFile(bookId))
+        )
+    );
 
     return gulp
         .src(SRC.EJS_FILES + '/' + FILES.EJS.SITEMAP)
         .pipe(
             ejs({
-                root: encodeURI(PATHS.PAGES.INDEX),
-                songList: songList,
-                i18n: i18n
+                content: content
             }).on('error', console.error)
         )
-        .pipe(gulp.dest(BUILD.ROOT))
-        .pipe(shell([extChangeCmd]), done);
+        .pipe(
+            rename({
+                basename: BASE_FILE_NAMES.SITEMAP,
+                extname: '.xml'
+            })
+        )
+        .pipe(gulp.dest(BUILD.ROOT), done);
 });
+
 
 /**
  *
@@ -329,7 +524,7 @@ gulp.task('robots', (done) => {
         .src(SRC.EJS_FILES + '/' + FILES.EJS.ROBOTS)
         .pipe(
             ejs({
-                sitemap: encodeURI(PATHS.PAGES.SITEMAP)
+                sitemap: encodeURI(FILES.SITEMAP)
             }).on('error', console.error)
         )
         .pipe(
@@ -341,10 +536,12 @@ gulp.task('robots', (done) => {
         .pipe(gulp.dest(BUILD.ROOT), done);
 });
 
+
 /**
  *
  */
 gulp.task('clean', shell.task('rm -rf docs'));
+
 
 /**
  *
@@ -360,15 +557,18 @@ gulp.task('build', (done) => {
         'generate-contents',
         'generate-index',
         'html',
+        'search-page',
         'songbook-contents',
-        'songbook-index',
+        'songbook-a-z',
         'sitemap',
-        'songbooks',
+        'songbook-list',
         '404',
+        'redirect-pages',
         'robots',
         done
     );
 });
+
 
 /**
  *
@@ -376,7 +576,7 @@ gulp.task('build', (done) => {
 gulp.task('watch', () => {
     gulp.watch(SRC.CSS_FILES + '/**/*.scss', gulp.series(['sass']));
     gulp.watch(
-        [SRC.MD_FILES + '/**/*.md', SRC.EJS_FILES + '/**/*.ejs'],
-        gulp.series(['html', 'songbook-contents', 'songbook-index', 'songbooks'])
+        [SRC.EJS_FILES + '/**/*.ejs'],
+        gulp.series(['html', 'songbook-contents', 'songbook-a-z', 'songbooks'])
     );
 });
