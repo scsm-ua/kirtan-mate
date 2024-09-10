@@ -1,0 +1,1275 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    
+        <title>Вайшнавский песенник | Kirtan Site</title>
+        <link rel="canonical" href="https://kirtan.sitehttps://kirtan.site/ru/search.html" />
+        <meta name="description" content="Страница поиска" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property="og:title" content="Вайшнавский песенник" />
+        <meta property="og:description" content="Страница поиска" />
+        <meta property="og:url" content="https://kirtan.sitehttps://kirtan.site/ru/search.html" />
+        <meta property="og:locale" content="ua_UA" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Kirtan Site" />
+        <meta property="og:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta property="og:image:width" content="648" />
+        <meta property="og:image:height" content="488" />
+        <meta property="og:image:type" content="image/png" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta name="twitter:title" content="Вайшнавский песенник" />
+        <meta name="twitter:description" content="Страница поиска" />
+
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://kirtan.site/#website","url":"https://kirtan.site/","name":"Kirtan Site","description":"Страница поиска","inLanguage":"en-GB"},{"@type":"CollectionPage","@id":"https://kirtan.sitehttps://kirtan.site/ru/search.html","url":"https://kirtan.sitehttps://kirtan.site/ru/search.html","name":"Вайшнавский песенник","isPartOf":{"@id":"https://kirtan.site/#website"}}]}</script>
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="https://kirtan.site/css/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="https://kirtan.site/css/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="https://kirtan.site/css/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="https://kirtan.site/css/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="https://kirtan.site/css/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="https://kirtan.site/css/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="https://kirtan.site/css/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="https://kirtan.site/css/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://kirtan.site/css/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="https://kirtan.site/css/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://kirtan.site/css/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="https://kirtan.site/css/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://kirtan.site/css/favicon/favicon-16x16.png">
+        <link rel="manifest" href="https://kirtan.site/css/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="https://kirtan.site/css/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+    
+
+    <link rel="stylesheet" href="https://kirtan.site/css/index.css" />
+    <link rel="stylesheet" href="https://kirtan.site/css/search-page.css" />
+</head>
+
+<body>
+    <div class="Layout">
+        <div class="Layout__content">
+            <header class="Header">
+    <link
+        rel="stylesheet"
+        href="https://kirtan.site/css/partials/header.css"
+    />
+
+    <div class="Header__container">
+        <div class="Header__content">
+            <a href="https://kirtan.site/ru/" class="Header__home">
+                <img
+                    alt="Home"
+                    class="Header__logo"
+                    src="https://kirtan.site/css/svg/kirtan-site.svg"
+                />
+            </a>
+        </div>
+    </div>
+</header>
+
+
+            <main class="Main SearchPage">
+                <div class="Main__container SearchPage__container">
+                    <header class="SearchPage__header">
+                        <div class="SearchPage__search">
+                            <input
+                                    autofocus
+                                    class="SearchPage__input"
+                                    id="search-input"
+                                    placeholder="Найти песню"
+                                    type="text"
+                            >
+
+                            <button
+                                    class="NoBorderButton SearchPage__clear"
+                                    id="clear-button"
+                                    title="Очистить"
+                            >
+                                <span class="icon-xmark-large"></span>
+                            </button>
+                        </div>
+
+                        <button
+                                class="RoundButton RoundButton--dark SearchPage__submit"
+                                id="submit-button"
+                                title="Найти"
+                        >
+                            <span class="icon-search"></span>
+                        </button>
+                    </header>
+
+                    <div class="SearchPage__content">
+                        <div class="SearchPage__nothing" id="nothing-found-div">
+                            Ничего не найдено.
+                        </div>
+
+                        <ul class="SearchPage__results" id="result-list"></ul>
+
+                        <div class="SearchPage__more" id="show-more-button">
+                            <button class="RoundButton RoundButton--dark">
+                                Загрузить еще
+                            </button>
+                        </div>
+
+                        <div class="SearchPage__pages visible" id="page-list">
+                            <h6 class="SearchPage__pagesTitle">
+                                Список страниц
+                            </h6>
+
+                            <ul class="">
+                                <li class="SearchPage__pills">
+                                    
+                                        <a class="SearchPage__pill" href="intro.html" title="Введение">
+                                            <button class="SearchPage__page">
+                                                8
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="vande-ham-shri-guroh-shri-yuta-pada-kamalam.html" title="Вандана">
+                                            <button class="SearchPage__page">
+                                                11
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="vande-vaikuntha-vritti-stham.html" title="Шрила Бхакти Бимал Авадхут Махарадж">
+                                            <button class="SearchPage__page">
+                                                11/1
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="goswaminam-sudhirakhyam.html" title="Шрила Бхакти Судхир Госвами Махарадж">
+                                            <button class="SearchPage__page">
+                                                11/2
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="pujya-sri-guru-varga-vandita.html" title="Шрила Бхакти Нирмал Ачарья Махарадж">
+                                            <button class="SearchPage__page">
+                                                12
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gurvabhishta-supurakam-guru-ganair.html" title="Шрила Бхакти Сундар Говинда Дев-Госвами Махарадж">
+                                            <button class="SearchPage__page">
+                                                13
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="devam-divya-tanum-suchanda-vadanam-balarka-chelanchitam.html" title="Шрила Бхакти Ракшак Шридхар Дев-Госвами Махрадж">
+                                            <button class="SearchPage__page">
+                                                14
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shri-siddhanta-sarasvatiti-vidito.html" title="Бхагаван Шрила Бхактисиддханта Сарасвати">
+                                            <button class="SearchPage__page">
+                                                15
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="namo-gaurakishoraya-bhaktavadhuta-murtaye.html" title="Шрила Гауракишор Дас Бабаджи Махарадж">
+                                            <button class="SearchPage__page">
+                                                16
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="vande-bhaktivinodam-shri-gaura-shiakti-svarupakam.html" title="Шрила Бхактивинод Тхакур">
+                                            <button class="SearchPage__page">
+                                                17
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gaura-vrajashritashieshair-vaishnavair-vandya-vigraham.html" title="Шрила Джаганнатх Дас Бабаджи Махарадж">
+                                            <button class="SearchPage__page">
+                                                18
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="vancha-kalpatarubhyas-cha.html" title="Молитвы, обращенные к вайшнавам">
+                                            <button class="SearchPage__page">
+                                                19
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jayatam-suratau-pangor.html" title="Шри Шри Гуру-Гауранга Радха-Мадан-Моханджиу">
+                                            <button class="SearchPage__page">
+                                                19
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="divyad-vrindaranya-kalpa-drumadhah.html" title="Шри-Шри-Гуру-Гауранга-Гандхарва-Говиндасундарджиу">
+                                            <button class="SearchPage__page">
+                                                20
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shriman-rasa-rasarambhi.html" title="Шри-Шри-Гуру-Гауранга-Радха-Гопинатхаджиу">
+                                            <button class="SearchPage__page">
+                                                21
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="vrindayai-tulasi-devyai.html" title="Туласи пранам мантра">
+                                            <button class="SearchPage__page">
+                                                21
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="sakala-vaishnava-pade-mora-namaskara.html" title="Молитва, обращенная к вайшнавам">
+                                            <button class="SearchPage__page">
+                                                21
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-sa-parikara.html" title="Джайа Дхвани">
+                                            <button class="SearchPage__page">
+                                                22
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shri-krishna-chaitanya-prabhu-nityananda.html" title="Панча-таттва мантра">
+                                            <button class="SearchPage__page">
+                                                24
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="hare-krishna-hare-krishna-krishna-krishna-hare-hare.html" title="Харе Кршна маха-мантра">
+                                            <button class="SearchPage__page">
+                                                24
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="hari-nama-mahamantra-sarva-mantra-sara.html" title="Даша-видха Намапарадха">
+                                            <button class="SearchPage__page">
+                                                26
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-jaya-girirajer-arati-vishiala.html" title="Гупта Говардхан Арати">
+                                            <button class="SearchPage__page">
+                                                32
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-jaya-girirajer-arotiko-shobha.html" title="Шри Шри Гирирадж-Говардхан Арати">
+                                            <button class="SearchPage__page">
+                                                34
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-guru-maharaja-karuna-sagara.html" title="Шри Шри Нитаи-Чаитанйа-Арати">
+                                            <button class="SearchPage__page">
+                                                36
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="kali-kukkura-kadana-jadi-chao-he.html" title="Прабхати Гити">
+                                            <button class="SearchPage__page">
+                                                38
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="udilo-aruna-puraba-bhage.html" title="Арунодойа-киртан (часть 1)">
+                                            <button class="SearchPage__page">
+                                                42
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jiv-jago-jiv-jago-gaurachanda-bole.html" title="Арунодойа-киртан (часть 2)">
+                                            <button class="SearchPage__page">
+                                                43
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="samsara-davanala-lidha-loka.html" title="Шри Шри Гурваштака">
+                                            <button class="SearchPage__page">
+                                                48
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shri-krishna-chaitanya-prabhu-jive-daya-kori.html" title="Шаранагати">
+                                            <button class="SearchPage__page">
+                                                50
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="bhaja-re-bhaja-re-amar-mana-ati-manda.html" title="Бхаджан-гити">
+                                            <button class="SearchPage__page">
+                                                51
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="vibhavari-shiesha-aloka-praveshia.html" title="Вибхавари Шеша">
+                                            <button class="SearchPage__page">
+                                                52
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="thakura-vaishnava-gana-kori-ei-nivedana.html" title="Тхакура-ваишнава-гана">
+                                            <button class="SearchPage__page">
+                                                54
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="hari-haraye-namah-krishna-yadavaya-namah.html" title="Нама-санкиртан">
+                                            <button class="SearchPage__page">
+                                                55
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="bhaja-bhakata-vatsala-shri-gaurahari.html" title="Шри Бхога-арати Гити">
+                                            <button class="SearchPage__page">
+                                                58
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jashomati-nandana-vraja-vara-nagara.html" title="Шри Нама-Киртан">
+                                            <button class="SearchPage__page">
+                                                60
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-shiachinandana-sura-muni-vandana.html" title="Шри Шачинандана-вандана">
+                                            <button class="SearchPage__page">
+                                                61
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="mahaprasade-govinde-nama-brahmani.html" title="Махапрасада">
+                                            <button class="SearchPage__page">
+                                                62
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="bhai-re-shorira-avidya-jal-jodendriya-tahe-kal.html" title="Шри Прасада-севайа Гити">
+                                            <button class="SearchPage__page">
+                                                62
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-jaya-gaurachander-arotiko-shobha.html" title="Шри Гаура-арати">
+                                            <button class="SearchPage__page">
+                                                64
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jayare-jayare-jaya-gaura-sarasvati.html" title="Шри Сарасват-арати">
+                                            <button class="SearchPage__page">
+                                                66
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gurudeva-kripa-bindu-diya-kara-ei-dase.html" title="Гурудев">
+                                            <button class="SearchPage__page">
+                                                68
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="namo-namah-tulasi-maharani.html" title="Шри Туласи-парикрама-гити">
+                                            <button class="SearchPage__page">
+                                                69
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-jaya-gurudever-arati-ujjvala.html" title="Шри Гуру Арати">
+                                            <button class="SearchPage__page">
+                                                70
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-guru-maharaja-jati-rajeshvara.html" title="Шри Гуру Арати-стути">
+                                            <button class="SearchPage__page">
+                                                72
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shri-guru-charana-padma-kevala-bhakati.html" title="Шри Гуру-ваишнава Махатмйа-гити">
+                                            <button class="SearchPage__page">
+                                                74
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shri-krishna-chaitanya-prabhu-daya-kara-more.html" title="Саварана-Шри-Гаура-пада-падме Прартхана">
+                                            <button class="SearchPage__page">
+                                                75
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="vaishnava-thakura-dayara-sagara.html" title="Шри Ваишнава-махима-гити">
+                                            <button class="SearchPage__page">
+                                                76
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="sujanarvuda-radhita-pada-yugam.html" title="Шри Шри Прабхупада-падма Ставаках">
+                                            <button class="SearchPage__page">
+                                                78
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="deva-siddha-mukta-yukta-bhakta-vrinda.html" title="Шри Шри Према-дхама-дева-стотрам">
+                                            <button class="SearchPage__page">
+                                                81
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="nadiya-godrume-nityananda-mahajana.html" title="Аджна-Тахал">
+                                            <button class="SearchPage__page">
+                                                110
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="nitai-pada-kamala-koti-chandra-sushitala.html" title="Манах-шикша">
+                                            <button class="SearchPage__page">
+                                                111
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="dhana-mora-nityananda-pati-mora.html" title="Сва-ништха">
+                                            <button class="SearchPage__page">
+                                                112
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="nitai-gunamani-amara-nitai-gunamani.html" title="Нитаи гунамани амара">
+                                            <button class="SearchPage__page">
+                                                113
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="akrodha-paramananda.html" title="Акродха парамананда">
+                                            <button class="SearchPage__page">
+                                                114
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="parama-karuna-pahu-dui-jana.html" title="Шри Шри Гаура-Нитйанандер Дойа">
+                                            <button class="SearchPage__page">
+                                                115
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="dayal-nitai-chaitanya-bole-nach-re.html" title="Дайал Нитаи Чаитанйа">
+                                            <button class="SearchPage__page">
+                                                116
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="kobe-shri-chaitanya-more-koribena-daya.html" title="Даинйа Прартхана Гити">
+                                            <button class="SearchPage__page">
+                                                118
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gaurangera-duti-pada-jar-dhana-sampada.html" title="Саварана-Шри-Гаура-махима">
+                                            <button class="SearchPage__page">
+                                                119
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gaura-pahu-na-bhajiya-mainu.html" title="Aкшепа">
+                                            <button class="SearchPage__page">
+                                                120
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="avatara-sara-gora-avatara.html" title="Аватара Сара">
+                                            <button class="SearchPage__page">
+                                                121
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gay-gora-madhur-svare.html" title="Шри Нама">
+                                            <button class="SearchPage__page">
+                                                122
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="kobe-gaura-vane-suradhuni-tate.html" title="Сиддхи-лаласа">
+                                            <button class="SearchPage__page">
+                                                123
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="kali-ghora-timire-garasala-jagajana.html" title="Кали-гхора тимире">
+                                            <button class="SearchPage__page">
+                                                124
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jadi-gaura-na-hoto-tobe-ki-hoito.html" title="Джади Гаура на хо’то">
+                                            <button class="SearchPage__page">
+                                                125
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="emona-gauranga-bine-nahi-ara.html" title="Эмона Гауранга бине нахи ара">
+                                            <button class="SearchPage__page">
+                                                126
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="ke-jabi-ke-jabi-bhai-bhava-sindhu-para.html" title="Ке джаби ке джаби">
+                                            <button class="SearchPage__page">
+                                                127
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="bimala-hemajini-tanu-anupama-re.html" title="Бимала хемаджини">
+                                            <button class="SearchPage__page">
+                                                128
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gauranga-bolite-hobe-pulaka-shorira.html" title="Гауранга болите хабе">
+                                            <button class="SearchPage__page">
+                                                129
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="aruna-basane-sonara-suraja.html" title="Шри Шри Гаурасундарер Авирбхава Васаре">
+                                            <button class="SearchPage__page">
+                                                130
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="thakura-vaishnava-pada-avanira.html" title="Тхакура-ваишнава-пада">
+                                            <button class="SearchPage__page">
+                                                134
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="je-anilo-prema-dhana-karuna-prachura.html" title="Вираха-гити">
+                                            <button class="SearchPage__page">
+                                                135
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="ei-vara-karuna-kara-vaishnava-gosani.html" title="Ваишнава Виджнапти">
+                                            <button class="SearchPage__page">
+                                                136
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="kripa-kara-vaishnava-thakura.html" title="Прартхана Лаласамайи">
+                                            <button class="SearchPage__page">
+                                                137
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="narada-muni-bajaya-vina.html" title="Шри Намаштакам 8">
+                                            <button class="SearchPage__page">
+                                                140
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="krishnotkirtana-gana-nartana-parau.html" title="Шри Шри Шад-Госвами-аштакам">
+                                            <button class="SearchPage__page">
+                                                141
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="ohe-harinam-tava-mahima-apara.html" title="Шри Намаштакам 7">
+                                            <button class="SearchPage__page">
+                                                144
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="ki-rupe-paibo-seva-mui-durachara.html" title="Ки-рупе паибо сева">
+                                            <button class="SearchPage__page">
+                                                145
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="bhajahu-re-mana-shri-nanda-nandana.html" title="Бхаджаху Ре Мана">
+                                            <button class="SearchPage__page">
+                                                146
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="manasa-deho-geho-jo-kichu-mora.html" title="Манаса дехо гехо">
+                                            <button class="SearchPage__page">
+                                                147
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="e-ghora-samsare-podiya-manava.html" title="Э гхора самсаре">
+                                            <button class="SearchPage__page">
+                                                148
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="dushta-mana-tumi-kisera-vaishnava.html" title="Ваишнава ке? «Кто подлинный вайшнав?»">
+                                            <button class="SearchPage__page">
+                                                149
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="emona-durmati-samsara-bhitore.html" title="Даинйатмика">
+                                            <button class="SearchPage__page">
+                                                154
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="ki-jani-ki-bale-tomara-dhamete.html" title="Гоптритве Варана">
+                                            <button class="SearchPage__page">
+                                                155
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="bhuliya-tomare-samsare-asiya.html" title="Даинйа">
+                                            <button class="SearchPage__page">
+                                                156
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="hari-he-prapanche-podiya-agati-hoiya.html" title="Бхаджан-Лаласа">
+                                            <button class="SearchPage__page">
+                                                158
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="hari-hari-biphole-janama-goyainu.html" title="Ишта-деве Виджнапти">
+                                            <button class="SearchPage__page">
+                                                159
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="atma-nivedana-tuya-pade-kori.html" title="Атма-ниведана">
+                                            <button class="SearchPage__page">
+                                                160
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="amara-jivana-sada-pape-rata.html" title="Амара дживана">
+                                            <button class="SearchPage__page">
+                                                161
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="tumi-sarveshvareshvara-vrajendra-kumara.html" title="Туми сарвешварешвара">
+                                            <button class="SearchPage__page">
+                                                162
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="sarvasva-tomara-charane-sanpiya.html" title="Сарвасва томара">
+                                            <button class="SearchPage__page">
+                                                163
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="tatala-saikate-vari-bindu-sama.html" title="Татала Саикате">
+                                            <button class="SearchPage__page">
+                                                164
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="hari-he-dayala-mora-jaya-radha-natha.html" title="Даинйа О Прапатти">
+                                            <button class="SearchPage__page">
+                                                165
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="atma-samarpane-gela-abhimana.html" title="Атма-самарпане">
+                                            <button class="SearchPage__page">
+                                                166
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="kobe-hobe-bolo-se-dina-amar.html" title="Кобе хо’бе боло">
+                                            <button class="SearchPage__page">
+                                                167
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gopinath-mama-nivedana-shiuno.html" title="Ниведана (часть 1)">
+                                            <button class="SearchPage__page">
+                                                169
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gopinath-ghuchao-samsara-jvala.html" title="Ниведана (часть 2)">
+                                            <button class="SearchPage__page">
+                                                170
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gopinath-amara-upaya-nai.html" title="Ниведана (часть 3)">
+                                            <button class="SearchPage__page">
+                                                171
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shri-rupa-manjari-pada-sei-mora-sampada.html" title="Шри-Рупа-Манджари-пада">
+                                            <button class="SearchPage__page">
+                                                173
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="durlabha-manava-janma-labhiya-samsare.html" title="Дурлабха манава-джанма">
+                                            <button class="SearchPage__page">
+                                                175
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="anya-abhilasha-chadi-jniana-karma-parihari.html" title="Анйа-абхилаша чхади">
+                                            <button class="SearchPage__page">
+                                                177
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="cheto-darpana-marjanam.html" title="Шри Шикшаштакам">
+                                            <button class="SearchPage__page">
+                                                182
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="pita-varana-kali-pavana-gora.html" title="1. Пита-баран̣а кали">
+                                            <button class="SearchPage__page">
+                                                184
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="tuhu-daya-sagara-tarayite-prani.html" title="2. Туху̐ дойа̄-са̄гара">
+                                            <button class="SearchPage__page">
+                                                185
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shri-krishna-kirtane-jodi-manasa-tohara.html" title="3. Ш́рӣ-кр̣ш̣н̣а-кӣртане">
+                                            <button class="SearchPage__page">
+                                                185
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="prabhu-tava-pada-juge-mora-nivedana.html" title="4. Прабху тава пада">
+                                            <button class="SearchPage__page">
+                                                186
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="anadi-karama-phole.html" title="5. Ана̄ди карама-пхоле">
+                                            <button class="SearchPage__page">
+                                                187
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="aparadha-phole-mama.html" title="6. Апара̄дха-пхоле мама">
+                                            <button class="SearchPage__page">
+                                                188
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gaite-gaite-nama-ki-doshia-hoilo.html" title="7a. Га̄ите га̄ите на̄ма">
+                                            <button class="SearchPage__page">
+                                                189
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="gaite-govinda-nam-upajilo-bhava-gram.html" title="7b. Га̄ите ‘говинда’-на̄м">
+                                            <button class="SearchPage__page">
+                                                190
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="sakhi-go-kemote-dhoribo-paran.html" title="7c. Сакхи го кемоте">
+                                            <button class="SearchPage__page">
+                                                191
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="bondhu-gon-shiunoho-vachana-mora.html" title="8a. Бондху-гон̣! ш́уноха">
+                                            <button class="SearchPage__page">
+                                                191
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="yoga-pithopari-sthita-ashta-sakhi-subeshtita.html" title="8b. Йога-пӣт̣хопари-стхита">
+                                            <button class="SearchPage__page">
+                                                192
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="radhika-charana-padma-sakala-shreyera.html" title="Шри Радхаштака 1">
+                                            <button class="SearchPage__page">
+                                                196
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="virajar-pare-shiuddha-paravyoma-dham.html" title="Шри Радхаштака 2">
+                                            <button class="SearchPage__page">
+                                                197
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="radha-bhajane-jodi-moti-nahi-bhela.html" title="Шри Радхаштака 8">
+                                            <button class="SearchPage__page">
+                                                198
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="radhakundatata-kunjakutira.html" title="Радха-кундатата-кунджа-кутира">
+                                            <button class="SearchPage__page">
+                                                199
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="radhe-jaya-jaya-madhava-dayite.html" title="Шри Радхика-става">
+                                            <button class="SearchPage__page">
+                                                200
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="he-deva-bhavantam-vande.html" title="Хе Дева бхавантам ванде">
+                                            <button class="SearchPage__page">
+                                                202
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="radha-madhava-kunja-bihari.html" title="Джайа Радха-Мадхава">
+                                            <button class="SearchPage__page">
+                                                203
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="mayura-mukuta-pitambara-dhari.html" title="Майура мукута">
+                                            <button class="SearchPage__page">
+                                                203
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-jaya-radha-krishna-jugala-milan.html" title="Шри Джугала-арати">
+                                            <button class="SearchPage__page">
+                                                204
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="radha-krishna-prana-mora-jugala-kishora.html" title="Сакхи-врнде виджнаптих">
+                                            <button class="SearchPage__page">
+                                                205
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-radhe-jaya-krishna-jaya-vrindavan.html" title="Шри Враджа-дхама-махимамрта">
+                                            <button class="SearchPage__page">
+                                                206
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="janama-saphala-tara-krishna-darashiana-jara.html" title="Рупа-киртан">
+                                            <button class="SearchPage__page">
+                                                208
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shiuno-he-rasika-jon-krishna-guna-aganon.html" title="Гуна-киртан">
+                                            <button class="SearchPage__page">
+                                                209
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-yashoda-nandana-krishna-gopala-govinda.html" title="Джайа Джашода-Нандана Кршна">
+                                            <button class="SearchPage__page">
+                                                210
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shrita-kamala-kuchha-mandala-dhrita.html" title="Шрита Камала">
+                                            <button class="SearchPage__page">
+                                                211
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jaya-shrila-maharaja-charanaravinda.html" title="Ачарйа-чарана-вандана">
+                                            <button class="SearchPage__page">
+                                                214
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="krishna-hoite-chatur-mukha.html" title="Шри Гуру-парампара">
+                                            <button class="SearchPage__page">
+                                                216
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="bhayabhanjana-jayashiamsana.html" title="Шри Дайита Дас Пранати Панчакам">
+                                            <button class="SearchPage__page">
+                                                219
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="jayare-jayare-jaya-paramahamsa-mahashiaya.html" title="Ачарйа вандана">
+                                            <button class="SearchPage__page">
+                                                221
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="pralaya-payodhi-jale-dhritavan-asi-vedam.html" title="Шри Дашаватар-стотрам">
+                                            <button class="SearchPage__page">
+                                                225
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="namas-te-narasimhaya.html" title="Шри Нрсимха-пранам">
+                                            <button class="SearchPage__page">
+                                                227
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="namamishvaram-sachchidananda-rupam.html" title="Шри Шри Дамодараштакам">
+                                            <button class="SearchPage__page">
+                                                229
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="nadiya-nagare-nitai-neche-neche-gay-re.html" title="Шриман Махапрабхур шата-нама">
+                                            <button class="SearchPage__page">
+                                                230
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="nagare-nagare-gora-gay.html" title="Шри Кршнера Вимсоттара-шата-нама">
+                                            <button class="SearchPage__page">
+                                                234
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shri-hari-vasare-hari-kirtana-vidhana.html" title="Шри Хари-васара-гити">
+                                            <button class="SearchPage__page">
+                                                238
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shiuddha-bhakata-charana-renu.html" title="Шуддха-бхаката">
+                                            <button class="SearchPage__page">
+                                                240
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="chaudda-shiata-sata-shiake-masa-je-phalgun.html" title="Шри Гаура-пурнима">
+                                            <button class="SearchPage__page">
+                                                242
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="prabhu-kohe-kohilan-ei-mahamantra.html" title="Прабху кохе">
+                                            <button class="SearchPage__page">
+                                                249
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="nagara-bhramiya-amara-gaura-elo-ghore.html" title="После парикрамы">
+                                            <button class="SearchPage__page">
+                                                249
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="radha-krishna-bol-bol-bolo-re-sobai.html" title="Шри Нагара-киртана (песнь 4)">
+                                            <button class="SearchPage__page">
+                                                250
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="hari-bole-modera-gaura-elo.html" title="Шри Нагара-киртана (песнь 8)">
+                                            <button class="SearchPage__page">
+                                                251
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="ha-ha-bhaktivinoda-thakkura-guroh.html" title="Шримад Бхактивинода-вираха Дашакам">
+                                            <button class="SearchPage__page">
+                                                254
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="guror-guro-me-paramo-gurus-tvam.html" title="Шри Шримад Гаура-Кишора-намаскара Дашакам">
+                                            <button class="SearchPage__page">
+                                                258
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="nite-yasmin-nishiante-nayana-jala-bharaih.html" title="Шри Шри Дайита Дас Дашакам">
+                                            <button class="SearchPage__page">
+                                                260
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shrimach-chaitanyapadau-chara.html" title="Шримад Рупа-пада-раджах Прартхана Дашакам">
+                                            <button class="SearchPage__page">
+                                                264
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="yo-nanto-nanta-vaktrair-niravadhi.html" title="Шриман Нитйананда Двадашакам">
+                                            <button class="SearchPage__page">
+                                                268
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="shri-svarupa-raya-rupa-jiva-bhava.html" title="Пранам-мантры Шриле Бхакти Ракшаку Шридхару Дев-Госвами Махараджу">
+                                            <button class="SearchPage__page">
+                                                274
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="naumi-shri-gurupadabjam.html" title="Пранати-дашакам">
+                                            <button class="SearchPage__page">
+                                                275
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="prerakam-prachya-pashchatya-shishyanam.html" title="Пранам-мантра Шриле Бхакти Нирмалу Ачарйе Махараджу">
+                                            <button class="SearchPage__page">
+                                                277
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="samudra-sambhava-gabhi-surabhi-apana.html" title="Шри Говинда-кунда Махатмйа">
+                                            <button class="SearchPage__page">
+                                                277
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="devadidevam-ahibhushanam-indukashiam.html" title="Гангадхара Садашива Пранам-мантрам">
+                                            <button class="SearchPage__page">
+                                                278
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="bhagyadhishia-tvadiyo-vimala-sukhamayah.html" title="Шри Гуру-Прашаштих">
+                                            <button class="SearchPage__page">
+                                                279
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="nava-nalina-ganjitam-kusuma-dala.html" title="Пранати-Панчакам">
+                                            <button class="SearchPage__page">
+                                                282
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="guru-rupa-virajita-nanda-sutam.html" title="Шри Гаурахари-кусума-ставаштакам">
+                                            <button class="SearchPage__page">
+                                                283
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="maha-bhaya-shiankula-e-bhava-tarangini.html" title="Майа Дуратйайа">
+                                            <button class="SearchPage__page">
+                                                285
+                                            </button>
+                                        </a>
+                                    
+                                        <a class="SearchPage__pill" href="namah-om-vishnupadaya-krishna.html" title="Пранам-мантра Шриле А. Ч. Бхактиведанте Свами Прабхупаде">
+                                            <button class="SearchPage__page">
+                                                286
+                                            </button>
+                                        </a>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <link rel="stylesheet" href="https://kirtan.site/css/partials/footer.css" />
+
+<footer class="Footer">
+    <div class="Footer__container">
+        <div class="Footer__content">
+            <a
+                    class="Footer__item"
+                    href="https://kirtan.site/ru/"
+                    id="footer-link-books"
+            >
+                <div class="Footer__icon Footer__icon--regular icon-books"></div>
+                <div class="Footer__icon Footer__icon--active icon-books-bold"></div>
+                <h6 class="Footer__label">Книги</h6>
+            </a>
+
+            <a
+                    class="Footer__item"
+                    href="https://kirtan.site/ru/contents.html"
+                    id="footer-link-contents"
+            >
+                <div class="Footer__icon Footer__icon--regular icon-list-music"></div>
+                <div class="Footer__icon Footer__icon--active icon-list-music-bold"></div>
+                <h6 class="Footer__label">Содержание</h6>
+            </a>
+
+            <a
+                    class="Footer__item"
+                    href="https://kirtan.site/ru/a-z.html"
+                    id="footer-link-index-list"
+            >
+                <div class="Footer__icon Footer__icon--regular icon-arrow-up-a-z"></div>
+                <div class="Footer__icon Footer__icon--active icon-arrow-up-a-z-old"></div>
+                <h6 class="Footer__label">Индекс</h6>
+            </a>
+
+            <a
+                    class="Footer__item"
+                    href="https://kirtan.site/ru/search.html"
+                    id="footer-link-search"
+            >
+                <div class="Footer__icon Footer__icon--regular icon-search"></div>
+                <div class="Footer__icon Footer__icon--active icon-search-bold"></div>
+                <h6 class="Footer__label">Поиск</h6>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    (function() {
+        function setActive(id) {
+            document.getElementById(id).classList.add('Footer__item--active');
+        }
+
+        switch (location.pathname) {
+            case('https://kirtan.site/ru/'):
+                return setActive('footer-link-books');
+            case('https://kirtan.site/ru/contents.html'):
+                return setActive('footer-link-contents');
+            case('https://kirtan.site/ru/a-z.html'):
+                return setActive('footer-link-index-list');
+            case('https://kirtan.site/ru/search.html'):
+                return setActive('footer-link-search');
+        }
+    })()
+</script>
+
+    </div>
+
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NCXTS1JYM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7NCXTS1JYM');
+</script>
+
+
+    <script>
+        (function () {
+            let page = 1;
+            let results = [];
+
+            const clearButton = document.getElementById('clear-button');
+            const input = document.getElementById('search-input');
+            const nothingFound = document.getElementById('nothing-found-div');
+            const pageList = document.getElementById('page-list');
+            const resultList = document.getElementById('result-list');
+            const showMoreButton = document.getElementById('show-more-button');
+            const submitButton = document.getElementById('submit-button');
+
+            showMoreButton.addEventListener('click', () => start());
+            submitButton.addEventListener('click', () => start());
+            clearButton.addEventListener('click', () => {
+                reset();
+                input.value = '';
+            });
+
+            input.addEventListener('keydown', (e) =>
+                (e.key === 'Enter' || e.keyCode === 13) && start()
+            );
+
+            /**/
+            function find() {
+                if (!input.value) return;
+
+                const start = (page - 1) * 10 + 1;
+                const url = 'https://www.googleapis.com/customsearch/v1' +
+                    '?key=AIzaSyCt4jPTSY3LKh14RrS7SmQPfguyhQ_y2vU' +
+                    '&cx=f0691c438c8d24df4' +
+                    `&start=${start}` +
+                    `&q=${input.value}`;
+
+                return fetch(url, {
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                    .then((r) => r.json())
+                    .then((r) => {
+                        console.log(r);
+                        return r;
+                    })
+                    .then(({ items, searchInformation }) => ({
+                        items: items, /* Array<{ htmlFormattedUrl, htmlSnippet, htmlTitle, link }> */
+                        itemsTotal: parseInt(searchInformation.totalResults)
+                    }))
+                    .catch(console.error)
+            }
+
+            /**/
+            function start() {
+                page === 1 && reset(); // hideShowMore, clearTheList, showPages, hideNothingFound, clearResults.
+
+                find()
+                    .then(({ items, itemsTotal }) => {
+                        if (!items || itemsTotal === 0) {
+                            page === 1 ? displayElem(nothingFound, true) : displayElem(showMoreButton, false);
+                        } else {
+                            results = [...results, ...items];
+                            displayElem(pageList, false);
+                            insertItems(items);
+                            displayElem(resultList, true);
+
+                            if (results.length < itemsTotal) {
+                                page += 1;
+                                displayElem(showMoreButton, true);
+                            } else displayElem(showMoreButton, false);
+                        }
+                    })
+            }
+
+            /**/
+            function displayElem(elem, shouldShow) {
+                if (!elem) return;
+                shouldShow ? elem.classList.add('visible') : elem.classList.remove('visible');
+            }
+
+            /**/
+            function insertItems(items) {
+                let content = '';
+
+                items.forEach(({ htmlSnippet, htmlTitle, link }) => {
+                    content += `
+                        <li class="SearchPage__item">
+                            <a class="SearchPage__itemLink" href="${link}">
+                                <h5 class="SearchPage__itemTitle">
+                                    ${htmlTitle}
+                                </h5>
+                                <div class="SearchPage__itemText">
+                                    ${htmlSnippet}
+                                </div>
+                            </a>
+                        </li>
+                    `;
+                });
+
+                resultList.insertAdjacentHTML('beforeend', content);
+            }
+
+            /**/
+            function reset() {
+                results = [];
+                resultList.innerHTML = '';
+                displayElem(nothingFound, false);
+                displayElem(pageList, true);
+                displayElem(showMoreButton, false);
+            }
+        } ())
+    </script>
+</body>
+</html>

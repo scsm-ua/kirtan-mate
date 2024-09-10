@@ -9,6 +9,13 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 /**
  *
  */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
 .IndexListItem__header {
   display: flex;
   justify-content: center;
@@ -27,9 +34,11 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   z-index: 1;
   font-weight: 300;
   line-height: 28px;
+  max-width: 80%;
   margin-bottom: 16px;
   padding: 0 16px;
-  background-color: var(--index-bg-color);
+  text-transform: uppercase;
+  background-color: var(--main-bg-color);
 }
 .IndexListItem__list {
   list-style-type: none;
@@ -59,6 +68,18 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   margin: 0;
   color: var(--title-color);
 }
+.IndexListItem__page {
+  display: inline-block;
+  font-weight: 400;
+  color: var(--grey);
+}
+.IndexListItem__embed {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 0;
+  color: var(--grey);
+}
 .IndexListItem__suffix {
   position: relative;
   width: 24px;
@@ -66,7 +87,7 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 .IndexListItem__icon {
   position: absolute;
   font-size: 24px;
-  color: var(--border-color);
+  color: var(--dark-grey);
   top: 1px;
   left: 0px;
 }

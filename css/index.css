@@ -1,6 +1,7 @@
 .RoundButton {
   border-radius: 50%;
   border: none;
+  transition: color 0.25s;
   /**/
   /**/
   /**/
@@ -30,13 +31,30 @@
 }
 
 /**/
-.AppButton {
+.AppButton, .NoBorderButton {
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
   cursor: pointer;
   font-family: var(--font-main);
+}
+
+/**/
+.NoBorderButton {
+  border: none;
+  background-color: transparent;
+}
+
+.Collapse {
+  display: block;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+}
+.Collapse__show {
+  max-height: 99em;
+  transition: max-height 1s ease-in-out 0s;
 }
 
 /*
@@ -50,6 +68,13 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 /**
  *
  */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
 /*
 Breakpoints mixin
 @param {String} $point - name of breakpoint
@@ -57,6 +82,19 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 */
 /**
  *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/**
+ * CSS breakpoint values.
  */
 /**
  *
@@ -71,24 +109,233 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --font-size: 16px;
   /**/
   --content-max-width: 568px;
-  --header-height: 60px;
+  --header-height: 52px;
+  --footer-height: 72px;
   --page-max-width: 768px;
   --side-padding: 20px;
   /**/
   --accent-color: var(--orange);
   --border-color: var(--grey);
-  --header-bg-color: var(--brown);
-  --index-bg-color: var(--beige);
+  --header-bg-color: var(--dark);
+  --footer-bg-color: var(--dark);
+  --main-bg-color: var(--beige);
   --song-bg-color: #fff;
   --text-color: var(--dark-grey);
   --title-color: var(--dark);
+  --shadow-color: rgba(56, 55, 142, 0.15);
   /**/
   --beige: #FFFAED;
   --brown: #26231B;
-  --dark: #000;
-  --dark-grey: #515151;
-  --grey: #A4A4A4;
+  --dark: #0B0800;
+  --dark-grey: #6c6c6c;
+  --grey: #C0C0C0;
   --orange: #F5C149;
+}
+@media (min-width: 768px) {
+  :root {
+    --footer-height: 82px;
+  }
+}
+
+.AppModal.tingle-modal {
+  cursor: default !important;
+  background: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s;
+  padding: 0;
+  overflow: auto;
+}
+.AppModal.tingle-modal--visible .tingle-modal-box {
+  animation: fadeIn 0.3s;
+}
+.AppModal .tingle-modal__close {
+  height: 40px;
+  width: 40px;
+  min-height: 40px;
+  top: 8px;
+  left: 99999px;
+  right: 0;
+  color: var(--dark);
+  padding: 4px;
+  border-radius: 50%;
+  line-height: 0.9;
+  cursor: pointer !important;
+  position: sticky;
+  background: white;
+  margin-right: 8px;
+  box-shadow: 0 4px 20px 0 var(--shadow-color);
+  transition: color 0.25s;
+}
+.AppModal .tingle-modal__close:hover {
+  color: var(--accent-color);
+}
+.AppModal .tingle-modal__closeIcon {
+  display: inline-block;
+  width: 18px !important;
+  margin: 0;
+}
+.AppModal .tingle-modal__closeLabel {
+  display: none;
+}
+.AppModal .tingle-modal-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100% - 40px);
+  width: auto;
+  max-width: 90%;
+  min-width: 80%;
+  margin: 0px auto;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .AppModal .tingle-modal-box {
+    max-width: 500px;
+    min-width: 500px;
+  }
+}
+.AppModal .tingle-modal-box__content {
+  width: 100%;
+  margin: 30px 0;
+  border-radius: 24px;
+  padding: var(--side-padding);
+  background-color: var(--song-bg-color) !important;
+}
+
+.Toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.Toggle__switch {
+  display: inline-block;
+  background: var(--grey);
+  border-radius: 8px;
+  width: 26px;
+  height: 16px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+
+.Toggle__switch:before, .Toggle__switch:after {
+  content: "";
+}
+
+.Toggle__switch:before {
+  display: block;
+  background: #FFF;
+  border-radius: 50%;
+  /*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);*/
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.25s;
+}
+
+.Toggle:hover .Toggle__switch:before {
+  background: #FFF;
+  /*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);*/
+}
+
+.Toggle__checkbox:checked + .Toggle__switch {
+  background: var(--accent-color);
+}
+
+.Toggle__checkbox:checked + .Toggle__switch:before {
+  left: 12px;
+}
+
+.Toggle__checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.Toggle__label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/**
+ * CSS breakpoint values.
+ */
+/**
+ *
+ */
+:root {
+  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+  --font-size: 16px;
+  /**/
+  --content-max-width: 568px;
+  --header-height: 52px;
+  --footer-height: 72px;
+  --page-max-width: 768px;
+  --side-padding: 20px;
+  /**/
+  --accent-color: var(--orange);
+  --border-color: var(--grey);
+  --header-bg-color: var(--dark);
+  --footer-bg-color: var(--dark);
+  --main-bg-color: var(--beige);
+  --song-bg-color: #fff;
+  --text-color: var(--dark-grey);
+  --title-color: var(--dark);
+  --shadow-color: rgba(56, 55, 142, 0.15);
+  /**/
+  --beige: #FFFAED;
+  --brown: #26231B;
+  --dark: #0B0800;
+  --dark-grey: #6c6c6c;
+  --grey: #C0C0C0;
+  --orange: #F5C149;
+}
+@media (min-width: 768px) {
+  :root {
+    --footer-height: 82px;
+  }
 }
 
 * {
@@ -179,19 +426,46 @@ p {
   text-overflow: ellipsis;
 }
 
+/* fixed ratio couple */
+.app-fixed-ratio-container {
+  position: relative;
+}
+.app-fixed-ratio-container:before {
+  display: block;
+  content: "";
+  width: 100%;
+  /* this value influences the ratio */
+  padding-top: 56.3%;
+}
+
+.app-fixed-ratio-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 /**/
 .Layout {
-  height: 100%;
   overflow: hidden;
+  height: 100%;
 }
 .Layout__content {
-  height: 100%;
+  position: relative;
+  height: calc(100% - var(--footer-height));
   overflow: auto;
 }
 
 /**/
 .Main {
-  min-height: 100%;
+  min-height: calc(100% - var(--header-height));
+  background-color: var(--main-bg-color);
+}
+@media (min-width: 768px) {
+  .Main {
+    margin-top: var(--header-height);
+  }
 }
 .Main__container {
   margin: 0 auto;
@@ -216,7 +490,7 @@ p {
 }
 @font-face {
   font-family: "icomoon";
-  src: url("icomoon.woff?o4k3s1") format("woff");
+  src: url("icomoon.woff?dj7qdp") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -234,6 +508,58 @@ p {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up-a-z-old:before {
+  content: "\e904";
+}
+
+.icon-arrow-up-a-z:before {
+  content: "\e905";
+}
+
+.icon-arrow-up-from-bracket:before {
+  content: "\e906";
+}
+
+.icon-book:before {
+  content: "\e907";
+}
+
+.icon-books-bold:before {
+  content: "\e908";
+}
+
+.icon-books:before {
+  content: "\e909";
+}
+
+.icon-list-music-bold:before {
+  content: "\e90a";
+}
+
+.icon-list-music:before {
+  content: "\e90b";
+}
+
+.icon-search-bold:before {
+  content: "\e90c";
+}
+
+.icon-search:before {
+  content: "\e90d";
+}
+
+.icon-shevron-left:before {
+  content: "\e90e";
+}
+
+.icon-shevron-right:before {
+  content: "\e90f";
+}
+
+.icon-xmark-large:before {
+  content: "\e910";
 }
 
 .icon-arrow-left:before {
@@ -263,51 +589,13 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 /**
  *
  */
-.AppModal.tingle-modal {
-  cursor: default !important;
-  background: rgba(0, 0, 0, 0.4);
-  animation: fadeIn 0.4s;
-}
-.AppModal.tingle-modal--visible .tingle-modal-box {
-  animation: fadeIn 0.4s;
-}
-.AppModal .tingle-modal__close {
-  background-color: var(--header-bg-color);
-  height: var(--header-height);
-  width: 100%;
-  top: 0;
-  right: 0;
-  color: var(--accent-color);
-  font-size: 24px;
-  text-align: right;
-  cursor: pointer !important;
-}
-.AppModal .tingle-modal__closeIcon {
-  margin-right: var(--side-padding);
-  padding: 10px 0 10px var(--side-padding);
-  width: auto !important;
-}
-.AppModal .tingle-modal__closeIcon svg {
-  height: 16px;
-}
-.AppModal .tingle-modal__closeLabel {
-  display: none;
-}
-.AppModal .tingle-modal-box {
-  border-radius: 24px;
-  background-color: var(--song-bg-color) !important;
-  max-width: 500px;
-}
-@media (max-width: 540px) {
-  .AppModal .tingle-modal-box {
-    margin: var(--side-padding);
-  }
-}
-.AppModal .tingle-modal-box__content {
-  border-radius: 24px;
-  padding: var(--side-padding);
-}
-
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
 /*
 Breakpoints mixin
 @param {String} $point - name of breakpoint
@@ -315,6 +603,19 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 */
 /**
  *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/**
+ * CSS breakpoint values.
  */
 /**
  *
@@ -329,22 +630,30 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --font-size: 16px;
   /**/
   --content-max-width: 568px;
-  --header-height: 60px;
+  --header-height: 52px;
+  --footer-height: 72px;
   --page-max-width: 768px;
   --side-padding: 20px;
   /**/
   --accent-color: var(--orange);
   --border-color: var(--grey);
-  --header-bg-color: var(--brown);
-  --index-bg-color: var(--beige);
+  --header-bg-color: var(--dark);
+  --footer-bg-color: var(--dark);
+  --main-bg-color: var(--beige);
   --song-bg-color: #fff;
   --text-color: var(--dark-grey);
   --title-color: var(--dark);
+  --shadow-color: rgba(56, 55, 142, 0.15);
   /**/
   --beige: #FFFAED;
   --brown: #26231B;
-  --dark: #000;
-  --dark-grey: #515151;
-  --grey: #A4A4A4;
+  --dark: #0B0800;
+  --dark-grey: #6c6c6c;
+  --grey: #C0C0C0;
   --orange: #F5C149;
+}
+@media (min-width: 768px) {
+  :root {
+    --footer-height: 82px;
+  }
 }

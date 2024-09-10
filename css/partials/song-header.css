@@ -1,0 +1,135 @@
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/**
+ * CSS breakpoint values.
+ */
+/**
+ *
+ */
+:root {
+  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+  --font-size: 16px;
+  /**/
+  --content-max-width: 568px;
+  --header-height: 52px;
+  --footer-height: 72px;
+  --page-max-width: 768px;
+  --side-padding: 20px;
+  /**/
+  --accent-color: var(--orange);
+  --border-color: var(--grey);
+  --header-bg-color: var(--dark);
+  --footer-bg-color: var(--dark);
+  --main-bg-color: var(--beige);
+  --song-bg-color: #fff;
+  --text-color: var(--dark-grey);
+  --title-color: var(--dark);
+  --shadow-color: rgba(56, 55, 142, 0.15);
+  /**/
+  --beige: #FFFAED;
+  --brown: #26231B;
+  --dark: #0B0800;
+  --dark-grey: #6c6c6c;
+  --grey: #C0C0C0;
+  --orange: #F5C149;
+}
+@media (min-width: 768px) {
+  :root {
+    --footer-height: 82px;
+  }
+}
+
+.SongHeader__container {
+  padding: var(--side-padding) var(--side-padding) 12px;
+}
+.SongHeader__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.SongHeader__book {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--dark-grey);
+}
+.SongHeader__controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.SongHeader__button {
+  font-size: 16px;
+  color: var(--dark-grey);
+  padding: 8px;
+  margin-left: 8px;
+}
+.SongHeader__button:disabled {
+  opacity: 0.5;
+}
+.SongHeader__button--text {
+  text-decoration: underline;
+}
+.SongHeader__title {
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--title-color);
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .SongHeader__title {
+    font-size: 28px;
+  }
+}
+.SongHeader__subtitle {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.SongHeader__author {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}

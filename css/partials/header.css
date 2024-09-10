@@ -1,6 +1,95 @@
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/**
+ * CSS breakpoint values.
+ */
+/**
+ *
+ */
+:root {
+  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+  --font-size: 16px;
+  /**/
+  --content-max-width: 568px;
+  --header-height: 52px;
+  --footer-height: 72px;
+  --page-max-width: 768px;
+  --side-padding: 20px;
+  /**/
+  --accent-color: var(--orange);
+  --border-color: var(--grey);
+  --header-bg-color: var(--dark);
+  --footer-bg-color: var(--dark);
+  --main-bg-color: var(--beige);
+  --song-bg-color: #fff;
+  --text-color: var(--dark-grey);
+  --title-color: var(--dark);
+  --shadow-color: rgba(56, 55, 142, 0.15);
+  /**/
+  --beige: #FFFAED;
+  --brown: #26231B;
+  --dark: #0B0800;
+  --dark-grey: #6c6c6c;
+  --grey: #C0C0C0;
+  --orange: #F5C149;
+}
+@media (min-width: 768px) {
+  :root {
+    --footer-height: 82px;
+  }
+}
+
 .Header {
   background-color: var(--header-bg-color);
   height: var(--header-height);
+}
+@media (min-width: 768px) {
+  .Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
 }
 .Header__container {
   height: 100%;
@@ -15,7 +104,8 @@
   height: 100%;
 }
 .Header__home {
-  width: 110px;
+  height: 27px;
+  width: 98px;
   overflow: hidden;
 }
 .Header__logo {

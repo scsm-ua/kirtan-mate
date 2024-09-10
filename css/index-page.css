@@ -9,8 +9,18 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 /**
  *
  */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
 .IndexPage {
-  background-color: var(--index-bg-color);
+  background-color: var(--main-bg-color);
+}
+.IndexPage__title {
+  padding: 24px var(--side-padding) var(--side-padding);
 }
 .IndexPage__navigation {
   display: flex;

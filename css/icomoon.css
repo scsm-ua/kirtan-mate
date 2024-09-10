@@ -1,6 +1,6 @@
 @font-face {
   font-family: "icomoon";
-  src: url("icomoon.woff?o4k3s1") format("woff");
+  src: url("icomoon.woff?dj7qdp") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -18,6 +18,58 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up-a-z-old:before {
+  content: "\e904";
+}
+
+.icon-arrow-up-a-z:before {
+  content: "\e905";
+}
+
+.icon-arrow-up-from-bracket:before {
+  content: "\e906";
+}
+
+.icon-book:before {
+  content: "\e907";
+}
+
+.icon-books-bold:before {
+  content: "\e908";
+}
+
+.icon-books:before {
+  content: "\e909";
+}
+
+.icon-list-music-bold:before {
+  content: "\e90a";
+}
+
+.icon-list-music:before {
+  content: "\e90b";
+}
+
+.icon-search-bold:before {
+  content: "\e90c";
+}
+
+.icon-search:before {
+  content: "\e90d";
+}
+
+.icon-shevron-left:before {
+  content: "\e90e";
+}
+
+.icon-shevron-right:before {
+  content: "\e90f";
+}
+
+.icon-xmark-large:before {
+  content: "\e910";
 }
 
 .icon-arrow-left:before {

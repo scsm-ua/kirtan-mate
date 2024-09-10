@@ -1,0 +1,143 @@
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/**
+ * CSS breakpoint values.
+ */
+/**
+ *
+ */
+:root {
+  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+  --font-size: 16px;
+  /**/
+  --content-max-width: 568px;
+  --header-height: 52px;
+  --footer-height: 72px;
+  --page-max-width: 768px;
+  --side-padding: 20px;
+  /**/
+  --accent-color: var(--orange);
+  --border-color: var(--grey);
+  --header-bg-color: var(--dark);
+  --footer-bg-color: var(--dark);
+  --main-bg-color: var(--beige);
+  --song-bg-color: #fff;
+  --text-color: var(--dark-grey);
+  --title-color: var(--dark);
+  --shadow-color: rgba(56, 55, 142, 0.15);
+  /**/
+  --beige: #FFFAED;
+  --brown: #26231B;
+  --dark: #0B0800;
+  --dark-grey: #6c6c6c;
+  --grey: #C0C0C0;
+  --orange: #F5C149;
+}
+@media (min-width: 768px) {
+  :root {
+    --footer-height: 82px;
+  }
+}
+
+.AppModal.tingle-modal {
+  cursor: default !important;
+  background: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s;
+  padding: 0;
+  overflow: auto;
+}
+.AppModal.tingle-modal--visible .tingle-modal-box {
+  animation: fadeIn 0.3s;
+}
+.AppModal .tingle-modal__close {
+  height: 40px;
+  width: 40px;
+  min-height: 40px;
+  top: 8px;
+  left: 99999px;
+  right: 0;
+  color: var(--dark);
+  padding: 4px;
+  border-radius: 50%;
+  line-height: 0.9;
+  cursor: pointer !important;
+  position: sticky;
+  background: white;
+  margin-right: 8px;
+  box-shadow: 0 4px 20px 0 var(--shadow-color);
+  transition: color 0.25s;
+}
+.AppModal .tingle-modal__close:hover {
+  color: var(--accent-color);
+}
+.AppModal .tingle-modal__closeIcon {
+  display: inline-block;
+  width: 18px !important;
+  margin: 0;
+}
+.AppModal .tingle-modal__closeLabel {
+  display: none;
+}
+.AppModal .tingle-modal-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100% - 40px);
+  width: auto;
+  max-width: 90%;
+  min-width: 80%;
+  margin: 0px auto;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .AppModal .tingle-modal-box {
+    max-width: 500px;
+    min-width: 500px;
+  }
+}
+.AppModal .tingle-modal-box__content {
+  width: 100%;
+  margin: 30px 0;
+  border-radius: 24px;
+  padding: var(--side-padding);
+  background-color: var(--song-bg-color) !important;
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <script>
+        let preservedBookId;
+
+        function makeRedirectTo(bookId) {
+            window.location = 'https://kirtan.site/' + bookId + '/search.html';
+        }
+
+        try {
+            preservedBookId = localStorage.getItem('CURRENT_BOOK_ID');
+        } catch (e) {
+            console.error(e);
+        }
+
+        if (preservedBookId) {
+            makeRedirectTo(preservedBookId);
+        } else {
+            const lang = (
+                navigator.language ||
+                Intl.DateTimeFormat().resolvedOptions()
+            ).slice(0, 2);
+
+            const bookIdList = 'ru,ua,en,en-pe'.split(',');
+            makeRedirectTo(bookIdList.includes(lang) ? lang : 'en');
+        }
+    </script>
+</head>
+</html>

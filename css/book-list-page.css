@@ -1,0 +1,152 @@
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/*
+Breakpoints mixin
+@param {String} $point - name of breakpoint
+add '-up' if you want (min-width: $point) and leave with no suffix for (max-width: $point - 1px)
+*/
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ *
+ */
+/**/
+/**
+ *
+ */
+/**
+ * CSS breakpoint values.
+ */
+/**
+ *
+ */
+:root {
+  --font-main: "Helvetica", system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+  --font-mono: "Helvetica", SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+  --font-size: 16px;
+  /**/
+  --content-max-width: 568px;
+  --header-height: 52px;
+  --footer-height: 72px;
+  --page-max-width: 768px;
+  --side-padding: 20px;
+  /**/
+  --accent-color: var(--orange);
+  --border-color: var(--grey);
+  --header-bg-color: var(--dark);
+  --footer-bg-color: var(--dark);
+  --main-bg-color: var(--beige);
+  --song-bg-color: #fff;
+  --text-color: var(--dark-grey);
+  --title-color: var(--dark);
+  --shadow-color: rgba(56, 55, 142, 0.15);
+  /**/
+  --beige: #FFFAED;
+  --brown: #26231B;
+  --dark: #0B0800;
+  --dark-grey: #6c6c6c;
+  --grey: #C0C0C0;
+  --orange: #F5C149;
+}
+@media (min-width: 768px) {
+  :root {
+    --footer-height: 82px;
+  }
+}
+
+.BookListPage__container {
+  margin: 0 auto;
+  max-width: var(--page-max-width);
+}
+.BookListPage__content {
+  padding-top: 24px;
+  width: 100%;
+}
+.BookListPage__row {
+  display: flex;
+  flex-flow: row wrap;
+  min-width: 0;
+}
+.BookListPage__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--side-padding) + 100%);
+  list-style-type: none;
+  margin: 0 calc(var(--side-padding) / -2);
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .BookListPage__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.BookListPage__item {
+  max-width: 450px;
+}
+.BookListPage__link {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--side-padding);
+  padding: 0 calc(var(--side-padding) / 2);
+}
+.BookListPage__ratio {
+  border-radius: 24px;
+  box-shadow: 0 4px 20px 0 var(--shadow-color);
+  overflow: hidden;
+  height: 255px;
+  min-width: 320px;
+  background-color: #FFF;
+}
+.BookListPage__ratio:before {
+  padding-top: 81.5%;
+}
+.BookListPage__box {
+  height: 61.8%;
+  overflow: hidden;
+}
+.BookListPage__image {
+  width: 100%;
+  max-width: 100%;
+}
+.BookListPage__info {
+  padding: 12px;
+}
+.BookListPage__subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  color: var(--text-color);
+}
+.BookListPage__count {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 4px;
+  color: var(--grey);
+}

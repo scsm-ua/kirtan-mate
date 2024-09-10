@@ -1,0 +1,39 @@
+.SongTranslations__content {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.SongTranslations__item {
+  padding: var(--side-padding) 0;
+}
+.SongTranslations__item:not(:last-child) {
+  border-bottom: solid 1px var(--grey);
+}
+.SongTranslations__flex {
+  display: flex;
+  align-items: center;
+}
+.SongTranslations__box {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 52px;
+  width: 52px;
+  min-width: 52px;
+}
+.SongTranslations__image {
+  height: 100%;
+  width: 100%;
+}
+.SongTranslations__info {
+  margin: 0 0 0 20px;
+  width: calc(100% - 72px);
+}
+.SongTranslations__item--selected .SongTranslations__title {
+  color: var(--accent-color);
+}
+.SongTranslations__subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  color: var(--text-color);
+}

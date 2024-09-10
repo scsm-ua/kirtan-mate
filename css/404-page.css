@@ -1,0 +1,13 @@
+.Page404__header {
+  padding: var(--side-padding) 0;
+}
+.Page404__text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  color: var(--text-color);
+}
+.Page404__list {
+  width: 100%;
+  max-width: 100%;
+}
