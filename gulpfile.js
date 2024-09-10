@@ -462,6 +462,7 @@ gulp.task('redirect-pages', (done) => {
             .src(SRC.EJS_FILES + '/' + FILES.EJS.REDIRECT_PAGE)
             .pipe(
                 ejs({
+                    origin: PATHS.ORIGIN,
                     bookIdList: bookIdList,
                     pagePath: pagePath
                 }).on('error', console.error)

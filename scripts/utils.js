@@ -7,10 +7,10 @@ const { PATHS } = require('./constants');
  */
 function getNavigationPaths(bookId) {
     return {
-        A_Z: '/' + bookId + PATHS.PAGES.A_Z,
-        BOOK_LIST: '/' + bookId + PATHS.PAGES.BOOK_LIST,
-        CONTENTS: '/' + bookId + PATHS.PAGES.CONTENTS,
-        SEARCH: '/' + bookId + PATHS.PAGES.SEARCH
+        A_Z: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.A_Z,
+        BOOK_LIST: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.BOOK_LIST,
+        CONTENTS: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.CONTENTS,
+        SEARCH: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH
     }
 }
 

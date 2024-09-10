@@ -31,14 +31,15 @@ const ORIGIN = (process.env.HOME_BASE_URL || '');
 
 /**/
 const SEARCH_CONST = {
-    ACCOUNT_ID: 'f0691c438c8d24df4',
-    SEARCH_API_KEY: 'AIzaSyCt4jPTSY3LKh14RrS7SmQPfguyhQ_y2vU'
+    ACCOUNT_ID: process.env.SEARCH_ACCOUNT_ID,
+    SEARCH_API_KEY: process.env.SEARCH_API_KEY
 };
 
 /**
  *
  */
 const PATHS = {
+    ORIGIN: ORIGIN,
     RELATIVE: {
         JS: ORIGIN + '/' + JS_DIR,
         CSS: ORIGIN + '/' + CSS_DIR,
@@ -87,7 +88,7 @@ const PATHS = {
     },
     PAGES: {
         A_Z: '/' + indexAZPath,
-        BOOK_LIST: '/',
+        BOOK_LIST: process.env.EXPLICIT_INDEX ? '/index.html' : '/',
         CONTENTS: '/' + contentsPage,
         NOT_FOUND: '/' + notFoundPage,
         SEARCH: '/' + searchPage

@@ -6,7 +6,7 @@
         let preservedBookId;
 
         function makeRedirectTo(bookId) {
-            window.location = location.origin + '/' + bookId + '<%- pagePath %>';
+            window.location = '<%- origin %>/' + bookId + '<%- pagePath %>';
         }
 
         try {
