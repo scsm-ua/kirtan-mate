@@ -16,32 +16,40 @@
             <main class="Main SearchPage">
                 <div class="Main__container SearchPage__container">
                     <header class="SearchPage__header">
-                        <div class="SearchPage__search">
-                            <input
-                                    autofocus
-                                    class="SearchPage__input"
-                                    id="search-input"
-                                    placeholder="<%= i18n('SEARCH_PAGE.INPUT_PLACEHOLDER') %>"
-                                    type="text"
-                            >
+<!--                        <div class="SearchPage__title">-->
+                            <%- include(paths.toPartials + '/song-book-title.ejs'); %>
+<!--                        </div>-->
+                    </header>
+
+                    <div class="SearchPage__bar">
+                        <div class="SearchPage__box">
+                            <div class="SearchPage__search">
+                                <input
+                                        autofocus
+                                        class="SearchPage__input"
+                                        id="search-input"
+                                        placeholder="<%= i18n('SEARCH_PAGE.INPUT_PLACEHOLDER') %>"
+                                        type="text"
+                                >
+
+                                <button
+                                        class="NoBorderButton SearchPage__clear"
+                                        id="clear-button"
+                                        title="<%= i18n('SEARCH_PAGE.CLEAR') %>"
+                                >
+                                    <span class="icon-xmark-large"></span>
+                                </button>
+                            </div>
 
                             <button
-                                    class="NoBorderButton SearchPage__clear"
-                                    id="clear-button"
-                                    title="<%= i18n('SEARCH_PAGE.CLEAR') %>"
+                                    class="RoundButton RoundButton--dark SearchPage__submit"
+                                    id="submit-button"
+                                    title="<%= i18n('SEARCH_PAGE.FIND') %>"
                             >
-                                <span class="icon-xmark-large"></span>
+                                <span class="icon-search"></span>
                             </button>
                         </div>
-
-                        <button
-                                class="RoundButton RoundButton--dark SearchPage__submit"
-                                id="submit-button"
-                                title="<%= i18n('SEARCH_PAGE.FIND') %>"
-                        >
-                            <span class="icon-search"></span>
-                        </button>
-                    </header>
+                    </div>
 
                     <div class="SearchPage__content">
                         <div class="SearchPage__nothing" id="nothing-found-div">

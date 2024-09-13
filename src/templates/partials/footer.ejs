@@ -48,11 +48,13 @@
 
 <script>
     (function() {
+        const origin = '<%- paths.toPages.ORIGIN %>';
+
         function setActive(id) {
             document.getElementById(id).classList.add('Footer__item--active');
         }
 
-        switch (location.pathname) {
+        switch (origin ? location.href : location.pathname) {
             case('<%= paths.toPages.BOOK_LIST %>'):
                 return setActive('footer-link-books');
             case('<%= paths.toPages.CONTENTS %>'):

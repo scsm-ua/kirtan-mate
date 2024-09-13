@@ -23,37 +23,39 @@
                                             data-book-id="<%= songbook.slug %>"
                                             onclick="handleBookChoice(event)"
                                     >
-                                        <a href="<%= songbook.href %>" class="BookListPage__link">
+                                        <div class="BookListPage__wrapper">
                                             <div class="BookListPage__ratio app-fixed-ratio-container">
                                                 <div class="app-fixed-ratio-content">
-                                                    <div class="BookListPage__box">
-                                                        <img
-                                                                alt=""
-                                                                class="BookListPage__image"
-                                                                srcset="
-                                                                    <%= paths.toImages %>/banner/banner-<%= songbook.slug %>.png 1x,
-                                                                    <%= paths.toImages %>/banner/banner-<%= songbook.slug %>@2.png 2x
-                                                                "
-                                                                src="<%= paths.toImages %>/banner/banner-<%= songbook.slug %>.png"
-                                                        >
-                                                    </div>
-
-                                                    <div class="BookListPage__info">
-                                                        <h4 class="BookListPage__title">
-                                                            <%= songbook.title %>
-                                                        </h4>
-
-                                                        <div class="ellipsis BookListPage__subtitle">
-                                                            <%= songbook.subtitle %>
+                                                    <a href="<%= songbook.href %>" class="BookListPage__link">
+                                                        <div class="BookListPage__box">
+                                                            <img
+                                                                    alt=""
+                                                                    class="BookListPage__image"
+                                                                    srcset="
+                                                                        <%= paths.toImages %>/banner/banner-<%= songbook.slug %>.png 1x,
+                                                                        <%= paths.toImages %>/banner/banner-<%= songbook.slug %>@2.png 2x
+                                                                    "
+                                                                    src="<%= paths.toImages %>/banner/banner-<%= songbook.slug %>.png"
+                                                            >
                                                         </div>
 
-                                                        <div class="BookListPage__count">
-                                                            <%= songbook.songsCount %> <%= i18n('BOOK_LIST_PAGE.SONG_COUNT') %>
+                                                        <div class="BookListPage__info">
+                                                            <h4 class="BookListPage__title">
+                                                                <%= songbook.title %>
+                                                            </h4>
+
+                                                            <div class="ellipsis BookListPage__subtitle">
+                                                                <%= songbook.subtitle %>
+                                                            </div>
+
+                                                            <div class="BookListPage__count">
+                                                                <%= songbook.songsCount %> <%= i18n('BOOK_LIST_PAGE.SONG_COUNT') %>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </div>
                                     </li>
                                 <% }); %>
 
@@ -67,5 +69,17 @@
         </div>
 
         <%- include(paths.toPartials + '/gtag.ejs'); %>
+
+        <script>
+            const info = JSON.parse('<%- buildInfo %>');
+            const styles = [
+                'color: #957742',
+                'background-color: #77CEF1',
+                'font-size: 14px'
+            ].join(';');
+
+            console.log(`%c Kirtan Site `, styles);
+            console.log(JSON.stringify(info, null, 2));
+        </script>
     </body>
 </html>

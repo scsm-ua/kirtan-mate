@@ -1,6 +1,6 @@
 {
     "name": "kirtan-mate",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "scripts": {
         "build": "gulp build",
         "watch": "gulp watch"
@@ -19,6 +19,7 @@
         "kirtan-guide-pocket-edition": "github:scsm-ua/kirtan-guide-pocket-edition#dev",
         "lodash.deburr": "^4.1.0",
         "sass": "1.77.1",
+        "shelljs": "^0.8.5",
         "vinyl-source-stream": "^2.0.0"
     },
     "devDependencies": {

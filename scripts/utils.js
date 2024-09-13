@@ -10,6 +10,7 @@ function getNavigationPaths(bookId) {
         A_Z: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.A_Z,
         BOOK_LIST: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.BOOK_LIST,
         CONTENTS: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.CONTENTS,
+        ORIGIN: PATHS.ORIGIN,
         SEARCH: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH
     }
 }
