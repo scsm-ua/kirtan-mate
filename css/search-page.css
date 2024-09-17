@@ -24,14 +24,22 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 }
 .SearchPage__container {
   position: relative;
-  padding: var(--side-padding);
 }
 .SearchPage__header {
+  padding: 24px var(--side-padding);
+}
+.SearchPage__bar {
+  padding: 0 var(--side-padding);
+}
+.SearchPage__box {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0 var(--side-padding);
+  padding-bottom: var(--side-padding);
   border-bottom: solid 1px var(--grey);
+}
+.SearchPage__content {
+  padding: 0 var(--side-padding) var(--side-padding);
 }
 .SearchPage__search {
   position: relative;
@@ -142,7 +150,6 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 .SearchPage__pills {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-right: -8px;
 }
 .SearchPage__pill {

@@ -92,43 +92,39 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   min-width: 0;
 }
 .BookListPage__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: calc(var(--side-padding) + 100%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: var(--side-padding) var(--side-padding);
+  width: 100%;
   list-style-type: none;
-  margin: 0 calc(var(--side-padding) / -2);
+  margin: 0;
   padding: 0;
 }
 @media (min-width: 768px) {
   .BookListPage__list {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
   }
 }
-.BookListPage__item {
-  max-width: 450px;
+.BookListPage__wrapper {
+  margin: 0 auto;
+  max-width: 390px;
 }
 .BookListPage__link {
   display: block;
-  width: 100%;
-  margin-bottom: var(--side-padding);
-  padding: 0 calc(var(--side-padding) / 2);
+  height: 100%;
 }
 .BookListPage__ratio {
   border-radius: 24px;
   box-shadow: 0 4px 20px 0 var(--shadow-color);
   overflow: hidden;
-  height: 255px;
-  min-width: 320px;
   background-color: #FFF;
 }
 .BookListPage__ratio:before {
-  padding-top: 81.5%;
+  padding-top: 92.18%;
 }
 .BookListPage__box {
-  height: 61.8%;
+  height: 64.3%;
   overflow: hidden;
 }
 .BookListPage__image {

@@ -450,6 +450,7 @@ p {
 .Layout {
   overflow: hidden;
   height: 100%;
+  background-color: var(--main-bg-color);
 }
 .Layout__content {
   position: relative;
