@@ -9,17 +9,26 @@
 
     &__container {
         position: relative;
-        padding: var(--side-padding);
     }
 
-    &__content {}
-
     &__header {
+        padding: 24px var(--side-padding);
+    }
+
+    &__bar {
+        padding: 0 var(--side-padding);
+    }
+
+    &__box {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 0 var(--side-padding);
+        padding-bottom: var(--side-padding);
         border-bottom: solid 1px var(--grey);
+    }
+
+    &__content {
+        padding: 0 var(--side-padding) var(--side-padding);
     }
 
     &__search {
@@ -142,7 +151,6 @@
     &__pills {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         margin-right: -8px;
     }
 

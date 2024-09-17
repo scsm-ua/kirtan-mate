@@ -1,0 +1,15 @@
+v1.0.1
+Date: 2024 Sep 15
+    - Replaced EN banners and small-banners with the original.
+    - Added flag to the UA banner.
+    - Fixed the index page tile styles and markup.
+    - Added the book indicator panel on top of the search page.
+    - Fixed the footer anchors active state.
+    - Introduced `ReleaseNotes.txt`.
+    - Build info console output on the index pages.
+_________________________________________________________
+
+v1.0.0
+Date: 2024 Sep 10
+    - Upgraded UI.
+_________________________________________________________

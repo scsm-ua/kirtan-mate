@@ -7,6 +7,7 @@ const rename = require('gulp-rename');
 const runSequence = require('gulp4-run-sequence');
 const sass = require('gulp-sass')(require('sass'));
 const shell = require('gulp-shell');
+const shelljs = require('shelljs');
 
 // Load local env.
 require('dotenv').config();
@@ -24,6 +25,8 @@ const { getNavigationPaths, getTemplatePaths } = require('./scripts/utils');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
 const { getTranslationsBy } = require('./scripts/i18n');
 const { makeIndexList } = require('./scripts/makeIndexList');
+const version = require('./package.json').version;
+
 const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
@@ -195,6 +198,12 @@ function getCommonPageContext(bookId) {
 gulp.task('songbook-list', (done) => {
     const tasks = getSongbookIdList().map((songbook_id) => {
         const tr = getTranslationsBy(songbook_id);
+        const buildInfo = {
+            builtAt: new Date().toLocaleString('en-GB', { timeZone: 'UTC' }) + ' UTC',
+            commitHash: shelljs.exec("git log --pretty=format:'%h' -n 1").stdout,
+            version: version
+        };
+
         const headParts = createHeadParts({
             title: tr('BOOK_LIST_PAGE.HEAD.TITLE'),
             description: tr('BOOK_LIST_PAGE.HEAD.DESCRIPTION'),
@@ -202,6 +211,7 @@ gulp.task('songbook-list', (done) => {
         });
 
         const values = {
+            buildInfo: JSON.stringify(buildInfo),
             headParts: headParts,
             ...getCommonPageContext(songbook_id)
         };
@@ -280,7 +290,9 @@ gulp.task('404', (done) => {
  */
 gulp.task('search-page', (done) => {
     const tasks = getSongbookIdList().map((songbook_id) => {
+        const info = getSongbookInfo(songbook_id);
         const tr = getTranslationsBy(songbook_id);
+
         const headParts = {
             title: tr('SEARCH_PAGE.HEAD.TITLE'),
             description: tr('SEARCH_PAGE.HEAD.DESCRIPTION'),
@@ -308,7 +320,10 @@ gulp.task('search-page', (done) => {
                         i18n: tr,
                         pages: pages,
                         paths: getTemplatePaths(songbook_id),
-                        search: SEARCH_CONST
+                        search: SEARCH_CONST,
+                        songbook_id: songbook_id,
+                        subtitle: info.subtitle,
+                        title: info.title
                     }).on('error', console.error)
                 )
                 .pipe(
