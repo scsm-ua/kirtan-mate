@@ -11,7 +11,14 @@ const { PATHS, ORIGIN } = require('./constants');
 function createHeadParts({ title, description, path, is404 }) {
     const imgSrc = PATHS.FILES.SHARING_BANNER;
     const _title = title + ' | Kirtan Site';
-    const url = ORIGIN + path;
+    
+    var url;
+    // Some urls rendered with origin.
+    if (path.indexOf(ORIGIN) !== 0) {
+        url = ORIGIN + path;
+    } else {
+        url = path;
+    }
 
     let render = `
         <title>${_title}</title>`;
