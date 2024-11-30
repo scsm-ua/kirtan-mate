@@ -61,7 +61,7 @@ function getSongsOrderedList(songbook_id) {
  */
 function fillTemplate(songbook_id, template, content, filePath) {
     // TODO: subtitle.
-    const { author, subtitle, title, verses, attributes } = content;
+    const { author, subtitle, title, verses, attributes, word_by_word } = content;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -152,6 +152,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
     return ejs.render(template, {
         author: author,
         subtitle: subtitle,
+        word_by_word: word_by_word,
         orderedSongs: JSON.stringify(getSongsOrderedList(songbook_id)),
         headParts: createHeadParts(headParts),
         paths: getTemplatePaths(songbook_id, { root_to_songbook: true }),

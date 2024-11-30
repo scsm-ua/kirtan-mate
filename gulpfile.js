@@ -299,18 +299,37 @@ gulp.task('search-page', (done) => {
             path: getNavigationPaths(songbook_id).SEARCH
         };
 
-        const pages = getContentsJSON(songbook_id)
+        const pagesDict = {};
+
+        getContentsJSON(songbook_id)
             .flatMap(({ items }) =>
-                items.map((item) => ({
-                    page: item.page,
-                    path: item.fileName,
-                    title: item.title
-                }))
+                items.flatMap((item) => {
+                    if (Array.isArray(item.page)) {
+                        // Multiple pages.
+                        return item.page.map(p => ({
+                            page: p,
+                            path: item.fileName,
+                            title: item.title
+                        }))
+                    } else {
+                        return {
+                            page: item.page,
+                            path: item.fileName,
+                            title: item.title
+                        };
+                    }
+                })
             )
             .filter(page => page.page)
             .sort((a, b) =>
                 parseFloat(a.page) - parseFloat(b.page)
-            );
+            )
+            .forEach(item => {
+                // Get unique pages.
+                pagesDict[item.page] = item;
+            });
+
+        const pages = Object.values(pagesDict);
 
         const task = (taskDone) => gulp
                 .src([SRC.EJS_FILES + '/' + FILES.EJS.SEARCH_PAGE])

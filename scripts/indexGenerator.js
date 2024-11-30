@@ -92,6 +92,16 @@ function convertSongToJSON(text) {
                     create_new: last_line_id === 'translation'
                 }).text.push(line_value);
                 break;
+            case 'word_by_word':
+                if (song.verses.length === 0) {
+                    song.word_by_word = song.word_by_word || [];
+                    song.word_by_word.push(line_value);
+                } else {
+                    var verse = getLastVerse();
+                    verse.word_by_word = verse.word_by_word || [];
+                    verse.word_by_word.push(line_value);
+                }
+                break;
             case 'translation':
                 getLastVerse().translation.push(line_value);
                 break;
@@ -113,7 +123,19 @@ function convertSongToJSON(text) {
                     console.error("Can't recognize attribute", line);
                 } else {
                     song.attributes = song.attributes || {};
-                    song.attributes[bits[0].trim()] = bits[1].trim();
+                    var attr_key = bits[0].trim();
+                    var attr_value = bits[1].trim();
+
+                    if (song.attributes[attr_key] && !Array.isArray(song.attributes[attr_key])) {
+                        // Convert to array.
+                        song.attributes[attr_key] = [song.attributes[attr_key]];
+                    }
+
+                    if (Array.isArray(song.attributes[attr_key])) {
+                        song.attributes[attr_key].push(attr_value);
+                    } else {
+                        song.attributes[attr_key] = attr_value;
+                    }
                 }
                 break;
             default:
@@ -143,7 +165,8 @@ const song_line_types = {
     author: /^### (.+)/,
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
-    attribute: /^> (.+)/,
+    attribute: /^> (.+ = .+)/,
+    word_by_word: /^> (.+)/,
     embed_link: /^\[([^\]]+)\]\(([^\)]+)\)/,    // Before translation.
     translation: /^([^\s#].+)/
 };
@@ -163,9 +186,11 @@ function convertSong(text) {
 function postProcessSong(song) {
     return {
         ...song,
+        word_by_word: processTranslation(song.word_by_word),
         verses: song.verses.map((verse) => ({
             ...verse,
-            translation: processTranslation(verse.translation)
+            translation: processTranslation(verse.translation),
+            word_by_word: processTranslation(verse.word_by_word)
         }))
     };
 }
@@ -181,6 +206,9 @@ const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
  * @return {string[]}
  */
 function processTranslation(lines) {
+    if (!lines) {
+        return [];
+    }
     return lines
         .join('\n')
         // Cleanup tags for safaty.

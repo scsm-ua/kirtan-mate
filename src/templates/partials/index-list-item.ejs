@@ -21,7 +21,7 @@
 
                         <% if (song.page) { %>&nbsp;
                             <span class="IndexListItem__page" title="Page in paper songbook">
-                                <%= song.page %>
+                                <%= Array.isArray(song.page) ? song.page.join(', ') : song.page %>
                             </span>
                         <% } %>
 
