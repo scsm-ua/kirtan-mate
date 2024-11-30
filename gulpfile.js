@@ -142,7 +142,7 @@ gulp.task('generate-contents', (done) => {
  */
 gulp.task('generate-index', (done) => {
     const tasks = getSongbookIdList().map(songbook_id => {
-        var task = (done) => getJSONIndexStream(songbook_id).pipe(gulp.dest(BUILD.getJsonPath(songbook_id)), done);
+        const task = (done) => getJSONIndexStream(songbook_id).pipe(gulp.dest(BUILD.getJsonPath(songbook_id)), done);
         task.displayName = "generate-index " + songbook_id;
         return task;
     });
@@ -412,6 +412,12 @@ gulp.task('songbook-a-z', (done) => {
             require(BUILD.getIndexFile(songbook_id))
         );
 
+        const sections = items.map((item) => ({
+            page: item.name,
+            path: `#section-${item.name}`,
+            title: item.name
+        }));
+
         const task = (done) => gulp
             .src(SRC.EJS_FILES + '/' + FILES.EJS.A_Z_PAGE)
             .pipe(
@@ -420,6 +426,7 @@ gulp.task('songbook-a-z', (done) => {
                     i18n: tr,
                     items: items,
                     paths: getTemplatePaths(songbook_id),
+                    sections: sections,
                     songbook_id: songbook_id,
                     subtitle: info.subtitle,
                     title: info.title

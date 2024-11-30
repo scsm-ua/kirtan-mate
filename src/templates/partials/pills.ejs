@@ -1,0 +1,16 @@
+<link
+        rel="stylesheet"
+        href="<%= paths.toCss %>/partials/pills.css"
+/>
+
+<ul class="Pills">
+    <% items.map((item) => { %>
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="<%= item.path %>" title="<%= item.title %>">
+                <button class="Pills__button">
+                    <%= item.page %>
+                </button>
+            </a>
+        </li>
+    <% }) %>
+</ul>

@@ -140,37 +140,6 @@
     &__pages {
         display: none;
         padding: var(--side-padding) 0;
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
-    }
-
-    &__pills {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -8px;
-    }
-
-    &__pill {
-        padding: 0;
-        margin: 0 6px 16px 0;
-    }
-
-    &__page {
-        height: 32px;
-        padding: 8px;
-        border-radius: 6px;
-        border: solid 1px var(--grey);
-        color: var(--dark-grey);
-        background-color: var(--song-bg-color);
-        transition: color 0.25s;
-
-        &:hover {
-            color: var(--accent-color);
-        }
     }
 
     &__pagesTitle {

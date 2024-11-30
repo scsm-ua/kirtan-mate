@@ -1,3 +1,8 @@
+v1.1.0
+Date: 2024 Nov 30
+    - Added the 'quick jump list' on the Indexes Page.
+    - Introduced Pills component.
+_________________________________________________________
 v1.0.1
 Date: 2024 Sep 15
     - Replaced EN banners and small-banners with the original.

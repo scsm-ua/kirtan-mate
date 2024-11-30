@@ -69,17 +69,10 @@
                                 <%= i18n('SEARCH_PAGE.PAGE_LIST') %>
                             </h6>
 
-                            <ul class="">
-                                <li class="SearchPage__pills">
-                                    <% pages.map((item) => { %>
-                                        <a class="SearchPage__pill" href="<%= item.path %>" title="<%= item.title %>">
-                                            <button class="SearchPage__page">
-                                                <%= item.page %>
-                                            </button>
-                                        </a>
-                                    <% }) %>
-                                </li>
-                            </ul>
+                            <%- include(
+                                paths.toPartials + '/pills.ejs',
+                                { 'items': pages }
+                            ); %>
                         </div>
                     </div>
                 </div>
