@@ -16,7 +16,7 @@
         "gulp-shell": "^0.8.0",
         "gulp4-run-sequence": "^1.0.2",
         "kirtan-guide-en": "github:scsm-ua/kirtan-guide-en",
-        "kirtan-guide-es": "github:scsm-ua/kirtan-guide-es",
+        "kirtan-guide-es": "github:scsm-ua/kirtan-guide-es#review",
         "kirtan-guide-pocket-edition": "github:scsm-ua/kirtan-guide-pocket-edition",
         "lodash.deburr": "^4.1.0",
         "sass": "1.77.1",
