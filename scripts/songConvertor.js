@@ -203,7 +203,7 @@ function getLineIndentClass(text, prefix) {
  * EJS trims lines even despite 'rmWhitespace: false'.
  * But we want some verse lines have extra space in the beginning.
  */
-function transformLine(text, attributes) {
+function transformLine(verse, text, attributes) {
 
     // Cleanup tags for safaty.
     text = text.replace(TAG_RE, '')
@@ -212,6 +212,9 @@ function transformLine(text, attributes) {
         text = text.replace(PARANTHESES_RE,  '<span class="SongVerse__light">$1</span>')
         text = text.replace(PARANTHESES_START_RE,  '<span class="SongVerse__light">$1</span>')
         text = text.replace(PARANTHESES_END_RE,  '$1<span class="SongVerse__light">$2</span>')
+    
+    } else if (attributes && attributes['inline verse'] === 'non bold' && !verse.number) {
+        text = `<span class="SongVerse__light">${ text }</span>`;
     }
 
     // Try fix with indents.
