@@ -22,7 +22,7 @@
             <% item.text.forEach((line) => { %>
                 <% if (line) { %>
                     <li class="SongVerse__line <%= getLineIndentClass(line, 'SongVerse__line') %>">
-                        <%- transformLine(line, attributes) %>
+                        <%- transformLine(item, line, attributes) %>
                     </li>
                 <% } else { %>
                     <br>
