@@ -89,7 +89,7 @@ function convertSongToJSON(text) {
                     }).text.push('');
                 }
                 getLastVerse({
-                    create_new: last_line_id === 'translation'
+                    create_new: last_line_id === 'translation' || last_line_id === 'word_by_word'
                 }).text.push(line_value);
                 break;
             case 'word_by_word':
