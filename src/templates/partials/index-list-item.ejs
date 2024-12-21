@@ -15,7 +15,7 @@
     <ul class="IndexListItem__list">
         <% item.items.forEach((song) => { %>
             <li class="IndexListItem__item">
-                <a href="<%= paths.toSongs %>/<%= song.fileName %>" class="IndexListItem__link">
+                <a href="<%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.idx %><% } %>" class="IndexListItem__link">
                     <h6 class="IndexListItem__name" title="<%= song.aliasName %>">
                         <%= song.title %>
 

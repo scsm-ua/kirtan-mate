@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const { PATHS } = require('../scripts/constants');
+const { BUILD } = PATHS;
 const { getContentsFilePath, getSongsPath, getIndexFilePath, getSongbookIdList } = require('./songbookLoader');
 const { getEmbedCode } = require('./embeds');
 
@@ -437,6 +438,36 @@ function getSongEmbedsTitles(songbook_id, filename) {
     return embeds;
 }
 
+
+var contents_cache = {};
+var ordered_contents_cache = {};
+
+function getSongsContents(songbook_id) {
+
+    if (!(songbook_id in contents_cache)) {
+        contents_cache[songbook_id] = require(BUILD.getContentsFile(songbook_id));
+
+        // Store flat list in cache.
+        var list = ordered_contents_cache[songbook_id] = contents_cache[songbook_id].flatMap((cat) => cat.items);
+        // Put idx.
+        list.forEach((item, idx) => {
+            item.idx = idx;
+            var duplicates = list.filter(i => i.id === item.id);
+            if (duplicates.length > 1) {
+                item.duplicates = duplicates;
+            }
+        });
+    }
+
+    return contents_cache[songbook_id];
+}
+
+function getSongsOrderedList(songbook_id) {
+    // Fill cache.
+    getSongsContents(songbook_id);
+    return ordered_contents_cache[songbook_id];
+}
+
 /**
  * Debug.
  */
@@ -448,5 +479,7 @@ module.exports = {
     convertMDToJSON: convertSong,
     getContentsJSON: getContentsJSON,
     getIndexJSON: getIndexJSON,
-    getSongJSON: getSongJSON
+    getSongJSON: getSongJSON,
+    getSongsContents: getSongsContents,
+    getSongsOrderedList: getSongsOrderedList
 };

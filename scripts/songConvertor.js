@@ -4,7 +4,7 @@ const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
 
 /**/
-const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON } = require('./indexGenerator');
+const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON, getSongsOrderedList } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
 const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
 const { getTemplatePaths } = require('./utils');
@@ -42,25 +42,6 @@ function makeSongHTML(songbook_id, template) {
     });
 }
 
-var ordered_lists_cache = {};
-
-/**
- *
- */
-function getSongsOrderedList(songbook_id) {
-
-    if (!(songbook_id in ordered_lists_cache)) {
-        ordered_lists_cache[songbook_id] = require(BUILD.getContentsFile(songbook_id))
-            .flatMap((cat) => cat.items);
-        
-        ordered_lists_cache[songbook_id].forEach((item, idx) => {
-            item.idx = idx;
-        });
-    }
-
-    return ordered_lists_cache[songbook_id];
-}
-
 function getPrevNextData(paths, orderedSongs, currentSongIndex) {
     
     var prevSong;
@@ -70,19 +51,17 @@ function getPrevNextData(paths, orderedSongs, currentSongIndex) {
     if (currentSongIndex > -1) {
         if (currentSongIndex > 0) {
             prevSong = orderedSongs[currentSongIndex - 1];
-            var prevSongs = orderedSongs.filter(item => item.id === prevSong.id);
-            if (prevSongs.length > 1 
+            if (prevSong.duplicates 
                 // Skip for first.
-                && prevSongs[0].idx !== currentSongIndex - 1) {
+                && prevSong.duplicates[0].idx !== currentSongIndex - 1) {
                 prevSongParam = `?p=${ currentSongIndex - 1 }`;
             }
         }
         if (currentSongIndex < orderedSongs.length - 1) {
             nextSong = orderedSongs[currentSongIndex + 1];
-            var nextSongs = orderedSongs.filter(item => item.id === nextSong.id);
-            if (nextSongs.length > 1 
+            if (nextSong.duplicates 
                 // Skip for first.
-                && nextSongs[0].idx !== currentSongIndex + 1) {
+                && nextSong.duplicates[0].idx !== currentSongIndex + 1) {
                 nextSongParam = `?p=${ currentSongIndex + 1 }`;
             }
         }
@@ -118,6 +97,7 @@ function getPrevNextData(paths, orderedSongs, currentSongIndex) {
 function fillTemplate(songbook_id, template, content, filePath) {
 
     const { author, subtitle, title, verses, attributes, word_by_word } = content;
+    const page = content.attributes?.page;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -220,11 +200,13 @@ function fillTemplate(songbook_id, template, content, filePath) {
     // Find duplicated in contents songs.
     const currentSongs = orderedSongs.filter((item, idx) => currentSongIndex !== idx && item.id === fileId);
     if (currentSongs.length) {
+        // Same song on other pages.
         navigation.pages = Object.fromEntries(currentSongs.map(song => [song.idx.toString(), getPrevNextData(paths, orderedSongs, song.idx)]));
     }
 
     return ejs.render(template, {
         author: author,
+        page: page,
         subtitle: subtitle,
         word_by_word: word_by_word,
         navigation: navigation,

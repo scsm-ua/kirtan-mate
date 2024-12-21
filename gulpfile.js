@@ -14,7 +14,7 @@ require('dotenv').config();
 
 /**/
 const { createHeadParts, createSongXMLParts } = require('./scripts/createHeadParts');
-const { getContentsJSON } = require('./scripts/indexGenerator');
+const { getContentsJSON, getSongsContents } = require('./scripts/indexGenerator');
 const {
     getJSONContentsStream,
     getJSONIndexStream,
@@ -383,7 +383,7 @@ gulp.task('songbook-contents', (done) => {
             .src(SRC.EJS_FILES + '/' + FILES.EJS.CONTENTS_PAGE)
             .pipe(
                 ejs({
-                    categories: require(BUILD.getContentsFile(songbook_id)),
+                    categories: getSongsContents(songbook_id),
                     headParts: createHeadParts(headParts),
                     i18n: tr,
                     paths: getTemplatePaths(songbook_id),

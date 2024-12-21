@@ -11,6 +11,12 @@
             </h6>
 
             <div class="SongHeader__controls">
+                <% if (page) { %>
+                    <div>
+                        <%= i18n('SONG_PAGE.PAGE') %> <%= Array.isArray(page) ? page.join(', ') : page %>
+                    </div>
+                <% } %>
+
                 <button
                         class="NoBorderButton SongHeader__button"
                         <% if (songbooksAsOptions.length <= 1) { %>
