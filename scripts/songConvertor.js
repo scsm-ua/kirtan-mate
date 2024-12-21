@@ -4,7 +4,7 @@ const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
 
 /**/
-const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON, getSongsOrderedList } = require('./indexGenerator');
+const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON, getSongsOrderedList, getContentSongPageNumber } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
 const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
 const { getTemplatePaths } = require('./utils');
@@ -54,7 +54,8 @@ function getPrevNextData(paths, orderedSongs, currentSongIndex) {
             if (prevSong.duplicates 
                 // Skip for first.
                 && prevSong.duplicates[0].idx !== currentSongIndex - 1) {
-                prevSongParam = `?p=${ currentSongIndex - 1 }`;
+
+                    prevSongParam = `?p=${ getContentSongPageNumber(prevSong) }`;
             }
         }
         if (currentSongIndex < orderedSongs.length - 1) {
@@ -62,7 +63,8 @@ function getPrevNextData(paths, orderedSongs, currentSongIndex) {
             if (nextSong.duplicates 
                 // Skip for first.
                 && nextSong.duplicates[0].idx !== currentSongIndex + 1) {
-                nextSongParam = `?p=${ currentSongIndex + 1 }`;
+
+                    nextSongParam = `?p=${ getContentSongPageNumber(nextSong) }`;
             }
         }
     }
@@ -201,12 +203,13 @@ function fillTemplate(songbook_id, template, content, filePath) {
     const currentSongs = orderedSongs.filter((item, idx) => currentSongIndex !== idx && item.id === fileId);
     if (currentSongs.length) {
         // Same song on other pages.
-        navigation.pages = Object.fromEntries(currentSongs.map(song => [song.idx.toString(), getPrevNextData(paths, orderedSongs, song.idx)]));
+        navigation.pages = Object.fromEntries(currentSongs.map(song => [getContentSongPageNumber(song), getPrevNextData(paths, orderedSongs, song.idx)]));
     }
 
     return ejs.render(template, {
         author: author,
         page: page,
+        page_number: getContentSongPageNumber(orderedSongs[currentSongIndex]),
         subtitle: subtitle,
         word_by_word: word_by_word,
         navigation: navigation,

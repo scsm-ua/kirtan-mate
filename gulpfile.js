@@ -14,7 +14,7 @@ require('dotenv').config();
 
 /**/
 const { createHeadParts, createSongXMLParts } = require('./scripts/createHeadParts');
-const { getContentsJSON, getSongsContents } = require('./scripts/indexGenerator');
+const { getSongsContents, getSongsOrderedList } = require('./scripts/indexGenerator');
 const {
     getJSONContentsStream,
     getJSONIndexStream,
@@ -162,9 +162,7 @@ function getCommonPageContext(bookId) {
 
     const songbooks = getSongbookIdList().map((songbook_id) => {
         const info = getSongbookInfo(songbook_id);
-        const songsCount =  getContentsJSON(songbook_id)
-            .flatMap((cat) => cat.items).length;
-
+        const songsCount = getSongsOrderedList(songbook_id).length;
         return {
             href: getNavigationPaths(songbook_id).CONTENTS,
             isSelected: false,
@@ -301,25 +299,23 @@ gulp.task('search-page', (done) => {
 
         const pagesDict = {};
 
-        getContentsJSON(songbook_id)
-            .flatMap(({ items }) =>
-                items.flatMap((item) => {
-                    if (Array.isArray(item.page)) {
-                        // Multiple pages.
-                        return item.page.map(p => ({
-                            page: p,
-                            path: item.fileName,
-                            title: item.title
-                        }))
-                    } else {
-                        return {
-                            page: item.page,
-                            path: item.fileName,
-                            title: item.title
-                        };
-                    }
-                })
-            )
+        getSongsOrderedList(songbook_id)
+            .flatMap((item) => {
+                if (Array.isArray(item.page)) {
+                    // Multiple pages.
+                    return item.page.map((p, idx) => ({
+                        page: p,
+                        path: item.fileName + (idx > 0 ? `?p=${ p }` : ''),
+                        title: item.title
+                    }))
+                } else {
+                    return {
+                        page: item.page,
+                        path: item.fileName,
+                        title: item.title
+                    };
+                }
+            })
             .filter(page => page.page)
             .sort((a, b) =>
                 parseFloat(a.page) - parseFloat(b.page)

@@ -27,5 +27,14 @@
         &:hover {
             color: var(--accent-color);
         }
+
+        &__active {
+            color: var(--beige);
+            background-color: var(--dark);
+
+            &:hover {
+                color: var(--beige);
+            }
+        }
     }
 }
