@@ -221,7 +221,6 @@ function fillTemplate(songbook_id, template, content, filePath) {
     const currentSongs = orderedSongs.filter((item, idx) => currentSongIndex !== idx && item.id === fileId);
     if (currentSongs.length) {
         navigation.pages = Object.fromEntries(currentSongs.map(song => [song.idx.toString(), getPrevNextData(paths, orderedSongs, song.idx)]));
-        console.log(navigation.pages)
     }
 
     return ejs.render(template, {
