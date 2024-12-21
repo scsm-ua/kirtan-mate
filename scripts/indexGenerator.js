@@ -438,6 +438,20 @@ function getSongEmbedsTitles(songbook_id, filename) {
     return embeds;
 }
 
+function getContentSongPageNumber(song) {
+    if (song.page) {
+        if (Array.isArray(song.page)) {
+            var songOrder = song.duplicates.findIndex(s => s.idx === song.idx);
+            if (songOrder > -1 && songOrder < song.page.length) {
+                return song.page[songOrder];
+            } else {
+                console.warn('Incorrect pages and duplicates', song.page, song.duplicates);
+            }
+        } else {
+            return song.page;
+        }
+    }
+}
 
 var contents_cache = {};
 var ordered_contents_cache = {};
@@ -455,6 +469,11 @@ function getSongsContents(songbook_id) {
             var duplicates = list.filter(i => i.id === item.id);
             if (duplicates.length > 1) {
                 item.duplicates = duplicates;
+            }
+        });
+        list.forEach(item => {
+            if (item.duplicates) {
+                item.page_number = getContentSongPageNumber(item);
             }
         });
     }
@@ -481,5 +500,6 @@ module.exports = {
     getIndexJSON: getIndexJSON,
     getSongJSON: getSongJSON,
     getSongsContents: getSongsContents,
-    getSongsOrderedList: getSongsOrderedList
+    getSongsOrderedList: getSongsOrderedList,
+    getContentSongPageNumber: getContentSongPageNumber
 };

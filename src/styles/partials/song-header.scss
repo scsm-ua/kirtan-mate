@@ -13,6 +13,17 @@
         margin-bottom: 14px;
     }
 
+    &__left {
+        display: flex;
+    }
+
+    &__page {
+        padding-left: 10px;
+        a {
+            text-decoration: underline;
+        }
+    }
+
     &__book {
         margin-bottom: 0;
         font-size: 14px;

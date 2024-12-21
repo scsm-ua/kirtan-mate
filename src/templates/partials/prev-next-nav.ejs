@@ -59,6 +59,7 @@
                 if (page) {
                     const prevLink = document.querySelector('.PrevNextNav__link--prev');
                     const nextLink = document.querySelector('.PrevNextNav__link--next');
+                    const searchLinks = document.querySelectorAll('.page-number-search');
     
                     prevHref = page.prev.href;
                     prevLink.setAttribute('href', page.prev.href);
@@ -67,6 +68,12 @@
                     nextHref = page.next.href;
                     nextLink.setAttribute('href', page.next.href);
                     nextLink.querySelector('.PrevNextNav__label').innerText = page.next.title;
+
+                    searchLinks.forEach(searchLink => {
+                        var searchHref = searchLink.getAttribute('href');
+                        searchHref = searchHref.replace(/p=\d+/, 'p=' + idx);
+                        searchLink.setAttribute('href', searchHref);
+                    });
                 }
 
             <% } %>
