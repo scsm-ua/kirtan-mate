@@ -65,6 +65,12 @@
         padding: 0;
     }
 
+    &__wordbyword {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
     &__paragraph {
         p {
             color: var(--text-color);
@@ -72,6 +78,14 @@
             font-weight: 300;
             line-height: 24px;
             margin-bottom: 16px;
+
+            .word-by-word-mode .SongVerse__translation & {
+                color: var(--dark);
+            }
+
+            .word-by-word-mode .SongVerse__wordbyword & {
+                font-size: 12px;
+            }
         }
 
         a {
