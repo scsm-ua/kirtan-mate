@@ -42,13 +42,69 @@ function makeSongHTML(songbook_id, template) {
     });
 }
 
+var ordered_lists_cache = {};
 
 /**
  *
  */
 function getSongsOrderedList(songbook_id) {
-    return require(BUILD.getContentsFile(songbook_id))
-        .flatMap((cat) => cat.items);
+
+    if (!(songbook_id in ordered_lists_cache)) {
+        ordered_lists_cache[songbook_id] = require(BUILD.getContentsFile(songbook_id))
+            .flatMap((cat) => cat.items);
+        
+        ordered_lists_cache[songbook_id].forEach((item, idx) => {
+            item.idx = idx;
+        });
+    }
+
+    return ordered_lists_cache[songbook_id];
+}
+
+function getPrevNextData(paths, orderedSongs, currentSongIndex) {
+    
+    var prevSong;
+    var nextSong;
+    var nextSongParam = '';
+    var prevSongParam = '';
+    if (currentSongIndex > -1) {
+        if (currentSongIndex > 0) {
+            prevSong = orderedSongs[currentSongIndex - 1];
+            var prevSongs = orderedSongs.filter(item => item.id === prevSong.id);
+            if (prevSongs.length > 1 
+                // Skip for first.
+                && prevSongs[0].idx !== currentSongIndex - 1) {
+                prevSongParam = `?p=${ currentSongIndex - 1 }`;
+            }
+        }
+        if (currentSongIndex < orderedSongs.length - 1) {
+            nextSong = orderedSongs[currentSongIndex + 1];
+            var nextSongs = orderedSongs.filter(item => item.id === nextSong.id);
+            if (nextSongs.length > 1 
+                // Skip for first.
+                && nextSongs[0].idx !== currentSongIndex + 1) {
+                nextSongParam = `?p=${ currentSongIndex + 1 }`;
+            }
+        }
+    }
+
+    var result = {};
+
+    if (prevSong) {
+        result.prev = {
+            href: `${ paths.toSongs }/${ prevSong.fileName }${ prevSongParam }`,
+            title: prevSong.title
+        };
+    }
+
+    if (nextSong) {
+        result.next = {
+            href: `${ paths.toSongs }/${ nextSong.fileName }${ nextSongParam }`,
+            title: nextSong.title
+        };
+    }
+
+    return result;
 }
 
 
@@ -60,7 +116,7 @@ function getSongsOrderedList(songbook_id) {
  * @return {string}
  */
 function fillTemplate(songbook_id, template, content, filePath) {
-    // TODO: subtitle.
+
     const { author, subtitle, title, verses, attributes, word_by_word } = content;
 
     if (!verses) {
@@ -75,9 +131,9 @@ function fillTemplate(songbook_id, template, content, filePath) {
     if (author && author.length) {
         pageTitle += '. ' + author[0];
     }
-    // TODO: questionable
+
     if (subtitle && subtitle.length) {
-        pageTitle += '. ' + subtitle[0];
+        pageTitle += '. ' + subtitle.join(' ');
     }
 
     const filename = path.parse(filePath).name;
@@ -149,13 +205,32 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     const currentSongbook = alternativeTranslationBooks.find((option) => option.isSelected);
 
+    const paths = getTemplatePaths(songbook_id, { root_to_songbook: true });
+
+    // Nex prev links.
+
+    // Get file slug:
+    // `json/es/udilo-aruna-puraba-bhage.json` -> `udilo-aruna-puraba-bhage`.
+    const fileId = filePath.split(/[\/\.]/).slice(-2)[0];
+    const orderedSongs = getSongsOrderedList(songbook_id);
+    const currentSongIndex = orderedSongs.findIndex((item) => item.id === fileId);
+
+    var navigation = getPrevNextData(paths, orderedSongs, currentSongIndex);
+
+    // Find duplicated in contents songs.
+    const currentSongs = orderedSongs.filter((item, idx) => currentSongIndex !== idx && item.id === fileId);
+    if (currentSongs.length) {
+        navigation.pages = Object.fromEntries(currentSongs.map(song => [song.idx.toString(), getPrevNextData(paths, orderedSongs, song.idx)]));
+        console.log(navigation.pages)
+    }
+
     return ejs.render(template, {
         author: author,
         subtitle: subtitle,
         word_by_word: word_by_word,
-        orderedSongs: JSON.stringify(getSongsOrderedList(songbook_id)),
+        navigation: navigation,
         headParts: createHeadParts(headParts),
-        paths: getTemplatePaths(songbook_id, { root_to_songbook: true }),
+        paths: paths,
         title: title,
         verses: verses,
         embeds: embeds,
