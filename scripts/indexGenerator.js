@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const { PATHS } = require('../scripts/constants');
+const { BUILD } = PATHS;
 const { getContentsFilePath, getSongsPath, getIndexFilePath, getSongbookIdList } = require('./songbookLoader');
 const { getEmbedCode } = require('./embeds');
 
@@ -89,8 +90,18 @@ function convertSongToJSON(text) {
                     }).text.push('');
                 }
                 getLastVerse({
-                    create_new: last_line_id === 'translation'
+                    create_new: last_line_id === 'translation' || last_line_id === 'word_by_word'
                 }).text.push(line_value);
+                break;
+            case 'word_by_word':
+                if (song.verses.length === 0) {
+                    song.word_by_word = song.word_by_word || [];
+                    song.word_by_word.push(line_value);
+                } else {
+                    var verse = getLastVerse();
+                    verse.word_by_word = verse.word_by_word || [];
+                    verse.word_by_word.push(line_value);
+                }
                 break;
             case 'translation':
                 getLastVerse().translation.push(line_value);
@@ -113,7 +124,19 @@ function convertSongToJSON(text) {
                     console.error("Can't recognize attribute", line);
                 } else {
                     song.attributes = song.attributes || {};
-                    song.attributes[bits[0].trim()] = bits[1].trim();
+                    var attr_key = bits[0].trim();
+                    var attr_value = bits[1].trim();
+
+                    if (song.attributes[attr_key] && !Array.isArray(song.attributes[attr_key])) {
+                        // Convert to array.
+                        song.attributes[attr_key] = [song.attributes[attr_key]];
+                    }
+
+                    if (Array.isArray(song.attributes[attr_key])) {
+                        song.attributes[attr_key].push(attr_value);
+                    } else {
+                        song.attributes[attr_key] = attr_value;
+                    }
                 }
                 break;
             default:
@@ -143,7 +166,8 @@ const song_line_types = {
     author: /^### (.+)/,
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
-    attribute: /^> (.+)/,
+    attribute: /^> (.+ = .+)/,
+    word_by_word: /^> (.+)/,
     embed_link: /^\[([^\]]+)\]\(([^\)]+)\)/,    // Before translation.
     translation: /^([^\s#].+)/
 };
@@ -163,9 +187,11 @@ function convertSong(text) {
 function postProcessSong(song) {
     return {
         ...song,
+        word_by_word: processTranslation(song.word_by_word),
         verses: song.verses.map((verse) => ({
             ...verse,
-            translation: processTranslation(verse.translation)
+            translation: processTranslation(verse.translation),
+            word_by_word: processTranslation(verse.word_by_word)
         }))
     };
 }
@@ -181,6 +207,9 @@ const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
  * @return {string[]}
  */
 function processTranslation(lines) {
+    if (!lines) {
+        return [];
+    }
     return lines
         .join('\n')
         // Cleanup tags for safaty.
@@ -409,6 +438,53 @@ function getSongEmbedsTitles(songbook_id, filename) {
     return embeds;
 }
 
+function getContentSongPageNumber(song) {
+    if (song.page) {
+        if (Array.isArray(song.page)) {
+            var songOrder = song.duplicates.findIndex(s => s.idx === song.idx);
+            if (songOrder > -1 && songOrder < song.page.length) {
+                return song.page[songOrder];
+            } else {
+                console.warn('Incorrect pages and duplicates', song.page, song.duplicates);
+            }
+        } else {
+            return song.page;
+        }
+    }
+}
+
+var contents_cache = {};
+var ordered_contents_cache = {};
+
+function getSongsContents(songbook_id) {
+
+    if (!(songbook_id in contents_cache)) {
+        contents_cache[songbook_id] = require(BUILD.getContentsFile(songbook_id));
+
+        // Store flat list in cache.
+        var list = ordered_contents_cache[songbook_id] = contents_cache[songbook_id].flatMap((cat) => cat.items);
+        // Put idx.
+        list.forEach((item, idx) => {
+            item.idx = idx;
+            var duplicates = list.filter(i => i.id === item.id);
+            if (duplicates.length > 1) {
+                item.duplicates = duplicates;
+            }
+        });
+        list.forEach(item => {
+            item.page_number = getContentSongPageNumber(item);
+        });
+    }
+
+    return contents_cache[songbook_id];
+}
+
+function getSongsOrderedList(songbook_id) {
+    // Fill cache.
+    getSongsContents(songbook_id);
+    return ordered_contents_cache[songbook_id];
+}
+
 /**
  * Debug.
  */
@@ -420,5 +496,7 @@ module.exports = {
     convertMDToJSON: convertSong,
     getContentsJSON: getContentsJSON,
     getIndexJSON: getIndexJSON,
-    getSongJSON: getSongJSON
+    getSongJSON: getSongJSON,
+    getSongsContents: getSongsContents,
+    getSongsOrderedList: getSongsOrderedList
 };

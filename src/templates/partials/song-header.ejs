@@ -6,9 +6,16 @@
 <header class="SongHeader">
     <div class="SongHeader__container">
         <div class="SongHeader__top">
-            <h6 class="SongHeader__book">
-                <%= currentSongbook.title %>
-            </h6>
+            <div class="SongHeader__left">
+                <h6 class="SongHeader__book">
+                    <%= currentSongbook.title %>
+                </h6>
+                <% if (page) { %>
+                    <div class="SongHeader__page">
+                        <a class="SongHeader__book page-number-search" href="<%= paths.toPages.SEARCH %><% if (page_number) { %>?p=<%= page_number %><% } %>"><%= i18n('SONG_PAGE.PAGE') %> <%= Array.isArray(page) ? page.join(', ') : page %></a>
+                    </div>
+                <% } %>
+            </div>
 
             <div class="SongHeader__controls">
                 <button
@@ -39,6 +46,18 @@
                         <div><%= item %></div>
                     <% }) %>
                 </h1>
+            <% } %>
+
+            <% if (word_by_word && word_by_word.length) { %>
+                <% word_by_word.forEach((item, idx) => { %>
+                    <div class="SongHeader__author
+                        <% if (idx === 0) {%>
+                            SongHeader__author_first
+                        <% } %>
+                    ">
+                        <%- item %>
+                    </div>
+                <% }) %>
             <% } %>
 
             <% if (subtitle && subtitle.length) { %>

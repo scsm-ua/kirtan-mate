@@ -14,3 +14,17 @@
         </li>
     <% }) %>
 </ul>
+
+<script>
+    (function() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const idx = urlParams.get('p');
+        const buttons = document.querySelectorAll('.Pills__button');
+        buttons.forEach(button => {
+            if (idx == button.innerText.trim()) {
+                button.classList.add("Pills__button__active");
+            }
+        });
+    })();
+</script>

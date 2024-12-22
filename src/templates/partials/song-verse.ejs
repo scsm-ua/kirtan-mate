@@ -22,13 +22,27 @@
             <% item.text.forEach((line) => { %>
                 <% if (line) { %>
                     <li class="SongVerse__line <%= getLineIndentClass(line, 'SongVerse__line') %>">
-                        <%- transformLine(line, attributes) %>
+                        <%- transformLine(item, line, attributes) %>
                     </li>
                 <% } else { %>
                     <br>
                 <% } %>
             <% }) %>
         </ul>
+    <% } %>
+
+    <% if (item.word_by_word.length) { %>
+        <div class="Collapse Collapse__show" data-elem="translation">
+            <ul class="SongVerse__translation">
+                <% item.word_by_word.forEach((p) => { %>
+                    <li class="SongVerse__paragraph">
+                        <p>
+                            <%- p %>
+                        </p>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
     <% } %>
 
     <% if (item.translation.length) { %>
