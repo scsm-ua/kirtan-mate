@@ -1,0 +1,40 @@
+.Pills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px 0 0;
+    padding: 0;
+    list-style-type: none;
+
+    &__item {
+        display: flex;
+    }
+
+    &__anchor {
+        padding: 0;
+        margin: 0 8px 8px 0;
+    }
+
+    &__button {
+        height: 32px;
+        width: 44px;
+        padding: 8px;
+        border-radius: 6px;
+        border: solid 1px var(--grey);
+        color: var(--dark-grey);
+        background-color: var(--song-bg-color);
+        transition: color 0.25s;
+
+        &:hover {
+            color: var(--accent-color);
+        }
+
+        &__active {
+            color: var(--beige);
+            background-color: var(--dark);
+
+            &:hover {
+                color: var(--beige);
+            }
+        }
+    }
+}

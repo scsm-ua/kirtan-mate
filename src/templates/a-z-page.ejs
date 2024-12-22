@@ -5,34 +5,42 @@
 
     <link rel="stylesheet" href="<%= paths.toCss %>/index.css" />
     <link rel="stylesheet" href="<%= paths.toCss %>/index-page.css" />
+    <link rel="stylesheet" href="<%= paths.toCss %>/az-page.css" />
 </head>
 <body>
-<div class="Layout">
-    <div class="Layout__content">
-        <%- include(paths.toPartials + '/header.ejs'); %>
+    <div class="Layout">
+        <div class="Layout__content">
+            <%- include(paths.toPartials + '/header.ejs'); %>
 
-        <main class="Main IndexPage">
-            <div class="Main__container IndexPage__container">
-                <div class="IndexPage__title">
-                    <%- include(paths.toPartials + '/song-book-title.ejs'); %>
-                </div>
+            <main class="Main IndexPage">
+                <div class="Main__container IndexPage__container">
+                    <div class="IndexPage__title">
+                        <%- include(paths.toPartials + '/song-book-title.ejs'); %>
+                    </div>
 
-                <div class="Main__content IndexPage__content">
-                    <ul class="IndexPage__list">
-                        <% items.forEach((item) => { %>
+                    <div class="Main__content IndexPage__content">
+                        <div class="AZPage__list">
                             <%- include(
-                                paths.toPartials + '/index-list-item.ejs',
-                                { 'item': item }
+                            paths.toPartials + '/pills.ejs',
+                            { 'items': sections }
                             ); %>
-                        <% }) %>
-                    </ul>
-                </div>
-            </div>
-        </main>
-    </div>
+                        </div>
 
-    <%- include(paths.toPartials + '/footer.ejs'); %>
-</div>
-<%- include(paths.toPartials + '/gtag.ejs'); %>
+                        <ul class="IndexPage__list">
+                            <% items.forEach((item) => { %>
+                                <%- include(
+                                    paths.toPartials + '/index-list-item.ejs',
+                                    { 'item': item }
+                                ); %>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <%- include(paths.toPartials + '/footer.ejs'); %>
+    </div>
+    <%- include(paths.toPartials + '/gtag.ejs'); %>
 </body>
 </html>

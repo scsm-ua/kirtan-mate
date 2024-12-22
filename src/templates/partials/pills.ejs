@@ -1,0 +1,30 @@
+<link
+        rel="stylesheet"
+        href="<%= paths.toCss %>/partials/pills.css"
+/>
+
+<ul class="Pills">
+    <% items.map((item) => { %>
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="<%= item.path %>" title="<%= item.title %>">
+                <button class="Pills__button">
+                    <%= item.page %>
+                </button>
+            </a>
+        </li>
+    <% }) %>
+</ul>
+
+<script>
+    (function() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const idx = urlParams.get('p');
+        const buttons = document.querySelectorAll('.Pills__button');
+        buttons.forEach(button => {
+            if (idx == button.innerText.trim()) {
+                button.classList.add("Pills__button__active");
+            }
+        });
+    })();
+</script>

@@ -3,16 +3,20 @@
 
     <div class="PrevNextNav__container">
         <div class="PrevNextNav__content">
-            <a class="PrevNextNav__link PrevNextNav__link--prev" href="">
+            <a class="PrevNextNav__link PrevNextNav__link--prev <% if (!navigation.prev) { %>PrevNextNav__link--disabled<% } %>" href="<%= navigation.prev?.href || '' %>">
                 <span class="PrevNextNav__icon PrevNextNav__icon--prev">
                     <span class="icon-chevron-right"></span>
                 </span>
 
-                <span class="PrevNextNav__label ellipsis"></span>
+                <span class="PrevNextNav__label ellipsis">
+                    <%= navigation.prev?.title || '' %>
+                </span>
             </a>
 
-            <a class="PrevNextNav__link PrevNextNav__link--next" href="">
-                <span class="PrevNextNav__label ellipsis"></span>
+            <a class="PrevNextNav__link PrevNextNav__link--next <% if (!navigation.next) { %>PrevNextNav__link--disabled<% } %>" href="<%= navigation.next?.href || '' %>">
+                <span class="PrevNextNav__label ellipsis">
+                    <%= navigation.next?.title || '' %>
+                </span>
 
                 <span class="PrevNextNav__icon PrevNextNav__icon--next">
                     <span class="icon-chevron-right"></span>
@@ -25,51 +29,54 @@
 
     <script>
         (function() {
+            var prevHref = '<%= navigation.prev?.href %>';
+            var nextHref = '<%= navigation.next?.href %>';
             try {
-                const orderedSongs = <%- orderedSongs %>;
-                const prevLink = document.querySelector('.PrevNextNav__link--prev');
-                const nextLink = document.querySelector('.PrevNextNav__link--next');
-
-                const currentSongIndex = orderedSongs.findIndex((item) =>
-                    window.location.pathname.includes(item.fileName)
-                );
-
-                if (currentSongIndex === 0) {
-                    prevLink.removeAttribute('href');
-                    prevLink.classList.add('PrevNextNav__link--disabled');
-                } else {
-                    const title = orderedSongs[currentSongIndex - 1].name;
-                    prevLink.setAttribute('href', orderedSongs[currentSongIndex - 1].fileName);
-                    prevLink.title = title;
-                    prevLink.querySelector('.PrevNextNav__label').innerText = title;
-                }
-
-                if (currentSongIndex === orderedSongs.length - 1) {
-                    nextLink.removeAttribute('href');
-                    nextLink.classList.add('PrevNextNav__link--disabled');
-                } else {
-                    const title = orderedSongs[currentSongIndex + 1].name;
-                    nextLink.setAttribute('href', orderedSongs[currentSongIndex + 1].fileName);
-                    nextLink.title = title;
-                    nextLink.querySelector('.PrevNextNav__label').innerText = title;
-                }
-
                 /**
                  * Swipe events.
                  */
-                document.addEventListener('swiped-left', () => {
-                    if (currentSongIndex !== orderedSongs.length - 1)
-                        window.location.href = orderedSongs[currentSongIndex + 1].fileName
+                document.addEventListener('swiped-right', () => {
+                    if (prevHref)
+                        window.location.href = prevHref;
                 });
 
-                document.addEventListener('swiped-right', () => {
-                    if (currentSongIndex !== 0)
-                        window.location.href = orderedSongs[currentSongIndex - 1].fileName
+                document.addEventListener('swiped-left', () => {
+                    if (nextHref)
+                        window.location.href = nextHref;
                 });
 
             } catch (e) {
                 window.console.error(e);
             }
+
+            <% if (navigation.pages) { %>                
+                var pages = <%- JSON.stringify(navigation.pages, null, 4) %>;
+
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const idx = urlParams.get('p');
+                var page = idx && pages[idx];
+                if (page) {
+                    const prevLink = document.querySelector('.PrevNextNav__link--prev');
+                    const nextLink = document.querySelector('.PrevNextNav__link--next');
+                    const searchLinks = document.querySelectorAll('.page-number-search');
+    
+                    prevHref = page.prev.href;
+                    prevLink.setAttribute('href', page.prev.href);
+                    prevLink.querySelector('.PrevNextNav__label').innerText = page.prev.title;
+    
+                    nextHref = page.next.href;
+                    nextLink.setAttribute('href', page.next.href);
+                    nextLink.querySelector('.PrevNextNav__label').innerText = page.next.title;
+
+                    searchLinks.forEach(searchLink => {
+                        var searchHref = searchLink.getAttribute('href');
+                        searchHref = searchHref.replace(/p=\d+/, 'p=' + idx);
+                        searchLink.setAttribute('href', searchHref);
+                    });
+                }
+
+            <% } %>
         } ())
     </script>
 </div>

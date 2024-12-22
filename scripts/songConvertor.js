@@ -4,7 +4,7 @@ const { Transform } = require('stream');
 const VinylStream = require('vinyl-source-stream');
 
 /**/
-const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON } = require('./indexGenerator');
+const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON, getSongsOrderedList } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
 const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
 const { getTemplatePaths } = require('./utils');
@@ -42,13 +42,50 @@ function makeSongHTML(songbook_id, template) {
     });
 }
 
+function getPrevNextData(paths, orderedSongs, currentSongIndex) {
+    
+    var prevSong;
+    var nextSong;
+    var nextSongParam = '';
+    var prevSongParam = '';
+    if (currentSongIndex > -1) {
+        if (currentSongIndex > 0) {
+            prevSong = orderedSongs[currentSongIndex - 1];
+            if (prevSong.duplicates 
+                // Skip for first.
+                && prevSong.duplicates[0].idx !== currentSongIndex - 1) {
 
-/**
- *
- */
-function getSongsOrderedList(songbook_id) {
-    return require(BUILD.getContentsFile(songbook_id))
-        .flatMap((cat) => cat.items);
+                    prevSongParam = `?p=${ prevSong.page_number }`;
+            }
+        }
+        if (currentSongIndex < orderedSongs.length - 1) {
+            nextSong = orderedSongs[currentSongIndex + 1];
+            if (nextSong.duplicates 
+                // Skip for first.
+                && nextSong.duplicates[0].idx !== currentSongIndex + 1) {
+
+                    nextSongParam = `?p=${ nextSong.page_number }`;
+            }
+        }
+    }
+
+    var result = {};
+
+    if (prevSong) {
+        result.prev = {
+            href: `${ paths.toSongs }/${ prevSong.fileName }${ prevSongParam }`,
+            title: prevSong.title
+        };
+    }
+
+    if (nextSong) {
+        result.next = {
+            href: `${ paths.toSongs }/${ nextSong.fileName }${ nextSongParam }`,
+            title: nextSong.title
+        };
+    }
+
+    return result;
 }
 
 
@@ -60,8 +97,9 @@ function getSongsOrderedList(songbook_id) {
  * @return {string}
  */
 function fillTemplate(songbook_id, template, content, filePath) {
-    // TODO: subtitle.
-    const { author, subtitle, title, verses, attributes } = content;
+
+    const { author, subtitle, title, verses, attributes, word_by_word } = content;
+    const page = content.attributes?.page;
 
     if (!verses) {
         console.warn('No verse in ' + filePath);
@@ -75,9 +113,9 @@ function fillTemplate(songbook_id, template, content, filePath) {
     if (author && author.length) {
         pageTitle += '. ' + author[0];
     }
-    // TODO: questionable
+
     if (subtitle && subtitle.length) {
-        pageTitle += '. ' + subtitle[0];
+        pageTitle += '. ' + subtitle.join(' ');
     }
 
     const filename = path.parse(filePath).name;
@@ -149,12 +187,34 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     const currentSongbook = alternativeTranslationBooks.find((option) => option.isSelected);
 
+    const paths = getTemplatePaths(songbook_id, { root_to_songbook: true });
+
+    // Nex prev links.
+
+    // Get file slug:
+    // `json/es/udilo-aruna-puraba-bhage.json` -> `udilo-aruna-puraba-bhage`.
+    const fileId = filePath.split(/[\/\.]/).slice(-2)[0];
+    const orderedSongs = getSongsOrderedList(songbook_id);
+    const currentSongIndex = orderedSongs.findIndex((item) => item.id === fileId);
+
+    var navigation = getPrevNextData(paths, orderedSongs, currentSongIndex);
+
+    // Find duplicated in contents songs.
+    const currentSongs = orderedSongs.filter((item, idx) => currentSongIndex !== idx && item.id === fileId);
+    if (currentSongs.length) {
+        // Same song on other pages.
+        navigation.pages = Object.fromEntries(currentSongs.map(song => [song.page_number, getPrevNextData(paths, orderedSongs, song.idx)]));
+    }
+
     return ejs.render(template, {
         author: author,
+        page: page,
+        page_number: orderedSongs[currentSongIndex].page_number,
         subtitle: subtitle,
-        orderedSongs: JSON.stringify(getSongsOrderedList(songbook_id)),
+        word_by_word: word_by_word,
+        navigation: navigation,
         headParts: createHeadParts(headParts),
-        paths: getTemplatePaths(songbook_id, { root_to_songbook: true }),
+        paths: paths,
         title: title,
         verses: verses,
         embeds: embeds,
@@ -202,7 +262,7 @@ function getLineIndentClass(text, prefix) {
  * EJS trims lines even despite 'rmWhitespace: false'.
  * But we want some verse lines have extra space in the beginning.
  */
-function transformLine(text, attributes) {
+function transformLine(verse, text, attributes) {
 
     // Cleanup tags for safaty.
     text = text.replace(TAG_RE, '')
@@ -211,6 +271,9 @@ function transformLine(text, attributes) {
         text = text.replace(PARANTHESES_RE,  '<span class="SongVerse__light">$1</span>')
         text = text.replace(PARANTHESES_START_RE,  '<span class="SongVerse__light">$1</span>')
         text = text.replace(PARANTHESES_END_RE,  '$1<span class="SongVerse__light">$2</span>')
+    
+    } else if (attributes && attributes['inline verse'] === 'non bold' && !verse.number) {
+        text = `<span class="SongVerse__light">${ text }</span>`;
     }
 
     // Try fix with indents.

@@ -14,7 +14,7 @@ require('dotenv').config();
 
 /**/
 const { createHeadParts, createSongXMLParts } = require('./scripts/createHeadParts');
-const { getContentsJSON } = require('./scripts/indexGenerator');
+const { getSongsContents, getSongsOrderedList } = require('./scripts/indexGenerator');
 const {
     getJSONContentsStream,
     getJSONIndexStream,
@@ -142,7 +142,7 @@ gulp.task('generate-contents', (done) => {
  */
 gulp.task('generate-index', (done) => {
     const tasks = getSongbookIdList().map(songbook_id => {
-        var task = (done) => getJSONIndexStream(songbook_id).pipe(gulp.dest(BUILD.getJsonPath(songbook_id)), done);
+        const task = (done) => getJSONIndexStream(songbook_id).pipe(gulp.dest(BUILD.getJsonPath(songbook_id)), done);
         task.displayName = "generate-index " + songbook_id;
         return task;
     });
@@ -162,9 +162,7 @@ function getCommonPageContext(bookId) {
 
     const songbooks = getSongbookIdList().map((songbook_id) => {
         const info = getSongbookInfo(songbook_id);
-        const songsCount =  getContentsJSON(songbook_id)
-            .flatMap((cat) => cat.items).length;
-
+        const songsCount = getSongsOrderedList(songbook_id).length;
         return {
             href: getNavigationPaths(songbook_id).CONTENTS,
             isSelected: false,
@@ -299,18 +297,35 @@ gulp.task('search-page', (done) => {
             path: getNavigationPaths(songbook_id).SEARCH
         };
 
-        const pages = getContentsJSON(songbook_id)
-            .flatMap(({ items }) =>
-                items.map((item) => ({
-                    page: item.page,
-                    path: item.fileName,
-                    title: item.title
-                }))
-            )
+        const pagesDict = {};
+
+        getSongsOrderedList(songbook_id)
+            .flatMap((item) => {
+                if (Array.isArray(item.page)) {
+                    // Multiple pages.
+                    return item.page.map((p, idx) => ({
+                        page: p,
+                        path: item.fileName + (idx > 0 ? `?p=${ p }` : ''),
+                        title: item.title
+                    }))
+                } else {
+                    return {
+                        page: item.page,
+                        path: item.fileName,
+                        title: item.title
+                    };
+                }
+            })
             .filter(page => page.page)
             .sort((a, b) =>
                 parseFloat(a.page) - parseFloat(b.page)
-            );
+            )
+            .forEach(item => {
+                // Get unique pages.
+                pagesDict[item.page] = item;
+            });
+
+        const pages = Object.values(pagesDict);
 
         const task = (taskDone) => gulp
                 .src([SRC.EJS_FILES + '/' + FILES.EJS.SEARCH_PAGE])
@@ -364,7 +379,7 @@ gulp.task('songbook-contents', (done) => {
             .src(SRC.EJS_FILES + '/' + FILES.EJS.CONTENTS_PAGE)
             .pipe(
                 ejs({
-                    categories: require(BUILD.getContentsFile(songbook_id)),
+                    categories: getSongsContents(songbook_id),
                     headParts: createHeadParts(headParts),
                     i18n: tr,
                     paths: getTemplatePaths(songbook_id),
@@ -412,6 +427,12 @@ gulp.task('songbook-a-z', (done) => {
             require(BUILD.getIndexFile(songbook_id))
         );
 
+        const sections = items.map((item) => ({
+            page: item.name,
+            path: `#section-${item.name}`,
+            title: item.name
+        }));
+
         const task = (done) => gulp
             .src(SRC.EJS_FILES + '/' + FILES.EJS.A_Z_PAGE)
             .pipe(
@@ -420,6 +441,7 @@ gulp.task('songbook-a-z', (done) => {
                     i18n: tr,
                     items: items,
                     paths: getTemplatePaths(songbook_id),
+                    sections: sections,
                     songbook_id: songbook_id,
                     subtitle: info.subtitle,
                     title: info.title

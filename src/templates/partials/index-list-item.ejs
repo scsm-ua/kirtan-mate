@@ -1,4 +1,4 @@
-<li class="IndexListItem">
+<li class="IndexListItem" id="section-<%= item.name %>">
     <link
         rel="stylesheet"
         href="<%= paths.toCss %>/partials/index-list-item.css"
@@ -15,13 +15,13 @@
     <ul class="IndexListItem__list">
         <% item.items.forEach((song) => { %>
             <li class="IndexListItem__item">
-                <a href="<%= paths.toSongs %>/<%= song.fileName %>" class="IndexListItem__link">
+                <a href="<%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %>" class="IndexListItem__link">
                     <h6 class="IndexListItem__name" title="<%= song.aliasName %>">
                         <%= song.title %>
 
                         <% if (song.page) { %>&nbsp;
                             <span class="IndexListItem__page" title="Page in paper songbook">
-                                <%= song.page %>
+                                <%= Array.isArray(song.page) ? song.page.join(', ') : song.page %>
                             </span>
                         <% } %>
 

@@ -34,8 +34,8 @@
             </a>
 
             <a
-                    class="Footer__item"
-                    href="<%= paths.toPages.SEARCH %>"
+                    class="Footer__item page-number-search"
+                    href="<%= paths.toPages.SEARCH %><% if (locals.page_number) { %>?p=<%= page_number %><% } %>"
                     id="footer-link-search"
             >
                 <div class="Footer__icon Footer__icon--regular icon-search"></div>

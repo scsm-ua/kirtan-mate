@@ -2,6 +2,8 @@
 
 
 .IndexListItem {
+    scroll-margin-top: calc(24px + var(--header-height));
+
     &__header {
         display: flex;
         justify-content: center;
