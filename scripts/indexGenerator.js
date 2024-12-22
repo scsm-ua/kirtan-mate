@@ -472,9 +472,7 @@ function getSongsContents(songbook_id) {
             }
         });
         list.forEach(item => {
-            if (item.duplicates) {
-                item.page_number = getContentSongPageNumber(item);
-            }
+            item.page_number = getContentSongPageNumber(item);
         });
     }
 
@@ -500,6 +498,5 @@ module.exports = {
     getIndexJSON: getIndexJSON,
     getSongJSON: getSongJSON,
     getSongsContents: getSongsContents,
-    getSongsOrderedList: getSongsOrderedList,
-    getContentSongPageNumber: getContentSongPageNumber
+    getSongsOrderedList: getSongsOrderedList
 };
