@@ -500,6 +500,5 @@ module.exports = {
     getIndexJSON: getIndexJSON,
     getSongJSON: getSongJSON,
     getSongsContents: getSongsContents,
-    getSongsOrderedList: getSongsOrderedList,
-    getContentSongPageNumber: getContentSongPageNumber
+    getSongsOrderedList: getSongsOrderedList
 };
