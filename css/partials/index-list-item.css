@@ -16,6 +16,9 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 /**
  *
  */
+.IndexListItem {
+  scroll-margin-top: calc(24px + var(--header-height));
+}
 .IndexListItem__header {
   display: flex;
   justify-content: center;

@@ -272,6 +272,18 @@
     </url>
     
     <url>
+        <loc>https://kirtan.site/ru/jashomati-nandana-vraja-vara-nagara.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/ru/jaya-shiachinandana-sura-muni-vandana.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://kirtan.site/ru/mahaprasade-govinde-nama-brahmani.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -296,7 +308,25 @@
     </url>
     
     <url>
+        <loc>https://kirtan.site/ru/gurudeva-kripa-bindu-diya-kara-ei-dase.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://kirtan.site/ru/namo-namah-tulasi-maharani.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/ru/jaya-jaya-gurudever-arati-ujjvala.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/ru/jaya-guru-maharaja-jati-rajeshvara.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -2201,7 +2231,7 @@
     </url>
     
     <url>
-        <loc>https://kirtan.site/en-pe/jaya-shiachinandana-sura-muni-vandana.html</loc>
+        <loc>https://kirtan.site/en-pe/jaya-sa-parikara.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -2231,7 +2261,7 @@
     </url>
     
     <url>
-        <loc>https://kirtan.site/en-pe/jaya-sa-parikara.html</loc>
+        <loc>https://kirtan.site/en-pe/jaya-shiachinandana-sura-muni-vandana.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

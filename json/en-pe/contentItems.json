@@ -3,17 +3,12 @@
     "name": "Contents",
     "items": [
       {
-        "id": "jaya-shiachinandana-sura-muni-vandana",
+        "id": "jaya-sa-parikara",
         "title": "Jay Dhvani",
         "name": "Jay Dhvani",
         "aliasName": "Jay Saparikar Śrī Śrī Guru Gaurāṅga Gāndharvā Govindasundar Jīu kī jay!",
-        "fileName": "jaya-shiachinandana-sura-muni-vandana.html",
-        "page": "5",
-        "embeds": [
-          "Каракас Дхам",
-          "Шрила Мадхусудан Махарадж",
-          "Шрила Авадхут Махарадж"
-        ]
+        "fileName": "jaya-sa-parikara.html",
+        "page": "5"
       }
     ]
   },
@@ -78,12 +73,17 @@
         ]
       },
       {
-        "id": "jaya-sa-parikara",
+        "id": "jaya-shiachinandana-sura-muni-vandana",
         "title": "Śrī Śachīnandana-vandanā",
         "name": "Śrī Śachīnandana-vandanā",
         "aliasName": "jaya śachī-nandana    sura-muni-vandana",
-        "fileName": "jaya-sa-parikara.html",
-        "page": "17"
+        "fileName": "jaya-shiachinandana-sura-muni-vandana.html",
+        "page": "17",
+        "embeds": [
+          "Каракас Дхам",
+          "Шрила Мадхусудан Махарадж",
+          "Шрила Авадхут Махарадж"
+        ]
       },
       {
         "id": "bhaja-bhakata-vatsala-shri-gaurahari",
@@ -318,7 +318,7 @@
         "fileName": "thakura-vaishnava-gana-kori-ei-nivedana.html",
         "page": "59",
         "embeds": [
-          "Bhakti Lalita Devi"
+          "Навадвип Дхам"
         ]
       },
       {
@@ -335,10 +335,7 @@
         "name": "Ṭhākura-vaiṣṇava-pada",
         "aliasName": "ṭhākura-vaiṣṇava-pada    avanīra susampada",
         "fileName": "thakura-vaishnava-pada-avanira.html",
-        "page": "62",
-        "embeds": [
-          "Навадвип Дхам"
-        ]
+        "page": "62"
       },
       {
         "id": "ei-vara-karuna-kara-vaishnava-gosani",

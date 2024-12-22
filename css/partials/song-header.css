@@ -87,6 +87,15 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   justify-content: space-between;
   margin-bottom: 14px;
 }
+.SongHeader__left {
+  display: flex;
+}
+.SongHeader__page {
+  padding-left: 10px;
+}
+.SongHeader__page a {
+  text-decoration: underline;
+}
 .SongHeader__book {
   margin-bottom: 0;
   font-size: 14px;

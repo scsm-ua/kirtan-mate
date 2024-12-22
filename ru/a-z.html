@@ -47,11 +47,12 @@
 
     <link rel="stylesheet" href="https://kirtan.site/css/index.css" />
     <link rel="stylesheet" href="https://kirtan.site/css/index-page.css" />
+    <link rel="stylesheet" href="https://kirtan.site/css/az-page.css" />
 </head>
 <body>
-<div class="Layout">
-    <div class="Layout__content">
-        <header class="Header">
+    <div class="Layout">
+        <div class="Layout__content">
+            <header class="Header">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/header.css"
@@ -71,10 +72,10 @@
 </header>
 
 
-        <main class="Main IndexPage">
-            <div class="Main__container IndexPage__container">
-                <div class="IndexPage__title">
-                    <link rel="stylesheet" href="https://kirtan.site/css/partials/song-book-title.css" />
+            <main class="Main IndexPage">
+                <div class="Main__container IndexPage__container">
+                    <div class="IndexPage__title">
+                        <link rel="stylesheet" href="https://kirtan.site/css/partials/song-book-title.css" />
 
 <section class="SongBookTitle">
     <div class="SongBookTitle__content">
@@ -102,12 +103,190 @@
     </div>
 </section>
 
-                </div>
+                    </div>
 
-                <div class="Main__content IndexPage__content">
-                    <ul class="IndexPage__list">
-                        
-                            <li class="IndexListItem">
+                    <div class="Main__content IndexPage__content">
+                        <div class="AZPage__list">
+                            <link
+        rel="stylesheet"
+        href="https://kirtan.site/css/partials/pills.css"
+/>
+
+<ul class="Pills">
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-А" title="А">
+                <button class="Pills__button">
+                    А
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Б" title="Б">
+                <button class="Pills__button">
+                    Б
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-В" title="В">
+                <button class="Pills__button">
+                    В
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Г" title="Г">
+                <button class="Pills__button">
+                    Г
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Д" title="Д">
+                <button class="Pills__button">
+                    Д
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Й" title="Й">
+                <button class="Pills__button">
+                    Й
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-К" title="К">
+                <button class="Pills__button">
+                    К
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-М" title="М">
+                <button class="Pills__button">
+                    М
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Н" title="Н">
+                <button class="Pills__button">
+                    Н
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-О" title="О">
+                <button class="Pills__button">
+                    О
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-П" title="П">
+                <button class="Pills__button">
+                    П
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Р" title="Р">
+                <button class="Pills__button">
+                    Р
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-С" title="С">
+                <button class="Pills__button">
+                    С
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Т" title="Т">
+                <button class="Pills__button">
+                    Т
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-У" title="У">
+                <button class="Pills__button">
+                    У
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Х" title="Х">
+                <button class="Pills__button">
+                    Х
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Ч" title="Ч">
+                <button class="Pills__button">
+                    Ч
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Ш" title="Ш">
+                <button class="Pills__button">
+                    Ш
+                </button>
+            </a>
+        </li>
+    
+        <li class="Pills__item">
+            <a class="Pills__anchor" href="#section-Э" title="Э">
+                <button class="Pills__button">
+                    Э
+                </button>
+            </a>
+        </li>
+    
+</ul>
+
+<script>
+    (function() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const idx = urlParams.get('p');
+        const buttons = document.querySelectorAll('.Pills__button');
+        buttons.forEach(button => {
+            if (idx == button.innerText.trim()) {
+                button.classList.add("Pills__button__active");
+            }
+        });
+    })();
+</script>
+
+                        </div>
+
+                        <ul class="IndexPage__list">
+                            
+                                <li class="IndexListItem" id="section-А">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -354,8 +533,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Б">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -554,8 +733,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-В">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -734,8 +913,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Г">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -1034,7 +1213,27 @@
 
                         &nbsp;
                             <span class="IndexListItem__page" title="Page in paper songbook">
-                                68
+                                41, 68
+                            </span>
+                        
+
+                        
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="https://kirtan.site/ru/gurudeva-kripa-bindu-diya-kara-ei-dase.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="Гурудев">
+                        гурудев! кр̣па̄-бинду дийа̄ коро’ эи да̄се
+
+                        &nbsp;
+                            <span class="IndexListItem__page" title="Page in paper songbook">
+                                41, 68
                             </span>
                         
 
@@ -1070,8 +1269,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Д">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -1210,7 +1409,27 @@
 
                         &nbsp;
                             <span class="IndexListItem__page" title="Page in paper songbook">
-                                72
+                                46, 72
+                            </span>
+                        
+
+                        
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="https://kirtan.site/ru/jaya-guru-maharaja-jati-rajeshvara.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="Шри Гуру Арати-стути">
+                        джайа ‘гуру-маха̄ра̄джа’ джати-ра̄джеш́вара
+
+                        &nbsp;
+                            <span class="IndexListItem__page" title="Page in paper songbook">
+                                46, 72
                             </span>
                         
 
@@ -1310,7 +1529,27 @@
 
                         &nbsp;
                             <span class="IndexListItem__page" title="Page in paper songbook">
-                                70
+                                44, 70
+                            </span>
+                        
+
+                        
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="https://kirtan.site/ru/jaya-jaya-gurudever-arati-ujjvala.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="Шри Гуру Арати">
+                        джайа джайа гурудевер а̄рати уджвала
+
+                        &nbsp;
+                            <span class="IndexListItem__page" title="Page in paper songbook">
+                                44, 70
                             </span>
                         
 
@@ -1490,7 +1729,27 @@
 
                         &nbsp;
                             <span class="IndexListItem__page" title="Page in paper songbook">
-                                61
+                                40, 61
+                            </span>
+                        
+
+                        
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="https://kirtan.site/ru/jaya-shiachinandana-sura-muni-vandana.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="Шри Шачинандана-вандана">
+                        джайа ш́ачӣнандана сура-муни-вандана
+
+                        &nbsp;
+                            <span class="IndexListItem__page" title="Page in paper songbook">
+                                40, 61
                             </span>
                         
 
@@ -1550,7 +1809,27 @@
 
                         &nbsp;
                             <span class="IndexListItem__page" title="Page in paper songbook">
-                                60
+                                39, 60
+                            </span>
+                        
+
+                        
+                    </h6>
+
+                    <div class="IndexListItem__suffix">
+                        <div class="IndexListItem__icon icon-chevron-right"></div>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="IndexListItem__item">
+                <a href="https://kirtan.site/ru/jashomati-nandana-vraja-vara-nagara.html" class="IndexListItem__link">
+                    <h6 class="IndexListItem__name" title="Шри Нама-киртан">
+                        джаш́оматӣ-нандана браджа-баро на̄гара
+
+                        &nbsp;
+                            <span class="IndexListItem__page" title="Page in paper songbook">
+                                39, 60
                             </span>
                         
 
@@ -1686,8 +1965,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Й">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -1778,8 +2057,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-К">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -2054,8 +2333,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-М">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -2170,8 +2449,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Н">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -2490,8 +2769,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-О">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -2566,8 +2845,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-П">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -2746,8 +3025,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Р">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -2906,8 +3185,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-С">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -3062,8 +3341,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Т">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -3182,8 +3461,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-У">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -3222,8 +3501,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Х">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -3422,8 +3701,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Ч">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -3482,8 +3761,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Ш">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -3798,8 +4077,8 @@
     </ul>
 </li>
 
-                        
-                            <li class="IndexListItem">
+                            
+                                <li class="IndexListItem" id="section-Э">
     <link
         rel="stylesheet"
         href="https://kirtan.site/css/partials/index-list-item.css"
@@ -3898,14 +4177,14 @@
     </ul>
 </li>
 
-                        
-                    </ul>
+                            
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </main>
-    </div>
+            </main>
+        </div>
 
-    <link rel="stylesheet" href="https://kirtan.site/css/partials/footer.css" />
+        <link rel="stylesheet" href="https://kirtan.site/css/partials/footer.css" />
 
 <footer class="Footer">
     <div class="Footer__container">
@@ -3941,7 +4220,7 @@
             </a>
 
             <a
-                    class="Footer__item"
+                    class="Footer__item page-number-search"
                     href="https://kirtan.site/ru/search.html"
                     id="footer-link-search"
             >
@@ -3974,8 +4253,8 @@
     })()
 </script>
 
-</div>
-
+    </div>
+    
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NCXTS1JYM"></script>
 <script>
