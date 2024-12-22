@@ -212,6 +212,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
         page_number: orderedSongs[currentSongIndex].page_number,
         subtitle: subtitle,
         word_by_word: word_by_word,
+        has_word_by_word: !!verses.find(v => v.word_by_word?.length),
         navigation: navigation,
         headParts: createHeadParts(headParts),
         paths: paths,

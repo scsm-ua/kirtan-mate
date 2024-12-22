@@ -40,7 +40,7 @@
                                         </label>
                                     </div>
 
-                                    <ul class="SongPage__verses">
+                                    <ul class="SongPage__verses <% if (has_word_by_word) { %>word-by-word-mode"<% } %>>
                                         <% verses && verses.length && verses.forEach((item, idx, arr) => { %>
                                             <%- include(
                                                 paths.toPartials + '/song-verse.ejs',
