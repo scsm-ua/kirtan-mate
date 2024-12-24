@@ -60,8 +60,14 @@ function makeIndexList(categories, index) {
  */
 function makeLineVersions(items, index) {
     const arr = [];
+    const unique_ids = {};
 
     items.forEach((item) => {
+
+        if (item.id in unique_ids) {
+            return;
+        }
+        unique_ids[item.id] = true;
 
         var alias;
 
