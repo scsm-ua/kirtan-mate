@@ -168,7 +168,7 @@ const song_line_types = {
     author: /^### (.+)/,
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
-    attribute: /^> (.+ =)/,
+    attribute: /^> (.+ =.*)/,
     word_by_word: /^> (.+)/,
     embed_link: /^\[([^\]]+)\]\(([^\)]+)\)/,    // Before translation.
     translation: /^([^\s#].+)/
