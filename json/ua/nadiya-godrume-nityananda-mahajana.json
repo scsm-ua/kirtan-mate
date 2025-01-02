@@ -53,6 +53,9 @@
       "word_by_word": []
     }
   ],
-  "attributes": {},
+  "attributes": {
+    "verse parentheses": "non bold",
+    "page": "110"
+  },
   "word_by_word": []
 }

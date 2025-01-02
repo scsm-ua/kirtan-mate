@@ -98,6 +98,9 @@
       "word_by_word": []
     }
   ],
-  "attributes": {},
+  "attributes": {
+    "verse parentheses": "non bold",
+    "page": "301"
+  },
   "word_by_word": []
 }
