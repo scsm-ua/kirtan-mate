@@ -50,11 +50,7 @@
 
             <% if (word_by_word && word_by_word.length) { %>
                 <% word_by_word.forEach((item, idx) => { %>
-                    <div class="SongHeader__author
-                        <% if (idx === 0) {%>
-                            SongHeader__author_first
-                        <% } %>
-                    ">
+                    <div class="SongHeader__wordbyword">
                         <%- item %>
                     </div>
                 <% }) %>
@@ -70,11 +66,7 @@
 
             <% if (author && author.length) { %>
                 <% author.forEach((item, idx) => { %>
-                    <div class="SongHeader__author
-                        <% if (idx === 0) {%>
-                            SongHeader__author_first
-                        <% } %>
-                    ">
+                    <div class="SongHeader__author">
                         <%= item %>
                     </div>
                 <% }) %>
