@@ -441,11 +441,16 @@ function getSongEmbedsTitles(songbook_id, filename) {
 function getContentSongPageNumber(song) {
     if (song.page) {
         if (Array.isArray(song.page)) {
-            var songOrder = song.duplicates.findIndex(s => s.idx === song.idx);
-            if (songOrder > -1 && songOrder < song.page.length) {
-                return song.page[songOrder];
+            if (!song.duplicates) {
+                console.warn('Incorrect pages and duplicates', song.page);
+                return song.page[0];
             } else {
-                console.warn('Incorrect pages and duplicates', song.page, song.duplicates);
+                var songOrder = song.duplicates.findIndex(s => s.idx === song.idx);
+                if (songOrder > -1 && songOrder < song.page.length) {
+                    return song.page[songOrder];
+                } else {
+                    console.warn('Incorrect pages and duplicates', song.page, song.duplicates);
+                }
             }
         } else {
             return song.page;
