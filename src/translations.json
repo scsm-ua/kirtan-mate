@@ -1,4 +1,63 @@
 {
+  "lv": {
+    "A_Z_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Indeksu saraksts A-Z",
+        "TITLE": "Vaišnavu dziesmu grāmata"
+      }
+    },
+    "BOOK_LIST_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Pieejamo dziesmu grāmatu saraksts",
+        "TITLE": "Vaišnavu dziesmu grāmata"
+      },
+      "SONG_COUNT": "dziesmas"
+    },
+    "FOOTER": {
+      "BOOKS": "Grāmatas",
+      "CONTENTS": "Saturs",
+      "INDEX": "Indekss",
+      "SEARCH": "Meklēt"
+    },
+    "CONTENTS_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Saturs",
+        "TITLE": "Vaišnavu dziesmu grāmata"
+      }
+    },
+    "NOT_FOUND_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Lapa 404",
+        "TITLE": "Vaišnavu dziesmu grāmata"
+      },
+      "TEXT": "Pieprasītā lapa netika atrasta. Atlasiet Jūs interesējošo dziesmu grāmatu no saraksta zemāk:",
+      "TITLE": "Lapa nav atrasta"
+    },
+    "SEARCH_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Meklēšanas lapa",
+        "TITLE": "Vaišnavu dziesmu grāmata"
+      },
+      "CLEAR": "Notīrīt",
+      "FIND": "Atrast",
+      "INPUT_PLACEHOLDER": "Atrast dziesmu",
+      "LOAD_MORE": "Ielādēt vēl",
+      "NO_RESULTS": "Nekas netika atrasts",
+      "PAGE_LIST": "Lappušu saraksts"
+    },
+    "SONG_PAGE": {
+      "CLOSE": "Aiztaisīt",
+      "COPY": "Kopēt",
+      "COPY_LINK": "Kopēt lapas saiti",
+      "NEXT_SONG": "Nākošā dziesma",
+      "OTHER_TRANSLATIONS": "Skatīt citus tulkojumus",
+      "PREVIOUS_SONG": "Iepriekšējā dziesma",
+      "SHARE": "Dalīties",
+      "SHARE_SONG": "Padalīties ar dziesmu",
+      "SHOW_TRANSLATION": "Parādīt tulkojumu",
+      "PAGE": "lpp."
+    }
+  },
   "en": {
     "A_Z_PAGE": {
       "HEAD": {

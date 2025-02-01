@@ -127,15 +127,17 @@ function convertSongToJSON(text) {
                     var attr_key = bits[0].trim();
                     var attr_value = bits[1].trim();
 
-                    if (song.attributes[attr_key] && !Array.isArray(song.attributes[attr_key])) {
-                        // Convert to array.
-                        song.attributes[attr_key] = [song.attributes[attr_key]];
-                    }
-
-                    if (Array.isArray(song.attributes[attr_key])) {
-                        song.attributes[attr_key].push(attr_value);
-                    } else {
-                        song.attributes[attr_key] = attr_value;
+                    if (attr_value) {
+                        if (song.attributes[attr_key] && !Array.isArray(song.attributes[attr_key])) {
+                            // Convert to array.
+                            song.attributes[attr_key] = [song.attributes[attr_key]];
+                        }
+    
+                        if (Array.isArray(song.attributes[attr_key])) {
+                            song.attributes[attr_key].push(attr_value);
+                        } else {
+                            song.attributes[attr_key] = attr_value;
+                        }
                     }
                 }
                 break;
@@ -166,7 +168,7 @@ const song_line_types = {
     author: /^### (.+)/,
     verse_number: /^#### (.+)/,
     verse_text: /^    (.+)/,
-    attribute: /^> (.+ = .+)/,
+    attribute: /^> (.+ =.*)/,
     word_by_word: /^> (.+)/,
     embed_link: /^\[([^\]]+)\]\(([^\)]+)\)/,    // Before translation.
     translation: /^([^\s#].+)/
