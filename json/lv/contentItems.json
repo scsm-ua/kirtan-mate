@@ -1,6 +1,6 @@
 [
   {
-    "name": "Intro",
+    "name": "Vandana",
     "items": [
       {
         "id": "vande-ham-shri-guroh-shri-yuta-pada-kamalam",
@@ -17,7 +17,7 @@
       },
       {
         "id": "vande-vaikuntha-vritti-stham",
-        "title": "Praṇām Mantra to Šrīla Bhakti Bimal Avadhūts Mahārādža",
+        "title": "Pranām Mantra Šrīlam Bhakti Bimal Avadhūtam Mahārādžam",
         "name": "Šrīla Bhakti Bimal Avadhūts Mahārādža",
         "aliasName": "vande vaikuṇṭha-vṛtti-sthaṁ",
         "fileName": "vande-vaikuntha-vritti-stham.html",
@@ -25,7 +25,7 @@
       },
       {
         "id": "goswaminam-sudhirakhyam",
-        "title": "Praṇām Mantra to Šrīla Bhakti Sudhīrs Gosvāmī Mahārādža",
+        "title": "Pranām Mantra Šrīlam Bhakti Sudhīr Gosvāmī Mahārādžam",
         "name": "Šrīla Bhakti Sudhīrs Gosvāmī Mahārādža",
         "aliasName": "goswāminaṁ sudhīrākhyaṁ",
         "fileName": "goswaminam-sudhirakhyam.html",
@@ -33,7 +33,7 @@
       },
       {
         "id": "pujya-sri-guru-varga-vandita",
-        "title": "Praṇām Mantra to Šrīla Bhakti Nirmal Āčārja Mahārādža",
+        "title": "Pranām Mantra Šrīlam Bhakti Nirmal Āčārjam Mahārādžam",
         "name": "Šrīla Bhakti Nirmal Āčārja Mahārādža",
         "aliasName": "pūjya śrī-guru-varga-vandita",
         "fileName": "pujya-sri-guru-varga-vandita.html",
@@ -41,7 +41,7 @@
       },
       {
         "id": "gurvabhishta-supurakam-guru-ganair",
-        "title": "Praṇām Mantra to Šrīla Bhakti Sundar Govinda Dēv-Gosvāmī Mahārādža",
+        "title": "Pranām Mantra Šrīlam Bhakti Sundar Govindam Dēv-Gosvāmī Mahārādžam",
         "name": "Šrīla Bhakti Sundar Govinda Dēv-Gosvāmī Mahārādža",
         "aliasName": "gurvvābhīṣṭa-supūrakaṁ guru-gaṇair",
         "fileName": "gurvabhishta-supurakam-guru-ganair.html",
@@ -49,7 +49,7 @@
       },
       {
         "id": "devam-divya-tanum-suchanda-vadanam-balarka-chelanchitam",
-        "title": "Praṇām Mantra to Šrīla Bhakti Rakšak Šrīdhārs Dēv-Gosvāmī Mahārādža",
+        "title": "Pranām Mantra Šrīlam Bhakti Rakšak Šrīdhāram Dēv-Gosvāmī Mahārādžam",
         "name": "Šrīla Bhakti Rakšak Šrīdhārs Dēv-Gosvāmī Mahārādža",
         "aliasName": "devaṁ divya-tanuṁ suchanda-vadanaṁ-",
         "fileName": "devam-divya-tanum-suchanda-vadanam-balarka-chelanchitam.html",
@@ -57,7 +57,7 @@
       },
       {
         "id": "shri-siddhanta-sarasvatiti-vidito",
-        "title": "Praṇām Mantra to Bhagavāns Šrīla Bhaktisiddhānta Sarasvatī",
+        "title": "Pranām Mantra Bhagavānam Šrīlam Bhaktisiddhāntam Sarasvatī",
         "name": "Bhagavāns Šrīla Bhaktisiddhānta Sarasvatī",
         "aliasName": "śrī-siddhānta-sarasvatīti vidito",
         "fileName": "shri-siddhanta-sarasvatiti-vidito.html",
@@ -65,7 +65,7 @@
       },
       {
         "id": "namo-gaurakishoraya-bhaktavadhuta-murtaye",
-        "title": "Praṇām Mantra to Šrīla Gaura Kišora Dāsa Bābadžī Mahārādža",
+        "title": "Pranām Mantra Šrīlam Gaura Kišoram Dāsam Bābadžī Mahārādžam",
         "name": "Šrīla Gaura Kišora Dāsa Bābadžī Mahārādža",
         "aliasName": "namo gaurakiśorāya",
         "fileName": "namo-gaurakishoraya-bhaktavadhuta-murtaye.html",
@@ -73,7 +73,7 @@
       },
       {
         "id": "vande-bhaktivinodam-shri-gaura-shiakti-svarupakam",
-        "title": "Praṇām Mantra to Šrīla Bhaktivinoda Thākurs",
+        "title": "Pranām Mantra Šrīlam Bhaktivinodam Thākuram",
         "name": "Šrīla Bhaktivinoda Thākurs",
         "aliasName": "vande bhaktivinodaṁ śrī-",
         "fileName": "vande-bhaktivinodam-shri-gaura-shiakti-svarupakam.html",
@@ -81,7 +81,7 @@
       },
       {
         "id": "gaura-vrajashritashieshair-vaishnavair-vandya-vigraham",
-        "title": "Praṇām Mantra to Šrīla Džagannātha Dāsa Bābadžī Mahārādža",
+        "title": "Pranām Mantra Šrīlam Džagannātham Dāsam Bābadžī Mahārādžam",
         "name": "Šrīla Džagannātha Dāsa Bābadžī Mahārādža",
         "aliasName": "gaura-vrajāśritāśeṣair",
         "fileName": "gaura-vrajashritashieshair-vaishnavair-vandya-vigraham.html",
@@ -183,7 +183,7 @@
     ]
   },
   {
-    "name": "Morning Songs",
+    "name": "Rīta dziesmas",
     "items": [
       {
         "id": "jaya-jaya-girirajer-arati-vishiala",
