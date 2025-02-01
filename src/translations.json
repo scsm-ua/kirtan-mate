@@ -1,6 +1,4 @@
 {
-  ,
-  // Start translate LV.
   "lv": {
     "A_Z_PAGE": {
       "HEAD": {
@@ -60,7 +58,6 @@
       "PAGE": "lpp."
     }
   },
-  // End translate LV.
   "en": {
     "A_Z_PAGE": {
       "HEAD": {
