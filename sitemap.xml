@@ -1071,169 +1071,175 @@
     
 
     <url>
-        <loc>https://kirtan.sitehttps://kirtan.site/ua/</loc>
+        <loc>https://kirtan.sitehttps://kirtan.site/lv/</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.sitehttps://kirtan.site/ua/contents.html</loc>
+        <loc>https://kirtan.sitehttps://kirtan.site/lv/contents.html</loc>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.sitehttps://kirtan.site/ua/a-z.html</loc>
+        <loc>https://kirtan.sitehttps://kirtan.site/lv/a-z.html</loc>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/acharya-varyyam-gaura-dhama-nishtham.html</loc>
+        <loc>https://kirtan.site/lv/vande-ham-shri-guroh-shri-yuta-pada-kamalam.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/shri-krishna-chaitanya-prabhu-nityananda.html</loc>
+        <loc>https://kirtan.site/lv/vande-vaikuntha-vritti-stham.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/hare-krishna-hare-krishna-krishna-krishna-hare-hare.html</loc>
+        <loc>https://kirtan.site/lv/goswaminam-sudhirakhyam.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/kali-kukkura-kadana-jadi-chao-he.html</loc>
+        <loc>https://kirtan.site/lv/pujya-sri-guru-varga-vandita.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/jaya-shiachinandana-sura-muni-vandana.html</loc>
+        <loc>https://kirtan.site/lv/gurvabhishta-supurakam-guru-ganair.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/gurudeva-kripa-bindu-diya-kara-ei-dase.html</loc>
+        <loc>https://kirtan.site/lv/devam-divya-tanum-suchanda-vadanam-balarka-chelanchitam.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/udilo-aruna-puraba-bhage.html</loc>
+        <loc>https://kirtan.site/lv/shri-siddhanta-sarasvatiti-vidito.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/jiv-jago-jiv-jago-gaurachanda-bole.html</loc>
+        <loc>https://kirtan.site/lv/namo-gaurakishoraya-bhaktavadhuta-murtaye.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/shri-krishna-chaitanya-prabhu-jive-daya-kori.html</loc>
+        <loc>https://kirtan.site/lv/vande-bhaktivinodam-shri-gaura-shiakti-svarupakam.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/hari-haraye-namah-krishna-yadavaya-namah.html</loc>
+        <loc>https://kirtan.site/lv/gaura-vrajashritashieshair-vaishnavair-vandya-vigraham.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/bhaja-bhakata-vatsala-shri-gaurahari.html</loc>
+        <loc>https://kirtan.site/lv/vancha-kalpatarubhyas-cha.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/jaya-jaya-girirajer-arati-vishiala.html</loc>
+        <loc>https://kirtan.site/lv/jayatam-suratau-pangor.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/jaya-jaya-gaurachander-arotiko-shobha.html</loc>
+        <loc>https://kirtan.site/lv/divyad-vrindaranya-kalpa-drumadhah.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/jayare-jayare-jaya-gaura-sarasvati.html</loc>
+        <loc>https://kirtan.site/lv/shriman-rasa-rasarambhi.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/namo-namah-tulasi-maharani.html</loc>
+        <loc>https://kirtan.site/lv/vrindayai-tulasi-devyai.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/shri-guru-charana-padma-kevala-bhakati.html</loc>
+        <loc>https://kirtan.site/lv/sakala-vaishnava-pade-mora-namaskara.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/jaya-jaya-gurudever-arati-ujjvala.html</loc>
+        <loc>https://kirtan.site/lv/shri-krishna-chaitanya-prabhu-nityananda.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/samsara-davanala-lidha-loka.html</loc>
+        <loc>https://kirtan.site/lv/hare-krishna-hare-krishna-krishna-krishna-hare-hare.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/akrodha-paramananda.html</loc>
+        <loc>https://kirtan.site/lv/hari-nama-mahamantra-sarva-mantra-sara.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/nadiya-godrume-nityananda-mahajana.html</loc>
+        <loc>https://kirtan.site/lv/jaya-jaya-girirajer-arati-vishiala.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/avatara-sara-gora-avatara.html</loc>
+        <loc>https://kirtan.site/lv/jaya-jaya-girirajer-arotiko-shobha.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/gay-gora-madhur-svare.html</loc>
+        <loc>https://kirtan.site/lv/jaya-guru-maharaja-karuna-sagara.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/bhajahu-re-mana-shri-nanda-nandana.html</loc>
+        <loc>https://kirtan.site/lv/kali-kukkura-kadana-jadi-chao-he.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/emona-durmati-samsara-bhitore.html</loc>
+        <loc>https://kirtan.site/lv/jashomati-nandana-vraja-vara-nagara.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/amara-jivana-sada-pape-rata.html</loc>
+        <loc>https://kirtan.site/lv/udilo-aruna-puraba-bhage.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/lv/jiv-jago-jiv-jago-gaurachanda-bole.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
