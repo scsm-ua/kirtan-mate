@@ -10,7 +10,7 @@
         "ejs": "^3.1.10",
         "gaudiya-gitanjali-ru": "github:scsm-ua/gaudiya-gitanjali-ru",
         "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua",
-        "gaudiya-gitanjali-lv": "github:scsm-ua/gaudiya-gitanjali-lv#lv-update",
+        "gaudiya-gitanjali-lv": "github:scsm-ua/gaudiya-gitanjali-lv#lv-all-merge",
         "gulp-ejs": "^5.1.0",
         "gulp-rename": "^2.0.0",
         "gulp-sass": "^5.1.0",
