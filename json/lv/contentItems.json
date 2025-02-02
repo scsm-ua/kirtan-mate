@@ -271,6 +271,75 @@
         "embeds": [
           "Шрила Авадхут Махарадж"
         ]
+      },
+      {
+        "id": "samsara-davanala-lidha-loka",
+        "title": "Śrī Śrī Gurvāṣṭaka",
+        "name": "Śrī Śrī Gurvāṣṭaka",
+        "aliasName": "saṁsāra-dāvānala-līḍha-loka",
+        "fileName": "samsara-davanala-lidha-loka.html",
+        "page": "48",
+        "embeds": [
+          "Навадвип Дхам"
+        ]
+      },
+      {
+        "id": "shri-krishna-chaitanya-prabhu-jive-daya-kori",
+        "title": "Śaraṇāgati – labvēlīgs aicinājums",
+        "name": "Śaraṇāgati – labvēlīgs aicinājums",
+        "aliasName": "śrī-kṛṣṇa-chaitanya prabhu jīve doyā kori’",
+        "fileName": "shri-krishna-chaitanya-prabhu-jive-daya-kori.html",
+        "page": "50"
+      },
+      {
+        "id": "vibhavari-shiesha-aloka-praveshia",
+        "title": "Vibhāvarī Śeṣa",
+        "name": "Vibhāvarī Śeṣa",
+        "aliasName": "vibhāvarī śeṣa,    āloka-praveśa,",
+        "fileName": "vibhavari-shiesha-aloka-praveshia.html",
+        "page": "52",
+        "embeds": [
+          "Шрила Госвами Махарадж",
+          "Навадвип Дхам",
+          "Шрила Авадхут Махарадж"
+        ]
+      },
+      {
+        "id": "thakura-vaishnava-gana-kori-ei-nivedana",
+        "title": "Ṭhākura-vaiṣṇava-gaṇa",
+        "name": "Ṭhākura-vaiṣṇava-gaṇa",
+        "aliasName": "ṭhākura vaiṣṇava-gaṇa    kori ei nivedana",
+        "fileName": "thakura-vaishnava-gana-kori-ei-nivedana.html",
+        "page": "134",
+        "embeds": [
+          "Навадвип Дхам"
+        ]
+      },
+      {
+        "id": "hari-haraye-namah-krishna-yadavaya-namah",
+        "title": "Nāma-Saṅkīrttan",
+        "name": "Nāma-Saṅkīrttan",
+        "aliasName": "hari haraye namaḥ kṛṣṇa jādavāya namaḥ",
+        "fileName": "hari-haraye-namah-krishna-yadavaya-namah.html",
+        "page": "55",
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Навадвип Дхам",
+          "Шрила Авадхут Махарадж"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Midday Songs",
+    "items": [
+      {
+        "id": "mahaprasade-govinde-nama-brahmani",
+        "title": "Mahāprasāda",
+        "name": "Mahāprasāda",
+        "aliasName": "mahāprasāde govinde nāma brahmaṇi vaiṣṇave",
+        "fileName": "mahaprasade-govinde-nama-brahmani.html",
+        "page": "62"
       }
     ]
   }
