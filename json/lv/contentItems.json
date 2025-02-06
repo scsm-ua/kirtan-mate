@@ -19,7 +19,7 @@
         "id": "vande-vaikuntha-vritti-stham",
         "title": "Pranām Mantra Šrīlam Bhakti Bimal Avadhūtam Mahārādžam",
         "name": "Šrīla Bhakti Bimal Avadhūts Mahārādža",
-        "aliasName": "vande vaikuṇṭha-vṛtti-sthaṁ",
+        "aliasName": "vande vaikuṇṭha-vṛtti-stham",
         "fileName": "vande-vaikuntha-vritti-stham.html",
         "page": "11/1"
       },
@@ -43,7 +43,7 @@
         "id": "gurvabhishta-supurakam-guru-ganair",
         "title": "Pranām Mantra Šrīlam Bhakti Sundar Govindam Dēv-Gosvāmī Mahārādžam",
         "name": "Šrīla Bhakti Sundar Govinda Dēv-Gosvāmī Mahārādža",
-        "aliasName": "gurvvābhīṣṭa-supūrakaṁ guru-gaṇair",
+        "aliasName": "gurvābhīṣṭa-supūrakaṁ guru-gaṇair",
         "fileName": "gurvabhishta-supurakam-guru-ganair.html",
         "page": "13"
       },
@@ -208,7 +208,7 @@
         "id": "jaya-guru-maharaja-karuna-sagara",
         "title": "Śrī Śrī Nitāi-Chaitanya-Ārati",
         "name": "Śrī Śrī Nitāi-Chaitanya-Ārati",
-        "aliasName": "jaya guru mahārāja koruṇā-sāgara",
+        "aliasName": "jaya guru mahārāja karuṇā-sāgara",
         "fileName": "jaya-guru-maharaja-karuna-sagara.html",
         "page": "36",
         "embeds": [
@@ -230,7 +230,7 @@
         "id": "jashomati-nandana-vraja-vara-nagara",
         "title": "Śrī Nām-kīrtan",
         "name": "Śrī Nām-kīrtan",
-        "aliasName": "jaśomatī-nandana    braja-baro nāgara,",
+        "aliasName": "jaśomatī-nandana    vraja-vara nāgara,",
         "fileName": "jashomati-nandana-vraja-vara-nagara.html",
         "page": [
           "39",
@@ -276,7 +276,7 @@
         "id": "samsara-davanala-lidha-loka",
         "title": "Śrī Śrī Gurvāṣṭaka",
         "name": "Śrī Śrī Gurvāṣṭaka",
-        "aliasName": "saṁsāra-dāvānala-līḍha-loka",
+        "aliasName": "saṁsāra-dāvānala-līḍha-loka-",
         "fileName": "samsara-davanala-lidha-loka.html",
         "page": "48",
         "embeds": [
@@ -286,8 +286,8 @@
       {
         "id": "shri-krishna-chaitanya-prabhu-jive-daya-kori",
         "title": "Śaraṇāgati – labvēlīgs aicinājums",
-        "name": "Śaraṇāgati – labvēlīgs aicinājums",
-        "aliasName": "śrī-kṛṣṇa-chaitanya prabhu jīve doyā kori’",
+        "name": "Śaraṇāgati - labvēlīgs aicinājums",
+        "aliasName": "śrī-kṛṣṇa-chaitanya prabhu jīve dayā kori’",
         "fileName": "shri-krishna-chaitanya-prabhu-jive-daya-kori.html",
         "page": "50"
       },
@@ -319,7 +319,7 @@
         "id": "hari-haraye-namah-krishna-yadavaya-namah",
         "title": "Nāma-Saṅkīrttan",
         "name": "Nāma-Saṅkīrttan",
-        "aliasName": "hari haraye namaḥ kṛṣṇa jādavāya namaḥ",
+        "aliasName": "hari haraye namaḥ kṛṣṇa yādavāya namaḥ",
         "fileName": "hari-haraye-namah-krishna-yadavaya-namah.html",
         "page": "55",
         "embeds": [
@@ -331,7 +331,7 @@
     ]
   },
   {
-    "name": "Midday Songs",
+    "name": "Dienas dziesmas",
     "items": [
       {
         "id": "mahaprasade-govinde-nama-brahmani",
