@@ -1,0 +1,35 @@
+<% song.getVerses().forEach((item, idx, verses) => { %>
+    <% if (item.subtitle && item.subtitle.length) { %>
+        <% item.subtitle.forEach((item) => { %>
+            <h5><%= item %></h5>
+        <% }) %>
+    <% } %>
+    <% if (verses.length > 1 && item.number) { %>
+        <h6><%= item.number %></h6>
+    <% } %>
+    <% if (item.text.length) { %>
+        <% item.text.forEach((line) => { %>
+            <p>
+                <% if (line) { %>
+                    <%- line %>
+                <% } else { %>
+                    <br>
+                <% } %>
+            </p>
+        <% }) %>
+    <% } %>
+    <% if (item.word_by_word.length) { %>
+        <% item.word_by_word.forEach((p) => { %>
+            <p>
+                <%- p %>
+            </p>
+        <% }) %>
+    <% } %>
+    <% if (item.translation.length) { %>
+        <% item.translation.forEach((p) => { %>
+            <p>
+                <%- p %>
+            </p>
+        <% }) %>
+    <% } %>
+<% }) %>
