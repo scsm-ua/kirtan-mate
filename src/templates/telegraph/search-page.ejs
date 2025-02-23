@@ -1,0 +1,11 @@
+<h3><%= title %></h3>
+
+<p><strong><%= subtitle %></strong></p>
+
+<img src="<%= paths.toImages %>/banner/banner-<%= songbook_id %>@2.png" />
+
+<%- include(paths.toPartials + '/menu.ejs', {menu: 'search'}); %>
+
+<h4><%= i18n('SEARCH_PAGE.PAGE_LIST') %></h4>
+
+<p><% items.map((item, idx) => { %><a href="<% if (item.telegraphPath) { %>/<%= item.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= item.fileName %><% } %>">&nbsp;<%= item.page %>&nbsp;</a>   <% }) %></p>

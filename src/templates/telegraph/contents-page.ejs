@@ -1,0 +1,33 @@
+<h3><%= title %></h3>
+
+<h4><%= subtitle %></h4>
+
+<img src="<%= paths.toImages %>/banner/banner-<%= songbook_id %>@2.png" />
+
+<%- include(paths.toPartials + '/menu.ejs', {menu: 'contents'}); %>
+
+<p><ul><% categories.forEach((item, idx) => { %><% if (item.name && idx > 0) { %><li><a href="#<%= item.name.replace(/ /g, '-') %>"><%= item.name %></a></li><% } %><% }) %></ul></p>
+
+<p>
+    &nbsp;    
+</p>
+
+<% categories.forEach((item, idx) => { %>
+    <% if (item.name) { %>
+        <h4><%= item.name %></h4>
+    <% } %>
+    <% item.items.forEach((song) => { %>
+        <p>
+            <% if (song.page) { %><strong><%= Array.isArray(song.page) ? song.page.join(', ') : song.page %></strong>&nbsp;&nbsp;<% } %><a href="<% if (song.telegraphPath) { %>/<%= song.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %><% } %>"><%= song.title %></a><% if (song.embeds) { %>&nbsp;&nbsp;♪<% } %>
+            <em><%= song.aliasName %></em>
+        </p>
+    <% }) %>
+    <p>
+        <a href="#<%= subtitle.replace(/ /g, '-') %>">↑</a>
+    </p>
+    <p>
+        &nbsp;    
+    </p>
+<% }) %>
+
+<%- include(paths.toPartials + '/menu.ejs', {menu: 'contents'}); %>

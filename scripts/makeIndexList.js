@@ -1,5 +1,7 @@
 const deburr = require('lodash.deburr');
-
+const { getSongbookInfo } = require('./songbookLoader');
+const { PATHS } = require('./constants');
+const { getSongsContents } = require('./indexGenerator');
 
 /**
  * Converts the list of categories into the index list. The primary letters
@@ -8,7 +10,11 @@ const deburr = require('lodash.deburr');
  * @param index
  * @returns {TCategory[]}
  */
-function makeIndexList(categories, index) {
+function makeIndexList(songbook_id) {
+
+    const categories = getSongsContents(songbook_id);
+    const index = require(PATHS.BUILD.getIndexFile(songbook_id))
+
     const list = new Map();
 
     makeLineVersions(
@@ -41,13 +47,14 @@ function makeIndexList(categories, index) {
         .sort(((a, b) => a[0].localeCompare(b[0])))
         .map(([letter, items]) => ({
             name: letter.toUpperCase(),
-            items: items.map(({ aliasName, fileName, name, page }) => ({
-                // Swapping `aliasName` and `name`.
-                aliasName: name,
-                fileName: fileName,
-                title: aliasName,
-                page: page
-            }))
+            items: items.map(item => {
+                const { aliasName, name } = item;
+                return {...item, ...{
+                    // Swapping `aliasName` and `name`.
+                    aliasName: name,
+                    title: aliasName
+                }};
+            })
         }));
 }
 
@@ -59,7 +66,7 @@ function makeIndexList(categories, index) {
  * @returns {TCategoryItem[]}
  */
 function makeLineVersions(items, index) {
-    const arr = [];
+    const result = [];
     const unique_ids = {};
 
     items.forEach((item) => {
@@ -77,7 +84,7 @@ function makeLineVersions(items, index) {
             alias = processLineEnding(item.aliasName);
         }
 
-        arr.push({
+        result.push({
             ...item,
             aliasName: alias
         })
@@ -85,14 +92,14 @@ function makeLineVersions(items, index) {
         // Do not put empty alias when all word in braces.
         const idx = alias.indexOf(')');
         if (idx > -1 && idx < alias.length - 1) {
-            arr.push({
+            result.push({
                 ...item,
                 aliasName: alias.slice(idx + 1).trim()
             })
         }
     });
 
-    return arr;
+    return result;
 }
 
 /**

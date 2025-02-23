@@ -29,7 +29,7 @@
                             <%- include(paths.toPartials + '/song-header.ejs'); %>
 
                             <main class="SongPage__main">
-                                <% if (verses && verses.length) { %>
+                                <% if (song.getVersesForWeb().length) { %>
                                     <div class="SongPage__toggle">
                                         <label class="Toggle">
                                             <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
@@ -41,7 +41,7 @@
                                     </div>
 
                                     <ul class="SongPage__verses <% if (has_word_by_word) { %>word-by-word-mode"<% } %>>
-                                        <% verses && verses.length && verses.forEach((item, idx, arr) => { %>
+                                        <% song.getVersesForWeb().forEach((item, idx, arr) => { %>
                                             <%- include(
                                                 paths.toPartials + '/song-verse.ejs',
                                                 { 'item': item, 'verses': arr }

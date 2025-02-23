@@ -20,9 +20,9 @@
     <% if (item.text.length) { %>
         <ul class="SongVerse__text">
             <% item.text.forEach((line) => { %>
-                <% if (line) { %>
-                    <li class="SongVerse__line <%= getLineIndentClass(line, 'SongVerse__line') %>">
-                        <%- transformLine(item, line, attributes) %>
+                <% if (line.text) { %>
+                    <li class="SongVerse__line <%= line.css_class %>">
+                        <%- line.text %>
                     </li>
                 <% } else { %>
                     <br>
