@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const { PATHS } = require('../scripts/constants');
+const { PATHS } = require('./constants');
 const { BUILD } = PATHS;
 const { getContentsFilePath, getIndexFilePath, getSongbookIdList } = require('./songbookLoader');
+const { getExistingTelegraphPage } = require('./telegraph/utils');
 
 const { Song } = require('./Song');
 
@@ -95,6 +96,8 @@ function convertContentsToJSON(songbook_id, text) {
                 cateogory.name = name;
                 break;
             case 'song':
+                var fileName = filename + '.html';
+                var pageRelativePath = `${ PATHS.RELATIVE.toTelegraphSongs(songbook_id) }/${ fileName }`;
                 getLastCategory().items.push({
                     id: filename,
                     title: name,
@@ -103,9 +106,10 @@ function convertContentsToJSON(songbook_id, text) {
                     // TODO: replace tabs
                     // TODO: trim -
                     aliasName: getSongFirstLine(songbook_id, filename),
-                    fileName: filename + '.html',
+                    fileName: fileName,
                     page: getSongPage(songbook_id, filename),
-                    embeds: getSongEmbedsTitles(songbook_id, filename)
+                    embeds: getSongEmbedsTitles(songbook_id, filename),
+                    telegraphPath: getExistingTelegraphPage(pageRelativePath)?.path
                 });
                 break;
             default:

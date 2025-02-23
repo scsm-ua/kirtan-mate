@@ -1,11 +1,11 @@
 const axios = require('axios');
 
-async function createAccount(shortName, authorName, authorUrl) {
+async function createAccount(shortName, author_name, author_url) {
     const url = 'https://api.telegra.ph/createAccount';
     const params = {
         short_name: shortName,
-        author_name: authorName,
-        author_url: authorUrl
+        author_name: author_name,
+        author_url: author_url
     };
 
     try {
@@ -23,7 +23,7 @@ async function createAccount(shortName, authorName, authorUrl) {
 // Example usage
 (async () => {
     try {
-        const account = await createAccount('shortNameExample', 'Author Name', 'https://author.url');
+        const account = await createAccount('kirtan.site', 'kirtan.site', 'https://kirtan.site');
         console.log('Access Token:', account.access_token);
     } catch (error) {
         console.error(error.message);

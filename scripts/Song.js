@@ -11,7 +11,7 @@ class Song {
     }
 
     getPageTitle() {
-        let pageTitle = this.json.title;
+        let pageTitle = this.json.title.join(' ');
 
         if (this.json.author?.length) {
             pageTitle += '. ' + this.json.author[0];
@@ -57,7 +57,7 @@ class Song {
         if (!this.versesForWeb) {
             this.versesForWeb = this.json.verses.map((verse) => ({
                 ...verse,
-                text: processText(verse, verse.text, this.json.attributes),
+                text: processTextForWeb(verse, verse.text, this.json.attributes),
                 translation: processTranslation(verse.translation),
                 word_by_word: processTranslation(verse.word_by_word)
             }));
@@ -65,8 +65,24 @@ class Song {
         return this.versesForWeb;
     }
 
-    getTitleWordByWord() {
+    getVersesForTelegraph() {
+        if (!this.versesForWeb) {
+            this.versesForWeb = this.json.verses.map((verse) => ({
+                ...verse,
+                text: processTextForTelegraph(verse, verse.text, this.json.attributes),
+                translation: processTranslationForTelegraph(verse.translation),
+                word_by_word: processTranslationForTelegraph(verse.word_by_word)
+            }));
+        }
+        return this.versesForWeb;
+    }
+
+    getTitleWordByWordForWeb() {
         return processTranslation(this.json.word_by_word);
+    }
+
+    getTitleWordByWord() {
+        return processTranslationForTelegraph(this.json.word_by_word);
     }
 }
 
@@ -104,7 +120,7 @@ const PARANTHESES_END_RE = /^(\s*)([^\)]+\))/gi;    // ( Start in prev line.
  * EJS trims lines even despite 'rmWhitespace: false'.
  * But we want some verse lines have extra space in the beginning.
  */
-function transformLine(verse, text, attributes) {
+function transformLineForWeb(verse, text, attributes) {
 
     // Cleanup tags for safaty.
     text = text.replace(TAG_RE, '')
@@ -127,8 +143,46 @@ function transformLine(verse, text, attributes) {
     return text;
 }
 
+function transformLineForTelegraph(verse, text, attributes) {
+    // Cleanup tags for safaty.
+    text = text.replace(TAG_RE, '')
+
+    if (attributes && attributes['verse parentheses'] === 'non bold') {
+
+        text = text.replace(/\(/, '</strong>(');
+        text = text.replace(/\)/, ')<strong>');
+
+        // Text: "line)..." -> "</strong>line)..."
+
+        text = text.replace(/^[^\(\)]*\)/, '</strong>$&');
+        
+        // Text: "...(line" -> "...(line<strong>"
+
+        text = text.replace(/\([^\(\)]*$/, '$&<strong>');
+
+        
+    } else if (attributes && attributes['inline verse'] === 'non bold' && !verse.number) {
+        text = `</strong>${ text }<strong>`;
+    }
+
+    // Try fix with indents.
+    text = text.replace(/^\s+/, (match) => '&nbsp;'.repeat(match.length));
+    // Replace inner tabs.
+    text = text.replace(/\s{4}/gi, '&nbsp;&nbsp;&nbsp;&nbsp;');
+
+    text = `<strong>${text}</strong>`;
+
+    // Skip epmty blocks.
+    // ! Keep <strong>, this fixes newlines issue on telegraph markup.
+    // text = text.replace(/<strong>((?:&nbsp;)*)<\/strong>/g, '$1');
+
+    return text;
+}
+
 const NOTE_MD_REGEX = /\*\*\*(.*?)\*\*\*/gm;
 const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
+const A1_MD_REGEX = /\*(.*?)\*/gm;
+const A2_MD_REGEX = /\*\*(.*?)\*\*/gm;
 
 /**
  * Handles 'hindi' terms, soft line breaks and notes.
@@ -149,33 +203,39 @@ function processTranslation(lines) {
         .split(/\n/);
 }
 
-function processText(verse, lines, attributes) {
+/**
+ * Handles 'hindi' terms, soft line breaks and notes.
+ * @param lines: string[]
+ * @return {string[]}
+ */
+function processTranslationForTelegraph(lines) {
     if (!lines) {
         return [];
     }
-    return lines.map(line => {
-        return {
-            text: transformLine(verse, line, attributes),
-            css_class: getLineIndentClass(line)
-        };
-    })
+    return lines
+        .join('\n')
+        // Cleanup tags for safaty.
+        .replace(TAG_RE, '')
+        .replace(NOTE_MD_REGEX, '<strong><em>$1</em></strong>\n')
+        .replace(A2_MD_REGEX, '<strong><em>$1</em></strong>\n')
+        .replace(A1_MD_REGEX, '<em>$1</em>')
+        .replaceAll('\\\n', '<br />')
+        .split(/\n/);
 }
 
-/**
- * @param song: TSongJSON
- * @returns {TSongJSON}
- */
-function postProcessSong(song) {
-    return {
-        ...song,
-        word_by_word: processTranslation(song.word_by_word),
-        verses: song.verses.map((verse) => ({
-            ...verse,
-            text: processText(verse, verse.text, song.attributes),
-            translation: processTranslation(verse.translation),
-            word_by_word: processTranslation(verse.word_by_word)
-        }))
-    };
+function processTextForWeb(verse, lines, attributes) {
+    return lines.map(line => {
+        return {
+            text: transformLineForWeb(verse, line, attributes),
+            css_class: getLineIndentClass(line)
+        };
+    });
+}
+
+function processTextForTelegraph(verse, lines, attributes) {
+    return lines.map(line => {
+        return transformLineForTelegraph(verse, line, attributes);
+    });
 }
 
 /**
@@ -260,11 +320,13 @@ function convertSongToJSON(text) {
                 getLastVerse().translation.push(line_value);
                 break;
             case 'embed_link':
-                var embed_code = getEmbedCode(line_match[2]);
+                var embed_url = line_match[2];
+                var embed_code = getEmbedCode(embed_url);
                 if (embed_code) {
                     song.embeds = song.embeds || [];
                     song.embeds.push({
                         title: line_value,
+                        embed_url: embed_url,
                         embed_code: embed_code
                     });
                 } else {

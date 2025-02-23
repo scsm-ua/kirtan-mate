@@ -7,10 +7,11 @@ const VinylStream = require('vinyl-source-stream');
 const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON, getSongsOrderedList } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
 const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
-const { getTemplatePaths } = require('./utils');
+const { getTemplatePaths, getTelegraphTemplatePaths } = require('./utils');
 const { getTranslationsBy, getTranslationOrigin, getStrictTranslation, isDefaultLanguage } = require('./i18n');
 const { PATHS, ORIGIN } = require('./constants');
 const { Song } = require('./Song');
+const { getExistingTelegraphPageHref } = require('./telegraph/utils');
 const { BUILD, FILES } = PATHS;
 
 
@@ -43,7 +44,7 @@ function makeSongHTML(songbook_id, template) {
     });
 }
 
-function getPrevNextData(paths, orderedSongs, currentSongIndex) {
+function getPrevNextData(paths, telegraph_paths, orderedSongs, currentSongIndex) {
     
     var prevSong;
     var nextSong;
@@ -75,6 +76,8 @@ function getPrevNextData(paths, orderedSongs, currentSongIndex) {
     if (prevSong) {
         result.prev = {
             href: `${ paths.toSongs }/${ prevSong.fileName }${ prevSongParam }`,
+            // TODO: prevSongParam
+            telegraph_href: getExistingTelegraphPageHref(`${ telegraph_paths.toSongs }/${ prevSong.fileName }`),
             title: prevSong.title
         };
     }
@@ -82,6 +85,8 @@ function getPrevNextData(paths, orderedSongs, currentSongIndex) {
     if (nextSong) {
         result.next = {
             href: `${ paths.toSongs }/${ nextSong.fileName }${ nextSongParam }`,
+            // TODO: nextSongParam
+            telegraph_href: getExistingTelegraphPageHref(`${ telegraph_paths.toSongs }/${ nextSong.fileName }`),
             title: nextSong.title
         };
     }
@@ -177,7 +182,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     const currentSongbook = alternativeTranslationBooks.find((option) => option.isSelected);
 
-    const paths = getTemplatePaths(songbook_id, { root_to_songbook: true });
+    const paths = getTemplatePaths(songbook_id);
+    const telegraph_paths = getTelegraphTemplatePaths(songbook_id);
 
     // Nex prev links.
 
@@ -187,27 +193,28 @@ function fillTemplate(songbook_id, template, content, filePath) {
     const orderedSongs = getSongsOrderedList(songbook_id);
     const currentSongIndex = orderedSongs.findIndex((item) => item.id === fileId);
 
-    var navigation = getPrevNextData(paths, orderedSongs, currentSongIndex);
+    var navigation = getPrevNextData(paths, telegraph_paths, orderedSongs, currentSongIndex);
 
     // Find duplicated in contents songs.
     const currentSongs = orderedSongs.filter((item, idx) => currentSongIndex !== idx && item.id === fileId);
     if (currentSongs.length) {
         // Same song on other pages.
-        navigation.pages = Object.fromEntries(currentSongs.map(song => [song.page_number, getPrevNextData(paths, orderedSongs, song.idx)]));
+        navigation.pages = Object.fromEntries(currentSongs.map(song => [song.page_number, getPrevNextData(paths, telegraph_paths, orderedSongs, song.idx)]));
     }
 
     return ejs.render(template, {
-        song: song,
+        song,
         page: content.attributes?.page,
         page_number: orderedSongs[currentSongIndex].page_number,
         has_word_by_word: song.hasWordByWord(),
-        navigation: navigation,
+        navigation,
         headParts: createHeadParts(headParts),
-        paths: paths,
-        embeds: embeds,
+        paths,
+        telegraph_paths,
+        embeds,
         i18n: currentSongbook.i18n,
         songbooksAsOptions: alternativeTranslationBooks,
-        currentSongbook: currentSongbook
+        currentSongbook
     });
 }
 

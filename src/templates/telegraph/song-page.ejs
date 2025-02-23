@@ -1,35 +1,60 @@
-<% song.getVerses().forEach((item, idx, verses) => { %>
+<h3>
+    <% song.getTitles().forEach((item, idx, items) => { %>
+        <%= item %>
+    <% }) %>
+</h3>
+
+<% if (song.getTitleWordByWord().length) { %>
+    <p><% song.getTitleWordByWord().forEach((item, idx) => { %><%- item %><% }) %></p>
+<% } %>
+
+<% song.getSubtitles().forEach((item) => { %>
+    <h4><%= item %></h4>
+<% }) %>
+
+<% song.getAuthors().forEach((item, idx) => { %>
+    <p><strong><%= item %></strong></p>
+<% }) %>
+
+<p><a href="<%= paths.toPages.PUBLIC_SEARCH %>"><%= i18n('SONG_PAGE.PAGE') %> <%= Array.isArray(page) ? page.join(', ') : page %></a></p>
+
+<% song.getVersesForTelegraph().forEach((item, idx, verses) => { %>
     <% if (item.subtitle && item.subtitle.length) { %>
         <% item.subtitle.forEach((item) => { %>
-            <h5><%= item %></h5>
+            <h4><%= item %></h4>
         <% }) %>
     <% } %>
-    <% if (verses.length > 1 && item.number) { %>
-        <h6><%= item.number %></h6>
-    <% } %>
+    <% if (verses.length > 1 && item.number) { %><aside>⸻&nbsp;&nbsp;<%= item.number %>&nbsp;&nbsp;⸻</aside><% } %>
     <% if (item.text.length) { %>
-        <% item.text.forEach((line) => { %>
-            <p>
-                <% if (line) { %>
-                    <%- line %>
-                <% } else { %>
-                    <br>
-                <% } %>
-            </p>
-        <% }) %>
+        <p>
+<% item.text.forEach((line) => { %>
+<%- line %><% }) %>
+</p>
     <% } %>
-    <% if (item.word_by_word.length) { %>
-        <% item.word_by_word.forEach((p) => { %>
-            <p>
-                <%- p %>
-            </p>
-        <% }) %>
+    <% if (item.word_by_word?.length) { %>
+        <ul><li><% item.word_by_word.forEach((p) => { %><%- p %><% }) %></li></ul>
     <% } %>
     <% if (item.translation.length) { %>
-        <% item.translation.forEach((p) => { %>
+        <% item.translation.forEach((p, idx) => { %>
             <p>
                 <%- p %>
             </p>
         <% }) %>
     <% } %>
 <% }) %>
+
+
+<% if (embeds && embeds.length) { %>
+    <aside>⸻</aside>
+    <% embeds && embeds.length && embeds.forEach(item => { %>
+        <p>♪ <a href="<%= item.embed_url %>"><%= item.title %></a></p>
+    <% }) %>
+<% } %>
+
+<% if (navigation.next) { %><aside>⸻</aside>
+    
+<p><%= i18n('SONG_PAGE.NEXT') %>: <strong><a href="<%= navigation.next.telegraph_href %>"><%= navigation.next.title %></a>&nbsp;&nbsp;→</strong></p><% } %>
+
+<aside>⸻</aside>
+
+<%- include(telegraph_paths.toPartials + '/menu.ejs', {menu: 'song'}); %>
