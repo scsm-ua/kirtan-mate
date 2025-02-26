@@ -55,7 +55,8 @@
       "SHARE": "Dalīties",
       "SHARE_SONG": "Padalīties ar dziesmu",
       "SHOW_TRANSLATION": "Parādīt tulkojumu",
-      "PAGE": "lpp."
+      "PAGE": "lpp.",
+      "NEXT": "Nākošais"
     }
   },
   "en": {
@@ -114,7 +115,8 @@
       "SHARE": "Share",
       "SHARE_SONG": "Share song",
       "SHOW_TRANSLATION": "Show translation",
-      "PAGE": "page"
+      "PAGE": "page",
+      "NEXT": "Next"
     }
   },
   "ru": {
@@ -173,7 +175,8 @@
       "SHARE": "Поделиться",
       "SHARE_SONG": "Поделиться песней",
       "SHOW_TRANSLATION": "Показывать перевод",
-      "PAGE": "с."
+      "PAGE": "с.",
+      "NEXT": "Следующий"
     },
     "i18n": {
       "Bhakti Lalita Devi": "Бхакти Лалита Деви",
@@ -245,7 +248,8 @@
       "SHARE": "Поділитися",
       "SHARE_SONG": "Поділитися піснею",
       "SHOW_TRANSLATION": "Показувати переклад",
-      "PAGE": "с."
+      "PAGE": "с.",
+      "NEXT": "Наступний"
     },
     "i18n": {
       "Bhakti Lalita Devi": "Бгакті Лаліта Деві",

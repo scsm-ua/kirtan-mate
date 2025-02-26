@@ -40,45 +40,31 @@
         </div>
 
         <div class="SongHeader__info">
-            <% if (title && title.length) { %>
+            <% if (song.getTitles().length) { %>
                 <h1 class="SongHeader__title">
-                    <% title.map((item) => { %>
+                    <% song.getTitles().map((item) => { %>
                         <div><%= item %></div>
                     <% }) %>
                 </h1>
             <% } %>
 
-            <% if (word_by_word && word_by_word.length) { %>
-                <% word_by_word.forEach((item, idx) => { %>
-                    <div class="SongHeader__author
-                        <% if (idx === 0) {%>
-                            SongHeader__author_first
-                        <% } %>
-                    ">
-                        <%- item %>
-                    </div>
-                <% }) %>
-            <% } %>
+            <% song.getTitleWordByWordForWeb().forEach((item, idx) => { %>
+                <div class="SongHeader__wordbyword">
+                    <%- item %>
+                </div>
+            <% }) %>
 
-            <% if (subtitle && subtitle.length) { %>
-                <% subtitle.map((item) => { %>
-                    <div class="SongHeader__subtitle">
-                        <%= item %>
-                    </div>
-                <% }) %>
-            <% } %>
+            <% song.getSubtitles().map((item) => { %>
+                <div class="SongHeader__subtitle">
+                    <%= item %>
+                </div>
+            <% }) %>
 
-            <% if (author && author.length) { %>
-                <% author.forEach((item, idx) => { %>
-                    <div class="SongHeader__author
-                        <% if (idx === 0) {%>
-                            SongHeader__author_first
-                        <% } %>
-                    ">
-                        <%= item %>
-                    </div>
-                <% }) %>
-            <% } %>
+            <% song.getAuthors().forEach((item, idx) => { %>
+                <div class="SongHeader__author">
+                    <%= item %>
+                </div>
+            <% }) %>
         </div>
     </div>
 </header>

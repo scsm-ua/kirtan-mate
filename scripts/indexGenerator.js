@@ -1,246 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
-const { PATHS } = require('../scripts/constants');
+const { PATHS } = require('./constants');
 const { BUILD } = PATHS;
-const { getContentsFilePath, getSongsPath, getIndexFilePath, getSongbookIdList } = require('./songbookLoader');
-const { getEmbedCode } = require('./embeds');
+const { getContentsFilePath, getIndexFilePath, getSongbookIdList } = require('./songbookLoader');
+const { getExistingTelegraphPage } = require('./telegraph/utils');
 
-// Songs.
-
-function readSongs() {
-    var songs = {};
-    fs.readdirSync(getSongsPath()).forEach((file) => {
-        var song_path = path.resolve(getSongsPath(), file);
-        songs[file] = processSong(song_path);
-    });
-
-    console.log(JSON.stringify(songs, null, 4));
-}
-
-function processSong(filename) {
-    var data = fs.readFileSync(filename);
-    var text = data.toString();
-    return convertSongToJSON(text);
-}
+const { Song } = require('./Song');
 
 /**
- *
- * @param text: string
- * @return {TSongJSON}
- */
-function convertSongToJSON(text) {
-    var lines = text.split(/\n/);
-    
-    // Song template.
-    var song = {
-        title: [],
-        author: [],
-        subtitle: [],
-        verses: []
-    };
-
-    function getLastVerse(options) {
-        if ((options && options.create_new) || !song.verses.length) {
-            // Verse template.
-            song.verses.push({
-                number: null,
-                text: [],
-                translation: [],
-            });
-        }
-
-        return song.verses[song.verses.length - 1];
-    }
-
-    var last_line_id;
-    var verse_separator;
-
-    // TODO: shikshastakam first verse has no number
-    lines.forEach((line) => {
-        var { line_id, line_value, line_match } = getSongLineInfo(line);
-        if (line_id && line_id !== 'verse_text') {
-            // Disable empty verse line.
-            verse_empty_line = false;
-        }
-        switch (line_id) {
-            case 'title':
-                song.title.push(line_value);
-                break;
-            case 'author':
-                song.author.push(line_value);
-                break;
-            case 'subtitle':
-                if (song.verses.length === 0) {
-                    song.subtitle.push(line_value);
-                } else {
-                    var verse = getLastVerse({ create_new: last_line_id !== 'subtitle' });
-                    verse.subtitle = verse.subtitle || [];
-                    verse.subtitle.push(line_value);
-                }
-                break;
-            case 'verse_number':
-                getLastVerse({ create_new: true }).number = line_value;
-                break;
-            case 'verse_text':
-                if (verse_empty_line) {
-                    verse_empty_line = false;
-                    getLastVerse({
-                        create_new: false
-                    }).text.push('');
-                }
-                getLastVerse({
-                    create_new: last_line_id === 'translation' || last_line_id === 'word_by_word'
-                }).text.push(line_value);
-                break;
-            case 'word_by_word':
-                if (song.verses.length === 0) {
-                    song.word_by_word = song.word_by_word || [];
-                    song.word_by_word.push(line_value);
-                } else {
-                    var verse = getLastVerse();
-                    verse.word_by_word = verse.word_by_word || [];
-                    verse.word_by_word.push(line_value);
-                }
-                break;
-            case 'translation':
-                getLastVerse().translation.push(line_value);
-                break;
-            case 'embed_link':
-                var embed_code = getEmbedCode(line_match[2]);
-                if (embed_code) {
-                    song.embeds = song.embeds || [];
-                    song.embeds.push({
-                        title: line_value,
-                        embed_code: embed_code
-                    });
-                } else {
-                    console.warn('Unrecognized embed link', line)
-                }
-                break;
-            case 'attribute':
-                var bits = line_value.split(/=/);
-                if (bits.length !== 2) {
-                    console.error("Can't recognize attribute", line);
-                } else {
-                    song.attributes = song.attributes || {};
-                    var attr_key = bits[0].trim();
-                    var attr_value = bits[1].trim();
-
-                    if (attr_value) {
-                        if (song.attributes[attr_key] && !Array.isArray(song.attributes[attr_key])) {
-                            // Convert to array.
-                            song.attributes[attr_key] = [song.attributes[attr_key]];
-                        }
-    
-                        if (Array.isArray(song.attributes[attr_key])) {
-                            song.attributes[attr_key].push(attr_value);
-                        } else {
-                            song.attributes[attr_key] = attr_value;
-                        }
-                    }
-                }
-                break;
-            default:
-                if (!line.trim()) {
-                    // Empty line.
-                    if (last_line_id === 'verse_text') {
-                        verse_empty_line = true;
-                    }
-                } else {
-                    // TODO: better errors processing.
-                    console.error("Can't recognize line id", line_id, line);
-                }
-        }
-        if (line_id) {
-            // Skip empty lines.
-            last_line_id = line_id;
-        }
-    });
-
-    return song;
-}
-
-/**/
-const song_line_types = {
-    title: /^# (.+)/,
-    subtitle: /^## (.+)/,
-    author: /^### (.+)/,
-    verse_number: /^#### (.+)/,
-    verse_text: /^    (.+)/,
-    attribute: /^> (.+ =.*)/,
-    word_by_word: /^> (.+)/,
-    embed_link: /^\[([^\]]+)\]\(([^\)]+)\)/,    // Before translation.
-    translation: /^([^\s#].+)/
-};
-
-/**
+ * Exported.
+ * 
  * @param text: string
  * @return {TSongJSON}
  */
 function convertSong(text) {
-    return postProcessSong(convertSongToJSON(text));
-}
-
-/**
- * @param song: TSongJSON
- * @returns {TSongJSON}
- */
-function postProcessSong(song) {
-    return {
-        ...song,
-        word_by_word: processTranslation(song.word_by_word),
-        verses: song.verses.map((verse) => ({
-            ...verse,
-            translation: processTranslation(verse.translation),
-            word_by_word: processTranslation(verse.word_by_word)
-        }))
-    };
-}
-
-/**/
-const TAG_RE = /<[^>]+>/gm;
-const NOTE_MD_REGEX = /\*\*\*(.*?)\*\*\*/gm;
-const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
-
-/**
- * Handles 'hindi' terms, soft line breaks and notes.
- * @param lines: string[]
- * @return {string[]}
- */
-function processTranslation(lines) {
-    if (!lines) {
-        return [];
-    }
-    return lines
-        .join('\n')
-        // Cleanup tags for safaty.
-        .replace(TAG_RE, '')
-        .replace(NOTE_MD_REGEX, '<i class="SongVerse__note">$1</i>\n')
-        .replace(TERM_MD_REGEX, '<i class="SongVerse__term">$1</i>')
-        .replaceAll('\\\n', '<br class="SongVerse__break" />')
-        .split(/\n/);
-}
-
-/**
- *
- */
-function getSongLineInfo(line) {
-    for (var id in song_line_types) {
-        var m = line.match(song_line_types[id]);
-        if (m) {
-            return {
-                line_id: id,
-                line_value: m[1].trimEnd(),
-                line_match: m
-            };
-        }
-    }
-    return {
-        line_id: null,
-        line_value: null,
-        line_match: null
-    };
+    var song = new Song({text});
+    return song.json;
 }
 
 // Index.
@@ -320,6 +96,8 @@ function convertContentsToJSON(songbook_id, text) {
                 cateogory.name = name;
                 break;
             case 'song':
+                var fileName = filename + '.html';
+                var pageRelativePath = `${ PATHS.RELATIVE.toTelegraphSongs(songbook_id) }/${ fileName }`;
                 getLastCategory().items.push({
                     id: filename,
                     title: name,
@@ -328,9 +106,10 @@ function convertContentsToJSON(songbook_id, text) {
                     // TODO: replace tabs
                     // TODO: trim -
                     aliasName: getSongFirstLine(songbook_id, filename),
-                    fileName: filename + '.html',
+                    fileName: fileName,
                     page: getSongPage(songbook_id, filename),
-                    embeds: getSongEmbedsTitles(songbook_id, filename)
+                    embeds: getSongEmbedsTitles(songbook_id, filename),
+                    telegraphPath: getExistingTelegraphPage(pageRelativePath)?.path
                 });
                 break;
             default:
@@ -446,7 +225,7 @@ function getContentSongPageNumber(song) {
             if (!song.duplicates) {
                 console.warn('Incorrect pages and duplicates', song.page);
                 return song.page[0];
-            } else {
+                } else {
                 var songOrder = song.duplicates.findIndex(s => s.idx === song.idx);
                 if (songOrder > -1 && songOrder < song.page.length) {
                     return song.page[songOrder];

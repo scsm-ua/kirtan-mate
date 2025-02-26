@@ -35,17 +35,22 @@ const SEARCH_CONST = {
     SEARCH_API_KEY: process.env.SEARCH_API_KEY
 };
 
+const PUBLIC_ORIGIN = process.env.PUBLIC_ORIGIN;
+
 /**
  *
  */
 const PATHS = {
     ORIGIN: ORIGIN,
+    PUBLIC_ORIGIN: PUBLIC_ORIGIN,
     RELATIVE: {
         JS: ORIGIN + '/' + JS_DIR,
         CSS: ORIGIN + '/' + CSS_DIR,
         IMG: ORIGIN + '/' + IMG_DIR,
+        TELEGRAPH_IMG: PUBLIC_ORIGIN + '/' + IMG_DIR,
         FAVICON: ORIGIN + '/' + IMG_DIR + '/favicon',
-        toSongs: (songbook_id) => ORIGIN + '/' + songbook_id
+        toSongs: (songbook_id) => ORIGIN + '/' + songbook_id,
+        toTelegraphSongs: (songbook_id) => PUBLIC_ORIGIN + '/' + songbook_id
     },
     BUILD: {
         JS_FILES: OUTPUT_DIR + '/' + JS_DIR,
@@ -54,6 +59,8 @@ const PATHS = {
         IMG_FILES: OUTPUT_DIR + '/' + IMG_DIR,
         getJsonPath: (songbook_id) => OUTPUT_DIR + '/json/' + songbook_id,
         getSongbookRoot: (songbook_id) => OUTPUT_DIR + '/' + songbook_id,
+        getTelegraphHtmlRoot: (songbook_id) => OUTPUT_DIR + '/telegraph/html/' + songbook_id,
+        getTelegraphJsonRoot: (songbook_id) => OUTPUT_DIR + '/telegraph/json/' + songbook_id,
         getContentsFile: (songbook_id) =>
             path.resolve(OUTPUT_DIR, 'json', songbook_id, contentItems),
         getIndexFile: (songbook_id) =>
@@ -77,12 +84,17 @@ const PATHS = {
             INDEX: indexItems
         },
         SHARING_BANNER: ORIGIN + '/' + IMG_DIR + '/' + sharingBanner,
-        SITEMAP: ORIGIN  + '/' + sitemapName
+        SITEMAP: ORIGIN  + '/' + sitemapName,
+        HTML: {
+            CONTENTS_PAGE: contentsPage,
+            A_Z_PAGE: indexAZPath
+        }
     },
     SRC: {
         CSS_FILES: 'src/styles',
         EJS_FILES: 'src/templates',
         EJS_PARTIALS_FILES: 'src/templates/partials',
+        EJS_TELEGRAPH_PARTIALS_FILES: 'src/templates/telegraph/partials',
         IMG_FILES: 'src/images',
         JS_FILES: 'src/js'
     },
