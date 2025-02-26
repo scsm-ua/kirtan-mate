@@ -21,13 +21,14 @@ const {
     makeSongHTML,
     md2jsonConvertor
 } = require('./scripts/songConvertor');
-const { getNavigationPaths, getTemplatePaths } = require('./scripts/utils');
+const { getNavigationPaths, getTemplatePaths, getTelegraphTemplatePaths } = require('./scripts/utils');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
 const { getTranslationsBy } = require('./scripts/i18n');
 const { makeIndexList } = require('./scripts/makeIndexList');
 const version = require('./package.json').version;
 
 const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
+const { makeTelegraphElements, getAllTelegraphPages, createOrUpdateTelegraphPage } = require('./scripts/telegraph/utils');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
@@ -84,6 +85,101 @@ gulp.task('html', (done) => {
                 .pipe(gulp.dest(BUILD.getSongbookRoot(songbook_id)), done);
 
         task.displayName = 'html ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+/**
+ * Loads all telegraph pages from account in local memory.
+ */
+gulp.task('telegraph-load-existing-pages', (done) => {
+    getAllTelegraphPages((err, pages) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log('Telegraph pages loaded:', pages.length);
+        }
+        done();
+    });
+});
+
+/**
+ *
+ */
+gulp.task('telegraph-html', (done) => {
+    const template = fs.readFileSync(
+        SRC.EJS_FILES + '/telegraph/' + FILES.EJS.SONG_PAGE
+    ).toString();
+
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        var task = (done) => gulp
+                .src([
+                    BUILD.getJsonPath(songbook_id) + '/*.json',
+                    '!**/' + FILES.JSON.CONTENTS,
+                    '!**/' + FILES.JSON.INDEX
+                ])
+                .pipe(makeSongHTML(songbook_id, template))
+                .pipe(
+                    rename({
+                        extname: '.html'
+                    })
+                )
+                .pipe(gulp.dest(BUILD.getTelegraphHtmlRoot(songbook_id)), done);
+
+        task.displayName = 'telegraph-html ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+/**
+ *
+ */
+gulp.task('telegraph-elements', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        var task = (done) => gulp
+                .src([
+                    BUILD.getTelegraphHtmlRoot(songbook_id) + '/*.html'
+                ])
+                .pipe(makeTelegraphElements(songbook_id))
+                .pipe(
+                    rename({
+                        extname: '.json'
+                    })
+                )
+                .pipe(gulp.dest(BUILD.getTelegraphJsonRoot(songbook_id)), done);
+
+        task.displayName = 'telegraph-elements ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+/**
+ *
+ */
+gulp.task('telegraph-songs-push', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        var task = (done) => gulp
+                .src([
+                    BUILD.getTelegraphJsonRoot(songbook_id) + '/*.json'
+                ])
+                .pipe(createOrUpdateTelegraphPage(), done);
+
+        task.displayName = 'telegraph-songs-push ' + songbook_id;
         return task;
     });
 
@@ -360,6 +456,74 @@ gulp.task('search-page', (done) => {
     })();
 });
 
+gulp.task('telegraph-search-page', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const info = getSongbookInfo(songbook_id);
+        const tr = getTranslationsBy(songbook_id);
+
+        const pagesDict = {};
+
+        getSongsOrderedList(songbook_id)
+            .flatMap((item) => {
+                if (Array.isArray(item.page)) {
+                    // Multiple pages.
+                    return item.page.map((p, idx) => ({
+                        page: p,
+                        path: item.fileName + (idx > 0 ? `?p=${ p }` : ''),
+                        // TODO: mutlipages?
+                        telegraphPath: item.telegraphPath,
+                        title: item.title
+                    }))
+                } else {
+                    return {
+                        page: item.page,
+                        path: item.fileName,
+                        telegraphPath: item.telegraphPath,
+                        title: item.title
+                    };
+                }
+            })
+            .filter(page => page.page)
+            .sort((a, b) =>
+                parseFloat(a.page) - parseFloat(b.page)
+            )
+            .forEach(item => {
+                // Get unique pages.
+                pagesDict[item.page] = item;
+            });
+
+        const pages = Object.values(pagesDict);
+
+        const task = (taskDone) => gulp
+                .src([SRC.EJS_FILES + '/telegraph/' + FILES.EJS.SEARCH_PAGE])
+                .pipe(
+                    ejs({
+                        i18n: tr,
+                        items: pages,
+                        paths: getTelegraphTemplatePaths(songbook_id),
+                        songbook_id: songbook_id,
+                        subtitle: info.subtitle,
+                        title: info.title
+                    }).on('error', console.error)
+                )
+                .pipe(
+                    rename({
+                        basename: BASE_FILE_NAMES.SEARCH,
+                        extname: '.html'
+                    })
+                )
+                .pipe(gulp.dest(BUILD.getTelegraphHtmlRoot(songbook_id)), taskDone);
+
+        task.displayName = 'search-page ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
 
 /**
  * Path `/{bookId}/contents.html`;
@@ -407,6 +571,44 @@ gulp.task('songbook-contents', (done) => {
     })();
 });
 
+/**
+ * Path `/{bookId}/contents.html`;
+ * */
+gulp.task('telegraph-songbook-contents', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const info = getSongbookInfo(songbook_id);
+
+        const task = (done) => gulp
+            .src(SRC.EJS_FILES + '/telegraph/' + FILES.EJS.CONTENTS_PAGE)
+            .pipe(
+                ejs({
+                    categories: getSongsContents(songbook_id),
+                    i18n: tr,
+                    paths: getTelegraphTemplatePaths(songbook_id),
+                    songbook_id: songbook_id,
+                    subtitle: info.subtitle,
+                    title: info.title
+                }).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.CONTENTS,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.getTelegraphHtmlRoot(songbook_id)), done);
+
+        task.displayName = 'songbook-contents-telegraph ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
 
 /**
  * Path `/{bookId}/a-z.html`;
@@ -422,10 +624,7 @@ gulp.task('songbook-a-z', (done) => {
             path: getNavigationPaths(songbook_id).A_Z
         };
 
-        const items = makeIndexList(
-            require(BUILD.getContentsFile(songbook_id)),
-            require(BUILD.getIndexFile(songbook_id))
-        );
+        const items = makeIndexList(songbook_id);
 
         const sections = items.map((item) => ({
             page: item.name,
@@ -455,6 +654,50 @@ gulp.task('songbook-a-z', (done) => {
                 })
             )
             .pipe(gulp.dest(BUILD.ROOT), done)
+
+        task.displayName = 'songbook-a-z ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
+
+gulp.task('telegraph-songbook-a-z', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const info = getSongbookInfo(songbook_id);
+
+        const items = makeIndexList(songbook_id);
+
+        const sections = items.map((item) => ({
+            page: item.name,
+            title: item.name
+        }));
+
+        const task = (done) => gulp
+            .src(SRC.EJS_FILES + '/telegraph/' + FILES.EJS.A_Z_PAGE)
+            .pipe(
+                ejs({
+                    i18n: tr,
+                    items: items,
+                    paths: getTelegraphTemplatePaths(songbook_id),
+                    sections: sections,
+                    songbook_id: songbook_id,
+                    subtitle: info.subtitle,
+                    title: info.title
+                }).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.A_Z,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.getTelegraphHtmlRoot(songbook_id)), done);
 
         task.displayName = 'songbook-a-z ' + songbook_id;
         return task;
@@ -606,6 +849,22 @@ gulp.task('build', (done) => {
     );
 });
 
+gulp.task('build-tg', (done) => {
+    runSequence(
+        'clean',
+        'md2json',
+        'telegraph-load-existing-pages',
+        'generate-contents',
+        'generate-index',
+        'telegraph-html',    // Comment to update contents only.
+        'telegraph-songbook-contents',
+        'telegraph-songbook-a-z',
+        'telegraph-search-page',
+        'telegraph-elements',
+        'telegraph-songs-push',
+        done
+    );
+});
 
 /**
  *

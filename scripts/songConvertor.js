@@ -7,9 +7,11 @@ const VinylStream = require('vinyl-source-stream');
 const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON, getSongsOrderedList } = require('./indexGenerator');
 const { createHeadParts } = require('./createHeadParts');
 const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
-const { getTemplatePaths } = require('./utils');
+const { getTemplatePaths, getTelegraphTemplatePaths } = require('./utils');
 const { getTranslationsBy, getTranslationOrigin, getStrictTranslation, isDefaultLanguage } = require('./i18n');
 const { PATHS, ORIGIN } = require('./constants');
+const { Song } = require('./Song');
+const { getExistingTelegraphPageHref } = require('./telegraph/utils');
 const { BUILD, FILES } = PATHS;
 
 
@@ -42,7 +44,7 @@ function makeSongHTML(songbook_id, template) {
     });
 }
 
-function getPrevNextData(paths, orderedSongs, currentSongIndex) {
+function getPrevNextData(paths, telegraph_paths, orderedSongs, currentSongIndex) {
     
     var prevSong;
     var nextSong;
@@ -74,6 +76,8 @@ function getPrevNextData(paths, orderedSongs, currentSongIndex) {
     if (prevSong) {
         result.prev = {
             href: `${ paths.toSongs }/${ prevSong.fileName }${ prevSongParam }`,
+            // TODO: prevSongParam
+            telegraph_href: getExistingTelegraphPageHref(`${ telegraph_paths.toSongs }/${ prevSong.fileName }`),
             title: prevSong.title
         };
     }
@@ -81,6 +85,8 @@ function getPrevNextData(paths, orderedSongs, currentSongIndex) {
     if (nextSong) {
         result.next = {
             href: `${ paths.toSongs }/${ nextSong.fileName }${ nextSongParam }`,
+            // TODO: nextSongParam
+            telegraph_href: getExistingTelegraphPageHref(`${ telegraph_paths.toSongs }/${ nextSong.fileName }`),
             title: nextSong.title
         };
     }
@@ -98,31 +104,20 @@ function getPrevNextData(paths, orderedSongs, currentSongIndex) {
  */
 function fillTemplate(songbook_id, template, content, filePath) {
 
-    const { author, subtitle, title, verses, attributes, word_by_word } = content;
-    const page = content.attributes?.page;
+    let song = new Song({json: content});
 
-    if (!verses) {
+    if (!song.json.verses) {
         console.warn('No verse in ' + filePath);
         return '';
     }
 
-    const { text } = verses[0];
     let { embeds } = content;
-    let pageTitle = title;
-
-    if (author && author.length) {
-        pageTitle += '. ' + author[0];
-    }
-
-    if (subtitle && subtitle.length) {
-        pageTitle += '. ' + subtitle.join(' ');
-    }
 
     const filename = path.parse(filePath).name;
 
     const headParts = {
-        title: pageTitle,
-        description: `${text[0]}\n${text[1]}...`,
+        title:          song.getPageTitle(),
+        description:    song.getPageDescription(),
         path: '/' + songbook_id + '/' + filename + '.html'
     };
 
@@ -187,7 +182,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     const currentSongbook = alternativeTranslationBooks.find((option) => option.isSelected);
 
-    const paths = getTemplatePaths(songbook_id, { root_to_songbook: true });
+    const paths = getTemplatePaths(songbook_id);
+    const telegraph_paths = getTelegraphTemplatePaths(songbook_id);
 
     // Nex prev links.
 
@@ -197,94 +193,31 @@ function fillTemplate(songbook_id, template, content, filePath) {
     const orderedSongs = getSongsOrderedList(songbook_id);
     const currentSongIndex = orderedSongs.findIndex((item) => item.id === fileId);
 
-    var navigation = getPrevNextData(paths, orderedSongs, currentSongIndex);
+    var navigation = getPrevNextData(paths, telegraph_paths, orderedSongs, currentSongIndex);
 
     // Find duplicated in contents songs.
     const currentSongs = orderedSongs.filter((item, idx) => currentSongIndex !== idx && item.id === fileId);
     if (currentSongs.length) {
         // Same song on other pages.
-        navigation.pages = Object.fromEntries(currentSongs.map(song => [song.page_number, getPrevNextData(paths, orderedSongs, song.idx)]));
+        navigation.pages = Object.fromEntries(currentSongs.map(song => [song.page_number, getPrevNextData(paths, telegraph_paths, orderedSongs, song.idx)]));
     }
 
     return ejs.render(template, {
-        author: author,
-        page: page,
+        song,
+        page: content.attributes?.page,
         page_number: orderedSongs[currentSongIndex].page_number,
-        subtitle: subtitle,
-        word_by_word: word_by_word,
-        has_word_by_word: !!verses.find(v => v.word_by_word?.length),
-        navigation: navigation,
+        has_word_by_word: song.hasWordByWord(),
+        navigation,
         headParts: createHeadParts(headParts),
-        paths: paths,
-        title: title,
-        verses: verses,
-        embeds: embeds,
-        attributes: attributes,
+        paths,
+        telegraph_paths,
+        embeds,
         i18n: currentSongbook.i18n,
-        transformLine: transformLine,
-        getLineIndentClass: getLineIndentClass,
         songbooksAsOptions: alternativeTranslationBooks,
-        currentSongbook: currentSongbook
+        currentSongbook
     });
 }
 
-/**
- *
- * @type {RegExp}
- */
-const TAG_RE = /<[^>]+>/gi;
-const PARANTHESES_RE = /(\([^\)]+\))/gi;
-const PARANTHESES_START_RE = /(\([^\)]+)\s*$/gi;    // ) End in next line.
-const PARANTHESES_END_RE = /^(\s*)([^\)]+\))/gi;    // ( Start in prev line.
-
-
-/**
- *
- * @param text
- * @param prefix
- * @return {string}
- */
-function getLineIndentClass(text, prefix) {
-    var m = text.match(/^\s+/);
-    if (m) {
-        var count = Math.floor(m[0].length / 4);
-        if (count > 4) {
-            count = 4;
-        }
-        if (count) {
-            return prefix + '_indent_' + count;
-        }
-    }
-    return '';
-}
-
-
-/**
- * EJS trims lines even despite 'rmWhitespace: false'.
- * But we want some verse lines have extra space in the beginning.
- */
-function transformLine(verse, text, attributes) {
-
-    // Cleanup tags for safaty.
-    text = text.replace(TAG_RE, '')
-
-    if (attributes && attributes['verse parentheses'] === 'non bold') {
-        text = text.replace(PARANTHESES_RE,  '<span class="SongVerse__light">$1</span>')
-        text = text.replace(PARANTHESES_START_RE,  '<span class="SongVerse__light">$1</span>')
-        text = text.replace(PARANTHESES_END_RE,  '$1<span class="SongVerse__light">$2</span>')
-    
-    } else if (attributes && attributes['inline verse'] === 'non bold' && !verse.number) {
-        text = `<span class="SongVerse__light">${ text }</span>`;
-    }
-
-    // Try fix with indents.
-    // Remove starting indent (as its fixed by `getLineIndentClass`).
-    text = text.replace(/^\s+/, '');
-    // Replace inner tabs.
-    text = text.replace(/\s{4}/gi, '<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>');
-
-    return text;
-}
 
 /****************************/
 /* Markdown to JSON section */
