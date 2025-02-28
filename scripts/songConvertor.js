@@ -136,11 +136,13 @@ function fillTemplate(songbook_id, template, content, filePath) {
                 isSelected: songbook_id === a_songbook_id,
                 slug: a_songbook_id,
                 subtitle: info.subtitle,
-                title: info.title
+                title: info.title,
+                hidden: info.hidden
             });
 
             // Get embeds from other songbook.
-            if (songbook_id !== a_songbook_id 
+            if (!info.hidden
+                && songbook_id !== a_songbook_id 
                 && song.embeds 
                 && song.embeds.length) {
 
@@ -213,7 +215,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
         telegraph_paths,
         embeds,
         i18n: currentSongbook.i18n,
-        songbooksAsOptions: alternativeTranslationBooks,
+        songbooksAsOptions: alternativeTranslationBooks.filter(info => !info.hidden),
         currentSongbook
     });
 }

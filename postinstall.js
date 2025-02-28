@@ -1,13 +1,6 @@
 const { execSync } = require("child_process");
 
-const dependencies = [
-  "git+https://github.com/scsm-ua/gaudiya-gitanjali-lv.git",
-  "git+https://github.com/scsm-ua/gaudiya-gitanjali-ru.git",
-  "git+https://github.com/scsm-ua/gaudiya-gitanjali-ua.git",
-  "git+https://github.com/scsm-ua/kirtan-guide-en.git",
-  "git+https://github.com/scsm-ua/kirtan-guide-es.git#review",
-  "git+https://github.com/scsm-ua/kirtan-guide-pocket-edition.git"
-];
+const dependencies = require('./songbooks.json');
 
 try {
   console.log(`Installing dependencies...`);

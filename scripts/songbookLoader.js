@@ -3,6 +3,7 @@ const fs = require('fs');
 
 
 var songbooks = {};
+var publicSongbooks = {};
 
 /**
  *
@@ -18,9 +19,21 @@ function findSongbooks() {
             songbookInfo.path = modulePath;
             songbooks[songbookInfo.slug] = songbookInfo;
 
+            songbookInfo.sort_order = songbookInfo.sort_order || 0;
+
             console.log('--- Loaded songbook:', modulePath)
         }
     }
+
+    var songbookSortedEntries = Object.entries(songbooks).sort(([, a], [, b]) => a.sort_order - b.sort_order);
+
+    songbooks = Object.fromEntries(songbookSortedEntries);
+
+    publicSongbooks = Object.fromEntries(songbookSortedEntries.filter(([, songbook]) => !songbook.hidden));
+
+    console.log('--- All songbooks order:', getSongbookIdList())
+    console.log('--- Public songbooks order:', getSongbookIdList({public: true}))
+    
 }
 
 function getContentsFilePath(songbook_id) {
@@ -35,8 +48,16 @@ function getSongsPath(songbook_id) {
     return songbooks[songbook_id].path + '/songs';
 }
 
-function getSongbookIdList() {
-    return Object.keys(songbooks);
+function getSongbookIdList(options) {
+
+    var public = options?.public;
+
+    // Filter hidden.
+    if (public) {
+        return Object.keys(publicSongbooks);
+    } else {
+        return Object.keys(songbooks);
+    }
 }
 
 function getSongbookInfo(songbook_id) {

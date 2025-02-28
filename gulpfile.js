@@ -256,7 +256,7 @@ gulp.task('generate-index', (done) => {
 function getCommonPageContext(bookId) {
     const tr = getTranslationsBy(bookId);
 
-    const songbooks = getSongbookIdList().map((songbook_id) => {
+    const songbooks = getSongbookIdList({public: true}).map((songbook_id) => {
         const info = getSongbookInfo(songbook_id);
         const songsCount = getSongsOrderedList(songbook_id).length;
         return {
@@ -719,7 +719,7 @@ gulp.task('telegraph-songbook-a-z', (done) => {
  *  `/search.html`      SEARCH
  */
 gulp.task('redirect-pages', (done) => {
-    const bookIdList = getSongbookIdList().join(',');
+    const bookIdList = getSongbookIdList({public: true}).join(',');
 
     const pagePaths = [
         PAGES.A_Z,
@@ -772,7 +772,7 @@ gulp.task('redirect-pages', (done) => {
 gulp.task('sitemap', (done) => {
     let content = '';
 
-    getSongbookIdList().forEach((bookId) =>
+    getSongbookIdList({public: true}).forEach((bookId) =>
         content += createSongXMLParts(
             bookId,
             require(BUILD.getContentsFile(bookId))
