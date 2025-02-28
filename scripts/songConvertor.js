@@ -148,6 +148,15 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
                 // Load embeds from other songbooks.
                 var other_embeds = song.embeds.map(embed => {
+
+                    var existing_embed = (embeds || []).find(existing => {
+                        return existing.embed_url === embed.embed_url;
+                    });
+                    if (existing_embed) {
+                        // TODO: show warning?
+                        return;
+                    }
+
                     var embed_title = embed.title;
 
                     var origin_embed_title = getTranslationOrigin(a_songbook_id, embed_title);
@@ -166,7 +175,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
                     return Object.assign({}, embed, {
                         title: embed_title,
                     });
-                });
+                }).filter(i => i);
 
                 embeds = (embeds || []).concat(other_embeds);
             }
