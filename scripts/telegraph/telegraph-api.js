@@ -70,6 +70,9 @@ async function loadAllTelegraphPages(accessToken) {
     try {
         while (hasMore) {
             const response = await axios.post(url, data);
+            if (response.data.error) {
+                throw response.data.error;
+            }
             const pages = response.data.result.pages;
             allPages = allPages.concat(pages);
             hasMore = pages.length === data.limit;

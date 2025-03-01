@@ -11,7 +11,7 @@ const { getTemplatePaths, getTelegraphTemplatePaths } = require('./utils');
 const { getTranslationsBy, getTranslationOrigin, getStrictTranslation, isDefaultLanguage } = require('./i18n');
 const { PATHS, ORIGIN } = require('./constants');
 const { Song } = require('./Song');
-const { getExistingTelegraphPageHref } = require('./telegraph/utils');
+const { getExistingTelegraphPageHref, getExistingTelegraphPage } = require('./telegraph/utils');
 const { BUILD, FILES } = PATHS;
 
 
@@ -204,6 +204,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
     const orderedSongs = getSongsOrderedList(songbook_id);
     const currentSongIndex = orderedSongs.findIndex((item) => item.id === fileId);
 
+    const contentsSongData = orderedSongs[currentSongIndex];
+
     var navigation = getPrevNextData(paths, telegraph_paths, orderedSongs, currentSongIndex);
 
     // Find duplicated in contents songs.
@@ -212,6 +214,9 @@ function fillTemplate(songbook_id, template, content, filePath) {
         // Same song on other pages.
         navigation.pages = Object.fromEntries(currentSongs.map(song => [song.page_number, getPrevNextData(paths, telegraph_paths, orderedSongs, song.idx)]));
     }
+
+    const telegraphPage = getExistingTelegraphPage(`${ telegraph_paths.toSongs }/${ contentsSongData.fileName }`);
+    const telegraph_href = telegraphPage && `${PATHS.TELEGRAPH_BASE}/${telegraphPage.path}`;
 
     return ejs.render(template, {
         song,
@@ -225,7 +230,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
         embeds,
         i18n: currentSongbook.i18n,
         songbooksAsOptions: alternativeTranslationBooks.filter(info => !info.hidden),
-        currentSongbook
+        currentSongbook,
+        telegraph_href: telegraph_href
     });
 }
 

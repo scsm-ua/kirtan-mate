@@ -104,12 +104,34 @@
                  * Share the URL.
                  */
                 const href = window.location.href;
+                const telegraph_href = '<%= telegraph_href || '' %>';
                 const input = document.getElementById('href-input');
+                const tgInput = document.getElementById('tg-href-input');
                 const copyButton = document.getElementById('copy-button');
+                const tgCopyButton = document.getElementById('tg-copy-button');
+                const tgCopyBox = document.querySelector('.SongShare__copy-tg');
+
+                if (telegraph_href) {
+                    tgCopyBox.style.display = 'block';
+                }
+                
                 input.value = href;
+                tgInput.value = telegraph_href;
+
+                input.addEventListener('click', () => {
+                    input.select();
+                });
+                tgInput.addEventListener('click', () => {
+                    tgInput.select();
+                });
 
                 copyButton.addEventListener('click', () => {
                     navigator.clipboard.writeText(href).catch(window.console.error);
+                    setTimeout(() => modal.close(), 300);
+                });
+
+                tgCopyButton.addEventListener('click', () => {
+                    navigator.clipboard.writeText(telegraph_href).catch(window.console.error);
                     setTimeout(() => modal.close(), 300);
                 });
 

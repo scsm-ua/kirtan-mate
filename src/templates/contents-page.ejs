@@ -34,5 +34,27 @@
             <%- include(paths.toPartials + '/footer.ejs'); %>
         </div>
         <%- include(paths.toPartials + '/gtag.ejs'); %>
+
+        <script>
+            (function () {
+                function showViews() {
+                    document.querySelectorAll('.IndexListItem__views').forEach(element => {
+                        element.style.display = 'block';
+                    });
+                }
+
+                document.addEventListener("keydown", function(event) {
+                    if (event.key === "v" || event.key === "V") {
+                        showViews();
+                    }
+                });
+
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                if (urlParams.has('views')) {
+                    showViews();
+                }
+            }) ();
+        </script>
     </body>
 </html>

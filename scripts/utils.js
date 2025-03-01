@@ -41,7 +41,7 @@ function getTemplatePaths(songbook_id) {
 function getTelegraphTemplatePaths(songbook_id) {
     return {
         toImages: PATHS.RELATIVE.TELEGRAPH_IMG,
-        toSongs: PATHS.RELATIVE.toTelegraphSongs(songbook_id),
+        toSongs: PATHS.RELATIVE.toPublicSongs(songbook_id),
         toPages: getNavigationPaths(songbook_id),
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_TELEGRAPH_PARTIALS_FILES),
     };

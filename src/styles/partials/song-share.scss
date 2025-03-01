@@ -45,6 +45,12 @@
         width: 100%;
     }
 
+    &__copy-tg {
+        width: 100%;
+        padding-top: 25px;
+        display: none;
+    }
+
     &__form {
         display: flex;
         align-items: center;

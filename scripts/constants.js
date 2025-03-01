@@ -43,6 +43,7 @@ const PUBLIC_ORIGIN = process.env.PUBLIC_ORIGIN;
 const PATHS = {
     ORIGIN: ORIGIN,
     PUBLIC_ORIGIN: PUBLIC_ORIGIN,
+    TELEGRAPH_BASE: 'https://telegra.ph',
     RELATIVE: {
         JS: ORIGIN + '/' + JS_DIR,
         CSS: ORIGIN + '/' + CSS_DIR,
@@ -50,7 +51,7 @@ const PATHS = {
         TELEGRAPH_IMG: PUBLIC_ORIGIN + '/' + IMG_DIR,
         FAVICON: ORIGIN + '/' + IMG_DIR + '/favicon',
         toSongs: (songbook_id) => ORIGIN + '/' + songbook_id,
-        toTelegraphSongs: (songbook_id) => PUBLIC_ORIGIN + '/' + songbook_id
+        toPublicSongs: (songbook_id) => PUBLIC_ORIGIN + '/' + songbook_id
     },
     BUILD: {
         JS_FILES: OUTPUT_DIR + '/' + JS_DIR,

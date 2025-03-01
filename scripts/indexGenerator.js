@@ -97,7 +97,7 @@ function convertContentsToJSON(songbook_id, text) {
                 break;
             case 'song':
                 var fileName = filename + '.html';
-                var pageRelativePath = `${ PATHS.RELATIVE.toTelegraphSongs(songbook_id) }/${ fileName }`;
+                var pageRelativePath = `${ PATHS.RELATIVE.toPublicSongs(songbook_id) }/${ fileName }`;
                 getLastCategory().items.push({
                     id: filename,
                     title: name,
@@ -259,6 +259,14 @@ function getSongsContents(songbook_id) {
         });
         list.forEach(item => {
             item.page_number = getContentSongPageNumber(item);
+        });
+
+        list.forEach(item => {
+            var pageHref = `${ PATHS.RELATIVE.toPublicSongs(songbook_id) }/${ item.fileName }`;
+            var page = getExistingTelegraphPage(pageHref);
+            if (page) {
+                item.telegraph_views = page.views;
+            }
         });
     }
 

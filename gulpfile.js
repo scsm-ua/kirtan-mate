@@ -100,7 +100,7 @@ gulp.task('html', (done) => {
 gulp.task('telegraph-load-existing-pages', (done) => {
     getAllTelegraphPages((err, pages) => {
         if (err) {
-            console.error(err);
+            console.error('Telegraph pages loading error:', err);
         } else {
             console.log('Telegraph pages loaded:', pages.length);
         }
@@ -834,6 +834,7 @@ gulp.task('build', (done) => {
         'copy-font',
         'sass',
         'md2json',
+        'telegraph-load-existing-pages',
         'generate-contents',
         'generate-index',
         'html',

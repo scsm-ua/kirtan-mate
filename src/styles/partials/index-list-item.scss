@@ -78,6 +78,11 @@
         color: var(--grey);
     }
 
+    &__views {
+        display: none;
+        color: var(--title-color);
+    }
+
     &__suffix {
         position: relative;
         width: 24px;
