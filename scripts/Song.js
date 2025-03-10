@@ -25,8 +25,21 @@ class Song {
     }
 
     getPageDescription() {
-        var text = this.json.verses[0];
-        return `${text[0]}\n${text[1]}...`;
+        // Get first verse with text.
+        var verse = this.json.verses.find(v => v.text && v.text.length);
+        var text = verse?.text;
+        if (!text || !text[0]) {
+            // Fallback.
+            return '';
+        }
+
+        if (text.length > 1) {
+            // Two lines.
+            return `${text[0]}\n${text[1]}...`;
+        } else {
+            // Single line.
+            return `${text[0]}...`;
+        }
     }
 
     //===
