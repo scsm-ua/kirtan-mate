@@ -1,5 +1,5 @@
 [
-    "git+https://github.com/scsm-ua/gaudiya-gitanjali-lv.git",
+    "git+https://github.com/scsm-ua/gaudiya-gitanjali-lv.git#f40d6c7b2ef3510395544df4cddacd8b6f82f2bb",
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-ru.git",
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-ua.git",
     "git+https://github.com/scsm-ua/kirtan-guide-en.git",
