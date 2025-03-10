@@ -29,8 +29,7 @@ function getTranslationsBy(lang) {
             value = isObject(value) ? value[k] : (value || '')
         );
 
-        // TODO: do not use recursion for default langauage.
-        return value || getTranslationsBy()(keyChain) || '';
+        return value || (lang && getTranslationsBy()(keyChain)) || '';
     };
 }
 

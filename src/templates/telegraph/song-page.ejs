@@ -16,11 +16,12 @@
     <p><strong><%= item %></strong></p>
 <% }) %>
 
-<p><a href="<%= paths.toPages.PUBLIC_SEARCH %>"><%= i18n('SONG_PAGE.PAGE') %> <%= Array.isArray(page) ? page.join(', ') : page %></a></p>
+<p><% if (page) { %><a href="<%= paths.toPages.PUBLIC_SEARCH %>"><%= i18n('SONG_PAGE.PAGE') %> <%= Array.isArray(page) ? page.join(', ') : page %></a>        <% } %><% if (hasOtherTranslations) songbooksAsOptions.map(({ telegraph_href, isSelected, slug }, idx) => { %><% if (isSelected) { %><%= slug %><% } else { %><a href="<%= telegraph_href %>"><%= slug %></a><% } %><% if (idx < songbooksAsOptions.length - 1) { %>&nbsp;•&nbsp;<% } %><% }) %></p>
 
 <% song.getVersesForTelegraph().forEach((item, idx, verses) => { %>
     <% if (item.subtitle && item.subtitle.length) { %>
         <% item.subtitle.forEach((item) => { %>
+            <p>&nbsp;</p>
             <h4><%= item %></h4>
         <% }) %>
     <% } %>
@@ -43,18 +44,25 @@
     <% } %>
 <% }) %>
 
+<% if (navigation.next) { %><aside>⸻</aside>
+    
+<p><%= i18n('SONG_PAGE.NEXT') %>: <strong><a href="<%= navigation.next.telegraph_href %>"><%= navigation.next.title %></a>&nbsp;&nbsp;→</strong></p><% } %>
 
 <% if (embeds && embeds.length) { %>
-    <aside>⸻</aside>
+    <p>&nbsp;</p>
     <% embeds && embeds.length && embeds.forEach(item => { %>
         <p>♪ <a href="<%= item.embed_url %>"><%= item.title %></a></p>
     <% }) %>
 <% } %>
 
-<% if (navigation.next) { %><aside>⸻</aside>
-    
-<p><%= i18n('SONG_PAGE.NEXT') %>: <strong><a href="<%= navigation.next.telegraph_href %>"><%= navigation.next.title %></a>&nbsp;&nbsp;→</strong></p><% } %>
-
-<aside>⸻</aside>
+<p>&nbsp;</p>
 
 <%- include(telegraph_paths.toPartials + '/menu.ejs', {menu: 'song'}); %>
+
+<% if (songbooksAsOptions.length > 1) { %>
+    <p>&nbsp;</p>
+    <p>
+        <strong><%= currentSongbook.i18n('SONG_PAGE.OTHER_TRANSLATIONS') %>:</strong>
+        <ul><% songbooksAsOptions.filter(i => !i.isSelected).map(({ telegraph_href, slug, subtitle, title }) => { %><li><a href="<%= telegraph_href %>"><strong><%= title %></strong></a> (<%= slug %>) <em><%= subtitle %></em></li><% }) %></ul>
+    </p>
+<% } %>

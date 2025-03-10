@@ -6,7 +6,9 @@
 
 <%- include(paths.toPartials + '/menu.ejs', {menu: 'contents'}); %>
 
+<% if (categories.length > 3) { %>
 <p><ul><% categories.forEach((item, idx) => { %><% if (item.name && idx > 0) { %><li><a href="#<%= item.name.replace(/ /g, '-') %>"><%= item.name %></a></li><% } %><% }) %></ul></p>
+<% } %>
 
 <p>
     &nbsp;    
@@ -18,16 +20,23 @@
     <% } %>
     <% item.items.forEach((song) => { %>
         <p>
-            <% if (song.page) { %><strong><%= Array.isArray(song.page) ? song.page.join(', ') : song.page %></strong>&nbsp;&nbsp;<% } %><a href="<% if (song.telegraphPath) { %>/<%= song.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %><% } %>"><%= song.title %></a><% if (song.embeds) { %>&nbsp;&nbsp;♪<% } %>
-            <em><%= song.aliasName %></em>
+            <% if (song.page && render.page_number) { %><strong><%= Array.isArray(song.page) ? song.page.join(', ') : song.page %></strong>&nbsp;&nbsp;<% } %><a href="<% if (song.telegraphPath) { %>/<%= song.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %><% } %>"><%= song.title %></a><% if (song.embeds) { %>&nbsp;&nbsp;♪<% } %>
+            <% if (render.first_line) { %><em><%= song.aliasName %></em><% } %>
         </p>
     <% }) %>
     <p>
         <a href="#<%= subtitle.replace(/ /g, '-') %>">↑</a>
     </p>
     <p>
-        &nbsp;    
+        &nbsp;
     </p>
 <% }) %>
 
 <%- include(paths.toPartials + '/menu.ejs', {menu: 'contents'}); %>
+
+<p>
+    &nbsp;
+</p>
+<p>
+    <a href="<%= paths.PUBLIC_BOOK_LIST %>"><%= i18n('BOOK_LIST_PAGE.HEAD.DESCRIPTION') %>...</a> (<%= songbooks_count %>)
+</p>

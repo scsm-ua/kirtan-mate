@@ -20,7 +20,7 @@
             <div class="SongHeader__controls">
                 <button
                         class="NoBorderButton SongHeader__button"
-                        <% if (songbooksAsOptions.length <= 1) { %>
+                        <% if (!hasOtherTranslations) { %>
                             disabled
                         <% } %>
                         id="variants-button"

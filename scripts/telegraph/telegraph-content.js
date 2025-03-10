@@ -3,6 +3,7 @@ const cheerio = require('cheerio');
 const SUPPORTED_ELEMENTS = [
     'a',          // Anchor (link)
     'aside',      // Sidebar content
+    // TODO: Forbid to use because of autotocoversion on their side?
     'b',          // Bold text
     'blockquote', // Quoted block of text
     'br',         // Line break
@@ -13,6 +14,7 @@ const SUPPORTED_ELEMENTS = [
     'h3',         // Heading level 3
     'h4',         // Heading level 4
     'hr',         // Horizontal rule
+    // TODO: Forbid to use because of autotocoversion on their side?
     'i',          // Italic text
     'iframe',     // Inline frame
     'img',        // Image

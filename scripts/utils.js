@@ -16,6 +16,7 @@ function getNavigationPaths(bookId) {
         SEARCH: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH,
 
         // TODO: good place?
+        PUBLIC_BOOK_LIST: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.BOOK_LIST),
         PUBLIC_CONTENTS: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.CONTENTS),
         PUBLIC_SEARCH: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH),
         PUBLIC_A_Z: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.A_Z),
@@ -44,6 +45,8 @@ function getTelegraphTemplatePaths(songbook_id) {
         toSongs: PATHS.RELATIVE.toPublicSongs(songbook_id),
         toPages: getNavigationPaths(songbook_id),
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_TELEGRAPH_PARTIALS_FILES),
+
+        PUBLIC_BOOK_LIST: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + songbook_id + PATHS.PAGES.BOOK_LIST),
     };
 }
 

@@ -5,6 +5,7 @@ const path = require('path');
 const { loadAllTelegraphPages, updateTelegraphPage, createTelegraphPage, getTelegraphPage } = require('./telegraph-api');
 const { TelegraphPage } = require('./TelegraphPage');
 const deepEqual = require('deep-equal');
+const fs = require('fs');
 
 function convertHtmlToTelegraphElements(songbook_id, content, file_path) {
     if (!PATHS.PUBLIC_ORIGIN) {
@@ -79,6 +80,12 @@ function createOrUpdateTelegraphPage() {
 
         transform(file, encoding, callback) {
             try {
+
+                // if (file.path.indexOf('parama-karuna-pahu-dui-jana') === -1) {
+                //     callback();
+                //     return;
+                // }
+
                 const data = JSON.parse(file.contents.toString());
 
                 // Copy only `updated_attrs` from elements.
@@ -105,13 +112,16 @@ function createOrUpdateTelegraphPage() {
 
                         if (!isEqual) {
 
+                            // fs.writeFileSync('new_page.json', JSON.stringify(page, null, 4));
+                            // fs.writeFileSync('exist_page.json', JSON.stringify(loaded_page, null, 4));
+                            
                             // Extend `getExistingTelegraphPageJson` with `page` properties.
                             Object.assign(existingTelegraphPageJson, page);
 
                             // Prevent FLOOD_WAIT.
                             setTimeout(function() {
                                 updateTelegraphPage(process.env.TELEGRAPH_ACCESS_TOKEN, new TelegraphPage(existingTelegraphPageJson)).then(response => {
-                                    console.log('Updated Telegraph page:', response.error && file.path, response);
+                                    console.log('Updated Telegraph page:', response.error && file.path || '', response);
 
                                     if (response.error === 'CONTENT_TOO_BIG') {
                                         console.log('   -- skipping');
@@ -139,7 +149,7 @@ function createOrUpdateTelegraphPage() {
                     // Prevent FLOOD_WAIT.
                     setTimeout(function() {
                         createTelegraphPage(process.env.TELEGRAPH_ACCESS_TOKEN, new TelegraphPage(page)).then(response => {
-                            console.log('Created Telegraph page:', response.error && file.path, response);
+                            console.log('Created Telegraph page:', response.error && file.path || '', response);
 
                             if (response.error === 'CONTENT_TOO_BIG') {
                                 console.log('   -- skipping');

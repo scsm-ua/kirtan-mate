@@ -14,14 +14,21 @@
         <h4 id=""><%= item.name %></h4>
     <% } %>
     <% item.items.forEach((song) => { %>
-        <p><a href="<% if (song.telegraphPath) { %>/<%= song.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %><% } %>"><%= song.title %></a><% if (song.embeds) { %>&nbsp;&nbsp;♪<% } %><% if (song.page) { %>&nbsp;&nbsp;<strong><%= Array.isArray(song.page) ? song.page.join(', ') : song.page %></strong><% } %></p>
+        <p><a href="<% if (song.telegraphPath) { %>/<%= song.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %><% } %>"><%= song.title %></a><% if (render.embed_exists) { %><% if (song.embeds) { %>&nbsp;&nbsp;♪<% } %><% } %><% if (song.page) { %><% if (render.short_page_number) { %> (<%= Array.isArray(song.page) ? song.page.join(', ') : song.page %>)<% } else { %>&nbsp;&nbsp;<strong><%= Array.isArray(song.page) ? song.page.join(', ') : song.page %></strong><% } %><% } %></p>       
     <% }) %>
     <p>
         <a href="#<%= subtitle.replace(/ /g, '-') %>">↑</a>
     </p>
     <p>
-        &nbsp;    
+        &nbsp;
     </p>
 <% }) %>
 
 <%- include(paths.toPartials + '/menu.ejs', {menu: 'index'}); %>
+
+<p>
+    &nbsp;
+</p>
+<p>
+    <a href="<%= paths.PUBLIC_BOOK_LIST %>"><%= i18n('BOOK_LIST_PAGE.HEAD.DESCRIPTION') %>...</a> (<%= songbooks_count %>)
+</p>

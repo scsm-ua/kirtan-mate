@@ -68,7 +68,7 @@
     },
     "BOOK_LIST_PAGE": {
       "HEAD": {
-        "DESCRIPTION": "List of available song books",
+        "DESCRIPTION": "List of available songbooks",
         "TITLE": "Vaishnava Songbook"
       },
       "SONG_COUNT": "songs"
@@ -117,6 +117,66 @@
       "SHOW_TRANSLATION": "Show translation",
       "PAGE": "page",
       "NEXT": "Next"
+    }
+  },
+  "es": {
+    "A_Z_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Lista de índices A-Z",
+        "TITLE": "Cancionero Vaishnava"
+      }
+    },
+    "BOOK_LIST_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Lista de cancioneros disponibles",
+        "TITLE": "Cancionero Vaishnava"
+      },
+      "SONG_COUNT": "canciones"
+    },
+    "FOOTER": {
+      "BOOKS": "Libros",
+      "CONTENTS": "Contenido",
+      "INDEX": "Índice",
+      "SEARCH": "Buscar"
+    },
+    "CONTENTS_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Contenido",
+        "TITLE": "Cancionero Vaishnava"
+      }
+    },
+    "NOT_FOUND_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Página 404",
+        "TITLE": "Cancionero Vaishnava"
+      },
+      "TEXT": "Este sitio no contiene la página solicitada. Intente iniciar la navegación seleccionando el cancionero de la lista a continuación:",
+      "TITLE": "Página no encontrada"
+    },
+    "SEARCH_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Página de búsqueda",
+        "TITLE": "Cancionero Vaishnava"
+      },
+      "CLEAR": "Limpia",
+      "FIND": "Encontrar",
+      "INPUT_PLACEHOLDER": "Encuentra una canción",
+      "LOAD_MORE": "Cargar más",
+      "NO_RESULTS": "No se ha encontrado nada",
+      "PAGE_LIST": "Lista de páginas"
+    },
+    "SONG_PAGE": {
+      "CLOSE": "Cerca",
+      "COPY": "Copiar",
+      "COPY_LINK": "Copiar enlace de página",
+      "NEXT_SONG": "Próxima canción",
+      "OTHER_TRANSLATIONS": "Ver otras traducciones",
+      "PREVIOUS_SONG": "Canción anterior",
+      "SHARE": "Compartir",
+      "SHARE_SONG": "Compartir canción",
+      "SHOW_TRANSLATION": "Mostrar traducción",
+      "PAGE": "página",
+      "NEXT": "Próxima"
     }
   },
   "ru": {

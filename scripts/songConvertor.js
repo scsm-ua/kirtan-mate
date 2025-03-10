@@ -118,7 +118,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
     const headParts = {
         title:          song.getPageTitle(),
         description:    song.getPageDescription(),
-        path: '/' + songbook_id + '/' + filename + '.html'
+        path: '/' + songbook_id + '/' + filename + '.html',
+        songbook_id
     };
 
     const alternativeTranslationBooks /* TSongBookAsOption */ = [];
@@ -132,6 +133,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
             alternativeTranslationBooks.push({
                 href: ORIGIN + '/' + a_songbook_id + '/' + filename + '.html',
+                telegraph_href: getExistingTelegraphPageHref(`${ PATHS.RELATIVE.toPublicSongs(a_songbook_id) }/${ filename }.html`),
                 i18n: tr,
                 isSelected: songbook_id === a_songbook_id,
                 slug: a_songbook_id,
@@ -218,6 +220,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
     const telegraphPage = getExistingTelegraphPage(`${ telegraph_paths.toSongs }/${ contentsSongData.fileName }`);
     const telegraph_href = telegraphPage && `${PATHS.TELEGRAPH_BASE}/${telegraphPage.path}`;
 
+    const songbooksAsOptions = alternativeTranslationBooks.filter(info => !info.hidden);
+
     return ejs.render(template, {
         song,
         page: content.attributes?.page,
@@ -229,7 +233,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
         telegraph_paths,
         embeds,
         i18n: currentSongbook.i18n,
-        songbooksAsOptions: alternativeTranslationBooks.filter(info => !info.hidden),
+        songbooksAsOptions: songbooksAsOptions,
+        hasOtherTranslations: songbooksAsOptions.filter(s => !s.isSelected).length > 0,
         currentSongbook,
         telegraph_href: telegraph_href
     });

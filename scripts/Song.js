@@ -233,9 +233,13 @@ function processTextForWeb(verse, lines, attributes) {
 }
 
 function processTextForTelegraph(verse, lines, attributes) {
-    return lines.map(line => {
+    lines = lines.map(line => {
         return transformLineForTelegraph(verse, line, attributes);
     });
+
+    var str = lines.join('\n');
+    str = str.replace(/<\/strong>\n<strong>/g, '\n');
+    return str.split('\n');
 }
 
 /**

@@ -1,0 +1,10 @@
+<h3>Kirtan Site</h3>
+<p><%= subtitle %>        <% languages.map(({ booklist_telegraph_href, isSelected, slug }, idx) => { %><% if (isSelected) { %><%= slug %><% } else { %><a href="<%= booklist_telegraph_href %>"><%= slug %></a><% } %><% if (idx < languages.length - 1) { %>&nbsp;•&nbsp;<% } %><% }) %></p>
+<% songbooks.forEach((songbook) => { %>
+    <h4><a href="<%= songbook.telegraph_href %>"><%= songbook.title %></a></h4>
+    <figure>
+        <img src="<%= paths.toTelegraphImages %>/banner/banner-<%= songbook.slug %>@2.png">
+        <figcaption>(<%= songbook.slug %>) <%= songbook.subtitle %>  •  <em><%= songbook.songsCount %>&nbsp;<%= i18n('BOOK_LIST_PAGE.SONG_COUNT') %></em></figcaption>
+    </figure>
+    <p>&nbsp;</p>
+<% }); %>

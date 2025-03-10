@@ -8,8 +8,14 @@ const { PATHS, ORIGIN } = require('./constants');
  * @param url: string - no leading or trailing slashes!
  * @param is404: boolean
  */
-function createHeadParts({ title, description, path, is404 }) {
-    const imgSrc = PATHS.FILES.SHARING_BANNER;
+function createHeadParts({ title, description, path, is404, songbook_id }) {
+    var imgSrc;
+    if (songbook_id) {
+        imgSrc = `${ PATHS.RELATIVE.IMG }/banner/banner-${ songbook_id }@2.png`;
+    } else {
+        imgSrc = PATHS.FILES.SHARING_BANNER;
+    }
+
     const _title = title + ' | Kirtan Site';
     
     var url;

@@ -256,12 +256,17 @@ gulp.task('generate-index', (done) => {
 function getCommonPageContext(bookId) {
     const tr = getTranslationsBy(bookId);
 
-    const songbooks = getSongbookIdList({public: true}).map((songbook_id) => {
+    const allSongbooks = getSongbookIdList({public: true}).map((songbook_id) => {
         const info = getSongbookInfo(songbook_id);
         const songsCount = getSongsOrderedList(songbook_id).length;
+
+        const paths = getNavigationPaths(songbook_id);
+
         return {
-            href: getNavigationPaths(songbook_id).CONTENTS,
-            isSelected: false,
+            href: paths.CONTENTS,
+            telegraph_href: paths.PUBLIC_CONTENTS,
+            booklist_telegraph_href: paths.PUBLIC_BOOK_LIST,
+            isSelected: bookId === songbook_id,
             slug: songbook_id,
             songsCount: songsCount,
             subtitle: info.subtitle,
@@ -269,10 +274,18 @@ function getCommonPageContext(bookId) {
         };
     });
 
+    const languages = allSongbooks.filter(({ slug }) => slug.indexOf('-') === -1);
+
+    const songbooks = [
+        ...allSongbooks.filter(({ slug }) => slug === bookId),
+        ...allSongbooks.filter(({ slug }) => slug !== bookId)
+    ];
+
     const paths = {
         toJs: PATHS.RELATIVE.JS,
         toCss: PATHS.RELATIVE.CSS,
         toImages: PATHS.RELATIVE.IMG,
+        toTelegraphImages: PATHS.RELATIVE.TELEGRAPH_IMG,
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_PARTIALS_FILES),
         toPages: getNavigationPaths(bookId)
     };
@@ -281,7 +294,7 @@ function getCommonPageContext(bookId) {
         i18n: tr,
         paths: paths,
         songbooks: songbooks,
-        songbooksAsOptions: songbooks
+        languages: languages
     };
 }
 
@@ -334,6 +347,36 @@ gulp.task('songbook-list', (done) => {
     })();
 });
 
+gulp.task('telegraph-songbook-list', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+
+        const context = getCommonPageContext(songbook_id);
+
+        context.subtitle = tr('BOOK_LIST_PAGE.HEAD.TITLE');
+
+        const task = (done) => gulp
+            .src([SRC.EJS_FILES + '/telegraph/' + FILES.EJS.BOOK_LIST_PAGE])
+            .pipe(
+                ejs(context).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.BOOK_LIST,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.getTelegraphHtmlRoot(songbook_id)), done);
+
+        task.displayName = 'index ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
 
 /**
  *  Path `/{bookId}/404.html`;
@@ -346,7 +389,8 @@ gulp.task('404', (done) => {
             title: tr('NOT_FOUND_PAGE.HEAD.TITLE'),
             description: tr('NOT_FOUND_PAGE.HEAD.DESCRIPTION'),
             path: PATHS.PAGES.NOT_FOUND,
-            is404: true
+            is404: true,
+            songbook_id
         });
 
         const values = {
@@ -390,7 +434,8 @@ gulp.task('search-page', (done) => {
         const headParts = {
             title: tr('SEARCH_PAGE.HEAD.TITLE'),
             description: tr('SEARCH_PAGE.HEAD.DESCRIPTION'),
-            path: getNavigationPaths(songbook_id).SEARCH
+            path: getNavigationPaths(songbook_id).SEARCH,
+            songbook_id
         };
 
         const pagesDict = {};
@@ -536,7 +581,8 @@ gulp.task('songbook-contents', (done) => {
         const headParts = {
             title: tr('CONTENTS_PAGE.HEAD.TITLE'),
             description: tr('CONTENTS_PAGE.HEAD.DESCRIPTION'),
-            path: getNavigationPaths(songbook_id).CONTENTS
+            path: getNavigationPaths(songbook_id).CONTENTS,
+            songbook_id
         };
 
         const task = (done) => gulp
@@ -587,8 +633,13 @@ gulp.task('telegraph-songbook-contents', (done) => {
                     i18n: tr,
                     paths: getTelegraphTemplatePaths(songbook_id),
                     songbook_id: songbook_id,
+                    songbooks_count: getSongbookIdList({public: true}).length,
                     subtitle: info.subtitle,
-                    title: info.title
+                    title: info.title,
+                    render: {
+                        page_number: !info.render || info.render["tg.contents.page_number"] !== false,
+                        first_line: !info.render || info.render["tg.contents.first_line"] !== false
+                    }
                 }).on('error', console.error)
             )
             .pipe(
@@ -621,7 +672,8 @@ gulp.task('songbook-a-z', (done) => {
         const headParts = {
             title: tr('A_Z_PAGE.HEAD.TITLE'),
             description: tr('A_Z_PAGE.HEAD.DESCRIPTION'),
-            path: getNavigationPaths(songbook_id).A_Z
+            path: getNavigationPaths(songbook_id).A_Z,
+            songbook_id
         };
 
         const items = makeIndexList(songbook_id);
@@ -687,8 +739,13 @@ gulp.task('telegraph-songbook-a-z', (done) => {
                     paths: getTelegraphTemplatePaths(songbook_id),
                     sections: sections,
                     songbook_id: songbook_id,
+                    songbooks_count: getSongbookIdList({public: true}).length,
                     subtitle: info.subtitle,
-                    title: info.title
+                    title: info.title,
+                    render: {
+                        embed_exists: !info.render || info.render["tg.a-z.embeds"] !== false,
+                        short_page_number: !info.render || info.render["tg.a-z.pages.short"] === true
+                    }
                 }).on('error', console.error)
             )
             .pipe(
@@ -861,6 +918,7 @@ gulp.task('build-tg', (done) => {
         'telegraph-songbook-contents',
         'telegraph-songbook-a-z',
         'telegraph-search-page',
+        'telegraph-songbook-list',
         'telegraph-elements',
         'telegraph-songs-push',
         done
