@@ -15,9 +15,8 @@
         "хено прабху котха̄ гела̄ а̄ча̄рйа-т̣ха̄кура"
       ],
       "translation": [
-        "Где мне найти того, кто являет богатство <i class=\"SongVerse__term\">према-бхакти</i> и исполнен сострадания, — того, кто подобен Шри Ачарье Тхакуру (Шринивасу Ачарье)?"
-      ],
-      "word_by_word": []
+        "Где мне найти того, кто являет богатство *према-бхакти* и исполнен сострадания, — того, кто подобен Шри Ачарье Тхакуру (Шринивасу Ачарье)?"
+      ]
     },
     {
       "number": "2",
@@ -27,8 +26,7 @@
       ],
       "translation": [
         "Где спасители падших душ? Где Сварупа Дамодар? Где Рупа Госвами и Санатана Госвами? Где найти Рагхунатха Даса?"
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "3",
@@ -38,8 +36,7 @@
       ],
       "translation": [
         "Где мои Рагхунатх Бхатта и Гопал Бхатта Госвами? Где теперь найти Шри Кришнадаса Кавираджа? Они ушли все сразу, чтобы быть вместе с Господом Гаурангой, великим танцором!"
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "4",
@@ -49,8 +46,7 @@
       ],
       "translation": [
         "Чтобы оказаться вместе с ними, рядом с Господом Чайтаньей, я готов разбить свою голову о камень в муках разлуки."
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "5",
@@ -60,22 +56,22 @@
       ],
       "translation": [
         "Все они ушли в свои игры. Нароттам Дас Тхакур восклицает: «Мне остается лишь оплакивать свою горькую участь, потому что я не в силах обрести их общество!»"
-      ],
-      "word_by_word": []
+      ]
     }
   ],
   "embeds": [
     {
       "title": "Шрила Госвами Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/goswami-maharaj-viraha-giti",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgoswami-maharaj-viraha-giti\"></iframe>"
     },
     {
       "title": "Шрила Мадхусудан Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/madhusudan-maharaj-viraha-giti",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fmadhusudan-maharaj-viraha-giti\"></iframe>"
     }
   ],
   "attributes": {
     "page": "135"
-  },
-  "word_by_word": []
+  }
 }

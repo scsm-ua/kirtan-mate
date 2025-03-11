@@ -5,30 +5,30 @@
         
         <title>Śrī Śikṣāṣṭakam. by Śrīla Bhakti Vinod Ṭhākur. Song 2 | Kirtan Site</title>
         <link rel="canonical" href="https://kirtan.site/en/tuhu-daya-sagara-tarayite-prani.html" />
-        <meta name="description" content="undefined
-undefined..." />
+        <meta name="description" content="nāmnām akāri bahudhā nija-sarva-śaktis
+tatrārpitā niyamitaḥ smaraṇe na kālaḥ..." />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property="og:title" content="Śrī Śikṣāṣṭakam. by Śrīla Bhakti Vinod Ṭhākur. Song 2" />
-        <meta property="og:description" content="undefined
-undefined..." />
+        <meta property="og:description" content="nāmnām akāri bahudhā nija-sarva-śaktis
+tatrārpitā niyamitaḥ smaraṇe na kālaḥ..." />
         <meta property="og:url" content="https://kirtan.site/en/tuhu-daya-sagara-tarayite-prani.html" />
         <meta property="og:locale" content="ua_UA" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Kirtan Site" />
-        <meta property="og:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta property="og:image" content="https://kirtan.site/css/banner/banner-en@2.png" />
         <meta property="og:image:width" content="648" />
         <meta property="og:image:height" content="488" />
         <meta property="og:image:type" content="image/png" />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta name="twitter:image" content="https://kirtan.site/css/banner/banner-en@2.png" />
         <meta name="twitter:title" content="Śrī Śikṣāṣṭakam. by Śrīla Bhakti Vinod Ṭhākur. Song 2" />
-        <meta name="twitter:description" content="undefined
-undefined..." />
+        <meta name="twitter:description" content="nāmnām akāri bahudhā nija-sarva-śaktis
+tatrārpitā niyamitaḥ smaraṇe na kālaḥ..." />
 
-        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://kirtan.site/#website","url":"https://kirtan.site/","name":"Kirtan Site","description":"undefined\nundefined...","inLanguage":"en-GB"},{"@type":"CollectionPage","@id":"https://kirtan.site/en/tuhu-daya-sagara-tarayite-prani.html","url":"https://kirtan.site/en/tuhu-daya-sagara-tarayite-prani.html","name":"Śrī Śikṣāṣṭakam. by Śrīla Bhakti Vinod Ṭhākur. Song 2","isPartOf":{"@id":"https://kirtan.site/#website"}}]}</script>
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://kirtan.site/#website","url":"https://kirtan.site/","name":"Kirtan Site","description":"nāmnām akāri bahudhā nija-sarva-śaktis\ntatrārpitā niyamitaḥ smaraṇe na kālaḥ...","inLanguage":"en-GB"},{"@type":"CollectionPage","@id":"https://kirtan.site/en/tuhu-daya-sagara-tarayite-prani.html","url":"https://kirtan.site/en/tuhu-daya-sagara-tarayite-prani.html","name":"Śrī Śikṣāṣṭakam. by Śrīla Bhakti Vinod Ṭhākur. Song 2","isPartOf":{"@id":"https://kirtan.site/#website"}}]}</script>
         
         <link rel="apple-touch-icon" sizes="57x57" href="https://kirtan.site/css/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="https://kirtan.site/css/favicon/apple-icon-60x60.png">
@@ -140,23 +140,15 @@ undefined..." />
             
 
             
-                
-                    <div class="SongHeader__subtitle">
-                        Song 2
-                    </div>
-                
+                <div class="SongHeader__subtitle">
+                    Song 2
+                </div>
             
 
             
-                
-                    <div class="SongHeader__author
-                        
-                            SongHeader__author_first
-                        
-                    ">
-                        by Śrīla Bhakti Vinod Ṭhākur
-                    </div>
-                
+                <div class="SongHeader__author">
+                    by Śrīla Bhakti Vinod Ṭhākur
+                </div>
             
         </div>
     </div>
@@ -175,7 +167,7 @@ undefined..." />
                                         </label>
                                     </div>
 
-                                    <ul class="SongPage__verses">
+                                    <ul class="SongPage__verses >
                                         
                                             
 
@@ -714,6 +706,25 @@ undefined..." />
                 </button>
             </div>
         </div>
+
+        <div class="SongShare__copy-tg">
+            <div class="SongShare__form">
+                <input
+                    class="SongShare__input"
+                    id="tg-href-input"
+                    readonly
+                    type="text"
+                />
+
+                <button
+                    class="AppButton RoundButton RoundButton--L RoundButton--dark SongShare__button"
+                    id="tg-copy-button"
+                    title="Copy"
+                >
+                    <span class="icon-copy"></span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 `);
@@ -722,12 +733,34 @@ undefined..." />
                  * Share the URL.
                  */
                 const href = window.location.href;
+                const telegraph_href = 'https://telegra.ph/Śrī-Śikṣāṣṭakam-02-22-11';
                 const input = document.getElementById('href-input');
+                const tgInput = document.getElementById('tg-href-input');
                 const copyButton = document.getElementById('copy-button');
+                const tgCopyButton = document.getElementById('tg-copy-button');
+                const tgCopyBox = document.querySelector('.SongShare__copy-tg');
+
+                if (telegraph_href) {
+                    tgCopyBox.style.display = 'block';
+                }
+                
                 input.value = href;
+                tgInput.value = telegraph_href;
+
+                input.addEventListener('click', () => {
+                    input.select();
+                });
+                tgInput.addEventListener('click', () => {
+                    tgInput.select();
+                });
 
                 copyButton.addEventListener('click', () => {
                     navigator.clipboard.writeText(href).catch(window.console.error);
+                    setTimeout(() => modal.close(), 300);
+                });
+
+                tgCopyButton.addEventListener('click', () => {
+                    navigator.clipboard.writeText(telegraph_href).catch(window.console.error);
                     setTimeout(() => modal.close(), 300);
                 });
 
@@ -807,41 +840,6 @@ undefined..." />
             
                 <li class="
                         
-                            SongTranslations__item
-                        
-                    "
-                    data-book-id="ru"
-                    onclick="handleBookChoice(event)"
-                >
-                    <a href="https://kirtan.site/ru/tuhu-daya-sagara-tarayite-prani.html">
-                        <div class="SongTranslations__flex">
-                            <div class="SongTranslations__box">
-                                <img
-                                        alt=""
-                                        class="SongTranslations__image"
-                                        srcset="
-                                            https://kirtan.site/css/banner/small-banner-ru.png 1x,
-                                            https://kirtan.site/css/banner/small-banner-ru@2.png 2x
-                                        "
-                                        src="https://kirtan.site/css/banner/small-banner-ru.png"
-                                >
-                            </div>
-
-                            <div class="SongTranslations__info">
-                                <h5 class="SongTranslations__title">
-                                    Гаудия Гитанджали
-                                </h5>
-
-                                <div class="SongTranslations__subtitle ellipsis">
-                                    Cборник вайшнавских песен и молитв
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            
-                <li class="
-                        
                             SongTranslations__item SongTranslations__item--selected
                         
                     "
@@ -869,6 +867,41 @@ undefined..." />
 
                                 <div class="SongTranslations__subtitle ellipsis">
                                     Chiang Mai English Edition, 2022
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            
+                <li class="
+                        
+                            SongTranslations__item
+                        
+                    "
+                    data-book-id="ru"
+                    onclick="handleBookChoice(event)"
+                >
+                    <a href="https://kirtan.site/ru/tuhu-daya-sagara-tarayite-prani.html">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            https://kirtan.site/css/banner/small-banner-ru.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-ru@2.png 2x
+                                        "
+                                        src="https://kirtan.site/css/banner/small-banner-ru.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    Гаудия Гитанджали
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    Cборник вайшнавских песен и молитв
                                 </div>
                             </div>
                         </div>

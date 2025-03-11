@@ -23,7 +23,7 @@
                 Intl.DateTimeFormat().resolvedOptions()
             ).slice(0, 2);
 
-            const bookIdList = 'lv,ru,ua,en,en-pe'.split(',');
+            const bookIdList = 'en,ru,en-pe,lv,ua'.split(',');
             makeRedirectTo(bookIdList.includes(lang) ? lang : 'en');
         }
     </script>

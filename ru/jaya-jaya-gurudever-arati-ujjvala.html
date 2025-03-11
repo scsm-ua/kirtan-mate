@@ -17,13 +17,13 @@
         <meta property="og:locale" content="ua_UA" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Kirtan Site" />
-        <meta property="og:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta property="og:image" content="https://kirtan.site/css/banner/banner-ru@2.png" />
         <meta property="og:image:width" content="648" />
         <meta property="og:image:height" content="488" />
         <meta property="og:image:type" content="image/png" />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta name="twitter:image" content="https://kirtan.site/css/banner/banner-ru@2.png" />
         <meta name="twitter:title" content="Шри Гуру Арати. (прославление Шрилы Бхакти Сундара Говинды Дев-Госвами Махараджа)" />
         <meta name="twitter:description" content="джайа джайа гурудевер а̄рати уджвала
 говардхана-па̄да-пӣтхе бхувана-ман̇гала..." />
@@ -142,15 +142,9 @@
             
 
             
-                
-                    <div class="SongHeader__author
-                        
-                            SongHeader__author_first
-                        
-                    ">
-                        (прославление Шрилы Бхакти Сундара Говинды Дев-Госвами Махараджа)
-                    </div>
-                
+                <div class="SongHeader__author">
+                    (прославление Шрилы Бхакти Сундара Говинды Дев-Госвами Махараджа)
+                </div>
             
         </div>
     </div>
@@ -169,7 +163,7 @@
                                         </label>
                                     </div>
 
-                                    <ul class="SongPage__verses">
+                                    <ul class="SongPage__verses >
                                         
                                             
 
@@ -1035,10 +1029,12 @@
     "70": {
         "prev": {
             "href": "https://kirtan.site/ru/namo-namah-tulasi-maharani.html",
+            "telegraph_href": "/SHri-Tulasi-parikrama-giti-02-22",
             "title": "Шри Туласи-парикрама-гити"
         },
         "next": {
             "href": "https://kirtan.site/ru/jaya-guru-maharaja-jati-rajeshvara.html?p=72",
+            "telegraph_href": "/SHri-Guru-Arati-stuti-02-22",
             "title": "Шри Гуру Арати-стути"
         }
     }
@@ -1206,6 +1202,25 @@
                 </button>
             </div>
         </div>
+
+        <div class="SongShare__copy-tg">
+            <div class="SongShare__form">
+                <input
+                    class="SongShare__input"
+                    id="tg-href-input"
+                    readonly
+                    type="text"
+                />
+
+                <button
+                    class="AppButton RoundButton RoundButton--L RoundButton--dark SongShare__button"
+                    id="tg-copy-button"
+                    title="Копировать"
+                >
+                    <span class="icon-copy"></span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 `);
@@ -1214,12 +1229,34 @@
                  * Share the URL.
                  */
                 const href = window.location.href;
+                const telegraph_href = 'https://telegra.ph/SHri-Guru-Arati-02-22';
                 const input = document.getElementById('href-input');
+                const tgInput = document.getElementById('tg-href-input');
                 const copyButton = document.getElementById('copy-button');
+                const tgCopyButton = document.getElementById('tg-copy-button');
+                const tgCopyBox = document.querySelector('.SongShare__copy-tg');
+
+                if (telegraph_href) {
+                    tgCopyBox.style.display = 'block';
+                }
+                
                 input.value = href;
+                tgInput.value = telegraph_href;
+
+                input.addEventListener('click', () => {
+                    input.select();
+                });
+                tgInput.addEventListener('click', () => {
+                    tgInput.select();
+                });
 
                 copyButton.addEventListener('click', () => {
                     navigator.clipboard.writeText(href).catch(window.console.error);
+                    setTimeout(() => modal.close(), 300);
+                });
+
+                tgCopyButton.addEventListener('click', () => {
+                    navigator.clipboard.writeText(telegraph_href).catch(window.console.error);
                     setTimeout(() => modal.close(), 300);
                 });
 
@@ -1299,6 +1336,41 @@
             
                 <li class="
                         
+                            SongTranslations__item
+                        
+                    "
+                    data-book-id="en"
+                    onclick="handleBookChoice(event)"
+                >
+                    <a href="https://kirtan.site/en/jaya-jaya-gurudever-arati-ujjvala.html">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            https://kirtan.site/css/banner/small-banner-en.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-en@2.png 2x
+                                        "
+                                        src="https://kirtan.site/css/banner/small-banner-en.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    Kirtan Guide
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    Chiang Mai English Edition, 2022
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            
+                <li class="
+                        
                             SongTranslations__item SongTranslations__item--selected
                         
                     "
@@ -1337,76 +1409,6 @@
                             SongTranslations__item
                         
                     "
-                    data-book-id="ua"
-                    onclick="handleBookChoice(event)"
-                >
-                    <a href="https://kirtan.site/ua/jaya-jaya-gurudever-arati-ujjvala.html">
-                        <div class="SongTranslations__flex">
-                            <div class="SongTranslations__box">
-                                <img
-                                        alt=""
-                                        class="SongTranslations__image"
-                                        srcset="
-                                            https://kirtan.site/css/banner/small-banner-ua.png 1x,
-                                            https://kirtan.site/css/banner/small-banner-ua@2.png 2x
-                                        "
-                                        src="https://kirtan.site/css/banner/small-banner-ua.png"
-                                >
-                            </div>
-
-                            <div class="SongTranslations__info">
-                                <h5 class="SongTranslations__title">
-                                    Ґаудія Ґітанджалі
-                                </h5>
-
-                                <div class="SongTranslations__subtitle ellipsis">
-                                    Переклад деяких бгаджанів на українську мову
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            
-                <li class="
-                        
-                            SongTranslations__item
-                        
-                    "
-                    data-book-id="en"
-                    onclick="handleBookChoice(event)"
-                >
-                    <a href="https://kirtan.site/en/jaya-jaya-gurudever-arati-ujjvala.html">
-                        <div class="SongTranslations__flex">
-                            <div class="SongTranslations__box">
-                                <img
-                                        alt=""
-                                        class="SongTranslations__image"
-                                        srcset="
-                                            https://kirtan.site/css/banner/small-banner-en.png 1x,
-                                            https://kirtan.site/css/banner/small-banner-en@2.png 2x
-                                        "
-                                        src="https://kirtan.site/css/banner/small-banner-en.png"
-                                >
-                            </div>
-
-                            <div class="SongTranslations__info">
-                                <h5 class="SongTranslations__title">
-                                    Kirtan Guide
-                                </h5>
-
-                                <div class="SongTranslations__subtitle ellipsis">
-                                    Chiang Mai English Edition, 2022
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            
-                <li class="
-                        
-                            SongTranslations__item
-                        
-                    "
                     data-book-id="en-pe"
                     onclick="handleBookChoice(event)"
                 >
@@ -1431,6 +1433,41 @@
 
                                 <div class="SongTranslations__subtitle ellipsis">
                                     Pocket Edition, 2013
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            
+                <li class="
+                        
+                            SongTranslations__item
+                        
+                    "
+                    data-book-id="ua"
+                    onclick="handleBookChoice(event)"
+                >
+                    <a href="https://kirtan.site/ua/jaya-jaya-gurudever-arati-ujjvala.html">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            https://kirtan.site/css/banner/small-banner-ua.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-ua@2.png 2x
+                                        "
+                                        src="https://kirtan.site/css/banner/small-banner-ua.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    Ґаудія Ґітанджалі
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    Переклад деяких бгаджанів на українську мову
                                 </div>
                             </div>
                         </div>

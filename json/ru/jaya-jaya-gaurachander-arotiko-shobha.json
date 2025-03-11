@@ -18,8 +18,7 @@
       ],
       "translation": [
         "Слава, слава прекрасной церемонии поклонения Господу Гаурачандре! Она проходит в роще на берегу Джахнави (Ганги) и привлекает всех живых существ во Вселенной."
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "2",
@@ -29,8 +28,7 @@
       ],
       "translation": [
         "Справа от Господа Гаурачандры — Господь Нитьянанда, а слева от Него — Шри Гададхар. Рядом стоит Шри Адвайта, а Шривас Тхакур держит зонтик над головой Господа."
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "3",
@@ -45,9 +43,8 @@
         "        (нита̄и гаура харибол)"
       ],
       "translation": [
-        "Господь Чайтанья восседает на украшенном драгоценностями троне, а боги, во главе с Господом Брахмой, совершают церемонию поклонения, <i class=\"SongVerse__term\">арати</i>."
-      ],
-      "word_by_word": []
+        "Господь Чайтанья восседает на украшенном драгоценностями троне, а боги, во главе с Господом Брахмой, совершают церемонию поклонения, *арати*."
+      ]
     },
     {
       "number": "4",
@@ -56,9 +53,8 @@
         "        сан̃джайа-мукунда-ва̄су-гхош̣а-а̄ди га̄йа"
       ],
       "translation": [
-        "Нарахари Саракар и другие спутники Господа Чайтаньи обмахивают Его опахалами. Другие преданные, во главе с Санджаей Пандитом, Мукундой Даттой и Васу Гхошем, поют сладостный <i class=\"SongVerse__term\">киртан</i>."
-      ],
-      "word_by_word": []
+        "Нарахари Саракар и другие спутники Господа Чайтаньи обмахивают Его опахалами. Другие преданные, во главе с Санджаей Пандитом, Мукундой Даттой и Васу Гхошем, поют сладостный *киртан*."
+      ]
     },
     {
       "number": "5",
@@ -72,9 +68,8 @@
         "        (нита̄и гаура харибол)"
       ],
       "translation": [
-        "Звучат раковины, колокольчики и <i class=\"SongVerse__term\">караталы</i>, мелодично играют <i class=\"SongVerse__term\">мриданги</i>. Музыкальный <i class=\"SongVerse__term\">киртан</i> очень сладостен и ублажает слух."
-      ],
-      "word_by_word": []
+        "Звучат раковины, колокольчики и *караталы*, мелодично играют *мриданги*. Музыкальный *киртан* очень сладостен и ублажает слух."
+      ]
     },
     {
       "number": "6",
@@ -90,8 +85,7 @@
       ],
       "translation": [
         "Сияние лица Господа Чайтаньи превосходит сияние миллионов лун, а на Его шее сверкает гирлянда из лесных цветов."
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "7",
@@ -101,8 +95,7 @@
       ],
       "translation": [
         "На церемонии поклонения присутствуют Господь Шива, Шукадев Госвами и Нарада Муни — их голоса дрожат в экстазе божественной любви. Так Бхактивинод видит прославленное поклонение Господу Гаурачандре."
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": null,
@@ -116,31 +109,28 @@
       ],
       "translation": [
         "Одарите меня своей милостью! Шри Бхактивинод, Шри Сарасвати Тхакур, Гурудев, спаситель падших! Господь Гаурахари со Своими спутниками, пожалуйста, даруйте мне Свою милость."
-      ],
-      "word_by_word": []
+      ]
     }
   ],
   "embeds": [
     {
       "title": "Шрила Говинда Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/govinda-maharaj-kiba-jaya-jaya",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-kiba-jaya-jaya\"></iframe>"
     },
     {
       "title": "Навадвип Дхам",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/navadwip-scsm-kiba-jaya-jaya",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-kiba-jaya-jaya\"></iframe>"
     },
     {
-      "title": "Каракас Дхам",
-      "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-gaura-arati-i\"></iframe>"
-    },
-    {
       "title": "Сударшан Прабху",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/sudarshan-prabhu-sri-gaura",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsudarshan-prabhu-sri-gaura\"></iframe>"
     }
   ],
   "attributes": {
     "page": "64",
     "verse parentheses": "non bold"
-  },
-  "word_by_word": []
+  }
 }

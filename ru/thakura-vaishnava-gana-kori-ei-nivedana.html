@@ -17,13 +17,13 @@
         <meta property="og:locale" content="ua_UA" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Kirtan Site" />
-        <meta property="og:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta property="og:image" content="https://kirtan.site/css/banner/banner-ru@2.png" />
         <meta property="og:image:width" content="648" />
         <meta property="og:image:height" content="488" />
         <meta property="og:image:type" content="image/png" />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta name="twitter:image" content="https://kirtan.site/css/banner/banner-ru@2.png" />
         <meta name="twitter:title" content="Тхакура-ваишнава-гана. Ш́рӣла Нароттам Да̄с Т̣ха̄кур" />
         <meta name="twitter:description" content="т̣ха̄кура ваиш̣н̣ава ган̣а    кори эи ниведана
     мо бод̣о адхама дура̄ча̄ра..." />
@@ -142,15 +142,9 @@
             
 
             
-                
-                    <div class="SongHeader__author
-                        
-                            SongHeader__author_first
-                        
-                    ">
-                        Ш́рӣла Нароттам Да̄с Т̣ха̄кур
-                    </div>
-                
+                <div class="SongHeader__author">
+                    Ш́рӣла Нароттам Да̄с Т̣ха̄кур
+                </div>
             
         </div>
     </div>
@@ -169,7 +163,7 @@
                                         </label>
                                     </div>
 
-                                    <ul class="SongPage__verses">
+                                    <ul class="SongPage__verses >
                                         
                                             
 
@@ -652,6 +646,25 @@
                 </button>
             </div>
         </div>
+
+        <div class="SongShare__copy-tg">
+            <div class="SongShare__form">
+                <input
+                    class="SongShare__input"
+                    id="tg-href-input"
+                    readonly
+                    type="text"
+                />
+
+                <button
+                    class="AppButton RoundButton RoundButton--L RoundButton--dark SongShare__button"
+                    id="tg-copy-button"
+                    title="Копировать"
+                >
+                    <span class="icon-copy"></span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 `);
@@ -660,12 +673,34 @@
                  * Share the URL.
                  */
                 const href = window.location.href;
+                const telegraph_href = 'https://telegra.ph/Thakura-vaishnava-gana-02-22';
                 const input = document.getElementById('href-input');
+                const tgInput = document.getElementById('tg-href-input');
                 const copyButton = document.getElementById('copy-button');
+                const tgCopyButton = document.getElementById('tg-copy-button');
+                const tgCopyBox = document.querySelector('.SongShare__copy-tg');
+
+                if (telegraph_href) {
+                    tgCopyBox.style.display = 'block';
+                }
+                
                 input.value = href;
+                tgInput.value = telegraph_href;
+
+                input.addEventListener('click', () => {
+                    input.select();
+                });
+                tgInput.addEventListener('click', () => {
+                    tgInput.select();
+                });
 
                 copyButton.addEventListener('click', () => {
                     navigator.clipboard.writeText(href).catch(window.console.error);
+                    setTimeout(() => modal.close(), 300);
+                });
+
+                tgCopyButton.addEventListener('click', () => {
+                    navigator.clipboard.writeText(telegraph_href).catch(window.console.error);
                     setTimeout(() => modal.close(), 300);
                 });
 
@@ -748,30 +783,30 @@
                             SongTranslations__item
                         
                     "
-                    data-book-id="lv"
+                    data-book-id="en"
                     onclick="handleBookChoice(event)"
                 >
-                    <a href="https://kirtan.site/lv/thakura-vaishnava-gana-kori-ei-nivedana.html">
+                    <a href="https://kirtan.site/en/thakura-vaishnava-gana-kori-ei-nivedana.html">
                         <div class="SongTranslations__flex">
                             <div class="SongTranslations__box">
                                 <img
                                         alt=""
                                         class="SongTranslations__image"
                                         srcset="
-                                            https://kirtan.site/css/banner/small-banner-lv.png 1x,
-                                            https://kirtan.site/css/banner/small-banner-lv@2.png 2x
+                                            https://kirtan.site/css/banner/small-banner-en.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-en@2.png 2x
                                         "
-                                        src="https://kirtan.site/css/banner/small-banner-lv.png"
+                                        src="https://kirtan.site/css/banner/small-banner-en.png"
                                 >
                             </div>
 
                             <div class="SongTranslations__info">
                                 <h5 class="SongTranslations__title">
-                                    Gaudija Gītandžalī
+                                    Kirtan Guide
                                 </h5>
 
                                 <div class="SongTranslations__subtitle ellipsis">
-                                    Vaišnavu dziesmas un lūgšanas
+                                    Chiang Mai English Edition, 2022
                                 </div>
                             </div>
                         </div>
@@ -818,41 +853,6 @@
                             SongTranslations__item
                         
                     "
-                    data-book-id="en"
-                    onclick="handleBookChoice(event)"
-                >
-                    <a href="https://kirtan.site/en/thakura-vaishnava-gana-kori-ei-nivedana.html">
-                        <div class="SongTranslations__flex">
-                            <div class="SongTranslations__box">
-                                <img
-                                        alt=""
-                                        class="SongTranslations__image"
-                                        srcset="
-                                            https://kirtan.site/css/banner/small-banner-en.png 1x,
-                                            https://kirtan.site/css/banner/small-banner-en@2.png 2x
-                                        "
-                                        src="https://kirtan.site/css/banner/small-banner-en.png"
-                                >
-                            </div>
-
-                            <div class="SongTranslations__info">
-                                <h5 class="SongTranslations__title">
-                                    Kirtan Guide
-                                </h5>
-
-                                <div class="SongTranslations__subtitle ellipsis">
-                                    Chiang Mai English Edition, 2022
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            
-                <li class="
-                        
-                            SongTranslations__item
-                        
-                    "
                     data-book-id="en-pe"
                     onclick="handleBookChoice(event)"
                 >
@@ -877,6 +877,41 @@
 
                                 <div class="SongTranslations__subtitle ellipsis">
                                     Pocket Edition, 2013
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            
+                <li class="
+                        
+                            SongTranslations__item
+                        
+                    "
+                    data-book-id="lv"
+                    onclick="handleBookChoice(event)"
+                >
+                    <a href="https://kirtan.site/lv/thakura-vaishnava-gana-kori-ei-nivedana.html">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            https://kirtan.site/css/banner/small-banner-lv.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-lv@2.png 2x
+                                        "
+                                        src="https://kirtan.site/css/banner/small-banner-lv.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    Gaudija Gītandžalī
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    Vaišnavu dziesmas un lūgšanas
                                 </div>
                             </div>
                         </div>

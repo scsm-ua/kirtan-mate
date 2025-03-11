@@ -83,6 +83,10 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   line-height: 0;
   color: var(--grey);
 }
+.IndexListItem__views {
+  display: none;
+  color: var(--title-color);
+}
 .IndexListItem__suffix {
   position: relative;
   width: 24px;

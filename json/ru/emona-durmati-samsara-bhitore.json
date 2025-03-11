@@ -18,8 +18,7 @@
       ],
       "translation": [
         "Порочный ум бросил меня в этот мир, о Господь, но один из Твоих чистых возвышенных преданных пришел, чтобы освободить меня!"
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "2",
@@ -31,8 +30,7 @@
       ],
       "translation": [
         "Увидев меня, столь падшего и презренного, он сжалился надо мной и сказал: «Смиренная душа, выслушай благую весть и тогда твое сердце возрадуется!»"
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "3",
@@ -44,8 +42,7 @@
       ],
       "translation": [
         "«Чтобы спасти тебя, Шри Кришна Чайтанья явился на земле Навадвипы. Он уже помог многим несчастным душам, таким как ты, благополучно пересечь пучину материального существования»."
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "4",
@@ -56,9 +53,8 @@
         "    сон̇ге бха̄и авадхӯта"
       ],
       "translation": [
-        "«Чтобы исполнить пророчество Вед, сын брахмана по имени Махапрабху, чье тело отливает золотом, пришел вместе со Своим братом <i class=\"SongVerse__term\">авадхутой</i> Нитьянандой. Вместе Они затопили Надию божественным экстазом»."
-      ],
-      "word_by_word": []
+        "«Чтобы исполнить пророчество Вед, сын брахмана по имени Махапрабху, чье тело отливает золотом, пришел вместе со Своим братом *авадхутой* Нитьянандой. Вместе Они затопили Надию божественным экстазом»."
+      ]
     },
     {
       "number": "5",
@@ -70,8 +66,7 @@
       ],
       "translation": [
         "«Шри Чайтанья, сам Кришна, спас этот мир, одаривая каждого Своим Святым Именем. Иди и обрети свободу!»"
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "6",
@@ -83,50 +78,57 @@
       ],
       "translation": [
         "О Господь, услышав эти слова, Бхактивинод зарыдал, моля о живительной сени Твоих лотосоподобных стоп и рассказывая историю своей жизни."
-      ],
-      "word_by_word": []
+      ]
     }
   ],
   "embeds": [
     {
       "title": "Шрила Говинда Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/govinda-maharaj-emona-durmati",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-emona-durmati\"></iframe>"
     },
     {
       "title": "Шрила Шридхар Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/sridhar-maharaj-and-govinda-7",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsridhar-maharaj-and-govinda-7\"></iframe>"
     },
     {
       "title": "Шрила Ачарья Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/acharya-maharaj-emona-durmati",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Facharya-maharaj-emona-durmati\"></iframe>"
     },
     {
       "title": "Шрила Госвами Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/goswami-maharaj-emona-durmati",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgoswami-maharaj-emona-durmati\"></iframe>"
     },
     {
       "title": "Навадвип Дхам",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/navadwip-scsm-emona-durmati",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-emona-durmati\"></iframe>"
     },
     {
       "title": "Каракас Дхам",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/shchsm-karakas-emona-durmati",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-emona-durmati\"></iframe>"
     },
     {
       "title": "Сударшан Прабху",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/sudarshan-prabhu-dainyatmika",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsudarshan-prabhu-dainyatmika\"></iframe>"
     },
     {
       "title": "Шрила Авадхут Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/avadxut-maxaradzh-emona",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-emona\"></iframe>"
     },
     {
       "title": "Шрила Авадхут Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/avadxut-maxaradzh-emona-1",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-emona-1\"></iframe>"
     }
   ],
   "attributes": {
     "page": "154"
-  },
-  "word_by_word": []
+  }
 }

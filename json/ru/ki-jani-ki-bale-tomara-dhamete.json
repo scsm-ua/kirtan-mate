@@ -19,8 +19,7 @@
       ],
       "translation": [
         "Чем — знаниями ли, силой ли — должен обладать такой, как я, чтобы заслужить Твое покровительство? Несомненно, это возможно только по Твоей милости, ибо Ты всегда стремишься очистить и спасти падшие души."
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "2",
@@ -32,8 +31,7 @@
       ],
       "translation": [
         "Ты, источник сострадания и милосердия, — моя единственная надежда! Нет никого, кто нуждается в Твоей милости больше, чем я. Без сомнения, Ты развеешь весь страх."
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "3",
@@ -45,8 +43,7 @@
       ],
       "translation": [
         "Никто более не в силах спасти меня. О милостивый Господь, исполни Свое обещание, молю, спаси этого подлого и низкого грешника!"
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "4",
@@ -58,8 +55,7 @@
       ],
       "translation": [
         "Я отказался от всего и пришел к Твоим лотосоподобным стопам. Господь Вселенной, я Твой вечный слуга, а Ты — мой защитник и покровитель!"
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "5",
@@ -71,8 +67,7 @@
       ],
       "translation": [
         "Все принадлежит Тебе. Я лишь слуга, уверенный в том, что Ты меня спасешь. Я выбрал Твои лотосоподобные стопы единственным пристанищем. Теперь я не принадлежу себе."
-      ],
-      "word_by_word": []
+      ]
     },
     {
       "number": "6",
@@ -84,22 +79,22 @@
       ],
       "translation": [
         "Рыдая, Бхактивинод находит приют у Твоих лотосоподобных стоп. Прости ему оскорбления, позволь вкусить Твое Святое Имя и поддержи его!"
-      ],
-      "word_by_word": []
+      ]
     }
   ],
   "embeds": [
     {
       "title": "Шрила Говинда Махарадж",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/govinda-maharaj-goptritve",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-goptritve\"></iframe>"
     },
     {
       "title": "Сударшан Прабху",
+      "embed_url": "https://soundcloud.com/bharatimaharaj/sudarshan-prabhu-goptrtve",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsudarshan-prabhu-goptrtve\"></iframe>"
     }
   ],
   "attributes": {
     "page": "155"
-  },
-  "word_by_word": []
+  }
 }

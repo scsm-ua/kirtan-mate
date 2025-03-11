@@ -5,30 +5,27 @@
         
         <title>Лого Шри Чайтанья Сарасват Матха | Kirtan Site</title>
         <link rel="canonical" href="https://kirtan.site/ru/gayatri-muralishta-kirtana-dhanam.html" />
-        <meta name="description" content="га̄йатрӣ муралӣш̣т̣а-кӣртана-дханам̇ ра̄дха̄падам̇ дхӣмахи
-undefined..." />
+        <meta name="description" content="га̄йатрӣ муралӣш̣т̣а-кӣртана-дханам̇ ра̄дха̄падам̇ дхӣмахи..." />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property="og:title" content="Лого Шри Чайтанья Сарасват Матха" />
-        <meta property="og:description" content="га̄йатрӣ муралӣш̣т̣а-кӣртана-дханам̇ ра̄дха̄падам̇ дхӣмахи
-undefined..." />
+        <meta property="og:description" content="га̄йатрӣ муралӣш̣т̣а-кӣртана-дханам̇ ра̄дха̄падам̇ дхӣмахи..." />
         <meta property="og:url" content="https://kirtan.site/ru/gayatri-muralishta-kirtana-dhanam.html" />
         <meta property="og:locale" content="ua_UA" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Kirtan Site" />
-        <meta property="og:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta property="og:image" content="https://kirtan.site/css/banner/banner-ru@2.png" />
         <meta property="og:image:width" content="648" />
         <meta property="og:image:height" content="488" />
         <meta property="og:image:type" content="image/png" />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta name="twitter:image" content="https://kirtan.site/css/banner/banner-ru@2.png" />
         <meta name="twitter:title" content="Лого Шри Чайтанья Сарасват Матха" />
-        <meta name="twitter:description" content="га̄йатрӣ муралӣш̣т̣а-кӣртана-дханам̇ ра̄дха̄падам̇ дхӣмахи
-undefined..." />
+        <meta name="twitter:description" content="га̄йатрӣ муралӣш̣т̣а-кӣртана-дханам̇ ра̄дха̄падам̇ дхӣмахи..." />
 
-        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://kirtan.site/#website","url":"https://kirtan.site/","name":"Kirtan Site","description":"га̄йатрӣ муралӣш̣т̣а-кӣртана-дханам̇ ра̄дха̄падам̇ дхӣмахи\nundefined...","inLanguage":"en-GB"},{"@type":"CollectionPage","@id":"https://kirtan.site/ru/gayatri-muralishta-kirtana-dhanam.html","url":"https://kirtan.site/ru/gayatri-muralishta-kirtana-dhanam.html","name":["Лого Шри Чайтанья Сарасват Матха"],"isPartOf":{"@id":"https://kirtan.site/#website"}}]}</script>
+        <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://kirtan.site/#website","url":"https://kirtan.site/","name":"Kirtan Site","description":"га̄йатрӣ муралӣш̣т̣а-кӣртана-дханам̇ ра̄дха̄падам̇ дхӣмахи...","inLanguage":"en-GB"},{"@type":"CollectionPage","@id":"https://kirtan.site/ru/gayatri-muralishta-kirtana-dhanam.html","url":"https://kirtan.site/ru/gayatri-muralishta-kirtana-dhanam.html","name":"Лого Шри Чайтанья Сарасват Матха","isPartOf":{"@id":"https://kirtan.site/#website"}}]}</script>
         
         <link rel="apple-touch-icon" sizes="57x57" href="https://kirtan.site/css/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="https://kirtan.site/css/favicon/apple-icon-60x60.png">
@@ -155,7 +152,7 @@ undefined..." />
                                         </label>
                                     </div>
 
-                                    <ul class="SongPage__verses">
+                                    <ul class="SongPage__verses >
                                         
                                             
 
@@ -419,6 +416,25 @@ undefined..." />
                 </button>
             </div>
         </div>
+
+        <div class="SongShare__copy-tg">
+            <div class="SongShare__form">
+                <input
+                    class="SongShare__input"
+                    id="tg-href-input"
+                    readonly
+                    type="text"
+                />
+
+                <button
+                    class="AppButton RoundButton RoundButton--L RoundButton--dark SongShare__button"
+                    id="tg-copy-button"
+                    title="Копировать"
+                >
+                    <span class="icon-copy"></span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 `);
@@ -427,12 +443,34 @@ undefined..." />
                  * Share the URL.
                  */
                 const href = window.location.href;
+                const telegraph_href = 'https://telegra.ph/Logo-SHri-CHajtanya-Sarasvat-Matha-02-22';
                 const input = document.getElementById('href-input');
+                const tgInput = document.getElementById('tg-href-input');
                 const copyButton = document.getElementById('copy-button');
+                const tgCopyButton = document.getElementById('tg-copy-button');
+                const tgCopyBox = document.querySelector('.SongShare__copy-tg');
+
+                if (telegraph_href) {
+                    tgCopyBox.style.display = 'block';
+                }
+                
                 input.value = href;
+                tgInput.value = telegraph_href;
+
+                input.addEventListener('click', () => {
+                    input.select();
+                });
+                tgInput.addEventListener('click', () => {
+                    tgInput.select();
+                });
 
                 copyButton.addEventListener('click', () => {
                     navigator.clipboard.writeText(href).catch(window.console.error);
+                    setTimeout(() => modal.close(), 300);
+                });
+
+                tgCopyButton.addEventListener('click', () => {
+                    navigator.clipboard.writeText(telegraph_href).catch(window.console.error);
                     setTimeout(() => modal.close(), 300);
                 });
 

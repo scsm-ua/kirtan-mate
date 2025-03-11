@@ -17,13 +17,13 @@
         <meta property="og:locale" content="ua_UA" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Kirtan Site" />
-        <meta property="og:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta property="og:image" content="https://kirtan.site/css/banner/banner-ru@2.png" />
         <meta property="og:image:width" content="648" />
         <meta property="og:image:height" content="488" />
         <meta property="og:image:type" content="image/png" />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image" content="https://kirtan.site/css/sharing-banner.png" />
+        <meta name="twitter:image" content="https://kirtan.site/css/banner/banner-ru@2.png" />
         <meta name="twitter:title" content="Шри Шачинандана-вандана. Ш́рӣла Бхакти Ракш̣ак Ш́рӣдхар Дев-Госва̄мӣ Маха̄ра̄дж" />
         <meta name="twitter:description" content="джайа ш́ачӣнандана    сура-муни-вандана
     бхава-бхайа-кхан̣д̣ана джайо хе..." />
@@ -142,15 +142,9 @@
             
 
             
-                
-                    <div class="SongHeader__author
-                        
-                            SongHeader__author_first
-                        
-                    ">
-                        Ш́рӣла Бхакти Ракш̣ак Ш́рӣдхар Дев-Госва̄мӣ Маха̄ра̄дж
-                    </div>
-                
+                <div class="SongHeader__author">
+                    Ш́рӣла Бхакти Ракш̣ак Ш́рӣдхар Дев-Госва̄мӣ Маха̄ра̄дж
+                </div>
             
         </div>
     </div>
@@ -169,7 +163,7 @@
                                         </label>
                                     </div>
 
-                                    <ul class="SongPage__verses">
+                                    <ul class="SongPage__verses >
                                         
                                             
 
@@ -540,10 +534,12 @@
     "61": {
         "prev": {
             "href": "https://kirtan.site/ru/jashomati-nandana-vraja-vara-nagara.html?p=60",
+            "telegraph_href": "/SHri-Nama-kirtan-02-22",
             "title": "Шри Нама-Киртан"
         },
         "next": {
             "href": "https://kirtan.site/ru/mahaprasade-govinde-nama-brahmani.html",
+            "telegraph_href": "/Mahaprasada-02-22",
             "title": "Махапрасада"
         }
     }
@@ -711,6 +707,25 @@
                 </button>
             </div>
         </div>
+
+        <div class="SongShare__copy-tg">
+            <div class="SongShare__form">
+                <input
+                    class="SongShare__input"
+                    id="tg-href-input"
+                    readonly
+                    type="text"
+                />
+
+                <button
+                    class="AppButton RoundButton RoundButton--L RoundButton--dark SongShare__button"
+                    id="tg-copy-button"
+                    title="Копировать"
+                >
+                    <span class="icon-copy"></span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 `);
@@ -719,12 +734,34 @@
                  * Share the URL.
                  */
                 const href = window.location.href;
+                const telegraph_href = 'https://telegra.ph/SHri-SHachinandana-vandana-02-22';
                 const input = document.getElementById('href-input');
+                const tgInput = document.getElementById('tg-href-input');
                 const copyButton = document.getElementById('copy-button');
+                const tgCopyButton = document.getElementById('tg-copy-button');
+                const tgCopyBox = document.querySelector('.SongShare__copy-tg');
+
+                if (telegraph_href) {
+                    tgCopyBox.style.display = 'block';
+                }
+                
                 input.value = href;
+                tgInput.value = telegraph_href;
+
+                input.addEventListener('click', () => {
+                    input.select();
+                });
+                tgInput.addEventListener('click', () => {
+                    tgInput.select();
+                });
 
                 copyButton.addEventListener('click', () => {
                     navigator.clipboard.writeText(href).catch(window.console.error);
+                    setTimeout(() => modal.close(), 300);
+                });
+
+                tgCopyButton.addEventListener('click', () => {
+                    navigator.clipboard.writeText(telegraph_href).catch(window.console.error);
                     setTimeout(() => modal.close(), 300);
                 });
 
@@ -804,6 +841,41 @@
             
                 <li class="
                         
+                            SongTranslations__item
+                        
+                    "
+                    data-book-id="en"
+                    onclick="handleBookChoice(event)"
+                >
+                    <a href="https://kirtan.site/en/jaya-shiachinandana-sura-muni-vandana.html">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            https://kirtan.site/css/banner/small-banner-en.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-en@2.png 2x
+                                        "
+                                        src="https://kirtan.site/css/banner/small-banner-en.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    Kirtan Guide
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    Chiang Mai English Edition, 2022
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            
+                <li class="
+                        
                             SongTranslations__item SongTranslations__item--selected
                         
                     "
@@ -842,76 +914,6 @@
                             SongTranslations__item
                         
                     "
-                    data-book-id="ua"
-                    onclick="handleBookChoice(event)"
-                >
-                    <a href="https://kirtan.site/ua/jaya-shiachinandana-sura-muni-vandana.html">
-                        <div class="SongTranslations__flex">
-                            <div class="SongTranslations__box">
-                                <img
-                                        alt=""
-                                        class="SongTranslations__image"
-                                        srcset="
-                                            https://kirtan.site/css/banner/small-banner-ua.png 1x,
-                                            https://kirtan.site/css/banner/small-banner-ua@2.png 2x
-                                        "
-                                        src="https://kirtan.site/css/banner/small-banner-ua.png"
-                                >
-                            </div>
-
-                            <div class="SongTranslations__info">
-                                <h5 class="SongTranslations__title">
-                                    Ґаудія Ґітанджалі
-                                </h5>
-
-                                <div class="SongTranslations__subtitle ellipsis">
-                                    Переклад деяких бгаджанів на українську мову
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            
-                <li class="
-                        
-                            SongTranslations__item
-                        
-                    "
-                    data-book-id="en"
-                    onclick="handleBookChoice(event)"
-                >
-                    <a href="https://kirtan.site/en/jaya-shiachinandana-sura-muni-vandana.html">
-                        <div class="SongTranslations__flex">
-                            <div class="SongTranslations__box">
-                                <img
-                                        alt=""
-                                        class="SongTranslations__image"
-                                        srcset="
-                                            https://kirtan.site/css/banner/small-banner-en.png 1x,
-                                            https://kirtan.site/css/banner/small-banner-en@2.png 2x
-                                        "
-                                        src="https://kirtan.site/css/banner/small-banner-en.png"
-                                >
-                            </div>
-
-                            <div class="SongTranslations__info">
-                                <h5 class="SongTranslations__title">
-                                    Kirtan Guide
-                                </h5>
-
-                                <div class="SongTranslations__subtitle ellipsis">
-                                    Chiang Mai English Edition, 2022
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            
-                <li class="
-                        
-                            SongTranslations__item
-                        
-                    "
                     data-book-id="en-pe"
                     onclick="handleBookChoice(event)"
                 >
@@ -936,6 +938,41 @@
 
                                 <div class="SongTranslations__subtitle ellipsis">
                                     Pocket Edition, 2013
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            
+                <li class="
+                        
+                            SongTranslations__item
+                        
+                    "
+                    data-book-id="ua"
+                    onclick="handleBookChoice(event)"
+                >
+                    <a href="https://kirtan.site/ua/jaya-shiachinandana-sura-muni-vandana.html">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            https://kirtan.site/css/banner/small-banner-ua.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-ua@2.png 2x
+                                        "
+                                        src="https://kirtan.site/css/banner/small-banner-ua.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    Ґаудія Ґітанджалі
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    Переклад деяких бгаджанів на українську мову
                                 </div>
                             </div>
                         </div>

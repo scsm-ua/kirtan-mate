@@ -53,12 +53,23 @@
   margin: 0;
   padding: 0;
 }
+.SongVerse__wordbyword {
+  list-style-type: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+}
 .SongVerse__paragraph p {
   color: var(--text-color);
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
   margin-bottom: 16px;
+}
+.word-by-word-mode .SongVerse__translation .SongVerse__paragraph p {
+  color: var(--dark);
+}
+.word-by-word-mode .SongVerse__wordbyword .SongVerse__paragraph p {
+  font-size: 12px;
 }
 .SongVerse__paragraph a {
   color: var(--text-color);

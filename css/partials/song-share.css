@@ -107,6 +107,11 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 .SongShare__copy {
   width: 100%;
 }
+.SongShare__copy-tg {
+  width: 100%;
+  padding-top: 25px;
+  display: none;
+}
 .SongShare__form {
   display: flex;
   align-items: center;
