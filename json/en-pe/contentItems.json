@@ -883,10 +883,15 @@
           "Шрила Авадхут Махарадж"
         ],
         "telegraphPath": "Śrī-Śrī-Prabhupāda-padma-Stavakaḥ-02-22"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Śrī Śrī Prema-dhāma-deva Stotram",
+    "items": [
       {
         "id": "deva-siddha-mukta-yukta-bhakta-vrinda",
-        "title": "Śrī Śrī Prema-dhāma-deva Stotram",
+        "title": "1-10. Saturday",
         "name": "Śrī Śrī Prema-dhāma-deva Stotram",
         "aliasName": "deva-siddha-mukta-yukta-bhakta-vṛnda-vanditaṁ",
         "fileName": "deva-siddha-mukta-yukta-bhakta-vrinda.html",
@@ -895,6 +900,78 @@
           "Шрила Мадхусудан Махарадж"
         ],
         "telegraphPath": "Śrī-Śrī-Prema-dhāma-deva-Stotram-02-22"
+      },
+      {
+        "id": "sutra-vritti-tippanishta-sukshma-vachanadbhutam",
+        "title": "11-20. Sunday",
+        "name": "Śrī Śrī Prema-dhāma-deva Stotram",
+        "aliasName": "sūtra-vṛtti-ṭippanīṣṭa-sūkṣma-vāchanādbhutaṁ",
+        "fileName": "sutra-vritti-tippanishta-sukshma-vachanadbhutam.html",
+        "page": "138",
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "telegraphPath": "Śrī-Śrī-Prema-dhāma-deva-Stotram-03-14-5"
+      },
+      {
+        "id": "dhvasta-sarvvabhauma-vada-navya-tarka-shiankaram",
+        "title": "21-30. Monday",
+        "name": "Śrī Śrī Prema-dhāma-deva Stotram",
+        "aliasName": "dhvasta-sārvabhauma-vāda-navya-tarka-śāṅkaraṁ",
+        "fileName": "dhvasta-sarvvabhauma-vada-navya-tarka-shiankaram.html",
+        "page": "139",
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "telegraphPath": "Śrī-Śrī-Prema-dhāma-deva-Stotram-03-14"
+      },
+      {
+        "id": "prema-mugdha-rudra-raja-shiaurya-virya-vikramam",
+        "title": "31-40. Tuesday",
+        "name": "Śrī Śrī Prema-dhāma-deva Stotram",
+        "aliasName": "prema-mugdha-rudra-rāja-śaurya-vīrya-vikramaṁ",
+        "fileName": "prema-mugdha-rudra-raja-shiaurya-virya-vikramam.html",
+        "page": "141",
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "telegraphPath": "Śrī-Śrī-Prema-dhāma-deva-Stotram-03-14-3"
+      },
+      {
+        "id": "prema-mugdha-nritya-kirtanakularitantikam",
+        "title": "41-50. Wednesday",
+        "name": "Śrī Śrī Prema-dhāma-deva Stotram",
+        "aliasName": "prema-mugdha-nṛtya-kīrtanākulāriṭāntikaṁ",
+        "fileName": "prema-mugdha-nritya-kirtanakularitantikam.html",
+        "page": "143",
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "telegraphPath": "Śrī-Śrī-Prema-dhāma-deva-Stotram-03-14-2"
+      },
+      {
+        "id": "shri-sanatananu-rupa-jiva-sampradayakam",
+        "title": "51-60. Thursday",
+        "name": "Śrī Śrī Prema-dhāma-deva Stotram",
+        "aliasName": "śrī sanātanānurūpa-jīva-sampradāyakaṁ",
+        "fileName": "shri-sanatananu-rupa-jiva-sampradayakam.html",
+        "page": "144",
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "telegraphPath": "Śrī-Śrī-Prema-dhāma-deva-Stotram-03-14-4"
+      },
+      {
+        "id": "yamunambu-krishna-radhikali-keli-mandalam",
+        "title": "61-72. Friday",
+        "name": "Śrī Śrī Prema-dhāma-deva Stotram",
+        "aliasName": "yāmunāmbu-kṛṣṇa-rādhikāli-keli-maṇḍalaṁ",
+        "fileName": "yamunambu-krishna-radhikali-keli-mandalam.html",
+        "page": "146",
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "telegraphPath": "Śrī-Śrī-Prema-dhāma-deva-Stotram-03-14-6"
       }
     ]
   },

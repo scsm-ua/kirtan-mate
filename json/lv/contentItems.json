@@ -384,7 +384,8 @@
         "name": "Śrī Gaura-ārati",
         "aliasName": "(kiba) jaya jaya gorācāńder āratiko śobhā",
         "fileName": "sri-gaura-arati.html",
-        "page": "64"
+        "page": "64",
+        "telegraphPath": "Śrī-Gaura-ārati-03-14"
       },
       {
         "id": "jayare-jayare-jaya-gaura-sarasvati",
@@ -396,7 +397,8 @@
         "embeds": [
           "Навадвип Дхам",
           "Каракас Дхам"
-        ]
+        ],
+        "telegraphPath": "Śrī-Sāraswat-ārati-03-14"
       },
       {
         "id": "gurudeva-kripa-bindu-diya-kara-ei-dase",
@@ -412,7 +414,8 @@
           "Навадвип Дхам",
           "Каракас Дхам",
           "Шрила Авадхут Махарадж"
-        ]
+        ],
+        "telegraphPath": "Gurudeva-03-14"
       },
       {
         "id": "namo-namah-tulasi-maharani",
@@ -424,7 +427,8 @@
         "embeds": [
           "Навадвип Дхам",
           "Шрила Авадхут Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Tulasī-parikramā-gīti-03-14"
       }
     ]
   }
