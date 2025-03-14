@@ -1,9 +1,9 @@
 [
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-lv.git",
-    "git+https://github.com/scsm-ua/gaudiya-gitanjali-ru.git#dev",
+    "git+https://github.com/scsm-ua/gaudiya-gitanjali-ru.git",
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-ua.git",
-    "git+https://github.com/scsm-ua/kirtan-guide-en.git#dev",
+    "git+https://github.com/scsm-ua/kirtan-guide-en.git",
     "git+https://github.com/scsm-ua/kirtan-guide-es.git#review",
-    "git+https://github.com/scsm-ua/kirtan-guide-pocket-edition.git#dev",
+    "git+https://github.com/scsm-ua/kirtan-guide-pocket-edition.git",
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-ru-kd-morning.git#morning-short-updates"
 ]
