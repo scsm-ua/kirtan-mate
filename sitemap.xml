@@ -2771,6 +2771,12 @@
     </url>
     
     <url>
+        <loc>https://kirtan.site/lv/jaya-jaya-gurudever-arati-ujjvala.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://kirtan.site/lv/kali-kukkura-kadana-jadi-chao-he.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -2850,6 +2856,12 @@
     
     <url>
         <loc>https://kirtan.site/lv/namo-namah-tulasi-maharani.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/lv/shri-guru-charana-padma-kevala-bhakati.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

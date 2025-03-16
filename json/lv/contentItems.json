@@ -238,6 +238,18 @@
         "telegraphPath": "Śrī-Śrī-Nitāi-Chaitanya-Ārati-02-22-2"
       },
       {
+        "id": "jaya-jaya-gurudever-arati-ujjvala",
+        "title": "Śrī Guru Ārati",
+        "name": "Śrī Guru Ārati",
+        "aliasName": "jaya jaya gurudever ārati ujjvala",
+        "fileName": "jaya-jaya-gurudever-arati-ujjvala.html",
+        "page": "42",
+        "embeds": [
+          "Навадвип Дхам",
+          "Каракас Дхам"
+        ]
+      },
+      {
         "id": "kali-kukkura-kadana-jadi-chao-he",
         "title": "Prabhāti Gīti",
         "name": "Prabhāti Gīti",
@@ -429,6 +441,18 @@
           "Шрила Авадхут Махарадж"
         ],
         "telegraphPath": "Śrī-Tulasī-parikramā-gīti-03-14"
+      },
+      {
+        "id": "shri-guru-charana-padma-kevala-bhakati",
+        "title": "Śrī Guru-vaiṣṇava Māhātmya-gīti",
+        "name": "Śrī Guru-vaiṣṇava",
+        "aliasName": "śrī guru charaṇa-padma, \tkevala-bhakati-sadma,",
+        "fileName": "shri-guru-charana-padma-kevala-bhakati.html",
+        "page": "80",
+        "embeds": [
+          "Шрила Ачарья Махарадж",
+          "Навадвип Дхам"
+        ]
       }
     ]
   }
