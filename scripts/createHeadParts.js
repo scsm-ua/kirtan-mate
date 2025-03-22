@@ -136,9 +136,9 @@ function getItemXML(url, priority, period = 'weekly') {
 function createSongXMLParts(songbook_id, categories) {
     const { A_Z, BOOK_LIST, CONTENTS } = getNavigationPaths(songbook_id);
 
-    const indexes = getItemXML(ORIGIN + BOOK_LIST, 0.9, 'monthly') +
-        getItemXML(ORIGIN + CONTENTS, 1) +
-        getItemXML(ORIGIN + A_Z, 1);
+    const indexes = getItemXML(BOOK_LIST, 0.9, 'monthly') +
+        getItemXML(CONTENTS, 1) +
+        getItemXML(A_Z, 1);
 
     const songs = categories
         .flatMap((cat) => cat.items)
