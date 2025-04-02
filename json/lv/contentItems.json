@@ -247,7 +247,8 @@
         "embeds": [
           "Навадвип Дхам",
           "Каракас Дхам"
-        ]
+        ],
+        "telegraphPath": "Śrī-Guru-Ārati-04-02"
       },
       {
         "id": "kali-kukkura-kadana-jadi-chao-he",
@@ -452,7 +453,8 @@
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Навадвип Дхам"
-        ]
+        ],
+        "telegraphPath": "Śrī-Guru-vaiṣṇava-Māhātmya-gīti-04-02"
       },
       {
         "id": "shri-krishna-chaitanya-prabhu-daya-kara-more",
@@ -463,7 +465,8 @@
         "page": "75",
         "embeds": [
           "Bhakti Lalita Devi"
-        ]
+        ],
+        "telegraphPath": "Sāvaraṇa-Śrī-Gaura-pāda-padme-Prārthanā-04-02"
       },
       {
         "id": "vaishnava-thakura-dayara-sagara",
@@ -476,7 +479,8 @@
           "Шрила Ачарья Махарадж",
           "Навадвип Дхам",
           "Сударшан Прабху"
-        ]
+        ],
+        "telegraphPath": "Śrī-Vaiṣṇava-mahimā-gīti-04-02"
       }
     ]
   }
