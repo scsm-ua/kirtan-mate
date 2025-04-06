@@ -251,6 +251,20 @@
         "telegraphPath": "Śrī-Guru-Ārati-04-02"
       },
       {
+        "id": "jaya-guru-maharaja-jati-rajeshvara",
+        "title": "Śrī Guru Ārati-stuti",
+        "name": "Śrī Guru Ārati-stuti",
+        "aliasName": "jaya ‘guru-mahārāja’ jati-rājeśvara",
+        "fileName": "jaya-guru-maharaja-jati-rajeshvara.html",
+        "page": "46",
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Навадвип Дхам",
+          "Каракас Дхам"
+        ]
+      },
+      {
         "id": "kali-kukkura-kadana-jadi-chao-he",
         "title": "Prabhāti Gīti",
         "name": "Prabhāti Gīti",
