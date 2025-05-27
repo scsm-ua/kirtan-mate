@@ -498,5 +498,35 @@
         "telegraphPath": "Śrī-Vaiṣṇava-mahimā-gīti-04-02"
       }
     ]
+  },
+  {
+    "name": "Dziesmas Nitjānandam Prabhū",
+    "items": [
+      {
+        "id": "nitai-pada-kamala-koti-chandra-sushitala",
+        "title": "Manaḥ-Śikṣā",
+        "name": "Manaḥ-Śikṣā",
+        "aliasName": "nitāi-pada-kamala,    koṭī-chandra-suśītala,",
+        "fileName": "nitai-pada-kamala-koti-chandra-sushitala.html",
+        "page": "111",
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Шрила Ачарья Махарадж"
+        ]
+      },
+      {
+        "id": "sujanarvuda-radhita-pada-yugam",
+        "title": "Śrī Śrī Prabhupāda-padma Stavakaḥ",
+        "name": "Śrī Śrī Prabhupāda-padma",
+        "aliasName": "sujanārvuda-rādhita-pāda-yugaṁ",
+        "fileName": "sujanarvuda-radhita-pada-yugam.html",
+        "page": "78",
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Авадхут Махарадж"
+        ]
+      }
+    ]
   }
 ]

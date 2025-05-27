@@ -2884,6 +2884,18 @@
         <priority>0.8</priority>
     </url>
     
+    <url>
+        <loc>https://kirtan.site/lv/nitai-pada-kamala-koti-chandra-sushitala.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/lv/sujanarvuda-radhita-pada-yugam.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
 
     <url>
         <loc>https://kirtan.site/ua/</loc>
