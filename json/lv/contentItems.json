@@ -511,7 +511,8 @@
         "page": "81",
         "embeds": [
           "Шрила Мадхусудан Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02"
       },
       {
         "id": "sutra-vritti-tippanishta-sukshma-vachanadbhutam",
@@ -522,7 +523,8 @@
         "page": "85",
         "embeds": [
           "Шрила Мадхусудан Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-6"
       },
       {
         "id": "dhvasta-sarvvabhauma-vada-navya-tarka-shiankaram",
@@ -533,7 +535,8 @@
         "page": "88",
         "embeds": [
           "Шрила Мадхусудан Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-2"
       },
       {
         "id": "prema-mugdha-rudra-raja-shiaurya-virya-vikramam",
@@ -544,7 +547,8 @@
         "page": "92",
         "embeds": [
           "Шрила Мадхусудан Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-4"
       },
       {
         "id": "prema-mugdha-nritya-kirtanakularitantikam",
@@ -555,7 +559,8 @@
         "page": "96",
         "embeds": [
           "Шрила Мадхусудан Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-3"
       },
       {
         "id": "shri-sanatananu-rupa-jiva-sampradayakam",
@@ -566,7 +571,8 @@
         "page": "101",
         "embeds": [
           "Шрила Мадхусудан Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-5"
       },
       {
         "id": "yamunambu-krishna-radhikali-keli-mandalam",
@@ -577,7 +583,8 @@
         "page": "104",
         "embeds": [
           "Шрила Мадхусудан Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-7"
       }
     ]
   },
@@ -595,7 +602,8 @@
           "Шрила Говинда Махарадж",
           "Шрила Говинда Махарадж",
           "Шрила Ачарья Махарадж"
-        ]
+        ],
+        "telegraphPath": "Manaḥ-Śikṣā-06-02"
       },
       {
         "id": "sujanarvuda-radhita-pada-yugam",
@@ -607,7 +615,8 @@
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Авадхут Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Śrī-Prabhupāda-padma-Stavakaḥ-06-02"
       }
     ]
   }
