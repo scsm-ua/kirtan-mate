@@ -628,7 +628,8 @@
         "embeds": [
           "Навадвип Дхам",
           "Сударшан Прабху"
-        ]
+        ],
+        "telegraphPath": "Nitāi-guṇamaṇi-āmāra-06-30"
       },
       {
         "id": "dayal-nitai-chaitanya-bole-nach-re",
@@ -639,7 +640,8 @@
         "page": "116",
         "embeds": [
           "Каракас Дхам"
-        ]
+        ],
+        "telegraphPath": "Dayāl-Nitāi-Chaitanya-06-30"
       }
     ]
   },
@@ -656,7 +658,8 @@
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Каракас Дхам"
-        ]
+        ],
+        "telegraphPath": "Avatāra-Sāra-06-30"
       },
       {
         "id": "gay-gora-madhur-svare",
@@ -672,7 +675,8 @@
           "Каракас Дхам",
           "Шрила Авадхут Махарадж",
           "Шрила Авадхут Махарадж"
-        ]
+        ],
+        "telegraphPath": "Śrī-Nāma-06-30"
       }
     ]
   }
