@@ -3839,6 +3839,30 @@
         <priority>0.8</priority>
     </url>
     
+    <url>
+        <loc>https://kirtan.site/lv/nitai-gunamani-amara-nitai-gunamani.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/lv/dayal-nitai-chaitanya-bole-nach-re.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/lv/avatara-sara-gora-avatara.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/lv/gay-gora-madhur-svare.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
 
     <url>
         <loc>https://kirtan.site/ua/</loc>
