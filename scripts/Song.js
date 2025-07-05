@@ -1,4 +1,5 @@
 const { getEmbedCode } = require('./embeds');
+const yaml = require('js-yaml');
 
 class Song {
     constructor({json, text}) {
@@ -255,15 +256,40 @@ function processTextForTelegraph(verse, lines, attributes) {
     return str.split('\n');
 }
 
+function extractYAMLFrontMatter(fileContent) {
+    const match = fileContent.match(/^---\n([\s\S]*?)\n---/);
+    if (match) {
+        var meta;
+        try {
+            meta = yaml.load(match[1]);
+        } catch(ex) {
+            console.error(ex);
+        }
+        return {
+            meta,
+            content: fileContent.slice(match[0].length) // Markdown body without front matter
+        };
+    } else {
+        return {
+            meta: null,
+            content: fileContent
+        };
+    }
+}
+
 /**
  * @param text: string
  * @return {TSongJSON}
  */
 function convertSongToJSON(text) {
-    var lines = text.split(/\n/);
-    
+
+    const {meta, content} = extractYAMLFrontMatter(text);
+
+    var lines = content.split(/\n/);
+
     // Song template.
     var song = {
+        meta,
         title: [],
         author: [],
         subtitle: [],

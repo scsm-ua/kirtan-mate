@@ -5,6 +5,7 @@ const path = require('path');
  */
 const BASE_FILE_NAMES = {
     A_Z: 'a-z',
+    AUTHORS: 'authors',
     BOOK_LIST: 'index',
     CONTENTS: 'contents',
     NOT_FOUND: '404',

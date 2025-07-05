@@ -24,7 +24,7 @@ const {
 const { getNavigationPaths, getTemplatePaths, getTelegraphTemplatePaths } = require('./scripts/utils');
 const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
 const { getTranslationsBy } = require('./scripts/i18n');
-const { makeIndexList } = require('./scripts/makeIndexList');
+const { makeIndexList, makeAuthorsList } = require('./scripts/makeIndexList');
 const version = require('./package.json').version;
 
 const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
@@ -766,6 +766,63 @@ gulp.task('telegraph-songbook-a-z', (done) => {
     })();
 });
 
+/**
+ * Path `/{bookId}/authors.html`;
+ */
+gulp.task('songbook-authors', (done) => {
+    const tasks = getSongbookIdList().map((songbook_id) => {
+        const tr = getTranslationsBy(songbook_id);
+        const info = getSongbookInfo(songbook_id);
+
+        const headParts = {
+            title: tr('A_Z_PAGE.HEAD.TITLE'),
+            description: tr('A_Z_PAGE.HEAD.DESCRIPTION'),
+            path: getNavigationPaths(songbook_id).A_Z,
+            songbook_id
+        };
+
+        const items = makeAuthorsList(songbook_id);
+
+        const sections = items.map((item) => ({
+            type: 'author',
+            page: `${item.name} (${item.items.length})`,
+            path: `#section-${item.name}`,
+            title: item.name
+        }));
+
+        const task = (done) => gulp
+            .src(SRC.EJS_FILES + '/' + FILES.EJS.A_Z_PAGE)
+            .pipe(
+                ejs({
+                    headParts: createHeadParts(headParts),
+                    i18n: tr,
+                    items: items,
+                    paths: getTemplatePaths(songbook_id),
+                    sections: sections,
+                    songbook_id: songbook_id,
+                    subtitle: info.subtitle,
+                    title: info.title
+                }).on('error', console.error)
+            )
+            .pipe(
+                rename({
+                    basename: BASE_FILE_NAMES.AUTHORS,
+                    dirname: songbook_id,
+                    extname: '.html'
+                })
+            )
+            .pipe(gulp.dest(BUILD.ROOT), done)
+
+        task.displayName = 'songbook-authors ' + songbook_id;
+        return task;
+    });
+
+    return gulp.series(...tasks, (seriesDone) => {
+        seriesDone();
+        done();
+    })();
+});
+
 
 /**
  * Paths:
@@ -898,6 +955,7 @@ gulp.task('build', (done) => {
         'search-page',
         'songbook-contents',
         'songbook-a-z',
+        'songbook-authors',
         'sitemap',
         'songbook-list',
         '404',
