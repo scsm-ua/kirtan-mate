@@ -9,6 +9,7 @@ const { getExistingTelegraphPageHref } = require('./telegraph/utils');
 function getNavigationPaths(bookId) {
     return {
         // TODO: use constants methods:
+        AUTHORS: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.AUTHORS,
         A_Z: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.A_Z,
         BOOK_LIST: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.BOOK_LIST,
         CONTENTS: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.CONTENTS,
@@ -20,6 +21,7 @@ function getNavigationPaths(bookId) {
         PUBLIC_CONTENTS: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.CONTENTS),
         PUBLIC_SEARCH: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH),
         PUBLIC_A_Z: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.A_Z),
+        PUBLIC_AUTHORS: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.AUTHORS),
     };
 }
 

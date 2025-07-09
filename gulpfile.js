@@ -775,8 +775,8 @@ gulp.task('songbook-authors', (done) => {
         const info = getSongbookInfo(songbook_id);
 
         const headParts = {
-            title: tr('A_Z_PAGE.HEAD.TITLE'),
-            description: tr('A_Z_PAGE.HEAD.DESCRIPTION'),
+            title: tr('AUTHORS_PAGE.HEAD.TITLE'),
+            description: tr('AUTHORS_PAGE.HEAD.DESCRIPTION'),
             path: getNavigationPaths(songbook_id).A_Z,
             songbook_id
         };

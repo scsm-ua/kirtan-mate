@@ -78,15 +78,12 @@ function makeAuthorsList(songbook_id) {
 
         var song = getSongJSON(songbook_id, item.id);
 
-        var author = song.meta?.author || (song.author && song.author[0]);
+        var author = song.meta?.author;
         if (!author) {
-            console.log('No author in', item.id)
+            if (!song.meta || !song.meta['no-author']) {
+                console.log('No author in', songbook_id, item.id, item.title)
+            }
             return;
-        }
-
-        var m = author.match(/by (.+)/i)
-        if (m) {
-            author = m[1];
         }
 
         var author_songs = authors_dict[author] = authors_dict[author] || [];
@@ -98,9 +95,17 @@ function makeAuthorsList(songbook_id) {
         name: author,
         // TODO: sort items
         // TODO: get correct first line.
-        // TODO: remove duplicates by id
         items: authors_dict[author]
-    }));
+    })).sort((a, b) => {
+        var l1 = a.items.length;
+        var l2 = b.items.length;
+        var result = l2 - l1;
+        if (!result) {
+            return a.name.localeCompare(b.name);
+        } else {
+            return result;
+        }
+    });
 }
 
 /**

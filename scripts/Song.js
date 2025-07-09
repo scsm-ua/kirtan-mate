@@ -51,6 +51,10 @@ class Song {
 
     //===
 
+    getUnifiedAurhor() {
+        return this.json.meta?.author;
+    }
+
     getAuthors() {
         return this.json.author || [];
     }
@@ -310,7 +314,6 @@ function convertSongToJSON(text) {
     }
 
     var last_line_id;
-    var verse_separator;
 
     // TODO: shikshastakam first verse has no number
     lines.forEach((line) => {
@@ -415,6 +418,19 @@ function convertSongToJSON(text) {
             last_line_id = line_id;
         }
     });
+
+    if (!song.meta?.author) {
+        var author = song.author && song.author[0];
+
+        if (author) {
+            var m = author.match(/by (.+)/i)
+            if (m) {
+                author = m[1];
+            }
+            song.meta = song.meta || {};
+            song.meta.author = author;
+        }
+    }
 
     return song;
 }
