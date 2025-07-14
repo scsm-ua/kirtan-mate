@@ -688,6 +688,7 @@ gulp.task('songbook-a-z', (done) => {
             .src(SRC.EJS_FILES + '/' + FILES.EJS.A_Z_PAGE)
             .pipe(
                 ejs({
+                    showAdditionalMenu: true,
                     headParts: createHeadParts(headParts),
                     i18n: tr,
                     items: items,
@@ -794,6 +795,7 @@ gulp.task('songbook-authors', (done) => {
             .src(SRC.EJS_FILES + '/' + FILES.EJS.A_Z_PAGE)
             .pipe(
                 ejs({
+                    showAdditionalMenu: false,
                     headParts: createHeadParts(headParts),
                     i18n: tr,
                     items: items,

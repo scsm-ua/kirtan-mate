@@ -10,7 +10,8 @@
       "HEAD": {
         "DESCRIPTION": "Autoru saraksts",
         "TITLE": "Vaišnavu dziesmu grāmata"
-      }
+      },
+      "LINK_FULL_TITLE": "Autoru saraksts"
     },
     "BOOK_LIST_PAGE": {
       "HEAD": {
@@ -23,7 +24,8 @@
       "BOOKS": "Grāmatas",
       "CONTENTS": "Saturs",
       "INDEX": "Indekss",
-      "SEARCH": "Meklēt"
+      "SEARCH": "Meklēt",
+      "ADDITIONAL": "Papildu"
     },
     "CONTENTS_PAGE": {
       "HEAD": {
@@ -76,7 +78,8 @@
       "HEAD": {
         "DESCRIPTION": "Authors list",
         "TITLE": "Vaishnava Songbook"
-      }
+      },
+      "LINK_FULL_TITLE": "Songs by author"
     },
     "BOOK_LIST_PAGE": {
       "HEAD": {
@@ -89,7 +92,8 @@
       "BOOKS": "Books",
       "CONTENTS": "Contents",
       "INDEX": "Index",
-      "SEARCH": "Search"
+      "SEARCH": "Search",
+      "ADDITIONAL": "Additional"
     },
     "CONTENTS_PAGE": {
       "HEAD": {
@@ -142,7 +146,8 @@
       "HEAD": {
         "DESCRIPTION": "Lista de autores",
         "TITLE": "Cancionero Vaishnava"
-      }
+      },
+      "LINK_FULL_TITLE": "Lista de autores"
     },
     "BOOK_LIST_PAGE": {
       "HEAD": {
@@ -155,7 +160,8 @@
       "BOOKS": "Libros",
       "CONTENTS": "Contenido",
       "INDEX": "Índice",
-      "SEARCH": "Buscar"
+      "SEARCH": "Buscar",
+      "ADDITIONAL": "Adicional"
     },
     "CONTENTS_PAGE": {
       "HEAD": {
@@ -208,7 +214,8 @@
       "HEAD": {
         "DESCRIPTION": "Список авторов",
         "TITLE": "Вайшнавский песенник"
-      }
+      },
+      "LINK_FULL_TITLE": "Песни по авторам"
     },
     "BOOK_LIST_PAGE": {
       "HEAD": {
@@ -221,7 +228,8 @@
       "BOOKS": "Книги",
       "CONTENTS": "Содержание",
       "INDEX": "Индекс",
-      "SEARCH": "Поиск"
+      "SEARCH": "Поиск",
+      "ADDITIONAL": "Дополнительно"
     },
     "CONTENTS_PAGE": {
       "HEAD": {
@@ -287,7 +295,8 @@
       "HEAD": {
         "DESCRIPTION": "Перелік авторів",
         "TITLE": "Вайшнавський пісенник"
-      }
+      },
+      "LINK_FULL_TITLE": "Пісні по авторам"
     },
     "BOOK_LIST_PAGE": {
       "HEAD": {
@@ -300,7 +309,8 @@
       "BOOKS": "Книги",
       "CONTENTS": "Зміст",
       "INDEX": "Індекс",
-      "SEARCH": "Пошук"
+      "SEARCH": "Пошук",
+      "ADDITIONAL": "Додатково"
     },
     "CONTENTS_PAGE": {
       "HEAD": {

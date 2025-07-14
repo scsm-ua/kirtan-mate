@@ -33,6 +33,9 @@
                                     { 'item': item }
                                 ); %>
                             <% }) %>
+                            <% if (showAdditionalMenu) { %>
+                                <%- include(paths.toPartials + '/integrated-menu.ejs'); %>
+                            <% } %>
                         </ul>
                     </div>
                 </div>

@@ -4,6 +4,6 @@
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-ua.git#yaml-front-matter-author",
     "git+https://github.com/scsm-ua/kirtan-guide-en.git#yaml-front-matter-author",
     "git+https://github.com/scsm-ua/kirtan-guide-es.git#yaml-front-matter-author",
-    "git+https://github.com/scsm-ua/kirtan-guide-pocket-edition.git",
+    "git+https://github.com/scsm-ua/kirtan-guide-pocket-edition.git#dev",
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-ru-kd-morning.git#morning-short-updates"
 ]
