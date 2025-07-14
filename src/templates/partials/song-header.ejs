@@ -62,7 +62,7 @@
 
             <% song.getAuthors().forEach((item, idx) => { %>
                 <div class="SongHeader__author">
-                    <%= item %>
+                    <a href="<%= paths.toPages.AUTHORS %><% if (song.getUnifiedAurhor()) { %>#section-<%= song.getUnifiedAurhor() %><% } %>"><%= item %></a>
                 </div>
             <% }) %>
         </div>

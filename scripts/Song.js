@@ -1,4 +1,5 @@
 const { getEmbedCode } = require('./embeds');
+const yaml = require('js-yaml');
 
 class Song {
     constructor({json, text}) {
@@ -49,6 +50,10 @@ class Song {
     }
 
     //===
+
+    getUnifiedAurhor() {
+        return this.json.meta?.author;
+    }
 
     getAuthors() {
         return this.json.author || [];
@@ -255,15 +260,40 @@ function processTextForTelegraph(verse, lines, attributes) {
     return str.split('\n');
 }
 
+function extractYAMLFrontMatter(fileContent) {
+    const match = fileContent.match(/^---\n([\s\S]*?)\n---/);
+    if (match) {
+        var meta;
+        try {
+            meta = yaml.load(match[1]);
+        } catch(ex) {
+            console.error(ex);
+        }
+        return {
+            meta,
+            content: fileContent.slice(match[0].length) // Markdown body without front matter
+        };
+    } else {
+        return {
+            meta: null,
+            content: fileContent
+        };
+    }
+}
+
 /**
  * @param text: string
  * @return {TSongJSON}
  */
 function convertSongToJSON(text) {
-    var lines = text.split(/\n/);
-    
+
+    const {meta, content} = extractYAMLFrontMatter(text);
+
+    var lines = content.split(/\n/);
+
     // Song template.
     var song = {
+        meta,
         title: [],
         author: [],
         subtitle: [],
@@ -284,7 +314,6 @@ function convertSongToJSON(text) {
     }
 
     var last_line_id;
-    var verse_separator;
 
     // TODO: shikshastakam first verse has no number
     lines.forEach((line) => {
@@ -389,6 +418,19 @@ function convertSongToJSON(text) {
             last_line_id = line_id;
         }
     });
+
+    if (!song.meta?.author) {
+        var author = song.author && song.author[0];
+
+        if (author) {
+            var m = author.match(/by (.+)/i)
+            if (m) {
+                author = m[1];
+            }
+            song.meta = song.meta || {};
+            song.meta.author = author;
+        }
+    }
 
     return song;
 }

@@ -1,7 +1,7 @@
 const deburr = require('lodash.deburr');
 const { getSongbookInfo } = require('./songbookLoader');
 const { PATHS } = require('./constants');
-const { getSongsContents } = require('./indexGenerator');
+const { getSongsContents, getSongJSON } = require('./indexGenerator');
 
 /**
  * Converts the list of categories into the index list. The primary letters
@@ -56,6 +56,56 @@ function makeIndexList(songbook_id) {
                 }};
             })
         }));
+}
+
+function makeAuthorsList(songbook_id) {
+
+    const categories = getSongsContents(songbook_id);
+    // const index = require(PATHS.BUILD.getIndexFile(songbook_id))
+
+    const authors_dict = {};
+    const unique_ids = {};
+
+    categories.flatMap((cat) => cat.items).forEach((item) => {
+        // Skip intro from index.
+        if (item.fileName === 'intro.html') {
+            return;
+        }
+
+        if (item.id in unique_ids) {
+            return;
+        }
+
+        var song = getSongJSON(songbook_id, item.id);
+
+        var author = song.meta?.author;
+        if (!author) {
+            if (!song.meta || !song.meta['no-author']) {
+                console.log('No author in', songbook_id, item.id, item.title)
+            }
+            return;
+        }
+
+        var author_songs = authors_dict[author] = authors_dict[author] || [];
+        author_songs.push(item);
+        unique_ids[item.id] = true;
+    });
+
+    return Object.keys(authors_dict).sort().map(author => ({
+        name: author,
+        // TODO: sort items
+        // TODO: get correct first line.
+        items: authors_dict[author]
+    })).sort((a, b) => {
+        var l1 = a.items.length;
+        var l2 = b.items.length;
+        var result = l2 - l1;
+        if (!result) {
+            return a.name.localeCompare(b.name);
+        } else {
+            return result;
+        }
+    });
 }
 
 /**
@@ -143,4 +193,4 @@ function getAliasCleaned(item) {
 
 
 /**/
-module.exports = { makeIndexList };
+module.exports = { makeIndexList, makeAuthorsList };

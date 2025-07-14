@@ -7,7 +7,7 @@
     <% items.map((item) => { %>
         <li class="Pills__item">
             <a class="Pills__anchor" href="<%= item.path %>" title="<%= item.title %>">
-                <button class="Pills__button">
+                <button class="Pills__<%= item.type || 'button' %>">
                     <%= item.page %>
                 </button>
             </a>

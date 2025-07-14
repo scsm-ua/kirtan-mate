@@ -5,6 +5,7 @@ const path = require('path');
  */
 const BASE_FILE_NAMES = {
     A_Z: 'a-z',
+    AUTHORS: 'authors',
     BOOK_LIST: 'index',
     CONTENTS: 'contents',
     NOT_FOUND: '404',
@@ -21,6 +22,7 @@ const contentItems = 'contentItems.json';
 const contentsPage = BASE_FILE_NAMES.CONTENTS + '.html';
 const indexItems = 'indexItems.json';
 const indexAZPath = BASE_FILE_NAMES.A_Z + '.html';
+const authorsPath = BASE_FILE_NAMES.AUTHORS + '.html';
 const notFoundPage = BASE_FILE_NAMES.NOT_FOUND + '.html';
 const searchPage = BASE_FILE_NAMES.SEARCH + '.html';
 const sharingBanner = 'sharing-banner.png';
@@ -100,6 +102,7 @@ const PATHS = {
         JS_FILES: 'src/js'
     },
     PAGES: {
+        AUTHORS: '/' + authorsPath,
         A_Z: '/' + indexAZPath,
         BOOK_LIST: process.env.EXPLICIT_INDEX ? '/index.html' : '/',
         CONTENTS: '/' + contentsPage,
