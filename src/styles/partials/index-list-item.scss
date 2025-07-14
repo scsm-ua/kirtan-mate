@@ -29,6 +29,10 @@
         padding: 0 16px;
         text-transform: uppercase;
         background-color: var(--main-bg-color);
+
+        &__empty {
+            z-index: 0;
+        }
     }
 
     &__list {
