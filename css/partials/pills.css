@@ -32,3 +32,21 @@
 .Pills__button__active:hover {
   color: var(--beige);
 }
+.Pills__author {
+  padding: 8px;
+  border-radius: 6px;
+  border: solid 1px var(--grey);
+  color: var(--dark-grey);
+  background-color: var(--song-bg-color);
+  transition: color 0.25s;
+}
+.Pills__author:hover {
+  color: var(--accent-color);
+}
+.Pills__author__active {
+  color: var(--beige);
+  background-color: var(--dark);
+}
+.Pills__author__active:hover {
+  color: var(--beige);
+}

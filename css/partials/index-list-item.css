@@ -43,6 +43,9 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   text-transform: uppercase;
   background-color: var(--main-bg-color);
 }
+.IndexListItem__title__empty {
+  z-index: 0;
+}
 .IndexListItem__list {
   list-style-type: none;
   margin: 0 0 24px 0;
@@ -61,6 +64,13 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 .IndexListItem__name {
   flex: 1;
   font-weight: 700;
+  line-height: 28px;
+  margin: 0;
+  color: var(--title-color);
+}
+.IndexListItem__menu {
+  flex: 1;
+  font-weight: initial;
   line-height: 28px;
   margin: 0;
   color: var(--title-color);

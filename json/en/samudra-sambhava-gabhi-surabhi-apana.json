@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
+  },
   "title": [
     "Śrī Govinda Kuṇḍa Māhātmya"
   ],
@@ -20,8 +23,14 @@
         "govinda kuṇḍe viśade yaḥ snāti kṛṣṇa-mānasaḥ",
         "prāpnoti kṛṣṇa-sārūpyaṁ maithilendra na saṁśayaḥ"
       ],
-      "translation": [
-        "Bengali verse illumination\\",
+      "translation": []
+    },
+    {
+      "number": null,
+      "text": [],
+      "translation": [],
+      "subtitle": [
+        "Bengali verse illumination",
         "by Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
       ]
     },
