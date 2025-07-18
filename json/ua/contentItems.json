@@ -323,6 +323,19 @@
     ]
   },
   {
+    "name": "Екадаші та святкові дні",
+    "items": [
+      {
+        "id": "shri-hari-vasare-hari-kirtana-vidhana",
+        "title": "Шрī Харі-ва̄сара-ґīті",
+        "name": "Шрī Харі-ва̄сара-ґīті",
+        "aliasName": "шрī харі-ва̄саре харі-кīртана-відга̄на",
+        "fileName": "shri-hari-vasare-hari-kirtana-vidhana.html",
+        "page": "238"
+      }
+    ]
+  },
+  {
     "name": "Інші бгаджани",
     "items": [
       {
