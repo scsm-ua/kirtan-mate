@@ -334,6 +334,23 @@
     ]
   },
   {
+    "name": "Вайшнавам",
+    "items": [
+      {
+        "id": "je-anilo-prema-dhana-karuna-prachura",
+        "title": "Віраха-ґīті",
+        "name": "Віраха-ґīті",
+        "aliasName": "дже а̄ніло према-дгана каруна̄ прачура",
+        "fileName": "je-anilo-prema-dhana-karuna-prachura.html",
+        "page": "135",
+        "embeds": [
+          "Шрила Госвами Махарадж",
+          "Шрила Мадхусудан Махарадж"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Екадаші та святкові дні",
     "items": [
       {
