@@ -137,7 +137,8 @@
         "page": "54",
         "embeds": [
           "Bhakti Lalita Devi"
-        ]
+        ],
+        "telegraphPath": "Thakura-vajshnava-gana-08-03"
       },
       {
         "id": "hari-haraye-namah-krishna-yadavaya-namah",
@@ -346,6 +347,19 @@
         "embeds": [
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
+        ],
+        "telegraphPath": "Vіraha-gītі-08-03"
+      },
+      {
+        "id": "ei-vara-karuna-kara-vaishnava-gosani",
+        "title": "Вайшнава Віґʼяпті",
+        "name": "Вайшнава Віґʼяпті",
+        "aliasName": "еі-ва̄ра каруна̄ кара вайшнава ґоса̄ні",
+        "fileName": "ei-vara-karuna-kara-vaishnava-gosani.html",
+        "page": "136",
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Мадхусудан Махарадж"
         ]
       }
     ]
@@ -359,7 +373,8 @@
         "name": "Шрī Харі-ва̄сара-ґīті",
         "aliasName": "шрī харі-ва̄саре харі-кīртана-відга̄на",
         "fileName": "shri-hari-vasare-hari-kirtana-vidhana.html",
-        "page": "238"
+        "page": "238",
+        "telegraphPath": "SHrī-Harі-vasara-gītі-08-03"
       }
     ]
   },
