@@ -200,6 +200,46 @@
                                 
                                     <li
                                             class="BookListPage__item"
+                                            data-book-id="pt"
+                                            onclick="handleBookChoice(event)"
+                                    >
+                                        <div class="BookListPage__wrapper">
+                                            <div class="BookListPage__ratio app-fixed-ratio-container">
+                                                <div class="app-fixed-ratio-content">
+                                                    <a href="https://kirtan.site/pt/contents.html" class="BookListPage__link">
+                                                        <div class="BookListPage__box">
+                                                            <img
+                                                                    alt=""
+                                                                    class="BookListPage__image"
+                                                                    srcset="
+                                                                        https://kirtan.site/css/banner/banner-pt.png 1x,
+                                                                        https://kirtan.site/css/banner/banner-pt@2.png 2x
+                                                                    "
+                                                                    src="https://kirtan.site/css/banner/banner-pt.png"
+                                                            >
+                                                        </div>
+
+                                                        <div class="BookListPage__info">
+                                                            <h4 class="BookListPage__title">
+                                                                Livro de Kirtan
+                                                            </h4>
+
+                                                            <div class="ellipsis BookListPage__subtitle">
+                                                                Seva Ashram, Campos do Jordão
+                                                            </div>
+
+                                                            <div class="BookListPage__count">
+                                                                112 songs
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                
+                                    <li
+                                            class="BookListPage__item"
                                             data-book-id="en-pe"
                                             onclick="handleBookChoice(event)"
                                     >
@@ -409,7 +449,7 @@
 
 
         <script>
-            const info = JSON.parse('{"builtAt":"08/08/2025, 11:15:55 UTC","commitHash":"8be8ab5","version":"1.1.0"}');
+            const info = JSON.parse('{"builtAt":"29/08/2025, 21:50:01 UTC","commitHash":"de151d4","version":"1.1.0"}');
             const styles = [
                 'color: #957742',
                 'background-color: #77CEF1',
