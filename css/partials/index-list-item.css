@@ -32,6 +32,12 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   right: 0;
   border-bottom: 0.5px solid var(--border-color);
 }
+.IndexListItem__empty_header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 24px;
+}
 .IndexListItem__title {
   position: relative;
   z-index: 1;
