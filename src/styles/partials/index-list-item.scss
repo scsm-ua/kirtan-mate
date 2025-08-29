@@ -19,6 +19,13 @@
         }
     }
 
+    &__empty_header {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-top: 24px;
+    }
+
     &__title {
         position: relative;
         z-index: 1;
