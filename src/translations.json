@@ -359,5 +359,72 @@
       "Karakas Dham": "Каракас Дгам",
       "Navadvip Dham": "Навадвіп Дгам"
     }
+  },
+  "pt": {
+    "A_Z_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Índice A-Z",
+        "TITLE": "Cancioneiro Vaishnava"
+      }
+    },
+    "AUTHORS_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Lista de autores",
+        "TITLE": "Cancioneiro Vaishnava"
+      },
+      "LINK_FULL_TITLE": "Canções por autor"
+    },
+    "BOOK_LIST_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Lista de cancioneiros disponíveis",
+        "TITLE": "Cancioneiro Vaishnava"
+      },
+      "SONG_COUNT": "canções"
+    },
+    "FOOTER": {
+      "BOOKS": "Livros",
+      "CONTENTS": "Conteúdo",
+      "INDEX": "Índice",
+      "SEARCH": "Pesquisar"
+    },
+    "CONTENTS_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Conteúdo",
+        "TITLE": "Cancioneiro Vaishnava"
+      }
+    },
+    "NOT_FOUND_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Página 404",
+        "TITLE": "Cancioneiro Vaishnava"
+      },
+      "TEXT": "Este site não contém a página solicitada. Tente iniciar a navegação selecionando um cancioneiro da lista abaixo:",
+      "TITLE": "Página não encontrada"
+    },
+    "SEARCH_PAGE": {
+      "HEAD": {
+        "DESCRIPTION": "Página de pesquisa",
+        "TITLE": "Cancioneiro Vaishnava"
+      },
+      "CLEAR": "Limpar",
+      "FIND": "Buscar",
+      "INPUT_PLACEHOLDER": "Encontrar uma canção",
+      "LOAD_MORE": "Carregar mais",
+      "NO_RESULTS": "Nada foi encontrado",
+      "PAGE_LIST": "Lista de páginas"
+    },
+    "SONG_PAGE": {
+      "CLOSE": "Fechar",
+      "COPY": "Copiar",
+      "COPY_LINK": "Copiar link da página",
+      "NEXT_SONG": "Próxima canção",
+      "OTHER_TRANSLATIONS": "Ver outras traduções",
+      "PREVIOUS_SONG": "Canção anterior",
+      "SHARE": "Compartilhar",
+      "SHARE_SONG": "Compartilhar canção",
+      "SHOW_TRANSLATION": "Mostrar tradução",
+      "PAGE": "página",
+      "NEXT": "Próximo"
+    }
   }
 }

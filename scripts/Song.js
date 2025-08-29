@@ -432,6 +432,24 @@ function convertSongToJSON(text) {
         }
     }
 
+    if (song.meta?.page) {
+        var attr_key = 'page';
+        var attr_value = song.meta?.page;
+
+        // Copy from `case 'attribute':`.
+        song.attributes = song.attributes || {};
+        if (song.attributes[attr_key] && !Array.isArray(song.attributes[attr_key])) {
+            // Convert to array.
+            song.attributes[attr_key] = [song.attributes[attr_key]];
+        }
+
+        if (Array.isArray(song.attributes[attr_key])) {
+            song.attributes[attr_key].push(attr_value);
+        } else {
+            song.attributes[attr_key] = attr_value;
+        }
+    }
+
     return song;
 }
 

@@ -59,3 +59,13 @@ Setup github pages for repository.
 Copy `.env.sample` to `.env` with your local root path for `HOME_BASE_URL`.
 
 To use with local filesystem use `EXPLICIT_INDEX=1` to build home path with  `.../index.html`.
+
+## Debug local songbooks
+
+    pnpm link ../gaudiya-gitanjali-lv
+    pnpm link ../gaudiya-gitanjali-ru
+    pnpm link ../gaudiya-gitanjali-ua
+    pnpm link ../kirtan-guide-en
+    pnpm link ../kirtan-guide-es
+    pnpm link ../kirtan-guide-pt
+    pnpm link ../kirtan-guide-pocket-edition
