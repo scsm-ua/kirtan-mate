@@ -6,9 +6,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '<%= process.env.G_ID %>');
-
-  gtag('event', 'page_view', {
+  gtag('config', '<%= process.env.G_ID %>', {
     songbook: <% if (locals.songbook_id) { %>'<%= locals.songbook_id %>'<% } else { %>null<% } %>,
     song: <% if (locals.song_id) { %>'<%= locals.song_id %>'<% } else { %>null<% } %>
   });
