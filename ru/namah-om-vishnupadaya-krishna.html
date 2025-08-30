@@ -691,7 +691,15 @@
   gtag('js', new Date());
 
   gtag('config', 'G-7NCXTS1JYM');
+
+  var songbook_m = window.location.pathname.match(/^\/([\w-])\//);
+  if (songbook_m) {
+    gtag('event', 'page_view', {
+      songbook: songbook_m[1]
+    });
+  }
 </script>
+
 
     </body>
 </html>

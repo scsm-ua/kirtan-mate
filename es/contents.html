@@ -742,7 +742,7 @@
                     </h6>
 
                     <div class="IndexListItem__views">
-                        <span>1</span>
+                        <span>2</span>
                     </div>
 
                     <div class="IndexListItem__suffix">
@@ -3084,7 +3084,7 @@
                     </h6>
 
                     <div class="IndexListItem__views">
-                        <span>0</span>
+                        <span>1</span>
                     </div>
 
                     <div class="IndexListItem__suffix">
@@ -4204,7 +4204,15 @@
   gtag('js', new Date());
 
   gtag('config', 'G-7NCXTS1JYM');
+
+  var songbook_m = window.location.pathname.match(/^\/([\w-])\//);
+  if (songbook_m) {
+    gtag('event', 'page_view', {
+      songbook: songbook_m[1]
+    });
+  }
 </script>
+
 
 
         <script>
