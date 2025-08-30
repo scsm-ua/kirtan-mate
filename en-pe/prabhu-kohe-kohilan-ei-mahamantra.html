@@ -813,12 +813,10 @@ hare rāma hare rāma rāma rāma hare hare..." />
 
   gtag('config', 'G-7NCXTS1JYM');
 
-  var songbook_m = window.location.pathname.match(/^\/([\w-])\//);
-  if (songbook_m) {
-    gtag('event', 'page_view', {
-      songbook: songbook_m[1]
-    });
-  }
+  gtag('event', 'page_view', {
+    songbook: 'en-pe',
+    song: 'prabhu-kohe-kohilan-ei-mahamantra'
+  });
 </script>
 
 

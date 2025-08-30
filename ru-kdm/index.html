@@ -446,18 +446,16 @@
 
   gtag('config', 'G-7NCXTS1JYM');
 
-  var songbook_m = window.location.pathname.match(/^\/([\w-])\//);
-  if (songbook_m) {
-    gtag('event', 'page_view', {
-      songbook: songbook_m[1]
-    });
-  }
+  gtag('event', 'page_view', {
+    songbook: null,
+    song: null
+  });
 </script>
 
 
 
         <script>
-            const info = JSON.parse('{"builtAt":"30/08/2025, 08:27:43 UTC","commitHash":"7c7f089","version":"1.1.0"}');
+            const info = JSON.parse('{"builtAt":"30/08/2025, 08:57:15 UTC","commitHash":"81103ba","version":"1.1.0"}');
             const styles = [
                 'color: #957742',
                 'background-color: #77CEF1',
