@@ -7,5 +7,12 @@
   gtag('js', new Date());
 
   gtag('config', '<%= process.env.G_ID %>');
+
+  var sonbgook_m = window.location.pathname.match(/^\/([\w-])\//);
+  if (sonbgook_m) {
+    gtag('event', 'page_view', {
+      sonbgook: sonbgook_m[1]
+    });
+  }
 </script>
 <% } %>
