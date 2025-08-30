@@ -236,7 +236,9 @@ function fillTemplate(songbook_id, template, content, filePath) {
         songbooksAsOptions: songbooksAsOptions,
         hasOtherTranslations: songbooksAsOptions.filter(s => !s.isSelected).length > 0,
         currentSongbook,
-        telegraph_href: telegraph_href
+        telegraph_href: telegraph_href,
+        songbook_id,
+        song_id: filename
     });
 }
 
