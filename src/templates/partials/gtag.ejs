@@ -8,11 +8,9 @@
 
   gtag('config', '<%= process.env.G_ID %>');
 
-  var songbook_m = window.location.pathname.match(/^\/([\w-])\//);
-  if (songbook_m) {
-    gtag('event', 'page_view', {
-      songbook: songbook_m[1]
-    });
-  }
+  gtag('event', 'page_view', {
+    songbook: <% if (locals.songbook_id) { %>'<%= locals.songbook_id %>'<% } else { %>null<% } %>,
+    song: <% if (locals.song_id) { %>'<%= locals.song_id %>'<% } else { %>null<% } %>
+  });
 </script>
 <% } %>
