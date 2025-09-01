@@ -367,13 +367,14 @@ function convertSongToJSON(text) {
                 break;
             case 'embed_link':
                 var embed_url = line_match[2];
-                var embed_code = getEmbedCode(embed_url);
-                if (embed_code) {
+                var embed = getEmbedCode(embed_url);
+                if (embed) {
                     song.embeds = song.embeds || [];
                     song.embeds.push({
                         title: line_value,
                         embed_url: embed_url,
-                        embed_code: embed_code
+                        iframe_url: embed.embed_url,
+                        embed_code: embed.embed_code
                     });
                 } else {
                     console.warn('Unrecognized embed link', line)

@@ -255,6 +255,7 @@ gulp.task('generate-index', (done) => {
  */
 function getCommonPageContext(bookId) {
     const tr = getTranslationsBy(bookId);
+    const current_book_info = getSongbookInfo(bookId);
 
     const allSongbooks = getSongbookIdList({public: true}).map((songbook_id) => {
         const info = getSongbookInfo(songbook_id);
@@ -270,7 +271,8 @@ function getCommonPageContext(bookId) {
             slug: songbook_id,
             songsCount: songsCount,
             subtitle: info.subtitle,
-            title: info.title
+            title: info.title,
+            language: info.language || songbook_id
         };
     });
 
@@ -294,7 +296,8 @@ function getCommonPageContext(bookId) {
         i18n: tr,
         paths: paths,
         songbooks: songbooks,
-        languages: languages
+        languages: languages,
+        language: current_book_info.language || bookId
     };
 }
 
@@ -479,7 +482,8 @@ gulp.task('search-page', (done) => {
                         search: SEARCH_CONST,
                         songbook_id: songbook_id,
                         subtitle: info.subtitle,
-                        title: info.title
+                        title: info.title,
+                        language: info.language || songbook_id
                     }).on('error', console.error)
                 )
                 .pipe(
@@ -595,7 +599,8 @@ gulp.task('songbook-contents', (done) => {
                     paths: getTemplatePaths(songbook_id),
                     songbook_id: songbook_id,
                     subtitle: info.subtitle,
-                    title: info.title
+                    title: info.title,
+                    language: info.language || songbook_id
                 }).on('error', console.error)
             )
             .pipe(
@@ -696,7 +701,8 @@ gulp.task('songbook-a-z', (done) => {
                     sections: sections,
                     songbook_id: songbook_id,
                     subtitle: info.subtitle,
-                    title: info.title
+                    title: info.title,
+                    language: info.language || songbook_id
                 }).on('error', console.error)
             )
             .pipe(
@@ -803,7 +809,8 @@ gulp.task('songbook-authors', (done) => {
                     sections: sections,
                     songbook_id: songbook_id,
                     subtitle: info.subtitle,
-                    title: info.title
+                    title: info.title,
+                    language: info.language || songbook_id
                 }).on('error', console.error)
             )
             .pipe(

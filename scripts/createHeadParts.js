@@ -8,7 +8,10 @@ const { PATHS, ORIGIN } = require('./constants');
  * @param url: string - no leading or trailing slashes!
  * @param is404: boolean
  */
-function createHeadParts({ title, description, path, is404, songbook_id }) {
+function createHeadParts(options) {
+
+    var { title, description, path, is404, songbook_id, translations } = options;
+
     var imgSrc;
     if (songbook_id) {
         imgSrc = `${ PATHS.RELATIVE.IMG }/banner/banner-${ songbook_id }@2.png`;
@@ -26,12 +29,24 @@ function createHeadParts({ title, description, path, is404, songbook_id }) {
         url = path;
     }
 
+    options.url = url;
+
     let render = `
         <title>${_title}</title>`;
 
     if (!is404) {
         render += `
         <link rel="canonical" href="${url}" />`;
+    }
+
+    let translations_hrefs = '';
+    if (translations && translations.length) {
+        function hreflang(hreflang, href) {
+            return `<link rel="alternate" hreflang="${hreflang}" href="${href}" />\n`;
+        }
+        translations_hrefs = translations.map(t => hreflang(t.hreflang, t.href)).join('');
+        // Default. Use first, its order by sort_order.
+        translations_hrefs += hreflang('x-default', translations[0].href);
     }
 
     render += `
@@ -55,7 +70,9 @@ function createHeadParts({ title, description, path, is404, songbook_id }) {
         <meta name="twitter:title" content="${title}" />
         <meta name="twitter:description" content="${description}" />
 
-        ${getSchema(url, title, description)}
+${translations_hrefs}
+
+        ${getSchema(options)}
         
         <link rel="apple-touch-icon" sizes="57x57" href="${PATHS.RELATIVE.FAVICON}/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="${PATHS.RELATIVE.FAVICON}/apple-icon-60x60.png">
@@ -82,31 +99,164 @@ function createHeadParts({ title, description, path, is404, songbook_id }) {
 /**
  *
  */
-function getSchema(url, title, description) {
-    const content = {
-        '@context': 'https://schema.org',
-        '@graph': [
-            {
-                '@type': 'WebSite',
-                '@id': ORIGIN + '/#website',
-                'url': ORIGIN + '/',
-                'name': 'Kirtan Site',
-                'description': description,
-                'inLanguage': 'en-GB'
-            },
-            {
-                '@type': 'CollectionPage',
-                '@id': url,
-                'url': url,
-                'name': title,
-                'isPartOf': {
-                    '@id': ORIGIN + '/#website'
-                }
-            }
-        ]
-    };
+function getSchema({url, title, description, song, embeds, i18n}) {
 
-    const sch = JSON.stringify(content).replace('&quot;', '"');
+    var sch;
+
+    if (!song) {
+
+        const content = {
+            '@context': 'https://schema.org',
+            '@graph': [
+                {
+                    '@type': 'WebSite',
+                    '@id': ORIGIN + '/#website',
+                    'url': ORIGIN + '/',
+                    'name': 'Kirtan Site',
+                    'description': description,
+                    'inLanguage': 'en-GB'
+                },
+                {
+                    '@type': 'CollectionPage',
+                    '@id': url,
+                    'url': url,
+                    'name': title,
+                    'isPartOf': {
+                        '@id': ORIGIN + '/#website'
+                    }
+                }
+            ]
+        };
+        sch = JSON.stringify(content).replace('&quot;', '"');
+        
+    } else {
+
+        const MusicComposition = {
+            "@type": "MusicComposition",
+            "@id": url + "#composition",
+            "url": url,
+            "name": song.getTitles().join(' '),
+            "alternateName": [song.first_line],
+            "composer": {
+                "@type": "Person",
+                "name": song.getUnifiedAurhor()
+            },
+            "lyrics": {
+                "@type": "CreativeWork",
+                "inLanguage": "bn",
+                "hasPart": []
+            },
+            "translation": {
+                "@type": "CreativeWork",
+                "name": i18n('META.TRANSLATION_NAME'),
+                "inLanguage": song.language,
+                "hasPart": [],
+            },
+            "isPartOf": {
+                "@id": ORIGIN + '/#website',
+            },
+            "about": [
+                { "@type": "Thing", "name": "Bhakti Yoga" },
+                { "@type": "Thing", "name": "Gaudiya Vaishnavism" }
+            ],
+            "genre": ["Devotional", "Bhajan", "Kirtan"],
+            "mainEntityOfPage": {
+                "@id": url
+            }
+        };
+    
+        const song_content = {
+            "@context": "https://schema.org",
+            "@graph": [
+                // TOOD: in contents pages.
+                // {
+                //     "@type": "Organization",
+                //     "@id": "https://scsmath.com/#organization",
+                //     "name": "Sri Chaitanya Saraswat Math",
+                //     "url": "https://scsmath.com/"
+                // },
+                // {
+                //     "@type": "WebSite",
+                //     '@id': ORIGIN + '/#website',
+                //     'url': ORIGIN + '/',
+                //     "name": "Kirtan Site",
+                //     "description": "A digital Vaishnava songbook with lyrics and translations.",
+                //     "inLanguage": song.language,
+                //     "publisher": {
+                //         "@id": "https://scsmath.com/#organization",
+                //     }
+                // },
+                {
+                    "@type": "CollectionPage",
+                    "@id": url,
+                    "url": url,
+                    "name": title,
+                    // TODO:
+                    // "description": "Bengali devotional song with translations.",
+                    "isPartOf": {
+                        '@id': ORIGIN + '/#website',
+                    }
+                },
+                MusicComposition
+            ]
+        };
+    
+        song.getVerses().forEach((verse, idx) => {
+            var lytics_part = {
+                "@type": "CreativeWork",
+                "position": idx + 1,
+                "name": verse.number,
+                "text": verse.text.join('\n')
+            };
+            if (!lytics_part.name) {
+                delete lytics_part.name;
+            }
+            if (lytics_part.position == lytics_part.name) {
+                delete lytics_part.name;
+            }
+            var translation_part = {
+                "@type": "CreativeWork",
+                "position": idx + 1,
+                "name": verse.number,
+                "text": verse.translation.join('\n')
+            };
+            if (!translation_part.name) {
+                delete translation_part.name;
+            }
+            if (translation_part.position == translation_part.name) {
+                delete translation_part.name;
+            }
+    
+            MusicComposition.lyrics.hasPart.push(lytics_part);
+            MusicComposition.translation.hasPart.push(translation_part);
+        });
+    
+        embeds?.forEach(item => {
+            var audio = {
+                "@type": "AudioObject",
+                "url": item.embed_url,
+                "embedUrl": item.iframe_url,
+                "performer": {
+                    "@type": "Person",
+                    "name": item.title
+                }
+            };
+    
+            if (MusicComposition.audio && !Array.isArray(MusicComposition.audio)) {
+                // Make it array.
+                MusicComposition.audio = [MusicComposition.audio];
+            }
+    
+            if (Array.isArray(MusicComposition.audio)) {
+                MusicComposition.audio.push(audio);
+            } else {
+                MusicComposition.audio = audio;
+            }
+        });
+    
+        sch = JSON.stringify(song_content, null, 4).replace('&quot;', '"');
+    }
+
     return `<script type="application/ld+json">${sch}</script>`;
 }
 
