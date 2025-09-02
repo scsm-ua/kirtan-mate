@@ -12,13 +12,13 @@ function getNavigationPaths(bookId) {
         AUTHORS: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.AUTHORS,
         A_Z: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.A_Z,
         BOOK_LIST: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.BOOK_LIST,
-        CONTENTS: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.CONTENTS,
+        CONTENTS: PATHS.ORIGIN + PATHS.PAGES.getContents(bookId),
         ORIGIN: PATHS.ORIGIN,
         SEARCH: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH,
 
         // TODO: good place?
         PUBLIC_BOOK_LIST: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.BOOK_LIST),
-        PUBLIC_CONTENTS: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.CONTENTS),
+        PUBLIC_CONTENTS: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + PATHS.PAGES.getContents(bookId)),
         PUBLIC_SEARCH: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH),
         PUBLIC_A_Z: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.A_Z),
         PUBLIC_AUTHORS: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.AUTHORS),

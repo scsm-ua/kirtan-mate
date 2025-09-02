@@ -1,5 +1,6 @@
 const { getNavigationPaths } = require('./utils');
 const { PATHS, ORIGIN } = require('./constants');
+const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
 
 /**
  * Note: the title and description do NOT get escaped.
@@ -10,7 +11,7 @@ const { PATHS, ORIGIN } = require('./constants');
  */
 function createHeadParts(options) {
 
-    var { title, description, path, is404, songbook_id, translations } = options;
+    var { title, description, path, is404, songbook_id, translations, page_by_songbook_generator } = options;
 
     var imgSrc;
     if (songbook_id) {
@@ -37,6 +38,16 @@ function createHeadParts(options) {
     if (!is404) {
         render += `
         <link rel="canonical" href="${url}" />`;
+    }
+
+    if (page_by_songbook_generator) {
+        translations = getSongbookIdList({public: true}).map((a_songbook_id) => {
+            const a_info = getSongbookInfo(a_songbook_id);
+            return {
+                hreflang: a_info.language || a_songbook_id,
+                href: PATHS.ORIGIN + page_by_songbook_generator(a_songbook_id)
+            };
+        });
     }
 
     let translations_hrefs = '';
@@ -288,11 +299,12 @@ function getItemXML(url, priority, period = 'weekly') {
  * @returns {string}
  */
 function createSongXMLParts(songbook_id, categories) {
-    const { A_Z, BOOK_LIST, CONTENTS } = getNavigationPaths(songbook_id);
+    const { A_Z, BOOK_LIST, CONTENTS, AUTHORS } = getNavigationPaths(songbook_id);
 
     const indexes = getItemXML(BOOK_LIST, 0.9, 'monthly') +
         getItemXML(CONTENTS, 1) +
-        getItemXML(A_Z, 1);
+        getItemXML(A_Z, 1) + 
+        getItemXML(AUTHORS, 1);
 
     const songs = categories
         .flatMap((cat) => cat.items)

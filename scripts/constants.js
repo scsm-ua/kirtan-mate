@@ -107,7 +107,12 @@ const PATHS = {
         BOOK_LIST: process.env.EXPLICIT_INDEX ? '/index.html' : '/',
         CONTENTS: '/' + contentsPage,
         NOT_FOUND: '/' + notFoundPage,
-        SEARCH: '/' + searchPage
+        SEARCH: '/' + searchPage,
+
+        getBookList: (songbook_id) => '/' + songbook_id + (process.env.EXPLICIT_INDEX ? '/index.html' : '/'),
+        getContents: (songbook_id) => '/' + songbook_id + '/' + contentsPage,
+        getA_Z: (songbook_id) => '/' + songbook_id + '/' + indexAZPath,
+        getAuthors: (songbook_id) => '/' + songbook_id + '/' + authorsPath,
     }
 };
 
