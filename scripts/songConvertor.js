@@ -115,13 +115,6 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     const filename = path.parse(filePath).name;
 
-    const headParts = {
-        title:          song.getPageTitle(),
-        description:    song.getPageDescription(),
-        path: '/' + songbook_id + '/' + filename + '.html',
-        songbook_id
-    };
-
     const alternativeTranslationBooks /* TSongBookAsOption */ = [];
 
     getSongbookIdList().forEach((a_songbook_id) => {
@@ -137,6 +130,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
                 i18n: tr,
                 isSelected: songbook_id === a_songbook_id,
                 slug: a_songbook_id,
+                language: info.language || a_songbook_id,
                 subtitle: info.subtitle,
                 title: info.title,
                 hidden: info.hidden
@@ -200,18 +194,15 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     // Nex prev links.
 
-    // Get file slug:
-    // `json/es/udilo-aruna-puraba-bhage.json` -> `udilo-aruna-puraba-bhage`.
-    const fileId = filePath.split(/[\/\.]/).slice(-2)[0];
     const orderedSongs = getSongsOrderedList(songbook_id);
-    const currentSongIndex = orderedSongs.findIndex((item) => item.id === fileId);
+    const currentSongIndex = orderedSongs.findIndex((item) => item.id === filename);
 
     const contentsSongData = orderedSongs[currentSongIndex];
 
     var navigation = getPrevNextData(paths, telegraph_paths, orderedSongs, currentSongIndex);
 
     // Find duplicated in contents songs.
-    const currentSongs = orderedSongs.filter((item, idx) => currentSongIndex !== idx && item.id === fileId);
+    const currentSongs = orderedSongs.filter((item, idx) => currentSongIndex !== idx && item.id === filename);
     if (currentSongs.length) {
         // Same song on other pages.
         navigation.pages = Object.fromEntries(currentSongs.map(song => [song.page_number, getPrevNextData(paths, telegraph_paths, orderedSongs, song.idx)]));
@@ -222,7 +213,28 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     const songbooksAsOptions = alternativeTranslationBooks.filter(info => !info.hidden);
 
+    // Store first line for schema.
+    song.first_line = contentsSongData.aliasName;
+    song.language = currentSongbook.language;
+
+    const headParts = {
+        title:          song.getPageTitle(),
+        description:    song.getPageDescription(),
+        path: '/' + songbook_id + '/' + filename + '.html',
+        i18n: currentSongbook.i18n,
+        songbook_id,
+        song,
+        embeds,
+        translations: songbooksAsOptions.map(info => {
+            return {
+                hreflang: info.language,
+                href: info.href
+            };
+        })
+    };
+
     return ejs.render(template, {
+        language: currentSongbook.language,
         song,
         page: content.attributes?.page,
         page_number: orderedSongs[currentSongIndex].page_number,

@@ -64,6 +64,9 @@
       "SHOW_TRANSLATION": "Parādīt tulkojumu",
       "PAGE": "lpp.",
       "NEXT": "Nākošais"
+    },
+    "META": {
+      "TRANSLATION_NAME": "Tulkojums latviešu valodā"
     }
   },
   "en": {
@@ -131,6 +134,9 @@
       "SHOW_TRANSLATION": "Show translation",
       "PAGE": "page",
       "NEXT": "Next"
+    },
+    "META": {
+      "TRANSLATION_NAME": "English Translation"
     }
   },
   "es": {
@@ -198,6 +204,9 @@
       "SHOW_TRANSLATION": "Mostrar traducción",
       "PAGE": "página",
       "NEXT": "Próxima"
+    },
+    "META": {
+      "TRANSLATION_NAME": "Traducción al español"
     }
   },
   "ru": {
@@ -278,6 +287,9 @@
       "Sudarshan Prabhu": "Сударшан Прабху",
       "Karakas Dham": "Каракас Дхам",
       "Navadvip Dham": "Навадвип Дхам"
+    },
+    "META": {
+      "TRANSLATION_NAME": "Русский перевод"
     }
   },
   "ua": {
@@ -358,6 +370,9 @@
       "Sudarshan Prabhu": "Сударшан Прабгу",
       "Karakas Dham": "Каракас Дгам",
       "Navadvip Dham": "Навадвіп Дгам"
+    },
+    "META": {
+      "TRANSLATION_NAME": "Український переклад"
     }
   },
   "pt": {
@@ -425,6 +440,9 @@
       "SHOW_TRANSLATION": "Mostrar tradução",
       "PAGE": "página",
       "NEXT": "Próximo"
+    },
+    "META": {
+      "TRANSLATION_NAME": "Tradução para o português brasileiro"
     }
   }
 }
