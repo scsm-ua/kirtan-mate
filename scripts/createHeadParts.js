@@ -135,7 +135,7 @@ function getSchema({url, title, description, song, embeds, i18n}) {
             "@type": "MusicComposition",
             "@id": url + "#composition",
             "url": url,
-            "name": song.getTitles().join(' '),
+            "name": song.getTitleAuthor(),
             "alternateName": [song.first_line],
             "composer": {
                 "@type": "Person",
@@ -144,13 +144,13 @@ function getSchema({url, title, description, song, embeds, i18n}) {
             "lyrics": {
                 "@type": "CreativeWork",
                 "inLanguage": "bn",
-                "hasPart": []
-            },
-            "translation": {
-                "@type": "CreativeWork",
-                "name": i18n('META.TRANSLATION_NAME'),
-                "inLanguage": song.language,
                 "hasPart": [],
+                "workTranslation": {
+                    "@type": "CreativeWork",
+                    "name": i18n('META.TRANSLATION_NAME'),
+                    "inLanguage": song.language,
+                    "hasPart": [],
+                },
             },
             "isPartOf": {
                 "@id": ORIGIN + '/#website',
@@ -206,7 +206,7 @@ function getSchema({url, title, description, song, embeds, i18n}) {
                 "@type": "CreativeWork",
                 "position": idx + 1,
                 "name": verse.number,
-                "text": verse.text.join('\n')
+                "text": verse.text.join('\n') || '---'
             };
             if (!lytics_part.name) {
                 delete lytics_part.name;
@@ -218,7 +218,7 @@ function getSchema({url, title, description, song, embeds, i18n}) {
                 "@type": "CreativeWork",
                 "position": idx + 1,
                 "name": verse.number,
-                "text": verse.translation.join('\n')
+                "text": verse.translation.join('\n') || '---'
             };
             if (!translation_part.name) {
                 delete translation_part.name;
@@ -228,17 +228,21 @@ function getSchema({url, title, description, song, embeds, i18n}) {
             }
     
             MusicComposition.lyrics.hasPart.push(lytics_part);
-            MusicComposition.translation.hasPart.push(translation_part);
+            MusicComposition.lyrics.workTranslation.hasPart.push(translation_part);
         });
     
         embeds?.forEach(item => {
             var audio = {
-                "@type": "AudioObject",
+                "@type": "MusicRecording",
+                "name": song.getTitleAuthor(),
                 "url": item.embed_url,
-                "embedUrl": item.iframe_url,
-                "performer": {
+                "byArtist": {
                     "@type": "Person",
                     "name": item.title
+                },
+                "audio": {
+                    "@type": "AudioObject",
+                    "embedUrl": item.iframe_url
                 }
             };
     

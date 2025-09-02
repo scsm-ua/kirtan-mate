@@ -25,6 +25,16 @@ class Song {
         return pageTitle;
     }
 
+    getTitleAuthor() {
+        let pageTitle = this.json.title.join(' ');
+
+        if (this.json.subtitle?.length) {
+            pageTitle += '. ' + this.json.subtitle.join(' ');
+        }
+
+        return pageTitle;
+    }
+
     getPageDescription() {
         // Get first verse with text.
         var verse = this.json.verses.find(v => v.text && v.text.length);
