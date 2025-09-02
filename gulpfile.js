@@ -317,7 +317,8 @@ gulp.task('songbook-list', (done) => {
         const headParts = createHeadParts({
             title: tr('BOOK_LIST_PAGE.HEAD.TITLE'),
             description: tr('BOOK_LIST_PAGE.HEAD.DESCRIPTION'),
-            path: getNavigationPaths(songbook_id).BOOK_LIST
+            path: getNavigationPaths(songbook_id).BOOK_LIST,
+            page_by_songbook_generator: PAGES.getBookList
         });
 
         const values = {
@@ -586,7 +587,8 @@ gulp.task('songbook-contents', (done) => {
             title: tr('CONTENTS_PAGE.HEAD.TITLE'),
             description: tr('CONTENTS_PAGE.HEAD.DESCRIPTION'),
             path: getNavigationPaths(songbook_id).CONTENTS,
-            songbook_id
+            songbook_id,
+            page_by_songbook_generator: PAGES.getContents
         };
 
         const task = (done) => gulp
@@ -678,7 +680,8 @@ gulp.task('songbook-a-z', (done) => {
             title: tr('A_Z_PAGE.HEAD.TITLE'),
             description: tr('A_Z_PAGE.HEAD.DESCRIPTION'),
             path: getNavigationPaths(songbook_id).A_Z,
-            songbook_id
+            songbook_id,
+            page_by_songbook_generator: PAGES.getA_Z
         };
 
         const items = makeIndexList(songbook_id);
@@ -785,7 +788,8 @@ gulp.task('songbook-authors', (done) => {
             title: tr('AUTHORS_PAGE.HEAD.TITLE'),
             description: tr('AUTHORS_PAGE.HEAD.DESCRIPTION'),
             path: getNavigationPaths(songbook_id).AUTHORS,
-            songbook_id
+            songbook_id,
+            page_by_songbook_generator: PAGES.getAuthors
         };
 
         const items = makeAuthorsList(songbook_id);
