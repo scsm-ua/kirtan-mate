@@ -109,10 +109,12 @@ const PATHS = {
         NOT_FOUND: '/' + notFoundPage,
         SEARCH: '/' + searchPage,
 
-        getBookList: (songbook_id) => '/' + songbook_id + (process.env.EXPLICIT_INDEX ? '/index.html' : '/'),
-        getContents: (songbook_id) => '/' + songbook_id + '/' + contentsPage,
-        getA_Z: (songbook_id) => '/' + songbook_id + '/' + indexAZPath,
-        getAuthors: (songbook_id) => '/' + songbook_id + '/' + authorsPath,
+        getAuthors: (songbook_id)   => ORIGIN + '/' + songbook_id + '/' + authorsPath,
+        getA_Z: (songbook_id)       => ORIGIN + '/' + songbook_id + '/' + indexAZPath,
+        getBookList: (songbook_id)  => ORIGIN + '/' + songbook_id + (process.env.EXPLICIT_INDEX ? '/index.html' : '/'),
+        getContents: (songbook_id)  => ORIGIN + '/' + songbook_id + '/' + contentsPage,
+        getNotFound: (songbook_id)  => ORIGIN + '/' + songbook_id + '/' + notFoundPage,
+        getSearch: (songbook_id)    => ORIGIN + '/' + songbook_id + '/' + searchPage
     }
 };
 

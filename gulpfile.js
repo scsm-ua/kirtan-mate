@@ -307,7 +307,6 @@ function getCommonPageContext(bookId) {
  * */
 gulp.task('songbook-list', (done) => {
     const tasks = getSongbookIdList().map((songbook_id) => {
-        const tr = getTranslationsBy(songbook_id);
         const buildInfo = {
             builtAt: new Date().toLocaleString('en-GB', { timeZone: 'UTC' }) + ' UTC',
             commitHash: shelljs.exec("git log --pretty=format:'%h' -n 1").stdout,
@@ -315,8 +314,8 @@ gulp.task('songbook-list', (done) => {
         };
 
         const headParts = createHeadParts({
-            title: tr('BOOK_LIST_PAGE.HEAD.TITLE'),
-            description: tr('BOOK_LIST_PAGE.HEAD.DESCRIPTION'),
+            songbook_id,
+            i18n_page: 'BOOK_LIST_PAGE',
             path: getNavigationPaths(songbook_id).BOOK_LIST,
             page_by_songbook_generator: PAGES.getBookList
         });
@@ -390,11 +389,11 @@ gulp.task('404', (done) => {
         const tr = getTranslationsBy(songbook_id);
 
         const headParts = createHeadParts({
-            title: tr('NOT_FOUND_PAGE.HEAD.TITLE'),
-            description: tr('NOT_FOUND_PAGE.HEAD.DESCRIPTION'),
+            songbook_id,
+            i18n_page: 'NOT_FOUND_PAGE',
             path: PATHS.PAGES.NOT_FOUND,
             is404: true,
-            songbook_id
+            page_by_songbook_generator: PAGES.getNotFound
         });
 
         const values = {
@@ -436,10 +435,10 @@ gulp.task('search-page', (done) => {
         const tr = getTranslationsBy(songbook_id);
 
         const headParts = {
-            title: tr('SEARCH_PAGE.HEAD.TITLE'),
-            description: tr('SEARCH_PAGE.HEAD.DESCRIPTION'),
+            songbook_id,
+            i18n_page: 'SEARCH_PAGE',
             path: getNavigationPaths(songbook_id).SEARCH,
-            songbook_id
+            page_by_songbook_generator: PAGES.getSearch
         };
 
         const pagesDict = {};
@@ -584,10 +583,9 @@ gulp.task('songbook-contents', (done) => {
         const info = getSongbookInfo(songbook_id);
 
         const headParts = {
-            title: tr('CONTENTS_PAGE.HEAD.TITLE'),
-            description: tr('CONTENTS_PAGE.HEAD.DESCRIPTION'),
-            path: getNavigationPaths(songbook_id).CONTENTS,
             songbook_id,
+            i18n_page: 'CONTENTS_PAGE',
+            path: getNavigationPaths(songbook_id).CONTENTS,
             page_by_songbook_generator: PAGES.getContents
         };
 
@@ -677,8 +675,8 @@ gulp.task('songbook-a-z', (done) => {
         const info = getSongbookInfo(songbook_id);
 
         const headParts = {
-            title: tr('A_Z_PAGE.HEAD.TITLE'),
-            description: tr('A_Z_PAGE.HEAD.DESCRIPTION'),
+            songbook_id,
+            i18n_page: 'A_Z_PAGE',
             path: getNavigationPaths(songbook_id).A_Z,
             songbook_id,
             page_by_songbook_generator: PAGES.getA_Z
@@ -785,10 +783,9 @@ gulp.task('songbook-authors', (done) => {
         const info = getSongbookInfo(songbook_id);
 
         const headParts = {
-            title: tr('AUTHORS_PAGE.HEAD.TITLE'),
-            description: tr('AUTHORS_PAGE.HEAD.DESCRIPTION'),
-            path: getNavigationPaths(songbook_id).AUTHORS,
             songbook_id,
+            i18n_page: 'AUTHORS_PAGE',
+            path: getNavigationPaths(songbook_id).AUTHORS,
             page_by_songbook_generator: PAGES.getAuthors
         };
 

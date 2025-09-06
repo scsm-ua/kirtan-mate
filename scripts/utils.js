@@ -1,5 +1,6 @@
 const path = require('path');
 const { PATHS } = require('./constants');
+const { PAGES } = PATHS;
 const { getExistingTelegraphPageHref } = require('./telegraph/utils');
 
 
@@ -8,20 +9,19 @@ const { getExistingTelegraphPageHref } = require('./telegraph/utils');
  */
 function getNavigationPaths(bookId) {
     return {
-        // TODO: use constants methods:
-        AUTHORS: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.AUTHORS,
-        A_Z: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.A_Z,
-        BOOK_LIST: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.BOOK_LIST,
-        CONTENTS: PATHS.ORIGIN + PATHS.PAGES.getContents(bookId),
+        AUTHORS: PAGES.getAuthors(bookId),
+        A_Z: PAGES.getA_Z(bookId),
+        BOOK_LIST: PAGES.getBookList(bookId),
+        CONTENTS: PAGES.getContents(bookId),
         ORIGIN: PATHS.ORIGIN,
-        SEARCH: PATHS.ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH,
+        SEARCH: PAGES.getSearch(bookId),
 
         // TODO: good place?
-        PUBLIC_BOOK_LIST: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.BOOK_LIST),
-        PUBLIC_CONTENTS: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + PATHS.PAGES.getContents(bookId)),
-        PUBLIC_SEARCH: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.SEARCH),
-        PUBLIC_A_Z: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.A_Z),
-        PUBLIC_AUTHORS: getExistingTelegraphPageHref(PATHS.PUBLIC_ORIGIN + '/' + bookId + PATHS.PAGES.AUTHORS),
+        PUBLIC_AUTHORS: getExistingTelegraphPageHref(PAGES.getAuthors(bookId)),
+        PUBLIC_A_Z: getExistingTelegraphPageHref(PAGES.getA_Z(bookId)),
+        PUBLIC_BOOK_LIST: getExistingTelegraphPageHref(PAGES.getBookList(bookId)),
+        PUBLIC_CONTENTS: getExistingTelegraphPageHref(PAGES.getContents(bookId)),
+        PUBLIC_SEARCH: getExistingTelegraphPageHref(PAGES.getSearch(bookId)),
     };
 }
 

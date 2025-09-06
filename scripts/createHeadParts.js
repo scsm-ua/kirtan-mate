@@ -1,6 +1,7 @@
 const { getNavigationPaths } = require('./utils');
 const { PATHS, ORIGIN } = require('./constants');
 const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
+const { getTranslationsBy } = require('./i18n');
 
 /**
  * Note: the title and description do NOT get escaped.
@@ -11,7 +12,22 @@ const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
  */
 function createHeadParts(options) {
 
-    var { title, description, path, is404, songbook_id, translations, page_by_songbook_generator } = options;
+    var { title, description, path, is404, songbook_id, translations, i18n, i18n_page, page_by_songbook_generator } = options;
+
+    if (!i18n && songbook_id) {
+        i18n = getTranslationsBy(songbook_id);
+        options.i18n = i18n;
+    }
+
+    if (!title && i18n_page && i18n) {
+        title = i18n(i18n_page + '.HEAD.TITLE');
+        options.title = title;
+    }
+
+    if (!description && i18n_page && i18n) {
+        description = i18n(i18n_page + '.HEAD.DESCRIPTION');
+        options.description = description;
+    }
 
     var imgSrc;
     if (songbook_id) {
@@ -45,9 +61,14 @@ function createHeadParts(options) {
             const a_info = getSongbookInfo(a_songbook_id);
             return {
                 hreflang: a_info.language || a_songbook_id,
-                href: PATHS.ORIGIN + page_by_songbook_generator(a_songbook_id)
+                href: page_by_songbook_generator(a_songbook_id)
             };
         });
+    }
+
+    if (!options.language && songbook_id) {
+        const book_info = getSongbookInfo(songbook_id);
+        options.language = book_info.language || songbook_id;
     }
 
     let translations_hrefs = '';
@@ -110,35 +131,50 @@ ${translations_hrefs}
 /**
  *
  */
-function getSchema({url, title, description, song, embeds, i18n}) {
+function getSchema({url, title, description, song, embeds, i18n_page, i18n, language}) {
 
     var sch;
 
     if (!song) {
 
+        if (i18n_page && i18n) {
+            title = i18n(i18n_page + '.SCHEMA.NAME');
+            description = i18n(i18n_page + '.SCHEMA.DESCRIPTION');
+        }
+
         const content = {
             '@context': 'https://schema.org',
             '@graph': [
+                {
+                    "@type": "Organization",
+                    "@id": "https://scsmath.com/#organization",
+                    "name": "Sri Chaitanya Saraswat Math",
+                    "url": "https://scsmath.com/"
+                },
                 {
                     '@type': 'WebSite',
                     '@id': ORIGIN + '/#website',
                     'url': ORIGIN + '/',
                     'name': 'Kirtan Site',
-                    'description': description,
-                    'inLanguage': 'en-GB'
+                    "description": "A digital Vaishnava songbook with lyrics, translations, and audio recordings.",
+                    "publisher": {
+                        "@id": "https://scsmath.com/#organization",
+                    }
                 },
                 {
                     '@type': 'CollectionPage',
                     '@id': url,
                     'url': url,
                     'name': title,
+                    'description': description,
+                    'inLanguage': language || 'en',
                     'isPartOf': {
                         '@id': ORIGIN + '/#website'
                     }
                 }
             ]
         };
-        sch = JSON.stringify(content).replace('&quot;', '"');
+        sch = JSON.stringify(content, null, 4).replace('&quot;', '"');
         
     } else {
 
@@ -151,17 +187,6 @@ function getSchema({url, title, description, song, embeds, i18n}) {
             "composer": {
                 "@type": "Person",
                 "name": song.getUnifiedAurhor()
-            },
-            "lyrics": {
-                "@type": "CreativeWork",
-                "inLanguage": "bn",
-                "hasPart": [],
-                "workTranslation": {
-                    "@type": "CreativeWork",
-                    "name": i18n('META.TRANSLATION_NAME'),
-                    "inLanguage": song.language,
-                    "hasPart": [],
-                },
             },
             "isPartOf": {
                 "@id": ORIGIN + '/#website',
@@ -179,29 +204,12 @@ function getSchema({url, title, description, song, embeds, i18n}) {
         const song_content = {
             "@context": "https://schema.org",
             "@graph": [
-                // TOOD: in contents pages.
-                // {
-                //     "@type": "Organization",
-                //     "@id": "https://scsmath.com/#organization",
-                //     "name": "Sri Chaitanya Saraswat Math",
-                //     "url": "https://scsmath.com/"
-                // },
-                // {
-                //     "@type": "WebSite",
-                //     '@id': ORIGIN + '/#website',
-                //     'url': ORIGIN + '/',
-                //     "name": "Kirtan Site",
-                //     "description": "A digital Vaishnava songbook with lyrics and translations.",
-                //     "inLanguage": song.language,
-                //     "publisher": {
-                //         "@id": "https://scsmath.com/#organization",
-                //     }
-                // },
                 {
                     "@type": "CollectionPage",
                     "@id": url,
                     "url": url,
                     "name": title,
+                    "inLanguage": song.language,
                     // TODO:
                     // "description": "Bengali devotional song with translations.",
                     "isPartOf": {
@@ -211,36 +219,6 @@ function getSchema({url, title, description, song, embeds, i18n}) {
                 MusicComposition
             ]
         };
-    
-        song.getVerses().forEach((verse, idx) => {
-            var lytics_part = {
-                "@type": "CreativeWork",
-                "position": idx + 1,
-                "name": verse.number,
-                "text": verse.text.join('\n') || '---'
-            };
-            if (!lytics_part.name) {
-                delete lytics_part.name;
-            }
-            if (lytics_part.position == lytics_part.name) {
-                delete lytics_part.name;
-            }
-            var translation_part = {
-                "@type": "CreativeWork",
-                "position": idx + 1,
-                "name": verse.number,
-                "text": verse.translation.join('\n') || '---'
-            };
-            if (!translation_part.name) {
-                delete translation_part.name;
-            }
-            if (translation_part.position == translation_part.name) {
-                delete translation_part.name;
-            }
-    
-            MusicComposition.lyrics.hasPart.push(lytics_part);
-            MusicComposition.lyrics.workTranslation.hasPart.push(translation_part);
-        });
     
         embeds?.forEach(item => {
             var audio = {
