@@ -20,6 +20,12 @@
     </url>
     
     <url>
+        <loc>https://kirtan.site/en/authors.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    
+    <url>
         <loc>https://kirtan.site/en/vande-ham-shri-guroh-shri-yuta-pada-kamalam.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -1024,6 +1030,12 @@
     
     <url>
         <loc>https://kirtan.site/ru/a-z.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/ru/authors.html</loc>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
@@ -2134,6 +2146,12 @@
     </url>
     
     <url>
+        <loc>https://kirtan.site/es/authors.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    
+    <url>
         <loc>https://kirtan.site/es/jaya-sa-parikara.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -3035,6 +3053,12 @@
     </url>
     
     <url>
+        <loc>https://kirtan.site/pt/authors.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    
+    <url>
         <loc>https://kirtan.site/pt/jaya-sa-parikara.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -3726,6 +3750,12 @@
     </url>
     
     <url>
+        <loc>https://kirtan.site/en-pe/authors.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    
+    <url>
         <loc>https://kirtan.site/en-pe/jaya-sa-parikara.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -4231,6 +4261,12 @@
     </url>
     
     <url>
+        <loc>https://kirtan.site/lv/authors.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    
+    <url>
         <loc>https://kirtan.site/lv/vande-ham-shri-guroh-shri-yuta-pada-kamalam.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -4569,6 +4605,12 @@
     
     <url>
         <loc>https://kirtan.site/ua/a-z.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/ua/authors.html</loc>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
