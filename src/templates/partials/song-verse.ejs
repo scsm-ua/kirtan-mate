@@ -18,21 +18,23 @@
     <% } %>
 
     <% if (item.text.length) { %>
-        <ul class="SongVerse__text">
-            <% item.text.forEach((line) => { %>
-                <% if (line.text) { %>
-                    <li class="SongVerse__line <%= line.css_class %>">
-                        <%- line.text %>
-                    </li>
-                <% } else { %>
-                    <br>
-                <% } %>
-            <% }) %>
-        </ul>
+        <div class="Collapse" data-elem="verse">
+            <ul class="SongVerse__text">
+                <% item.text.forEach((line) => { %>
+                    <% if (line.text) { %>
+                        <li class="SongVerse__line <%= line.css_class %>">
+                            <%- line.text %>
+                        </li>
+                    <% } else { %>
+                        <br>
+                    <% } %>
+                <% }) %>
+            </ul>
+        </div>
     <% } %>
 
     <% if (item.word_by_word.length) { %>
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse" data-elem="translation">
             <ul class="SongVerse__wordbyword">
                 <% item.word_by_word.forEach((p) => { %>
                     <li class="SongVerse__paragraph">
@@ -46,7 +48,7 @@
     <% } %>
 
     <% if (item.translation.length) { %>
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse" data-elem="translation">
             <ul class="SongVerse__translation">
                 <% item.translation.forEach((p) => { %>
                     <li class="SongVerse__paragraph">
