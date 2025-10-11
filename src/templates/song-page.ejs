@@ -297,7 +297,7 @@
                     rightSlot.addEventListener('click', this._onRightClick);
 
                     this.$labelText.textContent = this.getAttribute('label') || '...';
-                    this.$labelText.addEventListener('click', this._onRightClick);
+                    this.$labelText.addEventListener('click', this._onLeftClick);
 
                     this.style.webkitUserSelect = 'none';
                     this._render();

@@ -2,7 +2,7 @@
     display: block;
     max-height: 0px;
     overflow: hidden;
-    transition: max-height .4s cubic-bezier(0, 1, 0, 1);
+    transition: max-height var(--transition-duration-m) cubic-bezier(0, 1, 0, 1);
 
     &__show {
         max-height: 99em;
