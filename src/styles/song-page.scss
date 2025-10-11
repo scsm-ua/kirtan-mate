@@ -32,7 +32,7 @@
         margin: 16px 0;
         padding: 0;
         opacity: 0;
-        animation: fadeInStep var(--transition-duration-m) forwards;
+        animation: fadeInStep calc(1.25 * var(--transition-duration-m)) forwards;
     }
 
     &__extra {
