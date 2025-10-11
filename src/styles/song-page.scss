@@ -32,8 +32,7 @@
         margin: 16px 0;
         padding: 0;
         opacity: 0;
-        //animation: fadeInStep calc(1.25 * var(--transition-duration-m)) forwards;
-        animation: fadeInStep 0.3s forwards;
+        animation: fadeInStep 0.35s forwards;
     }
 
     &__extra {
@@ -44,6 +43,7 @@
 /**/
 @keyframes fadeInStep {
   0% { opacity: 0 }
-  80% { opacity: 0 }
+  50% { opacity: 0 }
+  75% { opacity: 0.3 }
   100% { opacity: 1 }
 }

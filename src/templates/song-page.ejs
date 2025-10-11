@@ -379,14 +379,10 @@
 
                 performUpdate(getSongDisplayMode());
 
-                // setTimeout(() => {
-                //     [...document.querySelectorAll('.Collapse')]
-                //         .forEach((v) => v.classList.add('Collapse__transition'));
-                // });
-
-                // (function enableCollapseAnimation() {
-                //
-                // })();
+                setTimeout(() => {
+                    [...document.querySelectorAll('.Collapse')]
+                        .forEach((v) => v.classList.add('Collapse__transition'));
+                }, 1000);
             })();
         </script>
 

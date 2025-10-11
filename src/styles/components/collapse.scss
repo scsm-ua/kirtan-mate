@@ -2,18 +2,16 @@
     display: block;
     max-height: 0px;
     overflow: hidden;
-    //transition: max-height var(--transition-duration-m) cubic-bezier(0, 1, 0, 1);
 
     &__show {
         max-height: 99em;
-        //transition: max-height 1s ease-in-out 0s;
     }
 
-  &__transition {
-    transition: max-height var(--transition-duration-m) cubic-bezier(0, 1, 0, 1);
+    &__transition {
+        transition: max-height var(--transition-duration-m) cubic-bezier(0, 1, 0, 1);
 
-    & .Collapse__show {
-      transition: max-height 1s ease-in-out 0s;
+        &.Collapse__show {
+            transition: max-height 1s ease-in-out 0s;
+        }
     }
-  }
 }
