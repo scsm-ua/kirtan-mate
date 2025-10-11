@@ -26,7 +26,22 @@
   list-style-type: none;
   margin: 16px 0;
   padding: 0;
+  opacity: 0;
+  animation: fadeInStep var(--transition-duration-m) forwards;
 }
 .SongPage__extra {
   padding: 0 var(--side-padding);
+}
+
+/**/
+@keyframes fadeInStep {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
