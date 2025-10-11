@@ -1,0 +1,56 @@
+.Toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.Toggle__switch {
+  display: inline-block;
+  background: var(--grey);
+  border-radius: 8px;
+  width: 26px;
+  height: 16px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+
+.Toggle__switch:before, .Toggle__switch:after {
+  content: "";
+}
+
+.Toggle__switch:before {
+  display: block;
+  background: #FFF;
+  border-radius: 50%;
+  /*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);*/
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.25s;
+}
+
+.Toggle:hover .Toggle__switch:before {
+  background: #FFF;
+  /*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);*/
+}
+
+.Toggle__checkbox:checked + .Toggle__switch {
+  background: var(--accent-color);
+}
+
+.Toggle__checkbox:checked + .Toggle__switch:before {
+  left: 12px;
+}
+
+.Toggle__checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.Toggle__label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}

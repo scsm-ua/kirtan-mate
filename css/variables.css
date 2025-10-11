@@ -37,8 +37,6 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --page-max-width: 768px;
   --side-padding: 20px;
   /**/
-  --transition-duration-m: 0.4s;
-  /**/
   --accent-color: var(--orange);
   --border-color: var(--grey);
   --header-bg-color: var(--dark);
