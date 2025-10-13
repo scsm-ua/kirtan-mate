@@ -161,7 +161,7 @@ class ThreeModeSwitch extends HTMLElement {
                 this.mode = 3
                 break;
             case 2:
-                this.mode = 3
+                this.mode = 1
                 break;
             case 3:
                 this.mode = 1;
@@ -178,7 +178,7 @@ class ThreeModeSwitch extends HTMLElement {
     _onRightClick = (e) => {
         switch(this.mode) {
             case 1:
-                this.mode = 3
+                this.mode = 2
                 break;
             case 2:
                 this.mode = 3
