@@ -31,9 +31,22 @@
         list-style-type: none;
         margin: 16px 0;
         padding: 0;
+        /*
+        opacity: 0;
+        animation: fadeInStep 0.35s forwards;
+        */
     }
 
     &__extra {
         padding: 0 var(--side-padding);
     }
 }
+
+/*
+@keyframes fadeInStep {
+  0% { opacity: 0 }
+  50% { opacity: 0 }
+  75% { opacity: 0.3 }
+  100% { opacity: 1 }
+}
+*/
