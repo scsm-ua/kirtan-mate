@@ -142,7 +142,13 @@ govardhana-parvata yāmuna-tīra..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -240,13 +246,9 @@ govardhana-parvata yāmuna-tīra..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar traducción
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar traducción"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses word-by-word-mode">
@@ -263,25 +265,27 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        rādhā-kuṇḍa-taṭa-kuñja-kuṭīra
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-kuṇḍa-taṭa-kuñja-kuṭīra
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            govardhana-parvata yāmuna-tīra
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        govardhana-parvata yāmuna-tīra
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -295,7 +299,7 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -322,25 +326,27 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kusuma-sarovara, mānasa-gaṅgā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kusuma-sarovara, mānasa-gaṅgā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kalinda-nandinī vipula-taraṅgā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kalinda-nandinī vipula-taraṅgā
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -354,7 +360,7 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -381,25 +387,27 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vaṁśī-vaṭa, gokula, dhīra-samīra
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vaṁśī-vaṭa, gokula, dhīra-samīra
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vṛndāvana-taru-latikā-vānīra
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vṛndāvana-taru-latikā-vānīra
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -413,7 +421,7 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -440,25 +448,27 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        khaga-mṛga-kula, malaya-vātāsa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            khaga-mṛga-kula, malaya-vātāsa
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            mayūra, bhramara, muralī-vilāsa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mayūra, bhramara, muralī-vilāsa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -472,7 +482,7 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -499,25 +509,27 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        veṇu, śṛṅga, pada-chihṇa, megha-mālā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            veṇu, śṛṅga, pada-chihṇa, megha-mālā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vasanta, śaśāṅka, śaṅkha, karatāla
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vasanta, śaśāṅka, śaṅkha, karatāla
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -531,7 +543,7 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -558,25 +570,27 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        yugala-vilāse anukūla jāni
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yugala-vilāse anukūla jāni
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            līlā-vilāsa-uddīpaka māni
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        līlā-vilāsa-uddīpaka māni
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -590,7 +604,7 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -617,25 +631,27 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        e saba chhoḍata kā̐hā nāhi yāu̐
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            e saba chhoḍata kā̐hā nāhi yāu̐
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            e saba chhoḍata parāṇa hārāu̐
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        e saba chhoḍata parāṇa hārāu̐
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -649,7 +665,7 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -676,25 +692,27 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        bhakati-vinoda kahe śuna kāna!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhakati-vinoda kahe śuna kāna!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tuyā uddīpaka hāmāra parāṇa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tuyā uddīpaka hāmāra parāṇa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -708,7 +726,7 @@ govardhana-parvata yāmuna-tīra..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -743,7 +761,7 @@ govardhana-parvata yāmuna-tīra..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsridhar-maharaj-and-govinda-5"></iframe>
             </div>
@@ -764,7 +782,7 @@ govardhana-parvata yāmuna-tīra..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fmadhusudan-maharaj-day-programm-kisel"></iframe>
             </div>
@@ -1005,7 +1023,7 @@ govardhana-parvata yāmuna-tīra..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1058,20 +1076,6 @@ govardhana-parvata yāmuna-tīra..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1211,6 +1215,51 @@ govardhana-parvata yāmuna-tīra..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

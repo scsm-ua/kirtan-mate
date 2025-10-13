@@ -198,7 +198,13 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -296,13 +302,9 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar traducción
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar traducción"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses word-by-word-mode">
@@ -319,31 +321,33 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        gāy gorā madhur svare
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gāy gorā madhur svare
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hare rāma hare rāma, rāma rāma hare hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        hare rāma hare rāma, rāma rāma hare hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -357,7 +361,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -384,25 +388,27 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        gṛhe thāko, vane thāko, sadā ‘hari’ bole’ ḍāko,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gṛhe thāko, vane thāko, sadā ‘hari’ bole’ ḍāko,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sukhe duḥkhe bhulo nāko, vadane harinām koro re
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sukhe duḥkhe bhulo nāko, vadane harinām koro re
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -416,7 +422,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -443,25 +449,27 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        māyā-jāle baddha ho’ye, ācho miche kāja lo’ye,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            māyā-jāle baddha ho’ye, ācho miche kāja lo’ye,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ekhona o chetana peye, rādhā-mādhava-nām bolo re
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ekhona o chetana peye, rādhā-mādhava-nām bolo re
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -475,7 +483,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -502,25 +510,27 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jīvana hoilo śeṣa, nā bhajile hṛṣīkeśa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jīvana hoilo śeṣa, nā bhajile hṛṣīkeśa
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaktivinod-upadeśa, ekbār nām-rase māto re
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhaktivinod-upadeśa, ekbār nām-rase māto re
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -534,7 +544,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -569,7 +579,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-gay-gora"></iframe>
             </div>
@@ -590,7 +600,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgoswami-maharaj-gay-gora-1"></iframe>
             </div>
@@ -611,7 +621,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgoswami-maharaj-gay-gora"></iframe>
             </div>
@@ -632,7 +642,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-gai-gora-madxur"></iframe>
             </div>
@@ -653,7 +663,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-gaj-goura-1"></iframe>
             </div>
@@ -674,7 +684,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-gaj-goura"></iframe>
             </div>
@@ -915,7 +925,7 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -968,20 +978,6 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1261,6 +1257,51 @@ hare kṛṣṇa hare kṛṣṇa, kṛṣṇa kṛṣṇa hare hare..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

@@ -236,7 +236,13 @@ emana durmati     saṁsāra bhitare..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -330,13 +336,9 @@ emana durmati     saṁsāra bhitare..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -353,45 +355,47 @@ emana durmati     saṁsāra bhitare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (prabhu he!)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (prabhu he!)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            emana durmati<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span> saṁsāra bhitare
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        emana durmati<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span> saṁsāra bhitare
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            paḍiyā āchhinu āmi
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tava nija-jana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>  kona mahājane
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        paḍiyā āchhinu āmi
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            pāṭhāiyā dile tumi
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        tava nija-jana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>  kona mahājane
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        pāṭhāiyā dile tumi
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -418,39 +422,41 @@ emana durmati     saṁsāra bhitare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        dayā kari more<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>patita dekhiyā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dayā kari more<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>patita dekhiyā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kahila āmāre giyā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kahila āmāre giyā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ohe dīna-jana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śuna bhāla kathā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            ullasita ha’be hiyā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ohe dīna-jana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śuna bhāla kathā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        ullasita ha’be hiyā
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -477,39 +483,41 @@ emana durmati     saṁsāra bhitare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        tomāre tārite<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śrī-kṛṣṇa-chaitanya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tomāre tārite<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śrī-kṛṣṇa-chaitanya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            navadvīpe avatāra
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        navadvīpe avatāra
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tomā hena kata<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dīna-hīna jane
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            karilena bhava-pāra
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tomā hena kata<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dīna-hīna jane
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        karilena bhava-pāra
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -536,45 +544,47 @@ emana durmati     saṁsāra bhitare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vedera pratijñā<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>rākhibāra tare
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vedera pratijñā<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>rākhibāra tare
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            rukma-varṇa vipra-suta
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        rukma-varṇa vipra-suta
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mahāprabhu nāme<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nadīyā mātāya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (mahāprabhu nāme<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jagata mātāya)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mahāprabhu nāme<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nadīyā mātāya
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            saṅge bhāi avadhūta
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        (mahāprabhu nāme<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jagata mātāya)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        saṅge bhāi avadhūta
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -601,39 +611,41 @@ emana durmati     saṁsāra bhitare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nanda suta yini<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>chaitanya gosāñī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nanda suta yini<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>chaitanya gosāñī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            nija-nāma kari’ dāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        nija-nāma kari’ dāna
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tārila jagat<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tumi-o yāiyā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            laha nija paritrāṇa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tārila jagat<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tumi-o yāiyā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        laha nija paritrāṇa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -660,39 +672,41 @@ emana durmati     saṁsāra bhitare..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        se kathā śuniyā<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>āsiyāchhi, nātha!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            se kathā śuniyā<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>āsiyāchhi, nātha!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tomāra charaṇa-tale
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tomāra charaṇa-tale
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhakati-vinoda<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kā̐diyā kā̐diyā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            āpana-kāhinī bale
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhakati-vinoda<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kā̐diyā kā̐diyā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        āpana-kāhinī bale
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -727,7 +741,7 @@ emana durmati     saṁsāra bhitare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-emona-durmati"></iframe>
             </div>
@@ -748,7 +762,7 @@ emana durmati     saṁsāra bhitare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsridhar-maharaj-and-govinda-7"></iframe>
             </div>
@@ -769,7 +783,7 @@ emana durmati     saṁsāra bhitare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Facharya-maharaj-emona-durmati"></iframe>
             </div>
@@ -790,7 +804,7 @@ emana durmati     saṁsāra bhitare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgoswami-maharaj-emona-durmati"></iframe>
             </div>
@@ -811,7 +825,7 @@ emana durmati     saṁsāra bhitare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-emona-durmati"></iframe>
             </div>
@@ -832,7 +846,7 @@ emana durmati     saṁsāra bhitare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-emona-durmati"></iframe>
             </div>
@@ -853,7 +867,7 @@ emana durmati     saṁsāra bhitare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsudarshan-prabhu-dainyatmika"></iframe>
             </div>
@@ -874,7 +888,7 @@ emana durmati     saṁsāra bhitare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-emona"></iframe>
             </div>
@@ -895,7 +909,7 @@ emana durmati     saṁsāra bhitare..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-emona-1"></iframe>
             </div>
@@ -1136,7 +1150,7 @@ emana durmati     saṁsāra bhitare..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1189,20 +1203,6 @@ emana durmati     saṁsāra bhitare..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1447,6 +1447,51 @@ emana durmati     saṁsāra bhitare..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

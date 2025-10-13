@@ -145,7 +145,13 @@ yuga-dharma-dhurandhara-pātra-varam..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -245,13 +251,9 @@ yuga-dharma-dhurandhara-pātra-varam..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Parādīt tulkojumu
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Parādīt tulkojumu"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -268,39 +270,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sujanārvuda-rādhita-pāda-yugaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sujanārvuda-rādhita-pāda-yugaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            yuga-dharma-dhurandhara-pātra-varam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yuga-dharma-dhurandhara-pātra-varam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            varadābhaya-dāyaka-pūjya-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        varadābhaya-dāyaka-pūjya-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -327,39 +331,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        bhajanorjita sajjana-saṅgha-patiṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhajanorjita sajjana-saṅgha-patiṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            patitādhika-kāruṇikaika-gatim
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        patitādhika-kāruṇikaika-gatim
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gati-vañchita-vañchakāchintya-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gati-vañchita-vañchakāchintya-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -386,39 +392,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        atikomala-kāñchana-dīrgha-tanuṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            atikomala-kāñchana-dīrgha-tanuṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tanu-nindita-hema-mṛṇāla-madam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tanu-nindita-hema-mṛṇāla-madam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            madanārvuda-vandita-chandra-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        madanārvuda-vandita-chandra-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -445,39 +453,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nija-sevaka-tāraka-rañji-vidhuṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nija-sevaka-tāraka-rañji-vidhuṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vidhutāhita-huṅkṛta-siṁha-varam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vidhutāhita-huṅkṛta-siṁha-varam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            varaṇāgata-bāliśa-śanda-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        varaṇāgata-bāliśa-śanda-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -504,39 +514,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vipulīkṛta-vaibhava-gaura-bhuvaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vipulīkṛta-vaibhava-gaura-bhuvaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhuvaneṣu vikīrtita-gaura-dayam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhuvaneṣu vikīrtita-gaura-dayam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dayanīya-gaṇārpita-gaura-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dayanīya-gaṇārpita-gaura-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -563,39 +575,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        chira-gaura-janāśraya-viśva-guruṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            chira-gaura-janāśraya-viśva-guruṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            guru-gaura-kiśoraka-dāsya-param
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        guru-gaura-kiśoraka-dāsya-param
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            paramādṛta-bhaktivinoda-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        paramādṛta-bhaktivinoda-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -622,39 +636,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        raghu-rūpa-sanātana-kīrti-dharaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            raghu-rūpa-sanātana-kīrti-dharaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dharaṇī-tala-kīrtita-jīva-kavim
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dharaṇī-tala-kīrtita-jīva-kavim
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kavirāja-narottama-sakhya-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kavirāja-narottama-sakhya-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -681,39 +697,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kṛpayā hari-kīrtana mūrti-dharaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kṛpayā hari-kīrtana mūrti-dharaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dharaṇī-bhara-hāraka-gaura-janam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dharaṇī-bhara-hāraka-gaura-janam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            janakādhika-vatsala-snigdha-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        janakādhika-vatsala-snigdha-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -740,39 +758,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śaraṇāgata-kiṅkara-kalpa-taruṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śaraṇāgata-kiṅkara-kalpa-taruṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            taru-dhik-kṛta dhīra vadānya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        taru-dhik-kṛta dhīra vadānya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            varam varadendra-gaṇārchita-divya-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        varam varadendra-gaṇārchita-divya-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -799,39 +819,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        parahaṁsa-varaṁ paramārtha-patiṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            parahaṁsa-varaṁ paramārtha-patiṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            patitodharaṇe kṛta-veśa-yatim
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        patitodharaṇe kṛta-veśa-yatim
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yati-rāja-gaṇaiḥ parisevya-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yati-rāja-gaṇaiḥ parisevya-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -858,39 +880,41 @@ yuga-dharma-dhurandhara-pātra-varam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vṛṣabhānu-sutā-dayitānucharaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vṛṣabhānu-sutā-dayitānucharaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            charaṇāśrita-reṇu-dharas tam aham
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        charaṇāśrita-reṇu-dharas tam aham
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mahad-adbhuta-pāvana-śakti-padaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            praṇamāmi sadā prabhupāda-padam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mahad-adbhuta-pāvana-śakti-padaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        praṇamāmi sadā prabhupāda-padam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -925,7 +949,7 @@ yuga-dharma-dhurandhara-pātra-varam..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-sri-sri"></iframe>
             </div>
@@ -946,7 +970,7 @@ yuga-dharma-dhurandhara-pātra-varam..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-prabxupada"></iframe>
             </div>
@@ -1187,7 +1211,7 @@ yuga-dharma-dhurandhara-pātra-varam..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1240,20 +1264,6 @@ yuga-dharma-dhurandhara-pātra-varam..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1498,6 +1508,51 @@ yuga-dharma-dhurandhara-pātra-varam..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

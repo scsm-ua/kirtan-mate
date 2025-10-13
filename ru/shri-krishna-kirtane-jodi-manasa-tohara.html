@@ -128,7 +128,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -226,13 +232,9 @@
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Показывать перевод
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Показывать стихи / перевод"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -243,39 +245,41 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        тр̣на̄д апи сунӣчена,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            тр̣на̄д апи сунӣчена,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            тарор ива сахиш̣н̣уна̄
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        тарор ива сахиш̣н̣уна̄
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ама̄нина̄ ма̄надена,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            кӣрттанӣйах̣ сада̄ харих̣
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ама̄нина̄ ма̄надена,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        кӣрттанӣйах̣ сада̄ харих̣
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -302,27 +306,29 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ш́рӣ-кр̣ш̣н̣а-кӣртане джоди ма̄наса тоха̄ра
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ш́рӣ-кр̣ш̣н̣а-кӣртане джоди ма̄наса тоха̄ра
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            парама джатане та̄̐хи лобхо адхика̄ра
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        парама джатане та̄̐хи лобхо адхика̄ра
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -349,27 +355,29 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        тр̣н̣а̄дхика хӣна, дӣна, акин̃чана чха̄ра
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            тр̣н̣а̄дхика хӣна, дӣна, акин̃чана чха̄ра
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            а̄пане ма̄ноби сада̄ чха̄д̣и’ ахан̇ка̄ра
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        а̄пане ма̄ноби сада̄ чха̄д̣и’ ахан̇ка̄ра
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -396,27 +404,29 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        вр̣кха-сама кхама̄-гун̣а короби са̄дхана
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            вр̣кха-сама кхама̄-гун̣а короби са̄дхана
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            пратихим̇са̄ тйаджи анйе короби па̄лана
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        пратихим̇са̄ тйаджи анйе короби па̄лана
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -443,27 +453,29 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        джӣвана-нирва̄хе а̄не удвега на̄ дибе
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            джӣвана-нирва̄хе а̄не удвега на̄ дибе
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            пара-упака̄ре ниджа-сукха па̄ш́арибе
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        пара-упака̄ре ниджа-сукха па̄ш́арибе
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -490,27 +502,29 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        хоиле-о сарва-гун̣е гун̣ӣ маха̄ш́ойа
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            хоиле-о сарва-гун̣е гун̣ӣ маха̄ш́ойа
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            пратхиш̣т̣ха̄ш́а̄ чха̄д̣и коро ама̄нӣ хр̣дойа
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        пратхиш̣т̣ха̄ш́а̄ чха̄д̣и коро ама̄нӣ хр̣дойа
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -537,27 +551,29 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        кр̣ш̣н̣а-адхиш̣т̣ха̄н сарва-джӣве джа̄ни сада̄
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            кр̣ш̣н̣а-адхиш̣т̣ха̄н сарва-джӣве джа̄ни сада̄
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            короби самма̄на собе а̄даре сарвада̄
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        короби самма̄на собе а̄даре сарвада̄
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -584,27 +600,29 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        доинйа, дойа̄, анйе ма̄н пратиш̣т̣ха̄-варджан
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            доинйа, дойа̄, анйе ма̄н пратиш̣т̣ха̄-варджан
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ча̄ри-гун̣е гун̣ӣ хои корохо кӣртан
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ча̄ри-гун̣е гун̣ӣ хои корохо кӣртан
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -631,27 +649,29 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        бхакативинода ка̄̐ди боле прабху-па̄йа
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            бхакативинода ка̄̐ди боле прабху-па̄йа
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            хено адхика̄ра кобе дибе хе ама̄йа
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        хено адхика̄ра кобе дибе хе ама̄йа
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -686,7 +706,7 @@
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbhakti-lalita-devi%2Fsri-krishna-kirtane-jodi-manasa-tohara"></iframe>
             </div>
@@ -927,7 +947,7 @@
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -980,20 +1000,6 @@
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1168,6 +1174,51 @@
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

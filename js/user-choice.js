@@ -11,3 +11,22 @@ function handleBookChoice({ target }) {
         console.error(e);
     }
 }
+
+/**
+ * Preserve user choice of show/hide song verses/translation.
+ * Value:	1 - show only verses,
+ * 				2 - show only translation,
+ * 				3 - show both (default).
+ */
+const SONG_DISPLAY_MODE = 'SONG_DISPLAY_MODE'
+
+/**/
+function getSongDisplayMode() {
+		const val = localStorage.getItem(SONG_DISPLAY_MODE);
+		return val ? parseInt(val) : 3;
+}
+
+/**/
+function setSongDisplayMode(value) {
+		localStorage.setItem(SONG_DISPLAY_MODE, value);
+}

@@ -129,7 +129,13 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -223,13 +229,9 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar tradução
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar tradução"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -246,27 +248,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        durlabha mānava-janma labhiyā saṁsāre
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            durlabha mānava-janma labhiyā saṁsāre
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -293,27 +297,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ‘saṁsāra’ ‘saṁsāra’ kari’ michhe gela kāla
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ‘saṁsāra’ ‘saṁsāra’ kari’ michhe gela kāla
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            lābha nā ha-ila kichhu, ghaṭila jañjāla
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        lābha nā ha-ila kichhu, ghaṭila jañjāla
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -340,27 +346,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kisera saṁsāra ei chhāyābāji prāya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kisera saṁsāra ei chhāyābāji prāya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ihāte mamatā kari vṛthā dina yāya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ihāte mamatā kari vṛthā dina yāya
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -387,27 +395,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        e deha patana ha’le ki rabe āmāra?
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            e deha patana ha’le ki rabe āmāra?
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            keha sukha nāhi dibe putra paribāra
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        keha sukha nāhi dibe putra paribāra
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -434,27 +444,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        gardabhera mata āmi kari pariśrama
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gardabhera mata āmi kari pariśrama
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kāra lāgi’ eta kari, nā ghuchila bhrama
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kāra lāgi’ eta kari, nā ghuchila bhrama
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -481,27 +493,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        dina yāya michhā kāje, niśā nidrā-vaśe
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dina yāya michhā kāje, niśā nidrā-vaśe
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nāhi bhāvi maraṇa nikaṭe āchhe vase
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nāhi bhāvi maraṇa nikaṭe āchhe vase
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -528,27 +542,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        bhāla manda khāi, heri, pari, chintā-hīna
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhāla manda khāi, heri, pari, chintā-hīna
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nāhi bhāvi, e deha chhāḍiba kona dina
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nāhi bhāvi, e deha chhāḍiba kona dina
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -575,27 +591,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        deha-geha-kalatrādi-chintā avirata
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            deha-geha-kalatrādi-chintā avirata
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            jāgichhe hṛdaye mora buddhi kari hata
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jāgichhe hṛdaye mora buddhi kari hata
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -622,27 +640,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        hāya, hāya! nāhi bhāvi—anitya e saba
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hāya, hāya! nāhi bhāvi—anitya e saba
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            jīvana vigate kothā rahibe vaibhava?
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jīvana vigate kothā rahibe vaibhava?
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -669,27 +689,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śmaśāne śarīra mama paḍiyā rahibe
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śmaśāne śarīra mama paḍiyā rahibe
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vihaṅga-pataṅga tāya vihāra karibe
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vihaṅga-pataṅga tāya vihāra karibe
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -716,27 +738,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kukkura sṛgāla saba ānandita ha’ye
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kukkura sṛgāla saba ānandita ha’ye
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            mahotsava karibe āmāra deha la’ye
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mahotsava karibe āmāra deha la’ye
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -763,27 +787,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ye dehera ei gati, tāra anugata
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ye dehera ei gati, tāra anugata
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            saṁsāra-vaibhava āra bandhu-jana yata
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        saṁsāra-vaibhava āra bandhu-jana yata
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -810,27 +836,29 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ataeva māyā-moha chhāḍi buddhimāna
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ataeva māyā-moha chhāḍi buddhimāna
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nitya-tattva kṛṣṇa-bhakti karuna sandhāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nitya-tattva kṛṣṇa-bhakti karuna sandhāna
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -865,7 +893,7 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-durlava-manava"></iframe>
             </div>
@@ -1106,7 +1134,7 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1159,20 +1187,6 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1382,6 +1396,51 @@ kṛṣṇa nā bhajinu duḥkha kahiba kāhāre?..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

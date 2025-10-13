@@ -158,7 +158,13 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -256,13 +262,9 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar traducción
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar traducción"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses word-by-word-mode">
@@ -279,43 +281,45 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (kibā) jaya jaya gorāchā̐der āratika śobhā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (kibā) jaya jaya gorāchā̐der āratika śobhā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            jāhnavī-taṭa-vane jaga-mana lobhā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jāhnavī-taṭa-vane jaga-mana lobhā
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (jaga-janer mana lobhā)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (gaurāṅger ārati śobhā jaga-janer mana lobhā)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (jaga-janer mana lobhā)
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (nitāi gaura haribol)
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (gaurāṅger ārati śobhā jaga-janer mana lobhā)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (nitāi gaura haribol)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -329,7 +333,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -356,25 +360,27 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (kibā) dakṣiṇe nitāichā̐da bāme gadādhara
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (kibā) dakṣiṇe nitāichā̐da bāme gadādhara
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nikaṭe advaita śrīnivāsa chhatra-dhara
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nikaṭe advaita śrīnivāsa chhatra-dhara
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -388,7 +394,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -415,61 +421,63 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (kibā) basiyāchhe gorāchā̐da ratna-siṁhāsane
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (kibā) basiyāchhe gorāchā̐da ratna-siṁhāsane
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (ratna-simhāsana alo karere
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (ratna-simhāsana alo karere
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            basiyāchhen gorāchā̐d ratna-siṁhāsane)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ārati karena brahmā ādi-deva gaṇe
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        basiyāchhen gorāchā̐d ratna-siṁhāsane)
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (gaurāṅger ārati kare)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (brahmā ādi-deva gaṇe gaurāṅger ārati kare)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ārati karena brahmā ādi-deva gaṇe
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (gaurāṅgera bhakta sane gaurāṅger ārati kare)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (nitāi gaura haribol)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (gaurāṅger ārati kare)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (brahmā ādi-deva gaṇe gaurāṅger ārati kare)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (gaurāṅgera bhakta sane gaurāṅger ārati kare)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (nitāi gaura haribol)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -483,7 +491,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -510,43 +518,45 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (kibā) narahari-ādi kari chāmara ḍhulāya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (kibā) narahari-ādi kari chāmara ḍhulāya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sañjaya-mukunda-vāsu-ghoṣa-ādi gāya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sañjaya-mukunda-vāsu-ghoṣa-ādi gāya
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (gaura guṇa gāna kare)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (sañjaya mukunda vāsu-ghoṣa gaura guṇa gāna kare)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (gaura guṇa gāna kare)
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (nitāi gaura haribol)
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (sañjaya mukunda vāsu-ghoṣa gaura guṇa gāna kare)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (nitāi gaura haribol)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -560,7 +570,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -587,55 +597,57 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (kibā) śaṅkha bāje ghaṇṭā bāje bāje karatāla
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (kibā) śaṅkha bāje ghaṇṭā bāje bāje karatāla
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            madhura mṛdaṅga bāje parama rasāla
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        madhura mṛdaṅga bāje parama rasāla
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (madhur madhur madhur bāje)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (gaurāṅger ārati kāle madhur madhur madhur bāje)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (madhur madhur madhur bāje)
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (śaṅkha bāje ghaṇṭā bāje madhur madhur madhur bāje)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (madhura mṛdanga bāje madhur madhur madhur bāje)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (gaurāṅger ārati kāle madhur madhur madhur bāje)
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (nitāi gaura haribol)
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (śaṅkha bāje ghaṇṭā bāje madhur madhur madhur bāje)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (madhura mṛdanga bāje madhur madhur madhur bāje)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (nitāi gaura haribol)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -649,7 +661,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -676,43 +688,45 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (kibā) bahu-koṭi chandra jini vadana ujjvala
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (kibā) bahu-koṭi chandra jini vadana ujjvala
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            gala-deśe vana-mālā kare jhalamala
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gala-deśe vana-mālā kare jhalamala
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (jhalmal jhalmal jhalmal kare)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (gaura gale vana phuler mālā jhalmal jhalmal jhalmal kare)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (jhalmal jhalmal jhalmal kare)
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (nitāi gaura haribol)
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (gaura gale vana phuler mālā jhalmal jhalmal jhalmal kare)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (nitāi gaura haribol)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -726,7 +740,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -753,25 +767,27 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (kibā) śiva-śuka-nārada preme gada-gada
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (kibā) śiva-śuka-nārada preme gada-gada
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhakati-vinoda dekhe gorāra sampada
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhakati-vinoda dekhe gorāra sampada
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -785,7 +801,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -806,49 +822,51 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (ei bār āmāy dayā kara)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (ei bār āmāy dayā kara)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (ṭhākura śrī bhakti-vinoda ei bār āmāy dayā kara)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (ṭhākura śrī bhakti-vinoda ei bār āmāy dayā kara)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (ṭhākura śrī sarasvatī ei bār āmāy dayā kara)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (patit-pāvan śrī gurudev ei bār āmāy dayā kara)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (ṭhākura śrī sarasvatī ei bār āmāy dayā kara)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (sapārṣada gaurahari ei bār āmāy dayā kara)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (nitāi gaura haribol)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (patit-pāvan śrī gurudev ei bār āmāy dayā kara)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        (sapārṣada gaurahari ei bār āmāy dayā kara)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        (nitāi gaura haribol)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -862,7 +880,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -897,7 +915,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-kiba-jaya-jaya"></iframe>
             </div>
@@ -918,7 +936,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-kiba-jaya-jaya"></iframe>
             </div>
@@ -939,7 +957,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsudarshan-prabhu-sri-gaura"></iframe>
             </div>
@@ -1180,7 +1198,7 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1233,20 +1251,6 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1491,6 +1495,51 @@ jāhnavī-taṭa-vane jaga-mana lobhā..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

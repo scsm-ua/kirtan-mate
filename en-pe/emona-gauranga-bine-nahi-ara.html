@@ -114,7 +114,13 @@ hena avatāra    habe ki hayechhe..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -208,13 +214,9 @@ hena avatāra    habe ki hayechhe..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -231,33 +233,35 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        emana gaurāṅga vine nāhi āra
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            emana gaurāṅga vine nāhi āra
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            hena avatāra<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>habe ki hayechhe
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hena avatāra<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>habe ki hayechhe
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            hena prema parachāra
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        hena prema parachāra
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -278,21 +282,23 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (hay ni ār habār nay re)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (hay ni ār habār nay re)
+                        </li>
+                    
                 
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -319,39 +325,41 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        duramati ati<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>patita pāṣaṇḍī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            duramati ati<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>patita pāṣaṇḍī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            prāṇe nā mārila kāre
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        prāṇe nā mārila kāre
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hari-nāma diye<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>hṛdaya śodhila
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            yāchi giyā ghare ghare
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hari-nāma diye<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>hṛdaya śodhila
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        yāchi giyā ghare ghare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -372,27 +380,29 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (ke nibi ke nibi bale)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (ke nibi ke nibi bale)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (yeche yeche yeche beḍāy)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (yeche yeche yeche beḍāy)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -419,45 +429,47 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        bhava-viriñchira<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>vāñchhita ye prema
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhava-viriñchira<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>vāñchhita ye prema
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            jagate phelila ḍhāli
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        jagate phelila ḍhāli
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            (bhava viriñchira yā vāñchhā kare)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kāṅgale pāiye<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>khāila nāchiye
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        (bhava viriñchira yā vāñchhā kare)
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bājāiye karatāli
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        kāṅgale pāiye<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>khāila nāchiye
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bājāiye karatāli
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -478,27 +490,29 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (karatāli bājāiye)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (karatāli bājāiye)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (gaurahari hari bale<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>karatāli bājāiye)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (gaurahari hari bale<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>karatāli bājāiye)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -525,39 +539,41 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        hāsiye kā̐diye<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>preme gaḍāgaḍi
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hāsiye kā̐diye<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>preme gaḍāgaḍi
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            pulake vyāpila aṅga
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        pulake vyāpila aṅga
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            chaṇḍāle brāhmaṇe<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kare kolākuli
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kabe vā chhila e raṅga
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        chaṇḍāle brāhmaṇe<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kare kolākuli
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kabe vā chhila e raṅga
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -578,27 +594,29 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (chaṇḍāle brāhmaṇe<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kare kolākuli
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (chaṇḍāle brāhmaṇe<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kare kolākuli
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            e raṅga kabe vā chhila)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        e raṅga kabe vā chhila)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -625,39 +643,41 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ḍākiye hā̐kiye<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>khola-karatāle
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ḍākiye hā̐kiye<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>khola-karatāle
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            gāiye dhāiye phire
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        gāiye dhāiye phire
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dekhiyā śamana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tarāsa pāiye
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kapāṭa hānila dvāre
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dekhiyā śamana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tarāsa pāiye
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kapāṭa hānila dvāre
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -678,21 +698,23 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (bhaja bhaja gaurahari yā̐ra nāme śamaṇa palāy)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (bhaja bhaja gaurahari yā̐ra nāme śamaṇa palāy)
+                        </li>
+                    
                 
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -719,27 +741,29 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        e tina bhuvana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ānande bharila
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            e tina bhuvana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ānande bharila
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            uṭhila maṅgala-sora
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        uṭhila maṅgala-sora
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -760,45 +784,47 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (ānander ār sīmā nāi re)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (ānander ār sīmā nāi re)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (gauraharir āgamane<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ānander ār sīmā nāi re)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (gauraharir āgamane<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ānander ār sīmā nāi re)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (nirānanda dūre gela<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ānander ār sīmā nāi re)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (gauraharir āgamane<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>premānander udaya hala)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (nirānanda dūre gela<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ānander ār sīmā nāi re)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (premānander udaya hala<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sabāi mile haribola)
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        (gauraharir āgamane<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>premānander udaya hala)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        (premānander udaya hala<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sabāi mile haribola)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -819,27 +845,29 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kahe premānanda<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>emana gaurāṅge
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kahe premānanda<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>emana gaurāṅge
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            rati nā janmila mora
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        rati nā janmila mora
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -860,39 +888,41 @@ hena avatāra    habe ki hayechhe..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (āmār rati-mati hala nā ye)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (āmār rati-mati hala nā ye)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (eman dayāl prabhu avatāre, āmār rati-mati hala nā re)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (eman dayāl prabhu avatāre, āmār rati-mati hala nā re)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (eman dayāl prabhu esechhila, āmār rati-mati hala nā re)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (gaurahari hari bala)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (eman dayāl prabhu esechhila, āmār rati-mati hala nā re)
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        (gaurahari hari bala)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1141,7 +1171,7 @@ hena avatāra    habe ki hayechhe..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1194,20 +1224,6 @@ hena avatāra    habe ki hayechhe..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1417,6 +1433,51 @@ hena avatāra    habe ki hayechhe..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

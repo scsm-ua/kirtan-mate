@@ -130,7 +130,13 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -228,13 +234,9 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar tradução
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar tradução"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -251,39 +253,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        prema-mugdha-rudra-rāja-śaurya-vīrya-vikramaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            prema-mugdha-rudra-rāja-śaurya-vīrya-vikramaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            luṇṭhita-pratāpa-śīrṣa-pāda-dhūli-dhūsaraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        luṇṭhita-pratāpa-śīrṣa-pāda-dhūli-dhūsaraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -310,39 +314,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        dākṣiṇātya-suprasiddha-paṇḍitaugha-pūjitaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dākṣiṇātya-suprasiddha-paṇḍitaugha-pūjitaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śreṣṭha-rāja-rājapātra-śīrṣa-bhakti-bhūṣitam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śreṣṭha-rāja-rājapātra-śīrṣa-bhakti-bhūṣitam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            deśa-mātṛ-śeṣa-darśanārthi-gauḍa-gocharaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        deśa-mātṛ-śeṣa-darśanārthi-gauḍa-gocharaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -369,39 +375,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        gaura-garvi-sarva-gauḍa-gauravārtha-sajjitaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gaura-garvi-sarva-gauḍa-gauravārtha-sajjitaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śāstra-śastra-dakṣa-duṣṭa-nāstikādi-lajjitam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śāstra-śastra-dakṣa-duṣṭa-nāstikādi-lajjitam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            muhyamāna-mātṛkādi-deha-jīva-sañcharaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        muhyamāna-mātṛkādi-deha-jīva-sañcharaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -428,39 +436,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nyāsa-pañcha-varṣa-pūrṇa-janma-bhūmi-darśanaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nyāsa-pañcha-varṣa-pūrṇa-janma-bhūmi-darśanaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            koṭi-koṭi-loka-lubdha-mugdha-dṛṣṭi-karṣaṇam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        koṭi-koṭi-loka-lubdha-mugdha-dṛṣṭi-karṣaṇam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            koṭi-kaṇṭha-kṛṣṇa-nāma-ghoṣa-bheditāmbaraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        koṭi-kaṇṭha-kṛṣṇa-nāma-ghoṣa-bheditāmbaraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -487,39 +497,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ārta-bhakta-śoka-śānti-tāpi-pāpi-pāvanaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ārta-bhakta-śoka-śānti-tāpi-pāpi-pāvanaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            lakṣa-koṭi-loka-saṅga-kṛṣṇa-dhāma-dhāvanam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        lakṣa-koṭi-loka-saṅga-kṛṣṇa-dhāma-dhāvanam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rāma-keli-sāgrajāta-rūpa-karṣaṇādaraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rāma-keli-sāgrajāta-rūpa-karṣaṇādaraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -546,39 +558,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vyāghra-vāraṇaina-vanya-jantu-kṛṣṇa-gāyakaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vyāghra-vāraṇaina-vanya-jantu-kṛṣṇa-gāyakaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-nṛtya-bhāva-matta-jhāḍakhaṇḍa-nāyakam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prema-nṛtya-bhāva-matta-jhāḍakhaṇḍa-nāyakam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            durga-vanya-mārga-bhaṭṭa-mātra-saṅga-saukaraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        durga-vanya-mārga-bhaṭṭa-mātra-saṅga-saukaraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -605,39 +619,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        gāṅga-yāmunādi-bindu-mādhavādi-mānanaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gāṅga-yāmunādi-bindu-mādhavādi-mānanaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            māthurārtta-chita-yāmunāgra-bhāga-dhāvanam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        māthurārtta-chita-yāmunāgra-bhāga-dhāvanam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            smārita-vrajāti-tīvra-vipralambha-kātaraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        smārita-vrajāti-tīvra-vipralambha-kātaraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -664,39 +680,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        mādhavendra-vipralambha-māthureṣṭa-mānanaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mādhavendra-vipralambha-māthureṣṭa-mānanaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-dṛṣṭakāma-pūrva-kuñja-kānanam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prema-dhāma-dṛṣṭakāma-pūrva-kuñja-kānanam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gokulādi-goṣṭha-gopa-gopikā-priyaṅkaraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gokulādi-goṣṭha-gopa-gopikā-priyaṅkaraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -717,39 +735,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ayi dīna-dayārdra nātha he
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ayi dīna-dayārdra nātha he
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            mathurā-nātha kadāvalokyase
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mathurā-nātha kadāvalokyase
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hṛdayaṁ tvad-aloka-kātaraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dayita bhrāmyati kiṁ karomy aham
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hṛdayaṁ tvad-aloka-kātaraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        dayita bhrāmyati kiṁ karomy aham
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -776,39 +796,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        prema-guñjanāli-puñja-puṣpa-puñja-rañjitaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            prema-guñjanāli-puñja-puṣpa-puñja-rañjitaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            gīta-nṛtya-dakṣa-pakṣi-vṛkṣa-lakṣa-vanditam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gīta-nṛtya-dakṣa-pakṣi-vṛkṣa-lakṣa-vanditam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            go-vṛṣādi-nāda-dīpta-pūrva-moda-meduraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        go-vṛṣādi-nāda-dīpta-pūrva-moda-meduraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -835,39 +857,41 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        prema-buddha-ruddha-buddhi-matta-nṛtya-kīrtanaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            prema-buddha-ruddha-buddhi-matta-nṛtya-kīrtanaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            plāvitāśru-kāñchanāṅga-vāsa-chāturaṅganam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        plāvitāśru-kāñchanāṅga-vāsa-chāturaṅganam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kṛṣṇa-kṛṣṇa-rāva-bhāva-hāsya-lāsya-bhāsvaraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prema-dhāma-devam eva naumi gaura-sundaram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kṛṣṇa-kṛṣṇa-rāva-bhāva-hāsya-lāsya-bhāsvaraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        prema-dhāma-devam eva naumi gaura-sundaram
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -902,7 +926,7 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fmadhusudan-maharaj-prema-dhama"></iframe>
             </div>
@@ -1143,7 +1167,7 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1196,20 +1220,6 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1454,6 +1464,51 @@ prārthitāṅghri-varjitānya-sarva-dharma-saṅgamam..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

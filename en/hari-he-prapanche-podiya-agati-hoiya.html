@@ -112,7 +112,13 @@ prapañche poḍiyā,    agati hoiyā,..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -206,13 +212,9 @@ prapañche poḍiyā,    agati hoiyā,..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -229,45 +231,47 @@ prapañche poḍiyā,    agati hoiyā,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        hari he!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hari he!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prapañche poḍiyā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>agati hoiyā,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prapañche poḍiyā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>agati hoiyā,
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            nā dekhi upāya āro
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            agatira gati,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>charaṇe śaraṇa,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        nā dekhi upāya āro
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tomāya korinu sāra
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        agatira gati,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>charaṇe śaraṇa,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tomāya korinu sāra
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -294,39 +298,41 @@ prapañche poḍiyā,    agati hoiyā,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        karama geyāna,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kichu nāhi mora,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            karama geyāna,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kichu nāhi mora,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            sādhana bhajana nāi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        sādhana bhajana nāi
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tumi kṛpā-moya,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>āmi to’ kāṅgāla,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            ahaitukī kṛpā chāi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tumi kṛpā-moya,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>āmi to’ kāṅgāla,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        ahaitukī kṛpā chāi
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -353,39 +359,41 @@ prapañche poḍiyā,    agati hoiyā,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vākya-mano-vega,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>krodha-jihvā-vega,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vākya-mano-vega,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>krodha-jihvā-vega,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            udara-upastha-vega
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        udara-upastha-vega
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            miliyā e saba,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>saṁsāre bhāsāye,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            diteche paramodvega
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        miliyā e saba,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>saṁsāre bhāsāye,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        diteche paramodvega
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -412,39 +420,41 @@ prapañche poḍiyā,    agati hoiyā,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        oneka jatane,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>se saba damane,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            oneka jatane,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>se saba damane,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            chāḍiyāchi āśā āmi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        chāḍiyāchi āśā āmi
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            anāthera nātha!<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ḍāki tava nāma,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            ekhona bharasā tumi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        anāthera nātha!<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ḍāki tava nāma,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        ekhona bharasā tumi
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -693,7 +703,7 @@ prapañche poḍiyā,    agati hoiyā,..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -746,20 +756,6 @@ prapañche poḍiyā,    agati hoiyā,..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -899,6 +895,51 @@ prapañche poḍiyā,    agati hoiyā,..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

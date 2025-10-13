@@ -145,7 +145,13 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -239,13 +245,9 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -262,27 +264,29 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        je ānilo prema-dhana karuṇā prachura
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            je ānilo prema-dhana karuṇā prachura
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            heno prabhu kothā gelā āchārya-ṭhākura
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        heno prabhu kothā gelā āchārya-ṭhākura
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -309,27 +313,29 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kā̐hā mora svarūp rūpa kā̐hā sanātana
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kā̐hā mora svarūp rūpa kā̐hā sanātana
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kā̐hā dāsa raghunātha patita-pāvana
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kā̐hā dāsa raghunātha patita-pāvana
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -356,27 +362,29 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kā̐hā mora bhaṭṭa-juga kā̐hā kavirāja
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kā̐hā mora bhaṭṭa-juga kā̐hā kavirāja
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            eka-kāle kothā gelā gaurā naṭa-rāja
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        eka-kāle kothā gelā gaurā naṭa-rāja
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -403,27 +411,29 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        pāṣāṇe kuṭibo māthā anale paśibo
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pāṣāṇe kuṭibo māthā anale paśibo
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            gaurāṅga guṇera nidhi kothā gele pābo
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gaurāṅga guṇera nidhi kothā gele pābo
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -450,27 +460,29 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        se-saba saṅgīra saṅge je koilo vilāsa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            se-saba saṅgīra saṅge je koilo vilāsa
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            se-saṅga nā pāyā kānde narottama dāsa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        se-saṅga nā pāyā kānde narottama dāsa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -505,7 +517,7 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgoswami-maharaj-viraha-giti"></iframe>
             </div>
@@ -526,7 +538,7 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fmadhusudan-maharaj-viraha-giti"></iframe>
             </div>
@@ -767,7 +779,7 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -820,20 +832,6 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1078,6 +1076,51 @@ heno prabhu kothā gelā āchārya-ṭhākura..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

@@ -127,7 +127,13 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -225,13 +231,9 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar traducción
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar traducción"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses word-by-word-mode">
@@ -248,25 +250,27 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        rādhā-bhajane jadi mati nāhi bhelā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-bhajane jadi mati nāhi bhelā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kṛṣṇa-bhajana tava akāraṇe gelā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kṛṣṇa-bhajana tava akāraṇe gelā
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -280,7 +284,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -307,25 +311,27 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ātapa-rohita sūray nāhi jāni
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ātapa-rohita sūray nāhi jāni
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-birahita mādhav nāhi māni
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rādhā-birahita mādhav nāhi māni
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -339,7 +345,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -366,25 +372,27 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kevala mādhav pūjaye so ajñānī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kevala mādhav pūjaye so ajñānī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            rādhā anādara koroi abhimānī
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rādhā anādara koroi abhimānī
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -398,7 +406,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -425,25 +433,27 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kobohi nāhi korobi tā̐kor saṅga
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kobohi nāhi korobi tā̐kor saṅga
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            chitte ichāsi jadi vraja-rasa-raṅga
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        chitte ichāsi jadi vraja-rasa-raṅga
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -457,7 +467,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -484,25 +494,27 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        rādhikā-dāsī jadi hay abhimān
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rādhikā-dāsī jadi hay abhimān
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śīghrai milai tava gokula kāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śīghrai milai tava gokula kāna
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -516,7 +528,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -543,25 +555,27 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        brahmā, śiva, nārada, śruti, nārāyaṇī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            brahmā, śiva, nārada, śruti, nārāyaṇī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            rādhikā-pada-raja pūjaye māni
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rādhikā-pada-raja pūjaye māni
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -575,7 +589,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -602,25 +616,27 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        umā, ramā, satyā, śachī, chandrā, rukmiṇī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            umā, ramā, satyā, śachī, chandrā, rukmiṇī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-avatār sobe,—āmnāya-vāṇī
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rādhā-avatār sobe,—āmnāya-vāṇī
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -634,7 +650,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -661,25 +677,27 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        heno rādhā-paricharjyā jā̐kara dhana
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            heno rādhā-paricharjyā jā̐kara dhana
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhakativinoda tā̐ra māgaye charaṇa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhakativinoda tā̐ra māgaye charaṇa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -693,7 +711,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -728,7 +746,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsridhar-maharaj-and-573711371"></iframe>
             </div>
@@ -969,7 +987,7 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1022,20 +1040,6 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1175,6 +1179,51 @@ kṛṣṇa-bhajana tava akāraṇe gelā..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

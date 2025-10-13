@@ -127,7 +127,13 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -225,13 +231,9 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar traducción
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar traducción"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses word-by-word-mode">
@@ -248,37 +250,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        yo ’nanto ’nanta-vaktrair niravadhi hari-saṁkīrtanaṁ saṁvidhatte
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yo ’nanto ’nanta-vaktrair niravadhi hari-saṁkīrtanaṁ saṁvidhatte
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yaḥ śeṣaś chhatra-śayyāsana-vasana-vidhaiḥ sevate te yad arthāḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yaḥ śeṣaś chhatra-śayyāsana-vasana-vidhaiḥ sevate te yad arthāḥ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -292,7 +296,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -319,37 +323,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        aṁśair yaḥ kṣīraśāyī sakala bhuvanapaḥ sarva jīvāntarastho
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            aṁśair yaḥ kṣīraśāyī sakala bhuvanapaḥ sarva jīvāntarastho
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            yo vā garbhodaśāyī daśa-śata-vadano veda-sūktair vigītaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yo vā garbhodaśāyī daśa-śata-vadano veda-sūktair vigītaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bramāṇḍāśeṣa garbhā prakṛti-pati-patir jīva-saṅghāśrayāṅgaḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bramāṇḍāśeṣa garbhā prakṛti-pati-patir jīva-saṅghāśrayāṅgaḥ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -363,7 +369,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -390,37 +396,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        yasyāṁśo vyuha-madhye vilasati paramavyomni saṁkarṣaṇākhya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yasyāṁśo vyuha-madhye vilasati paramavyomni saṁkarṣaṇākhya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ātanvan śuddha-sattvaṁ nikhila-hari-sukhaṁ chetanaṁ līlayā cha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ātanvan śuddha-sattvaṁ nikhila-hari-sukhaṁ chetanaṁ līlayā cha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jīvāhaṅkāra-bhāvāspada iti kathitaḥ kutrachij jīvavad yaḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jīvāhaṅkāra-bhāvāspada iti kathitaḥ kutrachij jīvavad yaḥ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -434,7 +442,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -461,37 +469,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        yaś chādi vyuha-madhye prabhavati sagaṇo mūla-saṅkarṣaṇākhyo
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yaś chādi vyuha-madhye prabhavati sagaṇo mūla-saṅkarṣaṇākhyo
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dvārāvatyāṁ tad-ūrddhe madhupuri vasati prābhavākhyo vilāsaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dvārāvatyāṁ tad-ūrddhe madhupuri vasati prābhavākhyo vilāsaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sarvāṁśī rāma-nāmā vrajapuri ramate sānujo yaḥ svarūpe
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sarvāṁśī rāma-nāmā vrajapuri ramate sānujo yaḥ svarūpe
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -505,7 +515,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -532,37 +542,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-kṛṣṇa-premanāmā parama-sukhamayaḥ ko ’py achintyaḥ padārtho
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-kṛṣṇa-premanāmā parama-sukhamayaḥ ko ’py achintyaḥ padārtho
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            yad gandhāt sajjanaughā nigama-bahumataṁ mokṣam apy ākṣipanti
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yad gandhāt sajjanaughā nigama-bahumataṁ mokṣam apy ākṣipanti
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kaivalyaiśvarya-sevā-prada-gaṇa iti yasyāṅgataḥ prema-dātuḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kaivalyaiśvarya-sevā-prada-gaṇa iti yasyāṅgataḥ prema-dātuḥ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -576,7 +588,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -603,37 +615,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        yo bālye līlayaikaḥ parama-madhurayā chaikachakrānagaryāṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yo bālye līlayaikaḥ parama-madhurayā chaikachakrānagaryāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            mātā-pitror janānā matha nija-suhṛdāṁ hlādayaṁś chita-chakram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mātā-pitror janānā matha nija-suhṛdāṁ hlādayaṁś chita-chakram
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tīrthān vabhrāma sarvānupahṛta-janako nyāsinā prārthitaś cha
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tīrthān vabhrāma sarvānupahṛta-janako nyāsinā prārthitaś cha
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -647,7 +661,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -674,37 +688,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        bhrāmaṁ bhrāmañ cha tīrthān yati-mukuṭa-maṇi mādhavendra prasaṅgāt
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhrāmaṁ bhrāmañ cha tīrthān yati-mukuṭa-maṇi mādhavendra prasaṅgāt
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            labdhollāsaḥ pratikṣya prakaṭita-charitaṁ gaura-dhāmājagāma
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        labdhollāsaḥ pratikṣya prakaṭita-charitaṁ gaura-dhāmājagāma
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-gauraḥ śrīnivāsādibhir api yamāvāpālaye nandanasya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śrī-gauraḥ śrīnivāsādibhir api yamāvāpālaye nandanasya
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -718,7 +734,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -745,37 +761,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        prāptājño gaura-chandrād akhila-jana-gaṇoddhāra-nāma-pradāne
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            prāptājño gaura-chandrād akhila-jana-gaṇoddhāra-nāma-pradāne
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            yaḥ prāpya dvau surāpau kali-kaluṣa-hatau bhrātarau brahma-daityau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yaḥ prāpya dvau surāpau kali-kaluṣa-hatau bhrātarau brahma-daityau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gāḍha-prema prakāśaiḥ kṛta-rudhira-vapuś chāpi tāv ujjahāra
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gāḍha-prema prakāśaiḥ kṛta-rudhira-vapuś chāpi tāv ujjahāra
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -789,7 +807,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -816,37 +834,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sākṣād gauro gaṇānāṁ śirasi yad avadhūtasya kaupīna-khaṇḍaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sākṣād gauro gaṇānāṁ śirasi yad avadhūtasya kaupīna-khaṇḍaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            saṁdhartuñ chādideśāsava-yavana-vadhū-spṛṣṭa-dṛṣṭo ’pi vandyaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        saṁdhartuñ chādideśāsava-yavana-vadhū-spṛṣṭa-dṛṣṭo ’pi vandyaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            brahmādyānām apīti prabhu-parihṛta-kānām api sveṣṭa-pīṭaḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        brahmādyānām apīti prabhu-parihṛta-kānām api sveṣṭa-pīṭaḥ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -860,7 +880,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -887,37 +907,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        uddhartuṁ jñāna-karmādy-apahata-charitān gaura-chandro yad āsau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            uddhartuṁ jñāna-karmādy-apahata-charitān gaura-chandro yad āsau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nyāsaṁ kṛtvā tu māyā mṛga-manusṛtavān grāhayan kṛṣṇa-nāma
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nyāsaṁ kṛtvā tu māyā mṛga-manusṛtavān grāhayan kṛṣṇa-nāma
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tach chāyevānvadhāvat sthala-jala-gahane yo ’pi tasyeṣṭa-cheṣṭaḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tach chāyevānvadhāvat sthala-jala-gahane yo ’pi tasyeṣṭa-cheṣṭaḥ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -931,7 +953,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -958,37 +980,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-rādhā-prema-lubdho divasa-niśi-tadā svāda-mattaika-līlo
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-rādhā-prema-lubdho divasa-niśi-tadā svāda-mattaika-līlo
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            gauro yañ chādideśa svaparikara-vṛtaṁ kṛṣṇa-nāma pradātum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gauro yañ chādideśa svaparikara-vṛtaṁ kṛṣṇa-nāma pradātum
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gauḍe ’bādhaṁ dadau yaḥ subhaga-gaṇa-dhanaṁ gaura-nāma-prakāmaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gauḍe ’bādhaṁ dadau yaḥ subhaga-gaṇa-dhanaṁ gaura-nāma-prakāmaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1002,7 +1026,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1029,37 +1053,39 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-rādhā-kṛṣṇa-līlā-rasa-madhura-sudhāsvāda-śuddhaika-mūrtau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-rādhā-kṛṣṇa-līlā-rasa-madhura-sudhāsvāda-śuddhaika-mūrtau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            gaure śraddhāṁ dṛḍhāṁ bho prabhu-parikara-samrāṭ prayachchhādhame ’smin
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gaure śraddhāṁ dṛḍhāṁ bho prabhu-parikara-samrāṭ prayachchhādhame ’smin
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ullaṅghyāṅghriṁ hi yasyākhila-bhajana-kathā svapnavach chaiva mithyā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ullaṅghyāṅghriṁ hi yasyākhila-bhajana-kathā svapnavach chaiva mithyā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-nityānanda-chandraṁ bhaja bhaja satataṁ gaura-kṛṣṇa-pradaṁ tam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1073,7 +1099,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1108,7 +1134,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-sriman"></iframe>
             </div>
@@ -1349,7 +1375,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1402,20 +1428,6 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1555,6 +1567,51 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

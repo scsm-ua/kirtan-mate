@@ -113,7 +113,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -203,13 +209,9 @@
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar tradução
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar tradução"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -220,381 +222,383 @@
     
 
     
-        <ul class="SongVerse__text">
-            
-                
-                    <li class="SongVerse__line ">
-                        Jay Saparikar Śrī Śrī Guru Gaurāṅgasundar Rādhā–Madan Gopāl Jīu kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Jay Om Viṣṇupād Paramahaṁsa Parivrājakāchārya-varya Aṣṭottara-śata-śrī Śrīmad Bhakti Sundar Govinda Dev-Goswāmī Mahārāj kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Jay Om Viṣṇupād Paramahaṁsa Parivrājakāchārya-varya Aṣṭottara-śata-śrī Śrīmad Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Jay Om Viṣṇupād Paramahaṁsa Parivrājakāchārya-varya Aṣṭottara-śata-śrī Śrīmad Bhakti Siddhānta Sarasvatī Goswāmī Ṭhākur kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Jay Om Viṣṇupād Śrīla Gaura Kiśor Dās Bābājī Mahārāj kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Jay Om Viṣṇupād Śrīla Sachchidānanda Bhakti Vinod Ṭhākur kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Jay Om Viṣṇupād Śrīla Jagannath Dās Bābājī Mahārāj kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrīla Baladev Vidyābhūṣaṇ kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrīla Viśvanāth Chakravartī Ṭhākur kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Narottam Śyāmānanda Śrīnivās Āchārya Prabhu-traya kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrīla Vṛndāvan Dās Ṭhākur kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrīla Kṛṣṇa Dās Kavirāj Goswāmī kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Rūpa, Sanātan, Bhaṭṭa Raghunāth, Śrī Jīva, Gopāl
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Bhaṭṭa, Dās Raghunāth, Ṣaḍ Goswāmī Prabhu kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Rūpānuga Guru-varga kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Namāchārya Śrīla Hari Dās Ṭhākur kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrīla Svarūp Dāmodar, Śrīla Rāy Rāmānandādi Śrī Gaura-śakti-varga kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Premse Kaho Śrī Kṛṣṇa Chaitanya Prabhu Nityānanda Śrī Advaita Gadadhar Śrīvāsādi Gaura-bhakta-vṛnda kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Sapārṣad Śrī Nityānanda Prabhu kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Sapārṣad Śrīman Mahāprabhu kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Nabadwip Dham kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Gaṅgā Yamunā kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Vṛndāvan Dham kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Śrī Rādhā-Kṛṣṇa Gopa Gopī Śyām Kuṇḍa Rādhā Kuṇḍa Go Girirāj Govardhan kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Bhakti Devī Vṛndā Devī Tulasī Devī kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Puruṣottam Dhām kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Baladev Subhadrā Jagannāth Jīu kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Grantharāj Śrīmad Bhāgavatam Śrī Chaitanya-charitāmṛta kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Ākar Maṭh Rāj Śrī Chaitanya Maṭh kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Tadīya Śākhā Maṭh kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Chaitanya Sāraswat Maṭh kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Śrī Chaitanya Śrīdhar Govinda Sevā Ashram kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Viśva-vyāpī Tadīya Śākhā Maṭh kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Ananta-koṭī Vaiṣṇava-vṛnda kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Samaveta Vaiṣṇava-vṛnda kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Hari-nām-saṅkīrtan kī jay!
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        Nitāi Gaura Premānande! Haribol!
-                    </li>
-                
-            
-        </ul>
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
+                
+                    
+                        <li class="SongVerse__line ">
+                            Jay Saparikar Śrī Śrī Guru Gaurāṅgasundar Rādhā–Madan Gopāl Jīu kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Jay Om Viṣṇupād Paramahaṁsa Parivrājakāchārya-varya Aṣṭottara-śata-śrī Śrīmad Bhakti Sundar Govinda Dev-Goswāmī Mahārāj kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Jay Om Viṣṇupād Paramahaṁsa Parivrājakāchārya-varya Aṣṭottara-śata-śrī Śrīmad Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Jay Om Viṣṇupād Paramahaṁsa Parivrājakāchārya-varya Aṣṭottara-śata-śrī Śrīmad Bhakti Siddhānta Sarasvatī Goswāmī Ṭhākur kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Jay Om Viṣṇupād Śrīla Gaura Kiśor Dās Bābājī Mahārāj kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Jay Om Viṣṇupād Śrīla Sachchidānanda Bhakti Vinod Ṭhākur kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Jay Om Viṣṇupād Śrīla Jagannath Dās Bābājī Mahārāj kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrīla Baladev Vidyābhūṣaṇ kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrīla Viśvanāth Chakravartī Ṭhākur kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Narottam Śyāmānanda Śrīnivās Āchārya Prabhu-traya kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrīla Vṛndāvan Dās Ṭhākur kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrīla Kṛṣṇa Dās Kavirāj Goswāmī kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Rūpa, Sanātan, Bhaṭṭa Raghunāth, Śrī Jīva, Gopāl
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Bhaṭṭa, Dās Raghunāth, Ṣaḍ Goswāmī Prabhu kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Rūpānuga Guru-varga kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Namāchārya Śrīla Hari Dās Ṭhākur kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrīla Svarūp Dāmodar, Śrīla Rāy Rāmānandādi Śrī Gaura-śakti-varga kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Premse Kaho Śrī Kṛṣṇa Chaitanya Prabhu Nityānanda Śrī Advaita Gadadhar Śrīvāsādi Gaura-bhakta-vṛnda kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Sapārṣad Śrī Nityānanda Prabhu kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Sapārṣad Śrīman Mahāprabhu kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Nabadwip Dham kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Gaṅgā Yamunā kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Vṛndāvan Dham kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Śrī Rādhā-Kṛṣṇa Gopa Gopī Śyām Kuṇḍa Rādhā Kuṇḍa Go Girirāj Govardhan kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Bhakti Devī Vṛndā Devī Tulasī Devī kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Puruṣottam Dhām kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Baladev Subhadrā Jagannāth Jīu kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Grantharāj Śrīmad Bhāgavatam Śrī Chaitanya-charitāmṛta kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Ākar Maṭh Rāj Śrī Chaitanya Maṭh kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Tadīya Śākhā Maṭh kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Chaitanya Sāraswat Maṭh kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Śrī Chaitanya Śrīdhar Govinda Sevā Ashram kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Viśva-vyāpī Tadīya Śākhā Maṭh kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Ananta-koṭī Vaiṣṇava-vṛnda kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Samaveta Vaiṣṇava-vṛnda kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Hari-nām-saṅkīrtan kī jay!
+                        </li>
+                    
+                
+                    
+                        <br>
+                    
+                
+                    
+                        <li class="SongVerse__line ">
+                            Nitāi Gaura Premānande! Haribol!
+                        </li>
+                    
+                
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -843,7 +847,7 @@
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -896,20 +900,6 @@
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1119,6 +1109,51 @@
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

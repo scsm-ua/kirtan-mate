@@ -112,7 +112,13 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -214,13 +220,9 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar traducción
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar traducción"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses word-by-word-mode">
@@ -237,25 +239,27 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        chaudda-śata sāta-śake māsa je phālgun
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            chaudda-śata sāta-śake māsa je phālgun
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -269,7 +273,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -296,25 +300,27 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        siṁha-rāśi, siṁha-lagna, ucha graha-gaṇ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            siṁha-rāśi, siṁha-lagna, ucha graha-gaṇ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ṣaḍa-varga, aṣṭa-varga, sarva sulakṣaṇ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ṣaḍa-varga, aṣṭa-varga, sarva sulakṣaṇ
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -328,7 +334,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -355,25 +361,27 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        a-kalaṅka gaurachandra dilā daraśan
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            a-kalaṅka gaurachandra dilā daraśan
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sa-kalaṅka chandre āra kon prayojan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sa-kalaṅka chandre āra kon prayojan
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -387,7 +395,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -414,25 +422,27 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        eto jāni’ rāhu koilo chandrera grahaṇ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            eto jāni’ rāhu koilo chandrera grahaṇ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ‘kṛṣṇa’ ‘kṛṣṇa’ ‘hari’ nāme bhāse tri-bhuvan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ‘kṛṣṇa’ ‘kṛṣṇa’ ‘hari’ nāme bhāse tri-bhuvan
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -446,7 +456,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -473,25 +483,27 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jaya jaya dhvani hailo sakala bhuvan
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jaya jaya dhvani hailo sakala bhuvan
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            chamatkāra haiyā loka bhāve mane man
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        chamatkāra haiyā loka bhāve mane man
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -505,7 +517,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -532,25 +544,27 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jagat bhariyā loka bole—‘hari’ ‘hari’
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jagat bhariyā loka bole—‘hari’ ‘hari’
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sei-kṣaṇe gaurakṛṣṇa bhūme avatari
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sei-kṣaṇe gaurakṛṣṇa bhūme avatari
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -564,7 +578,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -591,25 +605,27 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        prasanna ha-ila saba jagatera man
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            prasanna ha-ila saba jagatera man
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ‘hari’ boli’ hinduke hāsya karaye javan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ‘hari’ boli’ hinduke hāsya karaye javan
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -623,7 +639,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -650,25 +666,27 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ‘hari’ boli’ nārī-goṇ dei hulāhuli
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ‘hari’ boli’ nārī-goṇ dei hulāhuli
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            svarge vādya-nṛtya kare deva kutūhalī
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        svarge vādya-nṛtya kare deva kutūhalī
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -682,7 +700,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -709,25 +727,27 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        prasanna haila daśa dik, prasanna nadījal
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            prasanna haila daśa dik, prasanna nadījal
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sthāvara-jaṅgama haila ānande vihvala
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sthāvara-jaṅgama haila ānande vihvala
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -741,7 +761,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -768,37 +788,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nadīyā-udayagiri,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pūrṇachandra gaurahari,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nadīyā-udayagiri,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pūrṇachandra gaurahari,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            kṛpā kori’ ho-ilo udoy
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        kṛpā kori’ ho-ilo udoy
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pāpa-tamaḥ hoilo nāśa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tri-jagatera ullāsa,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            jagabhari’ hari-dhvani hoy
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pāpa-tamaḥ hoilo nāśa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tri-jagatera ullāsa,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        jagabhari’ hari-dhvani hoy
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -812,7 +834,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -839,37 +861,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sei-kāle nijālaya,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>uṭhiyā advaita rāya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sei-kāle nijālaya,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>uṭhiyā advaita rāya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            nṛtya kore ānandita-mane
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        nṛtya kore ānandita-mane
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            haridāse layā saṅge,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>huṅkāra-kīrttana-raṅge
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            kene nāche, keha nāhi jāne
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        haridāse layā saṅge,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>huṅkāra-kīrttana-raṅge
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        kene nāche, keha nāhi jāne
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -883,7 +907,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -910,37 +934,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        dekhi’ uparāga hāsi’,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śīghra gaṅgā-ghāṭe āsi’
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dekhi’ uparāga hāsi’,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śīghra gaṅgā-ghāṭe āsi’
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            ānande karila gaṅgā-snāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        ānande karila gaṅgā-snāna
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pāyā uparāga-chale,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>āpanāra mana-bale,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            brāhmaṇere dila nānā dāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pāyā uparāga-chale,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>āpanāra mana-bale,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        brāhmaṇere dila nānā dāna
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -954,7 +980,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -981,37 +1007,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jagata ānandamay,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dekhi’ mone sa-vismoy
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jagata ānandamay,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dekhi’ mone sa-vismoy
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            ṭhāreṭhore kahe haridāsa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        ṭhāreṭhore kahe haridāsa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tomāra aichana raṅga,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>mora mana parasanna,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            dekhi—kichu kārjye āche bhāsa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tomāra aichana raṅga,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>mora mana parasanna,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        dekhi—kichu kārjye āche bhāsa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1025,7 +1053,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1052,37 +1080,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        āchāryyaratna, śrīvāsa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>haila mane sukhollāsa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            āchāryyaratna, śrīvāsa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>haila mane sukhollāsa
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            jāi’ snāna koilo gaṅgā-jole
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        jāi’ snāna koilo gaṅgā-jole
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ānande vihvala man,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kare hari-saṅkīrttana
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            nānā dāna kaila mana-bole
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ānande vihvala man,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kare hari-saṅkīrttana
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        nānā dāna kaila mana-bole
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1096,7 +1126,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1123,37 +1153,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ei mata bhakta-tati,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jā̐ra jei deśe sthiti,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ei mata bhakta-tati,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jā̐ra jei deśe sthiti,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            tāhā̐ tāhā̐ pāyā mana-bole
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        tāhā̐ tāhā̐ pāyā mana-bole
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nāche, kare saṅkīrttana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ānande vihvala mana,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            dāna kore grahaṇera chale
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nāche, kare saṅkīrttana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ānande vihvala mana,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        dāna kore grahaṇera chale
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1167,7 +1199,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1194,37 +1226,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        brāhmaṇa-sajjana-nārī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nānā-dravye thālī bhari’
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            brāhmaṇa-sajjana-nārī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nānā-dravye thālī bhari’
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            āilā sabe jautuka la-iyā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        āilā sabe jautuka la-iyā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jena kā̐chā-soṇā-dyuti,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dekhi’ bālakera mūrtti,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            āśīrvāda kare sukha pāyā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jena kā̐chā-soṇā-dyuti,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dekhi’ bālakera mūrtti,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        āśīrvāda kare sukha pāyā
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1238,7 +1272,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1265,37 +1299,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sāvitrī, gaurī, sarasvatī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śachī, rambhā, arundhatī,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sāvitrī, gaurī, sarasvatī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śachī, rambhā, arundhatī,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            āra jata deva-nārīgoṇ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        āra jata deva-nārīgoṇ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nānā-dravye pātra bhari’,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>brāhmaṇīra veśa dhari’,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            āsi’ sabe karen daraśan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nānā-dravye pātra bhari’,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>brāhmaṇīra veśa dhari’,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        āsi’ sabe karen daraśan
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1309,7 +1345,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1336,37 +1372,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        antarīkṣe deva-goṇ,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gandharvva, siddha, chāraṇa,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            antarīkṣe deva-goṇ,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gandharvva, siddha, chāraṇa,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            stuti-nṛtya kare vādya-gīta
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        stuti-nṛtya kare vādya-gīta
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            narttaka, vādaka, bhāṭa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>navadvīpe jāra nāṭa,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            sabe āsi’ nāche pāyā prīta
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        narttaka, vādaka, bhāṭa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>navadvīpe jāra nāṭa,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        sabe āsi’ nāche pāyā prīta
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1380,7 +1418,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1407,37 +1445,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kebā āse kebā jāya,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kebā nāche kebā gāya,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kebā āse kebā jāya,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kebā nāche kebā gāya,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            sambhālite nāre kāra bolo
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        sambhālite nāre kāra bolo
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            khaṇḍileka duḥkha-śoka,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pramoda-pūrita loka,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            miśra hailā ānande vihvala
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        khaṇḍileka duḥkha-śoka,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pramoda-pūrita loka,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        miśra hailā ānande vihvala
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1451,7 +1491,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1478,37 +1518,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        āchāryyaratna, śrīnivāsa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jagannātha-miśra-pāśa,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            āchāryyaratna, śrīnivāsa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jagannātha-miśra-pāśa,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            āsi’ tā̐re kare sāvadhāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        āsi’ tā̐re kare sāvadhāna
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            karāila jātakarma,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>je āchila vidhi-dharma,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            tabe miśra kare nānā dāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        karāila jātakarma,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>je āchila vidhi-dharma,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        tabe miśra kare nānā dāna
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1522,7 +1564,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1549,37 +1591,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jautuka pāila jata,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ghare vā āchila kata,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jautuka pāila jata,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ghare vā āchila kata,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            saba dhana vipre dila dāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        saba dhana vipre dila dāna
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jata narttaka, gāyana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhāṭa, akiñchana jana,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            dhana diyā kaila sabāra māna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jata narttaka, gāyana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhāṭa, akiñchana jana,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        dhana diyā kaila sabāra māna
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1593,7 +1637,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1620,37 +1664,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrīvāsera brāhmaṇī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nāma tā̐ra ‘mālinī’,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrīvāsera brāhmaṇī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nāma tā̐ra ‘mālinī’,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            āchāryyaratnera patnī-saṅge
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        āchāryyaratnera patnī-saṅge
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sindūra, haridrā, taila,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>khai, kalā, nārikela,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            diyā pūje nārīgaṇa raṅge
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sindūra, haridrā, taila,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>khai, kalā, nārikela,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        diyā pūje nārīgaṇa raṅge
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1664,7 +1710,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1691,37 +1737,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        advaita-āchāryya-bhārjyā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jagat-pūjitā ārjyā,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            advaita-āchāryya-bhārjyā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jagat-pūjitā ārjyā,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            nāma tā̐ra ‘sītā ṭhākurāṇī’
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        nāma tā̐ra ‘sītā ṭhākurāṇī’
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            āchārjyera ājñā pāyā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gela upahāra laya,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            dekhite bālaka-śiromaṇi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        āchārjyera ājñā pāyā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gela upahāra laya,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        dekhite bālaka-śiromaṇi
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1735,7 +1783,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1762,37 +1810,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        suvarṇera kaḍi-bauli,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>rajatamudrā-pāśuli,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            suvarṇera kaḍi-bauli,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>rajatamudrā-pāśuli,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            suvarṇera aṅgada, kaṅkaṇ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        suvarṇera aṅgada, kaṅkaṇ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            du-bāhute divya śankha,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>rajatera malabaṅka,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            svarṇa-mudrāra nānā hāragaṇa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        du-bāhute divya śankha,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>rajatera malabaṅka,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        svarṇa-mudrāra nānā hāragaṇa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1806,7 +1856,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1833,37 +1883,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vyāghra-nakha hema-jaḍi,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kaṭi-paṭṭasūtra-ḍorī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vyāghra-nakha hema-jaḍi,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kaṭi-paṭṭasūtra-ḍorī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            hasta-padera jata ābharaṇ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        hasta-padera jata ābharaṇ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            chitra-varṇa paṭṭa-sāḍī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>buni phata paṭṭapāḍī,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            svarṇa-raupya-mudrā bahu-dhana
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        chitra-varṇa paṭṭa-sāḍī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>buni phata paṭṭapāḍī,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        svarṇa-raupya-mudrā bahu-dhana
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1877,7 +1929,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1904,37 +1956,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        durvvā, dhānya, gorochana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>haridrā, kuṅkuma, chandana,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            durvvā, dhānya, gorochana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>haridrā, kuṅkuma, chandana,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            maṅgal-dravya pātra bhariyā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        maṅgal-dravya pātra bhariyā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vastra-gupta dolā chaḍi’<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>saṅge layā dāsī cheḍī,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            vastrālaṅkāra peṭāri bhariyā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vastra-gupta dolā chaḍi’<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>saṅge layā dāsī cheḍī,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        vastrālaṅkāra peṭāri bhariyā
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -1948,7 +2002,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1975,37 +2029,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        bhakṣya, bhojya, upahāra,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>saṅge laila bahu bhāra,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhakṣya, bhojya, upahāra,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>saṅge laila bahu bhāra,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śachī gṛhe haila upanīta
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śachī gṛhe haila upanīta
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dekhiyā bālaka-ṭhām,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sākṣāt gokula-kān,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            varṇa-mātra dekhi viparīta
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dekhiyā bālaka-ṭhām,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sākṣāt gokula-kān,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        varṇa-mātra dekhi viparīta
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2019,7 +2075,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2046,37 +2102,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sarvva aṅga—sunirmāṇa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>suvarṇa-pratimā-bhāna,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sarvva aṅga—sunirmāṇa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>suvarṇa-pratimā-bhāna,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            sarva aṅga—sulakṣaṇamay
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        sarva aṅga—sulakṣaṇamay
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bālakera divya jyoti,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dekhi’ pāila bahu prīti,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            vātsalyete dravila hṛday
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bālakera divya jyoti,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dekhi’ pāila bahu prīti,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        vātsalyete dravila hṛday
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2090,7 +2148,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2117,37 +2175,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        durvvā, dhānya, dila śirṣe,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kaila bahu āśīṣe,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            durvvā, dhānya, dila śirṣe,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kaila bahu āśīṣe,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            chirajīvī hao dui bhāi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        chirajīvī hao dui bhāi
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ḍākinī-śā̐khinī haite,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śaṅkā upajila chite,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            ḍare nāma thuila ‘nimāi’
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ḍākinī-śā̐khinī haite,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śaṅkā upajila chite,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        ḍare nāma thuila ‘nimāi’
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2161,7 +2221,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2188,37 +2248,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        putramātā-snānadine,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dila vastra vibhūṣaṇe,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            putramātā-snānadine,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dila vastra vibhūṣaṇe,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            putra-saha miśrere sammāni’
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        putra-saha miśrere sammāni’
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śachī-miśrera pūjā layā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>manete hariṣa hayā,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            ghore āilā sitā ṭhākurāṇī
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śachī-miśrera pūjā layā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>manete hariṣa hayā,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        ghore āilā sitā ṭhākurāṇī
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2232,7 +2294,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2259,37 +2321,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        aiche śachī-jagannāth,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>putra payā lakṣmīnāth,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            aiche śachī-jagannāth,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>putra payā lakṣmīnāth,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            pūrṇa haila sakala vāñchita
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        pūrṇa haila sakala vāñchita
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dhana-dhānye bhare ghara,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>lokamānya kalevara,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            dine dine hay ānandita
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dhana-dhānye bhare ghara,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>lokamānya kalevara,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        dine dine hay ānandita
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2303,7 +2367,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2330,37 +2394,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        miśra—vaiṣṇava, śānta,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>alampaṭa, śuddha, dānta,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            miśra—vaiṣṇava, śānta,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>alampaṭa, śuddha, dānta,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            dhana-bhoge nāhi abhimāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        dhana-bhoge nāhi abhimāna
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            putrera prabhāve jata,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dhana āsi’ mile, tata,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            visnu-prīte dvije dena dāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        putrera prabhāve jata,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>dhana āsi’ mile, tata,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        visnu-prīte dvije dena dāna
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2374,7 +2440,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2401,37 +2467,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        lagna gaṇi’ harṣamati,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nīlāmbara chakravartī,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            lagna gaṇi’ harṣamati,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nīlāmbara chakravartī,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            gupte kichu kahila miśrere
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        gupte kichu kahila miśrere
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mahāpuruṣera chihna,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>lagne aṅge bhinna bhinna,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            dekhi, —ei tāribe saṁsāre
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mahāpuruṣera chihna,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>lagne aṅge bhinna bhinna,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        dekhi, —ei tāribe saṁsāre
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2445,7 +2513,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2472,37 +2540,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        aiche prabhu śachī-ghare,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kṛpāy kaila avatāre
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            aiche prabhu śachī-ghare,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kṛpāy kaila avatāre
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            jei ihā karaye śravaṇa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        jei ihā karaye śravaṇa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gaura-prabhu doyāmay,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tā̐re hoyena saday,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            sei pāya tā̐hāra charaṇa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gaura-prabhu doyāmay,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tā̐re hoyena saday,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        sei pāya tā̐hāra charaṇa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2516,7 +2586,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2543,37 +2613,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        pāiyā mānuṣa janma,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>je nā śune gaura-guṇa,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pāiyā mānuṣa janma,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>je nā śune gaura-guṇa,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            hena janma tāra vyartha haila
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        hena janma tāra vyartha haila
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pāiyā amṛtadhunī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>piye viṣa-gartta-pāni
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            janmiyā se kene nāhi maila
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pāiyā amṛtadhunī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>piye viṣa-gartta-pāni
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        janmiyā se kene nāhi maila
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2587,7 +2659,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2614,37 +2686,39 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-chaitanya-nityānanda,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>āchāryya advaitachandra,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-chaitanya-nityānanda,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>āchāryya advaitachandra,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            svarūpa-rūpa-raghunātha-dāsa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        svarūpa-rūpa-raghunātha-dāsa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ihā-sabāra śrī-charaṇa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śire vandi nija-dhana,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            janma-līlā gāila kṛṣṇadāsa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ihā-sabāra śrī-charaṇa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śire vandi nija-dhana,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        janma-līlā gāila kṛṣṇadāsa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -2658,7 +2732,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -2907,7 +2981,7 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -2960,20 +3034,6 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -3113,6 +3173,51 @@ paurṇamāsīra sandhyā-kāle haile śubha-kṣaṇ..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

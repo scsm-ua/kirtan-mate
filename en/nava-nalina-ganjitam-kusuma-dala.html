@@ -111,7 +111,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -205,13 +211,9 @@
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -222,151 +224,153 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nava-nalina-gañjitaṁ<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kusuma-dala-maṇḍitaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nava-nalina-gañjitaṁ<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kusuma-dala-maṇḍitaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            pāda-yugam-abhaya-varadānam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        pāda-yugam-abhaya-varadānam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kanaka-ghana-ninditaṁ vapura-mara-vanditaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            naṭana-gati-gaurava-nidānam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kanaka-ghana-ninditaṁ vapura-mara-vanditaṁ
-                    </li>
+                    
+                        <br>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhaje śrīdhara-svāminam-aniśam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        naṭana-gati-gaurava-nidānam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śarada-vidhu-nindi-mukha- padma-mati-śobhanaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            gopī-tilaka-charchita-subhālam
+                        </li>
+                    
                 
-                    <br>
+                    
+                        <br>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            gamana-jita-vāraṇaṁ<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śamana-bhaya-tāraṇaṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhaje śrīdhara-svāminam-aniśam
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            prakṛti-ruchi-nindi-kṛta-veśam
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            prakṛti-ruchi-nambhrama-suveśam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śarada-vidhu-nindi-mukha- padma-mati-śobhanaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            phulla-kara-pallavaṁ<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhakta-jana-vallabhaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tuṅga-pṛthulaṁ hṛdaya-deśam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        gopī-tilaka-charchita-subhālam
-                    </li>
+                    
+                        <br>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            gaura-puraṭa-saurabhaṁ kṛṣṇa-puraṭa-gauravaṁ
+                        </li>
+                    
                 
-                    <br>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            vibudha-kula-padma-naliśam
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhakta-kula-daṇḍanaṁ bhaṇḍa-mata-khaṇḍanaṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gamana-jita-vāraṇaṁ<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śamana-bhaya-tāraṇaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhakta-kula-nandana-yatīśam
+                        </li>
+                    
                 
-            
+                    
+                        <br>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        prakṛti-ruchi-nindi-kṛta-veśam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tribhuvana-nivāsine<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kṛṣṇam-upadeśinaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            asura-kula-dāmbhika-kṛtāntam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        prakṛti-ruchi-nambhrama-suveśam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            naumi budha-nāyakaṁ parama-gati-dāyakaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            mama śaraṇa-maraṇa-gaṇa-chintyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        phulla-kara-pallavaṁ<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhakta-jana-vallabhaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tuṅga-pṛthulaṁ hṛdaya-deśam
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        gaura-puraṭa-saurabhaṁ kṛṣṇa-puraṭa-gauravaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        vibudha-kula-padma-naliśam
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhakta-kula-daṇḍanaṁ bhaṇḍa-mata-khaṇḍanaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhakta-kula-nandana-yatīśam
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        tribhuvana-nivāsine<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kṛṣṇam-upadeśinaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        asura-kula-dāmbhika-kṛtāntam
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        naumi budha-nāyakaṁ parama-gati-dāyakaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        mama śaraṇa-maraṇa-gaṇa-chintyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -397,7 +401,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -428,7 +432,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -459,7 +463,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -708,7 +712,7 @@
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -761,20 +765,6 @@
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -879,6 +869,51 @@
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

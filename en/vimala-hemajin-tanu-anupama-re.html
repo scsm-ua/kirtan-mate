@@ -113,7 +113,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -207,13 +213,9 @@
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -230,39 +232,41 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vimala hemajin<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tanu anupama re!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vimala hemajin<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tanu anupama re!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tāhe śobhe nānā phuladāma
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tāhe śobhe nānā phuladāma
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kadamba keśara<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jini ektī pulaka re!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tāra mājhe bindu bindu ghāma
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kadamba keśara<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jini ektī pulaka re!
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tāra mājhe bindu bindu ghāma
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -289,39 +293,41 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jini’ madamatta hāti<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gamana manthara ati
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jini’ madamatta hāti<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gamana manthara ati
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhāvāveśe ḍhuli ḍhuli jāya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhāvāveśe ḍhuli ḍhuli jāya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            aruṇa-vasana chhobi<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jini prabhātera robi
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            gorā-aṅge laharī khelāya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        aruṇa-vasana chhobi<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jini prabhātera robi
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        gorā-aṅge laharī khelāya
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -348,39 +354,41 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        chalite nā pāre gorā-<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>chā̐d go̐sāi re
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            chalite nā pāre gorā-<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>chā̐d go̐sāi re
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bolite nā pāre ādha-bola
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bolite nā pāre ādha-bola
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhāvete āveśa hoiyā<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>hari hari bolāiyā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            āchaṇḍāle dhari’ deya kola
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhāvete āveśa hoiyā<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>hari hari bolāiyā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        āchaṇḍāle dhari’ deya kola
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -407,39 +415,41 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        e sukha-sampada-kāle<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gorā nā bhajinu hele
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            e sukha-sampada-kāle<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gorā nā bhajinu hele
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            heno pade nā korinu āśa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        heno pade nā korinu āśa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-kṛṣṇa-chaitanya-chandra ṭhākura śrī-nityānanda
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            guṇa gāya vṛndāvana dāsa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śrī-kṛṣṇa-chaitanya-chandra ṭhākura śrī-nityānanda
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        guṇa gāya vṛndāvana dāsa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -688,7 +698,7 @@
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -741,20 +751,6 @@
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -929,6 +925,51 @@
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

@@ -110,7 +110,13 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -214,13 +220,9 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -237,39 +239,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nija-pati-bhuja-daṇḍa-chchhatra-bhāvaṁ prapadya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nija-pati-bhuja-daṇḍa-chchhatra-bhāvaṁ prapadya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            atula-pṛthula-śaila-śreṇi-bhūpa priyaṁ me
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        atula-pṛthula-śaila-śreṇi-bhūpa priyaṁ me
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -296,39 +300,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        pramada-madana-līlāḥ kandare kandare te
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pramada-madana-līlāḥ kandare kandare te
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            rachayati nava-yūnor dvandvam asminn amandam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rachayati nava-yūnor dvandvam asminn amandam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            iti kila kalanārthaṁ lagnakas tad-dvayor me
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        iti kila kalanārthaṁ lagnakas tad-dvayor me
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -355,39 +361,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        anupama-maṇi-vedī-ratna-siṁhāsanorvī-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            anupama-maṇi-vedī-ratna-siṁhāsanorvī-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ruha-jhara-dara-sānu-droṇi-saṅgheṣu raṅgaiḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ruha-jhara-dara-sānu-droṇi-saṅgheṣu raṅgaiḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            saha bala-sakhibhiḥ saṅkhelayan sva-priyaṁ me
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        saha bala-sakhibhiḥ saṅkhelayan sva-priyaṁ me
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -414,39 +422,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        rasa-nidhi-nava-yūnoḥ sākṣiṇīṁ dāna-keler
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rasa-nidhi-nava-yūnoḥ sākṣiṇīṁ dāna-keler
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dyuti-parimala-viddhāṁ śyāma-vedīṁ prakāśya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dyuti-parimala-viddhāṁ śyāma-vedīṁ prakāśya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rasika-vara-kulānāṁ modam āsphālayan me
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rasika-vara-kulānāṁ modam āsphālayan me
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -473,39 +483,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        hari-dayitam apūrvaṁ rādhikā-kuṇḍam ātma-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hari-dayitam apūrvaṁ rādhikā-kuṇḍam ātma-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            priya-sakham iha kaṇṭhe narmaṇāliṅgya guptaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        priya-sakham iha kaṇṭhe narmaṇāliṅgya guptaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nava-yuva-yuga-khelās tatra paśyan raho me
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nava-yuva-yuga-khelās tatra paśyan raho me
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -532,39 +544,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sthala-jala-tala-śaṣpair bhūruhach-chhāyayā cha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sthala-jala-tala-śaṣpair bhūruhach-chhāyayā cha
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prati-padam anukālaṁ hanta samvardhayan gāḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prati-padam anukālaṁ hanta samvardhayan gāḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tri-jagati nija-gotraṁ sārthakaṁ khyāpayan me
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tri-jagati nija-gotraṁ sārthakaṁ khyāpayan me
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -591,39 +605,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sura-pati-kṛta-dīrgha-drohato goṣṭha-rakṣāṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sura-pati-kṛta-dīrgha-drohato goṣṭha-rakṣāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tava nava-gṛha-rūpasyāntare kurvataiva
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tava nava-gṛha-rūpasyāntare kurvataiva
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            agha-baka-ripuṇochchhair datta-māna drutaṁ me
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        agha-baka-ripuṇochchhair datta-māna drutaṁ me
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -650,39 +666,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        giri-nṛpa hari-dāsa-śreṇi-varyeti nāmā-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            giri-nṛpa hari-dāsa-śreṇi-varyeti nāmā-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            mṛtam idam uditaṁ śrī-rādhikā-vaktra-chandrāt
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mṛtam idam uditaṁ śrī-rādhikā-vaktra-chandrāt
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vraja-nava-tilakatve kḷpta vedaiḥ sphuṭaṁ me
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vraja-nava-tilakatve kḷpta vedaiḥ sphuṭaṁ me
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -709,39 +727,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nija-jana-yuta-rādhā-kṛṣṇa-maitrī-rasākta-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nija-jana-yuta-rādhā-kṛṣṇa-maitrī-rasākta-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vraja-nara-paśu-pakṣi-vrāta-saukhyaika-dātaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vraja-nara-paśu-pakṣi-vrāta-saukhyaika-dātaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            agaṇita-karuṇatvān mām urīkṛtya tāntaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        agaṇita-karuṇatvān mām urīkṛtya tāntaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -768,39 +788,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nirupadhi-karuṇena śrī-śachī-nandanena
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nirupadhi-karuṇena śrī-śachī-nandanena
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tvayi kapaṭi-śaṭho ’pi tvat-priyeṇārpito ’smi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tvayi kapaṭi-śaṭho ’pi tvat-priyeṇārpito ’smi
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            iti khalu mama yogyāyogyatāṁ tām agṛhṇan
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nija-nikaṭa-nivāsaṁ dehi govardhana tvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        iti khalu mama yogyāyogyatāṁ tām agṛhṇan
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nija-nikaṭa-nivāsaṁ dehi govardhana tvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -827,39 +849,41 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        rasada-daśakam asya śrīla-govardhanasya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rasada-daśakam asya śrīla-govardhanasya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kṣiti-dhara-kula-bhartur yaḥ prayatnād adhīte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kṣiti-dhara-kula-bhartur yaḥ prayatnād adhīte
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa sapadi sukhade ’smin vāsam āsādya sākṣāch
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            chhubhada-yugala-sevā-ratnam āpnoti tūrṇam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sa sapadi sukhade ’smin vāsam āsādya sākṣāch
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        chhubhada-yugala-sevā-ratnam āpnoti tūrṇam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1108,7 +1132,7 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1161,20 +1185,6 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1244,6 +1254,51 @@ pratihata-mada-dhṛṣṭoddaṇḍa-devendra-garva..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

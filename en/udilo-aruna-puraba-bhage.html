@@ -146,7 +146,13 @@ dvija-maṇi gorā amani jāge,..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -244,13 +250,9 @@ dvija-maṇi gorā amani jāge,..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -267,39 +269,41 @@ dvija-maṇi gorā amani jāge,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        udilo aruṇa pūraba-bhāge,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            udilo aruṇa pūraba-bhāge,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dvija-maṇi gorā amani jāge,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dvija-maṇi gorā amani jāge,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhakata-samūha loiyā sāthe,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            gelā nagara-brāje
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhakata-samūha loiyā sāthe,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        gelā nagara-brāje
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -326,39 +330,41 @@ dvija-maṇi gorā amani jāge,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ‘tāthai tāthai’ bājalo khol,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ‘tāthai tāthai’ bājalo khol,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ghana ghana tāhe jhāṅjera rol,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ghana ghana tāhe jhāṅjera rol,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            preme ḍhala ḍhala sonāra aṅga,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            charaṇe nūpura bāje
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        preme ḍhala ḍhala sonāra aṅga,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        charaṇe nūpura bāje
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -385,39 +391,41 @@ dvija-maṇi gorā amani jāge,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        mukunda mādhava jādava hari,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mukunda mādhava jādava hari,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bolore bolore vadana bhori’,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bolore bolore vadana bhori’,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            miche nida-vaśe gelo re rāti,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            divasa śorīra sāje
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        miche nida-vaśe gelo re rāti,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        divasa śorīra sāje
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -444,39 +452,41 @@ dvija-maṇi gorā amani jāge,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        emona durllabha mānava-deho,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            emona durllabha mānava-deho,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            pāiyā ki kara bhāva nā keho,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pāiyā ki kara bhāva nā keho,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ebe nā bhajile yaśodā-suta,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            charame poḍibe lāje
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ebe nā bhajile yaśodā-suta,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        charame poḍibe lāje
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -503,39 +513,41 @@ dvija-maṇi gorā amani jāge,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        udita tapana hoile asta,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            udita tapana hoile asta,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dina gelo-boli’ hoibe vyasta,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dina gelo-boli’ hoibe vyasta,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tobe keno ebe alasa hoy,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            nā bhaja hṛdoya-rāje
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tobe keno ebe alasa hoy,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        nā bhaja hṛdoya-rāje
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -562,39 +574,41 @@ dvija-maṇi gorā amani jāge,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jīvana anitya jānaha sār,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jīvana anitya jānaha sār,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tāhe nānā-vidha vipada-bhār,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tāhe nānā-vidha vipada-bhār,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nāmāśroya kori’ jatane tumi,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            thākaha āpana kāje
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nāmāśroya kori’ jatane tumi,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        thākaha āpana kāje
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -621,39 +635,41 @@ dvija-maṇi gorā amani jāge,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kṛṣṇa-nāma-sudhā koriyā pān
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kṛṣṇa-nāma-sudhā koriyā pān
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            juḍāo bhakativinoda-prāṇ,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        juḍāo bhakativinoda-prāṇ,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nāma vinā kichu nāhiko āro,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            chaudda-bhuvana-mājhe
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nāma vinā kichu nāhiko āro,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        chaudda-bhuvana-mājhe
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -680,39 +696,41 @@ dvija-maṇi gorā amani jāge,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jīvera kalyāṇa-sādhana-kām,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jīvera kalyāṇa-sādhana-kām,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            jagate āsi’ e madhura nām,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jagate āsi’ e madhura nām,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            avidyā-timira-tapana-rūpe,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            hṛd-gagane birāje
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        avidyā-timira-tapana-rūpe,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        hṛd-gagane birāje
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -747,7 +765,7 @@ dvija-maṇi gorā amani jāge,..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-udilo-aruna-jiv"></iframe>
             </div>
@@ -768,7 +786,7 @@ dvija-maṇi gorā amani jāge,..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-utrennee-1"></iframe>
             </div>
@@ -1009,7 +1027,7 @@ dvija-maṇi gorā amani jāge,..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1062,20 +1080,6 @@ dvija-maṇi gorā amani jāge,..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1355,6 +1359,51 @@ dvija-maṇi gorā amani jāge,..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

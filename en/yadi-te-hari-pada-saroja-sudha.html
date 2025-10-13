@@ -125,7 +125,13 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -225,13 +231,9 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -248,39 +250,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        yadi te hari-pāda-saroja-sudhā-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yadi te hari-pāda-saroja-sudhā-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            rasa-pāna-paraṁ hṛdayaṁ satatam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rasa-pāna-paraṁ hṛdayaṁ satatam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            parihṛtya gṛhaṁ kali-bhāva-mayaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        parihṛtya gṛhaṁ kali-bhāva-mayaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -307,39 +311,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        dhana-yauvana-jīvana-rājya-sukhaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dhana-yauvana-jīvana-rājya-sukhaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            a hi nityam anukṣaṇa-nāśa-param
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        a hi nityam anukṣaṇa-nāśa-param
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tyaja grāmya-kathā-sakalaṁ viphalaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tyaja grāmya-kathā-sakalaṁ viphalaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -366,39 +372,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ramaṇī-jana-saṅga-sukhaṁ cha sakhe
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ramaṇī-jana-saṅga-sukhaṁ cha sakhe
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            charame bhaya-daṁ puruṣārtha-haram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        charame bhaya-daṁ puruṣārtha-haram
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hari-nāma-sudhā-rasa-matta-matir
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hari-nāma-sudhā-rasa-matta-matir
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -425,39 +433,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jaḍa-kāvya-raso na hikvya-rasaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jaḍa-kāvya-raso na hikvya-rasaḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kali-pāvana-gaura-raso hi rasaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kali-pāvana-gaura-raso hi rasaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            alam anya-kathādy-anuśīlanayā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        alam anya-kathādy-anuśīlanayā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -484,39 +494,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vṛṣabhānu-sutānvita-vāma-tanuṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vṛṣabhānu-sutānvita-vāma-tanuṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            yamunā-taṭa-nāgara-nanda-sutam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yamunā-taṭa-nāgara-nanda-sutam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            muralī-kala-gīta-vinoda-paraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        muralī-kala-gīta-vinoda-paraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -543,39 +555,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        hari-kīrtana-madhya-gataṁ sva-janaiḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hari-kīrtana-madhya-gataṁ sva-janaiḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            pariveṣṭita-jambunadābha-harim
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pariveṣṭita-jambunadābha-harim
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nija-gauḍa-janaika-kṛpā-jaladhiṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nija-gauḍa-janaika-kṛpā-jaladhiṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -602,39 +616,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        girirāja-sutā-parivīta-gṛhaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            girirāja-sutā-parivīta-gṛhaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nava-khaṇḍa-patiṁ yati-chitta-haram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nava-khaṇḍa-patiṁ yati-chitta-haram
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sura-saṅgha-nutaṁ priyayā sahitaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sura-saṅgha-nutaṁ priyayā sahitaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -661,39 +677,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kali-kukkura-mudgara-bhāva-dharaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kali-kukkura-mudgara-bhāva-dharaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            hari-nāma-mahauṣadha-dāna-param
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hari-nāma-mahauṣadha-dāna-param
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            patitārta-dayārdra-sumūrti-dharaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        patitārta-dayārdra-sumūrti-dharaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -720,39 +738,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ripu-bāndhava-bheda-vihīna-dayā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ripu-bāndhava-bheda-vihīna-dayā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            yad abhīkṣṇam udeti mukhābja-tatau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yad abhīkṣṇam udeti mukhābja-tatau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tam akṛṣṇam iha vraja-rāja-sutam
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tam akṛṣṇam iha vraja-rāja-sutam
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -779,39 +799,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        iha chopaniṣat-parigīta-vibhur
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            iha chopaniṣat-parigīta-vibhur
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dvija-rāja-sutaḥ puraṭābha-hariḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dvija-rāja-sutaḥ puraṭābha-hariḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nija-dhāmani khelati bandhu-yuto
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nija-dhāmani khelati bandhu-yuto
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -838,39 +860,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        avatāra-varaṁ paripūrṇa-kalaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            avatāra-varaṁ paripūrṇa-kalaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            para-tattvam ihātma-vilāsam ayam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        para-tattvam ihātma-vilāsam ayam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vraja-dhāma-rasāmbudhi-gupta-rasaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vraja-dhāma-rasāmbudhi-gupta-rasaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -897,39 +921,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śruti-varṇa-dhanādi na yasya kṛpā-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śruti-varṇa-dhanādi na yasya kṛpā-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            janane balavad-bhajanena vinā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        janane balavad-bhajanena vinā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tam ahaituka-bhāva-pathena sakhe
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tam ahaituka-bhāva-pathena sakhe
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -956,39 +982,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        api nakra-gatau hrada-madhya-gataṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            api nakra-gatau hrada-madhya-gataṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kam amochayad ārta-janaṁ tam ajam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kam amochayad ārta-janaṁ tam ajam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            avichintya-balaṁ śiva-kalpa-taruṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        avichintya-balaṁ śiva-kalpa-taruṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1015,39 +1043,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        surabhīndra-tapaḥ parituṣṭa-manā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            surabhīndra-tapaḥ parituṣṭa-manā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vara-vaṛṇa-dharo harir āvirabhūt
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vara-vaṛṇa-dharo harir āvirabhūt
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tam ajasra-sukhaṁ muni-dhairya-haraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tam ajasra-sukhaṁ muni-dhairya-haraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1074,39 +1104,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        abhilāṣa-chayaṁ tad-abheda-dhiyam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            abhilāṣa-chayaṁ tad-abheda-dhiyam
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            aśubhaṁ cha śubhaṁ tyaja sarvam ida
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        aśubhaṁ cha śubhaṁ tyaja sarvam ida
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            anukūlatayā priya-sevanayā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        anukūlatayā priya-sevanayā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1133,39 +1165,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        hari-sevaka-sevana-dharma-paro
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hari-sevaka-sevana-dharma-paro
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            hari-nāma-rasāmṛta-pāna-rataḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hari-nāma-rasāmṛta-pāna-rataḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nati-dainya-dayā-para-māna-yuto
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nati-dainya-dayā-para-māna-yuto
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1192,39 +1226,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vada yādava mādhava kṛṣṇa hare
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vada yādava mādhava kṛṣṇa hare
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vada rāma janārdana keśava he
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vada rāma janārdana keśava he
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vṛṣabhānusutā-priya-nātha sadā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vṛṣabhānusutā-priya-nātha sadā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1251,39 +1287,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vada yāmuna-tīra-vanādri-pate
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vada yāmuna-tīra-vanādri-pate
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vada gokula-kānana-puñja-rave
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vada gokula-kānana-puñja-rave
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vada rāsa-rasāyana gaura-hare
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vada rāsa-rasāyana gaura-hare
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1310,39 +1348,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        chala gaura-vanaṁ nava-khaṇḍa-mayaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            chala gaura-vanaṁ nava-khaṇḍa-mayaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            paṭha gaura-hareś charitāni mudā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        paṭha gaura-hareś charitāni mudā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            luṭha gaura-padāṅkita-gāṅga-taṭaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        luṭha gaura-padāṅkita-gāṅga-taṭaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1369,39 +1409,41 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        smara gaura-gadādhara-keli-kalāṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            smara gaura-gadādhara-keli-kalāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhava gaura-gadādhara-pakṣa-charaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhava gaura-gadādhara-pakṣa-charaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śṛṇu gaura-gadādhara-chāru-kathāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja godruma-kānana-kuñja-vidhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śṛṇu gaura-gadādhara-chāru-kathāṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja godruma-kānana-kuñja-vidhum
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1436,7 +1478,7 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fmadhusudan-maharaj-jadite"></iframe>
             </div>
@@ -1677,7 +1719,7 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1730,20 +1772,6 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1813,6 +1841,51 @@ rasa-pāna-paraṁ hṛdayaṁ satatam..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

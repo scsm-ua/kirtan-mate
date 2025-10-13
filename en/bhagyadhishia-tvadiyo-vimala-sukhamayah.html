@@ -111,7 +111,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -205,13 +211,9 @@
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -228,63 +230,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        bhāgyādhīśa! tvadīyo vimala-sukhamayaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhāgyādhīśa! tvadīyo vimala-sukhamayaḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            samprakāśastu-nityo
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        samprakāśastu-nityo
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gauḍaṁ rāḍhaṁ tathedaṁ tribhūvanam-akhilaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            dhanya-dhanyan chakāra
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gauḍaṁ rāḍhaṁ tathedaṁ tribhūvanam-akhilaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            khaṇḍe kāle dṛśāṁ no gagaṇa-rasamitaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            pūrayitvā budhānā–
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        dhanya-dhanyan chakāra
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mānandaṁ bardhayan vai sva-parijana-gaṇair-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            dhāmani tvaṁ vibhāsi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        khaṇḍe kāle dṛśāṁ no gagaṇa-rasamitaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        pūrayitvā budhānā–
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        mānandaṁ bardhayan vai sva-parijana-gaṇair-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        dhāmani tvaṁ vibhāsi
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -311,63 +315,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        devādyāste ‘khila guṇa-gaṇān-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            devādyāste ‘khila guṇa-gaṇān-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            naiva gātuṁ samarthāḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        naiva gātuṁ samarthāḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kvāhaṁ jīvo ’tiśaya-patito
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            manda-bhāgyo ’ti kṣudraḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kvāhaṁ jīvo ’tiśaya-patito
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bho ārādhya! stavana-viṣaye
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kintu dīnādhamasya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        manda-bhāgyo ’ti kṣudraḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pratyāśā tat-sukaruṇatayā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            vīrachandrābhidastvam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bho ārādhya! stavana-viṣaye
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kintu dīnādhamasya
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        pratyāśā tat-sukaruṇatayā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        vīrachandrābhidastvam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -394,63 +400,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        dṛṣṭvā viśvasya jīvān khalu hari-vimukhān
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dṛṣṭvā viśvasya jīvān khalu hari-vimukhān
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            gaura-devo dayāyā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        gaura-devo dayāyā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rūpaṁ gauḍe bhavastaṁ parama-karuṇayā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            prāhinod- dīna bandho!
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rūpaṁ gauḍe bhavastaṁ parama-karuṇayā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            etaj jñātvā prakāśāt sudina-samudayaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            smāramāśāḥ saharṣā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        prāhinod- dīna bandho!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jayante chaiva māyā-nigaḍa-nikara-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            saṁmochane ’smakamaddhā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        etaj jñātvā prakāśāt sudina-samudayaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        smāramāśāḥ saharṣā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        jayante chaiva māyā-nigaḍa-nikara-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        saṁmochane ’smakamaddhā
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -477,63 +485,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        yadvad-bhānuḥ kiraṇa-nikarair-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yadvad-bhānuḥ kiraṇa-nikarair-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhāsayan viśvam etan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhāsayan viśvam etan
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nāśaṁ kṛtvā nikhila-tamasāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tejasā saṁvibhāti
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nāśaṁ kṛtvā nikhila-tamasāṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kṛtvā nāśaṁ prakṛti-tamasāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            satya-sūryaṁ prakāśya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tejasā saṁvibhāti
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            divya-jñānair-hari-guṇa-gaṇais
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tvan cha tadvad-vibhāsi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kṛtvā nāśaṁ prakṛti-tamasāṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        satya-sūryaṁ prakāśya
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        divya-jñānair-hari-guṇa-gaṇais
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tvan cha tadvad-vibhāsi
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -560,63 +570,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        duḥkhaiḥ pūrṇaṁ vibudha-hṛdayaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            duḥkhaiḥ pūrṇaṁ vibudha-hṛdayaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kāla-dharmāch cha dṛṣṭvā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kāla-dharmāch cha dṛṣṭvā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            māyāvādān kalijakumatān
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            duṣkṛtān śāsitun cha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        māyāvādān kalijakumatān
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            deśe deśe bhramasi vitaran
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            gaura-vāṇīn cha nāma
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        duṣkṛtān śāsitun cha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dhṛtvā deva! tribhuvana-jayaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            vajra-kalpaṁ tridaṇḍam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        deśe deśe bhramasi vitaran
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        gaura-vāṇīn cha nāma
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        dhṛtvā deva! tribhuvana-jayaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        vajra-kalpaṁ tridaṇḍam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -643,63 +655,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        varṣāyāṁ vai sajala-jalado
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            varṣāyāṁ vai sajala-jalado
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            vādayan mandrabheriṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        vādayan mandrabheriṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yadyad viśve bhramati bahudhā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            vāridhārān cha varṣan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yadyad viśve bhramati bahudhā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tadvad-bhūmau bhramasi sagaṇair-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            ghoṣayan gaura-gāthā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        vāridhārān cha varṣan
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nityaṁ divyāmṛta-sukaruṇāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tvaṁ hi deva! pravarṣan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tadvad-bhūmau bhramasi sagaṇair-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        ghoṣayan gaura-gāthā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        nityaṁ divyāmṛta-sukaruṇāṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tvaṁ hi deva! pravarṣan
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -726,63 +740,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-chaitanya-vilāsa-dhāmani
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-chaitanya-vilāsa-dhāmani
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            navadvīpāśrame sundare
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        navadvīpāśrame sundare
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-gaurāṅga-vidhos-tathā vraja yunoḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            sevā-sudhā-sampadam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śrī-gaurāṅga-vidhos-tathā vraja yunoḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tadvan gāṅga-taṭe dayāmaya-vibho!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            sadhūn samāhlā-dayan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        sevā-sudhā-sampadam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-rūpānuga-sampradāya-vibhavānud
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhāsayan bhāsase
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tadvan gāṅga-taṭe dayāmaya-vibho!
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        sadhūn samāhlā-dayan
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-rūpānuga-sampradāya-vibhavānud
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhāsayan bhāsase
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -809,63 +825,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        chārvākānta-kṛtāntako ’khila
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            chārvākānta-kṛtāntako ’khila
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            guruḥ pāṣaṇḍa-śailāśanir
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        guruḥ pāṣaṇḍa-śailāśanir
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bauddha-dhvānta-matānta-dāyaka
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            mahāmārtaṇḍa-chūḍāmaṇiḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bauddha-dhvānta-matānta-dāyaka
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            māyāvāda-mahāvivarta-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            gahaṇāj-jīvān samuddhā-vayan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        mahāmārtaṇḍa-chūḍāmaṇiḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-gaurendu-jaya-dhvajo vijayate
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            svāmin bhavān nityaśaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        māyāvāda-mahāvivarta-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        gahaṇāj-jīvān samuddhā-vayan
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        śrī-gaurendu-jaya-dhvajo vijayate
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        svāmin bhavān nityaśaḥ
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -892,63 +910,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-gaurāṅga-sarasvatī-dhunidhara!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-gaurāṅga-sarasvatī-dhunidhara!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            śrī-bhakti-saṁrak-ṣaka!
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        śrī-bhakti-saṁrak-ṣaka!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-siddhānta-sarasvatī priyavara!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            nyāsīśvara! śrī-guro!
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śrī-siddhānta-sarasvatī priyavara!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            devādyeha! bhavat-śubhodaya-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            dine saṁprārthaye ’haṁ vibho!
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        nyāsīśvara! śrī-guro!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pādābje khalu nitya-bhṛtya iti
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            me kāruṇyam-ātan-vatām
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        devādyeha! bhavat-śubhodaya-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        dine saṁprārthaye ’haṁ vibho!
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        pādābje khalu nitya-bhṛtya iti
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        me kāruṇyam-ātan-vatām
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1197,7 +1217,7 @@
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1250,20 +1270,6 @@
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1368,6 +1374,51 @@
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

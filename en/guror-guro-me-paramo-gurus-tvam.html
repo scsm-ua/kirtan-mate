@@ -112,7 +112,13 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -212,13 +218,9 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -235,39 +237,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        guror guro me paramo gurus tvaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            guror guro me paramo gurus tvaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vareṇya! gaurāṅga-gaṇāgragaṇye
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vareṇya! gaurāṅga-gaṇāgragaṇye
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            prasīda bhṛtye dayitāśrite te
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prasīda bhṛtye dayitāśrite te
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -294,39 +298,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sarasvatī-nāma-jagat-prasiddhaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sarasvatī-nāma-jagat-prasiddhaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prabhuṁ jagatyāṁ patitaika-bandhum
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prabhuṁ jagatyāṁ patitaika-bandhum
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tvam eva deva! prakaṭī-chakāra
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tvam eva deva! prakaṭī-chakāra
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -353,39 +359,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kvachid-vrajāraṇya-vivikta-vāsī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kvachid-vrajāraṇya-vivikta-vāsī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            hṛdi vraja-dvandva-raho-vilāsī
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hṛdi vraja-dvandva-raho-vilāsī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bahir virāgī tv avadhūta-veṣī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bahir virāgī tv avadhūta-veṣī
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -412,39 +420,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kvachit punar gaura-vanāntachārī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kvachit punar gaura-vanāntachārī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            surāpagā-tīra-rajo-vihārī
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        surāpagā-tīra-rajo-vihārī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pavitra-kaupīna-karaṅka-dhārī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pavitra-kaupīna-karaṅka-dhārī
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -471,39 +481,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sadā harer nāma mudā raṭantaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sadā harer nāma mudā raṭantaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            gṛhe gṛhe mādhukarīm aṭantam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gṛhe gṛhe mādhukarīm aṭantam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            namanti devā api yaṁ mahāntaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        namanti devā api yaṁ mahāntaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -530,39 +542,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kvachid-rudantañ cha hasan naṭantaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kvachid-rudantañ cha hasan naṭantaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nijeṣṭa-deva-praṇayābhibhūtam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nijeṣṭa-deva-praṇayābhibhūtam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            namanti gāyantam alaṁ janā tvāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        namanti gāyantam alaṁ janā tvāṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -589,39 +603,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        mahāyaśo-bhaktivinoda-bandho!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mahāyaśo-bhaktivinoda-bandho!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            mahāprabhu-prema-sudhaika-sindho!
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mahāprabhu-prema-sudhaika-sindho!
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            aho jagannātha-dayāspadendo!
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        aho jagannātha-dayāspadendo!
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -648,39 +664,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        samāpya rādhā-vratam uttamaṁ tvam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            samāpya rādhā-vratam uttamaṁ tvam
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            avāpya dāmodara-jāgarāham
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        avāpya dāmodara-jāgarāham
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gato ’si rādhādara-sakhya-riddhiṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gato ’si rādhādara-sakhya-riddhiṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -707,39 +725,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vihāya saṅgaṁ kuliyā-layānāṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vihāya saṅgaṁ kuliyā-layānāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            pragṛhya sevāṁ dayitānugasya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pragṛhya sevāṁ dayitānugasya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vibhāsi māyāpura-mandira-stho
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vibhāsi māyāpura-mandira-stho
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -766,39 +786,41 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sadā nimagno ’py aparādha-paṅke
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sadā nimagno ’py aparādha-paṅke
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            hy ahaitukīm eṣa kṛpāñ cha yāche
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hy ahaitukīm eṣa kṛpāñ cha yāche
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dayāṁ samuddhṛtya vidhehi dīnaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo namo gaura-kiśora tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dayāṁ samuddhṛtya vidhehi dīnaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo namo gaura-kiśora tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1047,7 +1069,7 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1100,20 +1122,6 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1253,6 +1261,51 @@ vareṇya! gaurāṅga-gaṇāgragaṇye..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

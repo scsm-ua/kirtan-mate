@@ -114,7 +114,13 @@ vihita-vahitra-charitram akhedam..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -208,13 +214,9 @@ vihita-vahitra-charitram akhedam..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar tradução
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar tradução"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -231,33 +233,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        pralaya-payodhi-jale dhṛtavān asi vedaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pralaya-payodhi-jale dhṛtavān asi vedaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vihita-vahitra-charitram akhedam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vihita-vahitra-charitram akhedam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-mīna-śarīra jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-mīna-śarīra jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -284,33 +288,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kṣitir iha vipulatare tiṣṭhati tava pṛṣṭhe
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kṣitir iha vipulatare tiṣṭhati tava pṛṣṭhe
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dharaṇi-dharaṇa-kina-chakra-gariṣṭhe
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dharaṇi-dharaṇa-kina-chakra-gariṣṭhe
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-kūrma-śarīra jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-kūrma-śarīra jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -337,33 +343,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vasati daśana-śikhare dharaṇī tava lagnā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vasati daśana-śikhare dharaṇī tava lagnā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śaśini kalaṅka-kaleva nimagnā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śaśini kalaṅka-kaleva nimagnā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-śūkara-rūpa jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-śūkara-rūpa jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -390,33 +398,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        tava kara-kamala-vare nakham adbhuta-śṛṅgaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tava kara-kamala-vare nakham adbhuta-śṛṅgaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dalita-hiraṇyakaśipu-tanu-bhṛṅgam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dalita-hiraṇyakaśipu-tanu-bhṛṅgam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-narahari-rūpa jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-narahari-rūpa jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -443,33 +453,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        chhalayasi vikramaṇe balim adbhuta-vāmana
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            chhalayasi vikramaṇe balim adbhuta-vāmana
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            pada-nakha-nīra-janita-jana-pāvana
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pada-nakha-nīra-janita-jana-pāvana
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-vāmana-rūpa jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-vāmana-rūpa jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -496,27 +508,29 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kṣatriya-rudhira-maye jagad-apagata-pāpaṁ snapayasi payasi śamita-bhava-tāpam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kṣatriya-rudhira-maye jagad-apagata-pāpaṁ snapayasi payasi śamita-bhava-tāpam
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-bhṛgupati-rūpa jaya jagadīśa hare
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-bhṛgupati-rūpa jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -543,33 +557,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vitarasi dikṣu raṇe dik-pati-kamanīyaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vitarasi dikṣu raṇe dik-pati-kamanīyaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            daśa-mukha-mauli-baliṁ ramaṇīyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        daśa-mukha-mauli-baliṁ ramaṇīyam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-rāma-śarīra jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-rāma-śarīra jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -596,33 +612,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vahasi vapuṣi viśade vasanaṁ jaladābhaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vahasi vapuṣi viśade vasanaṁ jaladābhaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            hala-hati-bhīti-milita jamunābham
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hala-hati-bhīti-milita jamunābham
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-haladhara-rūpa jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-haladhara-rūpa jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -649,33 +667,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nindasi yajña-vidher ahaha śruti-jātaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nindasi yajña-vidher ahaha śruti-jātaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sadaya-hṛdaya darśita-paśu-ghātam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sadaya-hṛdaya darśita-paśu-ghātam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-buddha-śarīra jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-buddha-śarīra jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -702,33 +722,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        mlechchha nivaha-nidhane kalayasi karavālaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mlechchha nivaha-nidhane kalayasi karavālaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            dhūmaketum iva kim api karālam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dhūmaketum iva kim api karālam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-kalki-śarīra jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-kalki-śarīra jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -755,33 +777,35 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-jayadeva-kaver idam uditam udāraṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-jayadeva-kaver idam uditam udāraṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śṛṇu sukha-daṁ śubha-daṁ bhava-sāram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śṛṇu sukha-daṁ śubha-daṁ bhava-sāram
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            keśava dhṛta-daśa-vidha-rūpa jaya jagadīśa hare
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        keśava dhṛta-daśa-vidha-rūpa jaya jagadīśa hare
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -808,45 +832,47 @@ vihita-vahitra-charitram akhedam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vedān udharate jaganti vahate bhū-golam udbibhrate
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vedān udharate jaganti vahate bhū-golam udbibhrate
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            daityaṁ dārayate baliṁ chhalayate kṣatra-kṣayaṁ kurvate
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        daityaṁ dārayate baliṁ chhalayate kṣatra-kṣayaṁ kurvate
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            paulastyaṁ jayate halaṁ kalayate kāruṇyam ātanvate
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            mlechchhān mūrchchhayate daśākṛti-kṛte kṛṣṇāya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        paulastyaṁ jayate halaṁ kalayate kāruṇyam ātanvate
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tubhyaṁ namaḥ
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line ">
-                        mlechchhān mūrchchhayate daśākṛti-kṛte kṛṣṇāya
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tubhyaṁ namaḥ
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1095,7 +1121,7 @@ vihita-vahitra-charitram akhedam..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1148,20 +1174,6 @@ vihita-vahitra-charitram akhedam..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1371,6 +1383,51 @@ vihita-vahitra-charitram akhedam..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

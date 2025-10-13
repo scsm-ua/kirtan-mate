@@ -197,7 +197,13 @@ tomā vinā ke dayālu jagata mājhāre..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -293,13 +299,9 @@ tomā vinā ke dayālu jagata mājhāre..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -316,27 +318,29 @@ tomā vinā ke dayālu jagata mājhāre..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī kṛṣṇa chaitanya prabhu dayā kara more
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī kṛṣṇa chaitanya prabhu dayā kara more
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tomā vinā ke dayālu jagata mājhāre
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tomā vinā ke dayālu jagata mājhāre
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -363,27 +367,29 @@ tomā vinā ke dayālu jagata mājhāre..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        patita-pāvana-hetu tava avatāra
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            patita-pāvana-hetu tava avatāra
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            mo samo patita prabhu nā pāibe āra
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mo samo patita prabhu nā pāibe āra
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -410,27 +416,29 @@ tomā vinā ke dayālu jagata mājhāre..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        hā hā prabhu nityānanda premānanda sukhī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hā hā prabhu nityānanda premānanda sukhī
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            kṛpā-bolokana kara āmi boḍo duḥkhī
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kṛpā-bolokana kara āmi boḍo duḥkhī
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -457,27 +465,29 @@ tomā vinā ke dayālu jagata mājhāre..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        dayā kara sītā-pati advaita gosāi
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dayā kara sītā-pati advaita gosāi
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tava kṛpā-bole pāi chaitanya-nitāi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tava kṛpā-bole pāi chaitanya-nitāi
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -504,27 +514,29 @@ tomā vinā ke dayālu jagata mājhāre..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        gaura premamoya tanu paṇḍit gadādhara
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gaura premamoya tanu paṇḍit gadādhara
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrīnivāsa haridāsa dayāra sāgara
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śrīnivāsa haridāsa dayāra sāgara
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -551,27 +563,29 @@ tomā vinā ke dayālu jagata mājhāre..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        hā hā svarūpa sanātana rūpa raghunātha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hā hā svarūpa sanātana rūpa raghunātha
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaṭṭa-juga śrī jīva hā prabhu lokanātha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhaṭṭa-juga śrī jīva hā prabhu lokanātha
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -598,27 +612,29 @@ tomā vinā ke dayālu jagata mājhāre..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        dayā kara śrī-āchārya prabhu śrīnivāsa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dayā kara śrī-āchārya prabhu śrīnivāsa
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            rāmachandra-saṅga māge narottama dāsa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rāmachandra-saṅga māge narottama dāsa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -645,27 +661,29 @@ tomā vinā ke dayālu jagata mājhāre..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        (dayā kara prabhupāda śrī gaura prakāśa)
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            (dayā kara prabhupāda śrī gaura prakāśa)
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            (tava jana kṛpā māge ei adhama dāsa)
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        (tava jana kṛpā māge ei adhama dāsa)
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -700,7 +718,7 @@ tomā vinā ke dayālu jagata mājhāre..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbhakti-lalita-devi%2Fbhakti-lalita-devi-savarana-sri-gaura-pada-padme-sri-krishna-chaitanya-prabhu-doya-koro-more"></iframe>
             </div>
@@ -721,7 +739,7 @@ tomā vinā ke dayālu jagata mājhāre..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-savarana-sri"></iframe>
             </div>
@@ -742,7 +760,7 @@ tomā vinā ke dayālu jagata mājhāre..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgoswami-maharaj-sri-krsna"></iframe>
             </div>
@@ -763,7 +781,7 @@ tomā vinā ke dayālu jagata mājhāre..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-sri-krishna-1"></iframe>
             </div>
@@ -784,7 +802,7 @@ tomā vinā ke dayālu jagata mājhāre..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-sri-krishna"></iframe>
             </div>
@@ -805,7 +823,7 @@ tomā vinā ke dayālu jagata mājhāre..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fmadhusudan-maharaj-sri-krishna"></iframe>
             </div>
@@ -1046,7 +1064,7 @@ tomā vinā ke dayālu jagata mājhāre..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1099,20 +1117,6 @@ tomā vinā ke dayālu jagata mājhāre..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1357,6 +1361,51 @@ tomā vinā ke dayālu jagata mājhāre..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

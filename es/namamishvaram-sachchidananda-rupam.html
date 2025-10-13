@@ -169,7 +169,13 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -267,13 +273,9 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar traducción
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar traducción"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses word-by-word-mode">
@@ -290,37 +292,39 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        namāmīśvaraṁ sachchidānanda rūpaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            namāmīśvaraṁ sachchidānanda rūpaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            lasat-kuṇḍalaṁ gokule bhrājamānam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        lasat-kuṇḍalaṁ gokule bhrājamānam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yaśodā-bhiyolūkhalād dhāvamānaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            parāmṛṣṭam atyaḥ tato drutya gopyā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yaśodā-bhiyolūkhalād dhāvamānaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        parāmṛṣṭam atyaḥ tato drutya gopyā
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -334,7 +338,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -361,37 +365,39 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        rudantaṁ muhur netra-yugmaṁ mṛjantaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rudantaṁ muhur netra-yugmaṁ mṛjantaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            karāmbhoja-yugmena sātaṅka-netram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        karāmbhoja-yugmena sātaṅka-netram
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            muhuḥ śvāsa-kampa-trirekhāṅka-kaṇṭha-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sthita-graiva dāmodaraṁ bhakti-baddham
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        muhuḥ śvāsa-kampa-trirekhāṅka-kaṇṭha-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sthita-graiva dāmodaraṁ bhakti-baddham
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -405,7 +411,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -432,37 +438,39 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        itīdṛk sva-līlābhir ānanda-kuṇḍe
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            itīdṛk sva-līlābhir ānanda-kuṇḍe
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sva-ghoṣaṁ nimajjantam ākhyāpayantaṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sva-ghoṣaṁ nimajjantam ākhyāpayantaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tadīyeṣita-jñeṇu bhaktair jitatvaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            punaḥ prematas taṁ śatāvṛtti vande
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tadīyeṣita-jñeṇu bhaktair jitatvaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        punaḥ prematas taṁ śatāvṛtti vande
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -476,7 +484,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -503,37 +511,39 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        varaṁ deva mokṣaṁ na mokṣāvadhiṁ vā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            varaṁ deva mokṣaṁ na mokṣāvadhiṁ vā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            na chānyaṁ vṛṇe ’haṁ vareśād apīha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        na chānyaṁ vṛṇe ’haṁ vareśād apīha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            idan te vapur nātha gopāla-bālaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sadā me manasy āvirāstāṁ kim anyaiḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        idan te vapur nātha gopāla-bālaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sadā me manasy āvirāstāṁ kim anyaiḥ
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -547,7 +557,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -574,37 +584,39 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        idaṁ te mukhāmbhojam avyakta-nīlair
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            idaṁ te mukhāmbhojam avyakta-nīlair
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vṛtaṁ kuntalaiḥ snigdha-raktaiś cha gopyā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vṛtaṁ kuntalaiḥ snigdha-raktaiś cha gopyā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            muhuś chumbitaṁ bimba-raktādharaṁ me
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            manasy āvirāstām alaṁ lakṣa-lābhaiḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        muhuś chumbitaṁ bimba-raktādharaṁ me
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        manasy āvirāstām alaṁ lakṣa-lābhaiḥ
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -618,7 +630,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -645,37 +657,39 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        namo deva dāmodarānanta viṣṇo
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            namo deva dāmodarānanta viṣṇo
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            prasīda prabho duḥkha-jālābdhi-magnaṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prasīda prabho duḥkha-jālābdhi-magnaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kṛpā-dṛṣṭi-vṛṣṭyāti-dīnaṁ batānu-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            gṛhāṇeśa mām ajñam edhy akṣi-dṛśyaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kṛpā-dṛṣṭi-vṛṣṭyāti-dīnaṁ batānu-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        gṛhāṇeśa mām ajñam edhy akṣi-dṛśyaḥ
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -689,7 +703,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -716,37 +730,39 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kuverātmajau baddha-mūrtyaiva yadvat
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kuverātmajau baddha-mūrtyaiva yadvat
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tvayā mochitau bhakti-bhājau kṛtau cha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tvayā mochitau bhakti-bhājau kṛtau cha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tathā prema-bhaktiṁ svakāṁ me prayacha
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            na mokṣe graho me ’sti dāmodareha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tathā prema-bhaktiṁ svakāṁ me prayacha
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        na mokṣe graho me ’sti dāmodareha
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -760,7 +776,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -787,37 +803,39 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        namas te ’stu dāmne sphurad-dīpti-dhāmne
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            namas te ’stu dāmne sphurad-dīpti-dhāmne
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            tvadīyodarāyātha viśvasya dhāmne
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        tvadīyodarāyātha viśvasya dhāmne
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            namo rādhikāyai tvadīya-priyāyai
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            namo ’nanta-līlāya devāya tubhyam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        namo rādhikāyai tvadīya-priyāyai
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        namo ’nanta-līlāya devāya tubhyam
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -831,7 +849,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -866,7 +884,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbhakti-lalita-devi%2Fbhakti-lalita-damodarastakam-happy-motif"></iframe>
             </div>
@@ -887,7 +905,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-damodarastakam"></iframe>
             </div>
@@ -908,7 +926,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-sri-sri-1"></iframe>
             </div>
@@ -929,7 +947,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh"></iframe>
             </div>
@@ -1170,7 +1188,7 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1223,20 +1241,6 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1411,6 +1415,51 @@ lasat-kuṇḍalaṁ gokule bhrājamānam..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

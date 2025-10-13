@@ -142,7 +142,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -240,13 +246,9 @@
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar traducción
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar traducción"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses word-by-word-mode">
@@ -263,61 +265,63 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kṛṣṇotkīrttana-gāna-<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>narttana-parau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kṛṣṇotkīrttana-gāna-<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>narttana-parau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            premāmṛtāmbho-nidhī
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        premāmṛtāmbho-nidhī
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dhīrādhīra-jana-priyau<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>priya-karau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            nirmatsarau pūjitau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dhīrādhīra-jana-priyau<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>priya-karau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-chaitanya-kṛpā-bharau bhuvi bhuvo
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            bhārāvahantā-rakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        nirmatsarau pūjitau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vande rūpa-sanātanau<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>raghu-yugau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śrī-jīva-gopālakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śrī-chaitanya-kṛpā-bharau bhuvi bhuvo
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        bhārāvahantā-rakau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        vande rūpa-sanātanau<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>raghu-yugau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śrī-jīva-gopālakau
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -331,7 +335,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -358,61 +362,63 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        nānā-śāstra<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>vichāraṇaika-nipuṇau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nānā-śāstra<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>vichāraṇaika-nipuṇau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            sad-dharma-saṁsthāpakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        sad-dharma-saṁsthāpakau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            lokānāṁ hita<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kāriṇau tri-bhuvane
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            mānyau śaraṇyākarau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        lokānāṁ hita<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kāriṇau tri-bhuvane
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-kṛṣṇa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>padāravinda-bhajanā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            nandena mattālikau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        mānyau śaraṇyākarau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śrī-jīva-gopālakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rādhā-kṛṣṇa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>padāravinda-bhajanā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        nandena mattālikau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śrī-jīva-gopālakau
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -426,7 +432,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -453,61 +459,63 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-gaurāṅga-guṇa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>anuvarṇana-vidhau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-gaurāṅga-guṇa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>anuvarṇana-vidhau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śraddhā-samṛddhy-anvitau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śraddhā-samṛddhy-anvitau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pāpottāpa-nikṛntanau<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tanu-bhṛtāṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            govinda-gānāmṛtaiṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pāpottāpa-nikṛntanau<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tanu-bhṛtāṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ānandāmbudhi<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>vardhanaika-nipuṇau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            kaivalya-nistārakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        govinda-gānāmṛtaiṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śrī-jīva-gopālakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ānandāmbudhi<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>vardhanaika-nipuṇau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        kaivalya-nistārakau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śrī-jīva-gopālakau
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -521,7 +529,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -548,61 +556,63 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        tyaktvā tūrṇam<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>aśeṣa-maṇḍala-pati-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tyaktvā tūrṇam<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>aśeṣa-maṇḍala-pati-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śreṇīṁ sadā tucha-vat
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śreṇīṁ sadā tucha-vat
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhūtvā dīna<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gaṇeśakau karuṇayā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            kaupīna-kanthāśritau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhūtvā dīna<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>gaṇeśakau karuṇayā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gopī-bhāva-rasāmṛta<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>abdhi-laharī-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            kallola-magnau muhur
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        kaupīna-kanthāśritau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śrī-jīva-gopālakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gopī-bhāva-rasāmṛta<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>abdhi-laharī-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        kallola-magnau muhur
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śrī-jīva-gopālakau
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -616,7 +626,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -643,61 +653,63 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kūjat-kokila<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>haṁsa-sārasa-gaṇā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kūjat-kokila<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>haṁsa-sārasa-gaṇā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            kīrṇe mayūrākule
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        kīrṇe mayūrākule
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nānā-ratna<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nibaddha-mūla-viṭapa
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śrī-yukta-vṛndāvane
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nānā-ratna<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nibaddha-mūla-viṭapa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-kṛṣṇam ahar<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>niśaṁ prabhajatau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            jīvārthadau yau mudā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śrī-yukta-vṛndāvane
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śrī-jīva-gopālakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rādhā-kṛṣṇam ahar<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>niśaṁ prabhajatau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        jīvārthadau yau mudā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śrī-jīva-gopālakau
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -711,7 +723,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -738,61 +750,63 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        saṅkhyā-pūrvvaka<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nāma-gāna-natibhiḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            saṅkhyā-pūrvvaka<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nāma-gāna-natibhiḥ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            kālāvasānī-kṛtau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        kālāvasānī-kṛtau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            nidrāhāra-vihāraka<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>adi-vijitau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            chātyanta-dīnau cha yau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nidrāhāra-vihāraka<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>adi-vijitau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-kṛṣṇa-guṇa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>smṛter madhurimā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            nandena sammohitau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        chātyanta-dīnau cha yau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śrī-jīva-gopālakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rādhā-kṛṣṇa-guṇa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>smṛter madhurimā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        nandena sammohitau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śrī-jīva-gopālakau
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -806,7 +820,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -833,61 +847,63 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        rādhā-kuṇḍa-taṭe<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kalinda-tanayā-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-kuṇḍa-taṭe<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kalinda-tanayā-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            tīre cha vaṁśīvaṭe
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        tīre cha vaṁśīvaṭe
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            premonmāda-vaśād<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>aśeṣa-daśayā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            grastau pramattau sadā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        premonmāda-vaśād<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>aśeṣa-daśayā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gāyantau cha kadā<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>harer guṇa-varaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            bhāvābhibhūtau mudā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        grastau pramattau sadā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śrī-jīva-gopālakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gāyantau cha kadā<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>harer guṇa-varaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        bhāvābhibhūtau mudā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śrī-jīva-gopālakau
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -901,7 +917,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -928,61 +944,63 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        he rādhe braja<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>devīke cha lalite
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            he rādhe braja<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>devīke cha lalite
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            he nanda-sūno kutaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        he nanda-sūno kutaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-govardhana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kalpa-pādapa-tale
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            kālindī-vanye kutaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śrī-govardhana<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kalpa-pādapa-tale
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ghoṣantāv iti<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sarvato vraja-pure
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            khedair mahā-vihvalau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        kālindī-vanye kutaḥ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_2">
+                            śrī-jīva-gopālakau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ghoṣantāv iti<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sarvato vraja-pure
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        khedair mahā-vihvalau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        vande rūpa<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sanātanau raghu-yugau
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_2">
-                        śrī-jīva-gopālakau
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -996,7 +1014,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1031,7 +1049,7 @@
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgoswami-maharaj-sri-sri-sad"></iframe>
             </div>
@@ -1052,7 +1070,7 @@
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fmadhusudan-maharaj-sri-sri-sad"></iframe>
             </div>
@@ -1293,7 +1311,7 @@
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1346,20 +1364,6 @@
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1499,6 +1503,51 @@
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

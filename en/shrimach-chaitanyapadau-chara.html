@@ -112,7 +112,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -210,13 +216,9 @@
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -233,63 +235,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrīmach-chaitanyapādau chara-kamalayugau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrīmach-chaitanyapādau chara-kamalayugau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            netra-bhṛṅgau madhu dyau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        netra-bhṛṅgau madhu dyau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gauḍe tau pāyayantau vraja-vipina-gatau
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            vyājayuktau samutkau
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gauḍe tau pāyayantau vraja-vipina-gatau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhātau sabhrātṛkasya svajana-gaṇa-pater
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            yasya saubhāgya-bhūmnaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        vyājayuktau samutkau
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhātau sabhrātṛkasya svajana-gaṇa-pater
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        yasya saubhāgya-bhūmnaḥ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -316,63 +320,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        pīta-śrī-gaura-pādāmbuja-madhu-madiron-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pīta-śrī-gaura-pādāmbuja-madhu-madiron-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            matta-hṛd-bhṛṅga-rājo
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        matta-hṛd-bhṛṅga-rājo
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rājyaiśvaryaṁ jahau yo jana-nivaha-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            hitādatta-chitto nijāgryam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rājyaiśvaryaṁ jahau yo jana-nivaha-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vijñāpya svānujena vraja-gamana-rataṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            chānvagāt gaurachandraṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        hitādatta-chitto nijāgryam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vijñāpya svānujena vraja-gamana-rataṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        chānvagāt gaurachandraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -399,63 +405,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vṛndāraṇyāt prayāge hari-rasa-naṭanair
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vṛndāraṇyāt prayāge hari-rasa-naṭanair
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            nāma-saṅkīrtanaiś cha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        nāma-saṅkīrtanaiś cha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            lebhe yo mādhavāgre jana-gahana-gataṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            prema-mattaṁ janāṁś cha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        lebhe yo mādhavāgre jana-gahana-gataṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhāvaiḥ svair mādayantaṁ hṛta-nidhir iva
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            taṁ kṛṣṇa-chaitanyachandraṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        prema-mattaṁ janāṁś cha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        bhāvaiḥ svair mādayantaṁ hṛta-nidhir iva
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        taṁ kṛṣṇa-chaitanyachandraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -482,63 +490,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        ekāntaṁ labdha-pādāmbuja-nija-hṛdaya-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ekāntaṁ labdha-pādāmbuja-nija-hṛdaya-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            preṣṭha-pātro mahārtir
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        preṣṭha-pātro mahārtir
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dainyair-duḥkhāśru-pūrṇair daśana-dhṛta-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tṛṇaiḥ pūjayāmāsa gauram
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dainyair-duḥkhāśru-pūrṇair daśana-dhṛta-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            svāntaḥ kṛṣṇañ cha gaṅgā-dinamaṇi-tanayā-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            saṅgame sānujo yaḥ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tṛṇaiḥ pūjayāmāsa gauram
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        svāntaḥ kṛṣṇañ cha gaṅgā-dinamaṇi-tanayā-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        saṅgame sānujo yaḥ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -565,63 +575,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        svasya prema-svarūpaṁ priya-dayita-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            svasya prema-svarūpaṁ priya-dayita-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            vilāsānurūpaika-rūpaṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        vilāsānurūpaika-rūpaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dūre bhū-luṇṭhitaṁ yaṁ sahaja-sumadhura-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            śrīyutaṁ sānujañ cha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dūre bhū-luṇṭhitaṁ yaṁ sahaja-sumadhura-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            dṛṣṭvā devo ’titūrṇaṁ stuti-bahu-mukham
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            āśliṣya gāḍhaṁ rarañje
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        śrīyutaṁ sānujañ cha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        dṛṣṭvā devo ’titūrṇaṁ stuti-bahu-mukham
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        āśliṣya gāḍhaṁ rarañje
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -648,63 +660,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kaivalya-prema-bhūmāv-akhila-rasa-sudhā-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kaivalya-prema-bhūmāv-akhila-rasa-sudhā-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            sindhu-sañchāra-dakṣaṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        sindhu-sañchāra-dakṣaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jñātvāpy evañ cha rādhā-pada-bhajana-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            sudhāṁ līlayāpāyayad yam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jñātvāpy evañ cha rādhā-pada-bhajana-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śaktiṁ sañchārya gauro nija-bhajana-sudhā-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            dāna-dakṣaṁ chakāra
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        sudhāṁ līlayāpāyayad yam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śaktiṁ sañchārya gauro nija-bhajana-sudhā-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        dāna-dakṣaṁ chakāra
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -731,63 +745,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        gaurādeśāch cha vṛndā-vipinam iha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gaurādeśāch cha vṛndā-vipinam iha
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            parikramya nīlāchalaṁ yo
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        parikramya nīlāchalaṁ yo
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            gatvā kāvyāmṛtaiḥ svair vraja-yuva-yugala-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            krīḍanārthaiḥ prakāmam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        gatvā kāvyāmṛtaiḥ svair vraja-yuva-yugala-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rāmānanda-svarūpādibhir api kavibhis
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tarpayāmāsa gauraṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        krīḍanārthaiḥ prakāmam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rāmānanda-svarūpādibhir api kavibhis
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tarpayāmāsa gauraṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -814,63 +830,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        līlā-saṁgopane śrī-bhagavata iha vai
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            līlā-saṁgopane śrī-bhagavata iha vai
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            jaṅgame sthāvare ’pi
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        jaṅgame sthāvare ’pi
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            saṁmugdhe sāgrajātaḥ prabhu-viraha-hṛta-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            prāya-jīvendriyāṇām
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        saṁmugdhe sāgrajātaḥ prabhu-viraha-hṛta-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yaś chāsīd āśrayaika-sthalam iva raghu-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            gopāla-jīvādi-varge
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        prāya-jīvendriyāṇām
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yaś chāsīd āśrayaika-sthalam iva raghu-
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        gopāla-jīvādi-varge
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -897,63 +915,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-mūrteḥ sādhu-vṛtteḥ prakaṭanam api
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-mūrteḥ sādhu-vṛtteḥ prakaṭanam api
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tal-lupta-tīrthādikānāṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tal-lupta-tīrthādikānāṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-rādhā-kṛṣṇa-pādāmbuja-bhajanamayaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            rāga-mārgaṁ viśuddham
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śrī-rādhā-kṛṣṇa-pādāmbuja-bhajanamayaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            granthair yena pradattaṁ nikhilam iha
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            nijābhīṣṭa-devepsitañ cha
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        rāga-mārgaṁ viśuddham
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        granthair yena pradattaṁ nikhilam iha
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        nijābhīṣṭa-devepsitañ cha
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -980,63 +1000,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        līlā-saṁgopa-kāle nirupadhi-karuṇā-
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            līlā-saṁgopa-kāle nirupadhi-karuṇā-
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kāriṇā svāmināhaṁ
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kāriṇā svāmināhaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yat pādābje ’rpito yat pada-bhajanamayaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            gāyayitvā tu gītam
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yat pādābje ’rpito yat pada-bhajanamayaṁ
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yogyāyogyatva-bhāvaṁ mama khalu sakalaṁ
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            duṣṭa-buddher agṛhṇan
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        gāyayitvā tu gītam
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhūṣitaṁ saṁvidhatte
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        yogyāyogyatva-bhāvaṁ mama khalu sakalaṁ
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        duṣṭa-buddher agṛhṇan
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        sa śrī-rūpaḥ kadā māṁ nija-pada-rajasā
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhūṣitaṁ saṁvidhatte
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1285,7 +1307,7 @@
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1338,20 +1360,6 @@
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1491,6 +1499,51 @@
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

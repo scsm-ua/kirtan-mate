@@ -170,7 +170,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -264,13 +270,9 @@
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -287,51 +289,53 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        bhaja re bhaja re āmār mana ati manda
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhaja re bhaja re āmār mana ati manda
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(bhajan vinā gati nāi re)</span></span>
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(bhajan vinā gati nāi re)</span></span>
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(vraja-bane rādhā-kṛṣṇa bhajan vinā gati nāi re)</span></span>
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(bhaja)</span></span> vraja-bane rādhā-kṛṣṇa-charaṇāravinda
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(vraja-bane rādhā-kṛṣṇa bhajan vinā gati nāi re)</span></span>
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(jñāna-karma parihari’ re)</span></span>
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(śuddha rāga patha dhari jñāna-karma parihari)</span></span>
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(bhaja)</span></span> vraja-bane rādhā-kṛṣṇa-charaṇāravinda
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(jñāna-karma parihari’ re)</span></span>
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(śuddha rāga patha dhari jñāna-karma parihari)</span></span>
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -358,51 +362,53 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(bhaja)</span></span> gaura-gadādharādvaita-guru-nityānanda
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(bhaja)</span></span> gaura-gadādharādvaita-guru-nityānanda
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(gaura-kṛṣṇe abhede jene)</span></span>
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(gaura-kṛṣṇe abhede jene)</span></span>
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(guru kṛṣṇa-priya jene gaura-kṛṣne abheda jene re)</span></span>
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            śrīnivāsa, haridāsa, murāri, mukunda
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(guru kṛṣṇa-priya jene gaura-kṛṣne abheda jene re)</span></span>
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(gaura-preme smara smara re)</span></span>
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(śrīnivāsa, haridāse, gaura-preme smara re)</span></span>
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        śrīnivāsa, haridāsa, murāri, mukunda
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(gaura-preme smara smara re)</span></span>
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(śrīnivāsa, haridāse, gaura-preme smara re)</span></span>
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -429,57 +435,59 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        rūpa-sanātana-jīva-raghunātha-dvandva
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rūpa-sanātana-jīva-raghunātha-dvandva
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(jadi bhajan korbe re)</span></span>
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(jadi bhajan korbe re)</span></span>
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(rūpa-sanātane smaran jadi bhajan korbe re)</span></span>
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            rāghava-gopāla-bhaṭṭa-svarūpa-rāmānanda
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(rūpa-sanātane smaran jadi bhajan korbe re)</span></span>
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(kṛṣṇa prema jadi chāo re)</span></span>
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light">(svarūpa-rāmānande smara</span>
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rāghava-gopāla-bhaṭṭa-svarūpa-rāmānanda
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light">kṛṣṇa-prema jadi chāo re)</span>
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(kṛṣṇa prema jadi chāo re)</span></span>
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light">(svarūpa-rāmānande smara</span>
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light">kṛṣṇa-prema jadi chāo re)</span>
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -506,63 +514,65 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        goṣṭhī-saha karṇapura-sen-śivānanda
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            goṣṭhī-saha karṇapura-sen-śivānanda
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(ajasra smara smara re)</span></span>
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(ajasra smara smara re)</span></span>
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(goṣṭhī-saha-sen śivānande ajasra smara re)</span></span>
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            rūpānuga sādhu-jana bhajana-ānanda
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(goṣṭhī-saha-sen śivānande ajasra smara re)</span></span>
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(vraje bās jadi chāo re)</span></span>
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            <span class="SongVerse__light"><span class="SongVerse__light">(rūpānuga sādhu-jane smara vraje bās jadi chāo re)</span></span>
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rūpānuga sādhu-jana bhajana-ānanda
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rūpānuga sādhu-jana bhajana-ānanda
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            bhaja re bhaja re āmār mana ati manda
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(vraje bās jadi chāo re)</span></span>
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        <span class="SongVerse__light"><span class="SongVerse__light">(rūpānuga sādhu-jane smara vraje bās jadi chāo re)</span></span>
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        rūpānuga sādhu-jana bhajana-ānanda
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhaja re bhaja re āmār mana ati manda
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -597,7 +607,7 @@
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbhakti-lalita-devi%2Fbhakti-lalita-devi-bhajan-giti-bhaja-re-bhaja-re-amar"></iframe>
             </div>
@@ -618,7 +628,7 @@
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-bhajare"></iframe>
             </div>
@@ -639,7 +649,7 @@
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-bxadzha-re-amar"></iframe>
             </div>
@@ -660,7 +670,7 @@
             </span>
         </button>
 
-        <div class="Collapse">
+        <div class="Collapse Collapse__transition">
             <div class="SongEmbed__content">
                 <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-bxadzha-re"></iframe>
             </div>
@@ -901,7 +911,7 @@
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -954,20 +964,6 @@
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1177,6 +1173,51 @@
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

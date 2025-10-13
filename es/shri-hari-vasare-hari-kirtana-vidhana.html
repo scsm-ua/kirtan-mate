@@ -115,7 +115,13 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -213,13 +219,9 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Mostrar traducción
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Mostrar traducción"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses word-by-word-mode">
@@ -236,25 +238,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī hari-vāsare hari-kīrttana-vidhāna
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī hari-vāsare hari-kīrttana-vidhāna
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            nṛtya ārambhilā prabhu jagatera prāṇa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        nṛtya ārambhilā prabhu jagatera prāṇa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -268,7 +272,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -295,25 +299,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        puṇyavanta śrīvāsa-aṅgane śubhārambha
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            puṇyavanta śrīvāsa-aṅgane śubhārambha
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            uṭhilo kīrttana-dhvani gopāla govinda
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        uṭhilo kīrttana-dhvani gopāla govinda
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -327,7 +333,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -354,25 +360,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        mṛdaṅga mandirā bāje śaṅkha karatāla
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mṛdaṅga mandirā bāje śaṅkha karatāla
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            saṇkīrttana soṅge sob hoilo miśāla
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        saṇkīrttana soṅge sob hoilo miśāla
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -386,7 +394,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -413,25 +421,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        brahmānḍe uṭhilo dhvani pūriyā ākāśa
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            brahmānḍe uṭhilo dhvani pūriyā ākāśa
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            chaudikera amaṅgala jāya sob nāśa
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        chaudikera amaṅgala jāya sob nāśa
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -445,7 +455,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -472,25 +482,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        chaturdike śrī hari-maṅgala saṇkīrttana
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            chaturdike śrī hari-maṅgala saṇkīrttana
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            madhye nāche jagannātha miśrera nandana
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        madhye nāche jagannātha miśrera nandana
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -504,7 +516,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -531,57 +543,59 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sabāra aṅgete śobhe śrī chandana mālā
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sabāra aṅgete śobhe śrī chandana mālā
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ānande nāchoye sobe hoiye vibholā
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ānande nāchoye sobe hoiye vibholā
-                    </li>
+                    
+                        <br>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            ni jānande nāche mahāprabhu viśvambhara
+                        </li>
+                    
                 
-                    <br>
+                    
+                        <li class="SongVerse__line ">
+                            charaṇera tāli śuni ati manohara
+                        </li>
+                    
                 
-            
+                    
+                        <br>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ni jānande nāche mahāprabhu viśvambhara
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            bhāvāveśe mālā nāhi rahaye galāya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            chiṇḍiyā paḍaye giyā bhakatera gāya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        charaṇera tāli śuni ati manohara
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        bhāvāveśe mālā nāhi rahaye galāya
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        chiṇḍiyā paḍaye giyā bhakatera gāya
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -595,7 +609,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -622,25 +636,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jā̐ra nāmānande śiva vasana nā jāne
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jā̐ra nāmānande śiva vasana nā jāne
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            jā̐ra rase nāche śiva se nāche āpane
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jā̐ra rase nāche śiva se nāche āpane
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -654,7 +670,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -681,25 +697,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jā̐ra nāme vālmīki hoilo tapodhana
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jā̐ra nāme vālmīki hoilo tapodhana
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            jā̐ra nāme ajāmila pāilo mochana
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        jā̐ra nāme ajāmila pāilo mochana
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -713,7 +731,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -740,25 +758,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jā̐ra nāme śravane saṁsāra-bandha ghuche
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jā̐ra nāme śravane saṁsāra-bandha ghuche
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            heno prabhu avatari kali-juge nāche
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        heno prabhu avatari kali-juge nāche
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -772,7 +792,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -799,25 +819,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jā̐ra nāma loi śuka nārada beḍāya
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jā̐ra nāma loi śuka nārada beḍāya
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            sahasra-vadana-prabhu jāra guṇa gāya
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sahasra-vadana-prabhu jāra guṇa gāya
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -831,7 +853,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -858,25 +880,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sarvva-mahā-prāyaśchitta je prabhura nāma
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sarvva-mahā-prāyaśchitta je prabhura nāma
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            se prabhu nāchaye dekhe jata bhāgyavān
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        se prabhu nāchaye dekhe jata bhāgyavān
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -890,7 +914,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -917,25 +941,27 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī kṛṣṇa-chaitanya nityānanda-chā̐da jāna
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī kṛṣṇa-chaitanya nityānanda-chā̐da jāna
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            vṛndāvana dāsa tachu pada-juge gāna
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vṛndāvana dāsa tachu pada-juge gāna
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="wordByWord">
             <ul class="SongVerse__wordbyword">
                 
                     <li class="SongVerse__paragraph">
@@ -949,7 +975,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1198,7 +1224,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1251,20 +1277,6 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1509,6 +1521,51 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

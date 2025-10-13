@@ -111,7 +111,13 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -205,13 +211,9 @@
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Показывать перевод
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Показывать стихи / перевод"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -222,151 +224,153 @@
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        нава-налина-ган̃джитам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>кусума-дала-ман̣д̣итам̇
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            нава-налина-ган̃джитам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>кусума-дала-ман̣д̣итам̇
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            па̄да-йугам-абхайа-варада̄нам
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        па̄да-йугам-абхайа-варада̄нам
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            канака-гхана-ниндитам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>вапура-мара-вандитам̇
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            нат̣ана-гати-гаурава-нида̄нам
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        канака-гхана-ниндитам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>вапура-мара-вандитам̇
-                    </li>
+                    
+                        <br>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            бхадже ш́рӣдхара-сва̄минам-аниш́ам
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        нат̣ана-гати-гаурава-нида̄нам
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            ш́арада-видху-нинди-мукха-<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>падма-мати-ш́обханам̇
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            гопӣ-тилака-чарччхита-субха̄лам
+                        </li>
+                    
                 
-                    <br>
+                    
+                        <br>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            гамана-джита-ва̄ран̣ам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ш́амана-бхайа-та̄ран̣ам̇
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        бхадже ш́рӣдхара-сва̄минам-аниш́ам
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            пракр̣ти-ручи-нинди-кр̣та-веш́ам
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            пракр̣ти-ручи-намбхрама-сувеш́ам
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        ш́арада-видху-нинди-мукха-<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>падма-мати-ш́обханам̇
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            пхулла-кара-паллавам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>бхакта-джана-валлабхам̇
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            тун̇га-пр̣тхулам̇ хр̣дайа-деш́ам
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        гопӣ-тилака-чарччхита-субха̄лам
-                    </li>
+                    
+                        <br>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            гаура-пурат̣а-саурабхам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>кр̣ш̣н̣а-пурат̣а-гауравам̇
+                        </li>
+                    
                 
-                    <br>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            вибудха-кула-падма-налиш́ам
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            бхакта-кула-дан̣д̣анам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>бхан̣д̣а-мата-кхан̣д̣анам̇
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        гамана-джита-ва̄ран̣ам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>ш́амана-бхайа-та̄ран̣ам̇
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            бхакта-кула-нандана-йатӣш́ам
+                        </li>
+                    
                 
-            
+                    
+                        <br>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        пракр̣ти-ручи-нинди-кр̣та-веш́ам
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            трибхувана-нива̄сине<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>кр̣ш̣н̣ам-упадеш́инам̇
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            асура-кула-да̄мбхика-кр̣тāнтам
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        пракр̣ти-ручи-намбхрама-сувеш́ам
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            науми будха-на̄йакам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>парама-гати-да̄йакам̇
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            мама ш́аран̣а-маран̣а-ган̣а-чинтйам
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        пхулла-кара-паллавам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>бхакта-джана-валлабхам̇
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        тун̇га-пр̣тхулам̇ хр̣дайа-деш́ам
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        гаура-пурат̣а-саурабхам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>кр̣ш̣н̣а-пурат̣а-гауравам̇
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        вибудха-кула-падма-налиш́ам
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        бхакта-кула-дан̣д̣анам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>бхан̣д̣а-мата-кхан̣д̣анам̇
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        бхакта-кула-нандана-йатӣш́ам
-                    </li>
-                
-            
-                
-                    <br>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        трибхувана-нива̄сине<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>кр̣ш̣н̣ам-упадеш́инам̇
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        асура-кула-да̄мбхика-кр̣тāнтам
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line ">
-                        науми будха-на̄йакам̇<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>парама-гати-да̄йакам̇
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        мама ш́аран̣а-маран̣а-ган̣а-чинтйам
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -397,7 +401,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -428,7 +432,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -459,7 +463,7 @@
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -708,7 +712,7 @@
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -761,20 +765,6 @@
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -879,6 +869,51 @@
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         

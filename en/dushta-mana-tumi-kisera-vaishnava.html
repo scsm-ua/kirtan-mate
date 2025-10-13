@@ -112,7 +112,13 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.css" integrity="sha512-b+T2i3P45i1LZM7I00Ci5QquB9szqaxu+uuk5TUSGjZQ4w4n+qujQiIuvTv2BxE7WCGQCifNMksyKILDiHzsOg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tingle/0.16.0/tingle.min.js" integrity="sha512-2B9/byNV1KKRm5nQ2RLViPFD6U4dUjDGwuW1GU+ImJh8YinPU9Zlq1GzdTMO+G2ROrB5o1qasJBy1ttYz0wCug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var locals = {
+                pathsToImages: 'https://kirtan.site/css'
+            };
+        </script>
         <script src="https://kirtan.site/js/user-choice.js"></script>
+        <script src="https://kirtan.site/js/three-mode-switch.js"></script>
     </head>
 
     <body>
@@ -210,13 +216,9 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
                             <main class="SongPage__main">
                                 
                                     <div class="SongPage__toggle">
-                                        <label class="Toggle">
-                                            <input class="Toggle__checkbox" id="toggle-checkbox" type="checkbox" checked>
-                                            <div class="Toggle__switch"></div>
-                                            <span class="Toggle__label SongPage__show">
-                                                Show translation
-                                            </span>
-                                        </label>
+                                        <three-mode-switch
+                                            label="Show verses / translation"
+                                        ></three-mode-switch>
                                     </div>
 
                                     <ul class="SongPage__verses >
@@ -233,33 +235,35 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        duṣṭa mana!<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tumi kisera vaiṣṇava?
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            duṣṭa mana!<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tumi kisera vaiṣṇava?
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line ">
+                            pratiṣṭhāra tore,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nirjanera ghore,
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pratiṣṭhāra tore,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nirjanera ghore,
-                    </li>
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tava ‘harināma’ kevala ‘kaitava’
+                        </li>
+                    
                 
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tava ‘harināma’ kevala ‘kaitava’
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -286,39 +290,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        jaḍera pratiṣṭhā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śūkarer biṣṭhā,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            jaḍera pratiṣṭhā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śūkarer biṣṭhā,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            jāno nā ki tāhā māyār vaibhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        jāno nā ki tāhā māyār vaibhava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kanaka kāminī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>divasa-jāminī,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            bhāviyā ki kāja, anitya se saba
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kanaka kāminī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>divasa-jāminī,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        bhāviyā ki kāja, anitya se saba
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -345,39 +351,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        tomāra kanaka,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhogera janaka,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tomāra kanaka,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhogera janaka,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kanakera dvāre sevaho mādhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kanakera dvāre sevaho mādhava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kāminīr kāma,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nahe tava dhāma,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tāhār—mālika kevala jādava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kāminīr kāma,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nahe tava dhāma,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tāhār—mālika kevala jādava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -404,39 +412,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        pratiṣṭhāśā-taru,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jaḍa-māyā-maru,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pratiṣṭhāśā-taru,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>jaḍa-māyā-maru,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            nā pela rāvaṇa jujhiyā rāghava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        nā pela rāvaṇa jujhiyā rāghava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vaiṣṇavī pratiṣṭhā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tāte kara niṣṭhā,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tāhā nā bhajile labhibe raurava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vaiṣṇavī pratiṣṭhā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tāte kara niṣṭhā,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tāhā nā bhajile labhibe raurava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -463,39 +473,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        harijana-dveṣa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratisthāśā-kleśa,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            harijana-dveṣa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratisthāśā-kleśa,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kara keno tobe tāhāra gaurava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kara keno tobe tāhāra gaurava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vaiṣṇaver pāche,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratisthāśā āche,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tā’te kabhu nahe anitya-vaibhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vaiṣṇaver pāche,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratisthāśā āche,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tā’te kabhu nahe anitya-vaibhava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -522,39 +534,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        se hari-sambandha,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śūnya-māyā-gandha,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            se hari-sambandha,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śūnya-māyā-gandha,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tāhā kobhu noy jaḍer kaitava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tāhā kobhu noy jaḍer kaitava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            pratiṣṭhā-chaṇḍālī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nirjanatā-jāli,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            ubhaye jāniho māyika raurava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        pratiṣṭhā-chaṇḍālī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nirjanatā-jāli,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        ubhaye jāniho māyika raurava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -581,39 +595,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kīrtana chāḍibo,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratiṣṭhā māgibo,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kīrtana chāḍibo,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratiṣṭhā māgibo,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            ki kāja ḍhuḍiyā tādṛśa gaurava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        ki kāja ḍhuḍiyā tādṛśa gaurava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            mādhavendra purī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhāva-ghore churi,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            nā korilo kobhu sadāi jānabo
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        mādhavendra purī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhāva-ghore churi,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        nā korilo kobhu sadāi jānabo
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -640,39 +656,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        tomāra pratiṣṭhā,—<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śūkarera biṣṭhā,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tomāra pratiṣṭhā,—<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>śūkarera biṣṭhā,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tār-saha sama kabhu nā mānava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tār-saha sama kabhu nā mānava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            matsaratā-vaśe,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tumi jaḍa-rase,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            ma’jecho chāḍiyā kīrtana-sauṣṭava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        matsaratā-vaśe,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tumi jaḍa-rase,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        ma’jecho chāḍiyā kīrtana-sauṣṭava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -699,39 +717,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        tāi duṣṭa mana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nirjana bhajan,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            tāi duṣṭa mana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nirjana bhajan,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            prachāricho chole kuyogī-vaibhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        prachāricho chole kuyogī-vaibhava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            prabhu sanātane,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>parama jatane,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            śikṣā dilo jāhā, chinto sei saba
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prabhu sanātane,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>parama jatane,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        śikṣā dilo jāhā, chinto sei saba
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -758,39 +778,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        sei duṭi kathā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhulo’ nā sarvathā,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sei duṭi kathā,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhulo’ nā sarvathā,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            uchaiḥ-svare kara hari-nāma-rava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        uchaiḥ-svare kara hari-nāma-rava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            phalgu āro jukta,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>baddha āro mukta,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kabhu nā bhāviho, ‘ekākār’ saba
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        phalgu āro jukta,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>baddha āro mukta,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kabhu nā bhāviho, ‘ekākār’ saba
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -817,39 +839,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        kanaka-kāminī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratiṣṭhā-bāghinī,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kanaka-kāminī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratiṣṭhā-bāghinī,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            chāḍiyāche jāre, sei to’ vaiṣṇava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        chāḍiyāche jāre, sei to’ vaiṣṇava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            sei anāsakta,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sei śuddha-bhakta,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            saṁsāra tathā pāy parābhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        sei anāsakta,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sei śuddha-bhakta,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        saṁsāra tathā pāy parābhava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -876,39 +900,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        yathā-jogya bhoga,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nāhi tathā roga,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            yathā-jogya bhoga,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nāhi tathā roga,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            anāsakta sei, ki āro kahabo
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        anāsakta sei, ki āro kahabo
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            āsakti-rohita,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sambandha-sohito,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            viṣoya-samūha sakali mādhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        āsakti-rohita,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>sambandha-sohito,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        viṣoya-samūha sakali mādhava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -935,39 +961,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        se jukta-vairāgya,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tāhā to’ saubhāgya,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            se jukta-vairāgya,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tāhā to’ saubhāgya,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tāhāi jaḍete harir vaibhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tāhāi jaḍete harir vaibhava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kīrtane jāhār,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratiṣṭhā-sambhār,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            tāhār sampatti kevala kaitava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kīrtane jāhār,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>pratiṣṭhā-sambhār,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        tāhār sampatti kevala kaitava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -994,39 +1022,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        viṣoya-mumukṣu,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhoger bubhukṣu,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            viṣoya-mumukṣu,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>bhoger bubhukṣu,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            du’ye tyajo mana, dui avaiṣṇava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        du’ye tyajo mana, dui avaiṣṇava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kṛṣṇer sambandha,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>aprākṛta-skandha,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kobhu nāhe tāhā jaḍer sambhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kṛṣṇer sambandha,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>aprākṛta-skandha,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kobhu nāhe tāhā jaḍer sambhava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1053,39 +1083,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        māyāvādī jana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kṛṣṇetara mana,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            māyāvādī jana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kṛṣṇetara mana,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            mukta abhimāne se ninde vaiṣṇava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        mukta abhimāne se ninde vaiṣṇava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vaiṣṇavera dāsa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tava bhakti-āśa,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            keno vā ḍākicho nirjana-āhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        vaiṣṇavera dāsa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tava bhakti-āśa,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        keno vā ḍākicho nirjana-āhava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1112,39 +1144,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        je phalgu-vairāgī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kohe nije tyāgī,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            je phalgu-vairāgī,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kohe nije tyāgī,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            se nā pāre kobhu hoite vaiṣṇava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        se nā pāre kobhu hoite vaiṣṇava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            hari-pada chāḍi’,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nirjanatā bāḍi,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            labhiyā ki phol, phalgu se vaibhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        hari-pada chāḍi’,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>nirjanatā bāḍi,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        labhiyā ki phol, phalgu se vaibhava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1171,39 +1205,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        rādhā-dāsye rohi,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>chāḍi bhoga-ahi,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-dāsye rohi,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>chāḍi bhoga-ahi,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            pratiṣṭhāśā nahe kīrtana-gaurava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        pratiṣṭhāśā nahe kīrtana-gaurava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            rādhā-nitya-jana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tāhā chāḍi mana,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            keno vā nirjana-bhajana-kaitava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        rādhā-nitya-jana,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>tāhā chāḍi mana,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        keno vā nirjana-bhajana-kaitava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1230,39 +1266,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        vraja-vāsī-gaṇa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>prachāraka-dhana,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            vraja-vāsī-gaṇa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>prachāraka-dhana,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            pratiṣṭhā-bhikṣuka tārā nahe śava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        pratiṣṭhā-bhikṣuka tārā nahe śava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            prāṇa āche tāra,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>se-hetu prachāra,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            pratiṣṭhāśā-hīna-‘kṛṣṇa-gāthā’ saba
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        prāṇa āche tāra,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>se-hetu prachāra,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        pratiṣṭhāśā-hīna-‘kṛṣṇa-gāthā’ saba
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1289,39 +1327,41 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
     
 
     
-        <ul class="SongVerse__text">
-            
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="verse">
+            <ul class="SongVerse__text">
                 
-                    <li class="SongVerse__line ">
-                        śrī-dayita-dāsa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kīrtanete āśa,
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            śrī-dayita-dāsa,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>kīrtanete āśa,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            kara uchaiḥ-svare harināma rava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        kara uchaiḥ-svare harināma rava
-                    </li>
+                    
+                        <li class="SongVerse__line ">
+                            kīrtana-prabhāve,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>smaraṇa svabhāve,
+                        </li>
+                    
                 
-            
+                    
+                        <li class="SongVerse__line SongVerse__line_indent_1">
+                            se kāle bhajana-nirjana sambhava
+                        </li>
+                    
                 
-                    <li class="SongVerse__line ">
-                        kīrtana-prabhāve,<span class="SongVerse__space">&nbsp;&nbsp;&nbsp;&nbsp;</span>smaraṇa svabhāve,
-                    </li>
-                
-            
-                
-                    <li class="SongVerse__line SongVerse__line_indent_1">
-                        se kāle bhajana-nirjana sambhava
-                    </li>
-                
-            
-        </ul>
+            </ul>
+        </div>
     
 
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
+        <div class="Collapse Collapse__transition Collapse__show" data-elem="translation">
             <ul class="SongVerse__translation">
                 
                     <li class="SongVerse__paragraph">
@@ -1570,7 +1610,7 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
                 if (telegraph_href) {
                     tgCopyBox.style.display = 'block';
                 }
-                
+
                 input.value = href;
                 tgInput.value = telegraph_href;
 
@@ -1623,20 +1663,6 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
                         );
                     });
                 });
-            })();
-        </script>
-
-        <script>
-            /**
-             * Collapse-expand verse translations.
-             */
-            (function () {
-                const toggle = document.getElementById('toggle-checkbox');
-                const targets = [...document.querySelectorAll('[data-elem="translation"]')];
-
-                toggle.addEventListener('change', () =>
-                    targets.forEach((t) => t.classList.toggle('Collapse__show'))
-                );
             })();
         </script>
 
@@ -1776,6 +1802,51 @@ pratiṣṭhāra tore,    nirjanera ghore,..." />
 </div>
 `);
             }) ();
+        </script>
+
+        <script>
+            /**
+             * Collapse-expand verses / translations.
+             */
+            (function () {
+                const translations = [...document.querySelectorAll('[data-elem="translation"]')];
+                const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
+                const verses = [...document.querySelectorAll('[data-elem="verse"]')];
+
+                function toggle(targets, shouldShow) {
+                    const method = shouldShow ? 'add' : 'remove';
+                    targets.forEach((t) => t.classList[method]('Collapse__show'));
+                }
+
+                function performUpdate(mode) {
+                    if (mode === 1) {
+                        toggle(verses, true);
+                        toggle(wordByWord, false);
+                        toggle(translations, false);
+                    } else if (mode === 2) {
+                        toggle(verses, false);
+                        toggle(wordByWord, false);
+                        toggle(translations, true);
+                    } else {
+                        toggle(verses, true);
+                        toggle(wordByWord, true);
+                        toggle(translations, true);
+                    }
+                }
+
+                document.addEventListener(ThreeModeSwitch.EVENT_NAME, ({ detail }) => {
+                    performUpdate(detail.value);
+                    setSongDisplayMode(detail.value);
+                });
+
+                // Temporary disabled loading state.
+                //performUpdate(getSongDisplayMode());
+
+                // setTimeout(() => {
+                //     [...document.querySelectorAll('.Collapse')]
+                //         .forEach((v) => v.classList.add('Collapse__transition'));
+                // }, 1000);
+            })();
         </script>
 
         
