@@ -2,23 +2,25 @@ Live site: https://kirtan.site
 
 ## Run
 
-    pnpm i
+    npm i
 
-    gulp build
+    npm run build
 
-    gulp watch
+    npm run dev
 
-## Update songbook version
+## Update songbooks list
 
-Update required commit hash to `dependencies` section in [package.json](package.json) and push coomit:
+Update file `./songbooks.json`:
 
-    "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua#<REQUIRED COMMIT HASH>",
+```
+[
+    "git+https://github.com/scsm-ua/kirtan-guide-en.git#branch",
+]
+```
 
-Example:
+Use npm package dependencies syntax.
 
-    "gaudiya-gitanjali-ua": "github:scsm-ua/gaudiya-gitanjali-ua#369e9f1b5b758080f31edd690e33721402a1443e",
-
-In case when no commit specified, use `pnpm update` in CLI to refresh lock file.
+Run `npm i` after changes.
 
 ## GH Pages deploy setup
 

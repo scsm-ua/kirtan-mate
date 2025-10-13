@@ -179,7 +179,7 @@
       "PREVIOUS_SONG": "Previous song",
       "SHARE": "Share",
       "SHARE_SONG": "Share song",
-      "SHOW_TRANSLATION": "Show translation",
+      "SHOW_TRANSLATION": "Show verses / translation",
       "PAGE": "page",
       "NEXT": "Next"
     },
@@ -367,7 +367,7 @@
       "PREVIOUS_SONG": "Предыдущая песня",
       "SHARE": "Поделиться",
       "SHARE_SONG": "Поделиться песней",
-      "SHOW_TRANSLATION": "Показывать перевод",
+      "SHOW_TRANSLATION": "Показывать стихи / перевод",
       "PAGE": "с.",
       "NEXT": "Следующий"
     },
@@ -474,7 +474,7 @@
       "PREVIOUS_SONG": "Попередня пісня",
       "SHARE": "Поділитися",
       "SHARE_SONG": "Поділитися піснею",
-      "SHOW_TRANSLATION": "Показувати переклад",
+      "SHOW_TRANSLATION": "Показувати вірші / переклад",
       "PAGE": "с.",
       "NEXT": "Наступний"
     },
