@@ -52,7 +52,8 @@
   overflow: hidden;
 }
 .Collapse__show {
-  max-height: 99em;
+  /* Warning: if verse will be larger, part of content will be hidden. */
+  max-height: 999em;
 }
 .Collapse__transition {
   transition: max-height var(--transition-duration-m) cubic-bezier(0, 1, 0, 1);
@@ -296,6 +297,8 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 body,
 html {
   height: 100%;
+  height: 100dvh;
+  max-height: 100%;
 }
 
 body {

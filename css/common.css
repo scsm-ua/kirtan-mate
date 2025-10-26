@@ -87,6 +87,8 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
 body,
 html {
   height: 100%;
+  height: 100dvh;
+  max-height: 100%;
 }
 
 body {
