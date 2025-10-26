@@ -152,6 +152,14 @@ p {
     &__container {
         margin: 0 auto;
         max-width: var(--content-max-width);
+
+        .enable-transition & {
+            transition: max-width 0.5s ease;
+        }
+
+        .translation-only-mode & {
+            max-width: var(--desktop-content-max-width);
+        }
     }
 
     &__content {

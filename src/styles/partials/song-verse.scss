@@ -23,6 +23,10 @@
         margin-bottom: 10px;
         padding: 0 16px;
         background-color: var(--song-bg-color);
+
+        .translation-only-mode & {
+            color: var(--dark-grey);
+        }
     }
 
     &__text {
@@ -79,12 +83,22 @@
             line-height: 24px;
             margin-bottom: 16px;
 
+            .enable-transition & {
+                transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease;
+            }
+
             .word-by-word-mode .SongVerse__translation & {
                 color: var(--dark);
             }
 
             .word-by-word-mode .SongVerse__wordbyword & {
                 font-size: 12px;
+            }
+
+            .translation-only-mode .SongVerse__translation & {
+                color: var(--dark);
+                font-weight: 400;
+                font-size: var(--font-size);
             }
         }
 
