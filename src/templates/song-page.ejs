@@ -215,7 +215,7 @@
                 }
 
                 function toggle(targets, add) {
-                    toggleClass(targets, add, 'Collapse__show');
+                    targets.forEach((t) => toggleCollapse(t, add));
                 }
 
                 function toggleTranslationOnlyMode(active) {
@@ -225,6 +225,29 @@
                 function toggleClass(targets, add, className) {
                     const method = add ? 'add' : 'remove';
                     targets.forEach((t) => t.classList[method](className));
+                }
+
+                function toggleCollapse(el, show) {
+                    if (show) {
+                        el.style.height = el.scrollHeight + 'px'; // animate from 0 → actual height
+                        el.classList.add('Collapse__show');
+                    } else {
+                        el.style.height = el.scrollHeight + 'px'; // start from current height
+                        requestAnimationFrame(() => {
+                            el.style.height = '0px'; // animate down
+                            el.classList.remove('Collapse__show');
+                        });
+                    }
+
+                    // Clean up inline height after transition
+                    el.addEventListener('transitionend', function handler(e) {
+                        if (show) {
+                            el.style.height = 'auto'; // keep auto after expand
+                        } else {
+                            el.style.height = '0px';
+                        }
+                        el.removeEventListener('transitionend', handler);
+                    });
                 }
 
                 function performUpdate(mode) {
