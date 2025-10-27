@@ -98,7 +98,8 @@
             .translation-only-mode .SongVerse__translation & {
                 color: var(--dark);
                 font-weight: 400;
-                font-size: var(--font-size);
+                font-size: var(--translation-font-size);
+                line-height: 32px;
             }
         }
 
