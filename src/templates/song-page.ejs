@@ -231,6 +231,10 @@
                     if (show) {
                         el.style.height = el.scrollHeight + 'px'; // animate from 0 → actual height
                         el.classList.add('Collapse__show');
+                        requestAnimationFrame(() => {
+                            // `scrollHeight` will be changed after 'Collapse__show' because of changed line-height.
+                            el.style.height = el.scrollHeight + 'px'; // animate from 0 → actual height
+                        });
                     } else {
                         el.style.height = el.scrollHeight + 'px'; // start from current height
                         requestAnimationFrame(() => {
