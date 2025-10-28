@@ -30,9 +30,6 @@ $bp576: 576;
     --page-max-width: 768px;
     --side-padding: 20px;
 
-    /**/
-    --transition-duration-m: 0.4s;
-
     @include breakpoint($min: $bp768) {
         --footer-height: 82px;
     }
