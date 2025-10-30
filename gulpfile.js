@@ -22,10 +22,11 @@ const {
     md2jsonConvertor
 } = require('./scripts/songConvertor');
 const { getNavigationPaths, getTemplatePaths, getTelegraphTemplatePaths } = require('./scripts/utils');
-const { getSongsPath, getSongbookIdList, getSongbookInfo } = require('./scripts/songbookLoader');
+const { getSongsPath, getSongbookIdList, getSongbookInfo, getSongBookList } = require('./scripts/songbookLoader');
 const { getTranslationsBy } = require('./scripts/i18n');
 const { makeIndexList, makeAuthorsList } = require('./scripts/makeIndexList');
 const version = require('./package.json').version;
+const { writeFile } = require('./scripts/ioHelpers');
 
 const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
 const { makeTelegraphElements, getAllTelegraphPages, createOrUpdateTelegraphPage } = require('./scripts/telegraph/utils');
@@ -350,6 +351,20 @@ gulp.task('songbook-list', (done) => {
     })();
 });
 
+/**
+ *
+ * */
+gulp.task('book-list', (done) => {
+	writeFile(
+		PATHS.BUILD.ROOT,
+		'book-list.json',
+		JSON.stringify(getSongBookList(), null, 2)
+	).then(done);
+});
+
+/**
+ *
+ */
 gulp.task('telegraph-songbook-list', (done) => {
     const tasks = getSongbookIdList().map((songbook_id) => {
         const tr = getTranslationsBy(songbook_id);
@@ -966,6 +981,7 @@ gulp.task('build', (done) => {
         'songbook-contents',
         'songbook-a-z',
         'songbook-authors',
+				'book-list',
         'sitemap',
         'songbook-list',
         '404',
