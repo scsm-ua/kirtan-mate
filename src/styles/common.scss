@@ -144,7 +144,7 @@ p {
     min-height: calc(100% - var(--header-height));
     background-color: var(--main-bg-color);
 
-    @include breakpoint($min: $bp768) {
+    @include breakpoint($min: $bp768, $minHeight: $bpHeight500) {
         //min-height: 100%;
         margin-top: var(--header-height);
     }
