@@ -5,7 +5,7 @@
     background-color: var(--header-bg-color);
     height: var(--header-height);
 
-    @include breakpoint($min: $bp768) {
+    @include breakpoint($min: $bp768, $minHeight: $bpHeight500) {
         position: fixed;
         top: 0;
         left: 0;

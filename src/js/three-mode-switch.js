@@ -11,11 +11,11 @@ tpl.innerHTML = `
         .pill { --pill-h: 36px; --pill-w: 82px; --pad:6px; position:relative; width: var(--pill-w); height: var(--pill-h); box-sizing: border-box; display: inline-flex; align-items: center; padding: var(--pad); background: rgba(0,0,0,0.06); border-radius: 999px; gap: 6px; cursor: pointer; }
 
         /* selection fill that animates */
-        .fill { --pill-color: #aa8811; position:absolute; top:4px; bottom: 3px; left:4px; width: calc(50% - 8px); border-radius: 999px; transition: transform 260ms cubic-bezier(.2,.9,.2,1), width 260ms cubic-bezier(.2,.9,.2,1), left 260ms cubic-bezier(.2,.9,.2,1); box-shadow: 0 1px 6px rgba(0,0,0,0.08); }
+        .fill { --pill-color: #bfa871; position:absolute; top:4px; bottom: 3px; left:4px; width: calc(50% - 8px); border-radius: 999px; transition: transform 260ms cubic-bezier(.2,.9,.2,1), width 260ms cubic-bezier(.2,.9,.2,1), left 260ms cubic-bezier(.2,.9,.2,1); box-shadow: 0 1px 6px rgba(0,0,0,0.08); }
 
         /* When both selected we stretch the fill */
-        :host([color]) .fill { background: var(--accent-color); }
-        :host(:not([color])) .fill { background: var(--accent-color); }
+        :host([color]) .fill { background: var(--pill-color); }
+        :host(:not([color])) .fill { background: var(--pill-color); }
 
         .slot { position:relative; z-index:2; width:50%; display:inline-flex; justify-content:center; align-items:center; }
         .dot { width:28px; height:28px; border-radius:50%; display:inline-grid; place-items:center; font-weight:600; font-size:13px; background:transparent; z-index:2; }
@@ -99,8 +99,7 @@ class ThreeModeSwitch extends HTMLElement {
         this._shadow.appendChild(tpl.content.cloneNode(true));
 
         // Load from localStorage.
-        // this.mode = getSongDisplayMode() || 3;
-        this.mode = 3;
+        this.mode = getSongDisplayMode() || 3;
         this.$labelText = this._shadow.querySelector('.label-text');
     }
 

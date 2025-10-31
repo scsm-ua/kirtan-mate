@@ -74,7 +74,7 @@ $breakpoints: (
  *
  */
 /**/
-@mixin breakpoint($min: 0, $max: 0) {
+@mixin breakpoint($min: 0, $max: 0, $minHeight: 0, $maxHeight: 0) {
     $query: "all" !default;
 
     @if $min != 0 and $max != 0 {
@@ -86,6 +86,14 @@ $breakpoints: (
     @else if $min == 0 and $max != 0 {
         $query: "(max-width: #{$max}px)";
     }
+
+    @if $minHeight != 0 {
+        $query: "#{$query} and (min-height: #{$minHeight}px)";
+    }
+    @if $maxHeight != 0 {
+        $query: "#{$query} and (max-height: #{$maxHeight}px)";
+    }
+
     @media #{$query} {
         @content;
     }
