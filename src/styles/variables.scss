@@ -10,6 +10,11 @@ $bp768: 768;
 $bp576: 576;
 
 /**
+ * CSS breakpoint height values.
+ */
+$bpHeight500: 500;
+
+/**
  *
  */
 :root {
@@ -29,7 +34,7 @@ $bp576: 576;
     --page-max-width: 768px;
     --side-padding: 20px;
 
-    @include breakpoint($min: $bp768) {
+    @include breakpoint($min: $bp768, $minHeight: $bpHeight500) {
         --footer-height: 82px;
     }
 
