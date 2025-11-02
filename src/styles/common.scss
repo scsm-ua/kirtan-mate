@@ -144,7 +144,7 @@ p {
     min-height: calc(100% - var(--header-height));
     background-color: var(--main-bg-color);
 
-    @include breakpoint($min: $bp768) {
+    @include breakpoint($min: $bp768, $minHeight: $bpHeight500) {
         //min-height: 100%;
         margin-top: var(--header-height);
     }
@@ -152,6 +152,14 @@ p {
     &__container {
         margin: 0 auto;
         max-width: var(--content-max-width);
+
+        .enable-transition & {
+            transition: max-width 0.5s ease;
+        }
+
+        .translation-only-mode & {
+            max-width: var(--desktop-content-max-width);
+        }
     }
 
     &__content {
