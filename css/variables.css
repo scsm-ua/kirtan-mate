@@ -20,6 +20,9 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
  * CSS breakpoint values.
  */
 /**
+ * CSS breakpoint height values.
+ */
+/**
  *
  */
 :root {
@@ -32,12 +35,11 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --font-size: 16px;
   /**/
   --content-max-width: 568px;
+  --desktop-content-max-width: 900px;
   --header-height: 52px;
   --footer-height: 72px;
   --page-max-width: 768px;
   --side-padding: 20px;
-  /**/
-  --transition-duration-m: 0.4s;
   /**/
   --accent-color: var(--orange);
   --border-color: var(--grey);
@@ -56,7 +58,7 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --grey: #C0C0C0;
   --orange: #F5C149;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-height: 500px) {
   :root {
     --footer-height: 82px;
   }

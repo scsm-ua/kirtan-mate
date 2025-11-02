@@ -1,0 +1,71 @@
+{
+  "ru-kdm": {
+    "title": "Колесница Джаганнатха",
+    "subtitle": "Утренняя программа",
+    "slug": "ru-kdm",
+    "language": "ru",
+    "hidden": true,
+    "render": {
+      "tg.contents.page_number": false
+    },
+    "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/gaudiya-gitanjali-ru-kd-morning",
+    "sort_order": 0
+  },
+  "en": {
+    "title": "Kirtan Guide",
+    "subtitle": "Chiang Mai English Edition, 2022",
+    "slug": "en",
+    "sort_order": 10,
+    "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/kirtan-guide-en"
+  },
+  "ru": {
+    "title": "Гаудия Гитанджали",
+    "subtitle": "Cборник вайшнавских песен и молитв",
+    "slug": "ru",
+    "sort_order": 20,
+    "render": {
+      "tg.contents.first_line": false,
+      "tg.a-z.embeds": false,
+      "tg.a-z.pages.short": true
+    },
+    "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/gaudiya-gitanjali-ru"
+  },
+  "es": {
+    "title": "Guía de Kīrtan",
+    "subtitle": "Edición Detallada. Con traducción palabra por palabra y explicación de estilo",
+    "slug": "es",
+    "sort_order": 30,
+    "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/kirtan-guide-es"
+  },
+  "pt": {
+    "title": "Livro de Kirtan",
+    "subtitle": "Seva Ashram, Campos do Jordão",
+    "slug": "pt",
+    "language": "pt-BR",
+    "sort_order": 35,
+    "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/kirtan-guide-pt"
+  },
+  "en-pe": {
+    "title": "Kirtan Guide",
+    "subtitle": "Pocket Edition, 2013",
+    "slug": "en-pe",
+    "language": "en",
+    "sort_order": 40,
+    "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/kirtan-guide-pocket-edition"
+  },
+  "lv": {
+    "title": "Gaudija Gītandžalī",
+    "subtitle": "Vaišnavu dziesmas un lūgšanas",
+    "slug": "lv",
+    "sort_order": 50,
+    "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/gaudiya-gitanjali-lv"
+  },
+  "ua": {
+    "title": "Ґаудія Ґітанджалі",
+    "subtitle": "Переклад деяких бгаджанів на українську мову",
+    "slug": "ua",
+    "sort_order": 60,
+    "language": "uk",
+    "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/gaudiya-gitanjali-ua"
+  }
+}

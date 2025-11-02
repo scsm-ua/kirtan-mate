@@ -48,18 +48,33 @@
 
 .Collapse {
   display: block;
+  overflow: hidden;
+}
+.Collapse__transition {
+  transform-origin: top;
+  height: 0;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: height 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
+}
+.Collapse__show {
+  /* height will be set dynamically via JS */
+  height: auto;
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.EmbedCollapse {
+  display: block;
   max-height: 0px;
   overflow: hidden;
 }
-.Collapse__show {
-  /* Warning: if verse will be larger, part of content will be hidden. */
-  max-height: 999em;
+.EmbedCollapse__show {
+  /* Warning: if content will be larger, part of content will be hidden. */
+  max-height: 9em;
 }
-.Collapse__transition {
-  transition: max-height var(--transition-duration-m) cubic-bezier(0, 1, 0, 1);
-}
-.Collapse__transition.Collapse__show {
-  transition: max-height 1s ease-in-out 0s;
+.EmbedCollapse__transition {
+  transition: max-height 0.5s linear 0s;
 }
 
 /*
@@ -102,6 +117,9 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
  * CSS breakpoint values.
  */
 /**
+ * CSS breakpoint height values.
+ */
+/**
  *
  */
 :root {
@@ -114,12 +132,11 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --font-size: 16px;
   /**/
   --content-max-width: 568px;
+  --desktop-content-max-width: 900px;
   --header-height: 52px;
   --footer-height: 72px;
   --page-max-width: 768px;
   --side-padding: 20px;
-  /**/
-  --transition-duration-m: 0.4s;
   /**/
   --accent-color: var(--orange);
   --border-color: var(--grey);
@@ -138,7 +155,7 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --grey: #C0C0C0;
   --orange: #F5C149;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-height: 500px) {
   :root {
     --footer-height: 82px;
   }
@@ -248,6 +265,9 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
  * CSS breakpoint values.
  */
 /**
+ * CSS breakpoint height values.
+ */
+/**
  *
  */
 :root {
@@ -260,12 +280,11 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --font-size: 16px;
   /**/
   --content-max-width: 568px;
+  --desktop-content-max-width: 900px;
   --header-height: 52px;
   --footer-height: 72px;
   --page-max-width: 768px;
   --side-padding: 20px;
-  /**/
-  --transition-duration-m: 0.4s;
   /**/
   --accent-color: var(--orange);
   --border-color: var(--grey);
@@ -284,7 +303,7 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --grey: #C0C0C0;
   --orange: #F5C149;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-height: 500px) {
   :root {
     --footer-height: 82px;
   }
@@ -417,7 +436,7 @@ p {
   min-height: calc(100% - var(--header-height));
   background-color: var(--main-bg-color);
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-height: 500px) {
   .Main {
     margin-top: var(--header-height);
   }
@@ -425,6 +444,12 @@ p {
 .Main__container {
   margin: 0 auto;
   max-width: var(--content-max-width);
+}
+.enable-transition .Main__container {
+  transition: max-width 0.5s ease;
+}
+.translation-only-mode .Main__container {
+  max-width: var(--desktop-content-max-width);
 }
 .Main__content {
   display: flex;
@@ -573,6 +598,9 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
  * CSS breakpoint values.
  */
 /**
+ * CSS breakpoint height values.
+ */
+/**
  *
  */
 :root {
@@ -585,12 +613,11 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --font-size: 16px;
   /**/
   --content-max-width: 568px;
+  --desktop-content-max-width: 900px;
   --header-height: 52px;
   --footer-height: 72px;
   --page-max-width: 768px;
   --side-padding: 20px;
-  /**/
-  --transition-duration-m: 0.4s;
   /**/
   --accent-color: var(--orange);
   --border-color: var(--grey);
@@ -609,7 +636,7 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --grey: #C0C0C0;
   --orange: #F5C149;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-height: 500px) {
   :root {
     --footer-height: 82px;
   }
