@@ -265,7 +265,7 @@ function getCommonPageContext(bookId) {
         const paths = getNavigationPaths(songbook_id);
 
         return {
-            href: paths.CONTENTS,
+            href: paths.A_Z,
             telegraph_href: paths.PUBLIC_CONTENTS,
             booklist_telegraph_href: paths.PUBLIC_BOOK_LIST,
             isSelected: bookId === songbook_id,
@@ -981,7 +981,7 @@ gulp.task('build', (done) => {
         'songbook-contents',
         'songbook-a-z',
         'songbook-authors',
-				'book-list',
+        'book-list',
         'sitemap',
         'songbook-list',
         '404',
