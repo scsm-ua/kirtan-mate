@@ -41,12 +41,11 @@
         "telegraphPath": "Vandana-02-22"
       },
       {
-        "id": "acharya-varyyam-gaura-dhama-nishtham",
-        "title": "Шрила Бхакти Ранджан Мадхусудан Махарадж",
-        "name": "Шрила Бхакти Ранджан Мадхусудан Махарадж",
-        "aliasName": "а̄ча̄рйа-варйам̇ гаура-дха̄ма-ниш̣т̣хам̇",
-        "fileName": "acharya-varyyam-gaura-dhama-nishtham.html",
-        "telegraphPath": "SHrila-Bhakti-Randzhan-Madhusudan-Maharadzh-02-22"
+        "id": "acharya-varyam-gaura-dhama-nishtham",
+        "title": "Шрила Бхакти Ранджан Мадхусуданa Махарадж",
+        "name": "Шрила Бхакти Ранджан Мадхусуданa Махарадж",
+        "aliasName": "а̄ча̄рйа-варйам̣ гаура-дха̄ма-ниш̣т̣хам̣",
+        "fileName": "acharya-varyam-gaura-dhama-nishtham.html"
       },
       {
         "id": "vande-vaikuntha-vritti-stham",
