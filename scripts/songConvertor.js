@@ -199,6 +199,8 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     const contentsSongData = orderedSongs[currentSongIndex];
 
+    console.warn('Song not found in contents file:', filename)
+
     var navigation = getPrevNextData(paths, telegraph_paths, orderedSongs, currentSongIndex);
 
     // Find duplicated in contents songs.
@@ -208,14 +210,14 @@ function fillTemplate(songbook_id, template, content, filePath) {
         navigation.pages = Object.fromEntries(currentSongs.map(song => [song.page_number, getPrevNextData(paths, telegraph_paths, orderedSongs, song.idx)]));
     }
 
-    const telegraphPage = getExistingTelegraphPage(`${ telegraph_paths.toSongs }/${ contentsSongData.fileName }`);
+    const telegraphPage = contentsSongData && getExistingTelegraphPage(`${ telegraph_paths.toSongs }/${ contentsSongData.fileName }`);
     const telegraph_href = telegraphPage && `${PATHS.TELEGRAPH_BASE}/${telegraphPage.path}`;
 
     const songbooksAsOptions = alternativeTranslationBooks.filter(info => !info.hidden);
 
     // Store first line for schema.
-    song.first_line = contentsSongData.aliasName;
-    song.language = currentSongbook.language;
+    song.first_line = contentsSongData?.aliasName;
+    song.language = currentSongbook?.language;
 
     const headParts = {
         title:          song.getPageTitle(),
@@ -237,7 +239,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
         language: currentSongbook.language,
         song,
         page: content.attributes?.page,
-        page_number: orderedSongs[currentSongIndex].page_number,
+        page_number: orderedSongs[currentSongIndex]?.page_number,
         has_word_by_word: song.hasWordByWord(),
         navigation,
         headParts: createHeadParts(headParts),
