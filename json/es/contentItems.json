@@ -863,6 +863,9 @@
         "aliasName": "āmāra jīvana,         sadā pāpe rata,",
         "fileName": "amara-jivana-sada-pape-rata.html",
         "page": "187",
+        "embeds": [
+          "Bhudev Prabhu"
+        ],
         "telegraphPath": "Dainya-4-02-22"
       },
       {
@@ -1287,6 +1290,9 @@
         "aliasName": "mayura-mukuṭa pitāmbara-dhāri",
         "fileName": "mayura-mukuta-pitambara-dhari.html",
         "page": "258",
+        "embeds": [
+          "Sadhu Priya Prabhu"
+        ],
         "telegraphPath": "Mayura-Mukuṭa-02-22-2"
       }
     ]
@@ -1429,7 +1435,8 @@
         "fileName": "prabhu-kohe-kohilan-ei-mahamantra.html",
         "page": "320",
         "embeds": [
-          "Nitai dasa"
+          "Nitai dasa",
+          "Sadhu Priya Prabhu"
         ],
         "telegraphPath": "Prabhu-kohe-02-22-3"
       }

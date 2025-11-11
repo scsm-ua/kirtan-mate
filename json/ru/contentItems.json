@@ -45,7 +45,8 @@
         "title": "Шрила Бхакти Ранджан Мадхусуданa Махарадж",
         "name": "Шрила Бхакти Ранджан Мадхусуданa Махарадж",
         "aliasName": "а̄ча̄рйа-варйам̣ гаура-дха̄ма-ниш̣т̣хам̣",
-        "fileName": "acharya-varyam-gaura-dhama-nishtham.html"
+        "fileName": "acharya-varyam-gaura-dhama-nishtham.html",
+        "telegraphPath": "SHrila-Bhakti-Randzhan-Madhusudana-Maharadzh-11-04"
       },
       {
         "id": "vande-vaikuntha-vritti-stham",
@@ -1276,6 +1277,9 @@
         "aliasName": "а̄ма̄ра джӣвана,    сада̄ па̄пе рата,",
         "fileName": "amara-jivana-sada-pape-rata.html",
         "page": "161",
+        "embeds": [
+          "Bhudev Prabhu"
+        ],
         "telegraphPath": "Amara-dzhivana-02-22"
       },
       {
@@ -1672,6 +1676,9 @@
         "aliasName": "майура-мукут̣а пӣта̄мбара-дха̄рӣ",
         "fileName": "mayura-mukuta-pitambara-dhari.html",
         "page": "203",
+        "embeds": [
+          "Sadhu Priya Prabhu"
+        ],
         "telegraphPath": "Majura-mukuta-02-22"
       },
       {
@@ -1894,7 +1901,8 @@
         "fileName": "prabhu-kohe-kohilan-ei-mahamantra.html",
         "page": "249",
         "embeds": [
-          "Nitai dasa"
+          "Nitai dasa",
+          "Sadhu Priya Prabhu"
         ],
         "telegraphPath": "Prabhu-kohe-02-22-2"
       },

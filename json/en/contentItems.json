@@ -21,7 +21,8 @@
         "title": "Praṇām Mantra to Śrīla Bhakti Rañjan Madhusūdana Mahārāj",
         "name": "Śrīla Bhakti Rañjan Madhusūdana Mahārāj",
         "aliasName": "āchārya-varyaṃ gaura-dhāma-niṣṭhaṃ",
-        "fileName": "acharya-varyam-gaura-dhama-nishtham.html"
+        "fileName": "acharya-varyam-gaura-dhama-nishtham.html",
+        "telegraphPath": "Śrīla-Bhakti-Rañjan-Madhusūdana-Mahārāj-11-04"
       },
       {
         "id": "vande-vaikuntha-vritti-stham",
@@ -43,8 +44,8 @@
       },
       {
         "id": "pujya-sri-guru-varga-vandita",
-        "title": "Praṇām Mantra to Srila Bhakti Nirmal Acharya Maharaj",
-        "name": "Srila Bhakti Nirmal Acharya Maharaj",
+        "title": "Praṇām Mantra to Śrila Bhakti Nirmal Āchārya Mahārāj",
+        "name": "Śrila Bhakti Nirmal Āchārya Mahārāj",
         "aliasName": "pūjya śrī-guru-varga-vandita",
         "fileName": "pujya-sri-guru-varga-vandita.html",
         "telegraphPath": "Srila-Bhakti-Nirmal-Acharya-Maharaj-02-22"
@@ -238,6 +239,9 @@
         "aliasName": "nija-pati-bhuja-daṇḍa-chchhatra-bhāvaṁ prapadya",
         "fileName": "nija-pati-bhuja-danda-chchhatra-bhavam.html",
         "page": "32",
+        "embeds": [
+          "Kesavananda Dasa"
+        ],
         "telegraphPath": "Śrī-Śrī-Govardhana-vāsa-prārthanā-daśakam-02-22"
       }
     ]
@@ -1159,6 +1163,9 @@
         "aliasName": "āmāra jīvana,    sadā pāpe rata,",
         "fileName": "amara-jivana-sada-pape-rata.html",
         "page": "188",
+        "embeds": [
+          "Bhudev Prabhu"
+        ],
         "telegraphPath": "Āmāra-jīvana-02-22-2"
       },
       {
@@ -1536,6 +1543,9 @@
         "aliasName": "mayura-mukuṭa pītāmbara-dhārī",
         "fileName": "mayura-mukuta-pitambara-dhari.html",
         "page": "243",
+        "embeds": [
+          "Sadhu Priya Prabhu"
+        ],
         "telegraphPath": "Mayura-mukuṭa-02-22"
       },
       {
@@ -1759,7 +1769,8 @@
         "fileName": "prabhu-kohe-kohilan-ei-mahamantra.html",
         "page": "299",
         "embeds": [
-          "Nitai dasa"
+          "Nitai dasa",
+          "Sadhu Priya Prabhu"
         ],
         "telegraphPath": "Prabhu-kohe-02-22"
       },
