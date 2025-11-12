@@ -199,7 +199,9 @@ function fillTemplate(songbook_id, template, content, filePath) {
 
     const contentsSongData = orderedSongs[currentSongIndex];
 
-    console.warn('Song not found in contents file:', filename)
+    if (!contentsSongData) {
+        console.warn('Song not found in contents file:', filename)
+    }
 
     var navigation = getPrevNextData(paths, telegraph_paths, orderedSongs, currentSongIndex);
 
