@@ -59,6 +59,10 @@ class Song {
         return !!this.json.verses.find(v => v.word_by_word?.length);
     }
 
+    hasTranslation() {
+        return this.json.meta?.translation !== 'no';
+    }
+
     //===
 
     getUnifiedAurhor() {
@@ -218,7 +222,7 @@ const A2_MD_REGEX = /\*\*(.*?)\*\*/gm;
  * @return {string[]}
  */
 function processTranslation(lines) {
-    if (!lines) {
+    if (!lines || !lines.length) {
         return [];
     }
     return lines
@@ -237,7 +241,7 @@ function processTranslation(lines) {
  * @return {string[]}
  */
 function processTranslationForTelegraph(lines) {
-    if (!lines) {
+    if (!lines || !lines.length) {
         return [];
     }
     return lines

@@ -36,13 +36,16 @@
 
                             <main class="SongPage__main">
                                 <% if (song.getVersesForWeb().length) { %>
-                                    <div class="SongPage__toggle">
-                                        <three-mode-switch
-                                            label="<%= currentSongbook.i18n('SONG_PAGE.SHOW_TRANSLATION') %>"
-                                        ></three-mode-switch>
-                                    </div>
 
-                                    <ul class="SongPage__verses <% if (has_word_by_word) { %>word-by-word-mode"<% } %>>
+                                    <% if (song.hasTranslation()) { %>
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="<%= currentSongbook.i18n('SONG_PAGE.SHOW_TRANSLATION') %>"
+                                            ></three-mode-switch>
+                                        </div>
+                                    <% } %>
+
+                                    <ul class="SongPage__verses<% if (has_word_by_word) { %> word-by-word-mode<% } %><% if (!song.hasTranslation()) { %> no-translation<% } %>">
                                         <% song.getVersesForWeb().forEach((item, idx, arr) => { %>
                                             <%- include(
                                                 paths.toPartials + '/song-verse.ejs',
