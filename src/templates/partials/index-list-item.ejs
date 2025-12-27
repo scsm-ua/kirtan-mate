@@ -18,7 +18,7 @@
         <% item.items.forEach((song) => { %>
             <li class="IndexListItem__item">
                 <a href="<%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %>" class="IndexListItem__link">
-                    <h6 class="IndexListItem__name" title="<%= song.aliasName %>">
+                    <h6 class="IndexListItem__name<% if (song.meta.translation === 'no') { %> no-translation<% } %>" title="<%= song.aliasName %>">
                         <%= song.title %>
 
                         <% if (song.page) { %>&nbsp;

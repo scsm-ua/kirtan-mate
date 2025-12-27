@@ -35,6 +35,10 @@
         opacity: 0;
         animation: fadeInStep 0.35s forwards;
         */
+
+        &.no-translation {
+            margin: 0 0;
+        }
     }
 
     &__extra {
