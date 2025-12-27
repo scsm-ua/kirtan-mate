@@ -64,6 +64,11 @@ function getSongbookInfo(songbook_id) {
     return songbooks[songbook_id];
 }
 
+/**/
+function getSongBookList() {
+	return songbooks;
+}
+
 findSongbooks();
 
 
@@ -75,5 +80,6 @@ module.exports = {
     getIndexFilePath: getIndexFilePath,
     getSongsPath: getSongsPath,
     getSongbookIdList: getSongbookIdList,
-    getSongbookInfo: getSongbookInfo
+    getSongbookInfo: getSongbookInfo,
+		getSongBookList: getSongBookList
 };
