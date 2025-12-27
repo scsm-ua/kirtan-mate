@@ -33,6 +33,7 @@ svalpa pūṇya vatāṁ rājan viśvāso naiva jāyate..." />
 <link rel="alternate" hreflang="es" href="https://kirtan.site/es/mahaprasade-govinde-nama-brahmani.html" />
 <link rel="alternate" hreflang="pt-BR" href="https://kirtan.site/pt/mahaprasade-govinde-nama-brahmani.html" />
 <link rel="alternate" hreflang="lv" href="https://kirtan.site/lv/mahaprasade-govinde-nama-brahmani.html" />
+<link rel="alternate" hreflang="uk" href="https://kirtan.site/ua/mahaprasade-govinde-nama-brahmani.html" />
 <link rel="alternate" hreflang="x-default" href="https://kirtan.site/en/mahaprasade-govinde-nama-brahmani.html" />
 
 
@@ -208,13 +209,16 @@ svalpa pūṇya vatāṁ rājan viśvāso naiva jāyate..." />
 
                             <main class="SongPage__main">
                                 
-                                    <div class="SongPage__toggle">
-                                        <three-mode-switch
-                                            label="Show verses / translation"
-                                        ></three-mode-switch>
-                                    </div>
 
-                                    <ul class="SongPage__verses >
+                                    
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Show verses / translation"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
+
+                                    <ul class="SongPage__verses">
                                         
                                             
 
@@ -749,6 +753,41 @@ svalpa pūṇya vatāṁ rājan viśvāso naiva jāyate..." />
                     </a>
                 </li>
             
+                <li class="
+                        
+                            SongTranslations__item
+                        
+                    "
+                    data-book-id="ua"
+                    onclick="handleBookChoice(event)"
+                >
+                    <a href="https://kirtan.site/ua/mahaprasade-govinde-nama-brahmani.html">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            https://kirtan.site/css/banner/small-banner-ua.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-ua@2.png 2x
+                                        "
+                                        src="https://kirtan.site/css/banner/small-banner-ua.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    Ґаудія Ґітанджалі
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    Вайшнавський пісенник українскою мовою
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            
 
         </ul>
     </div>
@@ -766,6 +805,7 @@ svalpa pūṇya vatāṁ rājan viśvāso naiva jāyate..." />
                 const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
                 const verses = [...document.querySelectorAll('[data-elem="verse"]')];
                 const main = [...document.querySelectorAll('.Main')];
+                const noTranslation = [...document.querySelectorAll('.no-translation')];
 
                 const collapseShowClass = 'Collapse__show';
 
@@ -856,9 +896,12 @@ svalpa pūṇya vatāṁ rājan viśvāso naiva jāyate..." />
                     setSongDisplayMode(detail.value);
                 });
 
-                const initialMode = getSongDisplayMode();
-                if (initialMode !== 3) {
-                    performUpdate(initialMode);
+                // Load trasnlation state if has translations.
+                if (noTranslation.length === 0) {
+                    const initialMode = getSongDisplayMode();
+                    if (initialMode !== 3) {
+                        performUpdate(initialMode);
+                    }
                 }
             })();
         </script>

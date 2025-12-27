@@ -245,13 +245,16 @@ bhakativinodānvaya karuṇā murati..." />
 
                             <main class="SongPage__main">
                                 
-                                    <div class="SongPage__toggle">
-                                        <three-mode-switch
-                                            label="Show verses / translation"
-                                        ></three-mode-switch>
-                                    </div>
 
-                                    <ul class="SongPage__verses >
+                                    
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Show verses / translation"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
+
+                                    <ul class="SongPage__verses">
                                         
                                             
 
@@ -1491,7 +1494,7 @@ bhakativinodānvaya karuṇā murati..." />
                                 </h5>
 
                                 <div class="SongTranslations__subtitle ellipsis">
-                                    Переклад деяких бгаджанів на українську мову
+                                    Вайшнавський пісенник українскою мовою
                                 </div>
                             </div>
                         </div>
@@ -1515,6 +1518,7 @@ bhakativinodānvaya karuṇā murati..." />
                 const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
                 const verses = [...document.querySelectorAll('[data-elem="verse"]')];
                 const main = [...document.querySelectorAll('.Main')];
+                const noTranslation = [...document.querySelectorAll('.no-translation')];
 
                 const collapseShowClass = 'Collapse__show';
 
@@ -1605,9 +1609,12 @@ bhakativinodānvaya karuṇā murati..." />
                     setSongDisplayMode(detail.value);
                 });
 
-                const initialMode = getSongDisplayMode();
-                if (initialMode !== 3) {
-                    performUpdate(initialMode);
+                // Load trasnlation state if has translations.
+                if (noTranslation.length === 0) {
+                    const initialMode = getSongDisplayMode();
+                    if (initialMode !== 3) {
+                        performUpdate(initialMode);
+                    }
                 }
             })();
         </script>

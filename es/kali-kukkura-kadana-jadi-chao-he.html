@@ -234,11 +234,14 @@ kali-yuga-pāvana        kali-bhaya-nāśana..." />
 
                             <main class="SongPage__main">
                                 
-                                    <div class="SongPage__toggle">
-                                        <three-mode-switch
-                                            label="Mostrar traducción"
-                                        ></three-mode-switch>
-                                    </div>
+
+                                    
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Mostrar traducción"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
 
                                     <ul class="SongPage__verses word-by-word-mode">
                                         
@@ -1181,7 +1184,7 @@ kali-yuga-pāvana        kali-bhaya-nāśana..." />
                                 </h5>
 
                                 <div class="SongTranslations__subtitle ellipsis">
-                                    Переклад деяких бгаджанів на українську мову
+                                    Вайшнавський пісенник українскою мовою
                                 </div>
                             </div>
                         </div>
@@ -1205,6 +1208,7 @@ kali-yuga-pāvana        kali-bhaya-nāśana..." />
                 const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
                 const verses = [...document.querySelectorAll('[data-elem="verse"]')];
                 const main = [...document.querySelectorAll('.Main')];
+                const noTranslation = [...document.querySelectorAll('.no-translation')];
 
                 const collapseShowClass = 'Collapse__show';
 
@@ -1295,9 +1299,12 @@ kali-yuga-pāvana        kali-bhaya-nāśana..." />
                     setSongDisplayMode(detail.value);
                 });
 
-                const initialMode = getSongDisplayMode();
-                if (initialMode !== 3) {
-                    performUpdate(initialMode);
+                // Load trasnlation state if has translations.
+                if (noTranslation.length === 0) {
+                    const initialMode = getSongDisplayMode();
+                    if (initialMode !== 3) {
+                        performUpdate(initialMode);
+                    }
                 }
             })();
         </script>

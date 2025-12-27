@@ -33,6 +33,7 @@ kabe āmi pāibo vaiṣṇava-pada-chāyā..." />
 <link rel="alternate" hreflang="es" href="https://kirtan.site/es/kobe-shri-chaitanya-more-koribena-daya.html" />
 <link rel="alternate" hreflang="pt-BR" href="https://kirtan.site/pt/kobe-shri-chaitanya-more-koribena-daya.html" />
 <link rel="alternate" hreflang="en" href="https://kirtan.site/en-pe/kobe-shri-chaitanya-more-koribena-daya.html" />
+<link rel="alternate" hreflang="uk" href="https://kirtan.site/ua/kobe-shri-chaitanya-more-koribena-daya.html" />
 <link rel="alternate" hreflang="x-default" href="https://kirtan.site/en/kobe-shri-chaitanya-more-koribena-daya.html" />
 
 
@@ -247,11 +248,14 @@ kabe āmi pāibo vaiṣṇava-pada-chāyā..." />
 
                             <main class="SongPage__main">
                                 
-                                    <div class="SongPage__toggle">
-                                        <three-mode-switch
-                                            label="Mostrar traducción"
-                                        ></three-mode-switch>
-                                    </div>
+
+                                    
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Mostrar traducción"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
 
                                     <ul class="SongPage__verses word-by-word-mode">
                                         
@@ -1220,6 +1224,41 @@ kabe āmi pāibo vaiṣṇava-pada-chāyā..." />
                     </a>
                 </li>
             
+                <li class="
+                        
+                            SongTranslations__item
+                        
+                    "
+                    data-book-id="ua"
+                    onclick="handleBookChoice(event)"
+                >
+                    <a href="https://kirtan.site/ua/kobe-shri-chaitanya-more-koribena-daya.html">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            https://kirtan.site/css/banner/small-banner-ua.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-ua@2.png 2x
+                                        "
+                                        src="https://kirtan.site/css/banner/small-banner-ua.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    Ґаудія Ґітанджалі
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    Вайшнавський пісенник українскою мовою
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            
 
         </ul>
     </div>
@@ -1237,6 +1276,7 @@ kabe āmi pāibo vaiṣṇava-pada-chāyā..." />
                 const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
                 const verses = [...document.querySelectorAll('[data-elem="verse"]')];
                 const main = [...document.querySelectorAll('.Main')];
+                const noTranslation = [...document.querySelectorAll('.no-translation')];
 
                 const collapseShowClass = 'Collapse__show';
 
@@ -1327,9 +1367,12 @@ kabe āmi pāibo vaiṣṇava-pada-chāyā..." />
                     setSongDisplayMode(detail.value);
                 });
 
-                const initialMode = getSongDisplayMode();
-                if (initialMode !== 3) {
-                    performUpdate(initialMode);
+                // Load trasnlation state if has translations.
+                if (noTranslation.length === 0) {
+                    const initialMode = getSongDisplayMode();
+                    if (initialMode !== 3) {
+                        performUpdate(initialMode);
+                    }
                 }
             })();
         </script>

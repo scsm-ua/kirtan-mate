@@ -74,6 +74,10 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   margin: 0;
   color: var(--title-color);
 }
+.IndexListItem__name.no-translation {
+  color: #686868;
+  font-weight: normal;
+}
 .IndexListItem__menu {
   flex: 1;
   font-weight: initial;

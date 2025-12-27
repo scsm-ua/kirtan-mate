@@ -3,11 +3,224 @@
     "name": "Вступ",
     "items": [
       {
+        "id": "vande-ham-shri-guroh-shri-yuta-pada-kamalam",
+        "title": "Вандана̄",
+        "name": "Вандана̄",
+        "aliasName": "ванде ’хам шрī-ґурох шрī-юта-пада-камалам",
+        "fileName": "vande-ham-shri-guroh-shri-yuta-pada-kamalam.html",
+        "page": 11,
+        "embeds": [
+          "Шрила Ачарья Махарадж",
+          "Шрила Госвами Махарадж",
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
         "id": "acharya-varyam-gaura-dhama-nishtham",
         "title": "Прана̄м Мантра - Шрīла Бгакті Ранджан Мадгусӯдана Маха̄ра̄дж",
         "name": "Шрīла Бгакті Ранджан Мадгусӯдана Маха̄ра̄дж",
         "aliasName": "а̄ча̄рʼя-варʼям ґаура-дга̄ма-ніштхам",
-        "fileName": "acharya-varyam-gaura-dhama-nishtham.html"
+        "fileName": "acharya-varyam-gaura-dhama-nishtham.html",
+        "meta": {}
+      },
+      {
+        "id": "vande-vaikuntha-vritti-stham",
+        "title": "Прана̄м Мантра - Шрīла Бгакті Бімал Авадгӯт Маха̄ра̄дж",
+        "name": "Шрīла Бгакті Бімал Авадгӯт Маха̄ра̄дж",
+        "aliasName": "ванде вайкунтха-вритті-стхам",
+        "fileName": "vande-vaikuntha-vritti-stham.html",
+        "page": "11/1",
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "goswaminam-sudhirakhyam",
+        "title": "Прана̄м Мантра - Шрīла Бгакті Судгīр Ґосва̄мī Маха̄ра̄дж",
+        "name": "Шрīла Бгакті Судгīр Ґосва̄мī Маха̄ра̄дж",
+        "aliasName": "ґосва̄мінам судгīра̄кхʼям",
+        "fileName": "goswaminam-sudhirakhyam.html",
+        "page": "11/2",
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "pujya-sri-guru-varga-vandita",
+        "title": "Прана̄м Мантра - Шрīла Бгакті Нірмал А̄ча̄рʼя Маха̄ра̄дж",
+        "name": "Шрīла Бгакті Нірмал А̄ча̄рʼя Маха̄ра̄дж",
+        "aliasName": "пӯджʼя шрī-ґуру-варґа-вандіта",
+        "fileName": "pujya-sri-guru-varga-vandita.html",
+        "page": 12,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "gurvabhishta-supurakam-guru-ganair",
+        "title": "Прана̄м Мантра - Шрīла Бгакті Сундар Ґовінда Дев-Ґосва̄мī Маха̄ра̄дж",
+        "name": "Шрīла Бгакті Сундар Ґовінда Дев-Ґосва̄мī Маха̄ра̄дж",
+        "aliasName": "ґурва̄бгīшта-супӯракам ґуру-ґанайр",
+        "fileName": "gurvabhishta-supurakam-guru-ganair.html",
+        "page": 13,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "devam-divya-tanum-suchanda-vadanam-balarka-chelanchitam",
+        "title": "Прана̄м Мантра - Шрīла Бгакті Ракшак Шрīдгар Дев-Ґосва̄мī Маха̄ра̄дж",
+        "name": "Шрīла Бгакті Ракшак Шрīдгар Дев-Ґосва̄мī Маха̄ра̄дж",
+        "aliasName": "девам дівʼя-танум сучанда-ваданам-",
+        "fileName": "devam-divya-tanum-suchanda-vadanam-balarka-chelanchitam.html",
+        "page": 14,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shri-siddhanta-sarasvatiti-vidito",
+        "title": "Прана̄м Мантра - Бгаґава̄н Шрīла Бгакті Сіддга̄нта Сарасватī Тха̄кур",
+        "name": "Бгаґава̄н Шрīла Бгакті Сіддга̄нта Сарасватī Тха̄кур",
+        "aliasName": "шрī-сіддга̄нта-сарасватīті відіто",
+        "fileName": "shri-siddhanta-sarasvatiti-vidito.html",
+        "page": 15,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "namo-gaurakishoraya-bhaktavadhuta-murtaye",
+        "title": "Прана̄м Мантра - Шрīла Ґаура Кішора Да̄с Ба̄ба̄джī Маха̄ра̄дж",
+        "name": "Шрīла Ґаура Кішора Да̄с Ба̄ба̄джī Маха̄ра̄дж",
+        "aliasName": "намо ґауракішора̄я",
+        "fileName": "namo-gaurakishoraya-bhaktavadhuta-murtaye.html",
+        "page": 16,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "vande-bhaktivinodam-shri-gaura-shiakti-svarupakam",
+        "title": "Прана̄м Мантра - Шрīла Бгакті Вінод Тха̄кур",
+        "name": "Шрīла Бгакті Вінод Тха̄кур",
+        "aliasName": "ванде бгактівінодам шрī-",
+        "fileName": "vande-bhaktivinodam-shri-gaura-shiakti-svarupakam.html",
+        "page": 17,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "gaura-vrajashritashieshair-vaishnavair-vandya-vigraham",
+        "title": "Прана̄м Мантра - Шрīла Джаґанна̄тх Да̄с Ба̄ба̄джī Маха̄ра̄дж",
+        "name": "Шрīла Джаґанна̄тх Да̄с Ба̄ба̄джī Маха̄ра̄дж",
+        "aliasName": "ґаура-враджа̄шріта̄шєшайр",
+        "fileName": "gaura-vrajashritashieshair-vaishnavair-vandya-vigraham.html",
+        "page": 18,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "vancha-kalpatarubhyas-cha",
+        "title": "ва̄ньчха̄-калпатарубгʼяс’ ча",
+        "name": "ва̄ньчха̄-калпатарубгʼяс’ ча",
+        "aliasName": "ва̄ньчха̄-калпатарубгʼяс’ ча",
+        "fileName": "vancha-kalpatarubhyas-cha.html",
+        "page": 19,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "jayatam-suratau-pangor",
+        "title": "Шрī-Шрī-Ґуру-Ґаура̄нґа-Ра̄дга̄-Мадана-Моханджīу Колката",
+        "name": "Шрī-Шрī-Ґуру-Ґаура̄нґа-Ра̄дга̄-Мадана-Моханджīу",
+        "aliasName": "джаята̄м суратау панґор",
+        "fileName": "jayatam-suratau-pangor.html",
+        "page": 19,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "divyad-vrindaranya-kalpa-drumadhah",
+        "title": "Шрī-Шрī-Ґуру-Ґаура̄нґа-Ґа̄ндгарва̄-Ґовіндасундарджīу Набадвīп",
+        "name": "Шрī-Шрī-Ґуру-Ґаура̄нґа-Ґа̄ндгарва̄-Ґовіндасундарджīу",
+        "aliasName": "дīвʼяд-вринда̄ранья-калпа-друма̄дгах",
+        "fileName": "divyad-vrindaranya-kalpa-drumadhah.html",
+        "page": 20,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shriman-rasa-rasarambhi",
+        "title": "Шрī-Шрī-Ґуру-Ґаура̄нґа-Ра̄дга̄-Ґопīна̄тхджīу Ха̄па̄нія",
+        "name": "Шрī-Шрī-Ґуру-Ґаура̄нґа-Ра̄дга̄-Ґопīна̄тхджīу",
+        "aliasName": "шрīма̄н ра̄са-раса̄рамбгī",
+        "fileName": "shriman-rasa-rasarambhi.html",
+        "page": 21,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "vrindayai-tulasi-devyai",
+        "title": "вринда̄яй туласī-девʼяй",
+        "name": "вринда̄яй туласī-девʼяй",
+        "aliasName": "вринда̄яй туласī-девʼяй",
+        "fileName": "vrindayai-tulasi-devyai.html",
+        "page": 21,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "sakala-vaishnava-pade-mora-namaskara",
+        "title": "Молитви Вайшнавам",
+        "name": "Молитви Вайшнавам",
+        "aliasName": "сакала вайшнава-паде мора намаска̄ра",
+        "fileName": "sakala-vaishnava-pade-mora-namaskara.html",
+        "page": 21,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "namah-om-vishnupadaya-krishna",
+        "title": "Прана̄м Мантра - Шрīла Сва̄мī Маха̄ра̄дж",
+        "name": "Прана̄м Мантра",
+        "aliasName": "намах ом вішнупа̄дая кришна-прештха̄я бгӯтале",
+        "fileName": "namah-om-vishnupadaya-krishna.html",
+        "page": 286,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shrimach-chaitanya-sarasvata-mathavara-udgita-kirtir",
+        "title": "Тхе Ґлорй о тхе Шрī Чайтанья Са̄расват Матх",
+        "name": "Тхе Ґлорй о тхе Шрī Чайтанья Са̄расват Матх",
+        "fileName": "shrimach-chaitanya-sarasvata-mathavara-udgita-kirtir.html",
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "jaya-sa-parikara",
+        "title": "Джая Дгвані",
+        "name": "Джая Дгвані",
+        "aliasName": "джая са-парікара шрī-шрī-ґуру-ґаура̄нґа-ра̄дга̄-ґовіндасундар ґірідга̄рīджīу кī джая!",
+        "fileName": "jaya-sa-parikara.html",
+        "page": 22,
+        "meta": {
+          "translation": "no"
+        }
       },
       {
         "id": "shri-krishna-chaitanya-prabhu-nityananda",
@@ -16,11 +229,12 @@
         "aliasName": "шрī-кришна-чайтанья прабгу нітьянанда",
         "fileName": "shri-krishna-chaitanya-prabhu-nityananda.html",
         "page": "24",
+        "meta": {},
         "telegraphPath": "Pancha-tattva-mantra-02-22-2"
       },
       {
         "id": "hare-krishna-hare-krishna-krishna-krishna-hare-hare",
-        "title": "Харе Кришна маха̄-мантра",
+        "title": "Харе Кришна маха̄мантра",
         "name": "Харе Крішна маха̄мантра",
         "aliasName": "харе кришна харе кришна кришна кришна харе харе",
         "fileName": "hare-krishna-hare-krishna-krishna-krishna-hare-hare.html",
@@ -43,13 +257,110 @@
           "Шрила Авадхут Махарадж",
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Hare-Krіshna-mahamantra-02-22"
+      },
+      {
+        "id": "hari-nama-mahamantra-sarva-mantra-sara",
+        "title": "Дашя-відга На̄ма̄пара̄дга",
+        "name": "Дашя-відга На̄ма̄пара̄дга",
+        "aliasName": "харі-на̄ма маха̄мантра сарва-мантра-са̄ра",
+        "fileName": "hari-nama-mahamantra-sarva-mantra-sara.html",
+        "page": 26,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "nija-pati-bhuja-danda-chchhatra-bhavam",
+        "title": "Шрī Шрī Ґовардгана-ва̄са-пра̄ртхана̄-дашякам",
+        "name": "Шрī Шрī Ґовардгана-ва̄са-пра̄ртхана̄-дашякам",
+        "aliasName": "ніджа-паті-бгуджа-данда-ччхатра-бга̄вам прападья",
+        "fileName": "nija-pati-bhuja-danda-chchhatra-bhavam.html",
+        "embeds": [
+          "Kesavananda Dasa"
+        ],
+        "meta": {
+          "translation": "no"
+        }
       }
     ]
   },
   {
-    "name": "Ранкове Араті і програма",
+    "name": "Ранкове А̄раті і програма",
     "items": [
+      {
+        "id": "jaya-jaya-girirajer-arati-vishiala",
+        "title": "Шрī Ґовінда Кунда Ґупта-Ґовардган А̄раті",
+        "name": "Шрī Ґовінда Кунда",
+        "aliasName": "джая джая ґіріра̄джер а̄раті вішяла",
+        "fileName": "jaya-jaya-girirajer-arati-vishiala.html",
+        "page": "32",
+        "meta": {},
+        "telegraphPath": "SHrī-Govіnda-Kunda-Gupta-Govardgan-Aratі-02-22"
+      },
+      {
+        "id": "jaya-jaya-girirajer-arotiko-shobha",
+        "title": "Шрī Шрī Ґіріра̄дж-Ґовардган А̄раті",
+        "name": "Шрī Шрī Ґіріра̄дж-",
+        "aliasName": "джая джая ґіріра̄джер а̄ротіко шобга̄",
+        "fileName": "jaya-jaya-girirajer-arotiko-shobha.html",
+        "page": 34,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "jaya-guru-maharaja-karuna-sagara",
+        "title": "Шрī Шрī Ніта̄і-Чайтанья-А̄раті",
+        "name": "Шрī Шрī Ніта̄і-Чайтанья-А̄раті",
+        "aliasName": "джая ґуру маха̄ра̄джа каруна̄-са̄ґара",
+        "fileName": "jaya-guru-maharaja-karuna-sagara.html",
+        "page": 36,
+        "embeds": [
+          "Каракас Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "jaya-jaya-gurudever-arati-ujjvala",
+        "title": "Шрī Ґуру А̄раті",
+        "name": "Шрī Ґуру А̄раті",
+        "aliasName": "джая джая ґурудевер а̄раті уджджвала",
+        "fileName": "jaya-jaya-gurudever-arati-ujjvala.html",
+        "page": "70",
+        "embeds": [
+          "Навадвип Дхам",
+          "Каракас Дхам"
+        ],
+        "meta": {},
+        "telegraphPath": "SHrī-Guru-Aratі-02-22"
+      },
+      {
+        "id": "jaya-guru-maharaja-jati-rajeshvara",
+        "title": "Шрī Ґуру А̄раті-стуті",
+        "name": "Шрī Ґуру А̄раті-стуті",
+        "aliasName": "джая ‘ґуру-маха̄ра̄джа’ джаті-ра̄джешвара",
+        "fileName": "jaya-guru-maharaja-jati-rajeshvara.html",
+        "page": 72,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Навадвип Дхам",
+          "Каракас Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
       {
         "id": "kali-kukkura-kadana-jadi-chao-he",
         "title": "Прабга̄ті Ґīті",
@@ -60,7 +371,31 @@
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Prabgatі-Gītі-02-22"
+      },
+      {
+        "id": "jashomati-nandana-vraja-vara-nagara",
+        "title": "Шрī На̄м-кīртан",
+        "name": "Шрī На̄м-кīртан",
+        "aliasName": "джашоматī-нандана    враджа-вара на̄ґара,",
+        "fileName": "jashomati-nandana-vraja-vara-nagara.html",
+        "page": 60,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Шрила Госвами Махарадж",
+          "Навадвип Дхам",
+          "Каракас Дхам",
+          "Шрила Мадхусудан Махарадж",
+          "Шрила Авадхут Махарадж",
+          "Шрила Авадхут Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
       },
       {
         "id": "jaya-shiachinandana-sura-muni-vandana",
@@ -74,6 +409,7 @@
           "Шрила Мадхусудан Махарадж",
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "SHrī-SHyachīnandana-vandana-02-22"
       },
       {
@@ -91,6 +427,7 @@
           "Каракас Дхам",
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Gurudeva-02-22-3"
       },
       {
@@ -104,6 +441,7 @@
           "Навадвип Дхам",
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Arunodoya-kīrtan-02-22-2"
       },
       {
@@ -116,7 +454,21 @@
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Arunodoya-kīrtan-02-22"
+      },
+      {
+        "id": "samsara-davanala-lidha-loka",
+        "title": "Шрī Шрī Ґурва̄штака",
+        "name": "Шрī Шрī Ґурва̄штака",
+        "aliasName": "самса̄ра-да̄ва̄нала-лīдга-лока-",
+        "fileName": "samsara-davanala-lidha-loka.html",
+        "page": "48",
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {},
+        "telegraphPath": "SHrī-SHrī-Gurvashtaka-02-22"
       },
       {
         "id": "shri-krishna-chaitanya-prabhu-jive-daya-kori",
@@ -125,7 +477,38 @@
         "aliasName": "шрī-кришна-чайтанья прабгу джīве дая корі’",
         "fileName": "shri-krishna-chaitanya-prabhu-jive-daya-kori.html",
         "page": "50",
+        "meta": {},
         "telegraphPath": "SHyaranagatі-Blagodatne-zvernennya-02-22"
+      },
+      {
+        "id": "bhaja-re-bhaja-re-amar-mana-ati-manda",
+        "title": "Бгаджан-ґīті",
+        "name": "Бгаджан-ґīті",
+        "aliasName": "бгаджа ре бгаджа ре а̄ма̄р мана аті манда",
+        "fileName": "bhaja-re-bhaja-re-amar-mana-ati-manda.html",
+        "page": 51,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "vibhavari-shiesha-aloka-praveshia",
+        "title": "Вібга̄варī Шєша",
+        "name": "Вібга̄варī Шєша",
+        "aliasName": "вібга̄варī шєша,    а̄лока-правешя,",
+        "fileName": "vibhavari-shiesha-aloka-praveshia.html",
+        "page": 52,
+        "embeds": [
+          "Шрила Госвами Махарадж",
+          "Навадвип Дхам",
+          "Шрила Авадхут Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
       },
       {
         "id": "thakura-vaishnava-gana-kori-ei-nivedana",
@@ -137,6 +520,7 @@
         "embeds": [
           "Bhakti Lalita Devi"
         ],
+        "meta": {},
         "telegraphPath": "Thakura-vajshnava-gana-08-03"
       },
       {
@@ -151,12 +535,13 @@
           "Навадвип Дхам",
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Nam-sankīrtan-02-22"
       }
     ]
   },
   {
-    "name": "Обіднє Араті",
+    "name": "Обіднє А̄раті",
     "items": [
       {
         "id": "bhaja-bhakata-vatsala-shri-gaurahari",
@@ -170,22 +555,35 @@
           "Навадвип Дхам",
           "Каракас Дхам"
         ],
+        "meta": {},
         "telegraphPath": "SHrī-Bgog-Aratі-Gītі-02-22"
+      },
+      {
+        "id": "mahaprasade-govinde-nama-brahmani",
+        "title": "Маха̄праса̄да",
+        "name": "Маха̄праса̄да",
+        "aliasName": "маха̄праса̄де ґовінде на̄ма брахмані вайшнаве",
+        "fileName": "mahaprasade-govinde-nama-brahmani.html",
+        "page": 62,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shorira-avidya-jal-jodendriya-tahe-kal",
+        "title": "Шрī Праса̄да-сева̄я Ґīті",
+        "name": "Шрī Праса̄да-сева̄я Ґīті",
+        "aliasName": "бга̄і-ре!",
+        "fileName": "shorira-avidya-jal-jodendriya-tahe-kal.html",
+        "meta": {
+          "translation": "no"
+        }
       }
     ]
   },
   {
-    "name": "Вечірнє Араті",
+    "name": "Вечірнє А̄раті",
     "items": [
-      {
-        "id": "jaya-jaya-girirajer-arati-vishiala",
-        "title": "Шрī Ґовінда Кунда Ґупта-Ґовардган А̄раті",
-        "name": "Шрī Ґовінда Кунда",
-        "aliasName": "джая джая ґіріра̄джер а̄раті вішяла",
-        "fileName": "jaya-jaya-girirajer-arati-vishiala.html",
-        "page": "32",
-        "telegraphPath": "SHrī-Govіnda-Kunda-Gupta-Govardgan-Aratі-02-22"
-      },
       {
         "id": "jaya-jaya-gaurachander-arotiko-shobha",
         "title": "Шрī Ґаура-а̄раті",
@@ -198,6 +596,7 @@
           "Навадвип Дхам",
           "Сударшан Прабху"
         ],
+        "meta": {},
         "telegraphPath": "SHrī-Gaura-aratі-02-22"
       },
       {
@@ -211,7 +610,23 @@
           "Навадвип Дхам",
           "Каракас Дхам"
         ],
+        "meta": {},
         "telegraphPath": "SHrī-Sarasvat-aratі-02-22"
+      },
+      {
+        "id": "kobe-shri-chaitanya-more-koribena-daya",
+        "title": "Дайнья Пра̄ртхана̄ Ґīті",
+        "name": "Дайнья Пра̄ртхана̄ Ґīті",
+        "aliasName": "кобе шрī чайтанья море-корібена дая",
+        "fileName": "kobe-shri-chaitanya-more-koribena-daya.html",
+        "page": 118,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Навадвип Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
       },
       {
         "id": "namo-namah-tulasi-maharani",
@@ -224,6 +639,7 @@
           "Навадвип Дхам",
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "SHrī-Tulasī-parіkrama-gītі-02-22"
       },
       {
@@ -237,43 +653,217 @@
           "Шрила Ачарья Махарадж",
           "Навадвип Дхам"
         ],
+        "meta": {},
         "telegraphPath": "SHrī-Guru-vajshnava-Mahatmʼya-gītі-02-22"
-      }
-    ]
-  },
-  {
-    "name": "Вчителям",
-    "items": [
-      {
-        "id": "jaya-jaya-gurudever-arati-ujjvala",
-        "title": "Шрī Ґуру А̄раті",
-        "name": "Шрī Ґуру А̄раті",
-        "aliasName": "джая джая ґурудевер а̄раті уджджвала",
-        "fileName": "jaya-jaya-gurudever-arati-ujjvala.html",
-        "page": "70",
-        "embeds": [
-          "Навадвип Дхам",
-          "Каракас Дхам"
-        ],
-        "telegraphPath": "SHrī-Guru-Aratі-02-22"
       },
       {
-        "id": "samsara-davanala-lidha-loka",
-        "title": "Шрī Шрī Ґурва̄штака",
-        "name": "Шрī Шрī Ґурва̄штака",
-        "aliasName": "самса̄ра-да̄ва̄нала-лīдга-лока-",
-        "fileName": "samsara-davanala-lidha-loka.html",
-        "page": "48",
+        "id": "shri-krishna-chaitanya-prabhu-daya-kara-more",
+        "title": "Са̄варана-Шрī-Ґаура-па̄да-падме Пра̄ртхана̄",
+        "name": "Са̄варана-Шрī-Ґаура-па̄да-падме",
+        "aliasName": "шрī кришна чайтанья прабгу дая кара море",
+        "fileName": "shri-krishna-chaitanya-prabhu-daya-kara-more.html",
+        "page": 75,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
-        "telegraphPath": "SHrī-SHrī-Gurvashtaka-02-22"
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "vaishnava-thakura-dayara-sagara",
+        "title": "Шрī Вайшнава-махіма̄-ґīті",
+        "name": "Шрī Вайшнава-махіма̄-ґīті",
+        "aliasName": "(охе) вайшнава тха̄кура, даяра са̄ґара,",
+        "fileName": "vaishnava-thakura-dayara-sagara.html",
+        "page": 76,
+        "embeds": [
+          "Шрила Ачарья Махарадж",
+          "Навадвип Дхам",
+          "Сударшан Прабху"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "sujanarvuda-radhita-pada-yugam",
+        "title": "Шрī Шрī Прабгупа̄да-падма Ставаках",
+        "name": "Шрī Шрī Прабгупа̄да-падма",
+        "aliasName": "суджана̄рвуда-ра̄дгіта-па̄да-юґам",
+        "fileName": "sujanarvuda-radhita-pada-yugam.html",
+        "page": 78,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Авадхут Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
       }
     ]
   },
   {
-    "name": "Нітьянанді",
+    "name": "Шрī Шрī Премадга̄ма-дева-стотрам",
     "items": [
+      {
+        "id": "deva-siddha-mukta-yukta-bhakta-vrinda",
+        "title": "1-10. Субота",
+        "name": "Шрī Шрī",
+        "aliasName": "дева-сіддга-мукта-юкта-бгакта-вринда-вандітам",
+        "fileName": "deva-siddha-mukta-yukta-bhakta-vrinda.html",
+        "page": 81,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "sutra-vritti-tippanishta-sukshma-vachanadbhutam",
+        "title": "11-20. Неділя",
+        "name": "Шрī Шрī",
+        "aliasName": "сӯтра-вритті-тіппанīшта-сӯкшма-ва̄чана̄дбгутам",
+        "fileName": "sutra-vritti-tippanishta-sukshma-vachanadbhutam.html",
+        "page": 85,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "dhvasta-sarvvabhauma-vada-navya-tarka-shiankaram",
+        "title": "21-30. Понеділок",
+        "name": "Шрī Шрī",
+        "aliasName": "дгваста-са̄рвабгаума-ва̄да-навʼя-тарка-шянкарам",
+        "fileName": "dhvasta-sarvvabhauma-vada-navya-tarka-shiankaram.html",
+        "page": 88,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "prema-mugdha-rudra-raja-shiaurya-virya-vikramam",
+        "title": "31-40. Вівторок",
+        "name": "Шрī Шрī",
+        "aliasName": "према-муґдга-рудра-ра̄джа-шяурʼя-вīрʼя-вікрамам",
+        "fileName": "prema-mugdha-rudra-raja-shiaurya-virya-vikramam.html",
+        "page": 92,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "prema-mugdha-nritya-kirtanakularitantikam",
+        "title": "41-50. Середа",
+        "name": "Шрī Шрī",
+        "aliasName": "према-муґдга-нритья-кīртана̄кула̄ріта̄нтікам",
+        "fileName": "prema-mugdha-nritya-kirtanakularitantikam.html",
+        "page": 96,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shri-sanatananu-rupa-jiva-sampradayakam",
+        "title": "51-60. Четвер",
+        "name": "Шрī Шрī",
+        "aliasName": "шрī сана̄тана̄ну-рӯпа-джīва-сампрада̄якам",
+        "fileName": "shri-sanatananu-rupa-jiva-sampradayakam.html",
+        "page": 101,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "yamunambu-krishna-radhikali-keli-mandalam",
+        "title": "61-72. Пʼятниця",
+        "name": "Шрī Шрī",
+        "aliasName": "ямуна̄мбу-кришна-ра̄дгіка̄лі-келі-мандалам",
+        "fileName": "yamunambu-krishna-radhikali-keli-mandalam.html",
+        "page": 104,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Пісні, присвячені Нітьянанді",
+    "items": [
+      {
+        "id": "nadiya-godrume-nityananda-mahajana",
+        "title": "А̄ґʼя-Тахал",
+        "name": "А̄ґʼя-Тахал",
+        "aliasName": "надīя-ґодруме нітьянанда маха̄джана",
+        "fileName": "nadiya-godrume-nityananda-mahajana.html",
+        "page": "110",
+        "meta": {},
+        "telegraphPath": "Agʼya-Tahal-02-22"
+      },
+      {
+        "id": "nitai-pada-kamala-koti-chandra-sushitala",
+        "title": "Манах-Шікша̄",
+        "name": "Манах-Шікша̄",
+        "aliasName": "ніта̄і-пада-камала,    котī-чандра-сушітала,",
+        "fileName": "nitai-pada-kamala-koti-chandra-sushitala.html",
+        "page": 111,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Шрила Ачарья Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "dhana-mora-nityananda-pati-mora",
+        "title": "Сва-Ніштха",
+        "name": "Сва-Ніштха",
+        "aliasName": "дгана мора нітьянанда    паті мора ґаурачандра",
+        "fileName": "dhana-mora-nityananda-pati-mora.html",
+        "page": 112,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "nitai-gunamani-amara-nitai-gunamani",
+        "title": "Ніта̄і ґунамані а̄ма̄ра",
+        "name": "Ніта̄і ґунамані а̄ма̄ра",
+        "aliasName": "ніта̄і ґунамані а̄ма̄ра ніта̄і ґунамані",
+        "fileName": "nitai-gunamani-amara-nitai-gunamani.html",
+        "page": 113,
+        "embeds": [
+          "Навадвип Дхам",
+          "Сударшан Прабху"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
       {
         "id": "akrodha-paramananda",
         "title": "Акродга парама̄нанда",
@@ -285,22 +875,69 @@
           "Шрила Ачарья Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Akrodga-paramananda-02-22"
       },
       {
-        "id": "nadiya-godrume-nityananda-mahajana",
-        "title": "А̄ґʼя-Тахал",
-        "name": "А̄ґʼя-Тахал",
-        "aliasName": "надīя-ґодруме нітьянанда маха̄джана",
-        "fileName": "nadiya-godrume-nityananda-mahajana.html",
-        "page": "110",
-        "telegraphPath": "Agʼya-Tahal-02-22"
+        "id": "parama-karuna-pahu-dui-jana",
+        "title": "Шрī Шрī Ґаура-Нітьянандер Дая",
+        "name": "Шрī Шрī Ґаура-Нітьянандер Дая",
+        "aliasName": "парама каруна,    паху дӯі джана,",
+        "fileName": "parama-karuna-pahu-dui-jana.html",
+        "page": 115,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Ачарья Махарадж",
+          "Навадвип Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "dayal-nitai-chaitanya-bole-nach-re",
+        "title": "Даял Ніта̄і Чайтанья",
+        "name": "Даял Ніта̄і Чайтанья",
+        "aliasName": "‘даял ніта̄і чайтанья’ бо’ле на̄ч ре а̄ма̄р ман",
+        "fileName": "dayal-nitai-chaitanya-bole-nach-re.html",
+        "page": 116,
+        "embeds": [
+          "Каракас Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
       }
     ]
   },
   {
-    "name": "Шрі Чайтаньї Махапрабгу",
+    "name": "Пісні, присвячені Шрі Чайтаньї Маха̄прабгу",
     "items": [
+      {
+        "id": "gaurangera-duti-pada-jar-dhana-sampada",
+        "title": "Са̄варана-Шрī-Ґаура-махіма̄",
+        "name": "Са̄варана-Шрī-Ґаура-махіма̄",
+        "aliasName": "ґаура̄нґера дуті пада,    джа̄р дгана сампада,",
+        "fileName": "gaurangera-duti-pada-jar-dhana-sampada.html",
+        "page": 119,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "gaura-pahu-na-bhajiya-mainu",
+        "title": "Ґаура̄ Паху",
+        "name": "Ґаура̄ Паху",
+        "aliasName": "ґаура̄ паху на̄ бгаджія майну",
+        "fileName": "gaura-pahu-na-bhajiya-mainu.html",
+        "page": 120,
+        "meta": {
+          "translation": "no"
+        }
+      },
       {
         "id": "avatara-sara-gora-avatara",
         "title": "Авата̄ра Са̄ра",
@@ -312,6 +949,7 @@
           "Шрила Ачарья Махарадж",
           "Каракас Дхам"
         ],
+        "meta": {},
         "telegraphPath": "Avatara-Sara-02-22-2"
       },
       {
@@ -329,13 +967,134 @@
           "Шрила Авадхут Махарадж",
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "SHrī-Nama-02-22"
+      },
+      {
+        "id": "kobe-gaura-vane-suradhuni-tate",
+        "title": "Сіддгі-Ла̄ласа̄",
+        "name": "Сіддгі-Ла̄ласа̄",
+        "aliasName": "кобе ґаура-ване,    сурадгунī-тате,",
+        "fileName": "kobe-gaura-vane-suradhuni-tate.html",
+        "page": 123,
+        "embeds": [
+          "Сударшан Прабху"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "kali-ghora-timire-garasala-jagajana",
+        "title": "Калі-гора тіміре",
+        "name": "Калі-гора тіміре",
+        "aliasName": "калі-гора тіміре    ґарасала джаґаджана",
+        "fileName": "kali-ghora-timire-garasala-jagajana.html",
+        "page": 124,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "jadi-gaura-na-hoto-tobe-ki-hoito",
+        "title": "Джаді Ґаура на̄ хо’то",
+        "name": "Джаді Ґаура на̄ хо’то",
+        "aliasName": "джаді ґаура на̄ хо’то,    тобе кі хоіто,",
+        "fileName": "jadi-gaura-na-hoto-tobe-ki-hoito.html",
+        "page": 125,
+        "embeds": [
+          "Сударшан Прабху"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "emona-gauranga-bine-nahi-ara",
+        "title": "Емона Ґаура̄нґа біне на̄хі а̄ра",
+        "name": "Емона Ґаура̄нґа біне на̄хі а̄ра",
+        "aliasName": "емона ґаура̄нґа біне на̄хі а̄ра",
+        "fileName": "emona-gauranga-bine-nahi-ara.html",
+        "page": 126,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "ke-jabi-ke-jabi-bhai-bhava-sindhu-para",
+        "title": "Ке джабі ке джабі",
+        "name": "Ке джабі ке джабі",
+        "aliasName": "ке джабі ке джабі бга̄і бгава-сіндгу па̄ра",
+        "fileName": "ke-jabi-ke-jabi-bhai-bhava-sindhu-para.html",
+        "page": 127,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "vimala-hemajin-tanu-anupama-re",
+        "title": "Вімала хемаджіні",
+        "name": "Вімала хемаджіні",
+        "aliasName": "вімала хемаджін    тану анупама ре!",
+        "fileName": "vimala-hemajin-tanu-anupama-re.html",
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "gauranga-bolite-hobe-pulaka-shorira",
+        "title": "‘Ґаура̄нґа’ боліте хабе",
+        "name": "‘Ґаура̄нґа’ боліте хабе",
+        "aliasName": "‘ґаура̄нґа’ боліте хобе пулака-шорīра",
+        "fileName": "gauranga-bolite-hobe-pulaka-shorira.html",
+        "page": 129,
+        "embeds": [
+          "Каракас Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "aruna-basane-sonara-suraja",
+        "title": "Шрī Шрī Ґаурасундарер Авірбга̄ва Васаре",
+        "name": "Шрī Шрī Ґаурасундарер",
+        "aliasName": "аруна басане    сонара сӯраджа",
+        "fileName": "aruna-basane-sonara-suraja.html",
+        "page": 130,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "yadi-te-hari-pada-saroja-sudha",
+        "title": "Шрī Ґодрумачандра-бгаджанопадешя",
+        "name": "Шрī Ґодрумачандра-бгаджанопадешя",
+        "aliasName": "яді те харі-па̄да-сароджа-судга̄-",
+        "fileName": "yadi-te-hari-pada-saroja-sudha.html",
+        "embeds": [
+          "Shrila Bhakti Ranjan Madhusudan Maharaj"
+        ],
+        "meta": {
+          "translation": "no"
+        }
       }
     ]
   },
   {
-    "name": "Вайшнавам",
+    "name": "Інші пісні",
     "items": [
+      {
+        "id": "thakura-vaishnava-pada-avanira",
+        "title": "Тха̄кура-вайшнава-пада",
+        "name": "Тха̄кура-вайшнава-пада",
+        "aliasName": "тха̄кура-вайшнава-пада,    аванīра сусампада,",
+        "fileName": "thakura-vaishnava-pada-avanira.html",
+        "page": 134,
+        "meta": {
+          "translation": "no"
+        }
+      },
       {
         "id": "je-anilo-prema-dhana-karuna-prachura",
         "title": "Віраха-ґīті",
@@ -347,6 +1106,7 @@
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Vіraha-gītі-08-03"
       },
       {
@@ -360,27 +1120,71 @@
           "Шрила Говинда Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Vajshnava-Vіgʼyaptі-08-08"
-      }
-    ]
-  },
-  {
-    "name": "Екадаші та святкові дні",
-    "items": [
+      },
       {
-        "id": "shri-hari-vasare-hari-kirtana-vidhana",
-        "title": "Шрī Харі-ва̄сара-ґīті",
-        "name": "Шрī Харі-ва̄сара-ґīті",
-        "aliasName": "шрī харі-ва̄саре харі-кīртана-відга̄на",
-        "fileName": "shri-hari-vasare-hari-kirtana-vidhana.html",
-        "page": "238",
-        "telegraphPath": "SHrī-Harі-vasara-gītі-08-03"
-      }
-    ]
-  },
-  {
-    "name": "Інші бгаджани",
-    "items": [
+        "id": "kripa-kara-vaishnava-thakura",
+        "title": "Пра̄ртхана̄ Лаласа̄маї",
+        "name": "Пра̄ртхана̄ Лаласа̄маї",
+        "aliasName": "крипа кара’ вайшнава тха̄кура",
+        "fileName": "kripa-kara-vaishnava-thakura.html",
+        "page": 137,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "narada-muni-bajaya-vina",
+        "title": "Шрī На̄ма̄штакам 8",
+        "name": "Шрī На̄ма̄штакам 8",
+        "aliasName": "на̄рада муні,    ба̄джа̄я вīна̄,",
+        "fileName": "narada-muni-bajaya-vina.html",
+        "page": 140,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "krishnotkirtana-gana-nartana-parau",
+        "title": "Шрī Шрī Шад-Ґосва̄мй-аштакам",
+        "name": "Шрī Шрī Шад-Ґосва̄мй-аштакам",
+        "aliasName": "кришноткīртана-ґа̄на-нартана-парау",
+        "fileName": "krishnotkirtana-gana-nartana-parau.html",
+        "page": 141,
+        "embeds": [
+          "Шрила Госвами Махарадж",
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "ohe-harinam-tava-mahima-apara",
+        "title": "Шрī На̄ма̄штакам 7",
+        "name": "Шрī На̄ма̄штакам 7",
+        "aliasName": "охе харіна̄м, тава махіма̄ апа̄ра",
+        "fileName": "ohe-harinam-tava-mahima-apara.html",
+        "page": 144,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "ki-rupe-paibo-seva-mui-durachara",
+        "title": "Кі-рӯпе па̄ібо сева̄",
+        "name": "Кі-рӯпе па̄ібо сева̄",
+        "aliasName": "кі-рӯпе па̄ібо сева̄ муі дура̄ча̄ра",
+        "fileName": "ki-rupe-paibo-seva-mui-durachara.html",
+        "page": 145,
+        "meta": {
+          "translation": "no"
+        }
+      },
       {
         "id": "bhajahu-re-mana-shri-nanda-nandana",
         "title": "Бгаджаху Ре Мана",
@@ -391,7 +1195,44 @@
         "embeds": [
           "Bhakti Lalita Devi"
         ],
+        "meta": {},
         "telegraphPath": "Bgadzhahu-Re-Mana-02-22"
+      },
+      {
+        "id": "manasa-deho-geho-jo-kichu-mora",
+        "title": "Ма̄наса Дехо Ґехо",
+        "name": "Ма̄наса Дехо Ґехо",
+        "aliasName": "ма̄наса, дехо, ґехо, джо кічӯ мора",
+        "fileName": "manasa-deho-geho-jo-kichu-mora.html",
+        "page": 147,
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "e-ghora-samsare-podiya-manava",
+        "title": "Е гора самсаре",
+        "name": "Е гора самсаре",
+        "aliasName": "е гора самса̄ре,    подія ма̄нава",
+        "fileName": "e-ghora-samsare-podiya-manava.html",
+        "page": 148,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "dushta-mana-tumi-kisera-vaishnava",
+        "title": "Вайшнава Ке?",
+        "name": "Вайшнава Ке?",
+        "aliasName": "душта мана!    тумі кісера вайшнава?",
+        "fileName": "dushta-mana-tumi-kisera-vaishnava.html",
+        "page": 149,
+        "meta": {
+          "translation": "no"
+        }
       },
       {
         "id": "emona-durmati-samsara-bhitore",
@@ -411,7 +1252,71 @@
           "Шрила Авадхут Махарадж",
           "Шрила Авадхут Махарадж"
         ],
+        "meta": {},
         "telegraphPath": "Dajnyatmіka-02-22"
+      },
+      {
+        "id": "ki-jani-ki-bale-tomara-dhamete",
+        "title": "Ґоптритве Варана",
+        "name": "Ґоптритве Варана",
+        "aliasName": "кі джа̄ні кі бале,   тома̄ра дга̄мете,",
+        "fileName": "ki-jani-ki-bale-tomara-dhamete.html",
+        "page": 155,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Сударшан Прабху"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "bhuliya-tomare-samsare-asiya",
+        "title": "Дайнья",
+        "name": "Дайнья",
+        "aliasName": "бгулія тома̄ре,    самса̄ре а̄сія,",
+        "fileName": "bhuliya-tomare-samsare-asiya.html",
+        "page": 156,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "hari-he-prapanche-podiya-agati-hoiya",
+        "title": "Бгаджан-Ла̄ласа̄",
+        "name": "Бгаджан-Ла̄ласа̄",
+        "aliasName": "харі хе!",
+        "fileName": "hari-he-prapanche-podiya-agati-hoiya.html",
+        "page": 158,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "hari-hari-biphole-janama-goyainu",
+        "title": "Ішта-деве Віґʼяпті",
+        "name": "Ішта-деве Віґʼяпті",
+        "aliasName": "харі харі!    біпхоле джанама ґояіну",
+        "fileName": "hari-hari-biphole-janama-goyainu.html",
+        "page": 159,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Каракас Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "atma-nivedana-tuya-pade-kori",
+        "title": "А̄тма-ніведана",
+        "name": "А̄тма-ніведана",
+        "aliasName": "а̄тма-ніведана,    туя паде корі,",
+        "fileName": "atma-nivedana-tuya-pade-kori.html",
+        "page": 160,
+        "meta": {
+          "translation": "no"
+        }
       },
       {
         "id": "amara-jivana-sada-pape-rata",
@@ -423,7 +1328,906 @@
         "embeds": [
           "Bhudev Prabhu"
         ],
+        "meta": {},
         "telegraphPath": "Amara-dzhīvana-02-22"
+      },
+      {
+        "id": "tumi-sarveshvareshvara-vrajendra-kumara",
+        "title": "Тумі сарвешварешвара",
+        "name": "Тумі сарвешварешвара",
+        "aliasName": "тумі сарвешварешвара, враджендра-кума̄ра!",
+        "fileName": "tumi-sarveshvareshvara-vrajendra-kumara.html",
+        "page": 162,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "sarvasva-tomara-charane-sanpiya",
+        "title": "Сарвасва тома̄ра",
+        "name": "Сарвасва тома̄ра",
+        "aliasName": "сарвасва тома̄ра,    чаране санпія,",
+        "fileName": "sarvasva-tomara-charane-sanpiya.html",
+        "page": 163,
+        "embeds": [
+          "Шрила Шридхар Махарадж",
+          "Сударшан Прабху"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "tatala-saikate-vari-bindu-sama",
+        "title": "Та̄тала Сайкате",
+        "name": "Та̄тала Сайкате",
+        "aliasName": "та̄тала сайкате    ва̄рі бінду-сама",
+        "fileName": "tatala-saikate-vari-bindu-sama.html",
+        "page": 164,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "hari-he-dayala-mora-jaya-radha-natha",
+        "title": "Дайнья О Прапатті",
+        "name": "Дайнья О Прапатті",
+        "aliasName": "харі хе даяла мора джая ра̄дга̄-на̄тха",
+        "fileName": "hari-he-dayala-mora-jaya-radha-natha.html",
+        "page": 165,
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "atma-samarpane-gela-abhimana",
+        "title": "А̄тма-самарпане",
+        "name": "А̄тма-самарпане",
+        "aliasName": "а̄тма-самарпане ґела̄ абгіма̄на",
+        "fileName": "atma-samarpane-gela-abhimana.html",
+        "page": 166,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "kobe-hobe-bolo-se-dina-amar",
+        "title": "Кобе хо’бе боло",
+        "name": "Кобе хо’бе боло",
+        "aliasName": "кобе хо’бе боло се-діна а̄ма̄р",
+        "fileName": "kobe-hobe-bolo-se-dina-amar.html",
+        "page": 167,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "gopinath-mama-nivedana-shiuno",
+        "title": "Ніведана 1",
+        "name": "Ніведана",
+        "aliasName": "ґопīна̄тх,    мама ніведана шюно",
+        "fileName": "gopinath-mama-nivedana-shiuno.html",
+        "page": 169,
+        "embeds": [
+          "Шрила Мадхусудан Махарадж",
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "gopinath-ghuchao-samsara-jvala",
+        "title": "Ніведана 2",
+        "name": "Ніведана",
+        "aliasName": "ґопīна̄тх,    гуча̄о самса̄ра-джва̄ла̄",
+        "fileName": "gopinath-ghuchao-samsara-jvala.html",
+        "page": 170,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "gopinath-amara-upaya-nai",
+        "title": "Ніведана 3",
+        "name": "Ніведана",
+        "aliasName": "ґопīна̄тх,    а̄ма̄ра упа̄я на̄і",
+        "fileName": "gopinath-amara-upaya-nai.html",
+        "page": 171,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shri-rupa-manjari-pada-sei-mora-sampada",
+        "title": "Шрī-Рӯпа-Маньджарī-пада",
+        "name": "Шрī-Рӯпа-Маньджарī-пада",
+        "aliasName": "шрī-рӯпа-маньджарī-пада,    сеі мора сампада,",
+        "fileName": "shri-rupa-manjari-pada-sei-mora-sampada.html",
+        "page": 173,
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "durlabha-manava-janma-labhiya-samsare",
+        "title": "Дурлабга ма̄нава-джанма",
+        "name": "Дурлабга ма̄нава-джанма",
+        "aliasName": "дурлабга ма̄нава-джанма лабгія самса̄ре",
+        "fileName": "durlabha-manava-janma-labhiya-samsare.html",
+        "page": 175,
+        "embeds": [
+          "Каракас Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "anya-abhilasha-chadi-jniana-karma-parihari",
+        "title": "Анья-абгіла̄ша чха̄ді",
+        "name": "Анья-абгіла̄ша чха̄ді",
+        "aliasName": "анья-абгіла̄ша чха̄ді    ґʼяна карма паріхарі",
+        "fileName": "anya-abhilasha-chadi-jniana-karma-parihari.html",
+        "page": 177,
+        "meta": {
+          "translation": "no"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Шрī Шікша̄штакам",
+    "items": [
+      {
+        "id": "pita-varana-kali-pavana-gora",
+        "title": "1. Піта-варана калі",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "пīта-варана калі-па̄вана ґора̄",
+        "fileName": "pita-varana-kali-pavana-gora.html",
+        "page": 184,
+        "embeds": [
+          "Bhakti Lalita Devi",
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "tuhu-daya-sagara-tarayite-prani",
+        "title": "2. Туху дая-са̄ґара",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "туху дая-са̄ґара та̄раїте пра̄нī",
+        "fileName": "tuhu-daya-sagara-tarayite-prani.html",
+        "page": 185,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shri-krishna-kirtane-jodi-manasa-tohara",
+        "title": "3. Шрī-Кришна-кīртане джоді",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "шрī-кришна-кīртане джоді ма̄наса тоха̄ра",
+        "fileName": "shri-krishna-kirtane-jodi-manasa-tohara.html",
+        "page": 185,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "prabhu-tava-pada-juge-mora-nivedana",
+        "title": "4. Прабгу тава пада",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "прабгу тава пада-джуґе мора ніведана",
+        "fileName": "prabhu-tava-pada-juge-mora-nivedana.html",
+        "page": 186,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "anadi-karama-phole",
+        "title": "5. Ана̄ді карама пхоле",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "ана̄ді карама-пхоле,    поді бгава̄рнава-джоле,",
+        "fileName": "anadi-karama-phole.html",
+        "page": 187,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "aparadha-phole-mama",
+        "title": "6. Апара̄дга-пхоле мама",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "апара̄дга-пхоле мама    чітта бгела ваджра сама",
+        "fileName": "aparadha-phole-mama.html",
+        "page": 188,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "gaite-gaite-nama-ki-doshia-hoilo",
+        "title": "7a. Ґа̄іте ґа̄іте на̄ма",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "ґа̄іте ґа̄іте на̄ма кі дошя хоіло",
+        "fileName": "gaite-gaite-nama-ki-doshia-hoilo.html",
+        "page": 189,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "gaite-govinda-nam-upajilo-bhava-gram",
+        "title": "7b. Ґа̄іте ‘ґовінда’–на̄м",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "ґа̄іте ‘ґовінда’-на̄м,    упаджіло бга̄ва-ґра̄м,",
+        "fileName": "gaite-govinda-nam-upajilo-bhava-gram.html",
+        "page": 190,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "sakhi-go-kemote-dhoribo-paran",
+        "title": "7c. Сакхī ґо кемоте",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "сакхі ґо кемоте дгорібо пара̄н",
+        "fileName": "sakhi-go-kemote-dhoribo-paran.html",
+        "page": 191,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "bondhu-gon-shiunoho-vachana-mora",
+        "title": "8a. Бондгу-ґон! шюнохо",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "бондгу-ґон!    шюнохо вачана мора",
+        "fileName": "bondhu-gon-shiunoho-vachana-mora.html",
+        "page": 191,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "yoga-pithopari-sthita-ashta-sakhi-subeshtita",
+        "title": "8b. Йоґа-пīтхопарі-стхіта",
+        "name": "Шрī Шікша̄штакам",
+        "aliasName": "йоґа-пīтхопарі-стхіта,    ашта-сакхī-субештіта,",
+        "fileName": "yoga-pithopari-sthita-ashta-sakhi-subeshtita.html",
+        "page": 192,
+        "meta": {
+          "translation": "no"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Пісні Шрīматī Ра̄дга̄ра̄нī",
+    "items": [
+      {
+        "id": "radhika-charana-padma-sakala-shreyera",
+        "title": "Шрī Ра̄дга̄штака 1",
+        "name": "Шрī Ра̄дга̄штака",
+        "aliasName": "ра̄дгіка̄-чарана-падма,    сакала шреєра садма,",
+        "fileName": "radhika-charana-padma-sakala-shreyera.html",
+        "page": 196,
+        "embeds": [
+          "Шрила Шридхар Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "virajar-pare-shiuddha-paravyoma-dham",
+        "title": "Шрī Ра̄дга̄штака 2",
+        "name": "Шрī Ра̄дга̄штака",
+        "aliasName": "віраджа̄р па̄ре шюддга-паравйома-дга̄м",
+        "fileName": "virajar-pare-shiuddha-paravyoma-dham.html",
+        "page": 197,
+        "embeds": [
+          "Шрила Шридхар Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "radha-bhajane-jodi-moti-nahi-bhela",
+        "title": "Шрī Ра̄дга̄штака 3",
+        "name": "Шрī Ра̄дга̄штака",
+        "aliasName": "ра̄дга̄-бгаджане джоді моті на̄хі бгела̄",
+        "fileName": "radha-bhajane-jodi-moti-nahi-bhela.html",
+        "page": 198,
+        "embeds": [
+          "Каракас Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "radhakundatata-kunjakutira",
+        "title": "Ра̄дга̄-кундатата-куньджа-кутīра",
+        "name": "Ра̄дга̄-кундатата-куньджа-кутīра",
+        "aliasName": "ра̄дга̄кундатата-куньджакутīра",
+        "fileName": "radhakundatata-kunjakutira.html",
+        "page": 199,
+        "embeds": [
+          "Шрила Шридхар Махарадж",
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "radhe-jaya-jaya-madhava-dayite",
+        "title": "Шрī Ра̄дгіка̄-става",
+        "name": "Шрī Ра̄дгіка̄-става",
+        "aliasName": "ра̄дге джая джая ма̄дгава-даїте",
+        "fileName": "radhe-jaya-jaya-madhava-dayite.html",
+        "page": 200,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Пісні, присвячені Шрī Кришні",
+    "items": [
+      {
+        "id": "he-deva-bhavantam-vande",
+        "title": "Хе дева бгавантам ванде",
+        "name": "Хе дева бгавантам ванде",
+        "aliasName": "хе дева бгавантам ванде",
+        "fileName": "he-deva-bhavantam-vande.html",
+        "page": 202,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "radha-madhava-kunja-bihari",
+        "title": "Джая Ра̄дга̄-Ма̄дгава",
+        "name": "Джая Ра̄дга̄-Ма̄дгава",
+        "aliasName": "(джая) ра̄дга̄-ма̄дгава        (джая) куньджа-біха̄рī",
+        "fileName": "radha-madhava-kunja-bihari.html",
+        "page": 203,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Шрила Говинда Махарадж",
+          "Шрила Госвами Махарадж",
+          "Шрила Авадхут Махарадж",
+          "Шрила Авадхут Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "mayura-mukuta-pitambara-dhari",
+        "title": "Маюра мукута",
+        "name": "Маюра мукута",
+        "aliasName": "маюра-мукута пīта̄мбара-дга̄рī",
+        "fileName": "mayura-mukuta-pitambara-dhari.html",
+        "page": 203,
+        "embeds": [
+          "Sadhu Priya Prabhu"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "jaya-jaya-radha-krishna-jugala-milan",
+        "title": "Шрī Джуґала-а̄раті",
+        "name": "Шрī Джуґала-а̄раті",
+        "aliasName": "джая джая ра̄дга̄-кришна джуґала-мілан",
+        "fileName": "jaya-jaya-radha-krishna-jugala-milan.html",
+        "page": 204,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "radha-krishna-prana-mora-jugala-kishora",
+        "title": "Сакхі-вринде Віґʼяптіх",
+        "name": "Сакхі-вринде Віґʼяптіх",
+        "aliasName": "ра̄дга̄-кришна пра̄на мора джуґала-кішора",
+        "fileName": "radha-krishna-prana-mora-jugala-kishora.html",
+        "page": 205,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "jaya-radhe-jaya-krishna-jaya-vrindavan",
+        "title": "Шрī Враджа-дга̄ма-махіма̄мрита",
+        "name": "Шрī Враджа-дга̄ма-махіма̄мрита",
+        "aliasName": "джая ра̄дге, джая кришна, джая вринда̄ван",
+        "fileName": "jaya-radhe-jaya-krishna-jaya-vrindavan.html",
+        "page": 206,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Госвами Махарадж",
+          "Каракас Дхам",
+          "Каракас Дхам",
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "janama-saphala-tara-krishna-darashiana-jara",
+        "title": "Рӯпа-Кīртан",
+        "name": "Рӯпа-Кīртан",
+        "aliasName": "джанама сапхала та̄’ра,    кришна-дарашяна джа̄’ра",
+        "fileName": "janama-saphala-tara-krishna-darashiana-jara.html",
+        "page": 208,
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shiuno-he-rasika-jon-krishna-guna-aganon",
+        "title": "Ґуна-Кīртан",
+        "name": "Ґуна-Кīртан",
+        "aliasName": "шюно, хе расіка джон    кришна ґуна аґанон",
+        "fileName": "shiuno-he-rasika-jon-krishna-guna-aganon.html",
+        "page": 209,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "jaya-yashoda-nandana-krishna-gopala-govinda",
+        "title": "Джая Яшода̄-Нандана Кришна",
+        "name": "Джая Яшода̄-Нандана Кришна",
+        "aliasName": "джая яшода̄-нандана кришна ґопа̄ла ґовінда",
+        "fileName": "jaya-yashoda-nandana-krishna-gopala-govinda.html",
+        "page": 210,
+        "embeds": [
+          "Шрила Ачарья Махарадж",
+          "Каракас Дхам"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shrita-kamala-kuchha-mandala-dhrita",
+        "title": "Шріта Камала̄",
+        "name": "Шріта Камала̄",
+        "aliasName": "шріта-камала̄-кучха-мандала дгрита-кундала хе",
+        "fileName": "shrita-kamala-kuchha-mandala-dhrita.html",
+        "page": 211,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Екадаші та святкові дні",
+    "items": [
+      {
+        "id": "jaya-shrila-maharaja-charanaravinda",
+        "title": "А̄ча̄рʼя-чарана-вандана",
+        "name": "А̄ча̄рʼя-чарана-вандана",
+        "aliasName": "джая шрīла маха̄ра̄джа чарана̄равінда",
+        "fileName": "jaya-shrila-maharaja-charanaravinda.html",
+        "page": 214,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "krishna-hoite-chatur-mukha",
+        "title": "Шрī Ґуру-парампара̄",
+        "name": "Шрī Ґуру-парампара̄",
+        "aliasName": "кришна хоіте чатур-мукха,    хон кришна-севонмукха,",
+        "fileName": "krishna-hoite-chatur-mukha.html",
+        "page": 216,
+        "embeds": [
+          "Шрила Ачарья Махарадж",
+          "Шрила Авадхут Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "bhayabhanjana-jayashiamsana",
+        "title": "Шрī Даїта Да̄с Пранаті Паньчакам",
+        "name": "Шрī Даїта Да̄с",
+        "aliasName": "бгаябганьджана джаяшямсана-каруна̄ята-наянам",
+        "fileName": "bhayabhanjana-jayashiamsana.html",
+        "page": 219,
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "jayare-jayare-jaya-paramahamsa-mahashiaya",
+        "title": "А̄ча̄рʼя вандана",
+        "name": "А̄ча̄рʼя вандана",
+        "aliasName": "джаяре джаяре джая    парамахамса маха̄шяя",
+        "fileName": "jayare-jayare-jaya-paramahamsa-mahashiaya.html",
+        "page": 221,
+        "embeds": [
+          "Шрила Шридхар Махарадж",
+          "Шрила Говинда Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "pralaya-payodhi-jale-dhritavan-asi-vedam",
+        "title": "Шрī Дашявата̄р-стотрам",
+        "name": "Шрī Дашявата̄р-стотрам",
+        "aliasName": "пралая-пайодгі-джале дгритава̄н асі ведам",
+        "fileName": "pralaya-payodhi-jale-dhritavan-asi-vedam.html",
+        "page": 225,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "namas-te-narasimhaya",
+        "title": "Шрī Нрисімга Прана̄м",
+        "name": "Шрī Нрисімга Прана̄м",
+        "aliasName": "тава кара-камала-варе накхам адбгута-шринґам",
+        "fileName": "namas-te-narasimhaya.html",
+        "page": 227,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "namamishvaram-sachchidananda-rupam",
+        "title": "Шрī Шрī Да̄модара̄штакам",
+        "name": "Шрī Шрī Да̄модара̄штакам",
+        "aliasName": "нама̄мīшварам саччіда̄нанда рӯпам",
+        "fileName": "namamishvaram-sachchidananda-rupam.html",
+        "page": 229,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "nadiya-nagare-nitai-neche-neche-gay-re",
+        "title": "Шрīман Маха̄прабгур шята-на̄ма",
+        "name": "Шрīман Маха̄прабгур шята-на̄ма",
+        "aliasName": "джаґанна̄тха-сута маха̄прабгу вішвамбгара",
+        "fileName": "nadiya-nagare-nitai-neche-neche-gay-re.html",
+        "page": 230,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "nagare-nagare-gora-gay",
+        "title": "Шрī Кришнера Вімсоттара-шята-на̄ма",
+        "name": "Шрī Кришнера",
+        "aliasName": "джашоматī-станья-па̄ї шрī-нанда-нандана",
+        "fileName": "nagare-nagare-gora-gay.html",
+        "page": 234,
+        "embeds": [
+          "Шрила Госвами Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shri-hari-vasare-hari-kirtana-vidhana",
+        "title": "Шрī Харі-ва̄сара-ґīті",
+        "name": "Шрī Харі-ва̄сара-ґīті",
+        "aliasName": "шрī харі-ва̄саре харі-кīртана-відга̄на",
+        "fileName": "shri-hari-vasare-hari-kirtana-vidhana.html",
+        "page": "238",
+        "meta": {},
+        "telegraphPath": "SHrī-Harі-vasara-gītі-08-03"
+      },
+      {
+        "id": "shiuddha-bhakata-charana-renu",
+        "title": "Шюддга-бгаката",
+        "name": "Шюддга-бгаката",
+        "aliasName": "шюддга-бгаката-    чарана-рену,",
+        "fileName": "shiuddha-bhakata-charana-renu.html",
+        "page": 240,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "chaudda-shiata-sata-shiake-masa-je-phalgun",
+        "title": "Шрī Ґаура Пурнīма̄",
+        "name": "Шрī Ґаура Пурнīма̄",
+        "aliasName": "чаудда-шята са̄та-шяке ма̄са дже пха̄лґун",
+        "fileName": "chaudda-shiata-sata-shiake-masa-je-phalgun.html",
+        "page": 242,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "prabhu-kohe-kohilan-ei-mahamantra",
+        "title": "Прабгу кохе",
+        "name": "Прабгу кохе",
+        "aliasName": "харе кришна харе кришна кришна кришна харе харе",
+        "fileName": "prabhu-kohe-kohilan-ei-mahamantra.html",
+        "page": 249,
+        "embeds": [
+          "Nitai dasa",
+          "Sadhu Priya Prabhu"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "nagara-bhramiya-amara-gaura-elo-ghore",
+        "title": "Атер парікрама̄",
+        "name": "Атер парікрама̄",
+        "aliasName": "наґара бграмія а̄ма̄ра ґаура ело горе",
+        "fileName": "nagara-bhramiya-amara-gaura-elo-ghore.html",
+        "page": 249,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "radha-krishna-bol-bol-bolo-re-sobai",
+        "title": "Шрī Наґара Кīртана 4",
+        "name": "Шрī Наґара Кīртана 4",
+        "aliasName": "‘ра̄дга̄-кришна’ бол бол боло ре соба̄і",
+        "fileName": "radha-krishna-bol-bol-bolo-re-sobai.html",
+        "page": 250,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "hari-bole-modera-gaura-elo",
+        "title": "Шрī Наґара Кīртана 8",
+        "name": "Шрī Наґара Кīртана 8",
+        "aliasName": "ело ре ґаура̄нґа-ча̄нд преме",
+        "fileName": "hari-bole-modera-gaura-elo.html",
+        "page": 251,
+        "meta": {
+          "translation": "no"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Твори Шрīли Шрīдгара Маха̄ра̄джа",
+    "items": [
+      {
+        "id": "ha-ha-bhaktivinoda-thakkura-guroh",
+        "title": "Шрīмад Бгакті Вінод-віраха Дашякам",
+        "name": "Шрīмад Бгакті Вінод-віраха Дашякам",
+        "aliasName": "ха̄ ха̄ бгактівінода-тхаккура! ґурох!",
+        "fileName": "ha-ha-bhaktivinoda-thakkura-guroh.html",
+        "page": 254,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "guror-guro-me-paramo-gurus-tvam",
+        "title": "Шрī Шрīмад Ґаура-Кішора-намаска̄ра Дашякам",
+        "name": "Шрī Шрīмад Ґаура-Кішора-",
+        "aliasName": "ґурор ґуро ме парамо ґурус твам",
+        "fileName": "guror-guro-me-paramo-gurus-tvam.html",
+        "page": 258,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "nite-yasmin-nishiante-nayana-jala-bharaih",
+        "title": "Шрī Шрī Даїта Да̄с Дашякам",
+        "name": "Шрī Шрī Даїта Да̄с Дашякам",
+        "aliasName": "нīте ясмін нішянте наяна-джала-бгарайх",
+        "fileName": "nite-yasmin-nishiante-nayana-jala-bharaih.html",
+        "page": 260,
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "shrimach-chaitanyapadau-chara",
+        "title": "Шрīмад Рӯпа-пада-раджах Пра̄ртхана̄ Дашякам",
+        "name": "Шрīмад Рӯпа-пада-раджах Пра̄ртхана̄ Дашякам",
+        "aliasName": "шрīмач-чайтаньяпа̄дау чара-камалаюґау",
+        "fileName": "shrimach-chaitanyapadau-chara.html",
+        "page": 264,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "yo-nanto-nanta-vaktrair-niravadhi",
+        "title": "Шрīман Нітьянанда Два̄дашякам",
+        "name": "Шрīман Нітьянанда Два̄дашякам",
+        "aliasName": "йо ’нанто ’нанта-вактрайр ніравадгі",
+        "fileName": "yo-nanto-nanta-vaktrair-niravadhi.html",
+        "page": 268,
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ],
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "guru-rupa-virajita-nanda-sutam",
+        "title": "Шрī Ґаурахарі-Кусума-Става̄штакам",
+        "name": "Шрī Ґаурахарі-Кусума-Става̄штакам",
+        "aliasName": "ґуру-рӯпа-віра̄джіта-нанда-сутам",
+        "fileName": "guru-rupa-virajita-nanda-sutam.html",
+        "page": 283,
+        "meta": {
+          "translation": "no"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Твори Шрīли Ґовінди Маха̄ра̄джа",
+    "items": [
+      {
+        "id": "shri-svarupa-raya-rupa-jiva-bhava",
+        "title": "Прана̄м Мантра - Шрīла Ґуру Маха̄ра̄дж",
+        "name": "Прана̄м Мантра",
+        "aliasName": "шрī-сварӯпа-ра̄я-рӯпа джīва-бга̄ва-самбгарам",
+        "fileName": "shri-svarupa-raya-rupa-jiva-bhava.html",
+        "page": 274,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "naumi-shri-gurupadabjam",
+        "title": "Пранаті Дашякам",
+        "name": "Пранаті Дашякам",
+        "aliasName": "наумі шрī-ґурупа̄да̄бджам, ятіра̄джешварешварам",
+        "fileName": "naumi-shri-gurupadabjam.html",
+        "page": 275,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "samudra-sambhava-gabhi-surabhi-apana",
+        "title": "Шрī Ґовінда Кунда Ма̄ха̄тмʼя",
+        "name": "Шрī Ґовінда Кунда Ма̄ха̄тмʼя",
+        "aliasName": "самудра-самбгава̄ ґа̄бгī сурабгī а̄пана",
+        "fileName": "samudra-sambhava-gabhi-surabhi-apana.html",
+        "page": 277,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "devadidevam-ahibhushanam-indukashiam",
+        "title": "Ґанґадгара Сада̄шіва Прана̄м-Мантрам",
+        "name": "Ґанґадгара Сада̄шіва Прана̄м-Мантрам",
+        "aliasName": "дева̄дідевам-ахібгӯшанам-індука̄шям",
+        "fileName": "devadidevam-ahibhushanam-indukashiam.html",
+        "page": 278,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "bhagyadhishia-tvadiyo-vimala-sukhamayah",
+        "title": "Шрī Ґуру-Прашястіх",
+        "name": "Шрī Ґуру-Прашястіх",
+        "aliasName": "бга̄ґʼядгīшя! твадīйо вімала-сукхамаях",
+        "fileName": "bhagyadhishia-tvadiyo-vimala-sukhamayah.html",
+        "page": 279,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "nava-nalina-ganjitam-kusuma-dala",
+        "title": "Пранаті-Паньчакам",
+        "name": "Пранаті-Паньчакам",
+        "fileName": "nava-nalina-ganjitam-kusuma-dala.html",
+        "page": 282,
+        "meta": {
+          "translation": "no"
+        }
+      },
+      {
+        "id": "maha-bhaya-shiankula-e-bhava-tarangini",
+        "title": "Ма̄я Дуратьяя",
+        "name": "Ма̄я Дуратьяя",
+        "aliasName": "маха̄-бгая шянкула    е бгава таранґінī",
+        "fileName": "maha-bhaya-shiankula-e-bhava-tarangini.html",
+        "page": 285,
+        "meta": {
+          "translation": "no"
+        }
       }
     ]
   }

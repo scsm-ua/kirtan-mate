@@ -31,6 +31,9 @@
   animation: fadeInStep 0.35s forwards;
   */
 }
+.SongPage__verses.no-translation {
+  margin: 0 0;
+}
 .SongPage__extra {
   padding: 0 var(--side-padding);
 }

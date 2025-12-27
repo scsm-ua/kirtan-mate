@@ -335,13 +335,16 @@
 
                             <main class="SongPage__main">
                                 
-                                    <div class="SongPage__toggle">
-                                        <three-mode-switch
-                                            label="Показувати вірші / переклад"
-                                        ></three-mode-switch>
-                                    </div>
 
-                                    <ul class="SongPage__verses >
+                                    
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Показувати вірші / переклад"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
+
+                                    <ul class="SongPage__verses">
                                         
                                             
 
@@ -923,19 +926,19 @@
 
     <div class="PrevNextNav__container">
         <div class="PrevNextNav__content">
-            <a class="PrevNextNav__link PrevNextNav__link--prev " href="https://kirtan.site/ua/bhajahu-re-mana-shri-nanda-nandana.html">
+            <a class="PrevNextNav__link PrevNextNav__link--prev " href="https://kirtan.site/ua/dushta-mana-tumi-kisera-vaishnava.html">
                 <span class="PrevNextNav__icon PrevNextNav__icon--prev">
                     <span class="icon-chevron-right"></span>
                 </span>
 
                 <span class="PrevNextNav__label ellipsis">
-                    Бгаджаху Ре Мана
+                    Вайшнава Ке?
                 </span>
             </a>
 
-            <a class="PrevNextNav__link PrevNextNav__link--next " href="https://kirtan.site/ua/amara-jivana-sada-pape-rata.html">
+            <a class="PrevNextNav__link PrevNextNav__link--next " href="https://kirtan.site/ua/ki-jani-ki-bale-tomara-dhamete.html">
                 <span class="PrevNextNav__label ellipsis">
-                    А̄ма̄ра джīвана
+                    Ґоптритве Варана
                 </span>
 
                 <span class="PrevNextNav__icon PrevNextNav__icon--next">
@@ -949,8 +952,8 @@
 
     <script>
         (function() {
-            var prevHref = 'https://kirtan.site/ua/bhajahu-re-mana-shri-nanda-nandana.html';
-            var nextHref = 'https://kirtan.site/ua/amara-jivana-sada-pape-rata.html';
+            var prevHref = 'https://kirtan.site/ua/dushta-mana-tumi-kisera-vaishnava.html';
+            var nextHref = 'https://kirtan.site/ua/ki-jani-ki-bale-tomara-dhamete.html';
             try {
                 /**
                  * Swipe events.
@@ -1428,7 +1431,7 @@
                                 </h5>
 
                                 <div class="SongTranslations__subtitle ellipsis">
-                                    Переклад деяких бгаджанів на українську мову
+                                    Вайшнавський пісенник українскою мовою
                                 </div>
                             </div>
                         </div>
@@ -1452,6 +1455,7 @@
                 const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
                 const verses = [...document.querySelectorAll('[data-elem="verse"]')];
                 const main = [...document.querySelectorAll('.Main')];
+                const noTranslation = [...document.querySelectorAll('.no-translation')];
 
                 const collapseShowClass = 'Collapse__show';
 
@@ -1542,9 +1546,12 @@
                     setSongDisplayMode(detail.value);
                 });
 
-                const initialMode = getSongDisplayMode();
-                if (initialMode !== 3) {
-                    performUpdate(initialMode);
+                // Load trasnlation state if has translations.
+                if (noTranslation.length === 0) {
+                    const initialMode = getSongDisplayMode();
+                    if (initialMode !== 3) {
+                        performUpdate(initialMode);
+                    }
                 }
             })();
         </script>

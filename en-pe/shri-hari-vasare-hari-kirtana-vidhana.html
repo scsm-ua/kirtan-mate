@@ -214,13 +214,16 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
 
                             <main class="SongPage__main">
                                 
-                                    <div class="SongPage__toggle">
-                                        <three-mode-switch
-                                            label="Show verses / translation"
-                                        ></three-mode-switch>
-                                    </div>
 
-                                    <ul class="SongPage__verses >
+                                    
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Show verses / translation"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
+
+                                    <ul class="SongPage__verses">
                                         
                                             
 
@@ -697,18 +700,6 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
     
 
     
-        <div class="Collapse Collapse__show" data-elem="translation">
-            <ul class="SongVerse__translation">
-                
-                    <li class="SongVerse__paragraph">
-                        <p>
-                            
-                        </p>
-                    </li>
-                
-            </ul>
-        </div>
-    
 </li>
 
                                         
@@ -794,18 +785,6 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
 
     
 
-    
-        <div class="Collapse Collapse__show" data-elem="translation">
-            <ul class="SongVerse__translation">
-                
-                    <li class="SongVerse__paragraph">
-                        <p>
-                            
-                        </p>
-                    </li>
-                
-            </ul>
-        </div>
     
 </li>
 
@@ -1426,7 +1405,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
                                 </h5>
 
                                 <div class="SongTranslations__subtitle ellipsis">
-                                    Переклад деяких бгаджанів на українську мову
+                                    Вайшнавський пісенник українскою мовою
                                 </div>
                             </div>
                         </div>
@@ -1450,6 +1429,7 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
                 const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
                 const verses = [...document.querySelectorAll('[data-elem="verse"]')];
                 const main = [...document.querySelectorAll('.Main')];
+                const noTranslation = [...document.querySelectorAll('.no-translation')];
 
                 const collapseShowClass = 'Collapse__show';
 
@@ -1540,9 +1520,12 @@ nṛtya ārambhilā prabhu jagatera prāṇa..." />
                     setSongDisplayMode(detail.value);
                 });
 
-                const initialMode = getSongDisplayMode();
-                if (initialMode !== 3) {
-                    performUpdate(initialMode);
+                // Load trasnlation state if has translations.
+                if (noTranslation.length === 0) {
+                    const initialMode = getSongDisplayMode();
+                    if (initialMode !== 3) {
+                        performUpdate(initialMode);
+                    }
                 }
             })();
         </script>

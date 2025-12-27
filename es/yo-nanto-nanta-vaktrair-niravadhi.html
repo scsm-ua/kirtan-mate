@@ -31,6 +31,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
 <link rel="alternate" hreflang="en" href="https://kirtan.site/en/yo-nanto-nanta-vaktrair-niravadhi.html" />
 <link rel="alternate" hreflang="ru" href="https://kirtan.site/ru/yo-nanto-nanta-vaktrair-niravadhi.html" />
 <link rel="alternate" hreflang="es" href="https://kirtan.site/es/yo-nanto-nanta-vaktrair-niravadhi.html" />
+<link rel="alternate" hreflang="uk" href="https://kirtan.site/ua/yo-nanto-nanta-vaktrair-niravadhi.html" />
 <link rel="alternate" hreflang="x-default" href="https://kirtan.site/en/yo-nanto-nanta-vaktrair-niravadhi.html" />
 
 
@@ -230,11 +231,14 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
 
                             <main class="SongPage__main">
                                 
-                                    <div class="SongPage__toggle">
-                                        <three-mode-switch
-                                            label="Mostrar traducción"
-                                        ></three-mode-switch>
-                                    </div>
+
+                                    
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Mostrar traducción"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
 
                                     <ul class="SongPage__verses word-by-word-mode">
                                         
@@ -520,7 +524,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
                 
                     <li class="SongVerse__paragraph">
                         <p>
-                            El Señor Nityānanda es la fuente del principal Saṅkarṣaṇ y existe con pleno esplendor separado de la original expansión cuádruple, y se le conoce como Mūla Saṅkarṣaṇ. Esa personalidad plenamente atractiva, Śrī Saṅkarṣaṇ, lleva a cabo Sus Pasatiempos maravillosos en la morada espiritual, en las regiones conocidas como Mathurā y Dvārakā. La posición trascendental de la ciudad de Dvārakā está precisamente por debajo de la ciudad de Mathurā. Es en estos lugares espirituales, donde el Señor Saṅkarṣaṇ y Sus asociados, Anirudhha y Pradyumna, exhiben Sus pasatiempos particulares conocidos en las Escrituras como <i class="SongVerse__term">prabhāva-vilāsaḥ</i>. Nityānanda Prabhu, en la forma del Señor Balarām, es la fuente última de todas las encarnaciones, y se divierte juguetonamente en la encantadora aldea de Vrajapura con Su joven hermano, el Señor Kṛṣṇa. Que podamos adorar eternamente a esa gran personalidad, Śrī Nityānanda-chandra, el generoso otorgador de la asociación con Śrī Gaurāṅgadev, quien no es otro que el Señor Kṛṣṇa.
+                            El Señor Nityānanda es la fuente del principal Saṅkarṣaṇ y existe con pleno esplendor separado de la original expansión cuádruple, y se le conoce como Mūla Saṅkarṣaṇ. Esa personalidad plenamente atractiva, Śrī Saṅkarṣaṇ, lleva a cabo Sus Pasatiempos maravillosos en la morada espiritual, en las regiones conocidas como Mathurā y Dvārakā. La posición trascendental de la ciudad de Dvārakā está precisamente por debajo de la ciudad de Mathurā. Es en estos lugares espirituales, donde el Señor Saṅkarṣaṇ y Sus asociados, Aniruddha y Pradyumna, exhiben Sus pasatiempos particulares conocidos en las Escrituras como <i class="SongVerse__term">prabhāva-vilāsaḥ</i>. Nityānanda Prabhu, en la forma del Señor Balarām, es la fuente última de todas las encarnaciones, y se divierte juguetonamente en la encantadora aldea de Vrajapura con Su joven hermano, el Señor Kṛṣṇa. Que podamos adorar eternamente a esa gran personalidad, Śrī Nityānanda-chandra, el generoso otorgador de la asociación con Śrī Gaurāṅgadev, quien no es otro que el Señor Kṛṣṇa.
                         </p>
                     </li>
                 
@@ -1561,6 +1565,41 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
                     </a>
                 </li>
             
+                <li class="
+                        
+                            SongTranslations__item
+                        
+                    "
+                    data-book-id="ua"
+                    onclick="handleBookChoice(event)"
+                >
+                    <a href="https://kirtan.site/ua/yo-nanto-nanta-vaktrair-niravadhi.html">
+                        <div class="SongTranslations__flex">
+                            <div class="SongTranslations__box">
+                                <img
+                                        alt=""
+                                        class="SongTranslations__image"
+                                        srcset="
+                                            https://kirtan.site/css/banner/small-banner-ua.png 1x,
+                                            https://kirtan.site/css/banner/small-banner-ua@2.png 2x
+                                        "
+                                        src="https://kirtan.site/css/banner/small-banner-ua.png"
+                                >
+                            </div>
+
+                            <div class="SongTranslations__info">
+                                <h5 class="SongTranslations__title">
+                                    Ґаудія Ґітанджалі
+                                </h5>
+
+                                <div class="SongTranslations__subtitle ellipsis">
+                                    Вайшнавський пісенник українскою мовою
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            
 
         </ul>
     </div>
@@ -1578,6 +1617,7 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
                 const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
                 const verses = [...document.querySelectorAll('[data-elem="verse"]')];
                 const main = [...document.querySelectorAll('.Main')];
+                const noTranslation = [...document.querySelectorAll('.no-translation')];
 
                 const collapseShowClass = 'Collapse__show';
 
@@ -1668,9 +1708,12 @@ yo vā dhatte dharitrīṁ śirasi niravadhi kṣudra-dhūlī-kaṇeva..." />
                     setSongDisplayMode(detail.value);
                 });
 
-                const initialMode = getSongDisplayMode();
-                if (initialMode !== 3) {
-                    performUpdate(initialMode);
+                // Load trasnlation state if has translations.
+                if (noTranslation.length === 0) {
+                    const initialMode = getSongDisplayMode();
+                    if (initialMode !== 3) {
+                        performUpdate(initialMode);
+                    }
                 }
             })();
         </script>

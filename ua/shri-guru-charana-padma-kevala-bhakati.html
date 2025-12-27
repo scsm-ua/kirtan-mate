@@ -247,11 +247,14 @@
 
                             <main class="SongPage__main">
                                 
-                                    <div class="SongPage__toggle">
-                                        <three-mode-switch
-                                            label="Показувати вірші / переклад"
-                                        ></three-mode-switch>
-                                    </div>
+
+                                    
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Показувати вірші / переклад"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
 
                                     <ul class="SongPage__verses word-by-word-mode">
                                         
@@ -703,9 +706,9 @@
                 </span>
             </a>
 
-            <a class="PrevNextNav__link PrevNextNav__link--next " href="https://kirtan.site/ua/jaya-jaya-gurudever-arati-ujjvala.html">
+            <a class="PrevNextNav__link PrevNextNav__link--next " href="https://kirtan.site/ua/shri-krishna-chaitanya-prabhu-daya-kara-more.html">
                 <span class="PrevNextNav__label ellipsis">
-                    Шрī Ґуру А̄раті
+                    Са̄варана-Шрī-Ґаура-па̄да-падме Пра̄ртхана̄
                 </span>
 
                 <span class="PrevNextNav__icon PrevNextNav__icon--next">
@@ -720,7 +723,7 @@
     <script>
         (function() {
             var prevHref = 'https://kirtan.site/ua/namo-namah-tulasi-maharani.html';
-            var nextHref = 'https://kirtan.site/ua/jaya-jaya-gurudever-arati-ujjvala.html';
+            var nextHref = 'https://kirtan.site/ua/shri-krishna-chaitanya-prabhu-daya-kara-more.html';
             try {
                 /**
                  * Swipe events.
@@ -1233,7 +1236,7 @@
                                 </h5>
 
                                 <div class="SongTranslations__subtitle ellipsis">
-                                    Переклад деяких бгаджанів на українську мову
+                                    Вайшнавський пісенник українскою мовою
                                 </div>
                             </div>
                         </div>
@@ -1257,6 +1260,7 @@
                 const wordByWord = [...document.querySelectorAll('[data-elem="wordByWord"]')];
                 const verses = [...document.querySelectorAll('[data-elem="verse"]')];
                 const main = [...document.querySelectorAll('.Main')];
+                const noTranslation = [...document.querySelectorAll('.no-translation')];
 
                 const collapseShowClass = 'Collapse__show';
 
@@ -1347,9 +1351,12 @@
                     setSongDisplayMode(detail.value);
                 });
 
-                const initialMode = getSongDisplayMode();
-                if (initialMode !== 3) {
-                    performUpdate(initialMode);
+                // Load trasnlation state if has translations.
+                if (noTranslation.length === 0) {
+                    const initialMode = getSongDisplayMode();
+                    if (initialMode !== 3) {
+                        performUpdate(initialMode);
+                    }
                 }
             })();
         </script>
