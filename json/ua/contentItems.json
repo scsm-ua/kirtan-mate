@@ -228,7 +228,7 @@
         "name": "Паньча-таттва мантра",
         "aliasName": "шрī-кришна-чайтанья прабгу нітьянанда",
         "fileName": "shri-krishna-chaitanya-prabhu-nityananda.html",
-        "page": "24",
+        "page": 24,
         "meta": {},
         "telegraphPath": "Pancha-tattva-mantra-02-22-2"
       },
@@ -238,7 +238,7 @@
         "name": "Харе Крішна маха̄мантра",
         "aliasName": "харе кришна харе кришна кришна кришна харе харе",
         "fileName": "hare-krishna-hare-krishna-krishna-krishna-hare-hare.html",
-        "page": "24",
+        "page": 24,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Госвами Махарадж",
@@ -298,7 +298,7 @@
         "name": "Шрī Ґовінда Кунда",
         "aliasName": "джая джая ґіріра̄джер а̄раті вішяла",
         "fileName": "jaya-jaya-girirajer-arati-vishiala.html",
-        "page": "32",
+        "page": 32,
         "meta": {},
         "telegraphPath": "SHrī-Govіnda-Kunda-Gupta-Govardgan-Aratі-02-22"
       },
@@ -336,7 +336,7 @@
         "name": "Шрī Ґуру А̄раті",
         "aliasName": "джая джая ґурудевер а̄раті уджджвала",
         "fileName": "jaya-jaya-gurudever-arati-ujjvala.html",
-        "page": "70",
+        "page": 70,
         "embeds": [
           "Навадвип Дхам",
           "Каракас Дхам"
@@ -367,7 +367,7 @@
         "name": "Прабга̄ті Ґīті",
         "aliasName": "калі-куккура-кадана джаді ча̄о хе",
         "fileName": "kali-kukkura-kadana-jadi-chao-he.html",
-        "page": "38",
+        "page": 38,
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
@@ -403,7 +403,7 @@
         "name": "Шрī Шячīнандана-вандана̄",
         "aliasName": "джая шячīнандана    сура-муні-вандана,",
         "fileName": "jaya-shiachinandana-sura-muni-vandana.html",
-        "page": "61",
+        "page": 61,
         "embeds": [
           "Каракас Дхам",
           "Шрила Мадхусудан Махарадж",
@@ -418,7 +418,7 @@
         "name": "Ґурудева",
         "aliasName": "ґурудева!",
         "fileName": "gurudeva-kripa-bindu-diya-kara-ei-dase.html",
-        "page": "68",
+        "page": 68,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Шридхар Махарадж",
@@ -436,7 +436,7 @@
         "name": "Арунодоя-кīртан",
         "aliasName": "уділо аруна пӯраба-бга̄ґе,",
         "fileName": "udilo-aruna-puraba-bhage.html",
-        "page": "42",
+        "page": 42,
         "embeds": [
           "Навадвип Дхам",
           "Шрила Авадхут Махарадж"
@@ -450,7 +450,7 @@
         "name": "Арунодоя-кīртан",
         "aliasName": "джīв джа̄ґо, джīв джа̄ґо, ґаура̄ча̄нда боле",
         "fileName": "jiv-jago-jiv-jago-gaurachanda-bole.html",
-        "page": "43",
+        "page": 43,
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
@@ -463,7 +463,7 @@
         "name": "Шрī Шрī Ґурва̄штака",
         "aliasName": "самса̄ра-да̄ва̄нала-лīдга-лока-",
         "fileName": "samsara-davanala-lidha-loka.html",
-        "page": "48",
+        "page": 48,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -476,7 +476,7 @@
         "name": "Шярана̄ґаті. Благодатне звернення",
         "aliasName": "шрī-кришна-чайтанья прабгу джīве дая корі’",
         "fileName": "shri-krishna-chaitanya-prabhu-jive-daya-kori.html",
-        "page": "50",
+        "page": 50,
         "meta": {},
         "telegraphPath": "SHyaranagatі-Blagodatne-zvernennya-02-22"
       },
@@ -516,7 +516,7 @@
         "name": "Тха̄кура-вайшнава-ґана",
         "aliasName": "тха̄кура вайшнава-ґана    корі еі ніведана",
         "fileName": "thakura-vaishnava-gana-kori-ei-nivedana.html",
-        "page": "54",
+        "page": 54,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -529,7 +529,7 @@
         "name": "На̄м-санкīртан",
         "aliasName": "харі харає намах кришна ядава̄я намах",
         "fileName": "hari-haraye-namah-krishna-yadavaya-namah.html",
-        "page": "55",
+        "page": 55,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Навадвип Дхам",
@@ -549,7 +549,7 @@
         "name": "Шрī Бгоґ А̄раті Ґīті",
         "aliasName": "бгаджа бгаката-ватсала шрī-ґаурахарі",
         "fileName": "bhaja-bhakata-vatsala-shri-gaurahari.html",
-        "page": "58",
+        "page": 58,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Навадвип Дхам",
@@ -590,7 +590,7 @@
         "name": "Шрī Ґаура-а̄раті",
         "aliasName": "(кіба) джая джая ґаура̄ча̄ндер а̄ротіко шобга̄",
         "fileName": "jaya-jaya-gaurachander-arotiko-shobha.html",
-        "page": "64",
+        "page": 64,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Навадвип Дхам",
@@ -605,7 +605,7 @@
         "name": "Шрī Са̄расват-а̄раті",
         "aliasName": "джаяре джаяре джая ґаура-сарасватī",
         "fileName": "jayare-jayare-jaya-gaura-sarasvati.html",
-        "page": "66",
+        "page": 66,
         "embeds": [
           "Навадвип Дхам",
           "Каракас Дхам"
@@ -634,7 +634,7 @@
         "name": "Шрī Туласī-парікрама̄-ґīті",
         "aliasName": "намо ре намо ре ма̄ія намо на̄ра̄яні",
         "fileName": "namo-namah-tulasi-maharani.html",
-        "page": "69",
+        "page": 69,
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
@@ -647,7 +647,7 @@
         "name": "Шрī Ґуру-вайшнава",
         "aliasName": "шрī ґуру чарана-падма, кевала-бгакаті-садма,",
         "fileName": "shri-guru-charana-padma-kevala-bhakati.html",
-        "page": "74",
+        "page": 74,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Навадвип Дхам"
@@ -814,7 +814,7 @@
         "name": "А̄ґʼя-Тахал",
         "aliasName": "надīя-ґодруме нітьянанда маха̄джана",
         "fileName": "nadiya-godrume-nityananda-mahajana.html",
-        "page": "110",
+        "page": 110,
         "meta": {},
         "telegraphPath": "Agʼya-Tahal-02-22"
       },
@@ -869,7 +869,7 @@
         "name": "Акродга парама̄нанда",
         "aliasName": "акродга парама̄нанда нітьянанда ра̄й",
         "fileName": "akrodha-paramananda.html",
-        "page": "114",
+        "page": 114,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Шрила Мадхусудан Махарадж"
@@ -943,7 +943,7 @@
         "name": "Авата̄ра Са̄ра",
         "aliasName": "авата̄ра са̄ра    ґора̄ авата̄ра",
         "fileName": "avatara-sara-gora-avatara.html",
-        "page": "121",
+        "page": 121,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Каракас Дхам"
@@ -957,7 +957,7 @@
         "name": "Шрī На̄ма",
         "aliasName": "ґа̄й ґора̄ мадгур сваре",
         "fileName": "gay-gora-madhur-svare.html",
-        "page": "122",
+        "page": 122,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Госвами Махарадж",
@@ -1100,7 +1100,7 @@
         "name": "Віраха-ґīті",
         "aliasName": "дже а̄ніло према-дгана каруна̄ прачура",
         "fileName": "je-anilo-prema-dhana-karuna-prachura.html",
-        "page": "135",
+        "page": 135,
         "embeds": [
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
@@ -1114,7 +1114,7 @@
         "name": "Вайшнава Віґʼяпті",
         "aliasName": "еі-ва̄ра каруна̄ кара вайшнава ґоса̄ні",
         "fileName": "ei-vara-karuna-kara-vaishnava-gosani.html",
-        "page": "136",
+        "page": 136,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Мадхусудан Махарадж"
@@ -1190,7 +1190,7 @@
         "name": "Бгаджаху Ре Мана",
         "aliasName": "бгаджаху ре мана    шрī-нанда-нандана",
         "fileName": "bhajahu-re-mana-shri-nanda-nandana.html",
-        "page": "146",
+        "page": 146,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1239,7 +1239,7 @@
         "name": "Дайньятміка̄",
         "aliasName": "(прабгу хе!)",
         "fileName": "emona-durmati-samsara-bhitore.html",
-        "page": "154",
+        "page": 154,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Шридхар Махарадж",
@@ -1323,7 +1323,7 @@
         "name": "А̄ма̄ра джīвана",
         "aliasName": "а̄ма̄ра джīвана,    сада̄ па̄пе рата,",
         "fileName": "amara-jivana-sada-pape-rata.html",
-        "page": "161",
+        "page": 161,
         "embeds": [
           "Bhudev Prabhu"
         ],
@@ -1996,7 +1996,7 @@
         "name": "Шрī Харі-ва̄сара-ґīті",
         "aliasName": "шрī харі-ва̄саре харі-кīртана-відга̄на",
         "fileName": "shri-hari-vasare-hari-kirtana-vidhana.html",
-        "page": "238",
+        "page": 238,
         "meta": {},
         "telegraphPath": "SHrī-Harі-vasara-gītі-08-03"
       },
