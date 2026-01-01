@@ -240,7 +240,7 @@ function fillTemplate(songbook_id, template, content, filePath) {
     return ejs.render(template, {
         language: currentSongbook.language,
         song,
-        page: content.attributes?.page,
+        page: content.meta?.page,
         page_number: orderedSongs[currentSongIndex]?.page_number,
         has_word_by_word: song.hasWordByWord(),
         navigation,

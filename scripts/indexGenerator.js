@@ -183,7 +183,7 @@ function getSongPage(songbook_id, filename) {
     if (!song_json) {
         return;
     }
-    return song_json.attributes?.page;
+    return song_json.meta?.page;
 }
 
 function getSongMeta(songbook_id, filename) {

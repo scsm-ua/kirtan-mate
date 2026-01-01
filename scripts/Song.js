@@ -89,7 +89,7 @@ class Song {
         if (!this.versesForWeb) {
             this.versesForWeb = this.json.verses.map((verse) => ({
                 ...verse,
-                text: processTextForWeb(verse, verse.text, this.json.attributes),
+                text: processTextForWeb(verse, verse.text, this.json.meta),
                 translation: processTranslation(verse.translation),
                 word_by_word: processTranslation(verse.word_by_word)
             }));
@@ -101,7 +101,7 @@ class Song {
         if (!this.versesForWeb) {
             this.versesForWeb = this.json.verses.map((verse) => ({
                 ...verse,
-                text: processTextForTelegraph(verse, verse.text, this.json.attributes),
+                text: processTextForTelegraph(verse, verse.text, this.json.meta),
                 translation: processTranslationForTelegraph(verse.translation),
                 word_by_word: processTranslationForTelegraph(verse.word_by_word)
             }));
@@ -152,17 +152,17 @@ const PARANTHESES_END_RE = /^(\s*)([^\)]+\))/gi;    // ( Start in prev line.
  * EJS trims lines even despite 'rmWhitespace: false'.
  * But we want some verse lines have extra space in the beginning.
  */
-function transformLineForWeb(verse, text, attributes) {
+function transformLineForWeb(verse, text, meta) {
 
     // Cleanup tags for safaty.
     text = text.replace(TAG_RE, '')
 
-    if (attributes && attributes['verse parentheses'] === 'non bold') {
+    if (meta && meta['verse parentheses'] === 'non bold') {
         text = text.replace(PARANTHESES_RE,  '<span class="SongVerse__light">$1</span>')
         text = text.replace(PARANTHESES_START_RE,  '<span class="SongVerse__light">$1</span>')
         text = text.replace(PARANTHESES_END_RE,  '$1<span class="SongVerse__light">$2</span>')
     
-    } else if (attributes && attributes['inline verse'] === 'non bold' && !verse.number) {
+    } else if (meta && meta['inline verse'] === 'non bold' && !verse.number) {
         text = `<span class="SongVerse__light">${ text }</span>`;
     }
 
@@ -175,11 +175,11 @@ function transformLineForWeb(verse, text, attributes) {
     return text;
 }
 
-function transformLineForTelegraph(verse, text, attributes) {
+function transformLineForTelegraph(verse, text, meta) {
     // Cleanup tags for safaty.
     text = text.replace(TAG_RE, '')
 
-    if (attributes && attributes['verse parentheses'] === 'non bold') {
+    if (meta && meta['verse parentheses'] === 'non bold') {
 
         text = text.replace(/\(/, '</strong>(');
         text = text.replace(/\)/, ')<strong>');
@@ -193,7 +193,7 @@ function transformLineForTelegraph(verse, text, attributes) {
         text = text.replace(/\([^\(\)]*$/, '$&<strong>');
 
         
-    } else if (attributes && attributes['inline verse'] === 'non bold' && !verse.number) {
+    } else if (meta && meta['inline verse'] === 'non bold' && !verse.number) {
         text = `</strong>${ text }<strong>`;
     }
 
@@ -255,18 +255,18 @@ function processTranslationForTelegraph(lines) {
         .split(/\n/);
 }
 
-function processTextForWeb(verse, lines, attributes) {
+function processTextForWeb(verse, lines, meta) {
     return lines.map(line => {
         return {
-            text: transformLineForWeb(verse, line, attributes),
+            text: transformLineForWeb(verse, line, meta),
             css_class: getLineIndentClass(line)
         };
     });
 }
 
-function processTextForTelegraph(verse, lines, attributes) {
+function processTextForTelegraph(verse, lines, meta) {
     lines = lines.map(line => {
-        return transformLineForTelegraph(verse, line, attributes);
+        return transformLineForTelegraph(verse, line, meta);
     });
 
     var str = lines.join('\n');
@@ -447,22 +447,9 @@ function convertSongToJSON(text) {
         }
     }
 
-    if (song.meta?.page) {
-        var attr_key = 'page';
-        var attr_value = song.meta?.page;
-
-        // Copy from `case 'attribute':`.
-        song.attributes = song.attributes || {};
-        if (song.attributes[attr_key] && !Array.isArray(song.attributes[attr_key])) {
-            // Convert to array.
-            song.attributes[attr_key] = [song.attributes[attr_key]];
-        }
-
-        if (Array.isArray(song.attributes[attr_key])) {
-            song.attributes[attr_key].push(attr_value);
-        } else {
-            song.attributes[attr_key] = attr_value;
-        }
+    if (song.attributes) {
+        song.meta = song.meta || {};
+        Object.assign(song.meta, song.attributes);
     }
 
     return song;
