@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "211"
+    "page": 211,
+    "first_line": "anya-abhilāsa chāḍi jñāna karma parihari",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Anya-abhilāṣa chāḍi"
@@ -254,8 +255,5 @@
   ],
   "word_by_word": [
     "**anya-abhilāṣa** — los deseos; **chāḍi** — abandonar."
-  ],
-  "attributes": {
-    "page": "211"
-  }
+  ]
 }

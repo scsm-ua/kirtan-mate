@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "50"
+    "page": 50,
+    "first_line": "kali-kukkura-kadana yadi chāo he",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Prabhāti Gīti"
@@ -88,8 +89,5 @@
   ],
   "word_by_word": [
     "**prabhāti** — matutina; **gīti** — canción."
-  ],
-  "attributes": {
-    "page": "50"
-  }
+  ]
 }

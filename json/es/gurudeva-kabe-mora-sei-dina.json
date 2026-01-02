@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "419"
+    "page": 419,
+    "first_line": "gurudeva! kabe mora sei dina",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Bhajana-Lālasā, 12"
@@ -75,8 +76,5 @@
   ],
   "word_by_word": [
     "**bhajana** — adoración; **lālasā** — anhelo."
-  ],
-  "attributes": {
-    "page": "419"
-  }
+  ]
 }

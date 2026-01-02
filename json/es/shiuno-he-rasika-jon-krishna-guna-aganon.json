@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "256"
+    "page": 256,
+    "first_line": "śuno, he rasika jana kṛṣṇa guṇa agaṇon",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Guṇa-Kīrtan"
@@ -89,8 +90,5 @@
   ],
   "word_by_word": [
     "**guṇa** — las cualidades del Señor; **kīrtan** — glorificación."
-  ],
-  "attributes": {
-    "page": "256"
-  }
+  ]
 }

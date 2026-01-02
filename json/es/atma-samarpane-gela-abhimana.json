@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "192"
+    "page": 192,
+    "first_line": "ātma-samarpaṇe gelā abhimāna",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Ātma-samarpaṇe"
@@ -144,8 +145,5 @@
   ],
   "word_by_word": [
     "**ātma** — el ser; **samarpane** — ofrecer."
-  ],
-  "attributes": {
-    "page": "192"
-  }
+  ]
 }

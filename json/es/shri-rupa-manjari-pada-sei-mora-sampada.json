@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "204"
+    "page": 204,
+    "first_line": "śrī-rūpa-mañjarī-pada, sei mora sampada",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Lālasā"
@@ -117,8 +118,5 @@
   ],
   "word_by_word": [
     "**lālasā** — anhelo sincero."
-  ],
-  "attributes": {
-    "page": "204"
-  }
+  ]
 }

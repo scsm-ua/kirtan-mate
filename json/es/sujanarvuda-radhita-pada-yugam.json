@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "109"
+    "page": 109,
+    "first_line": "sujanārvvuda-rādhita-pāda-yugaṁ",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Śrīla Prabhupāda-padma Stavakaḥ"
@@ -179,8 +180,5 @@
   ],
   "word_by_word": [
     "**śrī śrīla** — su señoría; **prabhu-pāda** — los pies del señor adorable; **padma** — loto; **stavakaḥ** — orar."
-  ],
-  "attributes": {
-    "page": "109"
-  }
+  ]
 }

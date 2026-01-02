@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj",
-    "page": "401"
+    "page": 401,
+    "first_line": "jaya jaya girirājer ārati",
+    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Govinda Kuṇḍa",
@@ -145,8 +146,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **govinda kuṇḍa** — Govinda Kuṇḍa; **gupta** — oculto; **govardhan** — Govardhan; **ārati** — ceremonia."
-  ],
-  "attributes": {
-    "page": "401"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Vṛndāvan Dās Ṭhākur",
-    "page": "320"
+    "page": 320,
+    "first_line": "prabhu bole—kahilaṅ ei mahāmantra",
+    "author": "Śrīla Vṛndāvan Dās Ṭhākur"
   },
   "title": [
     "Prabhu kohe"
@@ -48,8 +49,5 @@
   ],
   "word_by_word": [
     "**prabhu** — el Señor; **kohe** — dice."
-  ],
-  "attributes": {
-    "page": "320"
-  }
+  ]
 }

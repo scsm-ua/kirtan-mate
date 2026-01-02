@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "220"
+    "page": 220,
+    "first_line": "śrī-kṛṣṇa-kīrttane jodi mānasa tohāra",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Śikṣāṣṭakam"
@@ -133,8 +134,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **śikṣa** — instrucciones; **aṣṭakam** — ocho versos."
-  ],
-  "attributes": {
-    "page": "220"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "14"
+    "page": 14,
+    "first_line": "śrī-siddhānta-sarasvatīti vidito",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Bhagavān Śrīla Bhakti Siddhānta Saraswatī Ṭhākur"
@@ -37,8 +38,5 @@
         "at his feet do I pray to serve him forever.”"
       ]
     }
-  ],
-  "attributes": {
-    "page": "14"
-  }
+  ]
 }

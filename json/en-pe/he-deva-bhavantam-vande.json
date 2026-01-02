@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Rūpa Goswāmī Prabhu",
-    "page": "99"
+    "page": 99,
+    "first_line": "he deva bhavantaṁ vande",
+    "author": "Śrīla Rūpa Goswāmī Prabhu"
   },
   "title": [
     "He deva bhavantaṁ vande"
@@ -58,8 +59,5 @@
         "O eternal Lord, may the bee of my heart steadily reside eternally at Your lotus feet, where there is an abundance of the most wonderful honey—which surpasses the nectar of immortality—and thus attain the ultimate sweetness."
       ]
     }
-  ],
-  "attributes": {
-    "page": "99"
-  }
+  ]
 }

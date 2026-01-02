@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "236"
+    "page": 236,
+    "first_line": "rādhikā-charaṇa-padma",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Rādhāṣṭaka, 1"
@@ -98,8 +99,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **rādhā** — de Śrīmatī Rādhārāṇī; **aṣṭakam** — ocho canciones."
-  ],
-  "attributes": {
-    "page": "236"
-  }
+  ]
 }

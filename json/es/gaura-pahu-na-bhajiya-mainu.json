@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "129"
+    "page": 129,
+    "first_line": "gaura pahū̐ nā bhajiyā mainu",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Gaura Pahū̐"
@@ -79,8 +80,5 @@
   ],
   "word_by_word": [
     "**gaura** — Gaurāṅga; **pahū̐** — el Señor."
-  ],
-  "attributes": {
-    "page": "129"
-  }
+  ]
 }

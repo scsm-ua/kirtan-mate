@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Premānanda Dās",
-    "page": "393"
+    "page": 393,
+    "first_line": "emona gaurāṅga bine",
+    "author": "Śrīla Premānanda Dās"
   },
   "title": [
     "Emona Gaurāṅga bine nāhi āra"
@@ -88,8 +89,5 @@
   ],
   "word_by_word": [
     "**emona** — tal como; **gaurāṅga** — Gaurāṅga; **bine** — sin él; **nāhi** — no hay; **āra** — más."
-  ],
-  "attributes": {
-    "page": "393"
-  }
+  ]
 }

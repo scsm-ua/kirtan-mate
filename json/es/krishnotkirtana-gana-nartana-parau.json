@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Śrīnivās Āchārya",
-    "page": "156"
+    "page": 156,
+    "first_line": "kṛṣṇotkīrttana-gāna-narttana-parau",
+    "author": "Śrīla Śrīnivās Āchārya"
   },
   "title": [
     "Śrī Śrī Ṣaḍ-goswāmi-aṣṭakam"
@@ -166,8 +167,5 @@
   ],
   "word_by_word": [
     "**śrī śrī** — sus santidades; **ṣaḍgoswāmī** — de los seis Goswāmīs; **aṣṭakam** — oraciones."
-  ],
-  "attributes": {
-    "page": "156"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "247"
+    "page": 247,
+    "first_line": "jaya jaya rādhā-kṛṣṇa jugala-milan",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Jugala-ārati"
@@ -92,8 +93,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **jugala** — de la pareja divina; **ārati** — ceremonia."
-  ],
-  "attributes": {
-    "page": "247"
-  }
+  ]
 }

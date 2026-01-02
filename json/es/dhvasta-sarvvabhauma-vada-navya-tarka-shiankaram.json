@@ -1,8 +1,9 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
     "inline verse": "non bold",
-    "page": "332"
+    "page": 332,
+    "first_line": "dhvasta-sārvvabhauma-vāda-navya-tarka-śāṅkaraṁ",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Śrī Premadhāma-deva-stotram"
@@ -190,9 +191,5 @@
   ],
   "word_by_word": [
     "**śrī śrī** — el más adorable; **prema-dhāma** — morada del amor divino; **deva** — del Señor; **stotram** — oraciones."
-  ],
-  "attributes": {
-    "inline verse": "non bold",
-    "page": "332"
-  }
+  ]
 }

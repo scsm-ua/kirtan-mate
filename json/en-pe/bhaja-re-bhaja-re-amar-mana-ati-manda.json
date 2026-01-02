@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "49"
+    "page": 49,
+    "first_line": "bhaja re bhaja re āmār",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Bhajan-gīti"
@@ -67,8 +68,5 @@
         "Remember Kavi Karṇapur, Śivānanda Sen, and their family. Always remember them! Always remember Śivānanda Sen and his family. Remember the sādhus who follow Śrī Rūpa and the joy they feel in their service. If you want to reside in Vraja, then remember the sādhus who follow Śrī Rūpa."
       ]
     }
-  ],
-  "attributes": {
-    "page": "49"
-  }
+  ]
 }

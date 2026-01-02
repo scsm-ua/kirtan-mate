@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "368"
+    "page": 368,
+    "first_line": "guror guro me paramo gurus tvaṁ",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Śrīmad Gaura-Kiśor-namaskāra Daśakam"
@@ -164,8 +165,5 @@
   ],
   "word_by_word": [
     "**śrīśrīmad** — su santidad venerable; **gaura-kiśor** — Gaura Kiśor; **namaskāra** — de obediencias; **daśakam** — diez oraciones."
-  ],
-  "attributes": {
-    "page": "368"
-  }
+  ]
 }

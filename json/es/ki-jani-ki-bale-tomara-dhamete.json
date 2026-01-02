@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "176"
+    "page": 176,
+    "first_line": "ki jāni ki bale, tomāra dhāmete",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Goptṛtve Varaṇa"
@@ -104,8 +105,5 @@
   ],
   "word_by_word": [
     "**goptṛtve** — guardianía del Señor; **varaṇa** — abrazar."
-  ],
-  "attributes": {
-    "page": "176"
-  }
+  ]
 }

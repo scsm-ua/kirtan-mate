@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Vṛndāvan Dās Ṭhākur",
-    "page": "301"
+    "page": 301,
+    "first_line": "śrī hari-vāsare hari-kīrttana-vidhāna",
+    "author": "Śrīla Vṛndāvan Dās Ṭhākur"
   },
   "title": [
     "Śrī Hari-vāsara-gīti"
@@ -176,8 +177,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **hari** — del Señor Hari; **vāsara** — día; **gīti** — canción."
-  ],
-  "attributes": {
-    "page": "301"
-  }
+  ]
 }

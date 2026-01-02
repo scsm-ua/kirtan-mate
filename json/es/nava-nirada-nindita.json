@@ -1,7 +1,8 @@
 {
   "meta": {
+    "page": 410,
     "no-author": 1,
-    "page": "410"
+    "first_line": "nava-nīrada-nindita"
   },
   "title": [
     "Vrajarāja-sutaṣṭakam"
@@ -132,8 +133,5 @@
   ],
   "word_by_word": [
     "**vraja** — de Vraja; **rāja-suta** — el hijo del rey; **aṣṭakam** — ocho oraciones."
-  ],
-  "attributes": {
-    "page": "410"
-  }
+  ]
 }

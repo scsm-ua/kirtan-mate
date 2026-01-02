@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "94"
+    "page": 94,
+    "first_line": "mānasa, deha, geha",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Mānasa Deha Geha"
@@ -91,8 +92,5 @@
         "Bhakti Vinod says, “Please listen, O Kān! O Rādhānāth! You are my life and soul.”"
       ]
     }
-  ],
-  "attributes": {
-    "page": "94"
-  }
+  ]
 }

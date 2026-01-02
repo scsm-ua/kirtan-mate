@@ -1,10 +1,11 @@
 {
   "meta": {
-    "author": "Ш́рӣла Бхактивинод Т̣ха̄кур",
     "page": [
-      "41",
-      "68"
-    ]
+      41,
+      68
+    ],
+    "first_line": "гурудев! кр̣па̄-бинду дийа̄ коро’ эи да̄се",
+    "author": "Ш́рӣла Бхактивинод Т̣ха̄кур"
   },
   "title": [
     "Гурудев"
@@ -101,11 +102,5 @@
       "iframe_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-utrennee-2",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-utrennee-2\"></iframe>"
     }
-  ],
-  "attributes": {
-    "page": [
-      "41",
-      "68"
-    ]
-  }
+  ]
 }

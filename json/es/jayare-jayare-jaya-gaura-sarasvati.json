@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "97"
+    "page": 97,
+    "first_line": "jayare jayare jaya gaura-sarasvatī",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Sāraswat Ārati"
@@ -183,8 +184,5 @@
   ],
   "word_by_word": [
     "**śrī** — venerable; **sāraswat** — de Sarasvatī; **ārati** — ceremonia."
-  ],
-  "attributes": {
-    "page": "97"
-  }
+  ]
 }

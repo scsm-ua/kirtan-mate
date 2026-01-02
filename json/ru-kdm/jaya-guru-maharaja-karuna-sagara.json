@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Ш́рӣла Бхакти Сундар Говинда Дев-Госва̄мӣ Маха̄ра̄дж",
-    "page": "36"
+    "page": 36,
+    "first_line": "джайа гуру маха̄ра̄джа корун̣а̄-са̄гара",
+    "author": "Ш́рӣла Бхакти Сундар Говинда Дев-Госва̄мӣ Маха̄ра̄дж"
   },
   "title": [
     "Шри Шри Нитаи-Чаитанйа-Арати"
@@ -140,8 +141,5 @@
       "iframe_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-dzhaya-guru",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-dzhaya-guru\"></iframe>"
     }
-  ],
-  "attributes": {
-    "page": "36"
-  }
+  ]
 }

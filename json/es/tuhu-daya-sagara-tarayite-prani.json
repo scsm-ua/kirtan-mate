@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "219"
+    "page": 219,
+    "first_line": "tuhū̐ doyā-sāgara tārayite prāṇī",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Śikṣāṣṭakam"
@@ -96,8 +97,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **śikṣa** — instrucciones; **aṣṭakam** — ocho versos."
-  ],
-  "attributes": {
-    "page": "219"
-  }
+  ]
 }

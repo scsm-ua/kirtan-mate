@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "73"
+    "page": 73,
+    "first_line": "emana durmati",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Dainyātmikā"
@@ -85,8 +86,5 @@
         "O Lord, hearing this message, Bhakti Vinod has come to the soles of Your feet. Crying, he tells his story."
       ]
     }
-  ],
-  "attributes": {
-    "page": "73"
-  }
+  ]
 }

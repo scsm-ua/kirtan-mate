@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Гопал Говинда Маханта",
-    "page": "221"
+    "page": 221,
+    "first_line": "джайаре джайаре джайа парамахам̇са маха̄ш́айа",
+    "author": "Гопал Говинда Маханта"
   },
   "title": [
     "Ачарйа вандана"
@@ -276,8 +277,5 @@
       "iframe_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-acharya",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fgovinda-maharaj-acharya\"></iframe>"
     }
-  ],
-  "attributes": {
-    "page": "221"
-  }
+  ]
 }

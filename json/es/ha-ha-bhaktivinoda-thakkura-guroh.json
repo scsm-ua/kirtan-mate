@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "363"
+    "page": 363,
+    "first_line": "hā hā bhaktivinoda-ṭhakkura! guroḥ!",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrīmad Bhaktivinod-viraha-Daśakam"
@@ -164,8 +165,5 @@
   ],
   "word_by_word": [
     "**śrīmad** — su santidad; **bhaktivinod** — Bhaktivinod Ṭhākur; **viraha** — de separación; **daśakam** — diez oraciones."
-  ],
-  "attributes": {
-    "page": "363"
-  }
+  ]
 }

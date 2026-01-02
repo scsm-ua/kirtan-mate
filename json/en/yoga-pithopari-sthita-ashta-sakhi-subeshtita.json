@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "234"
+    "page": 234,
+    "first_line": "yoga-pīṭhopari-sthita, aṣṭa-sakhī-subeṣṭita",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Śikṣāṣṭakam"
@@ -92,8 +93,5 @@
         "Footnote to Song 8b: *Śrīla Śrīdhar Mahārāja advised not to sing this song because it’s “too high.”*"
       ]
     }
-  ],
-  "attributes": {
-    "page": "234"
-  }
+  ]
 }

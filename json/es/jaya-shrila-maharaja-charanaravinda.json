@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīpād Bhakti Ānanda Sāgar Mahārāj",
-    "page": "261"
+    "page": 261,
+    "first_line": "jaya śrīla mahārāj charaṇāravinda",
+    "author": "Śrīpād Bhakti Ānanda Sāgar Mahārāj"
   },
   "title": [
     "Āchārya-charaṇa-vandana"
@@ -196,8 +197,5 @@
   ],
   "word_by_word": [
     "**āchārya** — maestro ejemplar; **charaṇa** — a sus pies; **vandana** — oraciones."
-  ],
-  "attributes": {
-    "page": "261"
-  }
+  ]
 }

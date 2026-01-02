@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "19"
+    "page": 19,
+    "first_line": "bhaja bhakata-vatsala",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Bhoga Ārati Gīti"
@@ -195,8 +196,5 @@
         "Serve Govinda, serve Gopāl. Serve Giridhārī, Gopīnāth, Nanda Dulāl. Serve Govinda, serve Gopāl. All glory to Nanda’s son! All glory to Śachī’s son! All glory to golden Gopāl!"
       ]
     }
-  ],
-  "attributes": {
-    "page": "19"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Šrīla Bhaktivinoda Thākurs",
-    "page": "68"
+    "page": 68,
+    "first_line": "gurudeva kṛpā-bindu diyā",
+    "author": "Šrīla Bhaktivinoda Thākurs"
   },
   "title": [
     "Gurudeva"
@@ -58,8 +59,5 @@
       ],
       "translation": []
     }
-  ],
-  "attributes": {
-    "page": "68"
-  }
+  ]
 }

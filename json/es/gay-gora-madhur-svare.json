@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "133"
+    "page": 133,
+    "first_line": "gāy gorā madhur svare",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Nāma"
@@ -67,8 +68,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **nāma** — el nombre."
-  ],
-  "attributes": {
-    "page": "133"
-  }
+  ]
 }

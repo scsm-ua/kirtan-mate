@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "32"
+    "page": 32,
+    "first_line": "jīva jāga, jīva jāga",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Aruṇodoya-kīrtan"
@@ -104,8 +105,5 @@
         "Bhakti Vinod falls at the Lord’s feet, prays for the Hari-nām mahāmantra, and takes it."
       ]
     }
-  ],
-  "attributes": {
-    "page": "32"
-  }
+  ]
 }

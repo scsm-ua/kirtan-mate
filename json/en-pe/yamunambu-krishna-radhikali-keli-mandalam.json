@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "146"
+    "page": 146,
+    "first_line": "yāmunāmbu-kṛṣṇa-rādhikāli-keli-maṇḍalam",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Śrī Prema-dhāma-deva Stotram"
@@ -129,8 +130,5 @@
       ],
       "translation": []
     }
-  ],
-  "attributes": {
-    "page": "146"
-  }
+  ]
 }

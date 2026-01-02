@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "289"
+    "page": 289,
+    "first_line": "nadīyā-nagare nitāi neche neche gāy re",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrīman Mahāprabhur śata-nāma"
@@ -351,8 +352,5 @@
   ],
   "word_by_word": [
     "**śrīman** — su divina gracia; **mahāprabhur** — de Mahāprabhu; **śata-nāma** — cien nombres."
-  ],
-  "attributes": {
-    "page": "289"
-  }
+  ]
 }

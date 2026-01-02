@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Šrīla Bhaktivinoda Thākurs",
-    "page": "43"
+    "page": 43,
+    "first_line": "jīv jāgo, jīv jāgo, gaurāchā̐da bole",
+    "author": "Šrīla Bhaktivinoda Thākurs"
   },
   "title": [
     "Aruṇodoya-kīrttan"
@@ -63,8 +64,5 @@
         "Thākurs Bhaktivinoda - krītot pie lotosam līdzīgajām Kunga Gaurangas pēdām un lūdzot Svēto Vārdu, saņēma mahā-mantru."
       ]
     }
-  ],
-  "attributes": {
-    "page": "43"
-  }
+  ]
 }

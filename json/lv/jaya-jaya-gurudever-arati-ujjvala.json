@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Šrīpāds B.A. Paramahamsa Mahārādža",
-    "page": "42"
+    "page": 42,
+    "first_line": "jaya jaya gurudever ārati ujjvala",
+    "author": "Šrīpāds B.A. Paramahamsa Mahārādža"
   },
   "title": [
     "Śrī Guru Ārati"
@@ -173,8 +174,5 @@
         "Ak, mans valdniek, Šrī Gaurangas žēlastības izpausme, lūdzu, esi žēlastīgs pret mani! Šādi, tevi pielūdzot, vienmēr lūdzas tavs nenozīmīgais kalps!"
       ]
     }
-  ],
-  "attributes": {
-    "page": "42"
-  }
+  ]
 }

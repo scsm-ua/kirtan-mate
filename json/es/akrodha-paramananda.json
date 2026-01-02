@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Lochan Dās Ṭhākur",
-    "page": "120"
+    "page": 120,
+    "first_line": "akrodha paramānda nityānanda rāy",
+    "author": "Śrīla Lochan Dās Ṭhākur"
   },
   "title": [
     "Akrodha paramānanda"
@@ -79,8 +80,5 @@
   ],
   "word_by_word": [
     "**akrodha** — libre de ira; **parama-ānanda** — suprema bienaventuranza."
-  ],
-  "attributes": {
-    "page": "120"
-  }
+  ]
 }

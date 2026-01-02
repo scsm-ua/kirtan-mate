@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "30"
+    "page": 30,
+    "first_line": "udila aruṇa pūrava-bhāge",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Aruṇodoya-kīrtan"
@@ -109,8 +110,5 @@
         "Desiring to bless all souls, the Lord’s sweet Name comes to this world and arises like the Sun within the sky of the heart to dispel the darkness of ignorance."
       ]
     }
-  ],
-  "attributes": {
-    "page": "30"
-  }
+  ]
 }

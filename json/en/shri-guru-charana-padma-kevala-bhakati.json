@@ -1,8 +1,9 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
     "verse parentheses": "non bold",
-    "page": "80"
+    "page": 80,
+    "first_line": "śrī guru charaṇa-padma, kevala-bhakati",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Śrī Guru-vaiṣṇava",
@@ -77,9 +78,5 @@
         "I have surrendered, I have surrendered unto your fearless lotus feet. Please give your mercy. Oh Śrī Gurudeva, saviour of the fallen, please give me your mercy. You are the saviour of the lowly fallen souls. All glories to you Śrī Gurudeva."
       ]
     }
-  ],
-  "attributes": {
-    "verse parentheses": "non bold",
-    "page": "80"
-  }
+  ]
 }

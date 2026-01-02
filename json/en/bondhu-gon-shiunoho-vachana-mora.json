@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "232"
+    "page": 232,
+    "first_line": "bondhu-goṇ! śunoho vachana mora",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Śikṣāṣṭakam"
@@ -107,8 +108,5 @@
       "iframe_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbhakti-lalita-devi%2Fbondhu-gon-sunoho-vachana-mora",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbhakti-lalita-devi%2Fbondhu-gon-sunoho-vachana-mora\"></iframe>"
     }
-  ],
-  "attributes": {
-    "page": "232"
-  }
+  ]
 }

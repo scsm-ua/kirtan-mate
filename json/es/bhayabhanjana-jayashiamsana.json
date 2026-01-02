@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "269"
+    "page": 269,
+    "first_line": "bhayabhañjana-jayaśaṁsana-karuṇāyata",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Dayita Dās Praṇati Pañchakam"
@@ -99,8 +100,5 @@
   ],
   "word_by_word": [
     "**śrī dayita dās** — adorable sirviente de Dayita Dās; **praṇati** — obediencias; **pañchakam** — cinco oraciones."
-  ],
-  "attributes": {
-    "page": "269"
-  }
+  ]
 }

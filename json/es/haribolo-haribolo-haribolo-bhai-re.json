@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "125"
+    "page": 125,
+    "first_line": "hari bolo hari bolo bhāi re",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Nāma Kīrtan 3"
@@ -87,8 +88,5 @@
   ],
   "word_by_word": [
     "**śrī** — divino; **nāma** — el nombre; **kīrtan** — glorificación."
-  ],
-  "attributes": {
-    "page": "125"
-  }
+  ]
 }

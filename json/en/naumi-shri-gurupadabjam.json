@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj",
-    "page": "333"
+    "page": 333,
+    "first_line": "naumi śrī-gurupādābjaṁ",
+    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Praṇati Daśakam"
@@ -90,8 +91,5 @@
         "One who with pure faith happily sings this Praṇatidaśakam every day, gains the qualification to serve the Supreme Lord on the path of spontaneous love (Rāgamarga), by the grace of the associate-servitors of that Śrīla Gurudeva."
       ]
     }
-  ],
-  "attributes": {
-    "page": "333"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "165"
+    "page": 165,
+    "first_line": "hari haraye namaḥ kṛṣṇa yādavāya namaḥ",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Nām-saṅkīrtan"
@@ -112,8 +113,5 @@
         "Aspiring for the lotus feet of Śrī Guru and the Vaiṣṇavas, Narottam Dās chants the Holy Name."
       ]
     }
-  ],
-  "attributes": {
-    "page": "165"
-  }
+  ]
 }

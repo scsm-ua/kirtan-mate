@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Kṛṣṇa Dās Kavirāj Goswāmī",
-    "page": "250"
+    "page": 250,
+    "first_line": "jaya rādhe, jaya kṛṣṇa, jaya vṝndāvan",
+    "author": "Śrīla Kṛṣṇa Dās Kavirāj Goswāmī"
   },
   "title": [
     "Śrī Vraja-dhāma-mahimāmṛta"
@@ -157,8 +158,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **vraja-dhāma** — morada de Vraja; **mahima-amṛta** — néctar de sus glorias."
-  ],
-  "attributes": {
-    "page": "250"
-  }
+  ]
 }

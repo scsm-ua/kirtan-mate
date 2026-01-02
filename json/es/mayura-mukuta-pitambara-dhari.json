@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "258"
+    "page": 258,
+    "first_line": "mayura-mukuṭa",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Mayura Mukuṭa"
@@ -66,8 +67,5 @@
   ],
   "word_by_word": [
     "**mayura** — pavoreal; **mukuṭa** — corona."
-  ],
-  "attributes": {
-    "page": "258"
-  }
+  ]
 }

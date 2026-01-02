@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Šrīla Bhakti Sundar Govinda Dēv-Gosvāmī Mahārādža",
-    "page": "32"
+    "page": 32,
+    "first_line": "jaya jaya girirājer ārati viśāla",
+    "author": "Šrīla Bhakti Sundar Govinda Dēv-Gosvāmī Mahārādža"
   },
   "title": [
     "Gupta Govardhana Āratī"
@@ -111,8 +112,5 @@
         "Mūžam Tu sevi izpaud kā Kungu, kuru pielūdz, un kā Kungu, kurš kalpo. Kritušais kalps redz tavu āratī un izjūt milzīgu prieku!"
       ]
     }
-  ],
-  "attributes": {
-    "page": "32"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Vṛndāvan Dās Ṭhākur",
-    "page": "416"
+    "page": 416,
+    "first_line": "vimala hema jini",
+    "author": "Śrīla Vṛndāvan Dās Ṭhākur"
   },
   "title": [
     "Vimala hema jini"
@@ -74,8 +75,5 @@
   ],
   "word_by_word": [
     "**vimala** — puro; **hema** — oro; **jini** — conquista."
-  ],
-  "attributes": {
-    "page": "416"
-  }
+  ]
 }

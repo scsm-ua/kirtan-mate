@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "80"
+    "page": 80,
+    "first_line": "hari haraye namaḥ kṛṣṇa yādavāya namaḥ",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Nāma-Saṇkīrtan"
@@ -144,8 +145,5 @@
   ],
   "word_by_word": [
     "**nāma** — del nombre; **saṇkīrtan** — canto en congregación."
-  ],
-  "attributes": {
-    "page": "80"
-  }
+  ]
 }

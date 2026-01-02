@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "56"
+    "page": 56,
+    "first_line": "udila aruṇa pūrava-bhāge",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Aruṇodoya-kīrtan"
@@ -136,8 +137,5 @@
   ],
   "word_by_word": [
     "**aruṇodoya** — del amanecer; **kīrtan** — canto."
-  ],
-  "attributes": {
-    "page": "56"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Chandraśekhar Āchārya",
-    "page": "101"
+    "page": 101,
+    "first_line": "namo namaḥ tulasī mahārāṇī",
+    "author": "Śrīla Chandraśekhar Āchārya"
   },
   "title": [
     "Śrī Tulasī-parikramā-gīti"
@@ -119,8 +120,5 @@
   ],
   "word_by_word": [
     "**śrī tulasī** — la sagrada Tulasī; **parikramā** — circunvalación; **gīti** — canción."
-  ],
-  "attributes": {
-    "page": "101"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "371"
+    "page": 371,
+    "first_line": "nīte yasmin niśānte nayana-jala-bharaiḥ",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Śrī Dayita Dās Daśakam"
@@ -165,8 +166,5 @@
   ],
   "word_by_word": [
     "**śrī śrī** — su santidad venerable; **dayita dās** — Dayita Dās; **daśakam** — diez oraciones."
-  ],
-  "attributes": {
-    "page": "371"
-  }
+  ]
 }

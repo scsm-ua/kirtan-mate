@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "52"
+    "page": 52,
+    "first_line": "yaśomatī-nandana vraja-vara-nāgara",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Nāma-kīrtan"
@@ -73,8 +74,5 @@
   ],
   "word_by_word": [
     "**śrī nāma** — de los nombres (de Kṛṣṇa); **kīrtan** — canto."
-  ],
-  "attributes": {
-    "page": "52"
-  }
+  ]
 }

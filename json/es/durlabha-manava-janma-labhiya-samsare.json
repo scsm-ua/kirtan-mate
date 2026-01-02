@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "208"
+    "page": 208,
+    "first_line": "durlabha mānava-janma labhiyā saṁsāre",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Nirvedana lakṣaṇa upaladbhi, 4"
@@ -183,8 +184,5 @@
   ],
   "word_by_word": [
     "**nirvedana** — arrepentimiento; **laksana** — síntoma; **upaladbhi** — sentimiento."
-  ],
-  "attributes": {
-    "page": "208"
-  }
+  ]
 }

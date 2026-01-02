@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "195"
+    "page": 195,
+    "first_line": "kabe ha’be bala se dina āmāra",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Vijñapti"
@@ -133,8 +134,5 @@
   ],
   "word_by_word": [
     "**viñapti** — anhelo sincero."
-  ],
-  "attributes": {
-    "page": "195"
-  }
+  ]
 }

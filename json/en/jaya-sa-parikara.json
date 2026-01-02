@@ -1,7 +1,8 @@
 {
   "meta": {
+    "page": 26,
     "no-author": 1,
-    "page": "26"
+    "first_line": "jaya sa-parikara"
   },
   "title": [
     "Jaya Dhvani"
@@ -96,8 +97,5 @@
       ],
       "translation": []
     }
-  ],
-  "attributes": {
-    "page": "26"
-  }
+  ]
 }

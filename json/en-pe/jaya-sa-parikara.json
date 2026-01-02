@@ -1,7 +1,8 @@
 {
   "meta": {
+    "page": 5,
     "no-author": 1,
-    "page": "5"
+    "first_line": "jaya saparikar"
   },
   "title": [
     "Jay Dhvani"
@@ -86,8 +87,5 @@
       ],
       "translation": []
     }
-  ],
-  "attributes": {
-    "page": "5"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "253"
+    "page": 253,
+    "first_line": "janama saphala tā’ra, kṛṣṇa-daraśana jā’ra",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Rūpa-Kīrtan"
@@ -117,8 +118,5 @@
   ],
   "word_by_word": [
     "**rūpa** — la forma del Señor; **kīrtan** — glorificación."
-  ],
-  "attributes": {
-    "page": "253"
-  }
+  ]
 }

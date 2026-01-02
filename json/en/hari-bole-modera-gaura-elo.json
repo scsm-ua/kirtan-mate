@@ -1,8 +1,9 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
     "verse parentheses": "non bold",
-    "page": "301"
+    "page": 301,
+    "first_line": "‘hari’ bole’ modera gaura elo",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Nagara Kīrtana 8"
@@ -94,9 +95,5 @@
         "In what indescribable happiness did all living beings swim while Lord Gaurachandra was dancing? By seeing and hearing of such Pastimes, the hearts of the atheists break."
       ]
     }
-  ],
-  "attributes": {
-    "verse parentheses": "non bold",
-    "page": "301"
-  }
+  ]
 }

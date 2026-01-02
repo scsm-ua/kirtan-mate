@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "151"
+    "page": 151,
+    "first_line": "ei-bāro karuṇā koro vaiṣṇava-gosāi",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Vaiṣṇava Vijñāpti"
@@ -92,8 +93,5 @@
   ],
   "word_by_word": [
     "**vaiṣṇava** — los devotos; **vijñāpti** — súplica."
-  ],
-  "attributes": {
-    "page": "151"
-  }
+  ]
 }

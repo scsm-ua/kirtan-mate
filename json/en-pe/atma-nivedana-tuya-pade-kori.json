@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "111"
+    "page": 111,
+    "first_line": "ātma-nivedana",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Ātma-nivedana"
@@ -83,8 +84,5 @@
         "Diving in the joy of Your service, Bhakti Vinod resides within Your home and performs all his endeavours in accordance with Your will."
       ]
     }
-  ],
-  "attributes": {
-    "page": "111"
-  }
+  ]
 }

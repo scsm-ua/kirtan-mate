@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "103"
+    "page": 103,
+    "first_line": "śrī guru charaṇa-padma",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Śrī Guru-vaiṣṇava māhātmya-gīti"
@@ -93,8 +94,5 @@
   ],
   "word_by_word": [
     "**śrī guru** — adorable maestro espiritual; **vaiṣṇava** — devotos; **māhātmya** — grandeza; **gīti** — canción."
-  ],
-  "attributes": {
-    "page": "103"
-  }
+  ]
 }

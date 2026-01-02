@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "68"
+    "page": 68,
+    "first_line": "ṭhākura vaiṣṇava gaṇa",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Vaiṣṇava-vijñāpti"
@@ -74,8 +75,5 @@
   ],
   "word_by_word": [
     "**vaiṣṇava** — a los Vaiṣṇavas; **vijñāpti** — oración."
-  ],
-  "attributes": {
-    "page": "68"
-  }
+  ]
 }

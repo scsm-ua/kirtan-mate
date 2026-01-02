@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhaktisiddhānta Saraswatī Ṭhākur",
-    "page": "167"
+    "page": 167,
+    "first_line": "duṣṭa mana! tumi kisera vaiṣṇava?",
+    "author": "Śrīla Bhaktisiddhānta Saraswatī Ṭhākur"
   },
   "title": [
     "Vaiṣṇava Ke?"
@@ -298,8 +299,5 @@
   ],
   "word_by_word": [
     "**vaiṣṇava** — devoto; **ke** — quién es."
-  ],
-  "attributes": {
-    "page": "167"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "258"
+    "page": 258,
+    "first_line": "jaya jaśodā-nandana kṛṣṇa gopāla govinda",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Jaya Yaśodā-Nandana Kṛṣṇa"
@@ -40,8 +41,5 @@
   ],
   "word_by_word": [
     "**jaya** — toda gloria; **yaśodā-nandana** — el hijo de Yaśodā; **kṛṣṇa** — Kṛṣṇa."
-  ],
-  "attributes": {
-    "page": "258"
-  }
+  ]
 }

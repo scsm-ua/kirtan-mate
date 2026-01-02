@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "137"
+    "page": 137,
+    "first_line": "‘gaurāṅga’ bolite habe pulaka-śarīra",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Lālasā-mayī Prārthanā"
@@ -79,8 +80,5 @@
   ],
   "word_by_word": [
     "**lālasā** — anhelo; **mayi** — en mí; **prārthana** — oración."
-  ],
-  "attributes": {
-    "page": "137"
-  }
+  ]
 }

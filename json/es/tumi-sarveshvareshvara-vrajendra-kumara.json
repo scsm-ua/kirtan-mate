@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "189"
+    "page": 189,
+    "first_line": "tumi sarvveśvareśvara, vrajendra-kumāra!",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Goptṛtve Varaṇa, 4"
@@ -118,8 +119,5 @@
   ],
   "word_by_word": [
     "**goptṛtve** — guardianía del Señor; **varaṇa** — abrazar."
-  ],
-  "attributes": {
-    "page": "189"
-  }
+  ]
 }

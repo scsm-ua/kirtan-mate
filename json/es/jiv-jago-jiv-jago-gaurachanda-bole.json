@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "59"
+    "page": 59,
+    "first_line": "jīv jāgo, jīv jāgo, gorāchā̐da bale",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Aruṇodoya-kīrtan"
@@ -134,8 +135,5 @@
   ],
   "word_by_word": [
     "**aruṇodoya** — del amanecer; **kīrtan** — canto."
-  ],
-  "attributes": {
-    "page": "59"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Ш́рӣла Бхактивинод Т̣ха̄кур",
-    "page": "155"
+    "page": 155,
+    "first_line": "ки джа̄ни ки боле, тома̄ра дха̄мете",
+    "author": "Ш́рӣла Бхактивинод Т̣ха̄кур"
   },
   "title": [
     "Гоптритве Варана"
@@ -99,8 +100,5 @@
       "iframe_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsudarshan-prabhu-goptrtve",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fsudarshan-prabhu-goptrtve\"></iframe>"
     }
-  ],
-  "attributes": {
-    "page": "155"
-  }
+  ]
 }

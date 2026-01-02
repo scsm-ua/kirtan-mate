@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "128"
+    "page": 128,
+    "first_line": "gaurāṅgera duṭi pada",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Sāvaraṇa-śrī-Gaura-mahimā"
@@ -74,8 +75,5 @@
   ],
   "word_by_word": [
     "**sāvarana** — ornamento; **śrī-gaura** — Śrī Gaurāṅga; **mahimā** — cualidades."
-  ],
-  "attributes": {
-    "page": "128"
-  }
+  ]
 }

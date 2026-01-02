@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "107"
+    "page": 107,
+    "first_line": "(ohe) vaiṣṇava ṭhākura dayāra sāgara",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Vaiṣṇava-mahimā-gīti"
@@ -90,8 +91,5 @@
   ],
   "word_by_word": [
     "**śrī vaiṣṇava** — venerable devoto; **mahimā** — glorias; **gīti** — canción)."
-  ],
-  "attributes": {
-    "page": "107"
-  }
+  ]
 }

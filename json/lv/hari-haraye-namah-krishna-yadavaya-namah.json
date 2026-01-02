@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Šrīla Narottams Dāsa Thākurs",
-    "page": "55"
+    "page": 55,
+    "first_line": "hari haraye namaḥ kṛṣṇa yādavāya namaḥ",
+    "author": "Šrīla Narottams Dāsa Thākurs"
   },
   "title": [
     "Nāma-Saṅkīrttan"
@@ -111,8 +112,5 @@
         "Vēloties gūt Šrī Guru un Vaišnavu lotosam līdzīgo pēdu patvērumu, Narottams Dāsa dzied Svētā Vārda sankirtanu - Svētā Vārda slavu!"
       ]
     }
-  ],
-  "attributes": {
-    "page": "55"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj",
-    "page": "11"
+    "page": 11,
+    "first_line": "jaya ‘guru-mahārāja’",
+    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Guru Ārati Stuti"
@@ -171,8 +172,5 @@
         "O manifestation of the principle of inconceivable difference and nondifference (union in separation)! This humble servant chants your glories and worships you with joy."
       ]
     }
-  ],
-  "attributes": {
-    "page": "11"
-  }
+  ]
 }

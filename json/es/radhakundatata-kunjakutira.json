@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "242"
+    "page": 242,
+    "first_line": "rādhā-kuṇḍa-taṭa-kuñja-kuṭīra",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Ānukūlyātmikā, 4"
@@ -118,8 +119,5 @@
   ],
   "word_by_word": [
     "**ānukula** — favorable; **atmikā** — aceptación."
-  ],
-  "attributes": {
-    "page": "242"
-  }
+  ]
 }

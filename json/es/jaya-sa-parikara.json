@@ -1,7 +1,8 @@
 {
   "meta": {
+    "page": 20,
     "no-author": 1,
-    "page": "20"
+    "first_line": "jay sa-parikara"
   },
   "title": [
     "Jay Dhvani"
@@ -513,8 +514,5 @@
   ],
   "word_by_word": [
     "**jay** — gloria; **dhvani** — cantar."
-  ],
-  "attributes": {
-    "page": "20"
-  }
+  ]
 }

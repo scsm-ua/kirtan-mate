@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "407"
+    "page": 407,
+    "first_line": "āra keno māyā-jāle",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śreyaḥ Nirṇaya 2"
@@ -53,8 +54,5 @@
   ],
   "word_by_word": [
     "**śreyaḥ** — bendición; **nirṇaya** — confirmación."
-  ],
-  "attributes": {
-    "page": "407"
-  }
+  ]
 }

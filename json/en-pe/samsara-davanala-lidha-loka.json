@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Viśvanāth Chakravartī Ṭhākur",
-    "page": "45"
+    "page": 45,
+    "first_line": "saṁsāra-dāvānala-līḍha-loka",
+    "author": "Śrīla Viśvanāth Chakravartī Ṭhākur"
   },
   "title": [
     "Śrī Śrī Gurvāṣṭakam"
@@ -119,8 +120,5 @@
         "One who very carefully recites aloud this Śrī Gurvaṣṭakam during the brāhma-muhūrta (the ninety-six minute period before sunrise) attains direct service to the Lord of Vṛndāvan at the end of life."
       ]
     }
-  ],
-  "attributes": {
-    "page": "45"
-  }
+  ]
 }

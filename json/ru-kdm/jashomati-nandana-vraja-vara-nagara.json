@@ -1,10 +1,11 @@
 {
   "meta": {
-    "author": "Ш́рӣла Бхактивинод Т̣ха̄кур",
     "page": [
-      "39",
-      "60"
-    ]
+      39,
+      60
+    ],
+    "first_line": "джаш́оматӣ-нандана браджа-баро на̄гара",
+    "author": "Ш́рӣла Бхактивинод Т̣ха̄кур"
   },
   "title": [
     "Шри Нама-киртан"
@@ -123,11 +124,5 @@
       "iframe_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-shri-nama",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-shri-nama\"></iframe>"
     }
-  ],
-  "attributes": {
-    "page": [
-      "39",
-      "60"
-    ]
-  }
+  ]
 }

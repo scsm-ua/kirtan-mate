@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Jagadānanda Paṇḍit",
-    "page": "413"
+    "page": 413,
+    "first_line": "chit-kaṇa jīva kṛṣṇa",
+    "author": "Śrīla Jagadānanda Paṇḍit"
   },
   "title": [
     "Jīva-gati"
@@ -197,8 +198,5 @@
   ],
   "word_by_word": [
     "**jīva** — el alma; **gati** — viaje."
-  ],
-  "attributes": {
-    "page": "413"
-  }
+  ]
 }

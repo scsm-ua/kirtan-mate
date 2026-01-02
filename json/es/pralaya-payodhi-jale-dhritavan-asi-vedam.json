@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Jayadev Goswāmī",
-    "page": "279"
+    "page": 279,
+    "first_line": "pralaya-payodhi-jale dhṛtavān asi vedaṁ",
+    "author": "Śrīla Jayadev Goswāmī"
   },
   "title": [
     "Śrī Daśāvatār-stotram"
@@ -183,8 +184,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **daśa-avatār** — diez encarnaciones; **stotram** — oraciones."
-  ],
-  "attributes": {
-    "page": "279"
-  }
+  ]
 }

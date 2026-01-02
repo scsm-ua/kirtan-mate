@@ -1,6 +1,8 @@
 {
   "meta": {
-    "page": "22"
+    "page": 22,
+    "first_line": "джайа са-парикара",
+    "no-author": 1
   },
   "title": [
     "Джайа Дхвани"
@@ -47,8 +49,5 @@
       ],
       "translation": []
     }
-  ],
-  "attributes": {
-    "page": "22"
-  }
+  ]
 }

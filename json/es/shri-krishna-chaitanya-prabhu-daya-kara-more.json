@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "105"
+    "page": 105,
+    "first_line": "śrī kṛṣṇa chaitanya prabhu dayā kara more",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Sāvaraṇa-Śrī-Gaura-pāda-padme"
@@ -118,8 +119,5 @@
   ],
   "word_by_word": [
     "**sāvaraṇa** — aceptación sumisa; **śrī-gaura** — de Gaura; **pāda-padme** — los pies de loto."
-  ],
-  "attributes": {
-    "page": "105"
-  }
+  ]
 }

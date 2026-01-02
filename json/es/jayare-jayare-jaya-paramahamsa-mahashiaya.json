@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrī Gopāl Govinda Mahanta",
-    "page": "272"
+    "page": 272,
+    "first_line": "jayare jayare jaya paramahaṁsa mahāśaya",
+    "author": "Śrī Gopāl Govinda Mahanta"
   },
   "title": [
     "Āchārya vandana"
@@ -328,8 +329,5 @@
   ],
   "word_by_word": [
     "**āchārya** — maestro ejemplar; **vandana** — oraciones."
-  ],
-  "attributes": {
-    "page": "272"
-  }
+  ]
 }

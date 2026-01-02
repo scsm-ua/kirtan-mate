@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Šrīla Bhakti Rakšak Šrīdhārs Dēv-Gosvāmī Mahārādža",
-    "page": "66"
+    "page": 66,
+    "first_line": "jayare jayare jaya gaura-sarasvatī",
+    "author": "Šrīla Bhakti Rakšak Šrīdhārs Dēv-Gosvāmī Mahārādža"
   },
   "title": [
     "Śrī Sāraswat-ārati"
@@ -141,8 +142,5 @@
         "Visa slava Šrī Guru, Kungam Gaurangam, Šrī Rādhai un brīnišķajam Kungam Govindam! Bhaktas, vienmēr un visur dziediet par Viņu slavu!"
       ]
     }
-  ],
-  "attributes": {
-    "page": "66"
-  }
+  ]
 }

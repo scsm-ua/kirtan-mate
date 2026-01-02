@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Šrīla Ločans Dāsa Thākurs",
-    "page": "113"
+    "page": 113,
+    "first_line": "nitāi guṇamaṇi āmāra nitāi guṇamaṇi",
+    "author": "Šrīla Ločans Dāsa Thākurs"
   },
   "title": [
     "Nitāi guṇamaṇi āmāra"
@@ -61,8 +62,5 @@
         "Ločans dāsa saka: “Tas, kurš nepielūdz Kungu Nītaju un nepieņem velti, kuru Viņš dāvā, veic apzinātu pašnāvību!”"
       ]
     }
-  ],
-  "attributes": {
-    "page": "113"
-  }
+  ]
 }

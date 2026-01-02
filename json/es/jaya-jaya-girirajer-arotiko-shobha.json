@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj",
-    "page": "404"
+    "page": 404,
+    "first_line": "jaya jaya girirājer ārotiko",
+    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Śrī Girirāj-Govardhan Ārati"
@@ -157,8 +158,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **girirāj** — el rey de las colinas; **govardhan** — Govardhan; **ārati** — ceremonia."
-  ],
-  "attributes": {
-    "page": "404"
-  }
+  ]
 }

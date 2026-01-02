@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "144"
+    "page": 144,
+    "first_line": "kabe śrī chaitanya more-koribena doyā",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Dainya Prārthanā Gīti"
@@ -105,8 +106,5 @@
   ],
   "word_by_word": [
     "**dainya** — humildad; **prārthana** — súplica; **gīti** — canción."
-  ],
-  "attributes": {
-    "page": "144"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Kṛṣṇa Dās Kavirāj Goswāmī",
-    "page": "307"
+    "page": 307,
+    "first_line": "chaudda-śata sāta-śake māsa je phālgun",
+    "author": "Śrīla Kṛṣṇa Dās Kavirāj Goswāmī"
   },
   "title": [
     "Śrī Gaura-Purṇīmā"
@@ -538,8 +539,5 @@
   ],
   "word_by_word": [
     "**śrī gaura** — adorable Gaurāṅga; **purṇīmā** — luna llena."
-  ],
-  "attributes": {
-    "page": "307"
-  }
+  ]
 }

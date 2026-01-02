@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "134"
+    "page": 134,
+    "first_line": "kabe gaura-vane, suradhunī-taṭe",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Siddhi-lālasā"
@@ -74,8 +75,5 @@
   ],
   "word_by_word": [
     "**siddhi** — perfección; **lālasā** — deseo."
-  ],
-  "attributes": {
-    "page": "134"
-  }
+  ]
 }

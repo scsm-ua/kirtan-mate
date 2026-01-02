@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Kṛṣṇadās Kavirāj Goswāmī",
-    "page": "102"
+    "page": 102,
+    "first_line": "jaya rādhe, jaya kṛṣṇa",
+    "author": "Śrīla Kṛṣṇadās Kavirāj Goswāmī"
   },
   "title": [
     "Śrī Vraja-dhāma-mahimāmṛta"
@@ -121,8 +122,5 @@
         "Remembering the lotus feet of Śrī Jāhnavā Devī, the humble Kṛṣṇa Dās chants the Holy Name."
       ]
     }
-  ],
-  "attributes": {
-    "page": "102"
-  }
+  ]
 }

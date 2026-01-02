@@ -1,8 +1,9 @@
 {
   "meta": {
-    "author": "Šrīla Bhaktivinoda Thākurs",
     "verse parentheses": "non bold",
-    "page": "116"
+    "page": 116,
+    "first_line": "‘dayāl nitāi chaitanya’ bo’le nāch re",
+    "author": "Šrīla Bhaktivinoda Thākurs"
   },
   "title": [
     "Dayāl Nitāi Chaitanya"
@@ -48,9 +49,5 @@
         "Kad parādās pieķeršanās Krišnas Svētajam Vārdam, dzīvas būtnes dzīve piepildās ar patiesu laimi! Bez pieķeršanās Krišnam, dzīve ir tukša un veltīga. Ja Kunga Gauras žēlsirdība būs klātesoša, dzīves noslēgumā tu varēsi skatīt brīnišķīgos Rādhas un Šjāma tēlus Vrindavanā!"
       ]
     }
-  ],
-  "attributes": {
-    "verse parentheses": "non bold",
-    "page": "116"
-  }
+  ]
 }

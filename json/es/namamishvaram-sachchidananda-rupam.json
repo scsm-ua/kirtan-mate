@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrī Satyavrat Muni",
-    "page": "285"
+    "page": 285,
+    "first_line": "namāmīśvaraṁ sachchidānanda rūpaṁ",
+    "author": "Śrī Satyavrat Muni"
   },
   "title": [
     "Śrī Śrī Dāmodarāṣṭakam"
@@ -134,8 +135,5 @@
   ],
   "word_by_word": [
     "**śrī śrī** — adorable; **dāmodar** — Kṛṣṇa; **aṣṭakam** — ocho oraciones."
-  ],
-  "attributes": {
-    "page": "285"
-  }
+  ]
 }

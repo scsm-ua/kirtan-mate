@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Lochan Dās Ṭhākur",
-    "page": "130"
+    "page": 130,
+    "first_line": "nitāi guṇamaṇi āmāra nitāi guṇamaṇi",
+    "author": "Śrīla Lochan Dās Ṭhākur"
   },
   "title": [
     "Nitāi guṇamaṇi āmāra"
@@ -61,8 +62,5 @@
         "Lochan Dās says, “Whoever has not worshipped this Lord Nitāi, or accepted the great gift offered by Him, that person knowingly commits suicide.”"
       ]
     }
-  ],
-  "attributes": {
-    "page": "130"
-  }
+  ]
 }

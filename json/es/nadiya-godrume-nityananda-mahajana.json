@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "115"
+    "page": 115,
+    "first_line": "nadīyā-godrume nityānanda mahājana",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Ājñā-Ṭahal"
@@ -67,8 +68,5 @@
   ],
   "word_by_word": [
     "**ājñā** — orden; **ṭahal** — deambular."
-  ],
-  "attributes": {
-    "page": "115"
-  }
+  ]
 }

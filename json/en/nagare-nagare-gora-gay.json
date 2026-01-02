@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "280"
+    "page": 280,
+    "first_line": "nagare nagare gorā gāy",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Kṛṣṇera",
@@ -271,8 +272,5 @@
         "Lord Chaitanya sings these names of Krishna from village to village, and Ṭhākur Bhakti Vinod falls at His lotus feet."
       ]
     }
-  ],
-  "attributes": {
-    "page": "280"
-  }
+  ]
 }

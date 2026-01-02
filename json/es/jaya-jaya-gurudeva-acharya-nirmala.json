@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Aśok Prabhu, B. Nandan Sādhu",
-    "page": "36"
+    "page": 36,
+    "first_line": "jaya gurudeva āchārya nirmala",
+    "author": "Aśok Prabhu, B. Nandan Sādhu"
   },
   "title": [
     "Śrī Gurudeva Stuti"
@@ -222,8 +223,5 @@
   ],
   "word_by_word": [
     "**śrī gurudeva** — el adorable maestro espiritual; **stuti** — glorificación."
-  ],
-  "attributes": {
-    "page": "36"
-  }
+  ]
 }

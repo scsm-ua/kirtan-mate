@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Vāsudeva Ghoṣ",
-    "page": "135"
+    "page": 135,
+    "first_line": "jadi gaura nā ho’to, tobe ki hoito",
+    "author": "Śrīla Vāsudeva Ghoṣ"
   },
   "title": [
     "Jadi Gaura nā ho’to"
@@ -74,8 +75,5 @@
   ],
   "word_by_word": [
     "**jadi** — si; **gaura** — Gaura; **nā ho‘to** — no podría ser."
-  ],
-  "attributes": {
-    "page": "135"
-  }
+  ]
 }

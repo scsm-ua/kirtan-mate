@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "84"
+    "page": 84,
+    "first_line": "bhaja bhakata-vatsala śrī-gaurahari",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Bhoga Ārati Gīti"
@@ -288,8 +289,5 @@
   ],
   "word_by_word": [
     "**śrī bhoga** — ofrenda de comida; **ārati** — ceremonia; **gīti** — canción."
-  ],
-  "attributes": {
-    "page": "84"
-  }
+  ]
 }

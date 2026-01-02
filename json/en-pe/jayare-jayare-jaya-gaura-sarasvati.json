@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "25"
+    "page": 25,
+    "first_line": "jayare jayare jaya gaura-sarasvatī",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Sāraswat Ārati"
@@ -141,8 +142,5 @@
         "All glory to Śrī Guru, Gaurāṅga, and Rādhā-Govindasundar! O devotees, glorify them always and forever!"
       ]
     }
-  ],
-  "attributes": {
-    "page": "25"
-  }
+  ]
 }

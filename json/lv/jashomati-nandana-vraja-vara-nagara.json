@@ -1,10 +1,11 @@
 {
   "meta": {
-    "author": "Šrīla Bhaktivinoda Thākurs",
     "page": [
-      "39",
-      "60"
-    ]
+      39,
+      60
+    ],
+    "first_line": "jaśomatī-nandana vraja-vara nāgara",
+    "author": "Šrīla Bhaktivinoda Thākurs"
   },
   "title": [
     "Śrī Nām-kīrtan"
@@ -61,11 +62,5 @@
         "Pastaigājoties pa Jamūnas upes krastiem, Krišna nolaupa peldošos *gopiju* drēbes. Viņš izbauda rāsas dejas saldo garšu! Viņš ir visžēlsirdīgākais! Viņš ir vienīgais Šrīmatī Rādharanī mīļotais. Krišna ir Vrindāvanas lieliskākais dejotājs un Šrīlas Bhaktivinoda Thākura augstākais patvērums!"
       ]
     }
-  ],
-  "attributes": {
-    "page": [
-      "39",
-      "60"
-    ]
-  }
+  ]
 }

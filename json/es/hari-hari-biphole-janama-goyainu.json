@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "183"
+    "page": 183,
+    "first_line": "hari hari! biphole janama goyāinu",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Iṣṭa-deve Vijñapti"
@@ -73,8 +74,5 @@
   ],
   "word_by_word": [
     "**iṣṭa** — esfuerzo; **deve** — dar; **vijñapti** — petición."
-  ],
-  "attributes": {
-    "page": "183"
-  }
+  ]
 }

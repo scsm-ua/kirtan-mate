@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "182"
+    "page": 182,
+    "first_line": "gurudeva! baḍa kṛpā kari",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Bhajana-Lālasā, 10"
@@ -75,8 +76,5 @@
   ],
   "word_by_word": [
     "**bhajana** — adoración; **lālasā** — anhelo."
-  ],
-  "attributes": {
-    "page": "182"
-  }
+  ]
 }

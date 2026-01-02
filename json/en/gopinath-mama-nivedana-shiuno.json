@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "200"
+    "page": 200,
+    "first_line": "gopīnāth, mama nivedana śuno",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Nivedana"
@@ -101,8 +102,5 @@
         "Oh Gopīnāth, I am so sinful that although all the demons attained Your lotus feet, Bhakti Vinod has remained in worldly existence."
       ]
     }
-  ],
-  "attributes": {
-    "page": "200"
-  }
+  ]
 }

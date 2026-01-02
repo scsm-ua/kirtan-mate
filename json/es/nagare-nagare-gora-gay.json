@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "295"
+    "page": 295,
+    "first_line": "nagare nagare gorā gāy",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Kṛṣṇera Vīṁsottara-śata-nāma"
@@ -351,8 +352,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **kṛṣṇera** — de Kṛṣṇa; **vīṁsottara** — veinte y más; **śata-nāma** — cien nombres."
-  ],
-  "attributes": {
-    "page": "295"
-  }
+  ]
 }

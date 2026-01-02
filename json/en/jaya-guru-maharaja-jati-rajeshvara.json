@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj",
-    "page": "45"
+    "page": 45,
+    "first_line": "jaya ‘guru-mahārāja’ jati-rājeśvara",
+    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Guru Ārati-stuti"
@@ -219,8 +220,5 @@
         "&nbsp;&nbsp;&nbsp;&nbsp;with joy — your humble servant."
       ]
     }
-  ],
-  "attributes": {
-    "page": "45"
-  }
+  ]
 }

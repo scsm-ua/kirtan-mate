@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Govinda Dās Kavirāj",
-    "page": "162"
+    "page": 162,
+    "first_line": "bhajahū̐ re mana śrī-nanda-nandana",
+    "author": "Śrīla Govinda Dās Kavirāj"
   },
   "title": [
     "Bhajahū̐ Re Mana"
@@ -74,8 +75,5 @@
   ],
   "word_by_word": [
     "**bhajahū̐** — adora; **re** — ¡oh!; **mana** — mente."
-  ],
-  "attributes": {
-    "page": "162"
-  }
+  ]
 }

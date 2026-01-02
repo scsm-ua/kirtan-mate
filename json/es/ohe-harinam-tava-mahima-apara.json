@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "397"
+    "page": 397,
+    "first_line": "ohe harinām tava mahimā",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Śrī Nāmāṣṭakam 7"
@@ -118,8 +119,5 @@
   ],
   "word_by_word": [
     "**śrī** — adorable; **nāma** — nombre; **aṣṭakam** — ocho versos."
-  ],
-  "attributes": {
-    "page": "397"
-  }
+  ]
 }

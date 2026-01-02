@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj",
-    "page": "73"
+    "page": 73,
+    "first_line": "hari-nāma mahāmantra",
+    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Daśa-vidha Nāmāparādha"
@@ -175,8 +176,5 @@
   ],
   "word_by_word": [
     "**daśa** — diez; **vidha** — clases; **nām-āparādha** — ofensas al nombre."
-  ],
-  "attributes": {
-    "page": "73"
-  }
+  ]
 }

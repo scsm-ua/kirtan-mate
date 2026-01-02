@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "123"
+    "page": 123,
+    "first_line": "‘doyāl nitāi chaitanya’ bo’le’ nāch re āmār man",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Doyāl Nitāi Chaitanya"
@@ -58,8 +59,5 @@
   ],
   "word_by_word": [
     "**doyāl** — misericordioso; **nitāi chaitanya** — Nitāi y Chaitanya."
-  ],
-  "attributes": {
-    "page": "123"
-  }
+  ]
 }

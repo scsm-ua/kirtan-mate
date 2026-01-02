@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "185"
+    "page": 185,
+    "first_line": "ātma-nivedana, tuyā pade kori",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Ātma-nivedana"
@@ -104,8 +105,5 @@
   ],
   "word_by_word": [
     "**ātma** — alma; **nivedana** — sumisión."
-  ],
-  "attributes": {
-    "page": "185"
-  }
+  ]
 }

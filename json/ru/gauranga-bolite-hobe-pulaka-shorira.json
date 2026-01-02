@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Ш́рӣла Нароттам Да̄с Т̣ха̄кур",
-    "page": "129"
+    "page": 129,
+    "first_line": "‘гаура̄н̇га’ болите хабе пулака-ш́арӣра",
+    "author": "Ш́рӣла Нароттам Да̄с Т̣ха̄кур"
   },
   "title": [
     "Гауранга болите хабе"
@@ -69,8 +70,5 @@
       "iframe_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-gauranga-bolite",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fshchsm-karakas-gauranga-bolite\"></iframe>"
     }
-  ],
-  "attributes": {
-    "page": "129"
-  }
+  ]
 }

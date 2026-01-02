@@ -7,7 +7,7 @@
         "title": "Jay Dhvani",
         "name": "Jay Dhvani",
         "fileName": "jaya-sa-parikara.html",
-        "page": "20",
+        "page": 20,
         "meta": {},
         "telegraphPath": "Jay-Dhvani-02-22-2"
       },
@@ -17,7 +17,7 @@
         "name": "Vandanā",
         "aliasName": "vande ’haṁ śrī-guroḥ śrī-yuta-pada-kamalaṁ śrī-gurūn vaiṣṇavāṁś cha",
         "fileName": "vande-ham-shri-guroh-shri-yuta-pada-kamalam.html",
-        "page": "28",
+        "page": 28,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Шрила Госвами Махарадж",
@@ -37,7 +37,7 @@
         "name": "Śrī Gurudeva Stuti",
         "aliasName": "jaya jaya gurudeva āchārya nirmala",
         "fileName": "jaya-jaya-gurudeva-acharya-nirmala.html",
-        "page": "36",
+        "page": 36,
         "meta": {},
         "telegraphPath": "Śrī-Gurudeva-Stuti-02-22"
       },
@@ -47,7 +47,7 @@
         "name": "Śrī Guru Ārati",
         "aliasName": "jaya jaya gurudever ārati ujjvala",
         "fileName": "jaya-jaya-gurudever-arati-ujjvala.html",
-        "page": "39",
+        "page": 39,
         "embeds": [
           "Навадвип Дхам",
           "Каракас Дхам"
@@ -61,7 +61,7 @@
         "name": "Śrī Guru Ārati Stuti",
         "aliasName": "jaya ‘guru-mahārāja’ yati-rājeśvara",
         "fileName": "jaya-guru-maharaja-jati-rajeshvara.html",
-        "page": "43",
+        "page": 43,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Говинда Махарадж",
@@ -78,8 +78,8 @@
         "aliasName": "jaya guru mahārāj karuṇā-sāgara",
         "fileName": "jaya-guru-maharaja-karuna-sagara.html",
         "page": [
-          "46",
-          "91"
+          46,
+          91
         ],
         "embeds": [
           "Каракас Дхам"
@@ -93,7 +93,7 @@
         "name": "Prabhāti Gīti",
         "aliasName": "kali-kukkura-kadana yadi chāo he",
         "fileName": "kali-kukkura-kadana-jadi-chao-he.html",
-        "page": "50",
+        "page": 50,
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
@@ -106,7 +106,7 @@
         "name": "Śrī Nāma-kīrtan",
         "aliasName": "yaśomatī-nandana    vraja-vara-nāgara",
         "fileName": "jashomati-nandana-vraja-vara-nagara.html",
-        "page": "52",
+        "page": 52,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Говинда Махарадж",
@@ -128,7 +128,7 @@
         "name": "Śrī Śachīnandana-vandanā",
         "aliasName": "jaya śachī-nandana        sura-muni-vandana",
         "fileName": "jaya-shiachinandana-sura-muni-vandana.html",
-        "page": "53",
+        "page": 53,
         "embeds": [
           "Каракас Дхам",
           "Шрила Мадхусудан Махарадж",
@@ -143,7 +143,7 @@
         "name": "Gurudeva",
         "aliasName": "gurudeva!",
         "fileName": "gurudeva-kripa-bindu-diya-kara-ei-dase.html",
-        "page": "55",
+        "page": 55,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Шридхар Махарадж",
@@ -161,7 +161,7 @@
         "name": "Aruṇodoya-kīrtan",
         "aliasName": "udila aruṇa pūrava-bhāge",
         "fileName": "udilo-aruna-puraba-bhage.html",
-        "page": "56",
+        "page": 56,
         "embeds": [
           "Навадвип Дхам",
           "Шрила Авадхут Махарадж"
@@ -175,7 +175,7 @@
         "name": "Aruṇodoya-kīrtan",
         "aliasName": "jīv jāgo, jīv jāgo, gorāchā̐da bale",
         "fileName": "jiv-jago-jiv-jago-gaurachanda-bole.html",
-        "page": "59",
+        "page": 59,
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
@@ -188,7 +188,7 @@
         "name": "Śrī Śrī Gurvāṣṭakam",
         "aliasName": "saṁsāra-dāvānala-līḍha-loka",
         "fileName": "samsara-davanala-lidha-loka.html",
-        "page": "61",
+        "page": 61,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -201,7 +201,7 @@
         "name": "Maṅgalācharaṇa",
         "aliasName": "śrī-kṛṣṇa-chaitanya prabhu jīve dayā kari’",
         "fileName": "shri-krishna-chaitanya-prabhu-jive-daya-kori.html",
-        "page": "64",
+        "page": 64,
         "meta": {},
         "telegraphPath": "Maṅgalācharaṇa-02-22"
       },
@@ -211,7 +211,7 @@
         "name": "Bhajan-gīti",
         "aliasName": "bhaja re bhaja re āmār mana ati manda",
         "fileName": "bhaja-re-bhaja-re-amar-mana-ati-manda.html",
-        "page": "66",
+        "page": 66,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -224,7 +224,7 @@
         "name": "Vaiṣṇava-vijñāpti",
         "aliasName": "ṭhākura vaiṣṇava-gaṇa        kari ei nivedana",
         "fileName": "thakura-vaishnava-gana-kori-ei-nivedana.html",
-        "page": "68",
+        "page": 68,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -237,7 +237,7 @@
         "name": "Vibhāvarī Śeṣa",
         "aliasName": "vibhāvarī śeṣa    āloka praveśa",
         "fileName": "vibhavari-shiesha-aloka-praveshia.html",
-        "page": "70",
+        "page": 70,
         "embeds": [
           "Шрила Госвами Махарадж",
           "Навадвип Дхам",
@@ -252,7 +252,7 @@
         "name": "Daśa-vidha Nāmāparādha",
         "aliasName": "hari-nāma mahāmantra sarvva-mantra-sāra",
         "fileName": "hari-nama-mahamantra-sarva-mantra-sara.html",
-        "page": "73",
+        "page": 73,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -265,7 +265,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "cheto-darpaṇa-mārjanaṁ bhava-mahādāvāgni-nirvāpaṇaṁ",
         "fileName": "cheto-darpana-marjanam.html",
-        "page": "77",
+        "page": 77,
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
@@ -278,7 +278,7 @@
         "name": "Nāma-Saṇkīrtan",
         "aliasName": "hari haraye namaḥ kṛṣṇa yādavāya namaḥ",
         "fileName": "hari-haraye-namah-krishna-yadavaya-namah.html",
-        "page": "80",
+        "page": 80,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Навадвип Дхам",
@@ -298,7 +298,7 @@
         "name": "Śrī Bhoga Ārati Gīti",
         "aliasName": "bhaja bhakata-vatsala śrī-gaurahari",
         "fileName": "bhaja-bhakata-vatsala-shri-gaurahari.html",
-        "page": "84",
+        "page": 84,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Навадвип Дхам",
@@ -313,7 +313,7 @@
         "name": "Mahāprāsad",
         "aliasName": "mahāprasāde govinde nāma brahmaṇi vaiṣṇave",
         "fileName": "mahaprasade-govinde-nama-brahmani.html",
-        "page": "88",
+        "page": 88,
         "meta": {},
         "telegraphPath": "Mahāprāsad-02-22"
       },
@@ -323,7 +323,7 @@
         "name": "Śrī Prasāda-sevāya Gīti",
         "aliasName": "bhāi-re!",
         "fileName": "bhai-re-shorira-avidya-jal-jodendriya-tahe-kal.html",
-        "page": "89",
+        "page": 89,
         "meta": {},
         "telegraphPath": "Śrī-Prasāda-sevāya-Gīti-08-31"
       }
@@ -339,8 +339,8 @@
         "aliasName": "jaya guru mahārāj karuṇā-sāgara",
         "fileName": "jaya-guru-maharaja-karuna-sagara.html",
         "page": [
-          "46",
-          "91"
+          46,
+          91
         ],
         "embeds": [
           "Каракас Дхам"
@@ -354,7 +354,7 @@
         "name": "Śrī Gaura Ārati",
         "aliasName": "(kibā) jaya jaya gorāchā̐der āratika śobhā",
         "fileName": "jaya-jaya-gaurachander-arotiko-shobha.html",
-        "page": "94",
+        "page": 94,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Навадвип Дхам",
@@ -369,7 +369,7 @@
         "name": "Śrī Sāraswat Ārati",
         "aliasName": "jayare jayare jaya gaura-sarasvatī",
         "fileName": "jayare-jayare-jaya-gaura-sarasvati.html",
-        "page": "97",
+        "page": 97,
         "embeds": [
           "Навадвип Дхам",
           "Каракас Дхам"
@@ -383,7 +383,7 @@
         "name": "Śrī Tulasī-parikramā-gīti",
         "aliasName": "namo namaḥ tulasī mahārāṇī",
         "fileName": "namo-namah-tulasi-maharani.html",
-        "page": "101",
+        "page": 101,
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
@@ -396,7 +396,7 @@
         "name": "Śrī Guru-vaiṣṇava māhātmya-gīti",
         "aliasName": "śrī guru charaṇa-padma        kevala bhakati-sadma",
         "fileName": "shri-guru-charana-padma-kevala-bhakati.html",
-        "page": "103",
+        "page": 103,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Навадвип Дхам"
@@ -410,7 +410,7 @@
         "name": "Sāvaraṇa-Śrī-Gaura-pāda-padme",
         "aliasName": "śrī kṛṣṇa chaitanya prabhu dayā kara more",
         "fileName": "shri-krishna-chaitanya-prabhu-daya-kara-more.html",
-        "page": "105",
+        "page": 105,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -423,7 +423,7 @@
         "name": "Śrī Vaiṣṇava-mahimā-gīti",
         "aliasName": "(ohe) vaiṣṇava ṭhākura dayāra sāgara",
         "fileName": "vaishnava-thakura-dayara-sagara.html",
-        "page": "107",
+        "page": 107,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Навадвип Дхам",
@@ -438,7 +438,7 @@
         "name": "Śrī Śrīla Prabhupāda-padma Stavakaḥ",
         "aliasName": "sujanārvvuda-rādhita-pāda-yugaṁ",
         "fileName": "sujanarvuda-radhita-pada-yugam.html",
-        "page": "109",
+        "page": 109,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Авадхут Махарадж"
@@ -457,7 +457,7 @@
         "name": "Ājñā-Ṭahal",
         "aliasName": "nadīyā-godrume nityānanda mahājana",
         "fileName": "nadiya-godrume-nityananda-mahajana.html",
-        "page": "115",
+        "page": 115,
         "meta": {},
         "telegraphPath": "Ājñā-Ṭahal-02-22-2"
       },
@@ -467,7 +467,7 @@
         "name": "Manaḥ-śikṣā",
         "aliasName": "nitāi-pada-kamala,    koṭī-chandra-suśītala,",
         "fileName": "nitai-pada-kamala-koti-chandra-sushitala.html",
-        "page": "116",
+        "page": 116,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Говинда Махарадж",
@@ -482,7 +482,7 @@
         "name": "Sva-niṣṭha",
         "aliasName": "dhana mora nityānanda        pati mora gaurachandra",
         "fileName": "dhana-mora-nityananda-pati-mora.html",
-        "page": "117",
+        "page": 117,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -495,7 +495,7 @@
         "name": "Nitāi Guṇa Manī",
         "aliasName": "nitāi guṇamaṇi āmāra nitāi guṇamaṇi",
         "fileName": "nitai-gunamani-amara-nitai-gunamani.html",
-        "page": "119",
+        "page": 119,
         "embeds": [
           "Навадвип Дхам",
           "Сударшан Прабху"
@@ -509,7 +509,7 @@
         "name": "Akrodha paramānanda",
         "aliasName": "akrodha paramānda nityānanda rāy",
         "fileName": "akrodha-paramananda.html",
-        "page": "120",
+        "page": 120,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Шрила Мадхусудан Махарадж"
@@ -523,7 +523,7 @@
         "name": "Śrī Śrī Gaura Nityānander Doyā",
         "aliasName": "parama karuṇa,        pahū̐ dūi jana,",
         "fileName": "parama-karuna-pahu-dui-jana.html",
-        "page": "121",
+        "page": 121,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Ачарья Махарадж",
@@ -538,7 +538,7 @@
         "name": "Doyāl Nitāi Chaitanya",
         "aliasName": "‘doyāl nitāi chaitanya’ bo’le nāch re āmār man",
         "fileName": "dayal-nitai-chaitanya-bole-nach-re.html",
-        "page": "123",
+        "page": 123,
         "embeds": [
           "Каракас Дхам"
         ],
@@ -551,7 +551,7 @@
         "name": "Śrī Nāma Kīrtan 3",
         "aliasName": "‘hari’ bolo, ‘hari’ bolo, ‘hari’ bolo, bhāi re",
         "fileName": "haribolo-haribolo-haribolo-bhai-re.html",
-        "page": "125",
+        "page": 125,
         "meta": {},
         "telegraphPath": "Śrī-Nāma-Kīrtan-3-02-22"
       }
@@ -566,7 +566,7 @@
         "name": "Sāvaraṇa-śrī-Gaura-mahimā",
         "aliasName": "gaurāṅgera duṭi pada,        jār dhana sampada,",
         "fileName": "gaurangera-duti-pada-jar-dhana-sampada.html",
-        "page": "128",
+        "page": 128,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -579,7 +579,7 @@
         "name": "Gaura Pahū̐",
         "aliasName": "gaura pahū̐ nā bhajiyā mainu",
         "fileName": "gaura-pahu-na-bhajiya-mainu.html",
-        "page": "129",
+        "page": 129,
         "meta": {},
         "telegraphPath": "Gaura-Pahū-02-22"
       },
@@ -589,7 +589,7 @@
         "name": "Avatāra Sāra",
         "aliasName": "avatāra sāra        gorā avatāra",
         "fileName": "avatara-sara-gora-avatara.html",
-        "page": "131",
+        "page": 131,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Каракас Дхам"
@@ -603,7 +603,7 @@
         "name": "Śrī Nāma",
         "aliasName": "gāy gorā madhur svare",
         "fileName": "gay-gora-madhur-svare.html",
-        "page": "133",
+        "page": 133,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Госвами Махарадж",
@@ -621,7 +621,7 @@
         "name": "Siddhi-lālasā",
         "aliasName": "kabe gaura-vane,    suradhunī-taṭe,",
         "fileName": "kobe-gaura-vane-suradhuni-tate.html",
-        "page": "134",
+        "page": 134,
         "embeds": [
           "Сударшан Прабху"
         ],
@@ -634,7 +634,7 @@
         "name": "Jadi Gaura nā ho’to",
         "aliasName": "jadi gaura nā ho’to,    tobe ki hoito,",
         "fileName": "jadi-gaura-na-hoto-tobe-ki-hoito.html",
-        "page": "135",
+        "page": 135,
         "embeds": [
           "Сударшан Прабху"
         ],
@@ -647,7 +647,7 @@
         "name": "Lālasā-mayī Prārthanā",
         "aliasName": "‘gaurāṅga’ bolite habe pulaka-śarīra",
         "fileName": "gauranga-bolite-hobe-pulaka-shorira.html",
-        "page": "137",
+        "page": 137,
         "embeds": [
           "Каракас Дхам"
         ],
@@ -660,7 +660,7 @@
         "name": "Śrī Śrī Gaurasundarer Avirbhāva Vasare",
         "aliasName": "aruṇa vasane        sonara sūraja",
         "fileName": "aruna-basane-sonara-suraja.html",
-        "page": "138",
+        "page": 138,
         "meta": {},
         "telegraphPath": "Śrī-Śrī-Gaurasundarer-Avirbhāva-Vasare-02-22-2"
       },
@@ -670,7 +670,7 @@
         "name": "Ke jabi ke jabi",
         "aliasName": "ke jabi ke jabi bhāi bhava-sindhu pāra",
         "fileName": "ke-jabi-ke-jabi-bhai-bhava-sindhu-para.html",
-        "page": "142",
+        "page": 142,
         "meta": {},
         "telegraphPath": "Ke-jabi-ke-jabi-02-22-2"
       }
@@ -685,7 +685,7 @@
         "name": "Dainya Prārthanā Gīti",
         "aliasName": "kabe śrī chaitanya more-koribena doyā",
         "fileName": "kobe-shri-chaitanya-more-koribena-daya.html",
-        "page": "144",
+        "page": 144,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Навадвип Дхам"
@@ -699,7 +699,7 @@
         "name": "Prārthana Lalasāmayī, 9",
         "aliasName": "kabe ha’be heno daśā mora",
         "fileName": "kabe-habe-heno-dashia-mora.html",
-        "page": "145",
+        "page": 145,
         "meta": {},
         "telegraphPath": "Prārthana-Lalasāmayī-9-02-22"
       },
@@ -709,7 +709,7 @@
         "name": "Vaiṣṇava mahima",
         "aliasName": "ṭhākura-vaiṣṇava-pada,        avanīra susampada,",
         "fileName": "thakura-vaishnava-pada-avanira.html",
-        "page": "148",
+        "page": 148,
         "meta": {},
         "telegraphPath": "Vaiṣṇava-mahima-02-22"
       },
@@ -719,7 +719,7 @@
         "name": "Viraha-gīti",
         "aliasName": "je ānilo prema-dhana koruṇā prachura",
         "fileName": "je-anilo-prema-dhana-karuna-prachura.html",
-        "page": "149",
+        "page": 149,
         "embeds": [
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
@@ -733,7 +733,7 @@
         "name": "Vaiṣṇava Vijñāpti",
         "aliasName": "ei-bāro karuṇā koro vaiṣṇava-gosāi",
         "fileName": "ei-vara-karuna-kara-vaishnava-gosani.html",
-        "page": "151",
+        "page": 151,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Мадхусудан Махарадж"
@@ -747,7 +747,7 @@
         "name": "Prārthanā Lalasāmayi",
         "aliasName": "kṛpa koro’ vaiṣṇava ṭhākura",
         "fileName": "kripa-kara-vaishnava-thakura.html",
-        "page": "152",
+        "page": 152,
         "meta": {},
         "telegraphPath": "Prārthanā-Lalasāmayi-02-22-2"
       },
@@ -757,7 +757,7 @@
         "name": "Śrī Namāṣṭakam 8",
         "aliasName": "nārada muni,        bājāya vīṇā,",
         "fileName": "narada-muni-bajaya-vina.html",
-        "page": "154",
+        "page": 154,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -770,7 +770,7 @@
         "name": "Śrī Śrī Ṣaḍ-goswāmi-aṣṭakam",
         "aliasName": "kṛṣṇotkīrttana-gāna-    narttana-parau",
         "fileName": "krishnotkirtana-gana-nartana-parau.html",
-        "page": "156",
+        "page": 156,
         "embeds": [
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
@@ -784,7 +784,7 @@
         "name": "Vaiṣṇava Vijñāpti, 3",
         "aliasName": "ki-rūpe pāibo sevā mui durāchāra",
         "fileName": "ki-rupe-paibo-seva-mui-durachara.html",
-        "page": "161",
+        "page": 161,
         "meta": {},
         "telegraphPath": "Vaiṣṇava-Vijñāpti-3-02-22"
       },
@@ -794,7 +794,7 @@
         "name": "Bhajahū̐ Re Mana",
         "aliasName": "bhajahū̐ re mana        śrī-nanda-nandana",
         "fileName": "bhajahu-re-mana-shri-nanda-nandana.html",
-        "page": "162",
+        "page": 162,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -807,7 +807,7 @@
         "name": "Atma Nivedana, 3",
         "aliasName": "mānasa, deha, geha, yo kichhu mora",
         "fileName": "manasa-deho-geho-jo-kichu-mora.html",
-        "page": "164",
+        "page": 164,
         "embeds": [
           "Шрила Говинда Махарадж"
         ],
@@ -820,7 +820,7 @@
         "name": "E ghora saṁsare",
         "aliasName": "e ghora saṁsāre,        poḍiyā mānava",
         "fileName": "e-ghora-samsare-podiya-manava.html",
-        "page": "166",
+        "page": 166,
         "meta": {},
         "telegraphPath": "E-ghora-saṁsare-02-22-2"
       },
@@ -830,7 +830,7 @@
         "name": "Vaiṣṇava Ke?",
         "aliasName": "duṣṭa mana!    tumi kisera vaiṣṇava?",
         "fileName": "dushta-mana-tumi-kisera-vaishnava.html",
-        "page": "167",
+        "page": 167,
         "meta": {},
         "telegraphPath": "Vaiṣṇava-Ke-02-22-2"
       },
@@ -840,7 +840,7 @@
         "name": "Dainyātmikā",
         "aliasName": "(prabhu he!)",
         "fileName": "emona-durmati-samsara-bhitore.html",
-        "page": "174",
+        "page": 174,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Шридхар Махарадж",
@@ -861,7 +861,7 @@
         "name": "Goptṛtve Varaṇa",
         "aliasName": "ki jāni ki bale,        tomāra dhāmete,",
         "fileName": "ki-jani-ki-bale-tomara-dhamete.html",
-        "page": "176",
+        "page": 176,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Сударшан Прабху"
@@ -875,7 +875,7 @@
         "name": "Dainya",
         "aliasName": "bhuliyā tomāre,        saṁsāre āsiyā,",
         "fileName": "bhuliya-tomare-samsare-asiya.html",
-        "page": "178",
+        "page": 178,
         "meta": {},
         "telegraphPath": "Dainya-02-22-2"
       },
@@ -885,7 +885,7 @@
         "name": "Bhajana-Lālasā, 1",
         "aliasName": "hari he!",
         "fileName": "hari-he-prapanche-podiya-agati-hoiya.html",
-        "page": "180",
+        "page": 180,
         "meta": {},
         "telegraphPath": "Bhajana-Lālasā-1-02-22"
       },
@@ -895,7 +895,7 @@
         "name": "Bhajana-Lālasā, 10",
         "aliasName": "gurudeva!",
         "fileName": "gurudeva-bada-kripa-kari.html",
-        "page": "182",
+        "page": 182,
         "meta": {},
         "telegraphPath": "Bhajana-Lālasā-10-02-22"
       },
@@ -905,7 +905,7 @@
         "name": "Iṣṭa-deve Vijñapti",
         "aliasName": "hari hari! biphole janama goyāinu",
         "fileName": "hari-hari-biphole-janama-goyainu.html",
-        "page": "183",
+        "page": 183,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Каракас Дхам"
@@ -919,7 +919,7 @@
         "name": "Ātma-nivedana",
         "aliasName": "ātma-nivedana,        tuyā pade kori,",
         "fileName": "atma-nivedana-tuya-pade-kori.html",
-        "page": "185",
+        "page": 185,
         "meta": {},
         "telegraphPath": "Ātma-nivedana-02-22-3"
       },
@@ -929,7 +929,7 @@
         "name": "Dainya, 4",
         "aliasName": "āmāra jīvana,         sadā pāpe rata,",
         "fileName": "amara-jivana-sada-pape-rata.html",
-        "page": "187",
+        "page": 187,
         "embeds": [
           "Bhudev Prabhu"
         ],
@@ -942,7 +942,7 @@
         "name": "Goptṛtve Varaṇa, 4",
         "aliasName": "tumi sarvveśvareśvara, vrajendra-kumāra!",
         "fileName": "tumi-sarveshvareshvara-vrajendra-kumara.html",
-        "page": "189",
+        "page": 189,
         "meta": {},
         "telegraphPath": "Goptṛtve-Varaṇa-4-02-22"
       },
@@ -952,7 +952,7 @@
         "name": "Goptṛtve Varaṇa, 3",
         "aliasName": "sarvasva tomāra,        charaṇe sā̐piyā,",
         "fileName": "sarvasva-tomara-charane-sanpiya.html",
-        "page": "191",
+        "page": 191,
         "embeds": [
           "Шрила Шридхар Махарадж",
           "Сударшан Прабху"
@@ -966,7 +966,7 @@
         "name": "Ātma-samarpaṇe",
         "aliasName": "ātma-samarpaṇe gelā abhimāna",
         "fileName": "atma-samarpane-gela-abhimana.html",
-        "page": "192",
+        "page": 192,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -979,7 +979,7 @@
         "name": "Vijñapti",
         "aliasName": "kabe ha’be bala se dina āmāra",
         "fileName": "kobe-hobe-bolo-se-dina-amar.html",
-        "page": "195",
+        "page": 195,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -992,7 +992,7 @@
         "name": "Nivedana",
         "aliasName": "gopīnāth,    mama nivedana śuno",
         "fileName": "gopinath-mama-nivedana-shiuno.html",
-        "page": "198",
+        "page": 198,
         "embeds": [
           "Шрила Мадхусудан Махарадж",
           "Шрила Мадхусудан Махарадж"
@@ -1006,7 +1006,7 @@
         "name": "Nivedana",
         "aliasName": "gopīnāth,    ghuchāo saṁsāra-jvālā",
         "fileName": "gopinath-ghuchao-samsara-jvala.html",
-        "page": "200",
+        "page": 200,
         "meta": {},
         "telegraphPath": "Nivedana-02-22-11"
       },
@@ -1016,7 +1016,7 @@
         "name": "Nivedana",
         "aliasName": "gopīnāth,    āmāra upāya nāi",
         "fileName": "gopinath-amara-upaya-nai.html",
-        "page": "202",
+        "page": 202,
         "meta": {},
         "telegraphPath": "Nivedana-02-22-10"
       },
@@ -1026,7 +1026,7 @@
         "name": "Lālasā",
         "aliasName": "śrī-rūpa-mañjarī-pada,        sei mora sampada,",
         "fileName": "shri-rupa-manjari-pada-sei-mora-sampada.html",
-        "page": "204",
+        "page": 204,
         "embeds": [
           "Шрила Говинда Махарадж"
         ],
@@ -1039,7 +1039,7 @@
         "name": "Nirvedana lakṣaṇa upaladbhi, 4",
         "aliasName": "durlabha mānava-janma labhiyā saṁsāre",
         "fileName": "durlabha-manava-janma-labhiya-samsare.html",
-        "page": "208",
+        "page": 208,
         "embeds": [
           "Каракас Дхам"
         ],
@@ -1052,7 +1052,7 @@
         "name": "Anya-abhilāṣa chāḍi",
         "aliasName": "anya-abhilāsa chāḍi        jñāna karma parihari",
         "fileName": "anya-abhilasha-chadi-jniana-karma-parihari.html",
-        "page": "211",
+        "page": 211,
         "meta": {},
         "telegraphPath": "Anya-abhilāṣa-chāḍi-02-22-2"
       }
@@ -1067,7 +1067,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "pīta-baraṇa kali-pāvana gorā",
         "fileName": "pita-varana-kali-pavana-gora.html",
-        "page": "217",
+        "page": 217,
         "embeds": [
           "Bhakti Lalita Devi",
           "Bhakti Lalita Devi"
@@ -1081,7 +1081,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "tuhū̐ doyā-sāgara tārayite prāṇī",
         "fileName": "tuhu-daya-sagara-tarayite-prani.html",
-        "page": "219",
+        "page": 219,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1094,7 +1094,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "śrī-kṛṣṇa-kīrttane jodi mānasa tohāra",
         "fileName": "shri-krishna-kirtane-jodi-manasa-tohara.html",
-        "page": "220",
+        "page": 220,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1107,7 +1107,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "prabhu tava pada-juge mora nivedana",
         "fileName": "prabhu-tava-pada-juge-mora-nivedana.html",
-        "page": "222",
+        "page": 222,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1120,7 +1120,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "anādi karama-phole,        poḍi bhavārṇava-jole,",
         "fileName": "anadi-karama-phole.html",
-        "page": "224",
+        "page": 224,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1133,7 +1133,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "aparādha-phole mama        chitta bhela vajra sama",
         "fileName": "aparadha-phole-mama.html",
-        "page": "225",
+        "page": 225,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1146,7 +1146,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "gāite gāite nāma ki dośā hoilo",
         "fileName": "gaite-gaite-nama-ki-doshia-hoilo.html",
-        "page": "227",
+        "page": 227,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1159,7 +1159,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "gāite ‘govinda’-nām,        upajilo bhāva-grām,",
         "fileName": "gaite-govinda-nam-upajilo-bhava-gram.html",
-        "page": "229",
+        "page": 229,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1172,7 +1172,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "sakhi go kemote dhoribo parāṇ",
         "fileName": "sakhi-go-kemote-dhoribo-paran.html",
-        "page": "230",
+        "page": 230,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1185,7 +1185,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "bandhu-gon!    śunoho vachana mora",
         "fileName": "bondhu-gon-shiunoho-vachana-mora.html",
-        "page": "231",
+        "page": 231,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1198,7 +1198,7 @@
         "name": "Śrī Śikṣāṣṭakam",
         "aliasName": "yoga-pīṭhopari-sthita,        aṣṭa-sakhī-subeṣṭita,",
         "fileName": "yoga-pithopari-sthita-ashta-sakhi-subeshtita.html",
-        "page": "232",
+        "page": 232,
         "meta": {},
         "telegraphPath": "Śrī-Śikṣāṣṭakam-02-22-24"
       }
@@ -1213,7 +1213,7 @@
         "name": "Śrī Rādhāṣṭaka, 1",
         "aliasName": "rādhikā-charaṇa-padma,        sakala śreyera sadma,",
         "fileName": "radhika-charana-padma-sakala-shreyera.html",
-        "page": "236",
+        "page": 236,
         "embeds": [
           "Шрила Шридхар Махарадж"
         ],
@@ -1226,7 +1226,7 @@
         "name": "Śrī Rādhāṣṭaka, 2",
         "aliasName": "virajār pāre śuddha-paravyoma-dhām",
         "fileName": "virajar-pare-shiuddha-paravyoma-dham.html",
-        "page": "238",
+        "page": 238,
         "embeds": [
           "Шрила Шридхар Махарадж"
         ],
@@ -1239,7 +1239,7 @@
         "name": "Śrī Rādhāṣṭaka, 8",
         "aliasName": "rādhā-bhajane jadi mati nāhi bhelā",
         "fileName": "radha-bhajane-jodi-moti-nahi-bhela.html",
-        "page": "240",
+        "page": 240,
         "embeds": [
           "Каракас Дхам"
         ],
@@ -1252,7 +1252,7 @@
         "name": "Ānukūlyātmikā, 4",
         "aliasName": "rādhā-kuṇḍa-taṭa-kuñja-kuṭīra",
         "fileName": "radhakundatata-kunjakutira.html",
-        "page": "242",
+        "page": 242,
         "embeds": [
           "Шрила Шридхар Махарадж",
           "Шрила Мадхусудан Махарадж"
@@ -1266,7 +1266,7 @@
         "name": "Śrī Rādhikā-stava",
         "aliasName": "rādhe jaya jaya mādhava-dayite",
         "fileName": "radhe-jaya-jaya-madhava-dayite.html",
-        "page": "244",
+        "page": 244,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1284,7 +1284,7 @@
         "name": "He deva bhavantaṁ vande",
         "aliasName": "(he) deva bhavantaṁ vande",
         "fileName": "he-deva-bhavantam-vande.html",
-        "page": "246",
+        "page": 246,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1297,7 +1297,7 @@
         "name": "Jaya Rādhā-Mādhava",
         "aliasName": "(jaya) rādhā-mādhava        (jaya) kuñja-bihārī",
         "fileName": "radha-madhava-kunja-bihari.html",
-        "page": "247",
+        "page": 247,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Говинда Махарадж",
@@ -1317,7 +1317,7 @@
         "name": "Śrī Jugala-ārati",
         "aliasName": "jaya jaya rādhā-kṛṣṇa jugala-milan",
         "fileName": "jaya-jaya-radha-krishna-jugala-milan.html",
-        "page": "247",
+        "page": 247,
         "meta": {},
         "telegraphPath": "Śrī-Jugala-ārati-02-22-2"
       },
@@ -1327,7 +1327,7 @@
         "name": "Sakhī-vṛnde Vijñaptiḥ",
         "aliasName": "rādhā-kṛṣṇa prāṇa mora jugala-kiśora",
         "fileName": "radha-krishna-prana-mora-jugala-kishora.html",
-        "page": "249",
+        "page": 249,
         "meta": {},
         "telegraphPath": "Sakhī-vṛnde-Vijñaptiḥ-02-22"
       },
@@ -1337,7 +1337,7 @@
         "name": "Śrī Vraja-dhāma-mahimāmṛta",
         "aliasName": "jaya rādhe, jaya kṛṣṇa, jaya vṝndāvan",
         "fileName": "jaya-radhe-jaya-krishna-jaya-vrindavan.html",
-        "page": "250",
+        "page": 250,
         "embeds": [
           "Шрила Говинда Махарадж",
           "Шрила Госвами Махарадж",
@@ -1354,7 +1354,7 @@
         "name": "Rūpa-Kīrtan",
         "aliasName": "janama saphala tā’ra,        kṛṣṇa-daraśana jā’ra",
         "fileName": "janama-saphala-tara-krishna-darashiana-jara.html",
-        "page": "253",
+        "page": 253,
         "embeds": [
           "Шрила Говинда Махарадж"
         ],
@@ -1367,7 +1367,7 @@
         "name": "Guṇa-Kīrtan",
         "aliasName": "śuno, he rasika jana    kṛṣṇa guṇa agaṇon",
         "fileName": "shiuno-he-rasika-jon-krishna-guna-aganon.html",
-        "page": "256",
+        "page": 256,
         "meta": {},
         "telegraphPath": "Guṇa-Kīrtan-02-22-2"
       },
@@ -1377,7 +1377,7 @@
         "name": "Jaya Yaśodā-Nandana Kṛṣṇa",
         "aliasName": "jaya jaśodā-nandana kṛṣṇa gopāla govinda",
         "fileName": "jaya-yashoda-nandana-krishna-gopala-govinda.html",
-        "page": "258",
+        "page": 258,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Каракас Дхам"
@@ -1391,7 +1391,7 @@
         "name": "Mayura Mukuṭa",
         "aliasName": "mayura-mukuṭa pitāmbara-dhāri",
         "fileName": "mayura-mukuta-pitambara-dhari.html",
-        "page": "258",
+        "page": 258,
         "embeds": [
           "Sadhu Priya Prabhu"
         ],
@@ -1409,7 +1409,7 @@
         "name": "Āchārya-charaṇa-vandana",
         "aliasName": "jaya śrīla mahārāj charaṇāravinda",
         "fileName": "jaya-shrila-maharaja-charanaravinda.html",
-        "page": "261",
+        "page": 261,
         "meta": {},
         "telegraphPath": "Āchārya-charaṇa-vandana-02-22-2"
       },
@@ -1419,7 +1419,7 @@
         "name": "Śrī Guru-paramparā",
         "aliasName": "kṛṣṇa hoite chatur-mukha,    hon kṛṣṇa-sevonmukha",
         "fileName": "krishna-hoite-chatur-mukha.html",
-        "page": "263",
+        "page": 263,
         "embeds": [
           "Шрила Ачарья Махарадж",
           "Шрила Авадхут Махарадж"
@@ -1433,7 +1433,7 @@
         "name": "Śrī Dayita Dās Praṇati Pañchakam",
         "aliasName": "bhayabhañjana-jayaśaṁsana-karuṇāyata-nayanam",
         "fileName": "bhayabhanjana-jayashiamsana.html",
-        "page": "269",
+        "page": 269,
         "embeds": [
           "Шрила Говинда Махарадж"
         ],
@@ -1446,7 +1446,7 @@
         "name": "Āchārya vandana",
         "aliasName": "jayare jayare jaya        paramahaṁsa mahāśaya",
         "fileName": "jayare-jayare-jaya-paramahamsa-mahashiaya.html",
-        "page": "272",
+        "page": 272,
         "embeds": [
           "Шрила Шридхар Махарадж",
           "Шрила Говинда Махарадж"
@@ -1460,7 +1460,7 @@
         "name": "Śrī Daśāvatār-stotram",
         "aliasName": "pralaya-payodhi-jale dhṛtavān asi vedaṁ",
         "fileName": "pralaya-payodhi-jale-dhritavan-asi-vedam.html",
-        "page": "279",
+        "page": 279,
         "meta": {},
         "telegraphPath": "Śrī-Daśāvatār-stotram-02-22-3"
       },
@@ -1470,7 +1470,7 @@
         "name": "Śrī Nṛsiṁha Praṇām",
         "aliasName": "namas te narasiṁhāya",
         "fileName": "namas-te-narasimhaya.html",
-        "page": "284",
+        "page": 284,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1483,7 +1483,7 @@
         "name": "Śrī Śrī Dāmodarāṣṭakam",
         "aliasName": "namāmīśvaraṁ sachchidānanda rūpaṁ",
         "fileName": "namamishvaram-sachchidananda-rupam.html",
-        "page": "285",
+        "page": 285,
         "embeds": [
           "Bhakti Lalita Devi"
         ],
@@ -1496,7 +1496,7 @@
         "name": "Śrīman Mahāprabhur śata-nāma",
         "aliasName": "jagannātha-suta mahāprabhu viśvambhara",
         "fileName": "nadiya-nagare-nitai-neche-neche-gay-re.html",
-        "page": "289",
+        "page": 289,
         "meta": {},
         "telegraphPath": "Śrīman-Mahāprabhur-śata-nāma-02-22-2"
       },
@@ -1506,7 +1506,7 @@
         "name": "Śrī Kṛṣṇera Vīṁsottara-śata-nāma",
         "aliasName": "jaśomatī-stanya-pāyī śrī-nanda nandana",
         "fileName": "nagare-nagare-gora-gay.html",
-        "page": "295",
+        "page": 295,
         "embeds": [
           "Шрила Госвами Махарадж"
         ],
@@ -1519,7 +1519,7 @@
         "name": "Śrī Hari-vāsara-gīti",
         "aliasName": "śrī hari-vāsare hari-kīrttana-vidhāna",
         "fileName": "shri-hari-vasare-hari-kirtana-vidhana.html",
-        "page": "301",
+        "page": 301,
         "meta": {},
         "telegraphPath": "Śrī-Hari-vāsara-gīti-02-22-2"
       },
@@ -1529,7 +1529,7 @@
         "name": "Śuddha-bhakata",
         "aliasName": "śuddha-bhakata        charaṇa-reṇu,",
         "fileName": "shiuddha-bhakata-charana-renu.html",
-        "page": "305",
+        "page": 305,
         "meta": {},
         "telegraphPath": "Śuddha-bhakata-02-22-3"
       },
@@ -1539,7 +1539,7 @@
         "name": "Śrī Gaura-Purṇīmā",
         "aliasName": "chaudda-śata sāta-śake māsa je phālgun",
         "fileName": "chaudda-shiata-sata-shiake-masa-je-phalgun.html",
-        "page": "307",
+        "page": 307,
         "meta": {}
       },
       {
@@ -1548,7 +1548,7 @@
         "name": "Prabhu kohe",
         "aliasName": "hare kṛṣṇa hare kṛṣṇa kṛṣṇa kṛṣṇa hare hare",
         "fileName": "prabhu-kohe-kohilan-ei-mahamantra.html",
-        "page": "320",
+        "page": 320,
         "embeds": [
           "Nitai dasa",
           "Sadhu Priya Prabhu"
@@ -1567,7 +1567,7 @@
         "name": "Śrī Śrī Premadhāma-deva-stotram",
         "aliasName": "deva-siddha-mukta-yukta-bhakta-vṛnda-vanditaṁ",
         "fileName": "deva-siddha-mukta-yukta-bhakta-vrinda.html",
-        "page": "321",
+        "page": 321,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -1580,7 +1580,7 @@
         "name": "Śrī Śrī Premadhāma-deva-stotram",
         "aliasName": "sūtra-vṛtti-ṭippanīṣṭa-sūkṣma-vāchanādbhutaṁ",
         "fileName": "sutra-vritti-tippanishta-sukshma-vachanadbhutam.html",
-        "page": "327",
+        "page": 327,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -1593,7 +1593,7 @@
         "name": "Śrī Śrī Premadhāma-deva-stotram",
         "aliasName": "dhvasta-sārvvabhauma-vāda-navya-tarka-śāṅkaraṁ",
         "fileName": "dhvasta-sarvvabhauma-vada-navya-tarka-shiankaram.html",
-        "page": "332",
+        "page": 332,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -1606,7 +1606,7 @@
         "name": "Śrī Śrī Premadhāma-deva-stotram",
         "aliasName": "prema-mugdha-rudra-rāja-śaurya-vīrya-vikramaṁ",
         "fileName": "prema-mugdha-rudra-raja-shiaurya-virya-vikramam.html",
-        "page": "338",
+        "page": 338,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -1619,7 +1619,7 @@
         "name": "Śrī Śrī Premadhāma-deva-stotram",
         "aliasName": "prema-mugdha-nṛtya-kīrtanākulāriṭāntikaṁ",
         "fileName": "prema-mugdha-nritya-kirtanakularitantikam.html",
-        "page": "344",
+        "page": 344,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -1632,7 +1632,7 @@
         "name": "Śrī Śrī Premadhāma-deva-stotram",
         "aliasName": "śrī-sanātanānu-rūpa-jīva-sampradāyakaṁ",
         "fileName": "shri-sanatananu-rupa-jiva-sampradayakam.html",
-        "page": "351",
+        "page": 351,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -1645,7 +1645,7 @@
         "name": "Śrī Śrī Premadhāma-deva-stotram",
         "aliasName": "yāmunāmbu-kṛṣṇa-rādhikāli-keli-maṇḍalam",
         "fileName": "yamunambu-krishna-radhikali-keli-mandalam.html",
-        "page": "356",
+        "page": 356,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -1663,7 +1663,7 @@
         "name": "Śrīmad Bhaktivinod-viraha-Daśakam",
         "aliasName": "hā hā bhaktivinoda-ṭhakkura! guroḥ! dvāviṁśatis te samā",
         "fileName": "ha-ha-bhaktivinoda-thakkura-guroh.html",
-        "page": "363",
+        "page": 363,
         "meta": {},
         "telegraphPath": "Śrīmad-Bhaktivinod-viraha-Daśakam-02-22"
       },
@@ -1673,7 +1673,7 @@
         "name": "Śrī Śrīmad Gaura-Kiśor-namaskāra Daśakam",
         "aliasName": "guror guro me paramo gurus tvaṁ",
         "fileName": "guror-guro-me-paramo-gurus-tvam.html",
-        "page": "368",
+        "page": 368,
         "meta": {},
         "telegraphPath": "Śrī-Śrīmad-Gaura-Kiśor-namaskāra-Daśakam-02-22"
       },
@@ -1683,7 +1683,7 @@
         "name": "Śrī Śrī Dayita Dās Daśakam",
         "aliasName": "nīte yasmin niśānte nayana-jala-bharaiḥ snāta-gātrārbudānāṁ",
         "fileName": "nite-yasmin-nishiante-nayana-jala-bharaih.html",
-        "page": "371",
+        "page": 371,
         "embeds": [
           "Шрила Говинда Махарадж"
         ],
@@ -1696,7 +1696,7 @@
         "name": "Śrīmad Rūpa-pada-rajaḥ Prārthanā Daśakam",
         "aliasName": "śrīmach-chaitanyapādau chara-kamalayugau netra-bhṛṅgau madhu dyau",
         "fileName": "shrimach-chaitanyapadau-chara.html",
-        "page": "377",
+        "page": 377,
         "meta": {},
         "telegraphPath": "Śrīmad-Rūpa-pada-rajaḥ-Prārthanā-Daśakam-02-22-2"
       },
@@ -1706,7 +1706,7 @@
         "name": "Śrīman-Nityānanda-Dvādaśakam",
         "aliasName": "yo ’nanto ’nanta-vaktrair niravadhi hari-saṁkīrtanaṁ saṁvidhatte",
         "fileName": "yo-nanto-nanta-vaktrair-niravadhi.html",
-        "page": "382",
+        "page": 382,
         "embeds": [
           "Шрила Говинда Махарадж"
         ],
@@ -1719,7 +1719,7 @@
         "name": "Praṇām Mantra",
         "aliasName": "śrī-svarūpa-rāya-rūpa-jīva-bhāva-sambharaṁ",
         "fileName": "shri-svarupa-raya-rupa-jiva-bhava.html",
-        "page": "389",
+        "page": 389,
         "meta": {},
         "telegraphPath": "Praṇām-Mantra-02-22-3"
       }
@@ -1734,7 +1734,7 @@
         "name": "Después del parikramā",
         "aliasName": "nagara bhramiyā āmāra gaura elo ghore",
         "fileName": "nagara-bhramiya-amara-gaura-elo-ghore.html",
-        "page": "392",
+        "page": 392,
         "meta": {},
         "telegraphPath": "Después-del-parikramā-02-22"
       },
@@ -1744,7 +1744,7 @@
         "name": "Dainya O Prapatti",
         "aliasName": "hari he doyāla mora jaya rādhā-nātha",
         "fileName": "hari-he-dayala-mora-jaya-radha-natha.html",
-        "page": "392",
+        "page": 392,
         "embeds": [
           "Шрила Говинда Махарадж"
         ],
@@ -1757,7 +1757,7 @@
         "name": "Emona Gaurāṅga bine nāhi āra",
         "aliasName": "emona gaurāṅga bine nāhi āra",
         "fileName": "emona-gauranga-bine-nahi-ara.html",
-        "page": "393",
+        "page": 393,
         "meta": {},
         "telegraphPath": "Emona-Gaurāṅga-bine-nāhi-āra-02-22-2"
       },
@@ -1767,7 +1767,7 @@
         "name": "Kali-ghora timire",
         "aliasName": "kali-ghora-timire        garasala jagajana",
         "fileName": "kali-ghora-timire-garasala-jagajana.html",
-        "page": "395",
+        "page": 395,
         "meta": {},
         "telegraphPath": "Kali-ghora-timire-02-22-3"
       },
@@ -1777,7 +1777,7 @@
         "name": "Śrī Nāmāṣṭakam 7",
         "aliasName": "ohe harinām, tava mahimā apāra",
         "fileName": "ohe-harinam-tava-mahima-apara.html",
-        "page": "397",
+        "page": 397,
         "meta": {},
         "telegraphPath": "Śrī-Nāmāṣṭakam-7-02-22-2"
       },
@@ -1787,7 +1787,7 @@
         "name": "Śrī Govinda Kuṇḍa Mahātmya",
         "aliasName": "atha govardhane ramye surabhi gauḥ samudrajā",
         "fileName": "atha-govardhane-ramye-surabhi.html",
-        "page": "399",
+        "page": 399,
         "meta": {},
         "telegraphPath": "Śrī-Govinda-Kuṇḍa-Mahātmya-02-22"
       },
@@ -1797,7 +1797,7 @@
         "name": "Gaṅgadhar Sadāśiva Praṇām-Mantram",
         "aliasName": "devādidevam-ahibhūṣaṇam-indukāśaṁ",
         "fileName": "devadidevam-ahibhushanam-indukashiam.html",
-        "page": "400",
+        "page": 400,
         "meta": {},
         "telegraphPath": "Gaṅgadhar-Sadāśiva-Praṇām-Mantram-02-22"
       },
@@ -1807,7 +1807,7 @@
         "name": "Śrī Govinda Kuṇḍa Māhātmya",
         "aliasName": "samudra-sambhavā gābhī surabhī āpana",
         "fileName": "samudra-sambhava-gabhi-surabhi-apana.html",
-        "page": "400",
+        "page": 400,
         "meta": {},
         "telegraphPath": "Śrī-Govinda-Kuṇḍa-Māhātmya-02-22-2"
       },
@@ -1817,7 +1817,7 @@
         "name": "Śrī Govinda Kuṇḍa",
         "aliasName": "jaya jaya girirājer ārati viśāla",
         "fileName": "jaya-jaya-girirajer-arati-vishiala.html",
-        "page": "401",
+        "page": 401,
         "meta": {},
         "telegraphPath": "Śrī-Govinda-Kuṇḍa-Gupta-Govardhan-Ārati-02-22-2"
       },
@@ -1827,7 +1827,7 @@
         "name": "Śrī Śrī Girirāj-Govardhan Ārati",
         "aliasName": "jaya jaya girirājer ārotiko śobhā",
         "fileName": "jaya-jaya-girirajer-arotiko-shobha.html",
-        "page": "404",
+        "page": 404,
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
@@ -1840,7 +1840,7 @@
         "name": "Śreyaḥ Nirṇaya 2",
         "aliasName": "āra keno māyā-jāle poḍitecho, jīva-mīna",
         "fileName": "ara-keno-maya-jale.html",
-        "page": "407",
+        "page": 407,
         "meta": {},
         "telegraphPath": "Śreyaḥ-Nirṇaya-2-02-22"
       },
@@ -1850,7 +1850,7 @@
         "name": "Prasāda-sevāya 2-3",
         "aliasName": "bhāi-re!",
         "fileName": "eka-dina-shiantipure.html",
-        "page": "408",
+        "page": 408,
         "meta": {},
         "telegraphPath": "Prasāda-sevāya-2-3-02-22"
       },
@@ -1860,7 +1860,7 @@
         "name": "Vrajarāja-sutaṣṭakam",
         "aliasName": "nava-nīrada-nindita-kānti-dharaṁ",
         "fileName": "nava-nirada-nindita.html",
-        "page": "410",
+        "page": 410,
         "meta": {},
         "telegraphPath": "Vrajarāja-sutaṣṭakam-02-22"
       },
@@ -1870,7 +1870,7 @@
         "name": "Jīva-gati",
         "aliasName": "chit-kaṇa jīva, kṛṣṇa chinmaya bhāskara",
         "fileName": "chit-kana-jiva-krishna.html",
-        "page": "413",
+        "page": 413,
         "meta": {},
         "telegraphPath": "Jīva-gati-02-22"
       },
@@ -1880,7 +1880,7 @@
         "name": "Vimala hema jini",
         "aliasName": "vimala hema jini        tanu anupāma re",
         "fileName": "vimala-hemajin-tanu-anupama-re.html",
-        "page": "416",
+        "page": 416,
         "meta": {},
         "telegraphPath": "Vimala-hema-jini-02-22-2"
       },
@@ -1890,7 +1890,7 @@
         "name": "Rādhā Kṛṣṇa vandana",
         "aliasName": "(jaya) rādhe govinda! rādhe govinda!",
         "fileName": "radhe-govinda.html",
-        "page": "418",
+        "page": 418,
         "meta": {},
         "telegraphPath": "Rādhā-Kṛṣṇa-vandana-02-22"
       },
@@ -1900,7 +1900,7 @@
         "name": "Bhajana-Lālasā, 12",
         "aliasName": "gurudeva! kabe mora sei dina ha’be",
         "fileName": "gurudeva-kabe-mora-sei-dina.html",
-        "page": "419",
+        "page": 419,
         "meta": {},
         "telegraphPath": "Bhajana-Lālasā-12-02-22"
       }

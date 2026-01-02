@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj",
-    "page": "43"
+    "page": 43,
+    "first_line": "jaya ‘guru-mahārāja’ yati-rājeśvara",
+    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Guru Ārati Stuti"
@@ -222,8 +223,5 @@
   ],
   "word_by_word": [
     "**śrī guru** — el adorable maestro espiritual; **ārati** — ceremonia; **stuti** — oraciones."
-  ],
-  "attributes": {
-    "page": "43"
-  }
+  ]
 }

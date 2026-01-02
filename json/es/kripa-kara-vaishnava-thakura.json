@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "152"
+    "page": 152,
+    "first_line": "kṛpa koro’ vaiṣṇava ṭhākura",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Prārthanā Lalasāmayi"
@@ -88,8 +89,5 @@
   ],
   "word_by_word": [
     "**prārthana** — oraciones; **lalasāmayi** — de anhelo."
-  ],
-  "attributes": {
-    "page": "152"
-  }
+  ]
 }

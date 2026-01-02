@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "138"
+    "page": 138,
+    "first_line": "aruṇa vasane sonara sūraja",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Śrī Gaurasundarer Avirbhāva Vasare"
@@ -179,8 +180,5 @@
   ],
   "word_by_word": [
     "**śrī śrī** — su señoría; **gaurasundar** — de Śrī Gaurasundar; **avirbhāva** — aparición; **vasare** — el día."
-  ],
-  "attributes": {
-    "page": "138"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Ш́рӣла Лочан Да̄с Т̣ха̄кур",
-    "page": "115"
+    "page": 115,
+    "first_line": "парама корун̣а, паху̐ дӯи джана",
+    "author": "Ш́рӣла Лочан Да̄с Т̣ха̄кур"
   },
   "title": [
     "Шри Шри Гаура-Нитйанандер Дойа"
@@ -79,8 +80,5 @@
       "iframe_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-parama-koruna",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Fnavadwip-scsm-parama-koruna\"></iframe>"
     }
-  ],
-  "attributes": {
-    "page": "115"
-  }
+  ]
 }

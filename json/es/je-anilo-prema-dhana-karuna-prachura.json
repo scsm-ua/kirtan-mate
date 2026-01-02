@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "149"
+    "page": 149,
+    "first_line": "je ānilo prema-dhana koruṇā prachura",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Viraha-gīti"
@@ -79,8 +80,5 @@
   ],
   "word_by_word": [
     "**viraha** — de separación; **gīti** — canción."
-  ],
-  "attributes": {
-    "page": "149"
-  }
+  ]
 }

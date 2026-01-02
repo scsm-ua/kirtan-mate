@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "170"
+    "page": 170,
+    "first_line": "mānasa, deho, geho, jo kichū mora",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Mānasa Deho Geho"
@@ -91,8 +92,5 @@
         "Bhakti Vinod says, “O Krishna, please hear me! Oh Lord of Rādhā, You are my life and soul!”"
       ]
     }
-  ],
-  "attributes": {
-    "page": "170"
-  }
+  ]
 }

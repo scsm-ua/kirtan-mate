@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "117"
+    "page": 117,
+    "first_line": "dhana mora nityānanda",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Sva-niṣṭha"
@@ -59,8 +60,5 @@
   ],
   "word_by_word": [
     "**sva** — propio; **niṣṭha** — apego."
-  ],
-  "attributes": {
-    "page": "117"
-  }
+  ]
 }

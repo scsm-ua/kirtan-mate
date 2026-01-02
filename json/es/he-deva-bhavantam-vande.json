@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Rūpa Goswāmī",
-    "page": "246"
+    "page": 246,
+    "first_line": "(he) deva bhavantaṁ vande",
+    "author": "Śrīla Rūpa Goswāmī"
   },
   "title": [
     "He deva bhavantaṁ vande"
@@ -66,8 +67,5 @@
   ],
   "word_by_word": [
     "**he deva** — ¡oh señor; **bhavantaṁ** — a Ti; **vande** — me postro."
-  ],
-  "attributes": {
-    "page": "246"
-  }
+  ]
 }

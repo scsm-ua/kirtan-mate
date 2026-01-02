@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Narottam Dās Ṭhākur",
-    "page": "116"
+    "page": 116,
+    "first_line": "nitāi-pada-kamala",
+    "author": "Śrīla Narottam Dās Ṭhākur"
   },
   "title": [
     "Manaḥ-śikṣā"
@@ -74,8 +75,5 @@
   ],
   "word_by_word": [
     "**manaḥ** — a la mente; **śikṣā** — enseñanzas."
-  ],
-  "attributes": {
-    "page": "116"
-  }
+  ]
 }

@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Lochan Dās Ṭhākur",
-    "page": "131"
+    "page": 131,
+    "first_line": "avatāra sāra gorā avatāra",
+    "author": "Śrīla Lochan Dās Ṭhākur"
   },
   "title": [
     "Avatāra Sāra"
@@ -89,8 +90,5 @@
   ],
   "word_by_word": [
     "**avatāra** — encarnación; **sāra** — la mejor."
-  ],
-  "attributes": {
-    "page": "131"
-  }
+  ]
 }

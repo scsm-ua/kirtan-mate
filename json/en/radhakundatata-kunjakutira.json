@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "240"
+    "page": 240,
+    "first_line": "rādhākuṇḍataṭa-kuñjakuṭīra",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Rādhā-kuṇḍataṭa-kuñja-kuṭīra"
@@ -91,8 +92,5 @@
         "Hear me, O Kāna, says Śrī Bhakti Vinod: You are the only light of my life."
       ]
     }
-  ],
-  "attributes": {
-    "page": "240"
-  }
+  ]
 }

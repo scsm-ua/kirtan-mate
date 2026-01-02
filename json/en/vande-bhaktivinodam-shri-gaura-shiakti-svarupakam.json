@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj",
-    "page": "16"
+    "page": 16,
+    "first_line": "vande bhaktivinodaṁ śrī-gaura-śakti-svarūpakam",
+    "author": "Śrīla Bhakti Rakṣak Śrīdhar Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrīla Bhakti Vinod Ṭhākur"
@@ -28,8 +29,5 @@
         "of Śrī Rādhā’s devotion.”"
       ]
     }
-  ],
-  "attributes": {
-    "page": "16"
-  }
+  ]
 }

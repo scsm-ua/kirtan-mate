@@ -1,10 +1,11 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj",
     "page": [
-      "46",
-      "91"
-    ]
+      46,
+      91
+    ],
+    "first_line": "jaya guru mahārāj karuṇā-sāgara",
+    "author": "Śrīla Bhakti Sundar Govinda Dev-Goswāmī Mahārāj"
   },
   "title": [
     "Śrī Śrī Nitāi Chaitanya ārati"
@@ -214,11 +215,5 @@
   ],
   "word_by_word": [
     "**śrī śrī nitāi chaitanya** — Sus Señorías Nitāi y Chaitanya; **ārati** — ceremonia."
-  ],
-  "attributes": {
-    "page": [
-      "46",
-      "91"
-    ]
-  }
+  ]
 }

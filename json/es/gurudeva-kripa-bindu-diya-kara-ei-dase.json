@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Śrīla Bhakti Vinod Ṭhākur",
-    "page": "55"
+    "page": 55,
+    "first_line": "gurudeva! kṛpā-bindu diyā",
+    "author": "Śrīla Bhakti Vinod Ṭhākur"
   },
   "title": [
     "Gurudeva"
@@ -75,8 +76,5 @@
   ],
   "word_by_word": [
     "**gurudeva** — maestro espiritual."
-  ],
-  "attributes": {
-    "page": "55"
-  }
+  ]
 }

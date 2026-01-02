@@ -1,7 +1,8 @@
 {
   "meta": {
-    "author": "Ш́рӣла Бхактивинод Т̣ха̄кур",
-    "page": "122"
+    "page": 122,
+    "first_line": "га̄й гора̄ мадхур сваре",
+    "author": "Ш́рӣла Бхактивинод Т̣ха̄кур"
   },
   "title": [
     "Шри Нама"
@@ -90,8 +91,5 @@
       "iframe_url": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-gaj-goura",
       "embed_code": "<iframe width=\"100%\" height=\"20\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fbharatimaharaj%2Favadxut-maxaradzh-gaj-goura\"></iframe>"
     }
-  ],
-  "attributes": {
-    "page": "122"
-  }
+  ]
 }
