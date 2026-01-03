@@ -10,7 +10,7 @@ const { getSongsContents, getSongJSON } = require('./indexGenerator');
  * @param index
  * @returns {TCategory[]}
  */
-function makeIndexList(songbook_id) {
+function makeIndexList(songbook_id, {short_title_words_count = null} = options) {
 
     const categories = getSongsContents(songbook_id);
     const index = require(PATHS.BUILD.getIndexFile(songbook_id))
@@ -49,10 +49,21 @@ function makeIndexList(songbook_id) {
             name: letter.toUpperCase(),
             items: items.map(item => {
                 const { aliasName, name } = item;
+                let short_title = aliasName;
+
+                if (short_title_words_count) {
+                    const words = short_title.split(/[- ]/);
+                    if (words.length > short_title_words_count) {
+                        const new_title_length = words.slice(0, short_title_words_count).join(' ').length;
+                        short_title = short_title.substring(0, new_title_length) + '…';
+                    }
+                }
+
                 return {...item, ...{
                     // Swapping `aliasName` and `name`.
                     aliasName: name,
-                    title: aliasName
+                    title: aliasName,
+                    short_title
                 }};
             })
         }));
