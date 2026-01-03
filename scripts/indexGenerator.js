@@ -265,12 +265,11 @@ function getSongsContents(songbook_id) {
             if (duplicates.length > 1) {
                 item.duplicates = duplicates;
             }
-        });
-        list.forEach(item => {
-            item.page_number = getContentSongPageNumber(item);
-        });
 
-        list.forEach(item => {
+            item.no_translation = item.meta?.translation === 'no';
+
+            item.page_number = getContentSongPageNumber(item);
+
             var pageHref = `${ PATHS.RELATIVE.toPublicSongs(songbook_id) }/${ item.fileName }`;
             var page = getExistingTelegraphPage(pageHref);
             if (page) {

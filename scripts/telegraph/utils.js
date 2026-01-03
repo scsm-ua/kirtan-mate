@@ -53,7 +53,9 @@ function deepCleanObject(obj, whitelist) {
         return obj.map(item => deepCleanObject(item, whitelist));
     } else if (typeof obj === 'object' && obj !== null) {
         let newObj = {};
-        for (let key of Object.keys(obj)) {
+        // Sort keys to ensure consistent property order
+        const sortedKeys = Object.keys(obj).sort();
+        for (let key of sortedKeys) {
             if (whitelist.includes(key)) {
                 newObj[key] = deepCleanObject(obj[key], whitelist);
             }
@@ -112,8 +114,10 @@ function createOrUpdateTelegraphPage() {
 
                         if (!isEqual) {
 
-                            // fs.writeFileSync('new_page.json', JSON.stringify(page, null, 4));
-                            // fs.writeFileSync('exist_page.json', JSON.stringify(loaded_page, null, 4));
+                            // Debug: Save pages for comparison
+                            // const songSlug = path.parse(file.path).name;
+                            // fs.writeFileSync(`debug_new_${songSlug}.json`, JSON.stringify(page, null, 4));
+                            // fs.writeFileSync(`debug_loaded_${songSlug}.json`, JSON.stringify(loaded_page, null, 4));
                             
                             // Extend `getExistingTelegraphPageJson` with `page` properties.
                             Object.assign(existingTelegraphPageJson, page);

@@ -746,7 +746,9 @@ gulp.task('telegraph-songbook-a-z', (done) => {
         const tr = getTranslationsBy(songbook_id);
         const info = getSongbookInfo(songbook_id);
 
-        const items = makeIndexList(songbook_id);
+        const items = makeIndexList(songbook_id, {
+            short_title_words_count: info.render && info.render["tg.a-z.title.words"]
+        });
 
         const sections = items.map((item) => ({
             page: item.name,
@@ -764,11 +766,7 @@ gulp.task('telegraph-songbook-a-z', (done) => {
                     songbook_id: songbook_id,
                     songbooks_count: getSongbookIdList({public: true}).length,
                     subtitle: info.subtitle,
-                    title: info.title,
-                    render: {
-                        embed_exists: !info.render || info.render["tg.a-z.embeds"] !== false,
-                        short_page_number: !info.render || info.render["tg.a-z.pages.short"] === true
-                    }
+                    title: info.title
                 }).on('error', console.error)
             )
             .pipe(
