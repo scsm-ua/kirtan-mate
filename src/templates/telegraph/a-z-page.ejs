@@ -14,7 +14,7 @@
         <h4 id=""><%= item.name %></h4>
     <% } %>
     <% item.items.forEach((song) => { %>
-        <p><a href="<% if (song.telegraphPath) { %>/<%= song.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %><% } %>"><%= song.short_title %></a><% if (song.embeds) { %>&nbsp;&nbsp;♪<% } %><% if (song.page) { %>&nbsp;&nbsp;<strong><%= Array.isArray(song.page) ? song.page.join(', ') : song.page %></strong><% } %></p>       
+        <p><a href="<% if (song.telegraphPath) { %>/<%= song.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %><% } %>"><%= song.short_title %></a><% if (song.embeds) { %>&nbsp;&nbsp;♪<% } %><% if (song.page) { %>&nbsp;&nbsp;<% if (song.no_translation) { %>(<% } else { %><strong><% } %><%= Array.isArray(song.page) ? song.page.join(', ') : song.page %><% if (song.no_translation) { %>)<% } else { %></strong><% } %><% } %></p>       
     <% }) %>
     <p>
         <a href="#<%= subtitle.replace(/ /g, '-') %>">↑</a>
