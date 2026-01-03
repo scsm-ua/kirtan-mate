@@ -25,8 +25,7 @@
     "sort_order": 20,
     "render": {
       "tg.contents.first_line": false,
-      "tg.a-z.embeds": false,
-      "tg.a-z.pages.short": true
+      "tg.a-z.title.words": 3
     },
     "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/gaudiya-gitanjali-ru"
   },
@@ -66,6 +65,10 @@
     "slug": "ua",
     "sort_order": 60,
     "language": "uk",
+    "render": {
+      "tg.contents.first_line": false,
+      "tg.a-z.title.words": 4
+    },
     "path": "/home/runner/work/kirtan-mate/kirtan-mate/node_modules/gaudiya-gitanjali-ua"
   }
 }
