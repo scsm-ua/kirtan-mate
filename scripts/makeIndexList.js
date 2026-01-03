@@ -48,6 +48,9 @@ function makeIndexList(songbook_id, {short_title_words_count = null} = options) 
         .map(([letter, items]) => ({
             name: letter.toUpperCase(),
             items: items.map(item => {
+                
+                item.no_translation = item.meta?.translation === 'no';
+                
                 const { aliasName, name } = item;
                 let short_title = aliasName;
 
