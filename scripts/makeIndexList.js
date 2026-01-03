@@ -10,7 +10,7 @@ const { getSongsContents, getSongJSON } = require('./indexGenerator');
  * @param index
  * @returns {TCategory[]}
  */
-function makeIndexList(songbook_id, {short_title_words_count = null} = options) {
+function makeIndexList(songbook_id, {short_title_words_count = null} = {}) {
 
     const categories = getSongsContents(songbook_id);
     const index = require(PATHS.BUILD.getIndexFile(songbook_id))
