@@ -16,7 +16,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Vandana-01-03-2"
       },
       {
         "id": "acharya-varyam-gaura-dhama-nishtham",
@@ -24,7 +25,8 @@
         "name": "Шрīла Бгакті Ранджан Мадгусӯдана Маха̄ра̄дж",
         "aliasName": "а̄ча̄рʼя-варʼям ґаура-дга̄ма-ніштхам",
         "fileName": "acharya-varyam-gaura-dhama-nishtham.html",
-        "meta": {}
+        "meta": {},
+        "telegraphPath": "SHrīla-Bgaktі-Randzhan-Madgusӯdana-Maharadzh-01-02"
       },
       {
         "id": "vande-vaikuntha-vritti-stham",
@@ -35,7 +37,8 @@
         "page": "11/1",
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīla-Bgaktі-Bіmal-Avadgӯt-Maharadzh-01-03"
       },
       {
         "id": "goswaminam-sudhirakhyam",
@@ -46,7 +49,8 @@
         "page": "11/2",
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīla-Bgaktі-Sudgīr-Gosvamī-Maharadzh-01-02"
       },
       {
         "id": "pujya-sri-guru-varga-vandita",
@@ -57,7 +61,8 @@
         "page": 12,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīla-Bgaktі-Nіrmal-Acharʼya-Maharadzh-01-02"
       },
       {
         "id": "gurvabhishta-supurakam-guru-ganair",
@@ -68,7 +73,8 @@
         "page": 13,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīla-Bgaktі-Sundar-Govіnda-Dev-Gosvamī-Maharadzh-01-02"
       },
       {
         "id": "devam-divya-tanum-suchanda-vadanam-balarka-chelanchitam",
@@ -79,7 +85,8 @@
         "page": 14,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīla-Bgaktі-Rakshak-SHrīdgar-Dev-Gosvamī-Maharadzh-01-02"
       },
       {
         "id": "shri-siddhanta-sarasvatiti-vidito",
@@ -90,7 +97,8 @@
         "page": 15,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Bgagavan-SHrīla-Bgaktі-Sіddganta-Sarasvatī-Thakur-01-03"
       },
       {
         "id": "namo-gaurakishoraya-bhaktavadhuta-murtaye",
@@ -101,7 +109,8 @@
         "page": 16,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīla-Gaura-Kіshora-Das-Babadzhī-Maharadzh-01-02"
       },
       {
         "id": "vande-bhaktivinodam-shri-gaura-shiakti-svarupakam",
@@ -112,7 +121,8 @@
         "page": 17,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīla-Bgaktі-Vіnod-Thakur-01-03"
       },
       {
         "id": "gaura-vrajashritashieshair-vaishnavair-vandya-vigraham",
@@ -123,7 +133,8 @@
         "page": 18,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīla-Dzhagannath-Das-Babadzhī-Maharadzh-01-02"
       },
       {
         "id": "vancha-kalpatarubhyas-cha",
@@ -134,7 +145,8 @@
         "page": 19,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "vanchha-kalpatarubgʼyas-cha-01-03"
       },
       {
         "id": "jayatam-suratau-pangor",
@@ -145,7 +157,8 @@
         "page": 19,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Guru-Gauranga-Radga-Madana-Mohandzhīu-01-02"
       },
       {
         "id": "divyad-vrindaranya-kalpa-drumadhah",
@@ -156,7 +169,8 @@
         "page": 20,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Guru-Gauranga-Gandgarva-Govіndasundardzhīu-01-02"
       },
       {
         "id": "shriman-rasa-rasarambhi",
@@ -167,7 +181,8 @@
         "page": 21,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Guru-Gauranga-Radga-Gopīnathdzhīu-01-03"
       },
       {
         "id": "vrindayai-tulasi-devyai",
@@ -178,7 +193,8 @@
         "page": 21,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "vrindayaj-tulasī-devʼyaj-01-03"
       },
       {
         "id": "sakala-vaishnava-pade-mora-namaskara",
@@ -189,7 +205,8 @@
         "page": 21,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Molitvi-Vajshnavam-01-03"
       },
       {
         "id": "namah-om-vishnupadaya-krishna",
@@ -200,7 +217,8 @@
         "page": 286,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Pranam-Mantra-01-02"
       },
       {
         "id": "shrimach-chaitanya-sarasvata-mathavara-udgita-kirtir",
@@ -209,7 +227,8 @@
         "fileName": "shrimach-chaitanya-sarasvata-mathavara-udgita-kirtir.html",
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "The-Glorj-o-the-SHrī-CHajtanya-Sarasvat-Math-01-03"
       },
       {
         "id": "jaya-sa-parikara",
@@ -220,7 +239,8 @@
         "page": 22,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Dzhaya-Dgvanі-01-02"
       },
       {
         "id": "shri-krishna-chaitanya-prabhu-nityananda",
@@ -272,7 +292,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Dashya-vіdga-Namaparadga-01-02"
       },
       {
         "id": "nija-pati-bhuja-danda-chchhatra-bhavam",
@@ -285,7 +306,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Govardgana-vasa-prarthana-dashyakam-01-02"
       }
     ]
   },
@@ -314,7 +336,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Gіrіradzh--Govardgan-Aratі-01-02"
       },
       {
         "id": "jaya-guru-maharaja-karuna-sagara",
@@ -328,7 +351,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Nіtaі-CHajtanya-Aratі-01-02"
       },
       {
         "id": "jaya-jaya-gurudever-arati-ujjvala",
@@ -359,7 +383,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Guru-Aratі-stutі-01-02"
       },
       {
         "id": "kali-kukkura-kadana-jadi-chao-he",
@@ -395,7 +420,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Nam-kīrtan-01-02"
       },
       {
         "id": "jaya-shiachinandana-sura-muni-vandana",
@@ -492,7 +518,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Bgadzhan-gītі-01-02"
       },
       {
         "id": "vibhavari-shiesha-aloka-praveshia",
@@ -508,7 +535,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Vіbgavarī-SHyesha-01-03"
       },
       {
         "id": "thakura-vaishnava-gana-kori-ei-nivedana",
@@ -567,7 +595,8 @@
         "page": 62,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Mahaprasada-01-02"
       },
       {
         "id": "shorira-avidya-jal-jodendriya-tahe-kal",
@@ -577,7 +606,8 @@
         "fileName": "shorira-avidya-jal-jodendriya-tahe-kal.html",
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Prasada-sevaya-Gītі-01-03"
       }
     ]
   },
@@ -626,7 +656,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Dajnya-Prarthana-Gītі-01-02"
       },
       {
         "id": "namo-namah-tulasi-maharani",
@@ -667,7 +698,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Savarana-SHrī-Gaura-pada-padme-Prarthana-01-03"
       },
       {
         "id": "vaishnava-thakura-dayara-sagara",
@@ -683,7 +715,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Vajshnava-mahіma-gītі-01-03"
       },
       {
         "id": "sujanarvuda-radhita-pada-yugam",
@@ -698,7 +731,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Prabgupada-padma-Stavakah-01-03"
       }
     ]
   },
@@ -717,7 +751,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Premadgama-deva-stotram-01-02"
       },
       {
         "id": "sutra-vritti-tippanishta-sukshma-vachanadbhutam",
@@ -731,7 +766,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Premadgama-deva-stotram-01-03-2"
       },
       {
         "id": "dhvasta-sarvvabhauma-vada-navya-tarka-shiankaram",
@@ -745,7 +781,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Premadgama-deva-stotram-01-02-2"
       },
       {
         "id": "prema-mugdha-rudra-raja-shiaurya-virya-vikramam",
@@ -759,7 +796,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Premadgama-deva-stotram-01-02-4"
       },
       {
         "id": "prema-mugdha-nritya-kirtanakularitantikam",
@@ -773,7 +811,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Premadgama-deva-stotram-01-02-3"
       },
       {
         "id": "shri-sanatananu-rupa-jiva-sampradayakam",
@@ -787,7 +826,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Premadgama-deva-stotram-01-03"
       },
       {
         "id": "yamunambu-krishna-radhikali-keli-mandalam",
@@ -801,7 +841,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Premadgama-deva-stotram-01-03-3"
       }
     ]
   },
@@ -832,7 +873,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Manah-SHіksha-01-02"
       },
       {
         "id": "dhana-mora-nityananda-pati-mora",
@@ -846,7 +888,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Sva-Nіshtha-01-02"
       },
       {
         "id": "nitai-gunamani-amara-nitai-gunamani",
@@ -861,7 +904,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Nіtaі-gunamanі-amara-01-02"
       },
       {
         "id": "akrodha-paramananda",
@@ -891,7 +935,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Gaura-Nіtyanander-Daya-01-02"
       },
       {
         "id": "dayal-nitai-chaitanya-bole-nach-re",
@@ -905,7 +950,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Dayal-Nіtaі-CHajtanya-01-02"
       }
     ]
   },
@@ -924,7 +970,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Savarana-SHrī-Gaura-mahіma-01-02"
       },
       {
         "id": "gaura-pahu-na-bhajiya-mainu",
@@ -935,7 +982,8 @@
         "page": 120,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Gaura-Pahu-01-02"
       },
       {
         "id": "avatara-sara-gora-avatara",
@@ -981,7 +1029,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Sіddgі-Lalasa-01-02"
       },
       {
         "id": "kali-ghora-timire-garasala-jagajana",
@@ -992,7 +1041,8 @@
         "page": 124,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Kalі-gora-tіmіre-01-02"
       },
       {
         "id": "jadi-gaura-na-hoto-tobe-ki-hoito",
@@ -1006,7 +1056,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Dzhadі-Gaura-na-hoto-01-02"
       },
       {
         "id": "emona-gauranga-bine-nahi-ara",
@@ -1017,7 +1068,8 @@
         "page": 126,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Emona-Gauranga-bіne-nahі-ara-01-02"
       },
       {
         "id": "ke-jabi-ke-jabi-bhai-bhava-sindhu-para",
@@ -1028,7 +1080,8 @@
         "page": 127,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Ke-dzhabі-ke-dzhabі-01-02"
       },
       {
         "id": "vimala-hemajin-tanu-anupama-re",
@@ -1038,7 +1091,8 @@
         "fileName": "vimala-hemajin-tanu-anupama-re.html",
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Vіmala-hemadzhіnі-01-03"
       },
       {
         "id": "gauranga-bolite-hobe-pulaka-shorira",
@@ -1052,7 +1106,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Gauranga-bolіte-habe-01-02"
       },
       {
         "id": "aruna-basane-sonara-suraja",
@@ -1063,7 +1118,8 @@
         "page": 130,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Gaurasundarer-Avіrbgava-Vasare-01-02"
       },
       {
         "id": "yadi-te-hari-pada-saroja-sudha",
@@ -1076,7 +1132,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Godrumachandra-bgadzhanopadeshya-01-03"
       }
     ]
   },
@@ -1092,7 +1149,8 @@
         "page": 134,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Thakura-vajshnava-pada-01-03"
       },
       {
         "id": "je-anilo-prema-dhana-karuna-prachura",
@@ -1131,7 +1189,8 @@
         "page": 137,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Prarthana-Lalasamai-01-02"
       },
       {
         "id": "narada-muni-bajaya-vina",
@@ -1145,7 +1204,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Namashtakam-8-01-02"
       },
       {
         "id": "krishnotkirtana-gana-nartana-parau",
@@ -1160,7 +1220,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-SHad-Gosvamj-ashtakam-01-02"
       },
       {
         "id": "ohe-harinam-tava-mahima-apara",
@@ -1171,7 +1232,8 @@
         "page": 144,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Namashtakam-7-01-02"
       },
       {
         "id": "ki-rupe-paibo-seva-mui-durachara",
@@ -1182,7 +1244,8 @@
         "page": 145,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Kі-rӯpe-paіbo-seva-01-02"
       },
       {
         "id": "bhajahu-re-mana-shri-nanda-nandana",
@@ -1209,7 +1272,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Manasa-Deho-Geho-01-02"
       },
       {
         "id": "e-ghora-samsare-podiya-manava",
@@ -1220,7 +1284,8 @@
         "page": 148,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "E-gora-samsare-01-02"
       },
       {
         "id": "dushta-mana-tumi-kisera-vaishnava",
@@ -1231,7 +1296,8 @@
         "page": 149,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Vajshnava-Ke-01-02"
       },
       {
         "id": "emona-durmati-samsara-bhitore",
@@ -1267,7 +1333,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Goptritve-Varana-01-02"
       },
       {
         "id": "bhuliya-tomare-samsare-asiya",
@@ -1278,7 +1345,8 @@
         "page": 156,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Dajnya-01-02"
       },
       {
         "id": "hari-he-prapanche-podiya-agati-hoiya",
@@ -1289,7 +1357,8 @@
         "page": 158,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Bgadzhan-Lalasa-01-02"
       },
       {
         "id": "hari-hari-biphole-janama-goyainu",
@@ -1304,7 +1373,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Іshta-deve-Vіgʼyaptі-01-02"
       },
       {
         "id": "atma-nivedana-tuya-pade-kori",
@@ -1315,7 +1385,8 @@
         "page": 160,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Atma-nіvedana-01-02"
       },
       {
         "id": "amara-jivana-sada-pape-rata",
@@ -1339,7 +1410,8 @@
         "page": 162,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Tumі-sarveshvareshvara-01-03"
       },
       {
         "id": "sarvasva-tomara-charane-sanpiya",
@@ -1354,7 +1426,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Sarvasva-tomara-01-03"
       },
       {
         "id": "tatala-saikate-vari-bindu-sama",
@@ -1365,7 +1438,8 @@
         "page": 164,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Tatala-Sajkate-01-03"
       },
       {
         "id": "hari-he-dayala-mora-jaya-radha-natha",
@@ -1379,7 +1453,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Dajnya-O-Prapattі-01-02"
       },
       {
         "id": "atma-samarpane-gela-abhimana",
@@ -1393,7 +1468,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Atma-samarpane-01-02"
       },
       {
         "id": "kobe-hobe-bolo-se-dina-amar",
@@ -1407,7 +1483,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Kobe-hobe-bolo-01-02"
       },
       {
         "id": "gopinath-mama-nivedana-shiuno",
@@ -1422,7 +1499,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Nіvedana-01-02-3"
       },
       {
         "id": "gopinath-ghuchao-samsara-jvala",
@@ -1433,7 +1511,8 @@
         "page": 170,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Nіvedana-01-02-2"
       },
       {
         "id": "gopinath-amara-upaya-nai",
@@ -1444,7 +1523,8 @@
         "page": 171,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Nіvedana-01-02"
       },
       {
         "id": "shri-rupa-manjari-pada-sei-mora-sampada",
@@ -1458,7 +1538,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Rӯpa-Mandzharī-pada-01-03"
       },
       {
         "id": "durlabha-manava-janma-labhiya-samsare",
@@ -1472,7 +1553,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Durlabga-manava-dzhanma-01-02"
       },
       {
         "id": "anya-abhilasha-chadi-jniana-karma-parihari",
@@ -1483,7 +1565,8 @@
         "page": 177,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Anya-abgіlasha-chhadі-01-02"
       }
     ]
   },
@@ -1503,7 +1586,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-02-6"
       },
       {
         "id": "tuhu-daya-sagara-tarayite-prani",
@@ -1517,7 +1601,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-03-3"
       },
       {
         "id": "shri-krishna-kirtane-jodi-manasa-tohara",
@@ -1531,7 +1616,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-03-2"
       },
       {
         "id": "prabhu-tava-pada-juge-mora-nivedana",
@@ -1545,7 +1631,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-02-7"
       },
       {
         "id": "anadi-karama-phole",
@@ -1559,7 +1646,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-02"
       },
       {
         "id": "aparadha-phole-mama",
@@ -1573,7 +1661,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-02-2"
       },
       {
         "id": "gaite-gaite-nama-ki-doshia-hoilo",
@@ -1587,7 +1676,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-02-4"
       },
       {
         "id": "gaite-govinda-nam-upajilo-bhava-gram",
@@ -1601,7 +1691,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-02-5"
       },
       {
         "id": "sakhi-go-kemote-dhoribo-paran",
@@ -1615,7 +1706,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-03"
       },
       {
         "id": "bondhu-gon-shiunoho-vachana-mora",
@@ -1629,7 +1721,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-02-3"
       },
       {
         "id": "yoga-pithopari-sthita-ashta-sakhi-subeshtita",
@@ -1640,7 +1733,8 @@
         "page": 192,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHіkshashtakam-01-03-4"
       }
     ]
   },
@@ -1659,7 +1753,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Radgashtaka-01-03"
       },
       {
         "id": "virajar-pare-shiuddha-paravyoma-dham",
@@ -1673,7 +1768,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Radgashtaka-01-03-2"
       },
       {
         "id": "radha-bhajane-jodi-moti-nahi-bhela",
@@ -1687,7 +1783,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Radgashtaka-01-02"
       },
       {
         "id": "radhakundatata-kunjakutira",
@@ -1702,7 +1799,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Radga-kundatata-kundzha-kutīra-01-02"
       },
       {
         "id": "radhe-jaya-jaya-madhava-dayite",
@@ -1716,7 +1814,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Radgіka-stava-01-02"
       }
     ]
   },
@@ -1735,7 +1834,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "He-deva-bgavantam-vande-01-02"
       },
       {
         "id": "radha-madhava-kunja-bihari",
@@ -1756,7 +1856,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Dzhaya-Radga-Madgava-01-02"
       },
       {
         "id": "mayura-mukuta-pitambara-dhari",
@@ -1770,7 +1871,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Mayura-mukuta-01-02"
       },
       {
         "id": "jaya-jaya-radha-krishna-jugala-milan",
@@ -1781,7 +1883,8 @@
         "page": 204,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Dzhugala-aratі-01-02"
       },
       {
         "id": "radha-krishna-prana-mora-jugala-kishora",
@@ -1792,7 +1895,8 @@
         "page": 205,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Sakhі-vrinde-Vіgʼyaptіh-01-02"
       },
       {
         "id": "jaya-radhe-jaya-krishna-jaya-vrindavan",
@@ -1810,7 +1914,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Vradzha-dgama-mahіmamrita-01-02"
       },
       {
         "id": "janama-saphala-tara-krishna-darashiana-jara",
@@ -1824,7 +1929,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Rӯpa-Kīrtan-01-02"
       },
       {
         "id": "shiuno-he-rasika-jon-krishna-guna-aganon",
@@ -1835,7 +1941,8 @@
         "page": 209,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Guna-Kīrtan-01-03"
       },
       {
         "id": "jaya-yashoda-nandana-krishna-gopala-govinda",
@@ -1850,7 +1957,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Dzhaya-YAshoda-Nandana-Krishna-01-02"
       },
       {
         "id": "shrita-kamala-kuchha-mandala-dhrita",
@@ -1864,7 +1972,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrіta-Kamala-01-03"
       }
     ]
   },
@@ -1880,7 +1989,8 @@
         "page": 214,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Acharʼya-charana-vandana-01-02"
       },
       {
         "id": "krishna-hoite-chatur-mukha",
@@ -1895,7 +2005,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Guru-parampara-01-02"
       },
       {
         "id": "bhayabhanjana-jayashiamsana",
@@ -1909,7 +2020,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Daita-Das-Pranatі-Panchakam-01-02"
       },
       {
         "id": "jayare-jayare-jaya-paramahamsa-mahashiaya",
@@ -1924,7 +2036,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Acharʼya-vandana-01-02"
       },
       {
         "id": "pralaya-payodhi-jale-dhritavan-asi-vedam",
@@ -1935,7 +2048,8 @@
         "page": 225,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Dashyavatar-stotram-01-02"
       },
       {
         "id": "namas-te-narasimhaya",
@@ -1949,7 +2063,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Nrisіmga-Pranam-01-02"
       },
       {
         "id": "namamishvaram-sachchidananda-rupam",
@@ -1963,7 +2078,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Damodarashtakam-01-02"
       },
       {
         "id": "nadiya-nagare-nitai-neche-neche-gay-re",
@@ -1974,7 +2090,8 @@
         "page": 230,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīman-Mahaprabgur-shyata-nama-01-02"
       },
       {
         "id": "nagare-nagare-gora-gay",
@@ -1988,7 +2105,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Krishnera-Vіmsottara-shyata-nama-01-02"
       },
       {
         "id": "shri-hari-vasare-hari-kirtana-vidhana",
@@ -2009,7 +2127,8 @@
         "page": 240,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHyuddga-bgakata-01-03"
       },
       {
         "id": "chaudda-shiata-sata-shiake-masa-je-phalgun",
@@ -2020,7 +2139,8 @@
         "page": 242,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Gaura-Purnīma-01-02"
       },
       {
         "id": "prabhu-kohe-kohilan-ei-mahamantra",
@@ -2035,7 +2155,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Prabgu-kohe-01-02"
       },
       {
         "id": "nagara-bhramiya-amara-gaura-elo-ghore",
@@ -2046,7 +2167,8 @@
         "page": 249,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Ater-parіkrama-01-02"
       },
       {
         "id": "radha-krishna-bol-bol-bolo-re-sobai",
@@ -2057,7 +2179,8 @@
         "page": 250,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Nagara-Kīrtana-4-01-02"
       },
       {
         "id": "hari-bole-modera-gaura-elo",
@@ -2068,7 +2191,8 @@
         "page": 251,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Nagara-Kīrtana-8-01-02"
       }
     ]
   },
@@ -2084,7 +2208,8 @@
         "page": 254,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīmad-Bgaktі-Vіnod-vіraha-Dashyakam-01-02"
       },
       {
         "id": "guror-guro-me-paramo-gurus-tvam",
@@ -2095,7 +2220,8 @@
         "page": 258,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrīmad-Gaura-Kіshora--namaskara-Dashyakam-01-02"
       },
       {
         "id": "nite-yasmin-nishiante-nayana-jala-bharaih",
@@ -2109,7 +2235,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-SHrī-Daita-Das-Dashyakam-01-02"
       },
       {
         "id": "shrimach-chaitanyapadau-chara",
@@ -2120,7 +2247,8 @@
         "page": 264,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīmad-Rӯpa-pada-radzhah-Prarthana-Dashyakam-01-03"
       },
       {
         "id": "yo-nanto-nanta-vaktrair-niravadhi",
@@ -2134,7 +2262,8 @@
         ],
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrīman-Nіtyananda-Dvadashyakam-01-03"
       },
       {
         "id": "guru-rupa-virajita-nanda-sutam",
@@ -2145,7 +2274,8 @@
         "page": 283,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Gauraharі-Kusuma-Stavashtakam-01-02"
       }
     ]
   },
@@ -2161,7 +2291,8 @@
         "page": 274,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Pranam-Mantra-01-03"
       },
       {
         "id": "naumi-shri-gurupadabjam",
@@ -2172,7 +2303,8 @@
         "page": 275,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Pranatі-Dashyakam-01-02"
       },
       {
         "id": "samudra-sambhava-gabhi-surabhi-apana",
@@ -2183,7 +2315,8 @@
         "page": 277,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Govіnda-Kunda-Mahatmʼya-01-03"
       },
       {
         "id": "devadidevam-ahibhushanam-indukashiam",
@@ -2194,7 +2327,8 @@
         "page": 278,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Gangadgara-Sadashіva-Pranam-Mantram-01-02"
       },
       {
         "id": "bhagyadhishia-tvadiyo-vimala-sukhamayah",
@@ -2205,7 +2339,8 @@
         "page": 279,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "SHrī-Guru-Prashyastіh-01-02"
       },
       {
         "id": "nava-nalina-ganjitam-kusuma-dala",
@@ -2215,7 +2350,8 @@
         "page": 282,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Pranatі-Panchakam-01-02"
       },
       {
         "id": "maha-bhaya-shiankula-e-bhava-tarangini",
@@ -2226,7 +2362,8 @@
         "page": 285,
         "meta": {
           "translation": "no"
-        }
+        },
+        "telegraphPath": "Maya-Duratyaya-01-02"
       }
     ]
   }
