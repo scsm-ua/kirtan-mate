@@ -4590,6 +4590,24 @@
         <priority>0.8</priority>
     </url>
     
+    <url>
+        <loc>https://kirtan.site/lv/ke-jabi-ke-jabi-bhai-bhava-sindhu-para.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/lv/thakura-vaishnava-pada-avanira.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/lv/je-anilo-prema-dhana-karuna-prachura.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
 
     <url>
         <loc>https://kirtan.site/ua/</loc>

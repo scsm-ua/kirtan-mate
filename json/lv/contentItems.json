@@ -730,6 +730,42 @@
         ],
         "meta": {},
         "telegraphPath": "Śrī-Nāma-06-30"
+      },
+      {
+        "id": "ke-jabi-ke-jabi-bhai-bhava-sindhu-para",
+        "title": "Ke jabi ke jabi",
+        "name": "Ke jabi ke jabi",
+        "aliasName": "ke jabi ke jabi bhāi bhava-sindhu pāra",
+        "fileName": "ke-jabi-ke-jabi-bhai-bhava-sindhu-para.html",
+        "page": 127,
+        "meta": {}
+      }
+    ]
+  },
+  {
+    "name": "Citas dziesmas",
+    "items": [
+      {
+        "id": "thakura-vaishnava-pada-avanira",
+        "title": "Ṭhākura-vaiṣṇava-pada",
+        "name": "Ṭhākura-vaiṣṇava-pada",
+        "aliasName": "ṭhākura-vaiṣṇava-pada,    avanīra susampada,",
+        "fileName": "thakura-vaishnava-pada-avanira.html",
+        "page": 134,
+        "meta": {}
+      },
+      {
+        "id": "je-anilo-prema-dhana-karuna-prachura",
+        "title": "Viraha-gīti",
+        "name": "Viraha-gīti",
+        "aliasName": "je ānilo prema-dhana karuṇā prachura",
+        "fileName": "je-anilo-prema-dhana-karuna-prachura.html",
+        "page": 135,
+        "embeds": [
+          "Шрила Госвами Махарадж",
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {}
       }
     ]
   }
