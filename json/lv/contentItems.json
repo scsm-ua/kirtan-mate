@@ -766,6 +766,53 @@
           "Шрила Мадхусудан Махарадж"
         ],
         "meta": {}
+      },
+      {
+        "id": "ei-vara-karuna-kara-vaishnava-gosani",
+        "title": "Vaiṣṇava Vijñāpti",
+        "name": "Vaiṣṇava Vijñāpti",
+        "aliasName": "ei-vāra karuṇā kara vaiṣṇava gosāñi",
+        "fileName": "ei-vara-karuna-kara-vaishnava-gosani.html",
+        "page": 136,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {}
+      },
+      {
+        "id": "kripa-kara-vaishnava-thakura",
+        "title": "Prārthanā Lalasāmayi",
+        "name": "Prārthanā Lalasāmayi",
+        "aliasName": "kṛpa kara’ vaiṣṇava ṭhākura",
+        "fileName": "kripa-kara-vaishnava-thakura.html",
+        "page": 137,
+        "meta": {}
+      },
+      {
+        "id": "narada-muni-bajaya-vina",
+        "title": "Śrī Nāmāṣṭakam 8",
+        "name": "Śrī Nāmāṣṭakam 8",
+        "aliasName": "nārada muni,    bājāya vīṇā,",
+        "fileName": "narada-muni-bajaya-vina.html",
+        "page": 140,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {}
+      },
+      {
+        "id": "krishnotkirtana-gana-nartana-parau",
+        "title": "Śrī Śrī Ṣaḍ-Gosvāmy-aṣṭakam",
+        "name": "Śrī Śrī Ṣaḍ-Gosvāmy-aṣṭakam",
+        "aliasName": "kṛṣṇotkīrtana-gāna-nartana-parau",
+        "fileName": "krishnotkirtana-gana-nartana-parau.html",
+        "page": 141,
+        "embeds": [
+          "Шрила Госвами Махарадж",
+          "Шрила Мадхусудан Махарадж"
+        ],
+        "meta": {}
       }
     ]
   }
