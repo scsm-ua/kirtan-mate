@@ -738,7 +738,8 @@
         "aliasName": "ke jabi ke jabi bhāi bhava-sindhu pāra",
         "fileName": "ke-jabi-ke-jabi-bhai-bhava-sindhu-para.html",
         "page": 127,
-        "meta": {}
+        "meta": {},
+        "telegraphPath": "Ke-jabi-ke-jabi-02-14"
       }
     ]
   },
@@ -752,7 +753,8 @@
         "aliasName": "ṭhākura-vaiṣṇava-pada,    avanīra susampada,",
         "fileName": "thakura-vaishnava-pada-avanira.html",
         "page": 134,
-        "meta": {}
+        "meta": {},
+        "telegraphPath": "Ṭhākura-vaiṣṇava-pada-02-14"
       },
       {
         "id": "je-anilo-prema-dhana-karuna-prachura",
@@ -765,7 +767,8 @@
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {}
+        "meta": {},
+        "telegraphPath": "Viraha-gīti-02-14"
       },
       {
         "id": "ei-vara-karuna-kara-vaishnava-gosani",
@@ -778,7 +781,8 @@
           "Шрила Говинда Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {}
+        "meta": {},
+        "telegraphPath": "Vaiṣṇava-Vijñāpti-02-14"
       },
       {
         "id": "kripa-kara-vaishnava-thakura",
@@ -787,7 +791,8 @@
         "aliasName": "kṛpa kara’ vaiṣṇava ṭhākura",
         "fileName": "kripa-kara-vaishnava-thakura.html",
         "page": 137,
-        "meta": {}
+        "meta": {},
+        "telegraphPath": "Prārthanā-Lalasāmayi-02-14"
       },
       {
         "id": "narada-muni-bajaya-vina",
@@ -799,7 +804,8 @@
         "embeds": [
           "Bhakti Lalita Devi"
         ],
-        "meta": {}
+        "meta": {},
+        "telegraphPath": "Śrī-Nāmāṣṭakam-8-02-14"
       },
       {
         "id": "krishnotkirtana-gana-nartana-parau",
@@ -812,7 +818,8 @@
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {}
+        "meta": {},
+        "telegraphPath": "Śrī-Śrī-Ṣaḍ-Gosvāmy-aṣṭakam-02-14"
       }
     ]
   }
