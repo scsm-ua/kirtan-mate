@@ -599,15 +599,14 @@
         "telegraphPath": "Mahaprasada-01-02"
       },
       {
-        "id": "shorira-avidya-jal-jodendriya-tahe-kal",
+        "id": "bhai-re-shorira-avidya-jal-jodendriya-tahe-kal",
         "title": "Шрī Праса̄да-сева̄я Ґīті",
         "name": "Шрī Праса̄да-сева̄я Ґīті",
         "aliasName": "бга̄і-ре!",
-        "fileName": "shorira-avidya-jal-jodendriya-tahe-kal.html",
+        "fileName": "bhai-re-shorira-avidya-jal-jodendriya-tahe-kal.html",
         "meta": {
           "translation": "no"
-        },
-        "telegraphPath": "SHrī-Prasada-sevaya-Gītі-01-03"
+        }
       }
     ]
   },
@@ -2364,6 +2363,16 @@
           "translation": "no"
         },
         "telegraphPath": "Maya-Duratyaya-01-02"
+      },
+      {
+        "id": "ami-guru-dasa-nahi-anya",
+        "title": "Сварӯподбодгана",
+        "name": "Сварӯподбодгана",
+        "aliasName": "а̄мі каріба бграмана чаудда-бгувана",
+        "fileName": "ami-guru-dasa-nahi-anya.html",
+        "meta": {
+          "translation": "auto"
+        }
       }
     ]
   }

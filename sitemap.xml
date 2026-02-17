@@ -4916,7 +4916,7 @@
     </url>
     
     <url>
-        <loc>https://kirtan.site/ua/shorira-avidya-jal-jodendriya-tahe-kal.html</loc>
+        <loc>https://kirtan.site/ua/bhai-re-shorira-avidya-jal-jodendriya-tahe-kal.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -5643,6 +5643,12 @@
     
     <url>
         <loc>https://kirtan.site/ua/maha-bhaya-shiankula-e-bhava-tarangini.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kirtan.site/ua/ami-guru-dasa-nahi-anya.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
