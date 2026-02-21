@@ -260,7 +260,8 @@ function getCommonPageContext(bookId) {
 
     const allSongbooks = getSongbookIdList({public: true}).map((songbook_id) => {
         const info = getSongbookInfo(songbook_id);
-        const songsCount = getSongsOrderedList(songbook_id).length;
+		// Count songs with translation.
+        const songsCount = getSongsOrderedList(songbook_id).filter(song => !song.no_translation).length;
 
         const paths = getNavigationPaths(songbook_id);
 
