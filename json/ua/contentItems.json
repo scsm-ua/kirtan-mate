@@ -728,9 +728,7 @@
           "Шрила Говинда Махарадж",
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {
-          "translation": "no"
-        },
+        "meta": {},
         "telegraphPath": "SHrī-SHrī-Prabgupada-padma-Stavakah-01-03"
       }
     ]
@@ -1230,7 +1228,7 @@
         "fileName": "ohe-harinam-tava-mahima-apara.html",
         "page": 144,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrī-Namashtakam-7-01-02"
       },
@@ -2061,7 +2059,7 @@
           "Bhakti Lalita Devi"
         ],
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrī-Nrisіmga-Pranam-01-02"
       },
@@ -2076,7 +2074,7 @@
           "Bhakti Lalita Devi"
         ],
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrī-SHrī-Damodarashtakam-01-02"
       },
