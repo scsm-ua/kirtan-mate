@@ -441,14 +441,18 @@
     "name": "Vakara dziesmas",
     "items": [
       {
-        "id": "sri-gaura-arati",
+        "id": "jaya-jaya-gaurachander-arotiko-shobha",
         "title": "Śrī Gaura-ārati",
         "name": "Śrī Gaura-ārati",
         "aliasName": "(kiba) jaya jaya gorācāńder āratiko śobhā",
-        "fileName": "sri-gaura-arati.html",
+        "fileName": "jaya-jaya-gaurachander-arotiko-shobha.html",
         "page": 64,
-        "meta": {},
-        "telegraphPath": "Śrī-Gaura-ārati-03-14"
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Навадвип Дхам",
+          "Сударшан Прабху"
+        ],
+        "meta": {}
       },
       {
         "id": "jayare-jayare-jaya-gaura-sarasvati",
