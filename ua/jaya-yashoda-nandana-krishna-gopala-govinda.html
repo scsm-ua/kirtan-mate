@@ -246,8 +246,14 @@
                                 
 
                                     
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Показувати вірші / переклад"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
 
-                                    <ul class="SongPage__verses no-translation">
+                                    <ul class="SongPage__verses">
                                         
                                             
 
@@ -282,6 +288,18 @@
 
     
 
+    
+        <div class="Collapse Collapse__show" data-elem="translation">
+            <ul class="SongVerse__translation">
+                
+                    <li class="SongVerse__paragraph">
+                        <p>
+                            Слава сину Матінки Яшоди — Крішні, Ґопалу (Пастушку), Ґовінді (Покровителю корів)! Слава Мадана-Мохану (Тому, Хто зачаровує Купідона), Харі (Всевишньому), Ананті (Безмежному), Мукунді (Визволителю)!
+                        </p>
+                    </li>
+                
+            </ul>
+        </div>
     
 </li>
 
@@ -319,6 +337,18 @@
 
     
 
+    
+        <div class="Collapse Collapse__show" data-elem="translation">
+            <ul class="SongVerse__translation">
+                
+                    <li class="SongVerse__paragraph">
+                        <p>
+                            Слава Ачʼюті (Безгрішному), Мадгаві (Коханому), Рамі (Тому, Хто дарує радість), Вриндавана-Чандрі (Місяцю Вриндавана)! Слава Муралі-вадану (Тому, Хто тримає флейту біля Своїх уст), Шьяму (Тому, Хто кольором подібний до темної грозової хмари) та Ґопі-джанандану (Тому, Хто дарує щастя <i class="SongVerse__term">ґопі</i>)!
+                        </p>
+                    </li>
+                
+            </ul>
+        </div>
     
 </li>
 
@@ -595,7 +625,7 @@
                  * Share the URL.
                  */
                 const href = window.location.href;
-                const telegraph_href = '';
+                const telegraph_href = 'https://telegra.ph/Dzhaya-YAshoda-Nandana-Krishna-01-02';
                 const input = document.getElementById('href-input');
                 const tgInput = document.getElementById('tg-href-input');
                 const copyButton = document.getElementById('copy-button');

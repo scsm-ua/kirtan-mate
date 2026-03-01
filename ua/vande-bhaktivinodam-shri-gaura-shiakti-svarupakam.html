@@ -215,8 +215,14 @@
                                 
 
                                     
+                                        <div class="SongPage__toggle">
+                                            <three-mode-switch
+                                                label="Показувати вірші / переклад"
+                                            ></three-mode-switch>
+                                        </div>
+                                    
 
-                                    <ul class="SongPage__verses no-translation">
+                                    <ul class="SongPage__verses">
                                         
                                             
 
@@ -257,6 +263,18 @@
 
     
 
+    
+        <div class="Collapse Collapse__show" data-elem="translation">
+            <ul class="SongVerse__translation">
+                
+                    <li class="SongVerse__paragraph">
+                        <p>
+                            Я складаю свої поклони Шрі Тхакуру Бгактівіноду, втіленню божественної любові Махапрабгу. Він очолює всіх, хто розуміє істинне призначення священних писань, і є безмежним океаном відданості Шріматі Радгарані.
+                        </p>
+                    </li>
+                
+            </ul>
+        </div>
     
 </li>
 
@@ -485,7 +503,7 @@
                  * Share the URL.
                  */
                 const href = window.location.href;
-                const telegraph_href = '';
+                const telegraph_href = 'https://telegra.ph/SHrīla-Bgaktі-Vіnod-Thakur-01-03';
                 const input = document.getElementById('href-input');
                 const tgInput = document.getElementById('tg-href-input');
                 const copyButton = document.getElementById('copy-button');
