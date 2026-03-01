@@ -14,8 +14,7 @@
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Vandana-02-22-2"
+        "meta": {}
       },
       {
         "id": "vande-vaikuntha-vritti-stham",
@@ -24,8 +23,7 @@
         "aliasName": "vande vaikuṇṭha-vṛtti-stham",
         "fileName": "vande-vaikuntha-vritti-stham.html",
         "page": "11/1",
-        "meta": {},
-        "telegraphPath": "Šrīla-Bhakti-Bimal-Avadhūts-Mahārādža-02-22"
+        "meta": {}
       },
       {
         "id": "goswaminam-sudhirakhyam",
@@ -34,8 +32,7 @@
         "aliasName": "goswāminaṁ sudhīrākhyaṁ",
         "fileName": "goswaminam-sudhirakhyam.html",
         "page": "11/2",
-        "meta": {},
-        "telegraphPath": "Šrīla-Bhakti-Sudhīrs-Gosvāmī-Mahārādža-02-22"
+        "meta": {}
       },
       {
         "id": "pujya-sri-guru-varga-vandita",
@@ -44,8 +41,7 @@
         "aliasName": "pūjya śrī-guru-varga-vandita",
         "fileName": "pujya-sri-guru-varga-vandita.html",
         "page": 12,
-        "meta": {},
-        "telegraphPath": "Šrīla-Bhakti-Nirmal-Āčārja-Mahārādža-02-22"
+        "meta": {}
       },
       {
         "id": "gurvabhishta-supurakam-guru-ganair",
@@ -54,8 +50,7 @@
         "aliasName": "gurvābhīṣṭa-supūrakaṁ guru-gaṇair",
         "fileName": "gurvabhishta-supurakam-guru-ganair.html",
         "page": 13,
-        "meta": {},
-        "telegraphPath": "Šrīla-Bhakti-Sundar-Govinda-Dēv-Gosvāmī-Mahārādža-02-22"
+        "meta": {}
       },
       {
         "id": "devam-divya-tanum-suchanda-vadanam-balarka-chelanchitam",
@@ -64,8 +59,7 @@
         "aliasName": "devaṁ divya-tanuṁ suchanda-vadanaṁ-",
         "fileName": "devam-divya-tanum-suchanda-vadanam-balarka-chelanchitam.html",
         "page": 14,
-        "meta": {},
-        "telegraphPath": "Šrīla-Bhakti-Rakšak-Šrīdhārs-Dēv-Gosvāmī-Mahārādža-02-22"
+        "meta": {}
       },
       {
         "id": "shri-siddhanta-sarasvatiti-vidito",
@@ -74,8 +68,7 @@
         "aliasName": "śrī-siddhānta-sarasvatīti vidito",
         "fileName": "shri-siddhanta-sarasvatiti-vidito.html",
         "page": 15,
-        "meta": {},
-        "telegraphPath": "Bhagavāns-Šrīla-Bhaktisiddhānta-Sarasvatī-02-22"
+        "meta": {}
       },
       {
         "id": "namo-gaurakishoraya-bhaktavadhuta-murtaye",
@@ -84,8 +77,7 @@
         "aliasName": "namo gaurakiśorāya",
         "fileName": "namo-gaurakishoraya-bhaktavadhuta-murtaye.html",
         "page": 16,
-        "meta": {},
-        "telegraphPath": "Šrīla-Gaura-Kišora-Dāsa-Bābadžī-Mahārādža-02-22"
+        "meta": {}
       },
       {
         "id": "vande-bhaktivinodam-shri-gaura-shiakti-svarupakam",
@@ -94,8 +86,7 @@
         "aliasName": "vande bhaktivinodaṁ śrī-",
         "fileName": "vande-bhaktivinodam-shri-gaura-shiakti-svarupakam.html",
         "page": 17,
-        "meta": {},
-        "telegraphPath": "Šrīla-Bhaktivinoda-Thākurs-02-22"
+        "meta": {}
       },
       {
         "id": "gaura-vrajashritashieshair-vaishnavair-vandya-vigraham",
@@ -104,8 +95,7 @@
         "aliasName": "gaura-vrajāśritāśeṣair",
         "fileName": "gaura-vrajashritashieshair-vaishnavair-vandya-vigraham.html",
         "page": 18,
-        "meta": {},
-        "telegraphPath": "Šrīla-Džagannātha-Dāsa-Bābadžī-Mahārādža-02-22"
+        "meta": {}
       },
       {
         "id": "vancha-kalpatarubhyas-cha",
@@ -114,8 +104,7 @@
         "aliasName": "vāñchā-kalpatarubhyas’ cha",
         "fileName": "vancha-kalpatarubhyas-cha.html",
         "page": 19,
-        "meta": {},
-        "telegraphPath": "Vāñchā-kalpatarubhyas-cha-02-22-2"
+        "meta": {}
       },
       {
         "id": "jayatam-suratau-pangor",
@@ -124,8 +113,7 @@
         "aliasName": "jayatāṁ suratau paṅgor",
         "fileName": "jayatam-suratau-pangor.html",
         "page": 19,
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Guru-Gaurāṅga-Rādhā-Madana-Mohanjīu-02-22-2"
+        "meta": {}
       },
       {
         "id": "divyad-vrindaranya-kalpa-drumadhah",
@@ -134,8 +122,7 @@
         "aliasName": "dīvyad-vṛndāraṇya-kalpa-drumādhaḥ",
         "fileName": "divyad-vrindaranya-kalpa-drumadhah.html",
         "page": 20,
-        "meta": {},
-        "telegraphPath": "Šrī-Šrī-Guru-Gauranga-Gandharva-Govindasundardži-02-22"
+        "meta": {}
       },
       {
         "id": "shriman-rasa-rasarambhi",
@@ -144,8 +131,7 @@
         "aliasName": "śrīmān rāsa-rasārambhī",
         "fileName": "shriman-rasa-rasarambhi.html",
         "page": 21,
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Guru-Gaurāṅga-Rādhā-Gopīnāthjīu-02-22-2"
+        "meta": {}
       },
       {
         "id": "vrindayai-tulasi-devyai",
@@ -154,8 +140,7 @@
         "aliasName": "vṛndāyai tulasī-devyai",
         "fileName": "vrindayai-tulasi-devyai.html",
         "page": 22,
-        "meta": {},
-        "telegraphPath": "Vṛndāyai-tulasī-devyai-02-22-2"
+        "meta": {}
       },
       {
         "id": "sakala-vaishnava-pade-mora-namaskara",
@@ -164,8 +149,7 @@
         "aliasName": "sakala vaiṣṇava-pade mora namaskāra",
         "fileName": "sakala-vaishnava-pade-mora-namaskara.html",
         "page": 21,
-        "meta": {},
-        "telegraphPath": "Lūgšana-Vaišnaviem-02-22"
+        "meta": {}
       },
       {
         "id": "shri-krishna-chaitanya-prabhu-nityananda",
@@ -174,8 +158,7 @@
         "aliasName": "śrī-kṛṣṇa-chaitanya prabhu nityānanda",
         "fileName": "shri-krishna-chaitanya-prabhu-nityananda.html",
         "page": 24,
-        "meta": {},
-        "telegraphPath": "Pañcha-tattva-mantra-02-22-2"
+        "meta": {}
       },
       {
         "id": "hare-krishna-hare-krishna-krishna-krishna-hare-hare",
@@ -202,8 +185,7 @@
           "Шрила Авадхут Махарадж",
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Harē-Krišna-mahā-mantra-02-22"
+        "meta": {}
       },
       {
         "id": "hari-nama-mahamantra-sarva-mantra-sara",
@@ -215,8 +197,7 @@
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Daśa-vidha-Nāmāparādha-02-22-3"
+        "meta": {}
       }
     ]
   },
@@ -230,8 +211,7 @@
         "aliasName": "jaya jaya girirājer ārati viśāla",
         "fileName": "jaya-jaya-girirajer-arati-vishiala.html",
         "page": 32,
-        "meta": {},
-        "telegraphPath": "Gupta-Govardhana-Āratī-02-22"
+        "meta": {}
       },
       {
         "id": "jaya-jaya-girirajer-arotiko-shobha",
@@ -243,8 +223,7 @@
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Girirāj-Govardhan-Ārati-02-22"
+        "meta": {}
       },
       {
         "id": "jaya-guru-maharaja-karuna-sagara",
@@ -256,8 +235,7 @@
         "embeds": [
           "Каракас Дхам"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Nitāi-Chaitanya-Ārati-02-22-2"
+        "meta": {}
       },
       {
         "id": "jaya-jaya-gurudever-arati-ujjvala",
@@ -270,8 +248,7 @@
           "Навадвип Дхам",
           "Каракас Дхам"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Guru-Ārati-04-02"
+        "meta": {}
       },
       {
         "id": "jaya-guru-maharaja-jati-rajeshvara",
@@ -286,8 +263,7 @@
           "Навадвип Дхам",
           "Каракас Дхам"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Guru-Ārati-stuti-04-06"
+        "meta": {}
       },
       {
         "id": "kali-kukkura-kadana-jadi-chao-he",
@@ -299,8 +275,7 @@
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Prabhāti-Gīti-02-22-2"
+        "meta": {}
       },
       {
         "id": "jashomati-nandana-vraja-vara-nagara",
@@ -324,8 +299,7 @@
           "Шрила Авадхут Махарадж",
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Nām-kīrtan-02-22-3"
+        "meta": {}
       },
       {
         "id": "udilo-aruna-puraba-bhage",
@@ -338,8 +312,7 @@
           "Навадвип Дхам",
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Aruṇodoya-kīrtan-02-22-5"
+        "meta": {}
       },
       {
         "id": "jiv-jago-jiv-jago-gaurachanda-bole",
@@ -351,8 +324,7 @@
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Aruṇodoya-kīrttan-02-22"
+        "meta": {}
       },
       {
         "id": "samsara-davanala-lidha-loka",
@@ -364,8 +336,7 @@
         "embeds": [
           "Bhakti Lalita Devi"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Gurvāṣṭaka-02-22-2"
+        "meta": {}
       },
       {
         "id": "shri-krishna-chaitanya-prabhu-jive-daya-kori",
@@ -374,8 +345,7 @@
         "aliasName": "śrī-kṛṣṇa-chaitanya prabhu jīve dayā kori’",
         "fileName": "shri-krishna-chaitanya-prabhu-jive-daya-kori.html",
         "page": 50,
-        "meta": {},
-        "telegraphPath": "Śaraṇāgati---labvēlīgs-aicinājums-02-22"
+        "meta": {}
       },
       {
         "id": "vibhavari-shiesha-aloka-praveshia",
@@ -389,8 +359,7 @@
           "Навадвип Дхам",
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Vibhāvarī-Śeṣa-02-22-3"
+        "meta": {}
       },
       {
         "id": "thakura-vaishnava-gana-kori-ei-nivedana",
@@ -402,8 +371,7 @@
         "embeds": [
           "Bhakti Lalita Devi"
         ],
-        "meta": {},
-        "telegraphPath": "Ṭhākura-vaiṣṇava-gaṇa-02-22-3"
+        "meta": {}
       },
       {
         "id": "hari-haraye-namah-krishna-yadavaya-namah",
@@ -417,8 +385,7 @@
           "Навадвип Дхам",
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Nāma-Saṅkīrttan-02-22"
+        "meta": {}
       }
     ]
   },
@@ -432,8 +399,7 @@
         "aliasName": "mahāprasāde govinde nāma brahmaṇi vaiṣṇave",
         "fileName": "mahaprasade-govinde-nama-brahmani.html",
         "page": 62,
-        "meta": {},
-        "telegraphPath": "Mahāprasāda-02-22-2"
+        "meta": {}
       }
     ]
   },
@@ -465,8 +431,7 @@
           "Навадвип Дхам",
           "Каракас Дхам"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Sāraswat-ārati-03-14"
+        "meta": {}
       },
       {
         "id": "gurudeva-kripa-bindu-diya-kara-ei-dase",
@@ -483,8 +448,7 @@
           "Каракас Дхам",
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Gurudeva-03-14"
+        "meta": {}
       },
       {
         "id": "namo-namah-tulasi-maharani",
@@ -496,8 +460,7 @@
         "embeds": [
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Tulasī-parikramā-gīti-03-14"
+        "meta": {}
       },
       {
         "id": "shri-guru-charana-padma-kevala-bhakati",
@@ -510,8 +473,7 @@
           "Шрила Ачарья Махарадж",
           "Навадвип Дхам"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Guru-vaiṣṇava-Māhātmya-gīti-04-02"
+        "meta": {}
       },
       {
         "id": "shri-krishna-chaitanya-prabhu-daya-kara-more",
@@ -523,8 +485,7 @@
         "embeds": [
           "Bhakti Lalita Devi"
         ],
-        "meta": {},
-        "telegraphPath": "Sāvaraṇa-Śrī-Gaura-pāda-padme-Prārthanā-04-02"
+        "meta": {}
       },
       {
         "id": "vaishnava-thakura-dayara-sagara",
@@ -538,8 +499,7 @@
           "Навадвип Дхам",
           "Сударшан Прабху"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Vaiṣṇava-mahimā-gīti-04-02"
+        "meta": {}
       }
     ]
   },
@@ -556,8 +516,7 @@
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02"
+        "meta": {}
       },
       {
         "id": "sutra-vritti-tippanishta-sukshma-vachanadbhutam",
@@ -569,8 +528,7 @@
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-6"
+        "meta": {}
       },
       {
         "id": "dhvasta-sarvvabhauma-vada-navya-tarka-shiankaram",
@@ -582,8 +540,7 @@
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-2"
+        "meta": {}
       },
       {
         "id": "prema-mugdha-rudra-raja-shiaurya-virya-vikramam",
@@ -595,8 +552,7 @@
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-4"
+        "meta": {}
       },
       {
         "id": "prema-mugdha-nritya-kirtanakularitantikam",
@@ -608,8 +564,7 @@
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-3"
+        "meta": {}
       },
       {
         "id": "shri-sanatananu-rupa-jiva-sampradayakam",
@@ -621,8 +576,7 @@
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-5"
+        "meta": {}
       },
       {
         "id": "yamunambu-krishna-radhikali-keli-mandalam",
@@ -634,8 +588,7 @@
         "embeds": [
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Premadhāma-deva-stotram-06-02-7"
+        "meta": {}
       }
     ]
   },
@@ -654,8 +607,7 @@
           "Шрила Говинда Махарадж",
           "Шрила Ачарья Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Manaḥ-Śikṣā-06-02"
+        "meta": {}
       },
       {
         "id": "sujanarvuda-radhita-pada-yugam",
@@ -668,8 +620,7 @@
           "Шрила Говинда Махарадж",
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Prabhupāda-padma-Stavakaḥ-06-02"
+        "meta": {}
       },
       {
         "id": "nitai-gunamani-amara-nitai-gunamani",
@@ -682,8 +633,7 @@
           "Навадвип Дхам",
           "Сударшан Прабху"
         ],
-        "meta": {},
-        "telegraphPath": "Nitāi-guṇamaṇi-āmāra-06-30"
+        "meta": {}
       },
       {
         "id": "dayal-nitai-chaitanya-bole-nach-re",
@@ -695,8 +645,7 @@
         "embeds": [
           "Каракас Дхам"
         ],
-        "meta": {},
-        "telegraphPath": "Dayāl-Nitāi-Chaitanya-06-30"
+        "meta": {}
       }
     ]
   },
@@ -714,8 +663,7 @@
           "Шрила Ачарья Махарадж",
           "Каракас Дхам"
         ],
-        "meta": {},
-        "telegraphPath": "Avatāra-Sāra-06-30"
+        "meta": {}
       },
       {
         "id": "gay-gora-madhur-svare",
@@ -732,8 +680,7 @@
           "Шрила Авадхут Махарадж",
           "Шрила Авадхут Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Nāma-06-30"
+        "meta": {}
       },
       {
         "id": "ke-jabi-ke-jabi-bhai-bhava-sindhu-para",
@@ -742,8 +689,7 @@
         "aliasName": "ke jabi ke jabi bhāi bhava-sindhu pāra",
         "fileName": "ke-jabi-ke-jabi-bhai-bhava-sindhu-para.html",
         "page": 127,
-        "meta": {},
-        "telegraphPath": "Ke-jabi-ke-jabi-02-14"
+        "meta": {}
       }
     ]
   },
@@ -757,8 +703,7 @@
         "aliasName": "ṭhākura-vaiṣṇava-pada,    avanīra susampada,",
         "fileName": "thakura-vaishnava-pada-avanira.html",
         "page": 134,
-        "meta": {},
-        "telegraphPath": "Ṭhākura-vaiṣṇava-pada-02-14"
+        "meta": {}
       },
       {
         "id": "je-anilo-prema-dhana-karuna-prachura",
@@ -771,8 +716,7 @@
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Viraha-gīti-02-14"
+        "meta": {}
       },
       {
         "id": "ei-vara-karuna-kara-vaishnava-gosani",
@@ -785,8 +729,7 @@
           "Шрила Говинда Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Vaiṣṇava-Vijñāpti-02-14"
+        "meta": {}
       },
       {
         "id": "kripa-kara-vaishnava-thakura",
@@ -795,8 +738,7 @@
         "aliasName": "kṛpa kara’ vaiṣṇava ṭhākura",
         "fileName": "kripa-kara-vaishnava-thakura.html",
         "page": 137,
-        "meta": {},
-        "telegraphPath": "Prārthanā-Lalasāmayi-02-14"
+        "meta": {}
       },
       {
         "id": "narada-muni-bajaya-vina",
@@ -808,8 +750,7 @@
         "embeds": [
           "Bhakti Lalita Devi"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Nāmāṣṭakam-8-02-14"
+        "meta": {}
       },
       {
         "id": "krishnotkirtana-gana-nartana-parau",
@@ -822,8 +763,7 @@
           "Шрила Госвами Махарадж",
           "Шрила Мадхусудан Махарадж"
         ],
-        "meta": {},
-        "telegraphPath": "Śrī-Śrī-Ṣaḍ-Gosvāmy-aṣṭakam-02-14"
+        "meta": {}
       }
     ]
   }
