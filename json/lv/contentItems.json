@@ -824,6 +824,108 @@
         ],
         "meta": {},
         "telegraphPath": "Śrī-Śrī-Ṣaḍ-Gosvāmy-aṣṭakam-02-14"
+      },
+      {
+        "id": "ohe-harinam-tava-mahima-apara",
+        "title": "Šrī Nāmaštakam 7",
+        "name": "Šrī Nāmaštakam 7",
+        "aliasName": "ohe harinām, tava mahimā apāra",
+        "fileName": "ohe-harinam-tava-mahima-apara.html",
+        "page": 144,
+        "meta": {}
+      },
+      {
+        "id": "ki-rupe-paibo-seva-mui-durachara",
+        "title": "Ki-rūpe pāibo sevā",
+        "name": "Ki-rūpe pāibo sevā",
+        "aliasName": "ki-rūpe pāibo sevā mui durāchāra",
+        "fileName": "ki-rupe-paibo-seva-mui-durachara.html",
+        "page": 145,
+        "meta": {}
+      },
+      {
+        "id": "bhajahu-re-mana-shri-nanda-nandana",
+        "title": "Bhajahu̐ Re Mana",
+        "name": "Bhajahu̐ Re Mana",
+        "aliasName": "bhajahu̐ re mana    śrī-nanda-nandana",
+        "fileName": "bhajahu-re-mana-shri-nanda-nandana.html",
+        "page": 146,
+        "embeds": [
+          "Bhakti Lalita Devi"
+        ],
+        "meta": {}
+      },
+      {
+        "id": "manasa-deho-geho-jo-kichu-mora",
+        "title": "Mānasa Deho Geho",
+        "name": "Mānasa Deho Geho",
+        "aliasName": "mānasa, deho, geho, jo kichū mora",
+        "fileName": "manasa-deho-geho-jo-kichu-mora.html",
+        "page": 147,
+        "embeds": [
+          "Шрила Говинда Махарадж"
+        ],
+        "meta": {}
+      },
+      {
+        "id": "e-ghora-samsare-podiya-manava",
+        "title": "E ghora saṁsāre",
+        "name": "E ghora saṁsāre",
+        "aliasName": "e ghora saṁsāre,    poḍiyā mānava",
+        "fileName": "e-ghora-samsare-podiya-manava.html",
+        "page": 148,
+        "meta": {}
+      },
+      {
+        "id": "emona-durmati-samsara-bhitore",
+        "title": "Dainyātmikā",
+        "name": "Dainyātmikā",
+        "aliasName": "(prabhu he!)",
+        "fileName": "emona-durmati-samsara-bhitore.html",
+        "page": 154,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Шрила Шридхар Махарадж",
+          "Шрила Ачарья Махарадж",
+          "Шрила Госвами Махарадж",
+          "Навадвип Дхам",
+          "Каракас Дхам",
+          "Сударшан Прабху",
+          "Шрила Авадхут Махарадж",
+          "Шрила Авадхут Махарадж"
+        ],
+        "meta": {}
+      },
+      {
+        "id": "ki-jani-ki-bale-tomara-dhamete",
+        "title": "Goptṛtve Varaṇa",
+        "name": "Goptṛtve Varaṇa",
+        "aliasName": "ki jāni ki bale,   tomāra dhāmete,",
+        "fileName": "ki-jani-ki-bale-tomara-dhamete.html",
+        "page": 155,
+        "embeds": [
+          "Шрила Говинда Махарадж",
+          "Сударшан Прабху"
+        ],
+        "meta": {}
+      },
+      {
+        "id": "atma-nivedana-tuya-pade-kori",
+        "title": "Ātma-nivedana",
+        "name": "Ātma-nivedana",
+        "aliasName": "ātma-nivedana,    tuyā pade kori,",
+        "fileName": "atma-nivedana-tuya-pade-kori.html",
+        "page": 160,
+        "meta": {}
+      },
+      {
+        "id": "tumi-sarveshvareshvara-vrajendra-kumara",
+        "title": "Tumi sarveśvareśvara",
+        "name": "Tumi sarveśvareśvara",
+        "aliasName": "tumi sarveśvareśvara, vrajendra-kumāra!",
+        "fileName": "tumi-sarveshvareshvara-vrajendra-kumara.html",
+        "page": 162,
+        "meta": {}
       }
     ]
   }
