@@ -15,7 +15,7 @@
           "Шрила Мадхусудан Махарадж"
         ],
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "Vandana-01-03-2"
       },
@@ -46,7 +46,7 @@
         "fileName": "goswaminam-sudhirakhyam.html",
         "page": "11/2",
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrīla-Bgaktі-Sudgīr-Gosvamī-Maharadzh-01-02"
       },
@@ -88,13 +88,13 @@
       },
       {
         "id": "shri-siddhanta-sarasvatiti-vidito",
-        "title": "Прана̄м Мантра - Бгаґава̄н Шрīла Бгакті Сіддга̄нта Сарасватī Тха̄кур",
-        "name": "Бгаґава̄н Шрīла Бгакті Сіддга̄нта Сарасватī Тха̄кур",
+        "title": "Прана̄м Мантра - Бгаґава̄н Шрīла Бгактісіддга̄нта Сарасватī Тха̄кур",
+        "name": "Бгаґава̄н Шрīла Бгактісіддга̄нта Сарасватī Тха̄кур",
         "aliasName": "шрī-сіддга̄нта-сарасватīті відіто",
         "fileName": "shri-siddhanta-sarasvatiti-vidito.html",
         "page": 15,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "Bgagavan-SHrīla-Bgaktі-Sіddganta-Sarasvatī-Thakur-01-03"
       },
@@ -106,7 +106,7 @@
         "fileName": "namo-gaurakishoraya-bhaktavadhuta-murtaye.html",
         "page": 16,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrīla-Gaura-Kіshora-Das-Babadzhī-Maharadzh-01-02"
       },
@@ -130,19 +130,19 @@
         "fileName": "gaura-vrajashritashieshair-vaishnavair-vandya-vigraham.html",
         "page": 18,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrīla-Dzhagannath-Das-Babadzhī-Maharadzh-01-02"
       },
       {
         "id": "vancha-kalpatarubhyas-cha",
-        "title": "ва̄ньчха̄-калпатарубгʼяс’ ча",
-        "name": "ва̄ньчха̄-калпатарубгʼяс’ ча",
+        "title": "Ва̄ньчха̄-калпатарубгʼяс’ ча",
+        "name": "Ва̄ньчха̄-калпатарубгʼяс’ ча",
         "aliasName": "ва̄ньчха̄-калпатарубгʼяс’ ча",
         "fileName": "vancha-kalpatarubhyas-cha.html",
         "page": 19,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "vanchha-kalpatarubgʼyas-cha-01-03"
       },
@@ -184,7 +184,7 @@
       },
       {
         "id": "vrindayai-tulasi-devyai",
-        "title": "вринда̄яй туласī-девʼяй",
+        "title": "Вринда̄яй туласī-девʼяй",
         "name": "вринда̄яй туласī-девʼяй",
         "aliasName": "вринда̄яй туласī-девʼяй",
         "fileName": "vrindayai-tulasi-devyai.html",
@@ -202,7 +202,7 @@
         "fileName": "sakala-vaishnava-pade-mora-namaskara.html",
         "page": 21,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "Molitvi-Vajshnavam-01-03"
       },
@@ -235,9 +235,7 @@
         "aliasName": "джая са-парікара шрī-шрī-ґуру-ґаура̄нґа-ра̄дга̄-ґовіндасундар ґірідга̄рīджīу кī джая!",
         "fileName": "jaya-sa-parikara.html",
         "page": 22,
-        "meta": {
-          "translation": "no"
-        },
+        "meta": {},
         "telegraphPath": "Dzhaya-Dgvanі-01-02"
       },
       {
@@ -380,7 +378,7 @@
           "Каракас Дхам"
         ],
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrī-Guru-Aratі-stutі-01-02"
       },
@@ -592,7 +590,7 @@
         "fileName": "mahaprasade-govinde-nama-brahmani.html",
         "page": 62,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "Mahaprasada-01-02"
       },
@@ -2155,12 +2153,12 @@
       {
         "id": "nagara-bhramiya-amara-gaura-elo-ghore",
         "title": "Атер парікрама̄",
-        "name": "Атер парікрама̄",
+        "name": "Після парікрами",
         "aliasName": "наґара бграмія а̄ма̄ра ґаура ело горе",
         "fileName": "nagara-bhramiya-amara-gaura-elo-ghore.html",
         "page": 249,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "Ater-parіkrama-01-02"
       },
