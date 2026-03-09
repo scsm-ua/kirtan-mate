@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kirtan.site/sitemap.xml
+Sitemap: https://old.kirtan.site/sitemap.xml
