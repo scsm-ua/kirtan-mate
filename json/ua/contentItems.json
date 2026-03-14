@@ -70,7 +70,7 @@
         "fileName": "gurvabhishta-supurakam-guru-ganair.html",
         "page": 13,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrīla-Bgaktі-Sundar-Govіnda-Dev-Gosvamī-Maharadzh-01-02"
       },
@@ -185,12 +185,12 @@
       {
         "id": "vrindayai-tulasi-devyai",
         "title": "Вринда̄яй туласī-девʼяй",
-        "name": "вринда̄яй туласī-девʼяй",
+        "name": "Вринда̄яй туласī-девʼяй",
         "aliasName": "вринда̄яй туласī-девʼяй",
         "fileName": "vrindayai-tulasi-devyai.html",
         "page": 21,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "vrindayaj-tulasī-devʼyaj-01-03"
       },
@@ -220,8 +220,8 @@
       },
       {
         "id": "shrimach-chaitanya-sarasvata-mathavara-udgita-kirtir",
-        "title": "Тхе Ґлорй о тхе Шрī Чайтанья Са̄расват Матх",
-        "name": "Тхе Ґлорй о тхе Шрī Чайтанья Са̄расват Матх",
+        "title": "Слава Шрī Чайтанья Са̄расват Матху",
+        "name": "Слава Шрī Чайтанья Са̄расват Матху",
         "fileName": "shrimach-chaitanya-sarasvata-mathavara-udgita-kirtir.html",
         "meta": {
           "translation": "no"
@@ -323,7 +323,7 @@
       {
         "id": "jaya-jaya-girirajer-arotiko-shobha",
         "title": "Шрī Шрī Ґіріра̄дж-Ґовардган А̄раті",
-        "name": "Шрī Шрī Ґіріра̄дж-",
+        "name": "Шрī Шрī Ґіріра̄дж-Ґовардган А̄раті",
         "aliasName": "джая джая ґіріра̄джер а̄ротіко шобга̄",
         "fileName": "jaya-jaya-girirajer-arotiko-shobha.html",
         "page": 34,
@@ -331,7 +331,7 @@
           "Шрила Мадхусудан Махарадж"
         ],
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrī-SHrī-Gіrіradzh--Govardgan-Aratі-01-02"
       },
@@ -415,7 +415,7 @@
           "Шрила Авадхут Махарадж"
         ],
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrī-Nam-kīrtan-01-02"
       },
@@ -943,7 +943,7 @@
           "Каракас Дхам"
         ],
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "Dayal-Nіtaі-CHajtanya-01-02"
       }
@@ -1907,7 +1907,7 @@
           "Шрила Мадхусудан Махарадж"
         ],
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHrī-Vradzha-dgama-mahіmamrita-01-02"
       },
@@ -2118,7 +2118,7 @@
         "fileName": "shiuddha-bhakata-charana-renu.html",
         "page": 240,
         "meta": {
-          "translation": "no"
+          "translation": "auto"
         },
         "telegraphPath": "SHyuddga-bgakata-01-03"
       },
