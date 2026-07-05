@@ -48,21 +48,74 @@ function makeTelegraphElements(songbook_id) {
 
 const updated_attrs = ['title', 'author_name', 'author_url', 'content'];
 
+function isEmptyContainer(value) {
+    if (Array.isArray(value)) return value.length === 0;
+    if (value && typeof value === 'object') return Object.keys(value).length === 0;
+    return false;
+}
+
 function deepCleanObject(obj, whitelist) {
     if (Array.isArray(obj)) {
         return obj.map(item => deepCleanObject(item, whitelist));
     } else if (typeof obj === 'object' && obj !== null) {
         let newObj = {};
-        // Sort keys to ensure consistent property order
-        const sortedKeys = Object.keys(obj).sort();
-        for (let key of sortedKeys) {
-            if (whitelist.includes(key)) {
-                newObj[key] = deepCleanObject(obj[key], whitelist);
-            }
+        for (let key of Object.keys(obj).sort()) {
+            if (!whitelist.includes(key)) continue;
+            const cleaned = deepCleanObject(obj[key], whitelist);
+            // Drop empty attrs/children so file and Telegraph-returned trees normalize the same way
+            // (e.g. h4 attrs holding only a stripped `id`, or elements with no children).
+            if (isEmptyContainer(cleaned)) continue;
+            newObj[key] = cleaned;
         }
         return newObj;
     }
     return obj; // Return primitive values as is
+}
+
+function describeValue(v) {
+    if (v === undefined) return '<undefined>';
+    if (v === null) return '<null>';
+    if (typeof v === 'string') return `str(${v.length}) ${JSON.stringify(v)}`;
+    if (Array.isArray(v)) return `array(${v.length})`;
+    if (typeof v === 'object') {
+        const keys = Object.keys(v).sort().join(',');
+        const tag = v.tag ? ` <${v.tag}>` : '';
+        const href = v.attrs && v.attrs.href ? ` href=${JSON.stringify(v.attrs.href)}` : '';
+        return `object{${keys}}${tag}${href}`;
+    }
+    return JSON.stringify(v);
+}
+
+function findFirstDiff(a, b, path = '$') {
+    if (a === b) return null;
+    if (typeof a !== typeof b || a === null || b === null || Array.isArray(a) !== Array.isArray(b)) {
+        return { path, a: describeValue(a), b: describeValue(b) };
+    }
+    if (Array.isArray(a)) {
+        if (a.length !== b.length) {
+            return {
+                path: path + '.length',
+                a: a.length,
+                b: b.length,
+                sample_a: describeValue(a[Math.min(a.length, b.length)]),
+                sample_b: describeValue(b[Math.min(a.length, b.length)])
+            };
+        }
+        for (let i = 0; i < a.length; i++) {
+            const d = findFirstDiff(a[i], b[i], `${path}[${i}]`);
+            if (d) return d;
+        }
+        return null;
+    }
+    if (typeof a === 'object') {
+        const keys = new Set([...Object.keys(a), ...Object.keys(b)]);
+        for (const k of keys) {
+            const d = findFirstDiff(a[k], b[k], `${path}.${k}`);
+            if (d) return d;
+        }
+        return null;
+    }
+    return { path, a: describeValue(a), b: describeValue(b) };
 }
 
 function generatePageData(data) {
@@ -100,25 +153,20 @@ function createOrUpdateTelegraphPage() {
                     getTelegraphPage(existingTelegraphPageJson.path, true).then(loaded_page => {
 
                         loaded_page = generatePageData(loaded_page);
-                        
-                        const isEqual = deepEqual(page, loaded_page, { 
-                            strict: false,
-                            // TODO: not working.
-                            skipEmptyArrays: true,
-                            skipEmptyObjects: true 
-                        });
 
-                        // console.log('-file', JSON.stringify(page, null, 4));
-                        // console.log('-web', JSON.stringify(loaded_page, null, 4))
-                        // console.log('---isEqual', isEqual);
+                        const isEqual = deepEqual(page, loaded_page, { strict: true });
 
                         if (!isEqual) {
 
-                            // Debug: Save pages for comparison
-                            // const songSlug = path.parse(file.path).name;
-                            // fs.writeFileSync(`debug_new_${songSlug}.json`, JSON.stringify(page, null, 4));
-                            // fs.writeFileSync(`debug_loaded_${songSlug}.json`, JSON.stringify(loaded_page, null, 4));
-                            
+                            // Debug: log the first diff and optionally dump both trees for offline inspection.
+                            // const diff = findFirstDiff(page, loaded_page);
+                            // console.log('Diff for', existingTelegraphPageJson.path, '->', JSON.stringify(diff));
+                            // if (process.env.TELEGRAPH_DEBUG_DIFF) {
+                            //     const songSlug = path.parse(file.path).name;
+                            //     fs.writeFileSync(`debug_new_${songSlug}.json`, JSON.stringify(page, null, 4));
+                            //     fs.writeFileSync(`debug_loaded_${songSlug}.json`, JSON.stringify(loaded_page, null, 4));
+                            // }
+
                             // Extend `getExistingTelegraphPageJson` with `page` properties.
                             Object.assign(existingTelegraphPageJson, page);
 
@@ -190,6 +238,30 @@ function getAllTelegraphPages(cb) {
     });
 }
 
+const TELEGRAPH_EXPORT_FIELDS = ['path', 'url', 'title', 'author_url'];
+
+function saveTelegraphPagesToJson(filePath, cb) {
+    // Force refresh: pages may have been created/updated during this build.
+    pagesCache = null;
+    getAllTelegraphPages((err, pages) => {
+        if (err) return cb(err);
+        try {
+            const minimal = pages
+                .map(page => TELEGRAPH_EXPORT_FIELDS.reduce((acc, key) => {
+                    if (page[key] !== undefined) acc[key] = page[key];
+                    return acc;
+                }, {}))
+                .sort((a, b) => (a.path || '').localeCompare(b.path || ''));
+
+            fs.mkdirSync(path.dirname(filePath), { recursive: true });
+            fs.writeFileSync(filePath, JSON.stringify(minimal, null, 2) + '\n', 'utf8');
+            cb(null, minimal.length);
+        } catch (writeErr) {
+            cb(writeErr);
+        }
+    });
+}
+
 function getExistingTelegraphPage(author_url) {
     if (!pagesCache) {
         return;
@@ -213,5 +285,6 @@ module.exports = {
     getAllTelegraphPages,
     createOrUpdateTelegraphPage,
     getExistingTelegraphPage,
-    getExistingTelegraphPageHref
+    getExistingTelegraphPageHref,
+    saveTelegraphPagesToJson
 };

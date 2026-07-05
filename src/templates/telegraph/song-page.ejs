@@ -25,7 +25,7 @@
             <h4><%= item %></h4>
         <% }) %>
     <% } %>
-    <% if (verses.length > 1 && item.number) { %><aside>⸻&nbsp;&nbsp;<%= item.number %>&nbsp;&nbsp;⸻</aside><% } %>
+    <% if (verses.length > 1 && item.number) { %><aside>——&nbsp;&nbsp;<%= item.number %>&nbsp;&nbsp;——</aside><% } %>
     <% if (item.text.length) { %>
         <p>
 <% item.text.forEach((line) => { %>
@@ -44,7 +44,7 @@
     <% } %>
 <% }) %>
 
-<% if (navigation.next) { %><aside>⸻</aside>
+<% if (navigation.next) { %><aside>——</aside>
     
 <p><%= i18n('SONG_PAGE.NEXT') %>: <strong><a href="<%= navigation.next.telegraph_href %>"><%= navigation.next.title %></a>&nbsp;&nbsp;→</strong></p><% } %>
 

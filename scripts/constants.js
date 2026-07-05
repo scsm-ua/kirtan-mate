@@ -18,6 +18,11 @@ const JS_DIR = 'js';
 const CSS_DIR = 'css';
 const IMG_DIR = 'css';
 
+// Directory layout of the deployed public site (kirtan.site), used for
+// building URLs that Telegraph needs to fetch (covers, etc). Independent
+// from the local dev IMG_DIR above.
+const TELEGRAPH_STATIC_DIR = 'images';
+
 const contentItems = 'contentItems.json';
 const contentsPage = BASE_FILE_NAMES.CONTENTS + '.html';
 const indexItems = 'indexItems.json';
@@ -50,7 +55,7 @@ const PATHS = {
         JS: ORIGIN + '/' + JS_DIR,
         CSS: ORIGIN + '/' + CSS_DIR,
         IMG: ORIGIN + '/' + IMG_DIR,
-        TELEGRAPH_IMG: PUBLIC_ORIGIN + '/' + IMG_DIR,
+        TELEGRAPH_IMG: PUBLIC_ORIGIN + '/' + TELEGRAPH_STATIC_DIR,
         FAVICON: ORIGIN + '/' + IMG_DIR + '/favicon',
         toSongs: (songbook_id) => ORIGIN + '/' + songbook_id,
         toPublicSongs: (songbook_id) => PUBLIC_ORIGIN + '/' + songbook_id
@@ -69,6 +74,9 @@ const PATHS = {
         getIndexFile: (songbook_id) =>
             path.resolve(OUTPUT_DIR, 'json', songbook_id, indexItems),
         ROOT: OUTPUT_DIR
+    },
+    DATA: {
+        TELEGRAPH_PAGES_JSON: 'data/telegraph-pages.json'
     },
     FILES: {
         EJS: {

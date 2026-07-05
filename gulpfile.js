@@ -29,7 +29,7 @@ const version = require('./package.json').version;
 const { writeFile } = require('./scripts/ioHelpers');
 
 const { PATHS, SEARCH_CONST, BASE_FILE_NAMES } = require('./scripts/constants');
-const { makeTelegraphElements, getAllTelegraphPages, createOrUpdateTelegraphPage } = require('./scripts/telegraph/utils');
+const { makeTelegraphElements, getAllTelegraphPages, createOrUpdateTelegraphPage, saveTelegraphPagesToJson } = require('./scripts/telegraph/utils');
 const { BUILD, FILES, PAGES, SRC } = PATHS;
 
 /**
@@ -105,6 +105,21 @@ gulp.task('telegraph-load-existing-pages', (done) => {
         } else {
             console.log('Telegraph pages loaded:', pages.length);
         }
+        done();
+    });
+});
+
+/**
+ * Fetches all telegraph pages fresh and writes a minimal, sorted JSON
+ * so a sibling project can bind local URLs to Telegraph pages.
+ */
+gulp.task('telegraph-export-pages', (done) => {
+    saveTelegraphPagesToJson(PATHS.DATA.TELEGRAPH_PAGES_JSON, (err, count) => {
+        if (err) {
+            console.error('Telegraph pages export error:', err);
+            return done(err);
+        }
+        console.log('Telegraph pages exported:', count, '->', PATHS.DATA.TELEGRAPH_PAGES_JSON);
         done();
     });
 });
@@ -973,6 +988,7 @@ gulp.task('build', (done) => {
         'sass',
         'md2json',
         'telegraph-load-existing-pages',
+        'telegraph-export-pages',
         'generate-contents',
         'generate-index',
         'html',
@@ -1004,6 +1020,7 @@ gulp.task('build-tg', (done) => {
         'telegraph-songbook-list',
         'telegraph-elements',
         'telegraph-songs-push',
+        'telegraph-export-pages',
         done
     );
 });

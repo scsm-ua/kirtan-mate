@@ -8,6 +8,7 @@ const { getExistingTelegraphPageHref } = require('./telegraph/utils');
  *
  */
 function getNavigationPaths(bookId) {
+    const publicBase = PATHS.PUBLIC_ORIGIN + '/' + bookId;
     return {
         AUTHORS: PAGES.getAuthors(bookId),
         A_Z: PAGES.getA_Z(bookId),
@@ -15,13 +16,15 @@ function getNavigationPaths(bookId) {
         CONTENTS: PAGES.getContents(bookId),
         ORIGIN: PATHS.ORIGIN,
         SEARCH: PAGES.getSearch(bookId),
-
-        // TODO: good place?
-        PUBLIC_AUTHORS: getExistingTelegraphPageHref(PAGES.getAuthors(bookId)),
-        PUBLIC_A_Z: getExistingTelegraphPageHref(PAGES.getA_Z(bookId)),
-        PUBLIC_BOOK_LIST: getExistingTelegraphPageHref(PAGES.getBookList(bookId)),
-        PUBLIC_CONTENTS: getExistingTelegraphPageHref(PAGES.getContents(bookId)),
-        PUBLIC_SEARCH: getExistingTelegraphPageHref(PAGES.getSearch(bookId)),
+        // PUBLIC_* keys resolve against PUBLIC_ORIGIN via the Telegraph cache so
+        // that <a href="…"> written into Telegraph pages matches the stored
+        // author_url. Safe to expose to the regular build — templates there
+        // simply ignore them.
+        PUBLIC_AUTHORS: getExistingTelegraphPageHref(publicBase + PAGES.AUTHORS),
+        PUBLIC_A_Z: getExistingTelegraphPageHref(publicBase + PAGES.A_Z),
+        PUBLIC_BOOK_LIST: getExistingTelegraphPageHref(publicBase + PAGES.BOOK_LIST),
+        PUBLIC_CONTENTS: getExistingTelegraphPageHref(publicBase + PAGES.CONTENTS),
+        PUBLIC_SEARCH: getExistingTelegraphPageHref(publicBase + PAGES.SEARCH),
     };
 }
 
@@ -43,7 +46,7 @@ function getTemplatePaths(songbook_id) {
 
 function getTelegraphTemplatePaths(songbook_id) {
     return {
-        toImages: PATHS.RELATIVE.TELEGRAPH_IMG,
+        toTelegraphImages: PATHS.RELATIVE.TELEGRAPH_IMG,
         toSongs: PATHS.RELATIVE.toPublicSongs(songbook_id),
         toPages: getNavigationPaths(songbook_id),
         toPartials: path.join(process.cwd(), PATHS.SRC.EJS_TELEGRAPH_PARTIALS_FILES),
