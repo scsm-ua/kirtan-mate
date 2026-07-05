@@ -11,12 +11,6 @@ function getLanguageSet(language = '') {
     return translations[lang] || translations[DEFAULT_LANGUAGE];
 }
 
-function getLanguageSetNotDefault(language) {
-    const lang = language.slice(0, 2);
-    return translations[lang];
-}
-
-
 /**
  *
  */
@@ -33,33 +27,9 @@ function getTranslationsBy(lang) {
     };
 }
 
-function getTranslationOrigin(lang, text) {
-    let data = getLanguageSetNotDefault(lang);
-    if (data?.i18n) {
-        for (const [key, value] of Object.entries(data.i18n)) {
-            if (value === text) {
-                return key;
-            }
-        }
-    }
-}
-
-function getStrictTranslation(lang, text) {
-    let data = getLanguageSetNotDefault(lang);
-    return data?.i18n && data.i18n[text] || text;
-}
-
-function isDefaultLanguage(language) {
-    const lang = language.slice(0, 2);
-    return lang === DEFAULT_LANGUAGE;
-}
-
 /**
  *
  */
 module.exports = {
-    getTranslationsBy,
-    getTranslationOrigin: getTranslationOrigin,
-    getStrictTranslation: getStrictTranslation,
-    isDefaultLanguage: isDefaultLanguage
+    getTranslationsBy
 };

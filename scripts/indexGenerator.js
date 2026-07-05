@@ -3,8 +3,9 @@ const path = require('path');
 
 const { PATHS } = require('./constants');
 const { BUILD } = PATHS;
-const { getContentsFilePath, getIndexFilePath, getSongbookIdList } = require('./songbookLoader');
+const { getContentsFilePath, getIndexFilePath } = require('./songbookLoader');
 const { getExistingTelegraphPage } = require('./telegraph/utils');
+const { hasSongAudio } = require('./songResources');
 
 const { Song } = require('./Song');
 
@@ -107,7 +108,7 @@ function convertContentsToJSON(songbook_id, text) {
                     aliasName: getSongFirstLine(songbook_id, filename),
                     fileName: fileName,
                     page: getSongPage(songbook_id, filename),
-                    embeds: getSongEmbedsTitles(songbook_id, filename),
+                    hasEmbeds: hasSongAudio(filename) || undefined,
                     meta: {
                         translation: getSongMeta(songbook_id, filename)?.translation
                     },
@@ -211,21 +212,6 @@ function getSongFirstLine(songbook_id, filename) {
         return;
     }
     return first_line.trim();
-}
-
-function getSongEmbedsTitles(songbook_id, filename) {
-    var embeds;
-    getSongbookIdList().find(a_songbook_id => {
-        var song_json = getSongJSON(a_songbook_id, filename, true);
-        if (!song_json) {
-            return;
-        }
-        if (song_json.embeds?.length) {
-            embeds = song_json.embeds?.map(i => i.title);
-        }
-        return embeds;
-    });
-    return embeds;
 }
 
 function getContentSongPageNumber(song) {

@@ -20,7 +20,7 @@
     <% } %>
     <% item.items.forEach((song) => { %>
         <p>
-            <% if (song.page && render.page_number) { %><% if (!song.no_translation) { %><strong><% } else { %>(<% } %><%= Array.isArray(song.page) ? song.page.join(', ') : song.page %><% if (!song.no_translation) { %></strong><% } else { %>)<% } %>&nbsp;&nbsp;<% } %><a href="<% if (song.telegraphPath) { %>/<%= song.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %><% } %>"><% if (song.no_translation) { %><% } %><%= song.title %></a><% if (song.embeds) { %>&nbsp;&nbsp;♪<% } %>
+            <% if (song.page && render.page_number) { %><% if (!song.no_translation) { %><strong><% } else { %>(<% } %><%= Array.isArray(song.page) ? song.page.join(', ') : song.page %><% if (!song.no_translation) { %></strong><% } else { %>)<% } %>&nbsp;&nbsp;<% } %><a href="<% if (song.telegraphPath) { %>/<%= song.telegraphPath %><% } else { %><%= paths.toSongs %>/<%= song.fileName %><% if (song.duplicates && (song.duplicates[0].idx !== song.idx)) { %>?p=<%= song.page_number %><% } %><% } %>"><% if (song.no_translation) { %><% } %><%= song.title %></a><% if (song.hasEmbeds) { %>&nbsp;&nbsp;♪<% } %>
             <% if (render.first_line) { %><em><%= song.aliasName %></em><% } %>
         </p>
     <% }) %>

@@ -1,4 +1,3 @@
-const { getEmbedCode } = require('./embeds');
 const yaml = require('js-yaml');
 
 class Song {
@@ -380,19 +379,8 @@ function convertSongToJSON(text) {
                 getLastVerse().translation.push(line_value);
                 break;
             case 'embed_link':
-                var embed_url = line_match[2];
-                var embed = getEmbedCode(embed_url);
-                if (embed) {
-                    song.embeds = song.embeds || [];
-                    song.embeds.push({
-                        title: line_value,
-                        embed_url: embed_url,
-                        iframe_url: embed.embed_url,
-                        embed_code: embed.embed_code
-                    });
-                } else {
-                    console.warn('Unrecognized embed link', line)
-                }
+                // Legacy audio links inline in .md files are ignored; audio
+                // now comes from `songbook-resources/resources.json`.
                 break;
             case 'attribute':
                 var bits = line_value.split(/=/);

@@ -8,9 +8,10 @@ const { convertMDToJSON, getContentsJSON, getIndexJSON, getSongJSON, getSongsOrd
 const { createHeadParts } = require('./createHeadParts');
 const { getSongbookIdList, getSongbookInfo } = require('./songbookLoader');
 const { getTemplatePaths, getTelegraphTemplatePaths } = require('./utils');
-const { getTranslationsBy, getTranslationOrigin, getStrictTranslation, isDefaultLanguage } = require('./i18n');
+const { getTranslationsBy } = require('./i18n');
 const { PATHS, ORIGIN } = require('./constants');
 const { Song } = require('./Song');
+const { getSongEmbeds } = require('./songResources');
 const { getExistingTelegraphPageHref, getExistingTelegraphPage } = require('./telegraph/utils');
 const { BUILD, FILES } = PATHS;
 
@@ -111,9 +112,10 @@ function fillTemplate(songbook_id, template, content, filePath) {
         return '';
     }
 
-    let { embeds } = content;
-
     const filename = path.parse(filePath).name;
+
+    // Audio embeds are shared across songbooks via `songbook-resources`.
+    const embeds = getSongEmbeds(songbook_id, filename);
 
     const alternativeTranslationBooks /* TSongBookAsOption */ = [];
 
@@ -135,55 +137,6 @@ function fillTemplate(songbook_id, template, content, filePath) {
                 title: info.title,
                 hidden: info.hidden
             });
-
-            // Get embeds from other songbook.
-            if (!info.hidden
-                && songbook_id !== a_songbook_id 
-                && song.embeds 
-                && song.embeds.length) {
-
-                // Load embeds from other songbooks.
-                var other_embeds = song.embeds.map(embed => {
-
-                    var existing_embed = (embeds || []).find(existing => {
-                        return existing.embed_url === embed.embed_url;
-                    });
-                    if (existing_embed) {
-                        // TODO: show warning?
-                        return;
-                    }
-
-                    var embed_title = embed.title;
-
-                    var origin_embed_title = getTranslationOrigin(a_songbook_id, embed_title);
-
-                    // Use english title as default.
-                    if (!origin_embed_title && isDefaultLanguage(a_songbook_id)) {
-                        origin_embed_title = embed_title;
-                    }
-
-                    if (!origin_embed_title) {
-                        console.error(`No translation origin for ${embed_title} in ${a_songbook_id}`);
-                    } else {
-                        embed_title = getStrictTranslation(songbook_id, origin_embed_title);
-                    }
-
-                    return Object.assign({}, embed, {
-                        title: embed_title,
-                    });
-                }).filter(i => i);
-
-                embeds = (embeds || []).concat(other_embeds);
-            }
-
-            // Check embeds overriding from different songbooks.
-            // if (songbook_id !== a_songbook_id 
-            //     && song.embeds 
-            //     // Use `content` to check origin (not overidden value).
-            //     && content.embeds 
-            //     && content.embeds.length) {
-            //     console.warn('Overriding song embeds for ${songbook_id} from ${a_songbook_id} in ${filePath}`);
-            // }
         }
     });
 

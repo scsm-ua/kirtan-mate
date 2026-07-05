@@ -1,4 +1,5 @@
 [
+    "git+https://github.com/scsm-ua/songbook-resources.git",
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-lv.git",
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-ru.git",
     "git+https://github.com/scsm-ua/gaudiya-gitanjali-ua.git",

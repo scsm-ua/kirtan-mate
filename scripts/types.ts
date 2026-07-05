@@ -6,7 +6,7 @@ type TCategory = {
 
 type TCategoryItem = {
     aliasName: string; // The First line.
-    embeds: string[];
+    hasEmbeds: boolean | undefined; // True when audio is available for the song.
     fileName: string; // id + '.html'
     id: string;
     name: string;
