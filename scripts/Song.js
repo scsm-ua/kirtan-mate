@@ -214,6 +214,7 @@ const NOTE_MD_REGEX = /\*\*\*(.*?)\*\*\*/gm;
 const TERM_MD_REGEX = /\*{1,2}(.*?)\*{1,2}/gm;
 const A1_MD_REGEX = /\*(.*?)\*/gm;
 const A2_MD_REGEX = /\*\*(.*?)\*\*/gm;
+const LINK_MD_REGEX = /\[([^\]]+)\]\(([^\)]+)\)/g;
 
 /**
  * Handles 'hindi' terms, soft line breaks and notes.
@@ -230,6 +231,7 @@ function processTranslation(lines) {
         .replace(TAG_RE, '')
         .replace(NOTE_MD_REGEX, '<i class="SongVerse__note">$1</i>\n')
         .replace(TERM_MD_REGEX, '<i class="SongVerse__term">$1</i>')
+        .replace(LINK_MD_REGEX, '<a href="$2" target="_blank">$1</a>')
         .replaceAll('\\\n', '<br class="SongVerse__break" />')
         .split(/\n/);
 }
@@ -250,6 +252,7 @@ function processTranslationForTelegraph(lines) {
         .replace(NOTE_MD_REGEX, '<strong><em>$1</em></strong>\n')
         .replace(A2_MD_REGEX, '<strong><em>$1</em></strong>\n')
         .replace(A1_MD_REGEX, '<em>$1</em>')
+        .replace(LINK_MD_REGEX, '<a href="$2" target="_blank">$1</a>')
         .replaceAll('\\\n', '<br />')
         .split(/\n/);
 }
