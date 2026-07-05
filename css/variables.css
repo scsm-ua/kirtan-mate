@@ -50,6 +50,7 @@ add '-up' if you want (min-width: $point) and leave with no suffix for (max-widt
   --text-color: var(--dark-grey);
   --title-color: var(--dark);
   --shadow-color: rgba(56, 55, 142, 0.15);
+  --link-color: #1e80f3;
   /**/
   --beige: #FFFAED;
   --brown: #26231B;

@@ -84,7 +84,8 @@
   line-height: clamp(36px, 6.28cqw, 44px);
 }
 .SongVerse__paragraph a {
-  color: var(--text-color);
+  color: var(--link-color);
+  text-decoration: underline;
 }
 .SongVerse__term {
   font-weight: 400;
